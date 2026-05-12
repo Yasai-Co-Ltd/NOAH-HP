@@ -1,0 +1,128 @@
+.about {
+  position: relative;
+  padding-block: var(--space-section);
+  overflow: hidden;
+  background:
+    linear-gradient(105deg, #fff 0 46%, rgba(232, 244, 255, 0.72) 46% 100%),
+    var(--color-surface);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: minmax(300px, 0.82fr) minmax(420px, 1.3fr);
+  gap: 64px;
+  align-items: center;
+}
+
+.copy {
+  display: flex;
+  flex-direction: column;
+}
+
+.body {
+  max-width: 520px;
+  margin: 22px 0 30px;
+  color: var(--color-text);
+  font-size: 0.98rem;
+  font-weight: 600;
+  line-height: 2.05;
+}
+
+.visual {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(170px, 0.78fr);
+  gap: 8px;
+  min-height: 330px;
+}
+
+.visual::before,
+.visual::after {
+  position: absolute;
+  inset: auto;
+  content: "";
+  background: rgba(67, 161, 222, 0.14);
+  transform: skewX(-18deg);
+}
+
+.visual::before {
+  top: -24px;
+  right: -40px;
+  width: 180px;
+  height: 390px;
+}
+
+.visual::after {
+  right: 76px;
+  bottom: -32px;
+  width: 110px;
+  height: 310px;
+}
+
+.visual img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  object-fit: cover;
+}
+
+.main {
+  height: 330px;
+  clip-path: polygon(12% 0, 100% 0, 88% 100%, 0 100%);
+}
+
+.stack {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.stack img {
+  height: 104.5px;
+  clip-path: polygon(14% 0, 100% 0, 86% 100%, 0 100%);
+}
+
+@media (max-width: 920px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .visual {
+    min-height: auto;
+  }
+
+  .main {
+    height: 300px;
+  }
+
+  .stack img {
+    height: 95px;
+  }
+}
+
+@media (max-width: 700px) {
+  .about {
+    padding-block: var(--space-section-mobile);
+  }
+
+  .visual {
+    grid-template-columns: 1fr;
+  }
+
+  .main {
+    height: 220px;
+    clip-path: polygon(8% 0, 100% 0, 92% 100%, 0 100%);
+  }
+
+  .stack {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: none;
+  }
+
+  .stack img {
+    height: 82px;
+    clip-path: polygon(8% 0, 100% 0, 92% 100%, 0 100%);
+  }
+}

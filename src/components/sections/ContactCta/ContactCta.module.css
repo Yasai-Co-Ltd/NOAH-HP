@@ -1,0 +1,73 @@
+.section {
+  padding-block: 44px;
+  color: var(--color-surface);
+  background:
+    linear-gradient(90deg, rgba(27, 136, 205, 0.94), rgba(7, 65, 148, 0.86)),
+    url("/assets/hero-wind-hq.jpg") right center / cover no-repeat;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 34px;
+  align-items: center;
+}
+
+.iconWrap {
+  display: grid;
+  place-items: center;
+  width: 112px;
+  height: 112px;
+  border-radius: 50%;
+  color: var(--color-brand-900);
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.iconWrap svg {
+  width: 58px;
+  height: 58px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  font-size: 0.86rem;
+  font-weight: 900;
+}
+
+.heading {
+  color: var(--color-surface);
+  font-family: var(--font-serif);
+  font-weight: 800;
+  font-size: clamp(2rem, 3.3vw, 3.45rem);
+  line-height: 1.22;
+  margin: 0;
+}
+
+.description {
+  display: block;
+  margin-top: 10px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+@media (max-width: 920px) {
+  .grid {
+    grid-template-columns: 1fr;
+    justify-items: start;
+  }
+}
+
+@media (max-width: 700px) {
+  .iconWrap {
+    width: 82px;
+    height: 82px;
+  }
+
+  .heading {
+    font-size: 2rem;
+  }
+}

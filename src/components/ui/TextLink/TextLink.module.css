@@ -1,0 +1,12 @@
+.textLink {
+  color: var(--color-brand-800);
+  font-size: 0.86rem;
+  font-weight: 900;
+}
+
+@media (max-width: 700px) {
+  .textLink {
+    display: inline-flex;
+    margin-top: 6px;
+  }
+}

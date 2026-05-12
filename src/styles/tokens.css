@@ -1,0 +1,50 @@
+:root {
+  /* === Brand palette (blue scale) === */
+  --color-brand-900: #052766;
+  --color-brand-800: #0a3487;
+  --color-brand-700: #0c459e;
+  --color-brand-600: #1559b7;
+  --color-brand-100: #e8f4ff;
+  --color-brand-050: #f5faff;
+
+  /* === Accent colors (service icons) === */
+  --color-accent-cyan: #53c1e5;
+  --color-accent-green: #5fbf83;
+  --color-accent-gold: #d7a928;
+  --color-accent-teal: #65bbb4;
+  --color-accent-blue: #5b9de0;
+
+  /* === Text / Surface === */
+  --color-ink: #12264a;
+  --color-text: #26334d;
+  --color-muted: #5e6f8c;
+  --color-line: #d8e4f3;
+  --color-surface: #ffffff;
+  --color-card-text: #31405d;
+  --color-card-title: var(--color-ink);
+
+  /* === Effects === */
+  --shadow-card: 0 10px 28px rgba(15, 66, 130, 0.07);
+  --shadow-hero: 0 18px 44px rgba(9, 45, 105, 0.12);
+  --shadow-banner: 0 18px 42px rgba(15, 66, 130, 0.12);
+
+  /* === Layout === */
+  --container-max: 1240px;
+  --container-pad-desktop: 64px;
+  --container-pad-mobile: 40px;
+  --container-pad-small: 32px;
+
+  /* === Spacing === */
+  --space-section: 88px;
+  --space-section-compact: 58px;
+  --space-section-mobile: 58px;
+
+  /* === Typography families === */
+  --font-sans: "Hiragino Sans", "Yu Gothic", "Meiryo", system-ui, sans-serif;
+  --font-serif: "Hiragino Mincho ProN", "Yu Mincho", "YuMincho", serif;
+  --font-numeric: Arial, sans-serif;
+
+  /* === Motion === */
+  --duration-fast: 180ms;
+  --ease-out: ease;
+}

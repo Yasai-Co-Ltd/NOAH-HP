@@ -1,0 +1,33 @@
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  margin-bottom: 14px;
+  border-radius: 50%;
+  color: var(--color-surface);
+  font-size: 0.78rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.blue {
+  background: var(--color-accent-blue);
+}
+
+.green {
+  background: var(--color-accent-green);
+}
+
+.gold {
+  background: var(--color-accent-gold);
+}
+
+.teal {
+  background: var(--color-accent-teal);
+}
+
+.navy {
+  background: var(--color-brand-700);
+}

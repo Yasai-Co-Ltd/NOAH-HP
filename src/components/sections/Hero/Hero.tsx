@@ -1,0 +1,27 @@
+import { Button } from "@/components/ui/Button/Button";
+import styles from "./Hero.module.css";
+
+export function Hero() {
+  return (
+    <section className={styles.hero} aria-labelledby="hero-title">
+      <div className={styles.media} aria-hidden="true" />
+      <div className={styles.overlay} aria-hidden="true" />
+      <div className={`container ${styles.inner}`}>
+        <p className="eyebrow">Renewable Energy Infrastructure</p>
+        <h1 id="hero-title" className="hero-heading">
+          風を、未来の
+          <br />
+          インフラに。
+        </h1>
+        <p className={styles.copy}>
+          再生可能エネルギーで、地域と企業の
+          <br />
+          持続可能な未来をつくる。
+        </p>
+        <Button href="#business" variant="primary">
+          事業内容を見る
+        </Button>
+      </div>
+    </section>
+  );
+}

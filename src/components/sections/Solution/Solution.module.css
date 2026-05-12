@@ -1,0 +1,147 @@
+.solution {
+  position: relative;
+  overflow: hidden;
+  padding-block: 76px 104px;
+  background: linear-gradient(180deg, #fff 0%, #f4faff 100%);
+}
+
+.sky {
+  position: absolute;
+  right: 0;
+  bottom: -36px;
+  left: 26%;
+  height: 160px;
+  opacity: 0.16;
+  background-image: url("/assets/hero-wind-hq.jpg");
+  background-position: bottom right;
+  background-size: cover;
+  mask-image: linear-gradient(180deg, transparent, #000 28%, #000);
+}
+
+.grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(280px, 0.62fr) minmax(620px, 1.35fr);
+  gap: 64px;
+  align-items: center;
+}
+
+.copy {
+  display: flex;
+  flex-direction: column;
+}
+
+.body {
+  max-width: 520px;
+  margin: 22px 0 30px;
+  color: var(--color-text);
+  font-size: 0.98rem;
+  font-weight: 600;
+  line-height: 2.05;
+}
+
+.processList {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 42px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.step {
+  position: relative;
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  color: var(--color-brand-900);
+}
+
+.step:not(:last-child)::after {
+  position: absolute;
+  top: 62px;
+  right: -35px;
+  width: 30px;
+  height: 1px;
+  content: "";
+  background: var(--color-brand-700);
+}
+
+.step:not(:last-child)::before {
+  position: absolute;
+  top: 57px;
+  right: -37px;
+  width: 9px;
+  height: 9px;
+  content: "";
+  border-top: 1px solid var(--color-brand-700);
+  border-right: 1px solid var(--color-brand-700);
+  transform: rotate(45deg);
+}
+
+.iconWrap {
+  display: grid;
+  place-items: center;
+  width: 126px;
+  height: 126px;
+  margin-bottom: 16px;
+  border: 1px solid #aec7e9;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: inset 0 0 0 8px rgba(232, 244, 255, 0.55);
+}
+
+.iconWrap svg {
+  width: 58px;
+  height: 58px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+}
+
+.stepTitle {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 1rem;
+}
+
+.stepDescription {
+  color: #17294f;
+  font-size: 0.82rem;
+  font-weight: 800;
+  line-height: 1.8;
+}
+
+@media (max-width: 1180px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .processList {
+    max-width: 840px;
+  }
+}
+
+@media (max-width: 700px) {
+  .solution {
+    padding-block: var(--space-section-mobile);
+  }
+
+  .processList {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .step:not(:last-child)::before,
+  .step:not(:last-child)::after {
+    display: none;
+  }
+
+  .iconWrap {
+    width: 108px;
+    height: 108px;
+  }
+}

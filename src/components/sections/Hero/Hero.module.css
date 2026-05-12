@@ -1,0 +1,105 @@
+.hero {
+  position: relative;
+  min-height: 520px;
+  isolation: isolate;
+  overflow: hidden;
+  background: var(--color-brand-050);
+}
+
+.media {
+  position: absolute;
+  inset: 0 0 0 31%;
+  z-index: -3;
+  background-image: url("/assets/hero-wind-hq.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.media::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background:
+    linear-gradient(
+      115deg,
+      rgba(255, 255, 255, 0.94) 0%,
+      rgba(255, 255, 255, 0.68) 20%,
+      rgba(255, 255, 255, 0.02) 50%
+    ),
+    linear-gradient(0deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.08));
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background:
+    radial-gradient(
+      circle at 0 20%,
+      rgba(255, 255, 255, 0.92) 0 24%,
+      rgba(255, 255, 255, 0) 52%
+    ),
+    linear-gradient(
+      90deg,
+      #fff 0%,
+      rgba(255, 255, 255, 0.95) 22%,
+      rgba(255, 255, 255, 0.28) 54%,
+      rgba(255, 255, 255, 0) 100%
+    );
+}
+
+.inner {
+  min-height: 520px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-block: 72px;
+}
+
+.copy {
+  margin: 30px 0 28px;
+  color: #111827;
+  font-size: clamp(1rem, 1.3vw, 1.25rem);
+  font-weight: 700;
+  line-height: 2;
+}
+
+@media (max-width: 920px) {
+  .hero,
+  .inner {
+    min-height: 620px;
+  }
+
+  .media {
+    inset: 0;
+    background-position: 58% center;
+  }
+
+  .overlay {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.98) 0%,
+        rgba(255, 255, 255, 0.82) 50%,
+        rgba(255, 255, 255, 0.18) 100%
+      ),
+      linear-gradient(0deg, rgba(255, 255, 255, 0.48), rgba(255, 255, 255, 0));
+  }
+}
+
+@media (max-width: 700px) {
+  .hero {
+    min-height: 560px;
+  }
+
+  .inner {
+    min-height: 560px;
+    padding-block: 52px;
+  }
+
+  .copy {
+    font-size: 0.98rem;
+  }
+}

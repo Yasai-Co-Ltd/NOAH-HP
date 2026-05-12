@@ -1,0 +1,137 @@
+.section {
+  padding-block: 44px 72px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: minmax(420px, 0.95fr) minmax(360px, 0.75fr);
+  gap: 92px;
+  align-items: end;
+}
+
+.list {
+  display: grid;
+  gap: 14px;
+  margin-top: 16px;
+}
+
+.item {
+  display: grid;
+  grid-template-columns: 94px 118px 1fr;
+  gap: 18px;
+  align-items: center;
+  color: var(--color-text);
+  font-size: 0.9rem;
+}
+
+.time {
+  color: var(--color-muted);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.tag {
+  display: inline-flex;
+  justify-content: center;
+  min-width: 108px;
+  padding: 4px 10px;
+  border: 1px solid #a9bce4;
+  color: var(--color-brand-800);
+  font-size: 0.75rem;
+  font-weight: 900;
+}
+
+.itemTitle {
+  color: #33415c;
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.more {
+  display: inline-flex;
+  margin-top: 24px;
+}
+
+.banner {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 42%;
+  min-height: 162px;
+  overflow: hidden;
+  color: var(--color-brand-900);
+  background: linear-gradient(100deg, #e9f5ff 0%, #cce6fb 64%, #99cdf2 100%);
+  box-shadow: var(--shadow-banner);
+}
+
+.bannerCopy {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 28px 34px;
+}
+
+.bannerTitle {
+  margin-bottom: 8px;
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.bannerDescription {
+  color: #17335f;
+  font-size: 0.88rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 1.75;
+}
+
+.bannerCta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 132px;
+  min-height: 42px;
+  margin-top: 18px;
+  color: var(--color-surface);
+  font-size: 0.82rem;
+  font-style: normal;
+  font-weight: 900;
+  background: var(--color-brand-900);
+}
+
+.bannerImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 920px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 700px) {
+  .item {
+    grid-template-columns: 1fr;
+    gap: 5px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--color-line);
+  }
+
+  .tag {
+    width: fit-content;
+  }
+
+  .banner {
+    grid-template-columns: 1fr;
+  }
+
+  .bannerImage {
+    height: 190px;
+  }
+}

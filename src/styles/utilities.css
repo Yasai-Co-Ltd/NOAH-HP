@@ -1,0 +1,24 @@
+/* Layout utilities shared across sections. */
+
+.container {
+  width: min(calc(100% - var(--container-pad-desktop)), var(--container-max));
+  margin-inline: auto;
+}
+
+@media (max-width: 920px) {
+  .container {
+    width: min(calc(100% - var(--container-pad-mobile)), var(--container-max));
+  }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
