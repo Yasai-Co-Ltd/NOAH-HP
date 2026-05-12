@@ -14,6 +14,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  animation: slowZoom 8000ms var(--motion-ease-soft) both;
 }
 
 .media::after {
@@ -64,6 +65,26 @@
   font-size: clamp(1rem, 1.3vw, 1.25rem);
   font-weight: 700;
   line-height: 2;
+}
+
+.fadeIn {
+  animation: fadeUp var(--motion-slow) var(--motion-ease-soft) both;
+}
+
+.delay1 {
+  animation-delay: 160ms;
+}
+
+.delay2 {
+  animation-delay: 420ms;
+}
+
+.delay3 {
+  animation-delay: 700ms;
+}
+
+.delay4 {
+  animation-delay: 980ms;
 }
 
 @media (max-width: 920px) {

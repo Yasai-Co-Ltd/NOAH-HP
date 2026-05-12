@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { Reveal } from "@/components/animation/Reveal/Reveal";
 import { Button } from "@/components/ui/Button/Button";
 import { SectionLabel } from "@/components/ui/SectionLabel/SectionLabel";
 import styles from "./Solution.module.css";
@@ -80,33 +81,43 @@ const STEPS: ProcessStep[] = [
   },
 ];
 
+const STAGGER_MS = 120;
+
 export function Solution() {
   return (
     <section className={styles.solution} aria-labelledby="solution-title">
       <div className={styles.sky} aria-hidden="true" />
       <div className={`container ${styles.grid}`}>
-        <div className={styles.copy}>
-          <SectionLabel eyebrow="TOTAL SOLUTION" subtitle="トータルソリューション" />
-          <h2 id="solution-title" className="section-heading">
-            計画から運用まで、
-            <br />
-            ワンストップで支援。
-          </h2>
-          <p className={styles.body}>
-            調査・計画から設計・施工、運用・保守まで、プロジェクトの全フェーズを一貫して支援し、
-            最適なエネルギーソリューションを提供します。
-          </p>
-          <Button href="#contact" variant="primary">
-            詳しく見る
-          </Button>
-        </div>
+        <Reveal direction="left">
+          <div className={styles.copy}>
+            <SectionLabel eyebrow="TOTAL SOLUTION" subtitle="トータルソリューション" />
+            <h2 id="solution-title" className="section-heading">
+              計画から運用まで、
+              <br />
+              ワンストップで支援。
+            </h2>
+            <p className={styles.body}>
+              調査・計画から設計・施工、運用・保守まで、プロジェクトの全フェーズを一貫して支援し、
+              最適なエネルギーソリューションを提供します。
+            </p>
+            <Button href="#contact" variant="primary">
+              詳しく見る
+            </Button>
+          </div>
+        </Reveal>
         <ol className={styles.processList}>
-          {STEPS.map((step) => (
-            <li key={step.title} className={styles.step}>
+          {STEPS.map((step, index) => (
+            <Reveal
+              key={step.title}
+              as="li"
+              direction="up"
+              delay={index * STAGGER_MS}
+              className={styles.step}
+            >
               <span className={styles.iconWrap}>{step.icon}</span>
               <strong className={styles.stepTitle}>{step.title}</strong>
               <small className={styles.stepDescription}>{step.description}</small>
-            </li>
+            </Reveal>
           ))}
         </ol>
       </div>

@@ -1,5 +1,5 @@
 .section {
-  padding-block: 44px;
+  padding-block: 64px;
   color: var(--color-surface);
   background:
     linear-gradient(90deg, rgba(27, 136, 205, 0.94), rgba(7, 65, 148, 0.86)),
@@ -21,6 +21,7 @@
   border-radius: 50%;
   color: var(--color-brand-900);
   background: rgba(255, 255, 255, 0.9);
+  animation: pulse 3600ms var(--motion-ease-soft) infinite;
 }
 
 .iconWrap svg {

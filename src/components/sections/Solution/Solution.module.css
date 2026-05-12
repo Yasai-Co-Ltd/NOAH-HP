@@ -1,7 +1,7 @@
 .solution {
   position: relative;
   overflow: hidden;
-  padding-block: 76px 104px;
+  padding-block: 100px 132px;
   background: linear-gradient(180deg, #fff 0%, #f4faff 100%);
 }
 
@@ -90,6 +90,16 @@
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.7);
   box-shadow: inset 0 0 0 8px rgba(232, 244, 255, 0.55);
+  transition:
+    transform var(--motion-fast) var(--motion-ease-out),
+    box-shadow var(--motion-fast) var(--motion-ease-out);
+}
+
+.step:hover .iconWrap {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow:
+    inset 0 0 0 8px rgba(232, 244, 255, 0.55),
+    0 14px 32px rgba(15, 66, 130, 0.18);
 }
 
 .iconWrap svg {

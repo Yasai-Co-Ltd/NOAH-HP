@@ -29,15 +29,15 @@
   --shadow-banner: 0 18px 42px rgba(15, 66, 130, 0.12);
 
   /* === Layout === */
-  --container-max: 1240px;
+  --container-max: 1360px;
   --container-pad-desktop: 64px;
   --container-pad-mobile: 40px;
   --container-pad-small: 32px;
 
   /* === Spacing === */
-  --space-section: 88px;
-  --space-section-compact: 58px;
-  --space-section-mobile: 58px;
+  --space-section: 120px;
+  --space-section-compact: 80px;
+  --space-section-mobile: 76px;
 
   /* === Typography families === */
   --font-sans: "Hiragino Sans", "Yu Gothic", "Meiryo", system-ui, sans-serif;

@@ -21,8 +21,10 @@ function renderIconLabel(label: string) {
 export function BusinessCard({ service }: BusinessCardProps) {
   return (
     <article className={styles.card}>
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img className={styles.image} src={service.image.src} alt={service.image.alt} />
+      <div className={styles.imageWrap}>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img className={styles.image} src={service.image.src} alt={service.image.alt} />
+      </div>
       <div className={styles.body}>
         <ServiceIcon tone={service.icon.tone}>{renderIconLabel(service.icon.label)}</ServiceIcon>
         <h3 className={styles.title}>{service.title}</h3>

@@ -1,14 +1,35 @@
 .card {
+  position: relative;
   background: var(--color-surface);
   border: 1px solid rgba(216, 228, 243, 0.82);
   box-shadow: var(--shadow-card);
   padding-bottom: 18px;
+  overflow: hidden;
+  transition:
+    transform var(--motion-fast) var(--motion-ease-out),
+    box-shadow var(--motion-fast) var(--motion-ease-out),
+    border-color var(--motion-fast) var(--motion-ease-out);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(11, 61, 145, 0.18);
+  box-shadow: 0 24px 48px rgba(15, 66, 130, 0.16);
+}
+
+.imageWrap {
+  overflow: hidden;
 }
 
 .image {
   width: 100%;
   height: 134px;
   object-fit: cover;
+  transition: transform 700ms var(--motion-ease-soft);
+}
+
+.card:hover .image {
+  transform: scale(1.06);
 }
 
 .title {
