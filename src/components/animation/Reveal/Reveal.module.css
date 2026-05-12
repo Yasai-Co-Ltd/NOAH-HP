@@ -1,0 +1,25 @@
+.root {
+  opacity: 0;
+  will-change: opacity, transform;
+}
+
+.visible {
+  animation: var(--reveal-keyframe, fadeUp) var(--motion-base) var(--motion-ease-soft) both;
+  animation-delay: var(--reveal-delay, 0ms);
+}
+
+.directionUp {
+  --reveal-keyframe: fadeUp;
+}
+
+.directionLeft {
+  --reveal-keyframe: fadeRight;
+}
+
+.directionRight {
+  --reveal-keyframe: fadeLeft;
+}
+
+.directionNone {
+  --reveal-keyframe: fadeIn;
+}
