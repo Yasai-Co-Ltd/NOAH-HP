@@ -1,16 +1,43 @@
 .about {
   position: relative;
-  padding-block: var(--space-section);
+  padding-block: 72px;
   overflow: hidden;
   background:
-    linear-gradient(105deg, #fff 0 46%, rgba(232, 244, 255, 0.72) 46% 100%),
+    linear-gradient(105deg, #fff 0 43%, transparent 43%),
+    linear-gradient(105deg, transparent 0 45%, rgba(232, 244, 255, 0.78) 45% 100%),
     var(--color-surface);
 }
 
+.about::before,
+.about::after {
+  position: absolute;
+  content: "";
+  pointer-events: none;
+  transform: skewX(-15deg);
+}
+
+.about::before {
+  top: 0;
+  right: -7%;
+  bottom: 0;
+  width: 31%;
+  background: rgba(97, 178, 228, 0.1);
+}
+
+.about::after {
+  top: 0;
+  right: 16%;
+  bottom: 0;
+  width: 7%;
+  background: rgba(255, 255, 255, 0.55);
+}
+
 .grid {
+  position: relative;
+  z-index: 1;
   display: grid;
-  grid-template-columns: minmax(300px, 0.82fr) minmax(420px, 1.3fr);
-  gap: 64px;
+  grid-template-columns: minmax(420px, 0.84fr) minmax(640px, 1.28fr);
+  gap: clamp(48px, 4.2vw, 70px);
   align-items: center;
 }
 
@@ -19,8 +46,14 @@
   flex-direction: column;
 }
 
+.copy :global(.section-heading) {
+  max-width: 560px;
+  font-size: clamp(1.75rem, 2.28vw, 2.25rem);
+  line-height: 1.58;
+}
+
 .body {
-  max-width: 520px;
+  max-width: 500px;
   margin: 22px 0 30px;
   color: var(--color-text);
   font-size: 0.98rem;
@@ -31,9 +64,10 @@
 .visual {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(170px, 0.78fr);
-  gap: 8px;
-  min-height: 330px;
+  grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr);
+  gap: 0;
+  min-height: 348px;
+  isolation: isolate;
 }
 
 .visual::before,
@@ -41,64 +75,105 @@
   position: absolute;
   inset: auto;
   content: "";
-  background: rgba(67, 161, 222, 0.14);
-  transform: skewX(-18deg);
+  transform: skewX(-15deg);
 }
 
 .visual::before {
-  top: -24px;
-  right: -40px;
-  width: 180px;
-  height: 390px;
+  top: -16px;
+  right: 16px;
+  bottom: -16px;
+  z-index: -1;
+  width: 195px;
+  background: rgba(67, 161, 222, 0.15);
 }
 
 .visual::after {
-  right: 76px;
-  bottom: -32px;
-  width: 110px;
-  height: 310px;
+  top: 16px;
+  right: -28px;
+  bottom: 16px;
+  z-index: -2;
+  width: 138px;
+  background: rgba(67, 161, 222, 0.08);
 }
 
 .visual img {
   position: relative;
-  z-index: 1;
+  z-index: 2;
+  display: block;
   width: 100%;
   object-fit: cover;
 }
 
 .main {
-  height: 330px;
-  clip-path: polygon(12% 0, 100% 0, 88% 100%, 0 100%);
+  height: 348px;
+  object-position: 55% center;
+  clip-path: polygon(19% 0, 100% 0, 81% 100%, 0 100%);
 }
 
 .stack {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   display: grid;
   grid-template-rows: repeat(3, 1fr);
-  gap: 8px;
+  gap: 10px;
+  margin-left: -20px;
 }
 
 .stack img {
-  height: 104.5px;
-  clip-path: polygon(14% 0, 100% 0, 86% 100%, 0 100%);
+  height: 109.33px;
+  clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);
+}
+
+.stack img:nth-child(1) {
+  object-position: 42% center;
+}
+
+.stack img:nth-child(2) {
+  object-position: 48% center;
+  transform: translateX(-32px);
+}
+
+.stack img:nth-child(3) {
+  object-position: 50% center;
+  transform: translateX(-64px);
 }
 
 @media (max-width: 920px) {
+  .about {
+    padding-block: 70px;
+    background:
+      linear-gradient(105deg, #fff 0 28%, rgba(232, 244, 255, 0.78) 28% 100%),
+      var(--color-surface);
+  }
+
   .grid {
     grid-template-columns: 1fr;
+    gap: 46px;
+  }
+
+  .copy :global(.section-heading) {
+    max-width: 620px;
   }
 
   .visual {
+    grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr);
     min-height: auto;
   }
 
   .main {
-    height: 300px;
+    height: 310px;
   }
 
   .stack img {
-    height: 95px;
+    height: 96.67px;
+  }
+
+  .stack img:nth-child(2) {
+    transform: translateX(-36px);
+  }
+
+  .stack img:nth-child(3) {
+    transform: translateX(-72px);
   }
 }
 
@@ -109,20 +184,32 @@
 
   .visual {
     grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .copy :global(.section-heading) {
+    font-size: 1.72rem;
+    line-height: 1.65;
   }
 
   .main {
-    height: 220px;
-    clip-path: polygon(8% 0, 100% 0, 92% 100%, 0 100%);
+    height: 224px;
+    clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);
   }
 
   .stack {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     grid-template-rows: none;
+    gap: 8px;
   }
 
   .stack img {
-    height: 82px;
-    clip-path: polygon(8% 0, 100% 0, 92% 100%, 0 100%);
+    height: 84px;
+    clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);
+  }
+
+  .stack img:nth-child(2),
+  .stack img:nth-child(3) {
+    transform: none;
   }
 }
