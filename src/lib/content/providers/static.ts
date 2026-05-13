@@ -3,39 +3,11 @@ import type { FindParams, NewsItem, Project, Service } from "../types";
 
 const services: Service[] = [
   {
-    id: "svc-hydrogen",
-    slug: "hydrogen",
-    title: "水素事業",
-    description: "水素の製造・貯蔵・供給設備の設計から施工、運用までをトータルで支援します。",
-    image: { src: "/assets/hydrogen-hq.jpg", alt: "水素供給設備" },
-    icon: { tone: "blue", label: "H₂" },
-    href: "#contact",
-  },
-  {
-    id: "svc-ev",
-    slug: "ev",
-    title: "新エネルギー自動車",
-    description:
-      "次世代モビリティの導入支援や充電インフラ整備を行い、移動の脱炭素化を促進します。",
-    image: { src: "/assets/ev-hq.jpg", alt: "電気自動車と充電設備" },
-    icon: { tone: "green", label: "EV" },
-    href: "#contact",
-  },
-  {
-    id: "svc-power",
-    slug: "power",
-    title: "発電事業",
-    description: "再生可能エネルギーを中心に、効率的で安定した発電設備の設計・施工を担います。",
-    image: { src: "/assets/power-hq.jpg", alt: "発電プラント設備" },
-    icon: { tone: "gold", label: "kW" },
-    href: "#contact",
-  },
-  {
     id: "svc-battery",
     slug: "battery",
     title: "蓄電池事業",
     description:
-      "大規模蓄電システムの導入により、エネルギーの最適化とレジリエンス向上に貢献します。",
+      "大規模蓄電システムの導入により、再生可能エネルギーの安定活用と地域のレジリエンス向上に貢献します。",
     image: { src: "/assets/battery-hq.jpg", alt: "大型蓄電池設備" },
     icon: { tone: "teal", label: "B" },
     href: "#contact",
@@ -48,6 +20,41 @@ const services: Service[] = [
       "風況調査から設計・施工・保守まで、風力発電プロジェクトを一貫してサポートします。",
     image: { src: "/assets/hero-wind-hq.jpg", alt: "風力発電設備" },
     icon: { tone: "navy", label: "W" },
+    href: "#contact",
+  },
+  {
+    id: "svc-power",
+    slug: "power",
+    title: "発電事業",
+    description: "再生可能エネルギーを中心に、効率的で安定した発電設備の設計・施工を担います。",
+    image: { src: "/assets/power-hq.jpg", alt: "発電プラント設備" },
+    icon: { tone: "gold", label: "kW" },
+    href: "#contact",
+  },
+  {
+    id: "svc-hydrogen-mobility",
+    slug: "hydrogen-mobility",
+    title: "水素モビリティ事業",
+    description:
+      "水素ステーションや関連設備の整備を通じて、商用車・産業車両を中心とした次世代モビリティを支えます。",
+    image: {
+      src: "/assets/business-hydrogen-mobility-branded.jpg",
+      alt: "NOAHロゴ入り水素トラックの充填設備",
+    },
+    icon: { tone: "blue", label: "H₂" },
+    href: "#contact",
+  },
+  {
+    id: "svc-ai-data-center",
+    slug: "ai-data-center",
+    title: "AIデータセンター事業",
+    description:
+      "AI計算基盤を支えるデータセンターの電力・冷却・エネルギーマネジメントを総合的に計画します。",
+    image: {
+      src: "/assets/business-ai-data-center.jpg",
+      alt: "再生可能エネルギーと連携するAIデータセンター",
+    },
+    icon: { tone: "cyan", label: "AI" },
     href: "#contact",
   },
 ];

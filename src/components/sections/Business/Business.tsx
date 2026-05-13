@@ -14,10 +14,16 @@ export async function Business() {
       <div className="container">
         <Reveal direction="up">
           <div className={styles.heading}>
-            <SectionLabel eyebrow="OUR BUSINESS" subtitle="事業内容" />
-            <h2 id="business-title" className="sr-only">
-              事業内容
-            </h2>
+            <div>
+              <SectionLabel eyebrow="OUR BUSINESS" subtitle="事業内容" />
+              <h2 id="business-title" className="sr-only">
+                事業内容
+              </h2>
+            </div>
+            <p className={styles.lead}>
+              蓄電・発電・水素モビリティ・AI計算基盤をつなぎ、
+              次世代のエネルギーインフラを設計します。
+            </p>
           </div>
         </Reveal>
         <div className={styles.grid}>

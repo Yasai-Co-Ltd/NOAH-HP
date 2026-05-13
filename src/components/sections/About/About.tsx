@@ -17,7 +17,7 @@ export function About() {
             </h2>
             <p className={styles.body}>
               諾亜建設は、再生可能エネルギーの可能性を信じ、
-              水素・自動車・発電・蓄電池・風力発電など多様な事業を通じて、
+              蓄電池・風力発電・発電・水素モビリティ・AIデータセンター事業を通じて、
               脱炭素社会の実現に貢献します。
             </p>
             <Button href="#company" variant="outline">
@@ -30,8 +30,8 @@ export function About() {
             {/* eslint-disable @next/next/no-img-element */}
             <img className={styles.main} src="/assets/hero-wind-hq.jpg" alt="" />
             <div className={styles.stack}>
-              <img src="/assets/hydrogen-hq.jpg" alt="" />
-              <img src="/assets/ev-hq.jpg" alt="" />
+              <img src="/assets/business-hydrogen-mobility-branded.jpg" alt="" />
+              <img src="/assets/business-ai-data-center.jpg" alt="" />
               <img src="/assets/battery-hq.jpg" alt="" />
             </div>
             {/* eslint-enable @next/next/no-img-element */}

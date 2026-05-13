@@ -8,7 +8,20 @@
 }
 
 .heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 40px;
   margin-bottom: 28px;
+}
+
+.lead {
+  max-width: 520px;
+  margin: 0 0 6px;
+  color: var(--color-muted);
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.9;
 }
 
 .grid {
@@ -45,7 +58,14 @@
   }
 
   .heading {
+    display: block;
     margin-bottom: 22px;
+  }
+
+  .lead {
+    max-width: none;
+    margin-top: 14px;
+    font-size: 0.88rem;
   }
 
   .grid {

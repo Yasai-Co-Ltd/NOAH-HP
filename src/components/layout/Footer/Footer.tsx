@@ -24,11 +24,11 @@ const GROUPS: FooterGroup[] = [
   {
     heading: "事業内容",
     links: [
-      { href: "#business", label: "水素事業" },
-      { href: "#business", label: "新エネルギー自動車" },
-      { href: "#business", label: "発電事業" },
       { href: "#business", label: "蓄電池事業" },
       { href: "#business", label: "風力発電事業" },
+      { href: "#business", label: "発電事業" },
+      { href: "#business", label: "水素モビリティ事業" },
+      { href: "#business", label: "AIデータセンター事業" },
     ],
   },
   {

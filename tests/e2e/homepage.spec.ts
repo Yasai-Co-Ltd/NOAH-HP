@@ -7,6 +7,7 @@ test.describe("Noah HP — homepage smoke", () => {
     await expect(page).toHaveTitle(/諾亜建設/);
     await expect(page.locator("#hero-title")).toBeVisible();
     await expect(page.locator("#about")).toBeVisible();
+    await expect(page.locator("#value")).toBeVisible();
     await expect(page.locator("#business")).toBeVisible();
     await expect(page.locator("#projects")).toBeVisible();
     await expect(page.locator("#news")).toBeVisible();

@@ -3,6 +3,7 @@ import { Business } from "@/components/sections/Business/Business";
 import { ContactCta } from "@/components/sections/ContactCta/ContactCta";
 import { Hero } from "@/components/sections/Hero/Hero";
 import { NewsRecruit } from "@/components/sections/NewsRecruit/NewsRecruit";
+import { OurValue } from "@/components/sections/OurValue/OurValue";
 import { Projects } from "@/components/sections/Projects/Projects";
 import { Solution } from "@/components/sections/Solution/Solution";
 import { Strengths } from "@/components/sections/Strengths/Strengths";
@@ -12,6 +13,7 @@ export default function HomePage() {
     <>
       <Hero />
       <About />
+      <OurValue />
       <Business />
       <Solution />
       <Strengths />

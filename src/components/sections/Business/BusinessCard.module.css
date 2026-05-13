@@ -83,6 +83,7 @@
 }
 
 .description {
+  flex: 1;
   margin: 12px 0 18px;
   color: var(--color-card-text);
   font-size: 0.88rem;

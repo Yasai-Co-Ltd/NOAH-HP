@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 import styles from "./ServiceIcon.module.css";
 
-export type ServiceIconTone = "blue" | "green" | "gold" | "teal" | "navy";
+export type ServiceIconTone = "blue" | "green" | "gold" | "teal" | "navy" | "cyan";
 
 interface ServiceIconProps {
   tone: ServiceIconTone;
@@ -14,6 +14,7 @@ const toneClass: Record<ServiceIconTone, string> = {
   gold: styles.gold,
   teal: styles.teal,
   navy: styles.navy,
+  cyan: styles.cyan,
 };
 
 export function ServiceIcon({ tone, children }: ServiceIconProps) {
