@@ -3,33 +3,44 @@ import type { FindParams, NewsItem, Project, Service } from "../types";
 
 const services: Service[] = [
   {
-    id: "svc-battery",
-    slug: "battery",
+    id: "svc-batteryenergystorage",
+    slug: "batteryenergystorage",
     title: "蓄電池事業",
     description:
       "大規模蓄電システムの導入により、再生可能エネルギーの安定活用と地域のレジリエンス向上に貢献します。",
     image: { src: "/assets/battery-hq.jpg", alt: "大型蓄電池設備" },
     icon: { tone: "teal", label: "B" },
-    href: "#contact",
+    href: "/business/batteryenergystorage",
   },
   {
-    id: "svc-wind",
-    slug: "wind",
+    id: "svc-windpower",
+    slug: "windpower",
     title: "風力発電事業",
     description:
       "風況調査から設計・施工・保守まで、風力発電プロジェクトを一貫してサポートします。",
     image: { src: "/assets/hero-wind-hq.jpg", alt: "風力発電設備" },
     icon: { tone: "navy", label: "W" },
-    href: "#contact",
+    href: "/business/windpower",
   },
   {
-    id: "svc-power",
-    slug: "power",
-    title: "発電事業",
-    description: "再生可能エネルギーを中心に、効率的で安定した発電設備の設計・施工を担います。",
-    image: { src: "/assets/power-hq.jpg", alt: "発電プラント設備" },
-    icon: { tone: "gold", label: "kW" },
-    href: "#contact",
+    id: "svc-biomasspower",
+    slug: "biomasspower",
+    title: "バイオマス事業",
+    description:
+      "未利用バイオマス資源を活用し、地域循環型の安定電源として効率的なエネルギー供給を実現します。",
+    image: { src: "/assets/project-biomass.png", alt: "バイオマス発電設備" },
+    icon: { tone: "green", label: "Bm" },
+    href: "/business/biomasspower",
+  },
+  {
+    id: "svc-hopper",
+    slug: "hopper",
+    title: "走行式集塵ホッパー事業",
+    description:
+      "発電設備や工場で発生する飛灰・粉塵を、走行式集塵ホッパーで効率的かつ環境負荷を抑えて回収します。",
+    image: { src: "/assets/power-hq.jpg", alt: "走行式集塵ホッパー設備" },
+    icon: { tone: "gold", label: "Hp" },
+    href: "/business/hopper",
   },
   {
     id: "svc-hydrogen-mobility",
@@ -42,7 +53,7 @@ const services: Service[] = [
       alt: "NOAHロゴ入り水素トラックの充填設備",
     },
     icon: { tone: "blue", label: "H₂" },
-    href: "#contact",
+    href: "/business/hydrogen-mobility",
   },
   {
     id: "svc-ai-data-center",
@@ -55,7 +66,7 @@ const services: Service[] = [
       alt: "再生可能エネルギーと連携するAIデータセンター",
     },
     icon: { tone: "cyan", label: "AI" },
-    href: "#contact",
+    href: "/business/ai-data-center",
   },
 ];
 

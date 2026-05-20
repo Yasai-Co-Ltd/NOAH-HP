@@ -10,7 +10,7 @@
   position: absolute;
   inset: 0 0 0 31%;
   z-index: -3;
-  background-image: url("/assets/hero-wind-hq.jpg");
+  background-image: url("/assets/hero-wind-noah-nacelle-natural.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -113,6 +113,10 @@
 @media (max-width: 700px) {
   .hero {
     min-height: 560px;
+  }
+
+  .media {
+    background-position: 86% center;
   }
 
   .inner {

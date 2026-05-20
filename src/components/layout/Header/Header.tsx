@@ -10,12 +10,11 @@ interface NavLink {
 }
 
 const NAV_LINKS: NavLink[] = [
-  { href: "#about", label: "私たちについて" },
-  { href: "#business", label: "事業内容" },
-  { href: "#projects", label: "導入事例" },
-  { href: "#company", label: "企業情報" },
-  { href: "#sustainability", label: "サステナビリティ" },
-  { href: "#news", label: "お知らせ" },
+  { href: "/about", label: "企業情報" },
+  { href: "/business", label: "事業紹介" },
+  { href: "/sustainability", label: "サステナビリティ" },
+  { href: "/news", label: "ニュース" },
+  { href: "/recruit", label: "採用情報" },
 ];
 
 export function Header() {
@@ -56,7 +55,7 @@ export function Header() {
           </Link>
         ))}
       </nav>
-      <Link href="#contact" className={styles.contact} onClick={closeMenu}>
+      <Link href="/contact" className={styles.contact} onClick={closeMenu}>
         <svg aria-hidden="true" viewBox="0 0 24 24" className={styles.contactIcon}>
           <path d="M4 6h16v12H4z" />
           <path d="m4 7 8 6 8-6" />

@@ -1,110 +1,221 @@
 .solution {
   position: relative;
   overflow: hidden;
-  padding-block: 100px 132px;
-  background: linear-gradient(180deg, #fff 0%, #f4faff 100%);
+  padding-block: 66px 34px;
+  background:
+    linear-gradient(180deg, #ffffff 0%, #f6fbff 100%),
+    var(--color-surface);
 }
 
-.sky {
+.solution::before {
   position: absolute;
-  right: 0;
-  bottom: -36px;
-  left: 26%;
-  height: 160px;
-  opacity: 0.16;
-  background-image: url("/assets/hero-wind-hq.jpg");
-  background-position: bottom right;
-  background-size: cover;
-  mask-image: linear-gradient(180deg, transparent, #000 28%, #000);
+  inset: 18% 0 auto;
+  height: 250px;
+  content: "";
+  opacity: 0.32;
+  background-image:
+    repeating-linear-gradient(
+      172deg,
+      transparent 0 18px,
+      rgba(12, 69, 158, 0.08) 19px,
+      transparent 20px 38px
+    );
+  mask-image: linear-gradient(90deg, transparent, #000 18%, #000 82%, transparent);
 }
 
-.grid {
+.stage {
   position: relative;
   z-index: 1;
-  display: grid;
-  grid-template-columns: minmax(280px, 0.62fr) minmax(620px, 1.35fr);
-  gap: 64px;
-  align-items: center;
+  min-height: clamp(450px, 34vw, 540px);
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.stage::before {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  content: "";
+  pointer-events: none;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.98) 0%,
+      rgba(255, 255, 255, 0.9) 23%,
+      rgba(255, 255, 255, 0.42) 38%,
+      rgba(255, 255, 255, 0) 58%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.98) 0%,
+      rgba(255, 255, 255, 0.72) 22%,
+      rgba(255, 255, 255, 0) 54%
+    );
 }
 
 .copy {
-  display: flex;
-  flex-direction: column;
+  max-width: 350px;
+}
+
+.copyWrap {
+  position: absolute;
+  top: 42px;
+  left: 0;
+  z-index: 6;
+  width: min(27%, 360px);
+}
+
+.headingLine {
+  display: inline-block;
+  white-space: nowrap;
 }
 
 .body {
-  max-width: 520px;
-  margin: 22px 0 30px;
+  margin: 22px 0 0;
   color: var(--color-text);
   font-size: 0.98rem;
   font-weight: 600;
   line-height: 2.05;
 }
 
-.processList {
+.diagram {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  min-width: 0;
+}
+
+.diagramFrame {
+  position: relative;
+  height: 100%;
+  min-height: inherit;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.landscapeImage {
+  z-index: 0;
+  top: auto !important;
+  bottom: 0 !important;
+  height: 86% !important;
+  object-fit: cover;
+  object-position: center bottom;
+  opacity: 0.88;
+  pointer-events: none;
+  filter: saturate(0.92) contrast(0.97);
+  mask-image: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.1) 18%, #000 44%, #000 100%);
+}
+
+.flowBaseStage {
+  position: absolute;
+  top: 14px;
+  right: 5%;
+  left: 18%;
+  z-index: 3;
+  height: min(78%, 430px);
+  pointer-events: none;
+}
+
+.flowBaseImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0.98;
+  filter: saturate(0.96) contrast(1.03);
+}
+
+.flowBaseMobile {
+  display: none;
+}
+
+.centerMark {
+  position: absolute;
+  top: 42%;
+  left: 57%;
+  z-index: 4;
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 42px;
+  justify-items: center;
+  width: clamp(150px, 13vw, 190px);
+  min-height: clamp(150px, 13vw, 190px);
+  padding: 16px 18px 18px;
+  color: var(--color-brand-900);
+  font-size: 0.72rem;
+  font-weight: 900;
+  line-height: 1.35;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(174, 199, 233, 0.76);
+  border-radius: 50%;
+  box-shadow: 0 20px 48px rgba(15, 66, 130, 0.12);
+  transform: translate(-50%, -50%);
+}
+
+.logo {
+  width: clamp(98px, 9vw, 128px);
+  height: clamp(98px, 9vw, 128px);
+  object-fit: contain;
+}
+
+.flowList {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
   padding: 0;
   margin: 0;
   list-style: none;
 }
 
-.step {
-  position: relative;
+.flowStep {
+  position: absolute;
   display: grid;
   justify-items: center;
-  text-align: center;
+  width: 152px;
   color: var(--color-brand-900);
+  text-align: center;
 }
 
-.step:not(:last-child)::after {
-  position: absolute;
-  top: 62px;
-  right: -35px;
-  width: 30px;
-  height: 1px;
-  content: "";
-  background: var(--color-brand-700);
+.step1 {
+  top: 33px;
+  left: 27%;
 }
 
-.step:not(:last-child)::before {
-  position: absolute;
-  top: 57px;
-  right: -37px;
-  width: 9px;
-  height: 9px;
-  content: "";
-  border-top: 1px solid var(--color-brand-700);
-  border-right: 1px solid var(--color-brand-700);
-  transform: rotate(45deg);
+.step2 {
+  top: 168px;
+  left: 23.5%;
 }
 
-.iconWrap {
+.step3 {
+  top: 33px;
+  right: 13.8%;
+}
+
+.step4 {
+  top: 168px;
+  right: 10.1%;
+}
+
+.step5 {
+  right: 13.8%;
+  bottom: 61px;
+}
+
+.step6 {
+  left: 27%;
+  bottom: 61px;
+}
+
+.nodeIcon {
   display: grid;
   place-items: center;
-  width: 126px;
-  height: 126px;
-  margin-bottom: 16px;
-  border: 1px solid #aec7e9;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.7);
-  box-shadow: inset 0 0 0 8px rgba(232, 244, 255, 0.55);
-  transition:
-    transform var(--motion-fast) var(--motion-ease-out),
-    box-shadow var(--motion-fast) var(--motion-ease-out);
-}
-
-.step:hover .iconWrap {
-  transform: translateY(-4px) scale(1.03);
-  box-shadow:
-    inset 0 0 0 8px rgba(232, 244, 255, 0.55),
-    0 14px 32px rgba(15, 66, 130, 0.18);
-}
-
-.iconWrap svg {
   width: 58px;
   height: 58px;
+  margin-bottom: 7px;
+  color: var(--color-brand-700);
+}
+
+.nodeIcon svg {
+  width: 31px;
+  height: 31px;
   fill: none;
   stroke: currentColor;
   stroke-linecap: round;
@@ -112,46 +223,198 @@
   stroke-width: 2;
 }
 
-.stepTitle {
-  display: block;
-  margin-bottom: 12px;
-  font-size: 1rem;
+.nodeNumber {
+  color: var(--color-brand-700);
+  font-family: var(--font-numeric);
+  font-size: 0.82rem;
+  font-weight: 900;
+  line-height: 1;
 }
 
-.stepDescription {
-  color: #17294f;
-  font-size: 0.82rem;
+.nodeTitle {
+  display: block;
+  margin-top: 3px;
+  font-size: 0.9rem;
+  font-weight: 900;
+  line-height: 1.45;
+}
+
+.nodeDescription {
+  display: block;
+  margin-top: 5px;
+  color: #22385f;
+  font-size: 0.7rem;
   font-weight: 800;
-  line-height: 1.8;
+  line-height: 1.6;
 }
 
 @media (max-width: 1180px) {
-  .grid {
-    grid-template-columns: 1fr;
+  .stage {
+    min-height: 780px;
   }
 
-  .processList {
-    max-width: 840px;
+  .copyWrap,
+  .copy {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: auto;
+    max-width: 640px;
+  }
+
+  .copyWrap {
+    z-index: 6;
+  }
+
+  .diagram {
+    position: relative;
+    height: 560px;
+    margin-top: 28px;
+  }
+
+  .diagramFrame {
+    min-height: 560px;
+  }
+
+  .flowBaseStage,
+  .centerMark {
+    left: 50%;
+  }
+
+  .flowBaseStage {
+    right: 0;
+  }
+
+  .step1 {
+    left: 13%;
+  }
+
+  .step2 {
+    left: 16%;
+  }
+
+  .step3 {
+    right: 13%;
+  }
+
+  .step4 {
+    right: 15%;
+  }
+
+  .step5 {
+    right: 36%;
+  }
+
+  .step6 {
+    left: 36%;
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 760px) {
   .solution {
     padding-block: var(--space-section-mobile);
   }
 
-  .processList {
-    grid-template-columns: 1fr;
-    gap: 28px;
-  }
-
-  .step:not(:last-child)::before,
-  .step:not(:last-child)::after {
+  .solution::before,
+  .landscapeImage {
     display: none;
   }
 
-  .iconWrap {
-    width: 108px;
-    height: 108px;
+  .stage {
+    min-height: 0;
+    overflow: visible;
+  }
+
+  .diagram {
+    height: auto;
+    margin-top: 30px;
+  }
+
+  .diagramFrame {
+    min-height: 0;
+    overflow: visible;
+  }
+
+  .flowBaseStage {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 250px;
+    height: 250px;
+    min-width: 250px;
+    margin: 0 auto;
+    transform: none;
+  }
+
+  .flowBaseDesktop {
+    display: none;
+  }
+
+  .flowBaseMobile {
+    display: block;
+  }
+
+  .centerMark {
+    top: 44px;
+    left: 50%;
+    width: 150px;
+    min-height: 150px;
+    padding: 14px 16px 16px;
+    font-size: 0.64rem;
+    transform: translateX(-50%);
+  }
+
+  .logo {
+    width: 96px;
+    height: 96px;
+  }
+
+  .flowList {
+    position: relative;
+    display: grid;
+    gap: 12px;
+    margin-top: 28px;
+  }
+
+  .flowStep {
+    position: relative;
+    inset: auto;
+    display: grid;
+    grid-template-columns: 50px 42px 1fr;
+    column-gap: 12px;
+    justify-items: start;
+    width: 100%;
+    padding: 14px 16px;
+    text-align: left;
+    background: rgba(255, 255, 255, 0.84);
+    border: 1px solid rgba(216, 228, 243, 0.95);
+    border-radius: 8px;
+  }
+
+  .nodeIcon {
+    grid-row: 1 / span 3;
+    width: 50px;
+    height: 50px;
+    margin: 0;
+    background: rgba(255, 255, 255, 0.78);
+    border: 1px solid rgba(174, 199, 233, 0.9);
+    border-radius: 50%;
+  }
+
+  .nodeNumber {
+    align-self: end;
+  }
+
+  .nodeTitle,
+  .nodeDescription {
+    grid-column: 3;
+  }
+
+  .nodeTitle {
+    margin-top: 0;
+  }
+
+  .nodeDescription {
+    font-size: 0.74rem;
   }
 }

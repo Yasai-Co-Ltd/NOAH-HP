@@ -9,7 +9,7 @@ test.describe("Noah HP — homepage smoke", () => {
     await expect(page.locator("#about")).toBeVisible();
     await expect(page.locator("#value")).toBeVisible();
     await expect(page.locator("#business")).toBeVisible();
-    await expect(page.locator("#projects")).toBeVisible();
+    await expect(page.locator("#solution")).toBeVisible();
     await expect(page.locator("#news")).toBeVisible();
     await expect(page.locator("#contact")).toBeVisible();
     await expect(page.locator("#company")).toBeVisible();
@@ -27,7 +27,7 @@ test.describe("Noah HP — homepage smoke", () => {
     const openToggle = page.getByRole("button", { name: /メニューを閉じる/ });
     await expect(openToggle).toHaveAttribute("aria-expanded", "true");
 
-    await page.getByRole("link", { name: "私たちについて" }).first().click();
+    await page.getByRole("link", { name: "企業情報" }).first().click();
     await expect(page.getByRole("button", { name: /メニューを開く/ })).toHaveAttribute(
       "aria-expanded",
       "false",

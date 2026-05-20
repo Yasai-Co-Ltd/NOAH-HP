@@ -1,54 +1,62 @@
 .business {
   position: relative;
-  padding-block: var(--space-section-compact) 104px;
   overflow: hidden;
-  background:
-    linear-gradient(180deg, #fff 0%, #fff 62%, rgba(245, 250, 255, 0.72) 100%),
-    var(--color-surface);
+  padding-block: 70px 86px;
+  background: #f2f9ff;
+  border-top: 1px solid rgba(216, 228, 243, 0.92);
 }
 
 .heading {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 40px;
-  margin-bottom: 28px;
+  display: grid;
+  grid-template-columns: minmax(320px, 0.82fr) minmax(360px, 1fr);
+  gap: 84px;
+  align-items: start;
+  margin-bottom: 42px;
+}
+
+.title {
+  margin: 10px 0 0;
+  color: var(--color-brand-900);
+  font-family: var(--font-serif);
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1.42;
+  letter-spacing: 0;
 }
 
 .lead {
-  max-width: 520px;
-  margin: 0 0 6px;
-  color: var(--color-muted);
-  font-size: 0.95rem;
-  font-weight: 700;
-  line-height: 1.9;
+  max-width: 640px;
+  margin: 20px 0 0;
+  color: var(--color-text);
+  font-size: 1rem;
+  font-weight: 800;
+  line-height: 1.95;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(12, minmax(0, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
   align-items: stretch;
 }
 
 .item {
-  grid-column: span 4;
   min-width: 0;
 }
 
-.item:nth-child(n + 4) {
-  grid-column: span 6;
-}
-
 @media (max-width: 1180px) {
-  .grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 22px;
+  .heading {
+    grid-template-columns: 1fr;
+    gap: 18px;
   }
 
-  .item,
-  .item:nth-child(n + 4) {
-    grid-column: auto;
+  .lead {
+    max-width: 720px;
+    margin-top: 0;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -58,14 +66,17 @@
   }
 
   .heading {
-    display: block;
-    margin-bottom: 22px;
+    margin-bottom: 26px;
+  }
+
+  .title {
+    font-size: 1.72rem;
+    line-height: 1.6;
   }
 
   .lead {
-    max-width: none;
-    margin-top: 14px;
     font-size: 0.88rem;
+    line-height: 1.9;
   }
 
   .grid {

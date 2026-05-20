@@ -16,13 +16,15 @@ export async function Business() {
           <div className={styles.heading}>
             <div>
               <SectionLabel eyebrow="OUR BUSINESS" subtitle="事業内容" />
-              <h2 id="business-title" className="sr-only">
-                事業内容
+              <h2 id="business-title" className={styles.title}>
+                6つの事業領域から、
+                <br />
+                最適なインフラを提案。
               </h2>
             </div>
             <p className={styles.lead}>
-              蓄電・発電・水素モビリティ・AI計算基盤をつなぎ、
-              次世代のエネルギーインフラを設計します。
+              サイトマップ配下の事業ページをトップの主要導線として整理。
+              画像で領域差を見せ、各詳細ページへ迷わず進める構成。
             </p>
           </div>
         </Reveal>
@@ -34,7 +36,7 @@ export async function Business() {
               delay={index * STAGGER_MS}
               className={styles.item}
             >
-              <BusinessCard service={service} />
+              <BusinessCard service={service} index={index} />
             </Reveal>
           ))}
         </div>

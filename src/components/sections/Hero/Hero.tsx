@@ -21,7 +21,7 @@ export function Hero() {
           持続可能な未来をつくる。
         </p>
         <div className={`${styles.fadeIn} ${styles.delay4}`}>
-          <Button href="#business" variant="primary">
+          <Button href="/business" variant="primary">
             事業内容を見る
           </Button>
         </div>

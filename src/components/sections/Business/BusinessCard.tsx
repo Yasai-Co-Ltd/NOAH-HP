@@ -1,36 +1,29 @@
-import { ServiceIcon } from "@/components/ui/ServiceIcon/ServiceIcon";
-import { TextLink } from "@/components/ui/TextLink/TextLink";
 import type { Service } from "@/lib/content";
 import styles from "./BusinessCard.module.css";
 
 interface BusinessCardProps {
   service: Service;
+  index: number;
 }
 
-function renderIconLabel(label: string) {
-  if (label === "H₂") {
-    return (
-      <>
-        H<sub>2</sub>
-      </>
-    );
-  }
-  return label;
-}
+export function BusinessCard({ service, index }: BusinessCardProps) {
+  const number = String(index + 1).padStart(2, "0");
 
-export function BusinessCard({ service }: BusinessCardProps) {
   return (
     <article className={styles.card}>
-      <div className={styles.imageWrap}>
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img className={styles.image} src={service.image.src} alt={service.image.alt} />
-      </div>
-      <div className={styles.body}>
-        <ServiceIcon tone={service.icon.tone}>{renderIconLabel(service.icon.label)}</ServiceIcon>
-        <h3 className={styles.title}>{service.title}</h3>
-        <p className={styles.description}>{service.description}</p>
-        <TextLink href={service.href}>詳しく見る</TextLink>
-      </div>
+      <a className={styles.cardLink} href={service.href} aria-label={`${service.title}の詳細を見る`}>
+        <div className={styles.imageWrap}>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img className={styles.image} src={service.image.src} alt={service.image.alt} />
+        </div>
+        <div className={styles.body}>
+          <div className={styles.headingLine}>
+            <span className={styles.number}>{number}</span>
+            <h3 className={styles.title}>{service.title}</h3>
+          </div>
+          <p className={styles.description}>{service.description}</p>
+        </div>
+      </a>
     </article>
   );
 }

@@ -20,7 +20,7 @@ export function About() {
               蓄電池・風力発電・発電・水素モビリティ・AIデータセンター事業を通じて、
               脱炭素社会の実現に貢献します。
             </p>
-            <Button href="#company" variant="outline">
+            <Button href="/about" variant="outline">
               私たちについて
             </Button>
           </div>

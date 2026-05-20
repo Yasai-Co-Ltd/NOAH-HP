@@ -8,35 +8,41 @@ interface FooterLink {
 
 interface FooterGroup {
   heading: string;
+  headingHref: string;
   links: FooterLink[];
 }
 
 const GROUPS: FooterGroup[] = [
   {
-    heading: "私たちについて",
-    links: [
-      { href: "#about", label: "代表メッセージ" },
-      { href: "#about", label: "会社概要" },
-      { href: "#about", label: "沿革" },
-      { href: "#about", label: "アクセス" },
-    ],
-  },
-  {
-    heading: "事業内容",
-    links: [
-      { href: "#business", label: "蓄電池事業" },
-      { href: "#business", label: "風力発電事業" },
-      { href: "#business", label: "発電事業" },
-      { href: "#business", label: "水素モビリティ事業" },
-      { href: "#business", label: "AIデータセンター事業" },
-    ],
-  },
-  {
     heading: "企業情報",
+    headingHref: "/about",
     links: [
-      { href: "#projects", label: "導入事例" },
-      { href: "#sustainability", label: "サステナビリティ" },
-      { href: "#news", label: "お知らせ" },
+      { href: "/about/message", label: "トップメッセージ" },
+      { href: "/about/vision", label: "企業理念・ビジョン" },
+      { href: "/about/outline", label: "会社概要" },
+      { href: "/about/history", label: "沿革" },
+      { href: "/about/network", label: "国内外拠点" },
+    ],
+  },
+  {
+    heading: "事業紹介",
+    headingHref: "/business",
+    links: [
+      { href: "/business/batteryenergystorage", label: "蓄電池事業" },
+      { href: "/business/windpower", label: "風力発電事業" },
+      { href: "/business/biomasspower", label: "バイオマス事業" },
+      { href: "/business/hopper", label: "走行式集塵ホッパー事業" },
+      { href: "/business/hydrogen-mobility", label: "水素モビリティ事業" },
+      { href: "/business/ai-data-center", label: "AIデータセンター事業" },
+    ],
+  },
+  {
+    heading: "サステナビリティ",
+    headingHref: "/sustainability",
+    links: [
+      { href: "/sustainability/community-relations", label: "地域共生" },
+      { href: "/sustainability/environment", label: "環境保全" },
+      { href: "/sustainability/carbon-neutrality", label: "カーボンニュートラル" },
     ],
   },
 ];
@@ -53,7 +59,9 @@ export function Footer() {
           <div className={styles.links}>
             {GROUPS.map((group) => (
               <div key={group.heading} className={styles.linkGroup}>
-                <h3>{group.heading}</h3>
+                <h3>
+                  <Link href={group.headingHref}>{group.heading}</Link>
+                </h3>
                 {group.links.map((link) => (
                   <Link
                     key={`${group.heading}-${link.label}`}
@@ -66,14 +74,20 @@ export function Footer() {
               </div>
             ))}
             <div className={styles.linkGroup}>
-              <h3>お問い合わせ</h3>
-              <Link href="#contact" className={styles.contactLink}>
+              <h3>その他</h3>
+              <Link href="/contact" className={styles.contactLink}>
                 お問い合わせ
               </Link>
-              <Link href="#" className={styles.link}>
+              <Link href="/news" className={styles.link}>
+                ニュース
+              </Link>
+              <Link href="/recruit" className={styles.link}>
+                採用情報
+              </Link>
+              <Link href="/privacy" className={styles.link}>
                 プライバシーポリシー
               </Link>
-              <Link href="#" className={styles.link}>
+              <Link href="/sitemap" className={styles.link}>
                 サイトマップ
               </Link>
             </div>
