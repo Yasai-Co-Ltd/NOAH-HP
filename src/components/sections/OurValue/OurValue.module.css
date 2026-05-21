@@ -79,7 +79,7 @@
   margin: 0;
   color: var(--color-card-title);
   font-size: clamp(1rem, 1.05vw, 1.12rem);
-  font-weight: 900;
+  font-weight: 700;
   line-height: 1.65;
 }
 

@@ -140,7 +140,7 @@
   padding: 16px 18px 18px;
   color: var(--color-brand-900);
   font-size: 0.72rem;
-  font-weight: 900;
+  font-weight: 700;
   line-height: 1.35;
   text-align: center;
   background: rgba(255, 255, 255, 0.82);
@@ -227,7 +227,7 @@
   color: var(--color-brand-700);
   font-family: var(--font-numeric);
   font-size: 0.82rem;
-  font-weight: 900;
+  font-weight: 700;
   line-height: 1;
 }
 
@@ -235,7 +235,7 @@
   display: block;
   margin-top: 3px;
   font-size: 0.9rem;
-  font-weight: 900;
+  font-weight: 700;
   line-height: 1.45;
 }
 
@@ -244,7 +244,7 @@
   margin-top: 5px;
   color: #22385f;
   font-size: 0.7rem;
-  font-weight: 800;
+  font-weight: 500;
   line-height: 1.6;
 }
 

@@ -47,7 +47,7 @@
   border: 1px solid #a9bce4;
   color: var(--color-brand-800);
   font-size: 0.75rem;
-  font-weight: 900;
+  font-weight: 700;
 }
 
 .itemTitle {
@@ -85,7 +85,7 @@
   margin-bottom: 8px;
   font-family: var(--font-serif);
   font-size: 2rem;
-  font-weight: 800;
+  font-weight: 500;
   line-height: 1;
 }
 
@@ -93,7 +93,7 @@
   color: #17335f;
   font-size: 0.88rem;
   font-style: normal;
-  font-weight: 800;
+  font-weight: 500;
   line-height: 1.75;
 }
 
@@ -107,7 +107,7 @@
   color: var(--color-surface);
   font-size: 0.82rem;
   font-style: normal;
-  font-weight: 900;
+  font-weight: 700;
   background: var(--color-brand-900);
 }
 

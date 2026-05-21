@@ -35,13 +35,13 @@
 .eyebrow {
   margin: 0 0 8px;
   font-size: 0.86rem;
-  font-weight: 900;
+  font-weight: 700;
 }
 
 .heading {
   color: var(--color-surface);
   font-family: var(--font-serif);
-  font-weight: 800;
+  font-weight: 500;
   font-size: clamp(2rem, 3.3vw, 3.45rem);
   line-height: 1.22;
   margin: 0;
