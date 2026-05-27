@@ -30,10 +30,10 @@ const GROUPS: FooterGroup[] = [
     links: [
       { href: "/business/batteryenergystorage", label: "蓄電池事業" },
       { href: "/business/windpower", label: "風力発電事業" },
-      { href: "/business/biomasspower", label: "バイオマス事業" },
-      { href: "/business/hopper", label: "走行式集塵ホッパー事業" },
+      { href: "/business/power", label: "発電事業" },
       { href: "/business/hydrogen-mobility", label: "水素モビリティ事業" },
       { href: "/business/ai-data-center", label: "AIデータセンター事業" },
+      { href: "/business/airborne-power", label: "空中発電所" },
     ],
   },
   {
