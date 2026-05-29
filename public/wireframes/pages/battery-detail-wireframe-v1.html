@@ -1,0 +1,1351 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>蓄電池事業 詳細ページ ワイヤーフレーム</title>
+    <style>
+      :root {
+        --brand-900: #052766;
+        --brand-800: #0a3487;
+        --brand-700: #0c459e;
+        --brand-100: #e8f4ff;
+        --brand-050: #f5faff;
+        --cyan: #53c1e5;
+        --teal: #65bbb4;
+        --green: #5fbf83;
+        --ink: #12264a;
+        --text: #26334d;
+        --muted: #5e6f8c;
+        --line: #d8e4f3;
+        --surface: #ffffff;
+        --serif: "Hiragino Mincho ProN", "Yu Mincho", "YuMincho", serif;
+        --sans: "Hiragino Sans", "Yu Gothic", "Meiryo", system-ui, sans-serif;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        width: 1440px;
+        margin: 0;
+        color: var(--text);
+        font-family: var(--sans);
+        background: #f6fbff;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
+
+      .container {
+        width: min(1280px, calc(100% - 128px));
+        margin-inline: auto;
+      }
+
+      .header {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        height: 92px;
+        background: rgba(255, 255, 255, 0.96);
+        border-bottom: 1px solid rgba(216, 228, 243, 0.9);
+      }
+
+      .headerInner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 92px;
+        padding-inline: 48px 0;
+      }
+
+      .logo {
+        width: 294px;
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        gap: 36px;
+        color: var(--brand-900);
+        font-size: 0.86rem;
+        font-weight: 900;
+      }
+
+      .contact {
+        display: grid;
+        place-items: center;
+        height: 92px;
+        padding-inline: 42px;
+        color: white;
+        background: var(--brand-900);
+      }
+
+      .eyebrow {
+        margin: 0;
+        color: var(--brand-700);
+        font-size: 0.92rem;
+        font-weight: 900;
+        letter-spacing: 0;
+      }
+
+      .subtitle {
+        display: block;
+        margin-top: 8px;
+        color: var(--brand-800);
+        font-size: 0.78rem;
+        font-weight: 900;
+      }
+
+      .hero {
+        position: relative;
+        min-height: 780px;
+        overflow: hidden;
+        background:
+          linear-gradient(90deg, rgba(5, 39, 102, 0.94) 0%, rgba(5, 39, 102, 0.82) 45%, rgba(5, 39, 102, 0.06) 74%),
+          radial-gradient(circle at 82% 18%, rgba(83, 193, 229, 0.34), transparent 32%),
+          linear-gradient(180deg, #f7fbff 0%, #eaf5ff 100%);
+      }
+
+      .hero::before {
+        position: absolute;
+        inset: 0;
+        content: "";
+        background:
+          linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+        background-size: 72px 72px;
+        mask-image: linear-gradient(90deg, black 0%, transparent 72%);
+      }
+
+      .heroInner {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: 0.92fr 1.08fr;
+        gap: 34px;
+        align-items: center;
+        min-height: 780px;
+      }
+
+      .heroCopy {
+        padding-top: 32px;
+        color: white;
+      }
+
+      .heroLabel {
+        display: inline-grid;
+        gap: 9px;
+        margin-bottom: 58px;
+        color: white;
+      }
+
+      .heroLabel strong {
+        font-size: 1.16rem;
+        line-height: 1;
+      }
+
+      .heroLabel span {
+        color: #b9eaff;
+        font-size: 0.86rem;
+        font-weight: 900;
+      }
+
+      .heroTitle {
+        margin: 0;
+        color: white;
+        font-family: var(--serif);
+        font-size: 4.56rem;
+        font-weight: 800;
+        line-height: 1.28;
+        letter-spacing: 0;
+      }
+
+      .heroLead {
+        width: 690px;
+        margin: 38px 0 0;
+        color: rgba(255, 255, 255, 0.94);
+        font-size: 1.03rem;
+        font-weight: 850;
+        line-height: 2.02;
+      }
+
+      .heroActions {
+        display: flex;
+        gap: 14px;
+        margin-top: 36px;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 188px;
+        height: 60px;
+        padding-inline: 26px;
+        color: var(--brand-900);
+        font-size: 0.9rem;
+        font-weight: 900;
+        background: white;
+        border: 1px solid rgba(255, 255, 255, 0.72);
+      }
+
+      .buttonDark {
+        color: white;
+        background: rgba(10, 52, 135, 0.72);
+      }
+
+      .heroVisual {
+        position: relative;
+        display: grid;
+        min-height: 600px;
+        align-items: end;
+      }
+
+      .heroVisual::before {
+        position: absolute;
+        right: 24px;
+        bottom: 68px;
+        width: 700px;
+        height: 470px;
+        content: "";
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(229, 243, 255, 0.92));
+        border: 1px solid rgba(185, 219, 244, 0.9);
+        box-shadow: 0 36px 78px rgba(4, 33, 82, 0.28);
+        transform: skewX(-10deg);
+      }
+
+      .heroProduct {
+        position: relative;
+        z-index: 1;
+        justify-self: center;
+        width: 720px;
+        max-width: none;
+        margin: 0 0 76px 16px;
+        filter: drop-shadow(0 34px 34px rgba(7, 43, 94, 0.22));
+      }
+
+      .heroStats {
+        position: absolute;
+        right: 52px;
+        bottom: 42px;
+        z-index: 2;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        width: 560px;
+        overflow: hidden;
+        background: white;
+        border: 1px solid rgba(184, 213, 238, 0.92);
+        box-shadow: 0 18px 42px rgba(4, 33, 82, 0.2);
+      }
+
+      .heroStats div {
+        padding: 20px 24px;
+        border-left: 1px solid var(--line);
+      }
+
+      .heroStats div:first-child {
+        border-left: 0;
+      }
+
+      .heroStats b {
+        display: block;
+        color: var(--brand-900);
+        font-family: Arial, sans-serif;
+        font-size: 1.68rem;
+        font-weight: 900;
+        line-height: 1;
+      }
+
+      .heroStats span {
+        display: block;
+        margin-top: 9px;
+        color: var(--muted);
+        font-size: 0.78rem;
+        font-weight: 900;
+      }
+
+      section {
+        position: relative;
+      }
+
+      .overview {
+        padding-block: 118px 104px;
+        background:
+          radial-gradient(circle at 90% 4%, rgba(83, 193, 229, 0.14), transparent 34%),
+          white;
+      }
+
+      .split {
+        display: grid;
+        grid-template-columns: minmax(360px, 0.84fr) minmax(0, 1.16fr);
+        gap: 92px;
+        align-items: center;
+      }
+
+      .sectionTitle {
+        margin: 24px 0 0;
+        color: var(--brand-900);
+        font-family: var(--serif);
+        font-size: 3rem;
+        font-weight: 800;
+        line-height: 1.45;
+        letter-spacing: 0;
+      }
+
+      .lead {
+        margin: 34px 0 0;
+        color: var(--text);
+        font-size: 0.98rem;
+        font-weight: 780;
+        line-height: 2.02;
+      }
+
+      .marketList {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+        margin-top: 28px;
+      }
+
+      .marketList span {
+        padding: 14px 16px;
+        color: var(--brand-900);
+        font-size: 0.82rem;
+        font-weight: 900;
+        text-align: center;
+        background: var(--brand-050);
+        border: 1px solid var(--line);
+      }
+
+      .flowPanel {
+        position: relative;
+        min-height: 430px;
+        padding: 42px;
+        overflow: hidden;
+        background: #f4f9fe;
+        border: 1px solid var(--line);
+      }
+
+      .flowPanel::before {
+        position: absolute;
+        right: -66px;
+        bottom: -100px;
+        width: 310px;
+        height: 310px;
+        content: "";
+        background: url("../../assets/noah_logo-mark.png") center / contain no-repeat;
+        opacity: 0.07;
+      }
+
+      .flowTitle {
+        margin: 0;
+        color: var(--brand-900);
+        font-size: 1.32rem;
+        font-weight: 900;
+      }
+
+      .flowLine {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px;
+        margin-top: 44px;
+      }
+
+      .flowItem {
+        position: relative;
+        min-height: 174px;
+        padding: 24px 18px;
+        background: white;
+        border: 1px solid #cfe0f2;
+        box-shadow: 0 12px 28px rgba(15, 66, 130, 0.08);
+      }
+
+      .flowItem::after {
+        position: absolute;
+        top: 50%;
+        right: -17px;
+        width: 18px;
+        height: 2px;
+        content: "";
+        background: var(--brand-700);
+      }
+
+      .flowItem:last-child::after {
+        display: none;
+      }
+
+      .flowIcon {
+        display: grid;
+        place-items: center;
+        width: 42px;
+        height: 42px;
+        color: white;
+        font-size: 0.86rem;
+        font-weight: 900;
+        background: var(--brand-900);
+        border-radius: 50%;
+      }
+
+      .flowItem h3 {
+        margin: 18px 0 0;
+        color: var(--brand-900);
+        font-size: 1rem;
+        font-weight: 900;
+        line-height: 1.46;
+      }
+
+      .flowItem p {
+        margin: 12px 0 0;
+        color: var(--muted);
+        font-size: 0.76rem;
+        font-weight: 800;
+        line-height: 1.72;
+      }
+
+      .solutions {
+        padding-block: 112px;
+        background:
+          linear-gradient(180deg, #f6fbff 0%, white 100%),
+          #f6fbff;
+      }
+
+      .headingRow {
+        display: grid;
+        grid-template-columns: minmax(360px, 0.85fr) minmax(0, 1fr);
+        gap: 72px;
+        align-items: end;
+        margin-bottom: 48px;
+      }
+
+      .headingLead {
+        margin: 0 0 9px;
+        color: var(--text);
+        font-size: 0.96rem;
+        font-weight: 800;
+        line-height: 1.95;
+      }
+
+      .solutionGrid {
+        display: grid;
+        grid-template-columns: 1.2fr 0.92fr 0.92fr;
+        gap: 24px;
+      }
+
+      .solutionCard {
+        min-height: 390px;
+        overflow: hidden;
+        background: white;
+        border: 1px solid #cfe0f2;
+        box-shadow: 0 14px 34px rgba(15, 66, 130, 0.08);
+      }
+
+      .solutionCard.large {
+        grid-row: span 2;
+        min-height: 804px;
+      }
+
+      .solutionImage {
+        height: 270px;
+        background: #edf5fc;
+      }
+
+      .solutionCard.large .solutionImage {
+        height: 514px;
+      }
+
+      .solutionImage img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .solutionCard.large .solutionImage img {
+        object-fit: contain;
+        padding: 42px 38px 0;
+      }
+
+      .solutionBody {
+        padding: 26px 28px 28px;
+      }
+
+      .solutionNumber {
+        color: var(--brand-700);
+        font-family: Arial, sans-serif;
+        font-size: 1.22rem;
+        font-weight: 900;
+      }
+
+      .solutionBody h3 {
+        margin: 12px 0 0;
+        color: var(--brand-900);
+        font-size: 1.5rem;
+        font-weight: 900;
+        line-height: 1.46;
+      }
+
+      .solutionBody p {
+        margin: 16px 0 0;
+        color: var(--text);
+        font-size: 0.88rem;
+        font-weight: 760;
+        line-height: 1.85;
+      }
+
+      .technology {
+        padding-block: 116px;
+        color: white;
+        background:
+          radial-gradient(circle at 20% 22%, rgba(83, 193, 229, 0.28), transparent 30%),
+          linear-gradient(135deg, #052766 0%, #0a3487 100%);
+      }
+
+      .technology .eyebrow,
+      .technology .subtitle {
+        color: #9ee9ff;
+      }
+
+      .technology .sectionTitle {
+        color: white;
+      }
+
+      .technology .lead {
+        color: rgba(255, 255, 255, 0.88);
+      }
+
+      .techLayout {
+        display: grid;
+        grid-template-columns: 0.82fr 1.18fr;
+        gap: 74px;
+        align-items: center;
+      }
+
+      .techDiagram {
+        position: relative;
+        min-height: 570px;
+      }
+
+      .techCenter {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        display: grid;
+        place-items: center;
+        width: 260px;
+        height: 260px;
+        color: var(--brand-900);
+        text-align: center;
+        background: white;
+        border: 16px solid rgba(83, 193, 229, 0.28);
+        border-radius: 50%;
+        box-shadow: 0 30px 60px rgba(0, 15, 48, 0.22);
+        transform: translate(-50%, -50%);
+      }
+
+      .techCenter strong {
+        display: block;
+        font-family: Arial, sans-serif;
+        font-size: 3.2rem;
+        font-weight: 900;
+        line-height: 1;
+      }
+
+      .techCenter span {
+        display: block;
+        margin-top: 10px;
+        font-size: 0.88rem;
+        font-weight: 900;
+      }
+
+      .techNode {
+        position: absolute;
+        width: 190px;
+        min-height: 124px;
+        padding: 20px 18px;
+        color: white;
+        background: rgba(255, 255, 255, 0.11);
+        border: 1px solid rgba(188, 231, 255, 0.36);
+        backdrop-filter: blur(8px);
+      }
+
+      .techNode:nth-child(2) {
+        top: 0;
+        left: 264px;
+      }
+
+      .techNode:nth-child(3) {
+        top: 128px;
+        right: 0;
+      }
+
+      .techNode:nth-child(4) {
+        right: 46px;
+        bottom: 38px;
+      }
+
+      .techNode:nth-child(5) {
+        bottom: 38px;
+        left: 42px;
+      }
+
+      .techNode:nth-child(6) {
+        top: 128px;
+        left: 0;
+      }
+
+      .techNode:nth-child(7) {
+        top: 0;
+        right: 210px;
+      }
+
+      .techNode b {
+        display: block;
+        color: #9ee9ff;
+        font-family: Arial, sans-serif;
+        font-size: 1.04rem;
+        font-weight: 900;
+      }
+
+      .techNode strong {
+        display: block;
+        margin-top: 10px;
+        font-size: 1rem;
+        font-weight: 900;
+        line-height: 1.42;
+      }
+
+      .techNode span {
+        display: block;
+        margin-top: 8px;
+        color: rgba(255, 255, 255, 0.75);
+        font-size: 0.72rem;
+        font-weight: 800;
+        line-height: 1.6;
+      }
+
+      .product {
+        padding-block: 118px 108px;
+        background: white;
+      }
+
+      .productShowcase {
+        display: grid;
+        grid-template-columns: 1.08fr 0.92fr;
+        gap: 56px;
+        align-items: stretch;
+      }
+
+      .productVisual {
+        display: grid;
+        align-items: center;
+        min-height: 540px;
+        padding: 44px;
+        background: linear-gradient(180deg, #f5faff, #edf7ff);
+        border: 1px solid var(--line);
+      }
+
+      .productVisual img {
+        width: 100%;
+        filter: drop-shadow(0 26px 30px rgba(9, 45, 105, 0.16));
+      }
+
+      .specPanel {
+        padding: 44px;
+        color: white;
+        background: var(--brand-900);
+      }
+
+      .specPanel h3 {
+        margin: 0;
+        color: white;
+        font-family: var(--serif);
+        font-size: 2.36rem;
+        line-height: 1.38;
+      }
+
+      .specLead {
+        margin: 22px 0 0;
+        color: rgba(255, 255, 255, 0.88);
+        font-size: 0.92rem;
+        font-weight: 800;
+        line-height: 1.9;
+      }
+
+      .specGrid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        margin-top: 36px;
+      }
+
+      .specGrid div {
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+      }
+
+      .specGrid b {
+        display: block;
+        color: #9ee9ff;
+        font-family: Arial, sans-serif;
+        font-size: 1.78rem;
+        font-weight: 900;
+        line-height: 1;
+      }
+
+      .specGrid span {
+        display: block;
+        margin-top: 10px;
+        color: rgba(255, 255, 255, 0.82);
+        font-size: 0.76rem;
+        font-weight: 900;
+      }
+
+      .architecture {
+        padding-block: 108px;
+        background:
+          repeating-linear-gradient(172deg, transparent 0 20px, rgba(12, 69, 158, 0.052) 21px, transparent 22px 44px),
+          #f6fbff;
+      }
+
+      .archPanel {
+        margin-top: 54px;
+        padding: 48px;
+        background: white;
+        border: 1px solid var(--line);
+        box-shadow: 0 18px 44px rgba(15, 66, 130, 0.08);
+      }
+
+      .archFlow {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 16px;
+      }
+
+      .archItem {
+        position: relative;
+        display: grid;
+        align-content: center;
+        min-height: 160px;
+        padding: 24px;
+        text-align: center;
+        background: var(--brand-050);
+        border: 1px solid #cfe0f2;
+      }
+
+      .archItem::after {
+        position: absolute;
+        top: 50%;
+        right: -17px;
+        z-index: 1;
+        width: 17px;
+        height: 2px;
+        content: "";
+        background: var(--brand-700);
+      }
+
+      .archItem:last-child::after {
+        display: none;
+      }
+
+      .archItem b {
+        display: block;
+        color: var(--brand-900);
+        font-size: 1.04rem;
+        font-weight: 900;
+      }
+
+      .archItem span {
+        display: block;
+        margin-top: 12px;
+        color: var(--muted);
+        font-size: 0.76rem;
+        font-weight: 800;
+        line-height: 1.58;
+      }
+
+      .proof {
+        padding-block: 112px;
+        color: white;
+        background:
+          linear-gradient(90deg, rgba(5, 39, 102, 0.92), rgba(5, 39, 102, 0.7)),
+          url("../assets/battery/battery-system-lineup.jpg") center / cover no-repeat;
+      }
+
+      .proofInner {
+        display: grid;
+        grid-template-columns: 0.72fr 1fr;
+        gap: 78px;
+        align-items: center;
+      }
+
+      .proof .eyebrow,
+      .proof .subtitle {
+        color: #9ee9ff;
+      }
+
+      .proof .sectionTitle {
+        color: white;
+      }
+
+      .caseGrid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+      }
+
+      .caseCard {
+        min-height: 142px;
+        padding: 26px;
+        background: rgba(255, 255, 255, 0.12);
+        border: 1px solid rgba(255, 255, 255, 0.24);
+        backdrop-filter: blur(8px);
+      }
+
+      .caseCard b {
+        display: block;
+        color: #9ee9ff;
+        font-family: Arial, sans-serif;
+        font-size: 1.68rem;
+        font-weight: 900;
+        line-height: 1;
+      }
+
+      .caseCard span {
+        display: block;
+        margin-top: 14px;
+        color: white;
+        font-size: 0.98rem;
+        font-weight: 900;
+        line-height: 1.56;
+      }
+
+      .process {
+        padding-block: 110px;
+        background: white;
+      }
+
+      .processList {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0;
+        margin-top: 48px;
+        border: 1px solid var(--line);
+      }
+
+      .processStep {
+        min-height: 230px;
+        padding: 34px 30px;
+        border-left: 1px solid var(--line);
+      }
+
+      .processStep:first-child {
+        border-left: 0;
+      }
+
+      .processStep b {
+        color: var(--brand-700);
+        font-family: Arial, sans-serif;
+        font-size: 1.32rem;
+        font-weight: 900;
+      }
+
+      .processStep h3 {
+        margin: 24px 0 0;
+        color: var(--brand-900);
+        font-size: 1.26rem;
+        font-weight: 900;
+      }
+
+      .processStep p {
+        margin: 16px 0 0;
+        color: var(--text);
+        font-size: 0.84rem;
+        font-weight: 780;
+        line-height: 1.82;
+      }
+
+      .cta {
+        padding-block: 96px;
+        color: white;
+        text-align: center;
+        background:
+          linear-gradient(rgba(5, 39, 102, 0.82), rgba(5, 39, 102, 0.82)),
+          url("../assets/battery/bess-container-5mwh.png") center 55% / cover no-repeat;
+      }
+
+      .cta h2 {
+        margin: 0;
+        color: white;
+        font-family: var(--serif);
+        font-size: 2.7rem;
+        font-weight: 800;
+        line-height: 1.44;
+      }
+
+      .cta p {
+        margin: 20px 0 0;
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 0.96rem;
+        font-weight: 850;
+      }
+
+      .footer {
+        padding: 58px 64px 34px;
+        color: white;
+        background: #052766;
+      }
+
+      .footerGrid {
+        display: grid;
+        grid-template-columns: 320px repeat(4, 1fr);
+        gap: 54px;
+      }
+
+      .footer img {
+        width: 250px;
+      }
+
+      .footer h3 {
+        margin: 0 0 18px;
+        font-size: 0.92rem;
+      }
+
+      .footer p {
+        margin: 10px 0 0;
+        color: rgba(255, 255, 255, 0.72);
+        font-size: 0.78rem;
+        font-weight: 800;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="headerInner">
+        <img class="logo" src="../../assets/noah_logo.png" alt="諾亜建設株式会社" />
+        <nav class="nav" aria-label="グローバルナビゲーション">
+          <span>企業情報</span>
+          <span>事業紹介</span>
+          <span>サステナビリティ</span>
+          <span>ニュース</span>
+          <span>採用情報</span>
+          <span class="contact">お問い合わせ</span>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container heroInner">
+          <div class="heroCopy">
+            <p class="heroLabel">
+              <strong>BATTERY ENERGY STORAGE</strong>
+              <span>蓄電池事業</span>
+            </p>
+            <h1 class="heroTitle">
+              蓄電池で、<br />
+              再エネを安定した<br />
+              電力インフラへ。
+            </h1>
+            <p class="heroLead">
+              系統用蓄電池の設計・調達・施工から、EMSによる遠隔監視、一次調整・需給調整市場への運用まで。
+              NOAHは発電側・配電側・需要側を横断し、地域に必要な蓄電システムを一貫して構築します。
+            </p>
+            <div class="heroActions">
+              <span class="button">導入相談をする</span>
+              <span class="button buttonDark">ソリューションを見る</span>
+            </div>
+          </div>
+          <div class="heroVisual" aria-hidden="true">
+            <img class="heroProduct" src="../assets/battery/bess-container-5mwh.png" alt="" />
+            <div class="heroStats">
+              <div>
+                <b>2MW/8MWh</b>
+                <span>系統用パッケージ</span>
+              </div>
+              <div>
+                <b>&lt;50ms</b>
+                <span>一次調整応答</span>
+              </div>
+              <div>
+                <b>6S+EDR</b>
+                <span>安全・制御基盤</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="overview">
+        <div class="container split">
+          <div>
+            <p class="eyebrow">OVERVIEW</p>
+            <span class="subtitle">系統用蓄電池とは</span>
+            <h2 class="sectionTitle">
+              余った電力を蓄え、<br />
+              必要な時に供給する。
+            </h2>
+            <p class="lead">
+              系統用蓄電池は、電力系統に直接接続し、再生可能エネルギーの余剰電力を蓄電。
+              夜間や需給ひっ迫時に放電することで、電力供給の安定化と再エネ導入拡大を支えます。
+            </p>
+            <div class="marketList">
+              <span>卸電力市場</span>
+              <span>容量市場</span>
+              <span>需給調整市場</span>
+            </div>
+          </div>
+          <div class="flowPanel">
+            <h3 class="flowTitle">電力の流れ</h3>
+            <div class="flowLine">
+              <article class="flowItem">
+                <span class="flowIcon">01</span>
+                <h3>再エネ発電</h3>
+                <p>太陽光・風力などの変動電源から発生する余剰電力を取り込みます。</p>
+              </article>
+              <article class="flowItem">
+                <span class="flowIcon">02</span>
+                <h3>蓄電池に充電</h3>
+                <p>リチウムイオン蓄電池に貯蔵し、需給変動に備えます。</p>
+              </article>
+              <article class="flowItem">
+                <span class="flowIcon">03</span>
+                <h3>EMSで制御</h3>
+                <p>遠隔監視・予測・指令制御により、安全に充放電を最適化します。</p>
+              </article>
+              <article class="flowItem">
+                <span class="flowIcon">04</span>
+                <h3>市場・需要家へ</h3>
+                <p>電力市場や需要家へ放電し、収益化と安定供給を両立します。</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="solutions">
+        <div class="container">
+          <div class="headingRow">
+            <div>
+              <p class="eyebrow">APPLICATION</p>
+              <span class="subtitle">用途別ソリューション</span>
+              <h2 class="sectionTitle">
+                発電側から需要側まで、<br />
+                蓄電の使い方を設計する。
+              </h2>
+            </div>
+            <p class="headingLead">
+              産業用・商業用の分散型蓄電、新エネルギーとの連携蓄電、送配電網側の系統支援、
+              ゼロカーボンパーク、太陽光＋蓄電＋充電まで、目的に応じて構成します。
+            </p>
+          </div>
+          <div class="solutionGrid">
+            <article class="solutionCard large">
+              <div class="solutionImage">
+                <img src="../assets/battery/bess-container-5mwh.png" alt="コンテナ型蓄電池" />
+              </div>
+              <div class="solutionBody">
+                <span class="solutionNumber">01</span>
+                <h3>系統用蓄電池</h3>
+                <p>
+                  発電所・変電所・需要地に接続し、一次調整、需給調整、市場取引、BCP用途まで対応します。
+                </p>
+              </div>
+            </article>
+            <article class="solutionCard">
+              <div class="solutionImage">
+                <img src="../assets/battery/bess-215kwh.png" alt="215kWh蓄電システム" />
+              </div>
+              <div class="solutionBody">
+                <span class="solutionNumber">02</span>
+                <h3>産業・商業用蓄電</h3>
+                <p>工場・施設のピークカット、非常用電源、電力コスト最適化に活用します。</p>
+              </div>
+            </article>
+            <article class="solutionCard">
+              <div class="solutionImage">
+                <img src="../assets/battery/solar-storage-unit.png" alt="太陽光蓄電一体型装置" />
+              </div>
+              <div class="solutionBody">
+                <span class="solutionNumber">03</span>
+                <h3>太陽光＋蓄電＋充電</h3>
+                <p>再エネ発電・蓄電・充電設備を一体で設計し、施設単位の脱炭素化を支えます。</p>
+              </div>
+            </article>
+            <article class="solutionCard">
+              <div class="solutionImage">
+                <img src="../assets/battery/battery-system-lineup.jpg" alt="蓄電池製品ラインナップ" />
+              </div>
+              <div class="solutionBody">
+                <span class="solutionNumber">04</span>
+                <h3>VPP・ゼロカーボンパーク</h3>
+                <p>複数設備を束ね、エリア単位でエネルギーを管理する統合基盤を構築します。</p>
+              </div>
+            </article>
+            <article class="solutionCard">
+              <div class="solutionImage">
+                <img src="../assets/battery/bess-418kwh.png" alt="418kWh蓄電システム" />
+              </div>
+              <div class="solutionBody">
+                <span class="solutionNumber">05</span>
+                <h3>中規模蓄電システム</h3>
+                <p>200kW/418kWhクラスの液冷蓄電で、施設単位から小規模系統まで柔軟に対応します。</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="technology">
+        <div class="container techLayout">
+          <div>
+            <p class="eyebrow">CORE TECHNOLOGY</p>
+            <span class="subtitle">6S+EDR</span>
+            <h2 class="sectionTitle">
+              安全性・制御性・可視化を、<br />
+              ひとつの基盤に統合。
+            </h2>
+            <p class="lead">
+              6S+EDRは、PCS・BMS・EMSに加え、高速制御、予兆警報、故障記録を統合する次世代の蓄電システム基盤です。
+              AIとIoTを用いて、事故の未然防止、一次調整、遠隔運用を支えます。
+            </p>
+          </div>
+          <div class="techDiagram">
+            <div class="techCenter">
+              <span>
+                <strong>6S</strong>
+                + EDR
+              </span>
+            </div>
+            <div class="techNode">
+              <b>PCS</b>
+              <strong>系統連系・変換</strong>
+              <span>直流・交流変換と出力制御を担う中核設備。</span>
+            </div>
+            <div class="techNode">
+              <b>BMS</b>
+              <strong>電池管理</strong>
+              <span>温度・電圧を監視し、寿命と安全性を高める。</span>
+            </div>
+            <div class="techNode">
+              <b>EMS</b>
+              <strong>エネルギー管理</strong>
+              <span>充放電計画、遠隔監視、市場運用を統合。</span>
+            </div>
+            <div class="techNode">
+              <b>HCS</b>
+              <strong>高速制御</strong>
+              <span>一次調整や動的無効電力に高速応答。</span>
+            </div>
+            <div class="techNode">
+              <b>BWS</b>
+              <strong>予兆警報</strong>
+              <span>AI診断で故障兆候を早期に検知。</span>
+            </div>
+            <div class="techNode">
+              <b>EDR</b>
+              <strong>故障記録</strong>
+              <span>波形・イベントを記録し原因分析を支援。</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="product">
+        <div class="container">
+          <div class="headingRow">
+            <div>
+              <p class="eyebrow">MAIN PRODUCT</p>
+              <span class="subtitle">主力製品</span>
+              <h2 class="sectionTitle">
+                2MW/8MWh<br />
+                系統用蓄電池パッケージ。
+              </h2>
+            </div>
+            <p class="headingLead">
+              中規模から大規模まで、発電・配電・需要の各領域に対応。
+              建設からアグリゲータによる運営、遠隔監視まで一貫して支援します。
+            </p>
+          </div>
+          <div class="productShowcase">
+            <div class="productVisual">
+              <img src="../assets/battery/bess-container-5mwh.png" alt="2MW/8MWh系統用蓄電池パッケージ" />
+            </div>
+            <div class="specPanel">
+              <h3>プロジェクト要件に合わせて、構成を最適化。</h3>
+              <p class="specLead">
+                ESS、PCS、昇圧トランス、EMS、運用保守プラットフォームを組み合わせ、
+                現地条件と電力市場の要件に合わせてシステムを設計します。
+              </p>
+              <div class="specGrid">
+                <div>
+                  <b>2090kWh×4</b>
+                  <span>または4180kWh×2</span>
+                </div>
+                <div>
+                  <b>995kW×2</b>
+                  <span>定格出力</span>
+                </div>
+                <div>
+                  <b>2000kVA</b>
+                  <span>定格容量</span>
+                </div>
+                <div>
+                  <b>-25〜45℃</b>
+                  <span>動作温度範囲</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="architecture">
+        <div class="container">
+          <p class="eyebrow">SYSTEM ARCHITECTURE</p>
+          <span class="subtitle">構成と運用</span>
+          <h2 class="sectionTitle">
+            クラウドから現場設備まで、<br />
+            一体で監視・制御する。
+          </h2>
+          <div class="archPanel">
+            <div class="archFlow">
+              <div class="archItem">
+                <b>蓄電池</b>
+                <span>セル・PACK・液冷冷却・防火防災・ガス監視</span>
+              </div>
+              <div class="archItem">
+                <b>PCS / 変圧</b>
+                <span>出力制御、系統連系、電圧変換、保護</span>
+              </div>
+              <div class="archItem">
+                <b>EMS / HCS</b>
+                <span>充放電最適化、一次調整、高速制御</span>
+              </div>
+              <div class="archItem">
+                <b>Cloud</b>
+                <span>4G/5G接続、遠隔監視、データ蓄積</span>
+              </div>
+              <div class="archItem">
+                <b>Market / O&M</b>
+                <span>需給調整、市場運用、保守、診断</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="proof">
+        <div class="container proofInner">
+          <div>
+            <p class="eyebrow">PROJECT RECORD</p>
+            <span class="subtitle">実績イメージ</span>
+            <h2 class="sectionTitle">
+              大規模蓄電の導入実績を、<br />
+              日本市場へ。
+            </h2>
+          </div>
+          <div class="caseGrid">
+            <article class="caseCard">
+              <b>50MW / 200MWh</b>
+              <span>魯能海西州 蓄電発電所</span>
+            </article>
+            <article class="caseCard">
+              <b>24MW / 48MWh</b>
+              <span>鎮江新区五峰山 蓄電発電所</span>
+            </article>
+            <article class="caseCard">
+              <b>10MW / 20MWh</b>
+              <span>揚中三月 蓄電発電所</span>
+            </article>
+            <article class="caseCard">
+              <b>9MW / 13.5MWh</b>
+              <span>エシュロン利用 蓄電発電所</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="process">
+        <div class="container">
+          <p class="eyebrow">PROJECT FLOW</p>
+          <span class="subtitle">導入までの流れ</span>
+          <h2 class="sectionTitle">
+            調査から運用まで、<br />
+            蓄電池プロジェクトを一貫支援。
+          </h2>
+          <div class="processList">
+            <article class="processStep">
+              <b>01</b>
+              <h3>調査・企画</h3>
+              <p>設置候補地、系統連系、用途、電力市場の活用方針を整理します。</p>
+            </article>
+            <article class="processStep">
+              <b>02</b>
+              <h3>システム設計</h3>
+              <p>ESS、PCS、EMS、変圧設備、通信構成を要件に合わせて設計します。</p>
+            </article>
+            <article class="processStep">
+              <b>03</b>
+              <h3>調達・施工</h3>
+              <p>機器調達、据付、電気工事、試運転、連系手続きを進めます。</p>
+            </article>
+            <article class="processStep">
+              <b>04</b>
+              <h3>運用・保守</h3>
+              <p>遠隔監視、予兆保全、一次調整、市場運用まで継続的に支援します。</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta">
+        <div class="container">
+          <h2>系統用蓄電池・産業用蓄電池の<br />導入相談はこちら</h2>
+          <p>事業計画の初期段階から、候補地・容量・運用モデルまでご相談ください。</p>
+          <div class="heroActions" style="justify-content: center">
+            <span class="button">お問い合わせ</span>
+            <span class="button buttonDark">資料ダウンロード</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footerGrid">
+        <div>
+          <img src="../../assets/noah_logo.png" alt="諾亜建設株式会社" />
+          <p>再生可能エネルギーと蓄電をつなぎ、地域の電力インフラを支えます。</p>
+        </div>
+        <div>
+          <h3>企業情報</h3>
+          <p>トップメッセージ</p>
+          <p>企業理念・ビジョン</p>
+          <p>会社概要</p>
+        </div>
+        <div>
+          <h3>事業紹介</h3>
+          <p>蓄電池事業</p>
+          <p>風力発電事業</p>
+          <p>発電事業</p>
+          <p>水素モビリティ事業</p>
+        </div>
+        <div>
+          <h3>サステナビリティ</h3>
+          <p>地域共生</p>
+          <p>環境保全</p>
+          <p>カーボンニュートラル</p>
+        </div>
+        <div>
+          <h3>その他</h3>
+          <p>お問い合わせ</p>
+          <p>ニュース</p>
+          <p>プライバシーポリシー</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,1018 @@
+.hero {
+  position: relative;
+  overflow: hidden;
+  color: var(--color-surface);
+  background:
+    linear-gradient(
+      90deg,
+      rgba(5, 39, 102, 0.96) 0%,
+      rgba(5, 39, 102, 0.9) 44%,
+      rgba(5, 39, 102, 0.16) 72%
+    ),
+    radial-gradient(circle at 82% 18%, rgba(83, 193, 229, 0.32), transparent 32%),
+    linear-gradient(135deg, #0b377f 0%, #eaf6ff 100%);
+  isolation: isolate;
+}
+
+.hero::before {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  content: "";
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+  background-size: 80px 80px;
+  mask-image: linear-gradient(90deg, black 0%, black 56%, transparent 84%);
+}
+
+.hero::after {
+  position: absolute;
+  right: -116px;
+  bottom: -96px;
+  z-index: 0;
+  width: 660px;
+  height: 660px;
+  pointer-events: none;
+  content: "";
+  background: url("/assets/noah_logo-mark.png") center / contain no-repeat;
+  opacity: 0.075;
+}
+
+.heroInner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 0.88fr) minmax(0, 1.12fr);
+  gap: 58px;
+  align-items: center;
+  min-height: 760px;
+  padding-block: 96px;
+}
+
+.heroCopy,
+.heroVisualReveal {
+  min-width: 0;
+}
+
+.kicker {
+  margin: 0;
+  color: var(--color-surface);
+  font-size: 1.12rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.kicker span {
+  display: block;
+  margin-top: 10px;
+  color: #9ee9ff;
+  font-size: 0.82rem;
+  font-weight: 900;
+}
+
+.heroTitle {
+  max-width: 720px;
+  margin: 54px 0 0;
+  color: var(--color-surface);
+  font-family: var(--font-serif);
+  font-size: clamp(3rem, 5.2vw, 4.86rem);
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: 0;
+}
+
+.heroLead {
+  max-width: 650px;
+  margin: 36px 0 0;
+  color: rgba(255, 255, 255, 0.94);
+  font-size: 1.02rem;
+  font-weight: 850;
+  line-height: 2.02;
+}
+
+.heroActions,
+.ctaActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 34px;
+}
+
+.darkButton {
+  color: var(--color-surface);
+  background: rgba(10, 52, 135, 0.56);
+  border-color: rgba(255, 255, 255, 0.28);
+}
+
+.heroVisual {
+  position: relative;
+  min-height: 460px;
+  margin: 0;
+  overflow: visible;
+  filter: drop-shadow(0 42px 90px rgba(4, 33, 82, 0.3));
+}
+
+.heroVisual::before {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  content: "";
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(233, 246, 255, 0.96)),
+    var(--color-surface);
+  border: 1px solid rgba(185, 219, 244, 0.96);
+  clip-path: polygon(8% 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.heroImage {
+  z-index: 1;
+  object-fit: cover;
+  object-position: center;
+  border: 1px solid rgba(185, 219, 244, 0.96);
+  clip-path: polygon(8% 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.metricStrip {
+  position: absolute;
+  right: 42px;
+  bottom: -58px;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  width: min(646px, calc(100% - 84px));
+  overflow: hidden;
+  background: var(--color-surface);
+  border: 1px solid #c9dff2;
+  box-shadow: 0 24px 54px rgba(4, 33, 82, 0.22);
+}
+
+.metric {
+  min-height: 104px;
+  padding: 23px 24px;
+  border-left: 1px solid var(--color-line);
+}
+
+.metric:first-child {
+  border-left: 0;
+}
+
+.metric b {
+  display: block;
+  color: var(--color-brand-900);
+  font-family: var(--font-numeric);
+  font-size: clamp(1.24rem, 1.5vw, 1.78rem);
+  font-weight: 900;
+  line-height: 1.1;
+}
+
+.metric span {
+  display: block;
+  margin-top: 10px;
+  color: var(--color-muted);
+  font-size: 0.76rem;
+  font-weight: 900;
+  line-height: 1.45;
+}
+
+.overview,
+.lineup,
+.package,
+.platform,
+.process {
+  padding-block: 116px;
+}
+
+.overview,
+.platform {
+  background:
+    radial-gradient(circle at 86% 0%, rgba(83, 193, 229, 0.14), transparent 32%),
+    var(--color-brand-050);
+}
+
+.lineup,
+.package,
+.process {
+  background: var(--color-surface);
+}
+
+.twoColumn {
+  display: grid;
+  grid-template-columns: minmax(330px, 0.86fr) minmax(0, 1.14fr);
+  gap: 88px;
+  align-items: center;
+}
+
+.heading {
+  margin: 22px 0 0;
+  color: var(--color-brand-900);
+  font-family: var(--font-serif);
+  font-size: clamp(2.24rem, 3.2vw, 3.12rem);
+  font-weight: 800;
+  line-height: 1.42;
+  letter-spacing: 0;
+}
+
+.lead,
+.sectionLead,
+.techLead {
+  margin: 34px 0 0;
+  color: var(--color-text);
+  font-size: 0.96rem;
+  font-weight: 800;
+  line-height: 1.94;
+}
+
+.sectionLead {
+  max-width: 650px;
+  margin: 22px 0 0 auto;
+}
+
+.techLead {
+  max-width: 1040px;
+}
+
+.marketBadges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 26px;
+}
+
+.marketBadges span {
+  padding: 12px 15px;
+  color: var(--color-brand-900);
+  font-size: 0.8rem;
+  font-weight: 900;
+  line-height: 1;
+  background: var(--color-surface);
+  border: 1px solid var(--color-line);
+}
+
+.powerFlow {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  min-height: 366px;
+  padding: 42px;
+  overflow: hidden;
+  background: var(--color-surface);
+  border: 1px solid var(--color-line);
+  box-shadow: 0 20px 50px rgba(15, 66, 130, 0.09);
+}
+
+.powerFlow::before {
+  position: absolute;
+  right: 34px;
+  bottom: 26px;
+  width: 170px;
+  height: 170px;
+  pointer-events: none;
+  content: "";
+  background: url("/assets/noah_logo-mark.png") center / contain no-repeat;
+  opacity: 0.055;
+}
+
+.flowItem {
+  position: relative;
+  z-index: 1;
+  align-self: center;
+  min-height: 210px;
+  padding: 26px 20px;
+  background: var(--color-brand-050);
+  border: 1px solid #cfe0f2;
+}
+
+.flowItem::after {
+  position: absolute;
+  top: 50%;
+  right: -19px;
+  width: 19px;
+  height: 2px;
+  content: "";
+  background: var(--color-brand-700);
+}
+
+.flowItem:last-child::after {
+  display: none;
+}
+
+.flowItem span {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  color: var(--color-surface);
+  font-family: var(--font-numeric);
+  font-size: 0.82rem;
+  font-weight: 900;
+  line-height: 1;
+  background: var(--color-brand-900);
+  border-radius: 50%;
+}
+
+.flowItem h3 {
+  margin: 20px 0 0;
+  color: var(--color-brand-900);
+  font-size: 1.08rem;
+  font-weight: 900;
+  line-height: 1.45;
+}
+
+.flowItem p {
+  margin: 14px 0 0;
+  color: var(--color-muted);
+  font-size: 0.76rem;
+  font-weight: 800;
+  line-height: 1.72;
+}
+
+.sectionHeading {
+  display: grid;
+  grid-template-columns: minmax(390px, 0.9fr) minmax(0, 1fr);
+  gap: 80px;
+  align-items: end;
+  margin-bottom: 52px;
+}
+
+.productStage {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
+  gap: 28px;
+}
+
+.mainProductReveal,
+.productCardReveal,
+.packageReveal,
+.techFigureReveal {
+  min-width: 0;
+}
+
+.mainProduct {
+  position: relative;
+  min-height: 650px;
+  overflow: hidden;
+  background: #eef7ff;
+  border: 1px solid var(--color-line);
+  box-shadow: 0 20px 50px rgba(15, 66, 130, 0.09);
+}
+
+.mainProduct::after {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  content: "";
+  background: linear-gradient(180deg, transparent 42%, rgba(5, 39, 102, 0.74) 100%);
+}
+
+.mainProductImage {
+  object-fit: cover;
+  object-position: center;
+}
+
+.mainProductText {
+  position: absolute;
+  bottom: 44px;
+  left: 46px;
+  z-index: 2;
+  width: min(530px, calc(100% - 92px));
+}
+
+.mainProductText b,
+.sideBody b,
+.spec b,
+.proofCard b,
+.processStep b {
+  display: block;
+  color: var(--color-brand-700);
+  font-family: var(--font-numeric);
+  font-weight: 900;
+  line-height: 1;
+}
+
+.mainProductText b {
+  font-size: 1.34rem;
+}
+
+.mainProductText h3 {
+  margin: 12px 0 0;
+  color: var(--color-surface);
+  font-size: clamp(1.52rem, 2.35vw, 2.16rem);
+  font-weight: 900;
+  line-height: 1.36;
+}
+
+.mainProductText p {
+  margin: 15px 0 0;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.88rem;
+  font-weight: 800;
+  line-height: 1.86;
+}
+
+.productCards {
+  display: grid;
+  gap: 28px;
+}
+
+.sideProduct {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  min-height: 311px;
+  overflow: hidden;
+  background: var(--color-surface);
+  border: 1px solid var(--color-line);
+  box-shadow: 0 14px 36px rgba(15, 66, 130, 0.07);
+}
+
+.sideVisual {
+  display: grid;
+  place-items: center;
+  min-width: 0;
+  background: #eef7ff;
+}
+
+.sideImage {
+  width: 100%;
+  height: 250px;
+  object-fit: contain;
+  object-position: center;
+}
+
+.sideBody {
+  display: grid;
+  align-content: center;
+  min-width: 0;
+  padding: 28px;
+}
+
+.sideBody b {
+  font-size: 1.1rem;
+}
+
+.sideBody h3 {
+  margin: 10px 0 0;
+  color: var(--color-brand-900);
+  font-size: 1.28rem;
+  font-weight: 900;
+  line-height: 1.45;
+}
+
+.sideBody p {
+  margin: 12px 0 0;
+  color: var(--color-muted);
+  font-size: 0.78rem;
+  font-weight: 800;
+  line-height: 1.72;
+}
+
+.technology {
+  padding-block: 124px;
+  color: var(--color-text);
+  background:
+    radial-gradient(circle at 82% 18%, rgba(101, 187, 180, 0.2), transparent 34%),
+    linear-gradient(180deg, #ffffff 0%, #f2fbf7 100%);
+}
+
+.techFigure {
+  margin: 58px 0 0;
+  overflow: hidden;
+  background: var(--color-surface);
+  border: 1px solid rgba(190, 222, 212, 0.85);
+  box-shadow: 0 24px 58px rgba(22, 96, 102, 0.1);
+}
+
+.techImage {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.packagePanel {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  margin-top: 52px;
+  overflow: hidden;
+  border: 1px solid var(--color-line);
+  box-shadow: 0 22px 54px rgba(15, 66, 130, 0.08);
+}
+
+.packageVisual {
+  position: relative;
+  min-height: 540px;
+  background: linear-gradient(180deg, #f8fcff, #eef7ff);
+}
+
+.packageImage {
+  object-fit: contain;
+  object-position: center;
+  padding: 32px;
+}
+
+.specPanel {
+  padding: 52px;
+  color: var(--color-text);
+  background:
+    radial-gradient(circle at 100% 0%, rgba(83, 193, 229, 0.2), transparent 38%),
+    #eef8ff;
+}
+
+.specPanel h3 {
+  margin: 0;
+  color: var(--color-brand-900);
+  font-family: var(--font-serif);
+  font-size: clamp(1.72rem, 2.45vw, 2.38rem);
+  font-weight: 800;
+  line-height: 1.42;
+  letter-spacing: 0;
+}
+
+.specPanel p {
+  margin: 20px 0 0;
+  color: var(--color-text);
+  font-size: 0.9rem;
+  font-weight: 800;
+  line-height: 1.86;
+}
+
+.specGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 38px;
+}
+
+.spec {
+  min-height: 112px;
+  padding: 22px;
+  background: var(--color-surface);
+  border: 1px solid #cfe0f2;
+}
+
+.spec b {
+  color: #228f8a;
+  font-size: clamp(1.18rem, 1.55vw, 1.78rem);
+}
+
+.spec span {
+  display: block;
+  margin-top: 11px;
+  color: var(--color-muted);
+  font-size: 0.76rem;
+  font-weight: 900;
+  line-height: 1.45;
+}
+
+.platform {
+  background:
+    repeating-linear-gradient(
+      172deg,
+      transparent 0 20px,
+      rgba(12, 69, 158, 0.052) 21px,
+      transparent 22px 44px
+    ),
+    var(--color-brand-050);
+}
+
+.platformGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 34px;
+}
+
+.platformVisual {
+  position: relative;
+  min-height: 460px;
+  margin: 0;
+  overflow: hidden;
+  background: var(--color-surface);
+  border: 1px solid var(--color-line);
+  box-shadow: 0 24px 54px rgba(15, 66, 130, 0.08);
+}
+
+.platformImage {
+  object-fit: cover;
+  object-position: center;
+}
+
+.platformItems {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.platformItem {
+  min-height: 138px;
+  padding: 24px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-line);
+  box-shadow: 0 12px 30px rgba(15, 66, 130, 0.06);
+}
+
+.platformItem h3 {
+  margin: 0;
+  color: var(--color-brand-900);
+  font-size: 1rem;
+  font-weight: 900;
+  line-height: 1.4;
+}
+
+.platformItem p {
+  margin: 12px 0 0;
+  color: var(--color-muted);
+  font-size: 0.76rem;
+  font-weight: 800;
+  line-height: 1.68;
+}
+
+.proof {
+  position: relative;
+  overflow: hidden;
+  padding-block: 112px;
+  color: var(--color-text);
+  background: #f5fcf9;
+  isolation: isolate;
+}
+
+.proof::before {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  content: "";
+  background: linear-gradient(90deg, rgba(245, 252, 249, 0.98), rgba(245, 252, 249, 0.88));
+}
+
+.proofBg {
+  z-index: 0;
+  object-fit: cover;
+  object-position: center;
+}
+
+.proofInner {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: minmax(300px, 0.74fr) minmax(0, 1fr);
+  gap: 78px;
+  align-items: center;
+}
+
+.proofGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.proofCard {
+  min-height: 150px;
+  padding: 28px;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(190, 222, 212, 0.95);
+  box-shadow: 0 16px 34px rgba(22, 96, 102, 0.08);
+}
+
+.proofCard b {
+  color: #228f8a;
+  font-size: clamp(1.2rem, 1.5vw, 1.7rem);
+}
+
+.proofCard span {
+  display: block;
+  margin-top: 12px;
+  color: var(--color-brand-900);
+  font-size: 0.95rem;
+  font-weight: 900;
+  line-height: 1.55;
+}
+
+.processList {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-top: 50px;
+  border: 1px solid var(--color-line);
+}
+
+.processStep {
+  min-height: 238px;
+  padding: 34px 30px;
+  background: var(--color-surface);
+  border-left: 1px solid var(--color-line);
+}
+
+.processList > div:first-child .processStep {
+  border-left: 0;
+}
+
+.processStep b {
+  font-size: 1.28rem;
+}
+
+.processStep h3 {
+  margin: 22px 0 0;
+  color: var(--color-brand-900);
+  font-size: 1.24rem;
+  font-weight: 900;
+  line-height: 1.45;
+}
+
+.processStep p {
+  margin: 15px 0 0;
+  color: var(--color-text);
+  font-size: 0.82rem;
+  font-weight: 800;
+  line-height: 1.78;
+}
+
+.cta {
+  position: relative;
+  overflow: hidden;
+  padding-block: 104px;
+  color: var(--color-surface);
+  text-align: center;
+  background: var(--color-brand-900);
+  isolation: isolate;
+}
+
+.cta::before {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  content: "";
+  background: rgba(5, 39, 102, 0.82);
+}
+
+.ctaImage {
+  z-index: 0;
+  object-fit: cover;
+  object-position: center;
+}
+
+.ctaInner {
+  position: relative;
+  z-index: 2;
+}
+
+.cta h2 {
+  margin: 0;
+  color: var(--color-surface);
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 3vw, 2.78rem);
+  font-weight: 800;
+  line-height: 1.42;
+  letter-spacing: 0;
+}
+
+.cta p {
+  margin: 20px 0 0;
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 0.96rem;
+  font-weight: 850;
+  line-height: 1.8;
+}
+
+.ctaActions {
+  justify-content: center;
+}
+
+@media (max-width: 1180px) {
+  .heroInner,
+  .twoColumn,
+  .sectionHeading,
+  .productStage,
+  .packagePanel,
+  .platformGrid,
+  .proofInner {
+    grid-template-columns: 1fr;
+  }
+
+  .heroInner {
+    gap: 72px;
+    min-height: auto;
+    padding-block: 82px 128px;
+  }
+
+  .heroLead {
+    max-width: 760px;
+  }
+
+  .heroVisual {
+    min-height: 470px;
+  }
+
+  .sectionLead {
+    max-width: 760px;
+    margin-top: 24px;
+    margin-left: 0;
+  }
+
+  .powerFlow,
+  .processList {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .flowItem::after {
+    display: none;
+  }
+
+  .mainProduct {
+    min-height: 560px;
+  }
+
+  .platformVisual {
+    min-height: 520px;
+  }
+}
+
+@media (max-width: 760px) {
+  .hero {
+    background:
+      linear-gradient(180deg, rgba(5, 39, 102, 0.96) 0%, rgba(5, 39, 102, 0.78) 64%, rgba(5, 39, 102, 0.18) 100%),
+      linear-gradient(135deg, #0b377f 0%, #eaf6ff 100%);
+  }
+
+  .hero::before {
+    mask-image: linear-gradient(180deg, black 0%, transparent 90%);
+  }
+
+  .heroInner {
+    gap: 52px;
+    padding-block: 64px 112px;
+  }
+
+  .heroTitle {
+    margin-top: 38px;
+    font-size: 2.48rem;
+    line-height: 1.38;
+  }
+
+  .heroLead,
+  .lead,
+  .sectionLead,
+  .techLead {
+    font-size: 0.9rem;
+    line-height: 1.92;
+  }
+
+  .heroActions,
+  .ctaActions {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .heroActions a,
+  .ctaActions a {
+    width: 100%;
+  }
+
+  .heroVisual {
+    min-height: 320px;
+  }
+
+  .heroVisual::before,
+  .heroImage {
+    clip-path: none;
+  }
+
+  .metricStrip {
+    right: 18px;
+    bottom: -78px;
+    grid-template-columns: 1fr;
+    width: calc(100% - 36px);
+  }
+
+  .metric {
+    min-height: auto;
+    padding: 16px 18px;
+    border-top: 1px solid var(--color-line);
+    border-left: 0;
+  }
+
+  .metric:first-child {
+    border-top: 0;
+  }
+
+  .overview,
+  .lineup,
+  .package,
+  .platform,
+  .process,
+  .technology,
+  .proof,
+  .cta {
+    padding-block: var(--space-section-mobile);
+  }
+
+  .overview {
+    padding-top: 116px;
+  }
+
+  .twoColumn,
+  .sectionHeading,
+  .productStage,
+  .platformGrid,
+  .proofInner {
+    gap: 38px;
+  }
+
+  .heading {
+    font-size: 2rem;
+    line-height: 1.48;
+  }
+
+  .powerFlow,
+  .platformItems,
+  .proofGrid,
+  .processList,
+  .specGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .powerFlow {
+    padding: 24px;
+  }
+
+  .flowItem {
+    min-height: auto;
+  }
+
+  .mainProduct {
+    min-height: 440px;
+  }
+
+  .mainProductText {
+    right: 24px;
+    bottom: 28px;
+    left: 24px;
+    width: auto;
+  }
+
+  .sideProduct {
+    grid-template-columns: 1fr;
+  }
+
+  .sideImage {
+    height: 270px;
+  }
+
+  .techFigure {
+    margin-top: 36px;
+    overflow-x: auto;
+  }
+
+  .techImage {
+    width: 860px;
+    max-width: none;
+  }
+
+  .packageVisual,
+  .platformVisual {
+    min-height: 360px;
+  }
+
+  .packageImage {
+    padding: 20px;
+  }
+
+  .specPanel,
+  .proofCard,
+  .processStep {
+    padding: 26px;
+  }
+
+  .processList {
+    border-bottom: 0;
+  }
+
+  .processStep {
+    min-height: auto;
+    border-bottom: 1px solid var(--color-line);
+    border-left: 0;
+  }
+}
+
+@media (max-width: 420px) {
+  .heroTitle {
+    font-size: 2.18rem;
+  }
+
+  .heroVisual {
+    min-height: 280px;
+  }
+
+  .heading {
+    font-size: 1.78rem;
+  }
+
+  .mainProduct {
+    min-height: 390px;
+  }
+
+  .sideImage {
+    height: 230px;
+  }
+}

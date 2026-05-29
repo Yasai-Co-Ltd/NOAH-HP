@@ -1,0 +1,1288 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>蓄電池事業 詳細ページ ワイヤーフレーム v2</title>
+    <style>
+      :root {
+        --brand-900: #052766;
+        --brand-800: #0a3487;
+        --brand-700: #0c459e;
+        --brand-100: #e8f4ff;
+        --brand-050: #f5faff;
+        --cyan: #53c1e5;
+        --teal: #65bbb4;
+        --green: #5fbf83;
+        --ink: #12264a;
+        --text: #26334d;
+        --muted: #5e6f8c;
+        --line: #d8e4f3;
+        --surface: #ffffff;
+        --serif: "Hiragino Mincho ProN", "Yu Mincho", "YuMincho", serif;
+        --sans: "Hiragino Sans", "Yu Gothic", "Meiryo", system-ui, sans-serif;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        background: #f6fbff;
+      }
+
+      body {
+        width: 1440px;
+        margin: 0;
+        color: var(--text);
+        font-family: var(--sans);
+        background: #ffffff;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
+
+      .container {
+        width: min(1280px, calc(100% - 128px));
+        margin-inline: auto;
+      }
+
+      .header {
+        height: 92px;
+        background: rgba(255, 255, 255, 0.98);
+        border-bottom: 1px solid rgba(216, 228, 243, 0.9);
+      }
+
+      .headerInner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 92px;
+        padding-left: 48px;
+      }
+
+      .logo {
+        width: 294px;
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        gap: 35px;
+        color: var(--brand-900);
+        font-size: 0.86rem;
+        font-weight: 900;
+      }
+
+      .contact {
+        display: grid;
+        place-items: center;
+        height: 92px;
+        padding-inline: 42px;
+        color: white;
+        background: var(--brand-900);
+      }
+
+      .hero {
+        position: relative;
+        min-height: 808px;
+        overflow: hidden;
+        color: white;
+        background:
+          linear-gradient(90deg, rgba(5, 39, 102, 0.96) 0%, rgba(5, 39, 102, 0.9) 45%, rgba(5, 39, 102, 0.08) 72%),
+          radial-gradient(circle at 82% 18%, rgba(83, 193, 229, 0.32), transparent 32%),
+          linear-gradient(135deg, #0b377f 0%, #eaf6ff 100%);
+      }
+
+      .hero::before {
+        position: absolute;
+        inset: 0;
+        content: "";
+        background:
+          linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+        background-size: 80px 80px;
+        mask-image: linear-gradient(90deg, black 0%, black 56%, transparent 84%);
+      }
+
+      .hero::after {
+        position: absolute;
+        right: -110px;
+        bottom: -80px;
+        width: 660px;
+        height: 660px;
+        content: "";
+        background: url("../../assets/noah_logo-mark.png") center / contain no-repeat;
+        opacity: 0.075;
+      }
+
+      .heroInner {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: 0.88fr 1.12fr;
+        gap: 58px;
+        align-items: center;
+        min-height: 808px;
+      }
+
+      .kicker {
+        margin: 0;
+        color: white;
+        font-size: 1.12rem;
+        font-weight: 900;
+        line-height: 1;
+      }
+
+      .kicker span {
+        display: block;
+        margin-top: 10px;
+        color: #9ee9ff;
+        font-size: 0.82rem;
+      }
+
+      .heroTitle {
+        margin: 54px 0 0;
+        color: white;
+        font-family: var(--serif);
+        font-size: 4.86rem;
+        font-weight: 800;
+        line-height: 1.25;
+        letter-spacing: 0;
+      }
+
+      .heroLead {
+        width: 650px;
+        margin: 36px 0 0;
+        color: rgba(255, 255, 255, 0.92);
+        font-size: 1.02rem;
+        font-weight: 850;
+        line-height: 2.02;
+      }
+
+      .heroActions {
+        display: flex;
+        gap: 14px;
+        margin-top: 34px;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 184px;
+        height: 60px;
+        padding-inline: 26px;
+        color: var(--brand-900);
+        font-size: 0.9rem;
+        font-weight: 900;
+        background: white;
+        border: 1px solid rgba(255, 255, 255, 0.76);
+      }
+
+      .buttonGhost {
+        color: white;
+        background: rgba(10, 52, 135, 0.56);
+        border-color: rgba(255, 255, 255, 0.24);
+      }
+
+      .heroVisual {
+        position: relative;
+        min-height: 650px;
+      }
+
+      .visualPlate {
+        position: absolute;
+        right: 0;
+        top: 100px;
+        width: 760px;
+        height: 460px;
+        background:
+          linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(233, 246, 255, 0.96)),
+          var(--surface);
+        border: 1px solid rgba(185, 219, 244, 0.96);
+        box-shadow: 0 42px 90px rgba(4, 33, 82, 0.3);
+        clip-path: polygon(8% 0, 100% 0, 100% 100%, 0 100%);
+      }
+
+      .heroProduct {
+        position: absolute;
+        right: 0;
+        top: 100px;
+        width: 760px;
+        height: 460px;
+        object-fit: cover;
+        border: 1px solid rgba(185, 219, 244, 0.96);
+        box-shadow: 0 42px 90px rgba(4, 33, 82, 0.3);
+        clip-path: polygon(8% 0, 100% 0, 100% 100%, 0 100%);
+      }
+
+      .metricStrip {
+        position: absolute;
+        right: 42px;
+        bottom: 74px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        width: 646px;
+        overflow: hidden;
+        background: white;
+        border: 1px solid #c9dff2;
+        box-shadow: 0 24px 54px rgba(4, 33, 82, 0.22);
+      }
+
+      .metric {
+        min-height: 104px;
+        padding: 23px 26px;
+        border-left: 1px solid var(--line);
+      }
+
+      .metric:first-child {
+        border-left: 0;
+      }
+
+      .metric b {
+        display: block;
+        color: var(--brand-900);
+        font-family: Arial, sans-serif;
+        font-size: 1.78rem;
+        font-weight: 900;
+        line-height: 1;
+      }
+
+      .metric span {
+        display: block;
+        margin-top: 10px;
+        color: var(--muted);
+        font-size: 0.76rem;
+        font-weight: 900;
+      }
+
+      .section {
+        padding-block: 116px;
+      }
+
+      .sectionSoft {
+        background:
+          radial-gradient(circle at 86% 0%, rgba(83, 193, 229, 0.14), transparent 32%),
+          #f6fbff;
+      }
+
+      .sectionWhite {
+        background: white;
+      }
+
+      .label {
+        margin: 0;
+        color: var(--brand-700);
+        font-size: 0.92rem;
+        font-weight: 900;
+      }
+
+      .label span {
+        display: block;
+        margin-top: 8px;
+        color: var(--brand-800);
+        font-size: 0.76rem;
+      }
+
+      .heading {
+        margin: 22px 0 0;
+        color: var(--brand-900);
+        font-family: var(--serif);
+        font-size: 3.12rem;
+        font-weight: 800;
+        line-height: 1.42;
+        letter-spacing: 0;
+      }
+
+      .lead {
+        margin: 0;
+        color: var(--text);
+        font-size: 0.96rem;
+        font-weight: 800;
+        line-height: 1.94;
+      }
+
+      .twoCol {
+        display: grid;
+        grid-template-columns: minmax(360px, 0.86fr) minmax(0, 1.14fr);
+        gap: 88px;
+        align-items: center;
+      }
+
+      .introText {
+        margin-top: 34px;
+      }
+
+      .marketBadges {
+        display: flex;
+        gap: 10px;
+        margin-top: 26px;
+      }
+
+      .marketBadges span {
+        padding: 13px 16px;
+        color: var(--brand-900);
+        font-size: 0.8rem;
+        font-weight: 900;
+        background: white;
+        border: 1px solid var(--line);
+      }
+
+      .powerFlow {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 18px;
+        min-height: 366px;
+        padding: 42px;
+        background: white;
+        border: 1px solid var(--line);
+        box-shadow: 0 20px 50px rgba(15, 66, 130, 0.09);
+      }
+
+      .powerFlow::before {
+        position: absolute;
+        right: 34px;
+        bottom: 26px;
+        width: 170px;
+        height: 170px;
+        content: "";
+        background: url("../../assets/noah_logo-mark.png") center / contain no-repeat;
+        opacity: 0.055;
+      }
+
+      .flowItem {
+        position: relative;
+        z-index: 1;
+        align-self: center;
+        min-height: 210px;
+        padding: 26px 20px;
+        background: var(--brand-050);
+        border: 1px solid #cfe0f2;
+      }
+
+      .flowItem::after {
+        position: absolute;
+        top: 50%;
+        right: -19px;
+        width: 19px;
+        height: 2px;
+        content: "";
+        background: var(--brand-700);
+      }
+
+      .flowItem:last-child::after {
+        display: none;
+      }
+
+      .flowNo {
+        display: grid;
+        place-items: center;
+        width: 42px;
+        height: 42px;
+        color: white;
+        font-family: Arial, sans-serif;
+        font-size: 0.82rem;
+        font-weight: 900;
+        background: var(--brand-900);
+        border-radius: 50%;
+      }
+
+      .flowItem h3 {
+        margin: 20px 0 0;
+        color: var(--brand-900);
+        font-size: 1.08rem;
+        font-weight: 900;
+      }
+
+      .flowItem p {
+        margin: 14px 0 0;
+        color: var(--muted);
+        font-size: 0.76rem;
+        font-weight: 800;
+        line-height: 1.72;
+      }
+
+      .headingRow {
+        display: grid;
+        grid-template-columns: minmax(420px, 0.9fr) minmax(0, 1fr);
+        gap: 80px;
+        align-items: end;
+        margin-bottom: 52px;
+      }
+
+      .productStage {
+        display: grid;
+        grid-template-columns: 1.08fr 0.92fr;
+        gap: 28px;
+      }
+
+      .mainProduct {
+        position: relative;
+        min-height: 650px;
+        overflow: hidden;
+        background: #eef7ff;
+        border: 1px solid var(--line);
+        box-shadow: 0 20px 50px rgba(15, 66, 130, 0.09);
+      }
+
+      .mainProduct::after {
+        position: absolute;
+        inset: 0;
+        content: "";
+        background: linear-gradient(180deg, transparent 42%, rgba(5, 39, 102, 0.74) 100%);
+      }
+
+      .mainProduct img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        max-width: none;
+        object-fit: cover;
+      }
+
+      .mainProductText {
+        position: absolute;
+        z-index: 1;
+        left: 46px;
+        bottom: 44px;
+        width: 530px;
+      }
+
+      .mainProductText b {
+        color: var(--brand-700);
+        font-family: Arial, sans-serif;
+        font-size: 1.34rem;
+        font-weight: 900;
+      }
+
+      .mainProductText h3 {
+        margin: 12px 0 0;
+        color: white;
+        font-size: 2.16rem;
+        font-weight: 900;
+        line-height: 1.36;
+      }
+
+      .mainProductText p {
+        margin: 15px 0 0;
+        color: rgba(255, 255, 255, 0.88);
+        font-size: 0.88rem;
+        font-weight: 800;
+        line-height: 1.86;
+      }
+
+      .productCards {
+        display: grid;
+        gap: 28px;
+      }
+
+      .sideProduct {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        min-height: 311px;
+        overflow: hidden;
+        background: white;
+        border: 1px solid var(--line);
+        box-shadow: 0 14px 36px rgba(15, 66, 130, 0.07);
+      }
+
+      .sideVisual {
+        display: grid;
+        place-items: center;
+        min-width: 0;
+        background: #eef7ff;
+      }
+
+      .sideVisual img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+      }
+
+      .sideBody {
+        display: grid;
+        align-content: center;
+        padding: 28px;
+      }
+
+      .sideBody b {
+        color: var(--brand-700);
+        font-family: Arial, sans-serif;
+        font-size: 1.1rem;
+        font-weight: 900;
+      }
+
+      .sideBody h3 {
+        margin: 10px 0 0;
+        color: var(--brand-900);
+        font-size: 1.28rem;
+        font-weight: 900;
+        line-height: 1.45;
+      }
+
+      .sideBody p {
+        margin: 12px 0 0;
+        color: var(--muted);
+        font-size: 0.78rem;
+        font-weight: 800;
+        line-height: 1.72;
+      }
+
+      .darkSection {
+        padding-block: 124px;
+        color: var(--text);
+        background:
+          radial-gradient(circle at 82% 18%, rgba(101, 187, 180, 0.2), transparent 34%),
+          linear-gradient(180deg, #ffffff 0%, #f2fbf7 100%);
+      }
+
+      .darkSection .label,
+      .darkSection .label span {
+        color: var(--brand-700);
+      }
+
+      .darkSection .heading {
+        color: var(--brand-900);
+      }
+
+      .darkSection .lead {
+        color: var(--text);
+      }
+
+      .techGrid {
+        display: block;
+      }
+
+      .techMap {
+        position: relative;
+        display: grid;
+        align-items: center;
+        min-height: 0;
+        margin-top: 58px;
+      }
+
+      .techImageFrame {
+        width: 100%;
+        margin: 0;
+        overflow: visible;
+        background: transparent;
+        border: 0;
+        box-shadow: none;
+      }
+
+      .techImageFrame img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border: 1px solid rgba(190, 222, 212, 0.85);
+        box-shadow: 0 24px 58px rgba(22, 96, 102, 0.1);
+      }
+
+      .techRing {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        display: grid;
+        place-items: center;
+        width: 286px;
+        height: 286px;
+        text-align: center;
+        background: linear-gradient(180deg, #ffffff 0%, #f5fffb 100%);
+        border: 18px solid rgba(101, 187, 180, 0.34);
+        border-radius: 50%;
+        box-shadow: 0 30px 62px rgba(22, 96, 102, 0.16);
+        transform: translate(-50%, -50%);
+      }
+
+      .techRing b {
+        display: block;
+        color: var(--brand-900);
+        font-family: Arial, sans-serif;
+        font-size: 3.1rem;
+        font-weight: 900;
+        line-height: 1;
+      }
+
+      .techRing span {
+        display: block;
+        margin-top: 10px;
+        color: var(--brand-800);
+        font-size: 0.88rem;
+        font-weight: 900;
+      }
+
+      .techNode {
+        position: absolute;
+        width: 198px;
+        min-height: 126px;
+        padding: 20px;
+        background: white;
+        border: 1px solid rgba(190, 222, 212, 0.95);
+        box-shadow: 0 16px 34px rgba(22, 96, 102, 0.08);
+      }
+
+      .techNode:nth-child(2) {
+        top: 0;
+        left: 266px;
+      }
+
+      .techNode:nth-child(3) {
+        top: 132px;
+        right: 0;
+      }
+
+      .techNode:nth-child(4) {
+        right: 66px;
+        bottom: 44px;
+      }
+
+      .techNode:nth-child(5) {
+        bottom: 44px;
+        left: 50px;
+      }
+
+      .techNode:nth-child(6) {
+        top: 132px;
+        left: 0;
+      }
+
+      .techNode:nth-child(7) {
+        top: 0;
+        right: 206px;
+      }
+
+      .techNode b {
+        display: block;
+        color: #228f8a;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        font-weight: 900;
+      }
+
+      .techNode strong {
+        display: block;
+        margin-top: 9px;
+        color: var(--brand-900);
+        font-size: 1rem;
+        font-weight: 900;
+      }
+
+      .techNode span {
+        display: block;
+        margin-top: 8px;
+        color: var(--muted);
+        font-size: 0.72rem;
+        font-weight: 800;
+        line-height: 1.6;
+      }
+
+      .package {
+        padding-block: 124px;
+        background: white;
+      }
+
+      .packagePanel {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0;
+        margin-top: 52px;
+        overflow: hidden;
+        border: 1px solid var(--line);
+        box-shadow: 0 22px 54px rgba(15, 66, 130, 0.08);
+      }
+
+      .packageVisual {
+        display: grid;
+        place-items: center;
+        min-height: 540px;
+        background: linear-gradient(180deg, #f8fcff, #eef7ff);
+      }
+
+      .packageVisual img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .specPanel {
+        padding: 52px;
+        color: var(--text);
+        background:
+          radial-gradient(circle at 100% 0%, rgba(83, 193, 229, 0.2), transparent 38%),
+          #eef8ff;
+      }
+
+      .specPanel h3 {
+        margin: 0;
+        color: var(--brand-900);
+        font-family: var(--serif);
+        font-size: 2.38rem;
+        font-weight: 800;
+        line-height: 1.42;
+      }
+
+      .specPanel p {
+        margin: 20px 0 0;
+        color: var(--text);
+        font-size: 0.9rem;
+        font-weight: 800;
+        line-height: 1.86;
+      }
+
+      .specGrid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+        margin-top: 38px;
+      }
+
+      .spec {
+        min-height: 112px;
+        padding: 22px;
+        background: white;
+        border: 1px solid #cfe0f2;
+      }
+
+      .spec b {
+        display: block;
+        color: #228f8a;
+        font-family: Arial, sans-serif;
+        font-size: 1.78rem;
+        font-weight: 900;
+        line-height: 1;
+      }
+
+      .spec span {
+        display: block;
+        margin-top: 11px;
+        color: var(--muted);
+        font-size: 0.76rem;
+        font-weight: 900;
+      }
+
+      .system {
+        padding-block: 116px;
+        background:
+          repeating-linear-gradient(172deg, transparent 0 20px, rgba(12, 69, 158, 0.052) 21px, transparent 22px 44px),
+          #f6fbff;
+      }
+
+      .systemPanel {
+        display: grid;
+        grid-template-columns: 0.9fr 1.1fr;
+        gap: 34px;
+        margin-top: 54px;
+      }
+
+      .dashboard {
+        min-height: 460px;
+        padding: 34px;
+        background: white;
+        border: 1px solid var(--line);
+        box-shadow: 0 24px 54px rgba(15, 66, 130, 0.08);
+      }
+
+      .dashboardImage {
+        padding: 0;
+        overflow: hidden;
+      }
+
+      .dashboardImage img {
+        width: 100%;
+        height: 100%;
+        min-height: 460px;
+        object-fit: cover;
+      }
+
+      .dashTop {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: var(--brand-900);
+        font-size: 0.78rem;
+        font-weight: 900;
+      }
+
+      .dashLights {
+        display: flex;
+        gap: 8px;
+      }
+
+      .dashLights span {
+        width: 9px;
+        height: 9px;
+        background: var(--cyan);
+        border-radius: 50%;
+      }
+
+      .chart {
+        height: 170px;
+        margin-top: 34px;
+        background:
+          linear-gradient(180deg, rgba(101, 187, 180, 0.22), transparent 68%),
+          repeating-linear-gradient(0deg, rgba(12, 69, 158, 0.08) 0 1px, transparent 1px 34px);
+        clip-path: polygon(0 78%, 12% 68%, 24% 72%, 36% 42%, 48% 56%, 60% 34%, 72% 44%, 84% 22%, 100% 34%, 100% 100%, 0 100%);
+      }
+
+      .dashCards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+        margin-top: 28px;
+      }
+
+      .dashCards div {
+        min-height: 100px;
+        padding: 18px;
+        background: var(--brand-050);
+        border: 1px solid #cfe0f2;
+      }
+
+      .dashCards b {
+        display: block;
+        color: var(--brand-900);
+        font-size: 1.12rem;
+      }
+
+      .dashCards span {
+        display: block;
+        margin-top: 10px;
+        color: var(--muted);
+        font-size: 0.72rem;
+        font-weight: 800;
+      }
+
+      .archFlow {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+      }
+
+      .archItem {
+        min-height: 138px;
+        padding: 24px;
+        background: white;
+        border: 1px solid var(--line);
+        box-shadow: 0 12px 30px rgba(15, 66, 130, 0.06);
+      }
+
+      .archItem b {
+        color: var(--brand-900);
+        font-size: 1rem;
+        font-weight: 900;
+      }
+
+      .archItem p {
+        margin: 12px 0 0;
+        color: var(--muted);
+        font-size: 0.76rem;
+        font-weight: 800;
+        line-height: 1.68;
+      }
+
+      .proof {
+        padding-block: 112px;
+        color: var(--text);
+        background:
+          linear-gradient(90deg, rgba(245, 252, 249, 0.98), rgba(245, 252, 249, 0.9)),
+          url("../assets/battery/battery-system-lineup.jpg") center / cover no-repeat;
+      }
+
+      .proofInner {
+        display: grid;
+        grid-template-columns: 0.74fr 1fr;
+        gap: 78px;
+        align-items: center;
+      }
+
+      .proof .label,
+      .proof .label span,
+      .proof .heading {
+        color: var(--brand-900);
+      }
+
+      .caseGrid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+      }
+
+      .caseCard {
+        min-height: 150px;
+        padding: 28px;
+        background: rgba(255, 255, 255, 0.92);
+        border: 1px solid rgba(190, 222, 212, 0.95);
+        box-shadow: 0 16px 34px rgba(22, 96, 102, 0.08);
+      }
+
+      .caseCard b {
+        display: block;
+        color: #228f8a;
+        font-family: Arial, sans-serif;
+        font-size: 1.7rem;
+        font-weight: 900;
+      }
+
+      .caseCard span {
+        display: block;
+        margin-top: 12px;
+        color: var(--brand-900);
+        font-size: 0.95rem;
+        font-weight: 900;
+        line-height: 1.55;
+      }
+
+      .process {
+        padding-block: 116px;
+        background: white;
+      }
+
+      .processList {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        margin-top: 50px;
+        border: 1px solid var(--line);
+      }
+
+      .processStep {
+        min-height: 238px;
+        padding: 34px 30px;
+        border-left: 1px solid var(--line);
+      }
+
+      .processStep:first-child {
+        border-left: 0;
+      }
+
+      .processStep b {
+        color: var(--brand-700);
+        font-family: Arial, sans-serif;
+        font-size: 1.28rem;
+        font-weight: 900;
+      }
+
+      .processStep h3 {
+        margin: 22px 0 0;
+        color: var(--brand-900);
+        font-size: 1.24rem;
+        font-weight: 900;
+      }
+
+      .processStep p {
+        margin: 15px 0 0;
+        color: var(--text);
+        font-size: 0.82rem;
+        font-weight: 800;
+        line-height: 1.78;
+      }
+
+      .cta {
+        padding-block: 104px;
+        color: white;
+        text-align: center;
+        background:
+          linear-gradient(rgba(5, 39, 102, 0.82), rgba(5, 39, 102, 0.82)),
+          url("../assets/battery/generated/utility_blank.png") center / cover no-repeat;
+      }
+
+      .cta h2 {
+        margin: 0;
+        color: white;
+        font-family: var(--serif);
+        font-size: 2.78rem;
+        font-weight: 800;
+        line-height: 1.42;
+      }
+
+      .cta p {
+        margin: 20px 0 0;
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 0.96rem;
+        font-weight: 850;
+      }
+
+      .footer {
+        padding: 58px 64px 34px;
+        color: white;
+        background: #052766;
+      }
+
+      .footerGrid {
+        display: grid;
+        grid-template-columns: 320px repeat(4, 1fr);
+        gap: 54px;
+      }
+
+      .footer img {
+        width: 250px;
+      }
+
+      .footer h3 {
+        margin: 0 0 18px;
+        font-size: 0.92rem;
+      }
+
+      .footer p {
+        margin: 10px 0 0;
+        color: rgba(255, 255, 255, 0.72);
+        font-size: 0.78rem;
+        font-weight: 800;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="headerInner">
+        <img class="logo" src="../../assets/noah_logo.png" alt="諾亜建設株式会社" />
+        <nav class="nav" aria-label="グローバルナビゲーション">
+          <span>企業情報</span>
+          <span>事業紹介</span>
+          <span>サステナビリティ</span>
+          <span>ニュース</span>
+          <span>採用情報</span>
+          <span class="contact">お問い合わせ</span>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container heroInner">
+          <div>
+            <p class="kicker">BATTERY ENERGY STORAGE<span>蓄電池事業</span></p>
+            <h1 class="heroTitle">系統用蓄電池を、<br />安定電源と<br />収益基盤へ。</h1>
+            <p class="heroLead">
+              2MW/8MWhの系統用蓄電池を中心に、設計・調達・施工、EMSによる遠隔監視、一次調整・需給調整市場での運用まで。
+              NOAHは蓄電池を「置く設備」ではなく、地域電力を支える運用資産として構築します。
+            </p>
+            <div class="heroActions">
+              <span class="button">導入相談をする</span>
+              <span class="button buttonGhost">ソリューションを見る</span>
+            </div>
+          </div>
+          <div class="heroVisual" aria-hidden="true">
+            <div class="visualPlate"></div>
+            <img class="heroProduct" src="../assets/battery/generated/utility_blank.png" alt="" />
+            <div class="metricStrip">
+              <div class="metric"><b>2MW/8MWh</b><span>系統用蓄電池パッケージ</span></div>
+              <div class="metric"><b>6S+EDR</b><span>安全・制御・記録を統合</span></div>
+              <div class="metric"><b>EMS/HCS</b><span>遠隔監視・高速制御</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section sectionSoft">
+        <div class="container twoCol">
+          <div>
+            <p class="label">OVERVIEW<span>系統用蓄電池とは</span></p>
+            <h2 class="heading">電力を蓄えるだけでなく、<br />制御して運用する。</h2>
+            <p class="lead introText">
+              系統用蓄電池は、再生可能エネルギーの余剰電力を蓄え、必要なタイミングで放電するだけではありません。
+              EMS、PCS、HCS、アグリゲーター運営まで連携することで、需給調整・周波数制御・市場活用を同時に支えます。
+            </p>
+            <div class="marketBadges">
+              <span>卸電力市場</span>
+              <span>容量市場</span>
+              <span>需給調整市場</span>
+              <span>一次調整</span>
+            </div>
+          </div>
+          <div class="powerFlow">
+            <article class="flowItem">
+              <span class="flowNo">01</span>
+              <h3>電力を受ける</h3>
+              <p>再エネ発電所、変電所、需要地に接続し、余剰電力や調整力を受け入れます。</p>
+            </article>
+            <article class="flowItem">
+              <span class="flowNo">02</span>
+              <h3>安全に蓄える</h3>
+              <p>液冷式ESSと多次元監視により、温度・電圧・防火を一体で管理します。</p>
+            </article>
+            <article class="flowItem">
+              <span class="flowNo">03</span>
+              <h3>高速に制御する</h3>
+              <p>EMS/HCSが充放電、一次調整、系統連系をリアルタイムに制御します。</p>
+            </article>
+            <article class="flowItem">
+              <span class="flowNo">04</span>
+              <h3>運用で収益化する</h3>
+              <p>アグリゲーター運営と遠隔O&Mにより、電力市場での活用まで支援します。</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section sectionWhite">
+        <div class="container">
+          <div class="headingRow">
+            <div>
+              <p class="label">PRODUCT LINEUP<span>製品ラインアップ</span></p>
+              <h2 class="heading">用途と容量に合わせて、<br />最適な蓄電池を選ぶ。</h2>
+            </div>
+            <p class="lead">
+              系統用の2MW/8MWhパッケージを主力に、産業・商業用の分散型蓄電、太陽光＋蓄電＋充電まで展開。
+              製品単体ではなく、PCS・EMS・監視基盤を含むシステムとして構成します。
+            </p>
+          </div>
+          <div class="productStage">
+            <article class="mainProduct">
+              <img src="../assets/battery/bess-container-5mwh.png" alt="2MW/8MWh系統用蓄電池コンテナ" />
+              <div class="mainProductText">
+                <b>01</b>
+                <h3>2MW/8MWh 系統用蓄電池</h3>
+                <p>2090kWh×4基または4180kWh×2基を基本構成とし、発電・配電・需要の各領域をカバーします。</p>
+              </div>
+            </article>
+            <div class="productCards">
+              <article class="sideProduct">
+                <div class="sideVisual"><img src="../assets/battery/bess-215kwh.png" alt="100kW/215kWh産業商業用蓄電池" /></div>
+                <div class="sideBody">
+                  <b>02</b>
+                  <h3>100kW/215kWh 分散型蓄電</h3>
+                  <p>工場・商業施設のピークカット、非常用電源、分散型スマートグリッドに対応します。</p>
+                </div>
+              </article>
+              <article class="sideProduct">
+                <div class="sideVisual"><img src="../assets/battery/bess-418kwh.png" alt="200kW/418kWh液冷蓄電池" /></div>
+                <div class="sideBody">
+                  <b>03</b>
+                  <h3>200kW/418kWh 液冷蓄電</h3>
+                  <p>高効率な液冷方式で、需要側蓄電・マイクログリッド・BCP用途に展開します。</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="darkSection">
+        <div class="container techGrid">
+          <div>
+            <p class="label">CORE TECHNOLOGY<span>6S+EDR</span></p>
+            <h2 class="heading">安全性・制御性・可視化を、<br />ひとつの基盤に統合。</h2>
+            <p class="lead introText">
+              6S+EDRは、PCS・BMS・EMSに加え、HCS高速制御、BWS予兆警報、EDR故障記録を統合する制御基盤です。
+              AI・IoTと電力制御技術を組み合わせ、安全性、グリッド適応性、運用判断を高めます。
+            </p>
+          </div>
+          <div class="techMap">
+            <figure class="techImageFrame">
+              <img src="../assets/battery/generated/core-technology-ai-diagram.png" alt="6S+EDRの安全制御基盤を示すAI生成図" />
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="package">
+        <div class="container">
+          <p class="label">MAIN PRODUCT<span>主力製品</span></p>
+          <h2 class="heading">2MW/8MWh<br />系統用蓄電池パッケージ。</h2>
+          <div class="packagePanel">
+            <div class="packageVisual">
+              <img src="../assets/battery/bess-container-5mwh.png" alt="2MW/8MWh系統用蓄電池パッケージ" />
+            </div>
+            <div class="specPanel">
+              <h3>特高圧・大規模案件に合わせて、構成を最適化。</h3>
+              <p>
+                ESS100-1000/2090-LC、ESS100-2000/4180-LCを中心に、PCS、昇圧トランス、EMS、
+                監視・運用保守プラットフォームまで組み合わせて設計します。
+              </p>
+              <div class="specGrid">
+                <div class="spec"><b>2089/4178kWh</b><span>ESS単機容量</span></div>
+                <div class="spec"><b>995kW×2</b><span>PCS定格出力</span></div>
+                <div class="spec"><b>IP55</b><span>屋外設置対応</span></div>
+                <div class="spec"><b>-25〜45℃</b><span>液冷・動作温度範囲</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="system">
+        <div class="container">
+          <div class="headingRow">
+            <div>
+              <p class="label">OPERATION PLATFORM<span>EMS・NOAH Cloud</span></p>
+              <h2 class="heading">クラウドから現場設備まで、<br />一元管理する。</h2>
+            </div>
+            <p class="lead">
+              4G/5G回線でクラウドに接続し、蓄電池データ、液冷冷却、防火防災、ガス監視、PCS、計量、HMIを統合。
+              運転状況や異常兆候を可視化し、遠隔制御・OTA・市場運用の判断まで支援します。
+            </p>
+          </div>
+          <div class="systemPanel">
+            <div class="dashboard dashboardImage">
+              <img src="../assets/battery/generated/ems-cloud-platform-ai.png" alt="EMSとクラウド運用を示すAI生成ビジュアル" />
+            </div>
+            <div class="archFlow">
+              <article class="archItem"><b>Battery / Cooling</b><p>電池データ、液冷冷却、防火防災、ガス監視を常時取得。</p></article>
+              <article class="archItem"><b>PCS / Transformer</b><p>系統連系、出力制御、昇圧、保護機能を統合。</p></article>
+              <article class="archItem"><b>EMS / HCS</b><p>充放電計画、一次調整、高速制御、負荷分配を実行。</p></article>
+              <article class="archItem"><b>NOAH Cloud</b><p>4G/5Gで遠隔監視し、運転履歴・異常兆候を蓄積。</p></article>
+              <article class="archItem"><b>O&M</b><p>予兆保全、OTAアップグレード、運用レポートを支援。</p></article>
+              <article class="archItem"><b>Aggregator</b><p>電力市場・需給調整市場での運用収益化へつなげます。</p></article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="proof">
+        <div class="container proofInner">
+          <div>
+            <p class="label">CREDIBILITY<span>技術力・実績</span></p>
+            <h2 class="heading">技術標準と導入実績を、<br />日本市場へ。</h2>
+          </div>
+          <div class="caseGrid">
+            <article class="caseCard"><b>20年以上</b><span>電力産業の研究開発・エンジニアリング経験</span></article>
+            <article class="caseCard"><b>40件以上</b><span>製品・コアシステムの特許、ソフトウェア著作権</span></article>
+            <article class="caseCard"><b>50MW / 200MWh</b><span>魯能海西州 蓄電発電所など大規模実績</span></article>
+            <article class="caseCard"><b>2GWh</b><span>蓄電池調達に関する戦略的パートナー体制</span></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="process">
+        <div class="container">
+          <p class="label">PROJECT FLOW<span>導入までの流れ</span></p>
+          <h2 class="heading">調査から運用まで、<br />蓄電池プロジェクトを一貫支援。</h2>
+          <div class="processList">
+            <article class="processStep"><b>01</b><h3>調査・企画</h3><p>設置候補地、系統連系、用途、電力市場の活用方針を整理します。</p></article>
+            <article class="processStep"><b>02</b><h3>システム設計</h3><p>ESS、PCS、EMS、変圧設備、通信構成を要件に合わせて設計します。</p></article>
+            <article class="processStep"><b>03</b><h3>調達・施工</h3><p>機器調達、据付、電気工事、試運転、連系手続きを進めます。</p></article>
+            <article class="processStep"><b>04</b><h3>運用・保守</h3><p>遠隔監視、予兆保全、一次調整、市場運用まで継続的に支援します。</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta">
+        <div class="container">
+          <h2>系統用蓄電池・産業用蓄電池の<br />導入相談はこちら</h2>
+          <p>事業計画の初期段階から、候補地・容量・運用モデルまでご相談ください。</p>
+          <div class="heroActions" style="justify-content: center">
+            <span class="button">お問い合わせ</span>
+            <span class="button buttonGhost">資料ダウンロード</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footerGrid">
+        <div>
+          <img src="../../assets/noah_logo.png" alt="諾亜建設株式会社" />
+          <p>再生可能エネルギーと蓄電をつなぎ、地域の電力インフラを支えます。</p>
+        </div>
+        <div><h3>企業情報</h3><p>トップメッセージ</p><p>企業理念・ビジョン</p><p>会社概要</p></div>
+        <div><h3>事業紹介</h3><p>蓄電池事業</p><p>風力発電事業</p><p>発電事業</p><p>水素モビリティ事業</p></div>
+        <div><h3>サステナビリティ</h3><p>地域共生</p><p>環境保全</p><p>カーボンニュートラル</p></div>
+        <div><h3>その他</h3><p>お問い合わせ</p><p>ニュース</p><p>プライバシーポリシー</p></div>
+      </div>
+    </footer>
+  </body>
+</html>
