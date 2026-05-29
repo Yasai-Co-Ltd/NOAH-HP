@@ -19,9 +19,12 @@ const GROUPS: FooterGroup[] = [
     links: [
       { href: "/about/message", label: "トップメッセージ" },
       { href: "/about/vision", label: "企業理念・ビジョン" },
+      { href: "/about/standard", label: "行動基準" },
       { href: "/about/outline", label: "会社概要" },
-      { href: "/about/history", label: "沿革" },
+      { href: "/about/organization", label: "グループ・組織図" },
       { href: "/about/network", label: "国内外拠点" },
+      { href: "/about/history", label: "沿革" },
+      { href: "/about/safety-health", label: "健康経営" },
     ],
   },
   {
