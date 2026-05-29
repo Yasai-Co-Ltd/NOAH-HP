@@ -32,7 +32,14 @@ const STEPS: SolutionStep[] = [
   },
 ];
 
-const DOMAINS = ["蓄電池", "風力発電", "発電事業", "水素モビリティ", "AIデータセンター"];
+const DOMAINS = [
+  "蓄電池",
+  "風力発電",
+  "バイオマス",
+  "集塵ホッパー",
+  "水素モビリティ",
+  "AIデータセンター",
+];
 
 function SolutionStep({ step }: { step: SolutionStep }) {
   return (

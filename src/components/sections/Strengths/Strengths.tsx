@@ -85,7 +85,7 @@ export function Strengths() {
               <span className={styles.headingLine}>エネルギーインフラを支える。</span>
             </h2>
             <p className={styles.lead}>
-              蓄電池・風力・バイオマス・水素モビリティ・AIデータセンターを横断し、
+              蓄電池・風力・バイオマス・集塵ホッパー・水素モビリティ・AIデータセンターを横断し、
               地域や企業の課題に合わせた導入計画と実行体制を提供します。
             </p>
           </Reveal>

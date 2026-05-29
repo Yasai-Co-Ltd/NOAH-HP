@@ -23,14 +23,24 @@ const services: Service[] = [
     href: "/business/windpower",
   },
   {
-    id: "svc-power",
-    slug: "power",
-    title: "発電事業",
+    id: "svc-biomasspower",
+    slug: "biomasspower",
+    title: "バイオマス",
     description:
-      "地域に必要な電源構成を計画し、安定した供給インフラを構築します。",
-    image: { src: "/assets/power-hq.jpg", alt: "発電設備" },
-    icon: { tone: "green", label: "P" },
-    href: "/business/power",
+      "木質資源などを活用したバイオマス発電により、地域資源の循環と安定した再生可能エネルギー供給を支えます。",
+    image: { src: "/assets/business-biomasspower.png", alt: "バイオマス発電設備" },
+    icon: { tone: "green", label: "Bio" },
+    href: "/business/biomasspower",
+  },
+  {
+    id: "svc-hopper",
+    slug: "hopper",
+    title: "走行式集塵ホッパー事業",
+    description:
+      "港湾・発電所・資源受入施設に向けて、粉じんを抑えながら原料を効率的に荷役する走行式集塵ホッパーを提案します。",
+    image: { src: "/assets/business-hopper.png", alt: "走行式集塵ホッパー設備" },
+    icon: { tone: "gold", label: "HP" },
+    href: "/business/hopper",
   },
   {
     id: "svc-hydrogen-mobility",
@@ -57,19 +67,6 @@ const services: Service[] = [
     },
     icon: { tone: "cyan", label: "AI" },
     href: "/business/ai-data-center",
-  },
-  {
-    id: "svc-airborne-power",
-    slug: "airborne-power",
-    title: "空中発電所",
-    description:
-      "上空の安定した風を活用する、可搬型の次世代発電インフラを提案します。",
-    image: {
-      src: "/assets/airborne-power-noah.png",
-      alt: "NOAHロゴ入りの飛行船型空中発電所",
-    },
-    icon: { tone: "cyan", label: "A" },
-    href: "/business/airborne-power",
   },
 ];
 
