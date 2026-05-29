@@ -1,0 +1,731 @@
+.hero {
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(180deg, #f8fbf6 0%, #ffffff 100%);
+  border-bottom: 1px solid var(--color-line);
+  isolation: isolate;
+}
+
+.hero::before {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  content: "";
+  background:
+    linear-gradient(rgba(95, 151, 91, 0.075) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(95, 151, 91, 0.075) 1px, transparent 1px);
+  background-size: 88px 88px;
+  mask-image: linear-gradient(90deg, black 0%, black 44%, transparent 82%);
+}
+
+.heroInner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
+  gap: 64px;
+  align-items: center;
+  min-height: 682px;
+  padding-block: 78px 118px;
+}
+
+.heroCopy,
+.heroVisualReveal,
+.supplyCopy,
+.supplyVisualReveal,
+.dustCopy {
+  min-width: 0;
+}
+
+.eyebrow {
+  margin: 0;
+  color: var(--color-brand-800);
+  font-size: 1.04rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.eyebrow span {
+  display: block;
+  margin-top: 10px;
+  color: #3e8f5c;
+  font-size: 0.8rem;
+}
+
+.heroTitle,
+.heading {
+  margin: 0;
+  color: var(--color-brand-900);
+  font-family: var(--font-serif);
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+.heroTitle {
+  margin-top: 38px;
+  font-size: clamp(2.78rem, 4.55vw, 4.34rem);
+  line-height: 1.32;
+}
+
+.heroLead,
+.lead {
+  margin: 0;
+  color: var(--color-text);
+  font-size: 0.98rem;
+  font-weight: 800;
+  line-height: 1.96;
+}
+
+.heroLead {
+  max-width: 680px;
+  margin-top: 32px;
+}
+
+.heroActions,
+.ctaActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 34px;
+}
+
+.heroVisual {
+  position: relative;
+  min-height: 500px;
+  margin: 0;
+  overflow: hidden;
+  background: var(--color-surface);
+  border: 1px solid rgba(187, 213, 196, 0.92);
+  box-shadow: 0 26px 66px rgba(62, 109, 80, 0.16);
+}
+
+.heroImage {
+  object-fit: cover;
+  object-position: center;
+}
+
+.heroCaption {
+  position: absolute;
+  right: 24px;
+  bottom: 24px;
+  left: 24px;
+  z-index: 1;
+  padding: 16px 18px;
+  color: var(--color-brand-900);
+  font-size: 0.88rem;
+  font-weight: 900;
+  line-height: 1.5;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(187, 213, 196, 0.92);
+}
+
+.metricBoard {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: -62px;
+  margin-bottom: 0;
+  overflow: hidden;
+  background: var(--color-surface);
+  border: 1px solid rgba(187, 213, 196, 0.92);
+  box-shadow: 0 18px 46px rgba(62, 109, 80, 0.12);
+}
+
+.metric {
+  min-height: 124px;
+  padding: 28px 34px;
+  border-left: 1px solid rgba(187, 213, 196, 0.92);
+}
+
+.metric:first-child {
+  border-left: 0;
+}
+
+.metric b {
+  display: block;
+  color: #2d7f52;
+  font-family: var(--font-numeric);
+  font-size: clamp(1.52rem, 2.1vw, 2.12rem);
+  font-weight: 900;
+  line-height: 1.1;
+}
+
+.metric span {
+  display: block;
+  margin-top: 10px;
+  color: var(--color-text);
+  font-size: 0.82rem;
+  font-weight: 900;
+  line-height: 1.45;
+}
+
+.overview,
+.fuelSection,
+.supply,
+.dust,
+.specs,
+.process {
+  padding-block: 112px;
+}
+
+.overview {
+  background: var(--color-surface);
+}
+
+.overviewGrid {
+  display: grid;
+  grid-template-columns: minmax(360px, 0.82fr) minmax(0, 1.18fr);
+  gap: 92px;
+  align-items: start;
+}
+
+.heading {
+  margin-top: 22px;
+  font-size: clamp(2.12rem, 3vw, 3rem);
+  line-height: 1.43;
+}
+
+.overviewText {
+  padding-left: 36px;
+  border-left: 4px solid #74b46f;
+}
+
+.overviewText p {
+  margin: 0;
+  color: var(--color-text);
+  font-size: 0.96rem;
+  font-weight: 800;
+  line-height: 2;
+}
+
+.overviewText p + p {
+  margin-top: 22px;
+}
+
+.fuelSection {
+  background:
+    linear-gradient(180deg, #ffffff 0%, #f7fbf4 100%);
+}
+
+.sectionHeader {
+  display: grid;
+  grid-template-columns: minmax(360px, 0.82fr) minmax(0, 1fr);
+  gap: 80px;
+  align-items: end;
+  margin-bottom: 54px;
+}
+
+.fuelList {
+  display: grid;
+  gap: 24px;
+}
+
+.fuelItem {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.38fr) minmax(0, 1fr);
+  min-height: 330px;
+  overflow: hidden;
+  background: var(--color-surface);
+  border: 1px solid rgba(187, 213, 196, 0.92);
+}
+
+.fuelImageWrap {
+  position: relative;
+  min-height: 330px;
+  background: #eef6e9;
+}
+
+.fuelImage {
+  object-fit: cover;
+  object-position: center;
+}
+
+.fuelBody {
+  position: relative;
+  display: grid;
+  align-content: center;
+  min-width: 0;
+  padding: 42px 48px;
+}
+
+.fuelNumber {
+  position: absolute;
+  top: 28px;
+  right: 34px;
+  color: rgba(45, 127, 82, 0.18);
+  font-family: var(--font-numeric);
+  font-size: 4.2rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.fuelSubtitle {
+  margin: 0;
+  color: #2d7f52;
+  font-size: 0.82rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.fuelBody h3 {
+  margin: 13px 0 0;
+  color: var(--color-brand-900);
+  font-size: clamp(1.7rem, 2.2vw, 2.2rem);
+  font-weight: 900;
+  line-height: 1.35;
+}
+
+.fuelBody p:not(.fuelSubtitle) {
+  max-width: 780px;
+  margin: 18px 0 0;
+  color: var(--color-text);
+  font-size: 0.92rem;
+  font-weight: 800;
+  line-height: 1.86;
+}
+
+.fuelBody ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 0;
+  margin: 24px 0 0;
+  list-style: none;
+}
+
+.fuelBody li {
+  padding: 9px 12px;
+  color: var(--color-brand-900);
+  font-size: 0.78rem;
+  font-weight: 900;
+  line-height: 1.25;
+  background: #f1f8ed;
+  border: 1px solid rgba(187, 213, 196, 0.92);
+}
+
+.supply {
+  background: #082a28;
+  color: var(--color-surface);
+}
+
+.supplyInner {
+  display: grid;
+  grid-template-columns: minmax(360px, 0.82fr) minmax(0, 1fr);
+  gap: 72px;
+  align-items: center;
+}
+
+.supply .heading,
+.supply .lead {
+  color: var(--color-surface);
+}
+
+.supply .lead {
+  margin-top: 30px;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.supplyVisual {
+  position: relative;
+  min-height: 460px;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.supplyImage {
+  object-fit: cover;
+  object-position: center;
+}
+
+.supplySteps {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.supplyStep {
+  min-height: 206px;
+  padding: 30px 26px;
+  border-left: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.supplySteps > div:first-child .supplyStep {
+  border-left: 0;
+}
+
+.supplyStep b,
+.processStep b {
+  display: block;
+  color: #8bcf74;
+  font-family: var(--font-numeric);
+  font-size: 1.28rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.supplyStep h3 {
+  margin: 22px 0 0;
+  color: var(--color-surface);
+  font-size: 1.14rem;
+  font-weight: 900;
+  line-height: 1.45;
+}
+
+.supplyStep p {
+  margin: 14px 0 0;
+  color: rgba(255, 255, 255, 0.76);
+  font-size: 0.82rem;
+  font-weight: 800;
+  line-height: 1.8;
+}
+
+.dust {
+  background: #f7fbf4;
+}
+
+.dustGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(360px, 0.92fr);
+  gap: 72px;
+  align-items: center;
+}
+
+.dustVisual {
+  position: relative;
+  min-height: 520px;
+  margin: 0;
+  overflow: hidden;
+  background: var(--color-surface);
+  border: 1px solid rgba(187, 213, 196, 0.92);
+  box-shadow: 0 24px 58px rgba(62, 109, 80, 0.1);
+}
+
+.dustImage {
+  object-fit: cover;
+  object-position: center;
+}
+
+.dustCopy .lead {
+  margin-top: 30px;
+}
+
+.dustStats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 34px;
+}
+
+.dustStats div {
+  min-height: 128px;
+  padding: 24px;
+  background: var(--color-surface);
+  border: 1px solid rgba(187, 213, 196, 0.92);
+}
+
+.dustStats b {
+  display: block;
+  color: #2d7f52;
+  font-family: var(--font-numeric);
+  font-size: 2.18rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.dustStats span {
+  display: block;
+  margin-top: 12px;
+  color: var(--color-text);
+  font-size: 0.82rem;
+  font-weight: 900;
+  line-height: 1.55;
+}
+
+.specs {
+  background: var(--color-surface);
+}
+
+.specTableWrap {
+  overflow-x: auto;
+  border: 1px solid var(--color-line);
+}
+
+.specTable {
+  width: 100%;
+  min-width: 780px;
+  border-collapse: collapse;
+  background: var(--color-surface);
+}
+
+.specTable th,
+.specTable td {
+  padding: 24px 28px;
+  text-align: left;
+  border-bottom: 1px solid var(--color-line);
+  border-left: 1px solid var(--color-line);
+}
+
+.specTable th:first-child,
+.specTable td:first-child {
+  border-left: 0;
+}
+
+.specTable thead th {
+  color: var(--color-surface);
+  font-size: 0.86rem;
+  font-weight: 900;
+  line-height: 1.4;
+  background: var(--color-brand-900);
+}
+
+.specTable tbody th {
+  color: var(--color-brand-900);
+  font-size: 0.94rem;
+  font-weight: 900;
+}
+
+.specTable td {
+  color: var(--color-text);
+  font-size: 0.92rem;
+  font-weight: 800;
+  line-height: 1.65;
+}
+
+.process {
+  background: #f8fbf6;
+}
+
+.processList {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-top: 50px;
+  border: 1px solid rgba(187, 213, 196, 0.92);
+}
+
+.processStep {
+  min-height: 232px;
+  padding: 34px 30px;
+  background: var(--color-surface);
+  border-left: 1px solid rgba(187, 213, 196, 0.92);
+}
+
+.processList > div:first-child .processStep {
+  border-left: 0;
+}
+
+.processStep h3 {
+  margin: 22px 0 0;
+  color: var(--color-brand-900);
+  font-size: 1.16rem;
+  font-weight: 900;
+  line-height: 1.45;
+}
+
+.processStep p {
+  margin: 15px 0 0;
+  color: var(--color-text);
+  font-size: 0.82rem;
+  font-weight: 800;
+  line-height: 1.78;
+}
+
+.cta {
+  padding-block: 100px;
+  color: var(--color-surface);
+  text-align: center;
+  background:
+    linear-gradient(rgba(8, 42, 40, 0.88), rgba(8, 42, 40, 0.88)),
+    url("/assets/biomasspower/wood-chip-storage.jpg") center / cover no-repeat;
+}
+
+.cta h2 {
+  margin: 0;
+  color: var(--color-surface);
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 3vw, 2.78rem);
+  font-weight: 800;
+  line-height: 1.42;
+  letter-spacing: 0;
+}
+
+.cta p {
+  margin: 20px 0 0;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.96rem;
+  font-weight: 850;
+  line-height: 1.8;
+}
+
+.ctaActions {
+  justify-content: center;
+}
+
+.ctaOutline {
+  color: var(--color-surface);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.64);
+}
+
+@media (max-width: 1180px) {
+  .heroInner,
+  .overviewGrid,
+  .sectionHeader,
+  .supplyInner,
+  .dustGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .heroInner {
+    gap: 42px;
+    min-height: auto;
+    padding-block: 72px 104px;
+  }
+
+  .heroVisual,
+  .supplyVisual,
+  .dustVisual {
+    min-height: 460px;
+  }
+
+  .overviewText {
+    padding-left: 28px;
+  }
+
+  .fuelItem {
+    grid-template-columns: minmax(240px, 0.42fr) minmax(0, 1fr);
+  }
+
+  .supplySteps,
+  .processList {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .supplyStep:nth-child(odd),
+  .processList > div:nth-child(odd) .processStep {
+    border-left: 0;
+  }
+}
+
+@media (max-width: 760px) {
+  .heroInner {
+    padding-block: 64px 96px;
+  }
+
+  .heroTitle {
+    font-size: 2.26rem;
+    line-height: 1.42;
+  }
+
+  .heroLead,
+  .lead,
+  .overviewText p {
+    font-size: 0.9rem;
+    line-height: 1.92;
+  }
+
+  .heroActions,
+  .ctaActions {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .heroActions a,
+  .ctaActions a {
+    width: 100%;
+  }
+
+  .heroVisual {
+    min-height: 330px;
+  }
+
+  .heroCaption {
+    right: 16px;
+    bottom: 16px;
+    left: 16px;
+    font-size: 0.78rem;
+  }
+
+  .metricBoard {
+    grid-template-columns: 1fr;
+    margin-top: -42px;
+  }
+
+  .metric {
+    min-height: auto;
+    padding: 20px 24px;
+    border-top: 1px solid rgba(187, 213, 196, 0.92);
+    border-left: 0;
+  }
+
+  .metric:first-child {
+    border-top: 0;
+  }
+
+  .overview,
+  .fuelSection,
+  .supply,
+  .dust,
+  .specs,
+  .process,
+  .cta {
+    padding-block: var(--space-section-mobile);
+  }
+
+  .heading {
+    font-size: 1.86rem;
+    line-height: 1.5;
+  }
+
+  .fuelItem,
+  .supplySteps,
+  .processList,
+  .dustStats {
+    grid-template-columns: 1fr;
+  }
+
+  .fuelImageWrap {
+    min-height: 240px;
+  }
+
+  .fuelBody {
+    padding: 28px 24px;
+  }
+
+  .fuelNumber {
+    top: 22px;
+    right: 22px;
+    font-size: 3rem;
+  }
+
+  .supplyVisual,
+  .dustVisual {
+    min-height: 330px;
+  }
+
+  .supplyStep,
+  .processStep {
+    min-height: auto;
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+    border-left: 0;
+  }
+
+  .processStep {
+    border-top-color: rgba(187, 213, 196, 0.92);
+  }
+
+  .supplySteps > div:first-child .supplyStep,
+  .processList > div:first-child .processStep {
+    border-top: 0;
+  }
+
+  .specTable th,
+  .specTable td {
+    padding: 18px 16px;
+  }
+}

@@ -13,6 +13,17 @@ export const metadata: Metadata = {
     "蓄電池、風力発電、バイオマス、走行式集塵ホッパー、水素モビリティ、AIデータセンターまで、諾亜建設の事業領域を紹介します。",
 };
 
+const FEATURE = {
+  eyebrow: "FEATURED TECHNOLOGY",
+  subtitle: "注目技術",
+  description:
+    "飛行船型の空中風力発電システムを、離島・災害拠点・既存風力との併設へ。NOAHらしい新しい発電インフラとして訴求します。",
+  image: {
+    src: "/assets/airborne-power-noah.png",
+    alt: "NOAHロゴが入った飛行船型の空中発電所",
+  },
+};
+
 const SUPPORT_STEPS = ["調査・企画", "設計・調達", "施工・導入", "運用・改善"];
 
 export default async function BusinessPage() {
@@ -46,6 +57,41 @@ export default async function BusinessPage() {
             <Button href="/contact" variant="white" className={styles.heroButton}>
               導入相談をする
             </Button>
+          </Reveal>
+        </div>
+      </section>
+
+      <section className={styles.featured} aria-labelledby="featured-title">
+        <div className={`container ${styles.featuredInner}`}>
+          <Reveal direction="left" className={styles.featureCopy}>
+            <SectionLabel eyebrow={FEATURE.eyebrow} subtitle={FEATURE.subtitle} />
+            <h2 id="featured-title" className={styles.featureTitle}>
+              空を活用する、
+              <br />
+              次世代の電源。
+            </h2>
+            <p className={styles.featureLead}>{FEATURE.description}</p>
+            <Button href="/business/airborne-power" className={styles.featureButton}>
+              詳しく見る
+            </Button>
+          </Reveal>
+
+          <Reveal direction="right" className={styles.featureVisualReveal}>
+            <figure className={styles.featureVisual}>
+              <Image
+                src={FEATURE.image.src}
+                alt={FEATURE.image.alt}
+                fill
+                sizes="(max-width: 920px) calc(100vw - 40px), 58vw"
+                className={styles.featureImage}
+              />
+              <span className={styles.featureTag} aria-hidden="true">
+                NOAH AIRBORNE WIND
+              </span>
+              <figcaption className={styles.featureCaption}>
+                空に浮かぶ、可搬型の発電所。
+              </figcaption>
+            </figure>
           </Reveal>
         </div>
       </section>
