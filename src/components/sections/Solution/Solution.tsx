@@ -67,7 +67,7 @@ export function Solution() {
               <h2 id="solution-title" className={styles.title}>
                 構想から運用まで、
                 <br />
-                一本の導線で支える。
+                一貫して支える。
               </h2>
             </div>
             <p className={styles.lead}>
@@ -94,19 +94,6 @@ export function Solution() {
                 <SolutionStep key={step.number} step={step} />
               ))}
             </ol>
-          </div>
-        </Reveal>
-
-        <Reveal direction="up" delay={120}>
-          <div className={styles.domains} aria-label="対応領域">
-            <span className={styles.domainLabel}>SUPPORTED DOMAIN</span>
-            <ul className={styles.domainList}>
-              {DOMAINS.map((domain) => (
-                <li key={domain} className={styles.domainItem}>
-                  {domain}
-                </li>
-              ))}
-            </ul>
           </div>
         </Reveal>
       </div>

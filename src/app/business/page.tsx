@@ -161,7 +161,7 @@ export default async function BusinessPage() {
                 <h2 id="support-title" className={styles.supportTitle}>
                   構想から運用まで、
                   <br />
-                  一本の導線で支援。
+                  一貫して支援。
                 </h2>
               </div>
               <div className={styles.supportBody}>

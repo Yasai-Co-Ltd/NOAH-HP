@@ -2,7 +2,7 @@
   position: relative;
   overflow: hidden;
   background:
-    linear-gradient(118deg, rgba(3, 16, 38, 0.98) 0%, rgba(5, 39, 102, 0.95) 56%, #f7fbff 56.2%, #ffffff 100%),
+    linear-gradient(118deg, rgba(3, 16, 38, 0.98) 0%, rgba(5, 39, 102, 0.95) 52%, #f7fbff 52.2%, #ffffff 100%),
     linear-gradient(rgba(83, 193, 229, 0.12) 1px, transparent 1px),
     linear-gradient(90deg, rgba(83, 193, 229, 0.12) 1px, transparent 1px);
   background-size: auto, 72px 72px, 72px 72px;
@@ -12,20 +12,20 @@
 
 .hero::after {
   position: absolute;
-  top: 72px;
-  right: 4vw;
+  top: 62px;
+  right: 5vw;
   z-index: -1;
-  content: "MESSAGE";
+  content: "OUTLINE";
   color: rgba(83, 193, 229, 0.075);
   font-family: var(--font-numeric);
-  font-size: min(15vw, 9.8rem);
+  font-size: min(16vw, 10.4rem);
   font-weight: 700;
   line-height: 1;
 }
 
 .heroInner {
   display: grid;
-  grid-template-columns: minmax(0, 0.92fr) minmax(320px, 0.78fr);
+  grid-template-columns: minmax(0, 0.92fr) minmax(360px, 0.82fr);
   gap: 72px;
   align-items: center;
   min-height: 680px;
@@ -33,8 +33,8 @@
 }
 
 .heroCopy,
-.portraitReveal,
-.sideRail {
+.heroPanelReveal,
+.profileIntro {
   min-width: 0;
 }
 
@@ -57,7 +57,7 @@
 
 .heroTitle,
 .heading,
-.nextTitle {
+.inverseHeading {
   margin: 0;
   font-family: var(--font-serif);
   font-weight: 800;
@@ -99,19 +99,15 @@
   border-color: rgba(255, 255, 255, 0.68);
 }
 
-.portraitCard {
+.heroPanel {
   position: relative;
-  display: grid;
-  justify-items: center;
-  max-width: 430px;
-  padding: 34px 34px 30px;
-  margin: 0;
+  padding: 42px 42px 38px;
   background: rgba(255, 255, 255, 0.94);
   border: 1px solid rgba(180, 201, 224, 0.86);
   box-shadow: 0 32px 76px rgba(5, 39, 102, 0.16);
 }
 
-.portraitCard::before {
+.heroPanel::before {
   position: absolute;
   inset: 18px;
   pointer-events: none;
@@ -119,50 +115,83 @@
   border: 1px solid rgba(83, 193, 229, 0.22);
 }
 
-.portraitWrap {
-  position: relative;
-  width: min(250px, 62vw);
-  aspect-ratio: 224 / 335;
-  overflow: hidden;
-  background: #edf5fb;
-}
-
-.portraitImage {
-  object-fit: cover;
-  object-position: center;
-}
-
-.portraitCard figcaption {
+.panelLabel {
   position: relative;
   z-index: 1;
-  display: grid;
-  gap: 8px;
-  margin-top: 24px;
-  text-align: center;
-}
-
-.portraitCard figcaption span {
-  color: var(--color-muted);
-  font-size: 0.82rem;
+  display: block;
+  color: var(--color-accent-cyan);
+  font-family: var(--font-numeric);
+  font-size: 0.76rem;
   font-weight: 700;
 }
 
-.portraitCard figcaption b {
+.heroPanel strong {
+  position: relative;
+  z-index: 1;
+  display: block;
+  margin-top: 18px;
   color: var(--color-brand-900);
-  font-size: 1.5rem;
-  line-height: 1.2;
+  font-family: var(--font-serif);
+  font-size: clamp(1.68rem, 2.4vw, 2.32rem);
+  line-height: 1.45;
 }
 
-.message,
-.commitment {
+.heroPanel p {
+  position: relative;
+  z-index: 1;
+  margin: 24px 0 0;
+  color: var(--color-text);
+  font-size: 0.94rem;
+  font-weight: 800;
+  line-height: 1.9;
+}
+
+.factGrid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  margin-top: 32px;
+  background: var(--color-line);
+  border: 1px solid var(--color-line);
+}
+
+.factGrid div {
+  min-height: 108px;
+  padding: 20px 18px;
+  background: var(--color-surface);
+}
+
+.factGrid b {
+  display: block;
+  color: var(--color-brand-800);
+  font-family: var(--font-numeric);
+  font-size: clamp(1.22rem, 1.8vw, 1.72rem);
+  font-weight: 700;
+  line-height: 1.1;
+  word-break: break-word;
+}
+
+.factGrid span {
+  display: block;
+  margin-top: 10px;
+  color: var(--color-muted);
+  font-size: 0.76rem;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.profile,
+.access {
   padding-block: 118px;
   background: var(--color-surface);
 }
 
-.messageGrid {
+.profileGrid {
   display: grid;
-  grid-template-columns: minmax(320px, 0.72fr) minmax(0, 1.28fr);
-  gap: 82px;
+  grid-template-columns: minmax(320px, 0.68fr) minmax(0, 1.32fr);
+  gap: 72px;
   align-items: start;
 }
 
@@ -173,66 +202,79 @@
   line-height: 1.43;
 }
 
-.calligraphy {
-  position: relative;
-  min-height: 210px;
-  margin: 42px 0 0;
+.lead,
+.inverseLead {
+  margin: 28px 0 0;
+  font-size: 0.96rem;
+  font-weight: 800;
+  line-height: 2;
+}
+
+.lead {
+  color: var(--color-text);
+}
+
+.tableWrap {
   overflow: hidden;
-  background: var(--color-surface);
-  border: 1px solid var(--color-line);
-  box-shadow: 0 18px 42px rgba(5, 39, 102, 0.1);
-}
-
-.calligraphyImage {
-  object-fit: contain;
-  object-position: center;
-  padding: 22px;
-}
-
-.messageBody {
-  padding: 54px 60px;
-  background:
-    linear-gradient(90deg, rgba(83, 193, 229, 0.08) 0, rgba(83, 193, 229, 0.08) 4px, transparent 4px),
-    var(--color-surface);
   border: 1px solid var(--color-line);
   box-shadow: 0 22px 56px rgba(5, 39, 102, 0.09);
 }
 
-.messageBody p {
-  margin: 0;
-  color: var(--color-text);
-  font-size: 1rem;
-  font-weight: 800;
-  line-height: 2.18;
-}
-
-.messageBody p + p {
-  margin-top: 24px;
-}
-
-.signature {
+.companyTable {
   display: grid;
-  gap: 8px;
-  justify-items: end;
-  margin-top: 42px;
-  color: var(--color-brand-900);
+  gap: 1px;
+  margin: 0;
+  background: var(--color-line);
+}
+
+.companyTable div {
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1fr);
+  background: var(--color-surface);
+}
+
+.companyTable dt,
+.companyTable dd {
+  margin: 0;
+  padding: 20px 24px;
+  line-height: 1.75;
+}
+
+.companyTable dt {
+  color: var(--color-brand-800);
+  font-size: 0.86rem;
+  font-weight: 700;
+  background: #f4f9ff;
+}
+
+.companyTable dd {
+  color: var(--color-ink);
+  font-size: 0.9rem;
   font-weight: 700;
 }
 
-.signature span {
-  font-size: 0.92rem;
-}
-
-.signature b {
-  font-size: 1.35rem;
-}
-
-.commitment {
+.business {
+  position: relative;
+  overflow: hidden;
+  padding-block: 118px;
+  color: var(--color-surface);
   background:
-    linear-gradient(180deg, #f7fbff 0%, #ffffff 100%);
+    linear-gradient(135deg, rgba(3, 16, 38, 0.98), rgba(5, 39, 102, 0.96)),
+    linear-gradient(rgba(83, 193, 229, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(83, 193, 229, 0.1) 1px, transparent 1px);
+  background-size: auto, 72px 72px, 72px 72px;
+}
+
+.business::before {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  content: "";
+  background: linear-gradient(110deg, transparent 0 52%, rgba(83, 193, 229, 0.16) 52% 55%, transparent 55% 100%);
 }
 
 .sectionHeader {
+  position: relative;
   display: grid;
   grid-template-columns: minmax(320px, 0.66fr) minmax(0, 1fr);
   gap: 76px;
@@ -240,101 +282,146 @@
   margin-bottom: 54px;
 }
 
-.sectionLead {
-  margin: 28px 0 0;
-  color: var(--color-text);
-  font-size: 0.96rem;
-  font-weight: 800;
-  line-height: 2;
+.inverseHeading {
+  margin-top: 20px;
+  color: var(--color-surface);
+  font-size: clamp(2rem, 3vw, 2.92rem);
+  line-height: 1.46;
 }
 
-.commitmentGrid {
+.inverseLead {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.domainGrid {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1px;
-  background: var(--color-line);
-  border: 1px solid var(--color-line);
+  background: rgba(255, 255, 255, 0.22);
+  border: 1px solid rgba(255, 255, 255, 0.22);
 }
 
-.commitmentItem {
-  min-height: 244px;
-  padding: 34px 30px;
-  background: var(--color-surface);
+.domainCard {
+  display: grid;
+  min-height: 156px;
+  align-content: center;
+  padding: 28px 26px;
+  color: inherit;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.94);
+  transition:
+    background 180ms ease,
+    transform 180ms ease;
 }
 
-.commitmentItem span {
-  display: block;
+.domainCard:hover {
+  z-index: 1;
+  background: #f7fbff;
+  transform: translateY(-3px);
+}
+
+.domainCard span {
   color: var(--color-accent-cyan);
   font-family: var(--font-numeric);
   font-size: 0.78rem;
   font-weight: 700;
 }
 
-.commitmentItem h3 {
-  margin: 14px 0 0;
+.domainCard b {
+  margin-top: 13px;
   color: var(--color-brand-900);
-  font-size: 1.14rem;
+  font-size: 1.06rem;
   line-height: 1.5;
 }
 
-.commitmentItem p {
-  margin: 16px 0 0;
-  color: var(--color-text);
-  font-size: 0.88rem;
-  font-weight: 800;
-  line-height: 1.82;
-}
-
-.next {
-  color: var(--color-surface);
+.access {
   background:
-    linear-gradient(rgba(5, 39, 102, 0.9), rgba(5, 39, 102, 0.9)),
-    url("/assets/strengths-bg-integrated-energy.png") center / cover;
+    linear-gradient(180deg, #f7fbff 0%, #ffffff 100%);
 }
 
-.nextInner {
+.accessGrid {
   display: grid;
-  min-height: 360px;
-  align-items: center;
-  padding-block: 78px;
-  text-align: center;
+  grid-template-columns: minmax(0, 0.92fr) minmax(360px, 0.78fr);
+  gap: 42px;
+  align-items: stretch;
 }
 
-.nextEyebrow {
-  margin: 0;
-  color: var(--color-accent-cyan);
-  font-size: 0.78rem;
+.accessCard,
+.documentCard {
+  padding: 42px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-line);
+  box-shadow: 0 18px 44px rgba(5, 39, 102, 0.08);
+}
+
+.accessCard address {
+  margin: 30px 0 0;
+  color: var(--color-ink);
+  font-style: normal;
+  font-size: 1rem;
   font-weight: 700;
-  letter-spacing: 0;
+  line-height: 2;
 }
 
-.nextTitle {
-  margin-top: 18px;
-  color: var(--color-surface);
-  font-size: clamp(1.84rem, 3vw, 2.82rem);
-  line-height: 1.45;
+.accessCard p {
+  margin: 18px 0 0;
+  color: var(--color-text);
+  font-size: 0.92rem;
+  font-weight: 700;
+  line-height: 1.7;
 }
 
-.nextLinks {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  justify-content: center;
-  margin-top: 34px;
+.accessCard a {
+  margin-top: 28px;
 }
 
-.nextLinks a {
-  min-width: 190px;
-  padding: 17px 20px;
-  color: var(--color-surface);
-  font-size: 0.88rem;
+.documentLabel {
+  color: var(--color-accent-cyan);
+  font-family: var(--font-numeric);
+  font-size: 0.76rem;
+  font-weight: 700;
+}
+
+.documentCard h3 {
+  margin: 18px 0 0;
+  color: var(--color-brand-900);
+  font-size: 1.44rem;
+  line-height: 1.5;
+}
+
+.documentCard p {
+  margin: 20px 0 0;
+  color: var(--color-text);
+  font-size: 0.9rem;
+  font-weight: 800;
+  line-height: 1.9;
+}
+
+.documentLinks {
+  display: grid;
+  gap: 10px;
+  margin-top: 28px;
+}
+
+.documentLinks a {
+  padding: 15px 18px;
+  color: var(--color-brand-900);
+  font-size: 0.86rem;
   font-weight: 700;
   text-decoration: none;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.52);
+  background: #f7fbff;
+  border: 1px solid var(--color-line);
 }
 
-@media (max-width: 960px) {
+@media (max-width: 1060px) {
+  .heroInner,
+  .profileGrid,
+  .sectionHeader,
+  .accessGrid {
+    grid-template-columns: 1fr;
+  }
+
   .hero {
     background:
       linear-gradient(180deg, #031026 0%, var(--color-brand-900) 100%),
@@ -343,20 +430,13 @@
     background-size: auto, 72px 72px, 72px 72px;
   }
 
-  .heroInner,
-  .messageGrid,
-  .sectionHeader,
-  .commitmentGrid {
-    grid-template-columns: 1fr;
-  }
-
   .heroInner {
     min-height: auto;
     padding-block: 72px 96px;
   }
 
-  .portraitCard {
-    max-width: 360px;
+  .domainGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -374,31 +454,36 @@
     width: 100%;
   }
 
-  .message,
-  .commitment {
+  .heroPanel,
+  .accessCard,
+  .documentCard {
+    padding: 30px 24px;
+  }
+
+  .factGrid,
+  .domainGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .profile,
+  .business,
+  .access {
     padding-block: 86px;
   }
 
-  .messageGrid,
-  .sectionHeader {
+  .profileGrid,
+  .sectionHeader,
+  .accessGrid {
     gap: 38px;
   }
 
-  .messageBody {
-    padding: 34px 24px;
+  .companyTable div {
+    grid-template-columns: 1fr;
   }
 
-  .messageBody p {
-    font-size: 0.94rem;
-    line-height: 2.02;
-  }
-
-  .calligraphy {
-    min-height: 150px;
-  }
-
-  .nextLinks a {
-    width: 100%;
+  .companyTable dt,
+  .companyTable dd {
+    padding: 16px 18px;
   }
 }
 

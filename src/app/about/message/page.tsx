@@ -138,8 +138,8 @@ export default function MessagePage() {
                 </h2>
               </div>
               <p className={styles.sectionLead}>
-                旧サイトのメッセージで語られていた信頼、脱炭素、環境保全への想いを、
-                新しいNOAHの事業領域に合わせて整理しています。
+                信頼、脱炭素、環境保全への想いを、現在のNOAHの事業を通じて形にしていきます。
+                一つひとつの判断に、社会へ誠実に向き合う姿勢を込めています。
               </p>
             </div>
           </Reveal>

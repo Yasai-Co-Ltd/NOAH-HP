@@ -236,7 +236,7 @@ export default function HydrogenMobilityPage() {
             </h2>
             <p className={styles.inverseLead}>
               トレーラーヘッドを中心に、500km級の輸送半径、短時間充填、長時間稼働が求められる商用用途での導入を想定。
-              車両仕様はメーカー資料をもとに確認し、国内運用条件に合わせて整理します。
+              車両仕様はメーカーの最新情報を確認し、国内運用条件に合わせてご提案します。
             </p>
           </Reveal>
 
@@ -414,7 +414,7 @@ export default function HydrogenMobilityPage() {
             ))}
           </div>
           <p className={styles.note}>
-            上記は提供資料に記載されたメーカー・パートナー情報です。国内導入時は、最新仕様、法規、補助金制度、運用条件を個別に確認します。
+            メーカー・パートナー情報は導入条件により変動します。国内導入時は、最新仕様、法規、補助金制度、運用条件を個別に確認します。
           </p>
         </div>
       </section>

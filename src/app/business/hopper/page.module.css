@@ -45,7 +45,7 @@
   margin: 0;
   color: #f2c844;
   font-size: 0.82rem;
-  font-weight: 900;
+  font-weight: 700;
   line-height: 1;
   letter-spacing: 0;
 }
@@ -139,7 +139,7 @@
   padding: 16px 18px;
   color: var(--color-ink);
   font-size: 0.86rem;
-  font-weight: 900;
+  font-weight: 700;
   line-height: 1.55;
   background: rgba(255, 255, 255, 0.9);
   border-left: 5px solid #f2c844;
@@ -173,7 +173,7 @@
   color: var(--color-brand-800);
   font-family: var(--font-numeric);
   font-size: clamp(1.5rem, 2.2vw, 2.18rem);
-  font-weight: 900;
+  font-weight: 700;
   line-height: 1.08;
 }
 
@@ -182,7 +182,7 @@
   margin-top: 11px;
   color: var(--color-muted);
   font-size: 0.83rem;
-  font-weight: 900;
+  font-weight: 700;
   line-height: 1.48;
 }
 
@@ -276,7 +276,7 @@
   color: #c9a02a;
   font-family: var(--font-numeric);
   font-size: 2.16rem;
-  font-weight: 900;
+  font-weight: 700;
   line-height: 1;
 }
 
@@ -284,7 +284,7 @@
   margin: 0;
   color: var(--color-brand-900);
   font-size: 1.15rem;
-  font-weight: 900;
+  font-weight: 700;
   line-height: 1.45;
 }
 
@@ -379,14 +379,14 @@
   color: #c9a02a;
   font-family: var(--font-numeric);
   font-size: 0.78rem;
-  font-weight: 900;
+  font-weight: 700;
 }
 
 .architectureItem h3 {
   margin: 14px 0 12px;
   color: var(--color-brand-900);
   font-size: 1rem;
-  font-weight: 900;
+  font-weight: 700;
   line-height: 1.42;
 }
 
@@ -430,7 +430,7 @@
   color: var(--color-brand-800);
   font-family: var(--font-numeric);
   font-size: clamp(1.4rem, 2vw, 2rem);
-  font-weight: 900;
+  font-weight: 700;
   line-height: 1.1;
 }
 
@@ -439,7 +439,7 @@
   margin-top: 9px;
   color: var(--color-muted);
   font-size: 0.8rem;
-  font-weight: 900;
+  font-weight: 700;
   line-height: 1.5;
 }
 
@@ -503,7 +503,7 @@
   width: 36%;
   color: var(--color-brand-900);
   font-size: 0.83rem;
-  font-weight: 900;
+  font-weight: 700;
   line-height: 1.55;
   background: #f7faff;
 }
@@ -543,7 +543,7 @@
   color: var(--color-brand-900);
   font-family: var(--font-numeric);
   font-size: 0.9rem;
-  font-weight: 900;
+  font-weight: 700;
   background: #f2c844;
 }
 
@@ -551,7 +551,7 @@
   margin: 24px 0 12px;
   color: var(--color-brand-900);
   font-size: 1.08rem;
-  font-weight: 900;
+  font-weight: 700;
   line-height: 1.5;
 }
 
@@ -793,5 +793,141 @@
   .ctaInner {
     min-height: 330px;
     padding-block: 70px;
+  }
+}
+
+/* Typography alignment with top page */
+.heroTitle {
+  font-size: clamp(2.48rem, 4.2vw, 4.2rem);
+  font-weight: 800;
+  line-height: 1.34;
+}
+
+.heading,
+.inverseHeading,
+.sectionTitle,
+.supportTitle,
+.nextTitle,
+.ctaTitle,
+.title {
+  font-size: clamp(1.8rem, 2.7vw, 2.65rem);
+  font-weight: 800;
+  line-height: 1.55;
+}
+
+.heroLead {
+  font-size: clamp(1rem, 1.3vw, 1.18rem);
+  font-weight: 700;
+  line-height: 2;
+}
+
+.lead,
+.inverseLead,
+.sectionLead,
+.ctaLead,
+.sourceNote,
+.note,
+.heroPanel p,
+.supportBody p,
+.documentCard p,
+.accessCard p,
+.messageText p,
+.content p {
+  font-size: 0.96rem;
+  font-weight: 500;
+  line-height: 1.95;
+}
+
+.infoCard p,
+.missionCard p,
+.actionItem p,
+.focusCard p,
+.groupCard p,
+.processItem p,
+.timelineBody p,
+.layerNode p,
+.domainCard p,
+.challengeItem p,
+.specCard p,
+.solutionCard p,
+.valueCard p,
+.featureCard p,
+.applicationCard p,
+.flowItem p,
+.supportCard p,
+.principleItem p,
+.missionItem p,
+.proofCard p,
+.item p,
+.card p {
+  font-size: 0.88rem;
+  font-weight: 500;
+  line-height: 1.75;
+}
+
+.infoCard h3,
+.missionCard h3,
+.actionItem h3,
+.focusCard h3,
+.groupCard h3,
+.processItem h3,
+.timelineBody h3,
+.layerNode h3,
+.domainCard h3,
+.challengeItem h3,
+.specCard h3,
+.solutionCard h3,
+.valueCard h3,
+.featureCard h3,
+.applicationCard h3,
+.flowItem h3,
+.supportCard h3,
+.principleItem h3,
+.missionItem h3,
+.proofCard h3,
+.item h3,
+.card h3 {
+  font-size: clamp(1rem, 1.2vw, 1.18rem);
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.statement strong,
+.topNode b,
+.panelTitle,
+.messageTitle {
+  font-size: clamp(1.8rem, 2.7vw, 2.65rem);
+  font-weight: 800;
+  line-height: 1.45;
+}
+
+@media (max-width: 640px) {
+  .heroTitle {
+    font-size: clamp(2.2rem, 11vw, 3.12rem);
+  }
+
+  .heading,
+  .inverseHeading,
+  .sectionTitle,
+  .supportTitle,
+  .nextTitle,
+  .ctaTitle,
+  .title,
+  .statement strong,
+  .topNode b,
+  .panelTitle,
+  .messageTitle {
+    font-size: 1.72rem;
+    line-height: 1.6;
+  }
+
+  .heroLead,
+  .lead,
+  .inverseLead,
+  .sectionLead,
+  .ctaLead,
+  .sourceNote,
+  .note {
+    font-size: 0.88rem;
   }
 }

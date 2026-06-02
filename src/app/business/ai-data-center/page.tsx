@@ -12,8 +12,8 @@ export const metadata: Metadata = {
 };
 
 const heroMetrics = [
-  { value: "35kW", label: "現行AIデータセンター ラック電力参考値" },
-  { value: "100kW", label: "次世代AIデータセンター ラック電力参考値" },
+  { value: "35kW", label: "現行AIデータセンター ラック電力目安" },
+  { value: "100kW", label: "次世代AIデータセンター ラック電力目安" },
   { value: "200MW級", label: "データセンター建設構想" },
   { value: "400MW級", label: "グリーン電力一体化モデル" },
 ];
@@ -201,7 +201,7 @@ export default function AiDataCenterPage() {
             </div>
           </div>
           <p className={styles.sourceNote}>
-            ラック電力・構想規模は提供資料内の掲載値をもとに整理しています。実案件では最新仕様・系統条件・法規に合わせて個別確認します。
+            ラック電力・構想規模は計画段階の目安です。実案件では最新仕様・系統条件・法規に合わせて個別に確認します。
           </p>
         </div>
       </section>

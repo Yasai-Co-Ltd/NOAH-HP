@@ -24,48 +24,56 @@ const aboutLinks = [
     eyebrow: "MESSAGE",
     title: "トップメッセージ",
     text: "NOAHがどのような未来を見据え、事業を進めているのか。代表メッセージを掲載します。",
+    image: "/assets/about/menu/message.png",
   },
   {
     href: "/about/vision",
     eyebrow: "VISION",
     title: "企業理念・ビジョン",
     text: "脱炭素社会と地域インフラに向き合う、NOAHの理念と目指す姿を整理します。",
+    image: "/assets/about/menu/vision.png",
   },
   {
     href: "/about/standard",
     eyebrow: "STANDARD",
     title: "行動基準",
     text: "品質、安全、地域共生、誠実な事業運営を支える判断基準を掲載します。",
+    image: "/assets/about/menu/standard.png",
   },
   {
     href: "/about/outline",
     eyebrow: "OUTLINE",
     title: "会社概要",
     text: "会社名、所在地、事業内容、基本情報など、企業情報の基本項目をまとめます。",
+    image: "/assets/about/menu/outline.png",
   },
   {
     href: "/about/organization",
     eyebrow: "ORGANIZATION",
     title: "グループ・組織図",
     text: "事業領域を横断してプロジェクトを支える組織体制を紹介します。",
+    image: "/assets/about/menu/organization.png",
   },
   {
     href: "/about/network",
     eyebrow: "NETWORK",
     title: "国内外拠点",
     text: "国内外のパートナー、拠点、プロジェクト対応エリアを整理します。",
+    image: "/assets/about/menu/network.png",
   },
   {
     href: "/about/history",
     eyebrow: "HISTORY",
     title: "沿革",
     text: "NOAHの歩み、事業展開、再生可能エネルギー領域への取り組みを掲載します。",
+    image: "/assets/about/menu/history.png",
   },
   {
     href: "/about/safety-health",
     eyebrow: "SAFETY & HEALTH",
     title: "健康経営",
     text: "安全で持続的に働ける組織づくり、健康経営への取り組みを紹介します。",
+    image: "/assets/about/menu/safety-health.png",
   },
 ];
 
@@ -100,8 +108,8 @@ export default function AboutPage() {
               誠実に構想し、実装する。
             </h1>
             <p className={styles.heroLead}>
-              諾亜建設は、再生可能エネルギーを中心に、地域と企業の脱炭素化を支えるインフラ事業を展開しています。
-              企業理念、組織、拠点、沿革まで、NOAHを知るための情報をまとめました。
+              諾亜建設は、再生可能エネルギーを起点に、発電、蓄電、水素、AIデータセンターをつなぎ、
+              地域と企業の脱炭素化を支えるインフラを社会へ届けます。
             </p>
             <div className={styles.heroActions}>
               <Button href="/contact">お問い合わせ</Button>
@@ -112,19 +120,14 @@ export default function AboutPage() {
           </Reveal>
 
           <Reveal direction="right" className={styles.heroVisualReveal}>
-            <figure className={styles.heroVisual}>
               <Image
-                src="/assets/about-collage.png"
+                src="/assets/logo-3d.png"
                 alt="風力発電、水素モビリティ、EV、蓄電池設備を組み合わせたNOAHの事業イメージ"
                 fill
                 priority
                 sizes="(max-width: 960px) calc(100vw - 40px), 52vw"
                 className={styles.heroImage}
               />
-              <figcaption className={styles.heroCaption}>
-                再生可能エネルギーを、地域と企業のインフラへ。
-              </figcaption>
-            </figure>
           </Reveal>
         </div>
 
@@ -141,19 +144,11 @@ export default function AboutPage() {
       <section className={styles.directory} id="company-menu" aria-labelledby="directory-title">
         <div className="container">
           <Reveal direction="up">
-            <div className={styles.sectionHeader}>
-              <div>
-                <SectionLabel eyebrow="COMPANY MENU" subtitle="企業情報メニュー" />
-                <h2 id="directory-title" className={styles.heading}>
-                  知りたい情報へ、
-                  <br />
-                  迷わず進める構成。
-                </h2>
-              </div>
-              <p className={styles.sectionLead}>
-                メッセージ、理念、行動基準から、会社概要、組織、拠点、沿革、健康経営まで。
-                企業情報の下層ページへ進むための入口です。
-              </p>
+            <div className={styles.directoryHeader}>
+              <SectionLabel eyebrow="COMPANY MENU" subtitle="企業情報メニュー" />
+              <h2 id="directory-title" className={styles.visuallyHidden}>
+                企業情報メニュー
+              </h2>
             </div>
           </Reveal>
 
@@ -161,6 +156,16 @@ export default function AboutPage() {
             {aboutLinks.map((item, index) => (
               <Reveal key={item.href} direction="up" delay={index * 45} className={styles.cardReveal}>
                 <Link href={item.href} className={styles.infoCard}>
+                  <span className={styles.cardImage} aria-hidden="true">
+                    <Image
+                      src={item.image}
+                      alt=""
+                      fill
+                      sizes="(max-width: 640px) calc(100vw - 40px), (max-width: 1180px) 50vw, 25vw"
+                      className={styles.cardImageAsset}
+                    />
+                  </span>
+                  <span className={styles.cardShade} aria-hidden="true" />
                   <span className={styles.cardNumber}>{String(index + 1).padStart(2, "0")}</span>
                   <span className={styles.cardEyebrow}>{item.eyebrow}</span>
                   <h3>{item.title}</h3>

@@ -22,8 +22,8 @@ const projectSpecs = [
   { label: "所在地", value: "青森県下北郡東通村大字岩屋" },
   { label: "計画種別", value: "既設小型風車のリプレース計画" },
   { label: "想定機種", value: "2.5MW級 風力発電機" },
-  { label: "計画基数", value: "18基（資料掲載値）" },
-  { label: "計画容量", value: "45MW（資料掲載値）" },
+  { label: "計画基数", value: "18基（計画想定）" },
+  { label: "計画容量", value: "45MW（計画想定）" },
   { label: "状況", value: "検討中・一次調査完了" },
 ];
 
@@ -194,7 +194,7 @@ export default function WindPowerPage() {
               ))}
             </dl>
             <p className={styles.note}>
-              掲載値は提供資料をもとにした計画段階の参考値です。最終仕様は調査、許認可、系統条件により変動します。
+              計画値は検討段階の目安です。最終仕様は調査、許認可、系統条件により変動します。
             </p>
           </Reveal>
 
