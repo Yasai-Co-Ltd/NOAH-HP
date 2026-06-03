@@ -5,7 +5,7 @@
   color: var(--color-surface);
   background:
     linear-gradient(90deg, rgba(5, 39, 102, 0.62) 0%, rgba(5, 39, 102, 0.72) 58%, rgba(5, 39, 102, 0.82) 100%),
-    url("/assets/strengths-bg-integrated-energy.png") center / cover no-repeat,
+    var(--bg-image) center / cover no-repeat,
     var(--color-brand-900);
 }
 

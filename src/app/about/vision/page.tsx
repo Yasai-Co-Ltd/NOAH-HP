@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
+import { isPageEnabled } from "@/lib/page-config";
 import Image from "next/image";
 import Link from "next/link";
 import { Reveal } from "@/components/animation/Reveal/Reveal";
@@ -64,6 +66,8 @@ const nextLinks = [
 ];
 
 export default function VisionPage() {
+  if (!isPageEnabled("/about/vision")) notFound();
+
   return (
     <>
       <section className={styles.hero} aria-labelledby="vision-title">

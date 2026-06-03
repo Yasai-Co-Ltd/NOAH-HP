@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Reveal } from "@/components/animation/Reveal/Reveal";
 import { SectionLabel } from "@/components/ui/SectionLabel/SectionLabel";
+import { asset } from "@/lib/asset";
 import styles from "./Solution.module.css";
 
 interface SolutionStep {
@@ -81,7 +82,7 @@ export function Solution() {
           <div className={styles.panel}>
             <div className={styles.supportBadge} aria-hidden="true">
               <Image
-                src="/assets/noah_logo-mark.png"
+                src={asset("/assets/noah_logo-mark.png")}
                 alt=""
                 width={40}
                 height={40}

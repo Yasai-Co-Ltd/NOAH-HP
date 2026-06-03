@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Reveal } from "@/components/animation/Reveal/Reveal";
 import { Button } from "@/components/ui/Button/Button";
 import { SectionLabel } from "@/components/ui/SectionLabel/SectionLabel";
+import { asset } from "@/lib/asset";
 import styles from "./AirbornePower.module.css";
 
 export function AirbornePower() {
@@ -31,7 +32,7 @@ export function AirbornePower() {
         <Reveal direction="right" className={styles.visualWrap}>
           <figure className={styles.visual}>
             <Image
-              src="/assets/airborne-power-noah.png"
+              src={asset("/assets/airborne-power-noah.png")}
               alt="NOAHロゴが入った飛行船型の空中風力発電システム"
               fill
               sizes="(max-width: 920px) calc(100vw - 40px), 63vw"

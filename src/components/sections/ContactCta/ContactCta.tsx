@@ -1,10 +1,21 @@
+import type { CSSProperties } from "react";
 import { Reveal } from "@/components/animation/Reveal/Reveal";
 import { Button } from "@/components/ui/Button/Button";
+import { asset } from "@/lib/asset";
 import styles from "./ContactCta.module.css";
+
+const contactCtaStyle = {
+  "--bg-image": `url(${asset("/assets/hero-wind-hq.jpg")})`,
+} as CSSProperties;
 
 export function ContactCta() {
   return (
-    <section className={styles.section} id="contact" aria-labelledby="contact-title">
+    <section
+      className={styles.section}
+      id="contact"
+      aria-labelledby="contact-title"
+      style={contactCtaStyle}
+    >
       <Reveal direction="up" className="container">
         <div className={styles.grid}>
           <div className={styles.iconWrap} aria-hidden="true">

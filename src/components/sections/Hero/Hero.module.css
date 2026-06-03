@@ -10,7 +10,7 @@
   position: absolute;
   inset: 0 0 0 31%;
   z-index: -3;
-  background-image: url("/assets/hero-wind-noah-nacelle-natural.jpg");
+  background-image: var(--bg-image);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

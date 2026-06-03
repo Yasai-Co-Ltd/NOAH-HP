@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
+import { isPageEnabled } from "@/lib/page-config";
 import Image from "next/image";
 import Link from "next/link";
 import { Reveal } from "@/components/animation/Reveal/Reveal";
@@ -89,6 +91,8 @@ const nextLinks = [
 ];
 
 export default function OrganizationPage() {
+  if (!isPageEnabled("/about/organization")) notFound();
+
   return (
     <>
       <section className={styles.hero} aria-labelledby="organization-title">

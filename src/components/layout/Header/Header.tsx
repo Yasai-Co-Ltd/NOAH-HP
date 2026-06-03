@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { asset } from "@/lib/asset";
 import styles from "./Header.module.css";
 
 interface NavLink {
@@ -35,7 +36,10 @@ export function Header() {
         onClick={closeMenu}
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/assets/noah_logo.png" alt="NOAH CONSTRUCTION CO.,LTD. 諾亜建設株式会社" />
+        <img
+          src={asset("/assets/noah_logo.png")}
+          alt="NOAH CONSTRUCTION CO.,LTD. 諾亜建設株式会社"
+        />
       </Link>
       <button
         type="button"

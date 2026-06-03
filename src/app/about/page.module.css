@@ -293,8 +293,8 @@
 .cardShade {
   z-index: -1;
   background:
-    linear-gradient(180deg, rgba(3, 16, 38, 0.06) 0%, rgba(3, 16, 38, 0.42) 58%, rgba(3, 16, 38, 0.72) 100%),
-    linear-gradient(90deg, rgba(3, 16, 38, 0.34) 0%, rgba(3, 16, 38, 0.14) 58%, rgba(3, 16, 38, 0.04) 100%);
+    linear-gradient(180deg, rgba(12, 14, 18, 0.04) 0%, rgba(12, 14, 18, 0.34) 58%, rgba(12, 14, 18, 0.66) 100%),
+    linear-gradient(90deg, rgba(12, 14, 18, 0.26) 0%, rgba(12, 14, 18, 0.1) 58%, rgba(12, 14, 18, 0.02) 100%);
 }
 
 .infoCard:hover .cardImageAsset {
@@ -304,7 +304,7 @@
 .cardNumber {
   position: relative;
   z-index: 1;
-  color: rgba(255, 255, 255, 0.28);
+  color: rgba(255, 255, 255, 1);
   font-family: var(--font-numeric);
   font-size: 3.3rem;
   font-weight: 700;
@@ -330,7 +330,7 @@
   color: var(--color-surface);
   font-size: 1.08rem;
   line-height: 1.5;
-  text-shadow: 0 2px 14px rgba(3, 16, 38, 0.42);
+  text-shadow: 0 2px 14px rgba(12, 14, 18, 0.44);
 }
 
 .infoCard p {
@@ -341,7 +341,7 @@
   font-size: 0.84rem;
   font-weight: 800;
   line-height: 1.78;
-  text-shadow: 0 2px 12px rgba(3, 16, 38, 0.38);
+  text-shadow: 0 2px 12px rgba(12, 14, 18, 0.4);
 }
 
 .cardCta {
@@ -352,7 +352,7 @@
   color: var(--color-surface);
   font-size: 0.82rem;
   font-weight: 700;
-  text-shadow: 0 2px 12px rgba(3, 16, 38, 0.38);
+  text-shadow: 0 2px 12px rgba(12, 14, 18, 0.4);
 }
 
 .cardCta::after {

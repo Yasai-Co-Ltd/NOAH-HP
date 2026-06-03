@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
+import { isPageEnabled } from "@/lib/page-config";
 import Image from "next/image";
 import { Reveal } from "@/components/animation/Reveal/Reveal";
 import { Button } from "@/components/ui/Button/Button";
@@ -131,6 +133,8 @@ const processSteps = [
 ];
 
 export default function HydrogenMobilityPage() {
+  if (!isPageEnabled("/business/hydrogen-mobility")) notFound();
+
   return (
     <>
       <section className={styles.hero} aria-labelledby="hydrogen-title">

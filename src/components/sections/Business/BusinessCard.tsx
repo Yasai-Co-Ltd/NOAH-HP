@@ -1,3 +1,4 @@
+import { asset } from "@/lib/asset";
 import type { Service } from "@/lib/content";
 import styles from "./BusinessCard.module.css";
 
@@ -14,7 +15,7 @@ export function BusinessCard({ service, index }: BusinessCardProps) {
       <a className={styles.cardLink} href={service.href} aria-label={`${service.title}の詳細を見る`}>
         <div className={styles.imageWrap}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img className={styles.image} src={service.image.src} alt={service.image.alt} />
+          <img className={styles.image} src={asset(service.image.src)} alt={service.image.alt} />
         </div>
         <div className={styles.body}>
           <div className={styles.headingLine}>

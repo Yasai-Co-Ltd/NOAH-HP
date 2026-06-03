@@ -1,8 +1,14 @@
 import Image from "next/image";
+import type { CSSProperties } from "react";
 import { CountUp } from "@/components/animation/CountUp/CountUp";
 import { Reveal } from "@/components/animation/Reveal/Reveal";
 import { SectionLabel } from "@/components/ui/SectionLabel/SectionLabel";
+import { asset } from "@/lib/asset";
 import styles from "./Strengths.module.css";
+
+const strengthsStyle = {
+  "--bg-image": `url(${asset("/assets/strengths-bg-integrated-energy.png")})`,
+} as CSSProperties;
 
 interface StrengthCard {
   number: string;
@@ -75,7 +81,12 @@ const STAT_STAGGER_MS = 60;
 
 export function Strengths() {
   return (
-    <section className={styles.strengths} id="strengths" aria-labelledby="strengths-title">
+    <section
+      className={styles.strengths}
+      id="strengths"
+      aria-labelledby="strengths-title"
+      style={strengthsStyle}
+    >
       <div className={`container ${styles.inner}`}>
         <div className={styles.content}>
           <Reveal direction="left" className={styles.copy}>
@@ -101,7 +112,7 @@ export function Strengths() {
                 <article className={styles.card}>
                   <div className={styles.cardImageWrap}>
                     <Image
-                      src={card.image.src}
+                      src={asset(card.image.src)}
                       width={1024}
                       height={1536}
                       alt={card.image.alt}

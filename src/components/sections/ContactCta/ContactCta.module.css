@@ -3,7 +3,7 @@
   color: var(--color-surface);
   background:
     linear-gradient(90deg, rgba(27, 136, 205, 0.94), rgba(7, 65, 148, 0.86)),
-    url("/assets/hero-wind-hq.jpg") right center / cover no-repeat;
+    var(--bg-image) right center / cover no-repeat;
 }
 
 .grid {

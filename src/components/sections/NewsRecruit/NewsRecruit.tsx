@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Reveal } from "@/components/animation/Reveal/Reveal";
 import { SectionLabel } from "@/components/ui/SectionLabel/SectionLabel";
 import { TextLink } from "@/components/ui/TextLink/TextLink";
+import { asset } from "@/lib/asset";
 import { content } from "@/lib/content";
 import styles from "./NewsRecruit.module.css";
 
@@ -53,7 +54,7 @@ export async function NewsRecruit() {
               <i className={styles.bannerCta}>詳しく見る →</i>
             </span>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img className={styles.bannerImage} src="/assets/recruit-hq.jpg" alt="" />
+            <img className={styles.bannerImage} src={asset("/assets/recruit-hq.jpg")} alt="" />
           </Link>
         </Reveal>
       </div>

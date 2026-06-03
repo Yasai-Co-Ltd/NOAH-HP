@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Reveal } from "@/components/animation/Reveal/Reveal";
 import { SectionLabel } from "@/components/ui/SectionLabel/SectionLabel";
+import { asset } from "@/lib/asset";
 import styles from "./Sustainability.module.css";
 
 interface SustainabilityCard {
@@ -85,7 +86,7 @@ export function Sustainability() {
                 >
                   <div className={styles.imageWrap}>
                     {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img className={styles.image} src={card.image.src} alt={card.image.alt} />
+                    <img className={styles.image} src={asset(card.image.src)} alt={card.image.alt} />
                   </div>
                   <div className={styles.body}>
                     <h3 className={styles.cardTitle}>{card.title}</h3>

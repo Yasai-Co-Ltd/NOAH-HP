@@ -1,10 +1,16 @@
+import type { CSSProperties } from "react";
 import { Button } from "@/components/ui/Button/Button";
+import { asset } from "@/lib/asset";
 import styles from "./Hero.module.css";
+
+const heroMediaStyle = {
+  "--bg-image": `url(${asset("/assets/hero-wind-noah-nacelle-natural.jpg")})`,
+} as CSSProperties;
 
 export function Hero() {
   return (
     <section className={styles.hero} aria-labelledby="hero-title">
-      <div className={styles.media} aria-hidden="true" />
+      <div className={styles.media} style={heroMediaStyle} aria-hidden="true" />
       <div className={styles.overlay} aria-hidden="true" />
       <div className={`container ${styles.inner}`}>
         <p className={`eyebrow ${styles.fadeIn} ${styles.delay1}`}>

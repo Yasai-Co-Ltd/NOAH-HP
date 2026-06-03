@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
+import { isPageEnabled } from "@/lib/page-config";
 import Image from "next/image";
 import Link from "next/link";
 import { Reveal } from "@/components/animation/Reveal/Reveal";
@@ -24,56 +26,56 @@ const aboutLinks = [
     eyebrow: "MESSAGE",
     title: "トップメッセージ",
     text: "NOAHがどのような未来を見据え、事業を進めているのか。代表メッセージを掲載します。",
-    image: "/assets/about/menu/message.png",
+    image: "/assets/about/menu/message-v2.png",
   },
   {
     href: "/about/vision",
     eyebrow: "VISION",
     title: "企業理念・ビジョン",
     text: "脱炭素社会と地域インフラに向き合う、NOAHの理念と目指す姿を整理します。",
-    image: "/assets/about/menu/vision.png",
+    image: "/assets/about/menu/vision-v2.png",
   },
   {
     href: "/about/standard",
     eyebrow: "STANDARD",
     title: "行動基準",
     text: "品質、安全、地域共生、誠実な事業運営を支える判断基準を掲載します。",
-    image: "/assets/about/menu/standard.png",
+    image: "/assets/about/menu/standard-v2.png",
   },
   {
     href: "/about/outline",
     eyebrow: "OUTLINE",
     title: "会社概要",
     text: "会社名、所在地、事業内容、基本情報など、企業情報の基本項目をまとめます。",
-    image: "/assets/about/menu/outline.png",
+    image: "/assets/about/menu/outline-v2.png",
   },
   {
     href: "/about/organization",
     eyebrow: "ORGANIZATION",
     title: "グループ・組織図",
     text: "事業領域を横断してプロジェクトを支える組織体制を紹介します。",
-    image: "/assets/about/menu/organization.png",
+    image: "/assets/about/menu/organization-v2.png",
   },
   {
     href: "/about/network",
     eyebrow: "NETWORK",
     title: "国内外拠点",
     text: "国内外のパートナー、拠点、プロジェクト対応エリアを整理します。",
-    image: "/assets/about/menu/network.png",
+    image: "/assets/about/menu/network-v2.png",
   },
   {
     href: "/about/history",
     eyebrow: "HISTORY",
     title: "沿革",
     text: "NOAHの歩み、事業展開、再生可能エネルギー領域への取り組みを掲載します。",
-    image: "/assets/about/menu/history.png",
+    image: "/assets/about/menu/history-v2.png",
   },
   {
     href: "/about/safety-health",
     eyebrow: "SAFETY & HEALTH",
     title: "健康経営",
     text: "安全で持続的に働ける組織づくり、健康経営への取り組みを紹介します。",
-    image: "/assets/about/menu/safety-health.png",
+    image: "/assets/about/menu/safety-health-v2.png",
   },
 ];
 
@@ -93,6 +95,8 @@ const principles = [
 ];
 
 export default function AboutPage() {
+  if (!isPageEnabled("/about")) notFound();
+
   return (
     <>
       <section className={styles.hero} aria-labelledby="about-page-title">
@@ -120,14 +124,16 @@ export default function AboutPage() {
           </Reveal>
 
           <Reveal direction="right" className={styles.heroVisualReveal}>
+            <figure className={styles.heroVisual}>
               <Image
-                src="/assets/logo-3d.png"
-                alt="風力発電、水素モビリティ、EV、蓄電池設備を組み合わせたNOAHの事業イメージ"
+                src="/assets/about/hero-noah-brand-ai.png"
+                alt="NOAHロゴを配したブランドパネルと再生可能エネルギー、蓄電池、水素設備を組み合わせた企業イメージ"
                 fill
                 priority
                 sizes="(max-width: 960px) calc(100vw - 40px), 52vw"
                 className={styles.heroImage}
               />
+            </figure>
           </Reveal>
         </div>
 
@@ -169,7 +175,6 @@ export default function AboutPage() {
                   <span className={styles.cardNumber}>{String(index + 1).padStart(2, "0")}</span>
                   <span className={styles.cardEyebrow}>{item.eyebrow}</span>
                   <h3>{item.title}</h3>
-                  <p>{item.text}</p>
                   <span className={styles.cardCta}>詳しく見る</span>
                 </Link>
               </Reveal>

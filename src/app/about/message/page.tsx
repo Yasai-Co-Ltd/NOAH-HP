@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
+import { isPageEnabled } from "@/lib/page-config";
 import Image from "next/image";
 import Link from "next/link";
 import { Reveal } from "@/components/animation/Reveal/Reveal";
@@ -43,6 +45,8 @@ const nextLinks = [
 ];
 
 export default function MessagePage() {
+  if (!isPageEnabled("/about/message")) notFound();
+
   return (
     <>
       <section className={styles.hero} aria-labelledby="message-title">

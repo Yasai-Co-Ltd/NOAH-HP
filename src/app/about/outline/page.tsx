@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
+import { isPageEnabled } from "@/lib/page-config";
 import Link from "next/link";
 import { Reveal } from "@/components/animation/Reveal/Reveal";
 import { Button } from "@/components/ui/Button/Button";
@@ -57,6 +59,8 @@ const nextLinks = [
 ];
 
 export default function OutlinePage() {
+  if (!isPageEnabled("/about/outline")) notFound();
+
   return (
     <>
       <section className={styles.hero} aria-labelledby="outline-title">

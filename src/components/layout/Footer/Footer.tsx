@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { asset } from "@/lib/asset";
 import styles from "./Footer.module.css";
 
 interface FooterLink {
@@ -50,6 +51,13 @@ const GROUPS: FooterGroup[] = [
   },
 ];
 
+const OTHER_LINKS: FooterLink[] = [
+  { href: "/news", label: "ニュース" },
+  { href: "/recruit", label: "採用情報" },
+  { href: "/privacy", label: "プライバシーポリシー" },
+  { href: "/sitemap", label: "サイトマップ" },
+];
+
 export function Footer() {
   return (
     <footer className={styles.footer} id="company">
@@ -57,7 +65,7 @@ export function Footer() {
         <div className={styles.grid}>
           <Link href="/" className={styles.logo}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/assets/noah_logo.png" alt="諾亜建設株式会社" />
+            <img src={asset("/assets/noah_logo.png")} alt="諾亜建設株式会社" />
           </Link>
           <div className={styles.links}>
             {GROUPS.map((group) => (
@@ -81,18 +89,11 @@ export function Footer() {
               <Link href="/contact" className={styles.contactLink}>
                 お問い合わせ
               </Link>
-              <Link href="/news" className={styles.link}>
-                ニュース
-              </Link>
-              <Link href="/recruit" className={styles.link}>
-                採用情報
-              </Link>
-              <Link href="/privacy" className={styles.link}>
-                プライバシーポリシー
-              </Link>
-              <Link href="/sitemap" className={styles.link}>
-                サイトマップ
-              </Link>
+              {OTHER_LINKS.map((link) => (
+                <Link key={link.href} href={link.href} className={styles.link}>
+                  {link.label}
+                </Link>
+              ))}
             </div>
           </div>
         </div>

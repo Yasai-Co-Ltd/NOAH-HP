@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
+import { isPageEnabled } from "@/lib/page-config";
 import Image from "next/image";
 import Link from "next/link";
 import { Reveal } from "@/components/animation/Reveal/Reveal";
@@ -27,6 +29,8 @@ const FEATURE = {
 const SUPPORT_STEPS = ["調査・企画", "設計・調達", "施工・導入", "運用・改善"];
 
 export default async function BusinessPage() {
+  if (!isPageEnabled("/business")) notFound();
+
   const services = await content.findServices();
 
   return (

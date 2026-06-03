@@ -1,6 +1,7 @@
 import { Reveal } from "@/components/animation/Reveal/Reveal";
 import { Button } from "@/components/ui/Button/Button";
 import { SectionLabel } from "@/components/ui/SectionLabel/SectionLabel";
+import { asset } from "@/lib/asset";
 import styles from "./About.module.css";
 
 export function About() {
@@ -28,11 +29,11 @@ export function About() {
         <Reveal direction="up" delay={150}>
           <div className={styles.visual} aria-hidden="true">
             {/* eslint-disable @next/next/no-img-element */}
-            <img className={styles.main} src="/assets/hero-wind-hq.jpg" alt="" />
+            <img className={styles.main} src={asset("/assets/hero-wind-hq.jpg")} alt="" />
             <div className={styles.stack}>
-              <img src="/assets/business-hydrogen-mobility-branded.jpg" alt="" />
-              <img src="/assets/business-ai-data-center.jpg" alt="" />
-              <img src="/assets/battery-hq.jpg" alt="" />
+              <img src={asset("/assets/business-hydrogen-mobility-branded.jpg")} alt="" />
+              <img src={asset("/assets/business-ai-data-center.jpg")} alt="" />
+              <img src={asset("/assets/battery-hq.jpg")} alt="" />
             </div>
             {/* eslint-enable @next/next/no-img-element */}
           </div>
