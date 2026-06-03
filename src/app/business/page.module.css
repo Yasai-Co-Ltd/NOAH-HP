@@ -75,7 +75,7 @@
 .featured {
   position: relative;
   overflow: hidden;
-  padding-block: 86px 106px;
+  padding-block: 140px 106px;
   background:
     radial-gradient(circle at 80% 18%, rgba(230, 246, 255, 0.86), transparent 56%),
     linear-gradient(180deg, #ffffff 0%, #f6fbff 100%);
@@ -207,7 +207,7 @@
 
 .domainHeading {
   display: grid;
-  grid-template-columns: minmax(410px, 0.9fr) minmax(420px, 1fr);
+  grid-template-columns: minmax(410px, 1fr) minmax(420px, 1fr);
   gap: 96px;
   align-items: start;
   margin-bottom: 42px;
@@ -328,7 +328,7 @@
   margin: 18px 0 0;
   color: var(--color-text);
   font-size: 0.9rem;
-  font-weight: 750;
+  font-weight: 500;
   line-height: 1.75;
 }
 
@@ -365,10 +365,10 @@
 
 .supportPanel::after {
   position: absolute;
-  top: 12px;
-  right: 76px;
-  width: 118px;
-  height: 118px;
+  top: 0;
+  right: 50px;
+  width: 220px;
+  height: 220px;
   pointer-events: none;
   content: "";
   background: url("/assets/noah_logo-mark.png") center / contain no-repeat;
@@ -556,7 +556,7 @@
 
 /* Typography alignment with top page */
 .heroTitle {
-  font-size: clamp(2.48rem, 4.2vw, 4.2rem);
+  font-size: clamp(2.48rem, 4.2vw, 3.4rem);
   font-weight: 800;
   line-height: 1.34;
 }

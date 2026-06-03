@@ -39,6 +39,13 @@
   border-color: var(--color-surface);
 }
 
+.cyan {
+  color: var(--color-brand-900);
+  background: var(--color-accent-cyan);
+  border-color: var(--color-accent-cyan);
+  box-shadow: 0 18px 42px rgba(83, 193, 229, 0.22);
+}
+
 .arrow {
   font-weight: 700;
 }

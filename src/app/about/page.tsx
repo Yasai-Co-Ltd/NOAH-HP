@@ -111,16 +111,16 @@ export default function AboutPage() {
               <br />
               誠実に構想し、実装する。
             </h1>
-            <p className={styles.heroLead}>
+            {/* <p className={styles.heroLead}>
               諾亜建設は、再生可能エネルギーを起点に、発電、蓄電、水素、AIデータセンターをつなぎ、
               地域と企業の脱炭素化を支えるインフラを社会へ届けます。
-            </p>
-            <div className={styles.heroActions}>
+            </p> */}
+            {/* <div className={styles.heroActions}>
               <Button href="/contact">お問い合わせ</Button>
               <Button href="#company-menu" variant="outline">
                 企業情報を見る
               </Button>
-            </div>
+            </div> */}
           </Reveal>
 
           <Reveal direction="right" className={styles.heroVisualReveal}>
@@ -183,7 +183,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className={styles.principles} aria-labelledby="principles-title">
+      {/* <section className={styles.principles} aria-labelledby="principles-title">
         <div className={`container ${styles.principlesInner}`}>
           <Reveal direction="left" className={styles.principlesCopy}>
             <SectionLabel eyebrow="OUR STANCE" subtitle="NOAHの姿勢" inverse />
@@ -210,7 +210,7 @@ export default function AboutPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section className={styles.cta} aria-labelledby="about-cta-title">
         <div className={`container ${styles.ctaInner}`}>
@@ -226,7 +226,7 @@ export default function AboutPage() {
               <Button href="/contact" variant="white">
                 お問い合わせ
               </Button>
-              <Button href="/business" variant="outline" className={styles.darkButton}>
+              <Button href="/business" variant="cyan">
                 事業紹介を見る
               </Button>
             </div>

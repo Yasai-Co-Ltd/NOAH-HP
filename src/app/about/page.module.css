@@ -12,7 +12,7 @@
 
 .hero::after {
   position: absolute;
-  top: 42px;
+  top: 0px;
   right: 5vw;
   z-index: -1;
   content: "NOAH";
@@ -30,6 +30,12 @@
   align-items: center;
   min-height: 700px;
   padding-block: 92px 128px;
+}
+
+.heroCopy {
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
 }
 
 .heroCopy,
@@ -103,13 +109,9 @@
   border-color: rgba(255, 255, 255, 0.68);
 }
 
-.darkButton {
-  color: var(--color-surface);
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.68);
-}
-
 .heroVisual {
+  top: 50%;
+  transform: translateY(-50%);
   position: relative;
   min-height: 450px;
   margin: 0;
@@ -500,6 +502,8 @@
   }
 
   .heroVisual {
+    top: 50%;
+    transform: translateY(-50%);
     min-height: 360px;
   }
 
@@ -534,6 +538,8 @@
   }
 
   .heroVisual {
+    top: 50%;
+    transform: translateY(-50%);
     min-height: 300px;
   }
 

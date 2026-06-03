@@ -107,15 +107,15 @@ export default async function BusinessPage() {
               <div>
                 <SectionLabel eyebrow="BUSINESS DOMAIN" subtitle="主要事業領域" />
                 <h2 id="domains-title" className={styles.domainTitle}>
-                  目的に合わせて選べる、
+                  複数の事業領域を結び、
                   <br />
-                  NOAHの事業領域。
+                  最適なインフラを設計する。
                 </h2>
               </div>
-              <p className={styles.domainLead}>
+              {/* <p className={styles.domainLead}>
                 再生可能エネルギーの導入、電力の安定化、環境設備、次世代モビリティ、AI時代のデータ基盤まで。
                 6つの領域を組み合わせて提案します。
-              </p>
+              </p> */}
             </div>
           </Reveal>
 

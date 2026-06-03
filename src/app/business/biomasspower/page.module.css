@@ -92,6 +92,8 @@
 }
 
 .heroVisual {
+  top: 50%;
+  transform: translateY(-50%);
   position: relative;
   min-height: 500px;
   margin: 0;
@@ -641,6 +643,8 @@
   }
 
   .heroVisual {
+    top: 50%;
+    transform: translateY(-50%);
     min-height: 330px;
   }
 

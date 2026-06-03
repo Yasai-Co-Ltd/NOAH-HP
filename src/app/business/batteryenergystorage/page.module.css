@@ -107,6 +107,8 @@
 }
 
 .heroVisual {
+  top: 50%;
+  transform: translateY(-50%);
   position: relative;
   min-height: 520px;
   margin: 0;
@@ -795,6 +797,8 @@
   }
 
   .heroVisual {
+    top: 50%;
+    transform: translateY(-50%);
     min-height: 470px;
   }
 
@@ -862,6 +866,8 @@
   }
 
   .heroVisual {
+    top: 50%;
+    transform: translateY(-50%);
     min-height: 420px;
   }
 
@@ -992,6 +998,8 @@
   }
 
   .heroVisual {
+    top: 50%;
+    transform: translateY(-50%);
     min-height: 390px;
   }
 

@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { AnchorHTMLAttributes, ReactNode } from "react";
 import styles from "./Button.module.css";
 
-export type ButtonVariant = "primary" | "outline" | "white";
+export type ButtonVariant = "primary" | "outline" | "white" | "cyan";
 
 interface ButtonProps extends Omit<AnchorHTMLAttributes<HTMLAnchorElement>, "href"> {
   href: string;
@@ -15,6 +15,7 @@ const variantClass: Record<ButtonVariant, string> = {
   primary: styles.primary,
   outline: styles.outline,
   white: styles.white,
+  cyan: styles.cyan
 };
 
 export function Button({
