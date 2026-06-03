@@ -6,6 +6,7 @@ import { Reveal } from "@/components/animation/Reveal/Reveal";
 import { Button } from "@/components/ui/Button/Button";
 import { SectionLabel } from "@/components/ui/SectionLabel/SectionLabel";
 import styles from "./page.module.css";
+import { asset } from "@/lib/asset";
 
 export const metadata: Metadata = {
   title: "水素モビリティ事業 | 諾亜建設株式会社",
@@ -79,19 +80,19 @@ const operationScenes = [
   {
     title: "幹線・港湾輸送",
     text: "長距離・中距離の輸送半径を持つトレーラーヘッドを中心に、充填拠点と走行ルートをセットで検討します。",
-    image: "/assets/hydrogen-mobility/route-operation.jpg",
+    image:asset("/assets/hydrogen-mobility/route-operation.jpg"),
     alt: "寒冷地の道路を走行するFCVトラック",
   },
   {
     title: "建設・構内輸送",
     text: "工事現場、港湾、鉱山、構内物流など、決まった運行範囲で稼働する車両から導入効果を見極めます。",
-    image: "/assets/hydrogen-mobility/construction-truck.jpg",
+    image:asset("/assets/hydrogen-mobility/construction-truck.jpg"),
     alt: "建設現場で稼働する新エネルギー商用車",
   },
   {
     title: "フリート導入",
     text: "複数台導入では、補給順序、待機スペース、点検体制、ドライバー教育まで運用設計が重要になります。",
-    image: "/assets/hydrogen-mobility/fleet-lineup.jpg",
+    image:asset("/assets/hydrogen-mobility/fleet-lineup.jpg"),
     alt: "複数台並ぶ新エネルギー商用車",
   },
 ];
@@ -164,7 +165,7 @@ export default function HydrogenMobilityPage() {
           <Reveal direction="right" className={styles.heroVisualReveal}>
             <figure className={styles.heroVisual}>
               <Image
-                src="/assets/hydrogen-mobility/hero-fcv-truck.jpg"
+                src={asset("/assets/hydrogen-mobility/hero-fcv-truck.jpg")}
                 alt="FCVトラック"
                 fill
                 priority
@@ -205,7 +206,7 @@ export default function HydrogenMobilityPage() {
             <Reveal direction="left">
               <figure className={styles.stationPhoto}>
                 <Image
-                  src="/assets/hydrogen-mobility/station-night.jpg"
+                  src={asset("/assets/hydrogen-mobility/station-night.jpg")}
                   alt="水素ステーション"
                   fill
                   sizes="(max-width: 960px) calc(100vw - 40px), 46vw"
@@ -248,7 +249,7 @@ export default function HydrogenMobilityPage() {
             <div className={styles.vehicleSheet}>
               <figure className={styles.vehicleImageWrap}>
                 <Image
-                  src="/assets/hydrogen-mobility/truck-front.jpg"
+                  src={asset("/assets/hydrogen-mobility/truck-front.jpg")}
                   alt="FCVトラックの正面"
                   fill
                   sizes="(max-width: 960px) calc(100vw - 40px), 54vw"
@@ -287,7 +288,7 @@ export default function HydrogenMobilityPage() {
             <Reveal direction="left">
               <figure className={styles.systemFigure}>
                 <Image
-                  src="/assets/hydrogen-mobility/station-system.png"
+                  src={asset("/assets/hydrogen-mobility/station-system.png")}
                   alt="メタノール水素発生装置の構成図"
                   fill
                   sizes="(max-width: 960px) calc(100vw - 40px), 54vw"
@@ -375,7 +376,7 @@ export default function HydrogenMobilityPage() {
             <div className={styles.techVisuals}>
               <figure>
                 <Image
-                  src="/assets/hydrogen-mobility/fuelcell-stack.jpg"
+                  src={asset("/assets/hydrogen-mobility/fuelcell-stack.jpg")}
                   alt="燃料電池システム"
                   fill
                   sizes="(max-width: 960px) calc(100vw - 40px), 42vw"
@@ -384,7 +385,7 @@ export default function HydrogenMobilityPage() {
               </figure>
               <figure>
                 <Image
-                  src="/assets/hydrogen-mobility/truck-xray.jpg"
+                  src={asset("/assets/hydrogen-mobility/truck-xray.jpg")}
                   alt="FCVトラックのシステム配置"
                   fill
                   sizes="(max-width: 960px) calc(100vw - 40px), 42vw"

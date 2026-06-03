@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
+import { AssetBackgroundStyles } from "@/components/AssetBackgroundStyles";
 import { Footer } from "@/components/layout/Footer/Footer";
 import { Header } from "@/components/layout/Header/Header";
 import { asset } from "@/lib/asset";
@@ -21,6 +22,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="ja">
       <body>
+        <AssetBackgroundStyles />
         <Header />
         <main>{children}</main>
         <Footer />

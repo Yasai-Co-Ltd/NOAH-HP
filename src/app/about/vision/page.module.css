@@ -342,7 +342,7 @@
   color: var(--color-surface);
   background:
     linear-gradient(rgba(5, 39, 102, 0.9), rgba(5, 39, 102, 0.9)),
-    url("/assets/strengths-bg-integrated-energy.png") center / cover;
+    var(--bg-strengths-bg-integrated-energy) center / cover;
 }
 
 .nextInner {

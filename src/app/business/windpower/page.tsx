@@ -6,6 +6,7 @@ import { Reveal } from "@/components/animation/Reveal/Reveal";
 import { Button } from "@/components/ui/Button/Button";
 import { SectionLabel } from "@/components/ui/SectionLabel/SectionLabel";
 import styles from "./page.module.css";
+import { asset } from "@/lib/asset";
 
 export const metadata: Metadata = {
   title: "風力発電事業 | 諾亜建設株式会社",
@@ -60,25 +61,25 @@ const replacementScenes = [
   {
     title: "既設小型風車",
     text: "既存設備の稼働状況、地形、道路、系統条件を確認します。",
-    image: "/assets/windpower/02_existing_small_wind_turbines.jpg",
+    image:asset("/assets/windpower/02_existing_small_wind_turbines.jpg"),
     alt: "既設小型風車のある山間部",
   },
   {
     title: "リプレース後",
     text: "大型化による発電量向上と、配置の最適化を検討します。",
-    image: "/assets/windpower/03_replacement_wind_farm_image.jpg",
+    image:asset("/assets/windpower/03_replacement_wind_farm_image.jpg"),
     alt: "大型風車へリプレースした風力発電所のイメージ",
   },
   {
     title: "大型部材の搬入",
     text: "ブレード輸送、道路幅、曲線半径、仮設計画まで事前に整理します。",
-    image: "/assets/windpower/04_blade_transport_image.jpg",
+    image:asset("/assets/windpower/04_blade_transport_image.jpg"),
     alt: "大型ブレードを輸送するトラック",
   },
   {
     title: "変電・連系設備",
     text: "発電所内設備、変電設備、系統連系の条件をまとめます。",
-    image: "/assets/windpower/05_substation_facility_image.jpg",
+    image:asset("/assets/windpower/05_substation_facility_image.jpg"),
     alt: "風力発電所に併設される変電設備",
   },
 ];
@@ -133,7 +134,7 @@ export default function WindPowerPage() {
     <>
       <section className={styles.hero} aria-labelledby="wind-title">
         <Image
-          src="/assets/windpower/01_main_wind_farm_panorama.jpg"
+          src={asset("/assets/windpower/01_main_wind_farm_panorama.jpg")}
           alt=""
           fill
           priority
@@ -205,7 +206,7 @@ export default function WindPowerPage() {
           <Reveal direction="right" className={styles.projectVisualReveal}>
             <figure className={styles.projectVisual}>
               <Image
-                src="/assets/windpower/iwaya-project-board.png"
+                src={asset("/assets/windpower/iwaya-project-board.png")}
                 alt="青森県東通村 岩屋ウインドファームの計画概要"
                 fill
                 sizes="(max-width: 960px) calc(100vw - 40px), 56vw"
@@ -327,7 +328,7 @@ export default function WindPowerPage() {
 
       <section className={styles.cta} aria-labelledby="wind-cta-title">
         <Image
-          src="/assets/windpower/01_main_wind_farm_panorama.jpg"
+          src={asset("/assets/windpower/01_main_wind_farm_panorama.jpg")}
           alt=""
           fill
           sizes="100vw"

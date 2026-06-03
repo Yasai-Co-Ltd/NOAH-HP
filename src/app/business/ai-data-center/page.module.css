@@ -537,7 +537,7 @@
   content: "";
   background:
     linear-gradient(90deg, rgba(3, 16, 38, 0.88), rgba(5, 39, 102, 0.64)),
-    url("/assets/ai-data-center/hero-data-center.jpg") center / cover;
+    var(--bg-ai-data-center-hero-data-center) center / cover;
 }
 
 .ctaInner {

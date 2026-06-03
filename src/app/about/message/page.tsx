@@ -7,6 +7,7 @@ import { Reveal } from "@/components/animation/Reveal/Reveal";
 import { Button } from "@/components/ui/Button/Button";
 import { SectionLabel } from "@/components/ui/SectionLabel/SectionLabel";
 import styles from "./page.module.css";
+import { asset } from "@/lib/asset";
 
 export const metadata: Metadata = {
   title: "トップメッセージ | 諾亜建設株式会社",
@@ -77,7 +78,7 @@ export default function MessagePage() {
             <figure className={styles.portraitCard}>
               <div className={styles.portraitWrap}>
                 <Image
-                  src="/assets/about/message/representative-suzuki.jpg"
+                  src={asset("/assets/about/message/representative-suzuki.jpg")}
                   alt="諾亜建設株式会社 代表取締役社長 鈴木 仲娜"
                   fill
                   priority
@@ -105,7 +106,7 @@ export default function MessagePage() {
             </h2>
             <figure className={styles.calligraphy}>
               <Image
-                src="/assets/about/message/message-calligraphy.jpg"
+                src={asset("/assets/about/message/message-calligraphy.jpg")}
                 alt="企業理念を表した書"
                 fill
                 sizes="(max-width: 960px) calc(100vw - 40px), 28vw"

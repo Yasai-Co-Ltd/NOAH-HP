@@ -7,6 +7,7 @@ import { Reveal } from "@/components/animation/Reveal/Reveal";
 import { Button } from "@/components/ui/Button/Button";
 import { SectionLabel } from "@/components/ui/SectionLabel/SectionLabel";
 import styles from "./page.module.css";
+import { asset } from "@/lib/asset";
 
 export const metadata: Metadata = {
   title: "沿革 | 諾亜建設株式会社",
@@ -134,7 +135,7 @@ export default function HistoryPage() {
           <Reveal direction="right" className={styles.heroVisualReveal}>
             <figure className={styles.heroVisual}>
               <Image
-                src="/assets/about-collage.png"
+                src={asset("/assets/about-collage.png")}
                 alt="風力発電、水素モビリティ、EV、蓄電池設備を組み合わせたNOAHの事業イメージ"
                 fill
                 priority

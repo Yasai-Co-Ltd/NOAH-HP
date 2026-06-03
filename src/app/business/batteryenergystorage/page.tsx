@@ -6,6 +6,7 @@ import { Reveal } from "@/components/animation/Reveal/Reveal";
 import { Button } from "@/components/ui/Button/Button";
 import { SectionLabel } from "@/components/ui/SectionLabel/SectionLabel";
 import styles from "./page.module.css";
+import { asset } from "@/lib/asset";
 
 export const metadata: Metadata = {
   title: "蓄電池事業 | 諾亜建設株式会社",
@@ -49,14 +50,14 @@ const products = [
     number: "02",
     title: "100kW/215kWh 分散型蓄電",
     text: "工場・商業施設のピークカット、非常用電源、分散型スマートグリッドに対応します。",
-    image: "/assets/battery/bess-215kwh.png",
+    image:asset("/assets/battery/bess-215kwh.png"),
     alt: "100kW/215kWh産業商業用蓄電池",
   },
   {
     number: "03",
     title: "200kW/418kWh 液冷蓄電",
     text: "高効率な液冷方式で、需要側蓄電・マイクログリッド・BCP用途に展開します。",
-    image: "/assets/battery/bess-418kwh.png",
+    image:asset("/assets/battery/bess-418kwh.png"),
     alt: "200kW/418kWh液冷蓄電池",
   },
 ];
@@ -161,7 +162,7 @@ export default function BatteryEnergyStoragePage() {
           <Reveal direction="right" className={styles.heroVisualReveal}>
             <figure className={styles.heroVisual}>
               <Image
-                src="/assets/battery/utility-installation.png"
+                src={asset("/assets/battery/utility-installation.png")}
                 alt="屋外に設置された系統用蓄電池設備"
                 fill
                 priority
@@ -238,7 +239,7 @@ export default function BatteryEnergyStoragePage() {
             <Reveal direction="left" className={styles.mainProductReveal}>
               <article className={styles.mainProduct}>
                 <Image
-                  src="/assets/battery/bess-container-5mwh.png"
+                  src={asset("/assets/battery/bess-container-5mwh.png")}
                   alt="2MW/8MWh系統用蓄電池コンテナ"
                   fill
                   sizes="(max-width: 960px) calc(100vw - 40px), 52vw"
@@ -302,7 +303,7 @@ export default function BatteryEnergyStoragePage() {
           <Reveal direction="up" className={styles.techFigureReveal}>
             <figure className={styles.techFigure}>
               <Image
-                src="/assets/battery/core-technology-ai-diagram.png"
+                src={asset("/assets/battery/core-technology-ai-diagram.png")}
                 alt="6S+EDRの安全制御基盤を示す図"
                 width={1672}
                 height={941}
@@ -329,7 +330,7 @@ export default function BatteryEnergyStoragePage() {
             <div className={styles.packagePanel}>
               <div className={styles.packageVisual}>
                 <Image
-                  src="/assets/battery/bess-container-5mwh.png"
+                  src={asset("/assets/battery/bess-container-5mwh.png")}
                   alt="2MW/8MWh系統用蓄電池パッケージ"
                   fill
                   sizes="(max-width: 960px) calc(100vw - 40px), 50vw"
@@ -379,7 +380,7 @@ export default function BatteryEnergyStoragePage() {
             <Reveal direction="left">
               <figure className={styles.platformVisual}>
                 <Image
-                  src="/assets/battery/ems-cloud-platform-ai.png"
+                  src={asset("/assets/battery/ems-cloud-platform-ai.png")}
                   alt="EMSとクラウド運用を示す図"
                   fill
                   sizes="(max-width: 960px) calc(100vw - 40px), 44vw"
@@ -404,7 +405,7 @@ export default function BatteryEnergyStoragePage() {
 
       <section className={styles.proof} aria-labelledby="proof-title">
         <Image
-          src="/assets/battery/battery-system-lineup.jpg"
+          src={asset("/assets/battery/battery-system-lineup.jpg")}
           alt=""
           fill
           sizes="100vw"
@@ -460,7 +461,7 @@ export default function BatteryEnergyStoragePage() {
 
       <section className={styles.cta} aria-labelledby="battery-cta-title">
         <Image
-          src="/assets/battery/utility-installation.png"
+          src={asset("/assets/battery/utility-installation.png")}
           alt=""
           fill
           sizes="100vw"

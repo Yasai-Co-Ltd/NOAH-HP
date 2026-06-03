@@ -644,7 +644,7 @@
   content: "";
   background:
     linear-gradient(90deg, rgba(5, 39, 102, 0.84), rgba(5, 39, 102, 0.66)),
-    url("/assets/hydrogen-mobility/station-night.jpg") center / cover;
+    var(--bg-hydrogen-mobility-station-night) center / cover;
 }
 
 .ctaInner {

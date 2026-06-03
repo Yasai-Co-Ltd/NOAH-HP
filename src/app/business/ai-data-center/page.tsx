@@ -6,6 +6,7 @@ import { Reveal } from "@/components/animation/Reveal/Reveal";
 import { Button } from "@/components/ui/Button/Button";
 import { SectionLabel } from "@/components/ui/SectionLabel/SectionLabel";
 import styles from "./page.module.css";
+import { asset } from "@/lib/asset";
 
 export const metadata: Metadata = {
   title: "AIデータセンター事業 | 諾亜建設株式会社",
@@ -142,7 +143,7 @@ export default function AiDataCenterPage() {
           <Reveal direction="right" className={styles.heroVisualReveal}>
             <figure className={styles.heroVisual}>
               <Image
-                src="/assets/ai-data-center/hero-data-center.jpg"
+                src={asset("/assets/ai-data-center/hero-data-center.jpg")}
                 alt="再生可能エネルギーと連携するAIデータセンター"
                 fill
                 priority
@@ -183,7 +184,7 @@ export default function AiDataCenterPage() {
             <Reveal direction="left">
               <figure className={styles.modelFigure}>
                 <Image
-                  src="/assets/ai-data-center/energy-model.jpg"
+                  src={asset("/assets/ai-data-center/energy-model.jpg")}
                   alt="AIデータセンター向けエネルギー一体化モデル"
                   fill
                   sizes="(max-width: 960px) calc(100vw - 40px), 56vw"
@@ -228,7 +229,7 @@ export default function AiDataCenterPage() {
           <Reveal direction="right">
             <figure className={styles.greenFigure}>
               <Image
-                src="/assets/ai-data-center/green-model.jpg"
+                src={asset("/assets/ai-data-center/green-model.jpg")}
                 alt="グリーンでスマートなAI計算インフラ構想"
                 fill
                 sizes="(max-width: 960px) calc(100vw - 40px), 52vw"
@@ -256,7 +257,7 @@ export default function AiDataCenterPage() {
           <Reveal direction="left">
             <figure className={styles.emsVisual}>
               <Image
-                src="/assets/ai-data-center/ems-dashboard.png"
+                src={asset("/assets/ai-data-center/ems-dashboard.png")}
                 alt="EMS管理画面"
                 fill
                 sizes="(max-width: 960px) calc(100vw - 40px), 54vw"
@@ -317,7 +318,7 @@ export default function AiDataCenterPage() {
           <Reveal direction="right">
             <figure className={styles.controlVisual}>
               <Image
-                src="/assets/ai-data-center/ai-control-ai-ja.png"
+                src={asset("/assets/ai-data-center/ai-control-ai-ja.png")}
                 alt="AI制御・データ収集・安全予測の概念図"
                 fill
                 sizes="(max-width: 960px) calc(100vw - 40px), 44vw"
@@ -343,7 +344,7 @@ export default function AiDataCenterPage() {
             <Reveal direction="left">
               <figure className={styles.conceptImageWrap}>
                 <Image
-                  src="/assets/ai-data-center/renewable-ems.jpg"
+                  src={asset("/assets/ai-data-center/renewable-ems.jpg")}
                   alt="再エネ統合スマート管理システム"
                   fill
                   sizes="(max-width: 960px) calc(100vw - 40px), 54vw"

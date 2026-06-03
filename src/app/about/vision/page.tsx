@@ -7,6 +7,7 @@ import { Reveal } from "@/components/animation/Reveal/Reveal";
 import { Button } from "@/components/ui/Button/Button";
 import { SectionLabel } from "@/components/ui/SectionLabel/SectionLabel";
 import styles from "./page.module.css";
+import { asset } from "@/lib/asset";
 
 export const metadata: Metadata = {
   title: "企業理念・ビジョン | 諾亜建設株式会社",
@@ -97,7 +98,7 @@ export default function VisionPage() {
           <Reveal direction="right" className={styles.heroVisualReveal}>
             <figure className={styles.heroVisual}>
               <Image
-                src="/assets/about/vision/vision-earth.jpg"
+                src={asset("/assets/about/vision/vision-earth.jpg")}
                 alt="手の上の若木と地球"
                 fill
                 priority

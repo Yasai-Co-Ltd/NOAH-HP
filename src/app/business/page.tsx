@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/Button/Button";
 import { SectionLabel } from "@/components/ui/SectionLabel/SectionLabel";
 import { content } from "@/lib/content";
 import styles from "./page.module.css";
+import { asset } from "@/lib/asset";
 
 export const metadata: Metadata = {
   title: "事業紹介 | 諾亜建設株式会社",
@@ -21,7 +22,7 @@ const FEATURE = {
   description:
     "飛行船型の空中風力発電システムを、離島・災害拠点・既存風力との併設へ。NOAHらしい新しい発電インフラとして訴求します。",
   image: {
-    src: "/assets/airborne-power-noah.png",
+    src:asset("/assets/airborne-power-noah.png"),
     alt: "NOAHロゴが入った飛行船型の空中発電所",
   },
 };
@@ -37,7 +38,7 @@ export default async function BusinessPage() {
     <>
       <section className={styles.hero} aria-labelledby="business-page-title">
         <Image
-          src="/assets/strengths-bg-integrated-energy.png"
+          src={asset("/assets/strengths-bg-integrated-energy.png")}
           alt=""
           fill
           priority
@@ -131,7 +132,7 @@ export default async function BusinessPage() {
                   <Link href={service.href} className={styles.serviceLink}>
                     <div className={styles.serviceImageWrap}>
                       <Image
-                        src={service.image.src}
+                        src={asset(service.image.src)}
                         alt={service.image.alt}
                         width={900}
                         height={500}

@@ -6,6 +6,7 @@ import { Reveal } from "@/components/animation/Reveal/Reveal";
 import { Button } from "@/components/ui/Button/Button";
 import { SectionLabel } from "@/components/ui/SectionLabel/SectionLabel";
 import styles from "./page.module.css";
+import { asset } from "@/lib/asset";
 
 export const metadata: Metadata = {
   title: "走行式集塵ホッパー事業 | 諾亜建設株式会社",
@@ -145,7 +146,7 @@ export default function HopperPage() {
           <Reveal direction="right" className={styles.heroVisualReveal}>
             <figure className={styles.heroVisual}>
               <Image
-                src="/assets/hopper/hopper-render-45.png"
+                src={asset("/assets/hopper/hopper-render-45.png")}
                 alt="走行式集塵ホッパーの3D図面"
                 fill
                 priority
@@ -186,7 +187,7 @@ export default function HopperPage() {
             <Reveal direction="left">
               <figure className={styles.sitePhoto}>
                 <Image
-                  src="/assets/hopper/hopper-site-front.jpg"
+                  src={asset("/assets/hopper/hopper-site-front.jpg")}
                   alt="工場内で組み立てられた走行式集塵ホッパー"
                   fill
                   sizes="(max-width: 960px) calc(100vw - 40px), 48vw"
@@ -232,7 +233,7 @@ export default function HopperPage() {
           <Reveal direction="right">
             <figure className={styles.blueprint}>
               <Image
-                src="/assets/hopper/hopper-top.png"
+                src={asset("/assets/hopper/hopper-top.png")}
                 alt="走行式集塵ホッパーの上面図"
                 fill
                 sizes="(max-width: 960px) calc(100vw - 40px), 44vw"
@@ -260,7 +261,7 @@ export default function HopperPage() {
           <Reveal direction="left">
             <figure className={styles.dustVisual}>
               <Image
-                src="/assets/hopper/hopper-site-side.jpg"
+                src={asset("/assets/hopper/hopper-site-side.jpg")}
                 alt="側面から見た走行式集塵ホッパー"
                 fill
                 sizes="(max-width: 960px) calc(100vw - 40px), 52vw"
@@ -309,7 +310,7 @@ export default function HopperPage() {
             <Reveal direction="left">
               <figure className={styles.modelVisual}>
                 <Image
-                  src="/assets/hopper/hopper-sea-side.png"
+                  src={asset("/assets/hopper/hopper-sea-side.png")}
                   alt="走行式集塵ホッパーの海側図面"
                   fill
                   sizes="(max-width: 960px) calc(100vw - 40px), 44vw"

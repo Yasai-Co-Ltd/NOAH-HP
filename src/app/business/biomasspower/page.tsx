@@ -6,6 +6,7 @@ import { Reveal } from "@/components/animation/Reveal/Reveal";
 import { Button } from "@/components/ui/Button/Button";
 import { SectionLabel } from "@/components/ui/SectionLabel/SectionLabel";
 import styles from "./page.module.css";
+import { asset } from "@/lib/asset";
 
 export const metadata: Metadata = {
   title: "バイオマス | 諾亜建設株式会社",
@@ -23,7 +24,7 @@ const fuelItems = [
   {
     name: "PKS",
     subtitle: "Palm Kernel Shell",
-    image: "/assets/biomasspower/pks-yard.png",
+    image:asset("/assets/biomasspower/pks-yard.png"),
     alt: "PKSの原料ヤード",
     description:
       "パーム油の生産過程で発生するパーム椰子殻。水分が少なく発熱量が高いため、石炭代替・混焼燃料として注目されています。",
@@ -32,7 +33,7 @@ const fuelItems = [
   {
     name: "炭化PKS",
     subtitle: "Carbonized PKS",
-    image: "/assets/biomasspower/pks-close.png",
+    image:asset("/assets/biomasspower/pks-close.png"),
     alt: "炭化PKSの燃料サンプル",
     description:
       "低温炭化により、エネルギー密度、ハンドリング性、粉砕性を高めたPKS。既存燃料との混焼率向上を狙えます。",
@@ -41,7 +42,7 @@ const fuelItems = [
   {
     name: "木質ペレット",
     subtitle: "Wood Pellet",
-    image: "/assets/biomasspower/wood-pellet-sample.jpg",
+    image:asset("/assets/biomasspower/wood-pellet-sample.jpg"),
     alt: "木質ペレットのサンプル",
     description:
       "木くずなどを直径6〜10mm程度に成形した燃料。化石燃料の代替として、欧州を中心に需要が拡大しています。",
@@ -146,7 +147,7 @@ export default function BiomassPowerPage() {
           <Reveal direction="right" className={styles.heroVisualReveal}>
             <figure className={styles.heroVisual}>
               <Image
-                src="/assets/biomasspower/biomass-plant-hero.png"
+                src={asset("/assets/biomasspower/biomass-plant-hero.png")}
                 alt="バイオマス発電設備"
                 fill
                 priority
@@ -257,7 +258,7 @@ export default function BiomassPowerPage() {
           <Reveal direction="right" className={styles.supplyVisualReveal}>
             <figure className={styles.supplyVisual}>
               <Image
-                src="/assets/biomasspower/fuel-storage.jpg"
+                src={asset("/assets/biomasspower/fuel-storage.jpg")}
                 alt="屋内に保管されたバイオマス燃料"
                 fill
                 sizes="(max-width: 960px) calc(100vw - 40px), 46vw"
@@ -285,7 +286,7 @@ export default function BiomassPowerPage() {
           <Reveal direction="left">
             <figure className={styles.dustVisual}>
               <Image
-                src="/assets/biomasspower/dust-collection-hopper.png"
+                src={asset("/assets/biomasspower/dust-collection-hopper.png")}
                 alt="走行式集塵ホッパー"
                 fill
                 sizes="(max-width: 960px) calc(100vw - 40px), 52vw"

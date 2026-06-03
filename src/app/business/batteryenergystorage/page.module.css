@@ -30,7 +30,7 @@
   height: 660px;
   pointer-events: none;
   content: "";
-  background: url("/assets/noah_logo-mark.png") center / contain no-repeat;
+  background: var(--bg-noah_logo-mark) center / contain no-repeat;
   opacity: 0.045;
 }
 
@@ -267,7 +267,7 @@
   height: 170px;
   pointer-events: none;
   content: "";
-  background: url("/assets/noah_logo-mark.png") center / contain no-repeat;
+  background: var(--bg-noah_logo-mark) center / contain no-repeat;
   opacity: 0.055;
 }
 

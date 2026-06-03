@@ -475,7 +475,7 @@
   color: var(--color-surface);
   background:
     linear-gradient(rgba(5, 39, 102, 0.78), rgba(5, 39, 102, 0.82)),
-    url("/assets/hero-wind-hq.jpg") center / cover;
+    var(--bg-hero-wind-hq) center / cover;
 }
 
 .nextInner {
