@@ -19,7 +19,7 @@ export const PAGES = {
 
   // 事業紹介
   "/business": true,
-  "/business/batteryenergystorage": false,
+  "/business/batteryenergystorage": true,
   "/business/windpower": false,
   "/business/biomasspower": false,
   "/business/hopper": false,

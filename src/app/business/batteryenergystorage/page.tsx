@@ -11,14 +11,8 @@ import { asset } from "@/lib/asset";
 export const metadata: Metadata = {
   title: "蓄電池事業 | 諾亜建設株式会社",
   description:
-    "2MW/8MWhの系統用蓄電池を中心に、設計・調達・施工、EMSによる遠隔監視、6S+EDR制御基盤、運用保守まで一貫して支援します。",
+    "系統用、産業・商業用、太陽光蓄電充電、マイクログリッド向けの蓄電池を、設計・調達・施工、EMSによる遠隔監視、運用保守まで一貫して支援します。",
 };
-
-const heroMetrics = [
-  { value: "2MW/8MWh", label: "系統用蓄電池パッケージ" },
-  { value: "6S+EDR", label: "安全・制御・記録を統合" },
-  { value: "EMS/HCS", label: "遠隔監視・高速制御" },
-];
 
 const overviewSteps = [
   {
@@ -38,35 +32,222 @@ const overviewSteps = [
   },
   {
     number: "04",
-    title: "運用で収益化する",
-    text: "アグリゲーター運営と遠隔O&Mにより、電力市場での活用まで支援します。",
+    title: "市場活用につなげる",
+    text: "アグリゲーター運営と遠隔O&Mを組み合わせ、各電力市場での活用を支援します。",
   },
 ];
 
-const marketBadges = ["卸電力市場", "容量市場", "需給調整市場", "一次調整"];
+const marketBadges = ["卸電力市場", "容量市場", "需給調整市場", "一次調整力対応"];
 
-const products = [
+const solutionSeries = [
+  {
+    number: "01",
+    category: "DEMAND SERIES",
+    title: "デマンドシリーズ",
+    text: "工場・商業施設のピークカット、非常用電源、需要側のエネルギー管理に対応します。",
+    products: [
+      {
+        model: "100kW/215kWh・125kW/261kWh",
+        title: "空冷／液冷蓄電",
+        image: asset("/assets/battery/bess-215kwh.png"),
+        alt: "100kW／215kWh産業・商業用蓄電池",
+        specs: ["需要側蓄電", "ピークカット・BCP", "空冷／液冷方式"],
+      },
+      {
+        model: "200kW/418kWh",
+        title: "液冷蓄電",
+        image: asset("/assets/battery/bess-418kwh.png"),
+        alt: "200kW／418kWh液冷式蓄電池",
+        specs: ["液冷方式", "産業・商業施設向け", "分散型電源に対応"],
+      },
+      {
+        model: "CLOUD PLATFORM",
+        title: "分散型電源統合クラウドプラットフォーム・アシスト",
+        image: asset("/assets/battery/ems-cloud-platform-ai.png"),
+        alt: "分散型電源統合クラウドプラットフォーム",
+        specs: ["遠隔監視", "運転データ管理", "複数設備を統合"],
+      },
+    ],
+  },
   {
     number: "02",
-    title: "100kW/215kWh 分散型蓄電",
-    text: "工場・商業施設のピークカット、非常用電源、分散型スマートグリッドに対応します。",
-    image:asset("/assets/battery/bess-215kwh.png"),
-    alt: "100kW/215kWh産業商業用蓄電池",
+    category: "SOLAR / CHARGING SERIES",
+    title: "太陽光蓄電充電シリーズ",
+    text: "太陽光発電、蓄電池、充電設備を組み合わせ、発電電力を施設内で有効活用します。",
+    products: [
+      {
+        model: "100kW/215kWh",
+        title: "太陽光蓄電一体型装置",
+        image: asset("/assets/battery/pdf-solar-storage-100-215.png"),
+        alt: "100kW／215kWh太陽光蓄電一体型装置",
+        specs: ["太陽光発電と蓄電を統合", "一体型キャビネット", "自家消費を支援"],
+      },
+      {
+        model: "209kWh/180kW",
+        title: "蓄電充電器",
+        image: asset("/assets/battery/pdf-storage-charger-209-180.png"),
+        alt: "蓄電充電設備",
+        specs: ["蓄電・充電を一体化", "急速充電用途", "液冷システム"],
+      },
+      {
+        model: "4×240kW",
+        title: "太陽光蓄電充電装置",
+        image: asset("/assets/battery/pdf-solar-charging-4x240.png"),
+        alt: "4台構成の太陽光蓄電充電装置",
+        specs: ["複数充電器を構成", "太陽光発電と連携", "大規模充電拠点向け"],
+      },
+      {
+        model: "iEFC100",
+        title: "蓄電充電一体機",
+        image: asset("/assets/battery/product-iefc100.png"),
+        alt: "iEFC100蓄電充電一体機",
+        specs: ["蓄電容量186kWh", "入力30〜90kW・出力180kW", "液冷・IP54"],
+      },
+    ],
   },
   {
     number: "03",
-    title: "200kW/418kWh 液冷蓄電",
-    text: "高効率な液冷方式で、需要側蓄電・マイクログリッド・BCP用途に展開します。",
-    image:asset("/assets/battery/bess-418kwh.png"),
-    alt: "200kW/418kWh液冷蓄電池",
+    category: "MICROGRID SERIES",
+    title: "マイクログリッド蓄電シリーズ",
+    text: "分散型電源を監視・制御し、施設や地域単位での安定した電力運用を支えます。",
+    products: [
+      {
+        model: "100kW/215kWh",
+        title: "（太陽光）蓄電一体型キャビネット",
+        image: asset("/assets/battery/pdf-microgrid-100-215.png"),
+        alt: "100kW／215kWh太陽光蓄電一体型キャビネット",
+        specs: ["太陽光・蓄電を統合", "分散型電源として運用", "施設・地域単位に対応"],
+      },
+      {
+        model: "OPERATION PLATFORM",
+        title: "監視・運用管理プラットフォーム",
+        image: asset("/assets/battery/ems-cloud-platform-ai.png"),
+        alt: "マイクログリッド監視・運用管理プラットフォーム",
+        specs: ["発電・蓄電設備を監視", "運転計画を管理", "遠隔O&Mを支援"],
+      },
+    ],
+  },
+  {
+    number: "04",
+    category: "UTILITY SCALE SERIES",
+    title: "系統用蓄電池",
+    text: "中規模から大規模まで、ESS、PCS、昇圧設備、EMSを組み合わせ、系統連系案件を構成します。",
+    products: [
+      {
+        model: "2MW/8MWh",
+        title: "コンテナ型系統用蓄電池",
+        image: asset("/assets/battery/ess-4178kwh-official.png"),
+        alt: "4.178MWh液冷式コンテナ蓄電池",
+        specs: ["2,089kWh×4基／4,178kWh×2基", "液冷・IP55", "EMS・O&Mと連携"],
+      },
+      {
+        model: "CONTAINER ESS",
+        title: "コンテナ型蓄電システム",
+        image: asset("/assets/battery/product-container-ess.png"),
+        alt: "コンテナ型蓄電システム",
+        specs: ["200〜5,000kW", "1,000〜5,000kWh", "20ft／40ft・IP54"],
+      },
+      {
+        model: "PWS1-1725KTL-H-EX-XMY-O",
+        title: "蓄電池用パワーコンディショナー",
+        image: asset("/assets/battery/product-pws1-1725.png"),
+        alt: "PWS1-1725KTL-H-EX-XMY-O蓄電池用パワーコンディショナー",
+        specs: ["215kW〜1.72MW", "690Vac直接接続", "応答時間20ms未満・IP54"],
+      },
+      {
+        model: "PWX1-1575KTL-H",
+        title: "蓄電池用パワーコンディショナー",
+        image: asset("/assets/battery/product-pwx1-1575.png"),
+        alt: "PWX1-1575KTL-H蓄電池用パワーコンディショナー",
+        specs: ["1,500V対応", "IP65・C5耐環境設計", "グリッドフォーミング対応"],
+      },
+      {
+        model: "SES2H-5000-MV-EX",
+        title: "変圧器・PCS一体型コンテナ",
+        image: asset("/assets/battery/product-ses2h-5000.png"),
+        alt: "SES2H-5000-MV-EX変圧器・PCS一体型コンテナ",
+        specs: ["5MWh・1,500V対応", "変圧器とPCSを一体化", "応答時間20ms未満"],
+      },
+    ],
+  },
+  {
+    number: "05",
+    category: "6S+EDR CORE COMPONENTS",
+    title: "コアコンポーネント・制御システム",
+    text: "蓄電池本体とPCS、EMS、高速制御、故障記録を統合し、安全性・応答性・運用性を高めます。",
+    products: [
+      {
+        model: "100kW PCS",
+        title: "蓄電PCS",
+        alt: "モジュール式蓄電PCS",
+        specs: ["モジュール構成", "系統連系・変換制御", "用途に応じて構成"],
+      },
+      {
+        model: "iPCS 125kW / 215kW",
+        title: "モジュール式蓄電PCS",
+        image: asset("/assets/battery/product-ipcs-modular.png"),
+        alt: "125kW／215kWモジュール式蓄電PCS",
+        specs: ["AC400V／AC690V", "DC1,000V／1,500V", "RS485・CAN通信"],
+      },
+      {
+        model: "EMS",
+        title: "監視・運用エネルギー管理システム",
+        image: asset("/assets/battery/ems-cloud-platform-ai.png"),
+        alt: "監視・運用エネルギー管理システム",
+        specs: ["充放電計画", "遠隔監視", "アグリゲーター運用と連携"],
+      },
+      {
+        model: "HCS",
+        title: "高速制御システム",
+        specs: ["応答速度0.05秒", "一次調整力対応", "リアルタイム制御"],
+      },
+      {
+        model: "EDR",
+        title: "故障記録システム／ブラックボックス",
+        specs: ["事故記録", "故障分析・追跡", "運用改善に活用"],
+      },
+      {
+        model: "SMART GRID CONTROL",
+        title: "分散スマートグリッド運用制御システム",
+        specs: ["分散電源を統合", "運用計画を制御", "複数拠点に対応"],
+      },
+    ],
   },
 ];
 
-const specs = [
-  { value: "2089/4178kWh", label: "ESS単機容量" },
+const packageComponents = [
+  { value: "2,089kWh×4", label: "ESS100-1000/2090-LC構成" },
+  { value: "4,178kWh×2", label: "ESS100-2000/4180-LC構成" },
   { value: "995kW×2", label: "PCS定格出力" },
-  { value: "IP55", label: "屋外設置対応" },
-  { value: "-25〜45℃", label: "液冷・動作温度範囲" },
+  { value: "2,000kVA×1", label: "昇圧変圧器" },
+];
+
+const modelSpecs = [
+  {
+    model: "ESS100-1000/2090-LC",
+    energy: "2,089kWh",
+    power: "1,000kW",
+    connection: "10P416S",
+    weight: "30t以下",
+  },
+  {
+    model: "ESS100-2000/4180-LC",
+    energy: "4,178kWh",
+    power: "2,000kW",
+    connection: "5P416S",
+    weight: "40t以下",
+  },
+];
+
+const commonSpecs = [
+  "リン酸鉄リチウムイオン電池",
+  "定格電圧 DC1,331.2V",
+  "電圧範囲 DC1,164.8〜1,497.6V",
+  "液冷方式（50%エチレングリコール水溶液）",
+  "動作温度 -25〜45℃",
+  "保護等級 IP55",
+  "外形 6,058×2,438×2,896mm（L×W×H）",
+  "PCS：CAN／Modbus、EMS：IEC104／IEC61850／Modbus",
 ];
 
 const platformItems = [
@@ -92,15 +273,15 @@ const platformItems = [
   },
   {
     title: "Aggregator",
-    text: "電力市場・需給調整市場での運用収益化へつなげます。",
+    text: "卸電力・容量・需給調整市場での活用を支援します。",
   },
 ];
 
 const proofItems = [
-  { value: "20年以上", label: "電力産業の研究開発・エンジニアリング経験" },
-  { value: "40件以上", label: "製品・コアシステムの特許、ソフトウェア著作権" },
-  { value: "50MW / 200MWh", label: "魯能海西州 蓄電発電所など大規模実績" },
-  { value: "2GWh", label: "蓄電池調達に関する戦略的パートナー体制" },
+  { value: "20年以上", label: "連携する技術パートナーを含む電力分野の研究開発・エンジニアリング経験" },
+  { value: "40件以上", label: "技術パートナーが保有する製品・コアシステム関連の知的財産" },
+  { value: "50MW / 200MWh", label: "技術パートナーによる大規模蓄電発電所の導入実績" },
+  { value: "2GWh", label: "NOAHによる蓄電池調達の戦略的パートナー体制" },
 ];
 
 const processSteps = [
@@ -122,7 +303,7 @@ const processSteps = [
   {
     number: "04",
     title: "運用・保守",
-    text: "遠隔監視、予兆保全、一次調整、市場運用まで継続的に支援します。",
+    text: "遠隔監視、予兆保全、一次調整力対応、市場活用まで継続的に支援します。",
   },
 ];
 
@@ -146,8 +327,8 @@ export default function BatteryEnergyStoragePage() {
               収益基盤へ。
             </h1>
             <p className={styles.heroLead}>
-              2MW/8MWhの系統用蓄電池を中心に、設計・調達・施工、EMSによる遠隔監視、一次調整・需給調整市場での運用まで。
-              NOAHは蓄電池を「置く設備」ではなく、地域電力を支える運用資産として構築します。
+              2MW/8MWhの系統用蓄電池から、産業・商業用、太陽光蓄電充電、マイクログリッドまで。
+              NOAHは設備の選定・設計・調達・施工、EMSによる遠隔監視、運用保守を一貫して支援します。
             </p>
             <div className={styles.heroActions}>
               <Button href="/contact" variant="white">
@@ -162,21 +343,13 @@ export default function BatteryEnergyStoragePage() {
           <Reveal direction="right" className={styles.heroVisualReveal}>
             <figure className={styles.heroVisual}>
               <Image
-                src={asset("/assets/battery/utility-installation.png")}
-                alt="屋外に設置された系統用蓄電池設備"
+                src={asset("/assets/battery/battery-product-lineup-hero-ai.png")}
+                alt="蓄電池、PCS、充電設備、監視制御システムを含む製品ラインアップ"
                 fill
                 priority
                 sizes="(max-width: 900px) calc(100vw - 40px), 54vw"
                 className={styles.heroImage}
               />
-              <div className={styles.metricStrip} aria-label="蓄電池事業の主要指標">
-                {heroMetrics.map((metric) => (
-                  <div key={metric.value} className={styles.metric}>
-                    <b>{metric.value}</b>
-                    <span>{metric.label}</span>
-                  </div>
-                ))}
-              </div>
             </figure>
           </Reveal>
         </div>
@@ -193,7 +366,7 @@ export default function BatteryEnergyStoragePage() {
             </h2>
             <p className={styles.lead}>
               系統用蓄電池は、再生可能エネルギーの余剰電力を蓄え、必要なタイミングで放電するだけではありません。
-              EMS、PCS、HCS、アグリゲーター運営まで連携することで、需給調整・周波数制御・市場活用を同時に支えます。
+              EMS、PCS、HCS、アグリゲーター運営を連携させ、需給調整、周波数制御、各電力市場での活用を支えます。
             </p>
             <div className={styles.marketBadges} aria-label="対応市場">
               {marketBadges.map((badge) => (
@@ -229,60 +402,72 @@ export default function BatteryEnergyStoragePage() {
                 </h2>
               </div>
               <p className={styles.sectionLead}>
-                系統用の2MW/8MWhパッケージを主力に、産業・商業用の分散型蓄電、太陽光＋蓄電＋充電まで展開。
-                製品単体ではなく、PCS・EMS・監視基盤を含むシステムとして構成します。
+                デマンド、太陽光蓄電充電、マイクログリッド、系統用蓄電池まで。
+                各シリーズに必要なPCS、EMS、監視・制御システムを組み合わせ、用途に合った構成を提案します。
               </p>
             </div>
           </Reveal>
 
-          <div className={styles.productStage}>
-            <Reveal direction="left" className={styles.mainProductReveal}>
-              <article className={styles.mainProduct}>
-                <Image
-                  src={asset("/assets/battery/bess-container-5mwh.png")}
-                  alt="2MW/8MWh系統用蓄電池コンテナ"
-                  fill
-                  sizes="(max-width: 960px) calc(100vw - 40px), 52vw"
-                  className={styles.mainProductImage}
-                />
-                <div className={styles.mainProductText}>
-                  <b>01</b>
-                  <h3>2MW/8MWh 系統用蓄電池</h3>
-                  <p>
-                    2090kWh×4基または4180kWh×2基を基本構成とし、発電・配電・需要の各領域をカバーします。
-                  </p>
-                </div>
-              </article>
-            </Reveal>
+          <div className={styles.solutionList}>
+            {solutionSeries.map((series, index) => (
+              <Reveal
+                key={series.number}
+                direction="up"
+                delay={(index % 2) * 70}
+                className={styles.solutionReveal}
+              >
+                <article className={styles.solutionGroup}>
+                  <header className={styles.solutionHeader}>
+                    <div className={styles.solutionNumber}>{series.number}</div>
+                    <div>
+                      <p>{series.category}</p>
+                      <h3>{series.title}</h3>
+                    </div>
+                    <span>{series.text}</span>
+                  </header>
 
-            <div className={styles.productCards}>
-              {products.map((product, index) => (
-                <Reveal
-                  key={product.number}
-                  direction="right"
-                  delay={index * 90}
-                  className={styles.productCardReveal}
-                >
-                  <article className={styles.sideProduct}>
-                    <div className={styles.sideVisual}>
-                      <Image
-                        src={product.image}
-                        alt={product.alt}
-                        width={520}
-                        height={420}
-                        className={styles.sideImage}
-                      />
-                    </div>
-                    <div className={styles.sideBody}>
-                      <b>{product.number}</b>
-                      <h3>{product.title}</h3>
-                      <p>{product.text}</p>
-                    </div>
-                  </article>
-                </Reveal>
-              ))}
-            </div>
+                  <div
+                    className={`${styles.solutionProducts} ${
+                      series.products.length <= 2 ? styles.solutionProductsCompact : ""
+                    }`}
+                  >
+                    {series.products.map((product) => (
+                      <article key={`${series.number}-${product.model}`} className={styles.solutionProduct}>
+                        {product.image ? (
+                          <div className={styles.solutionVisual}>
+                            <Image
+                              src={product.image}
+                              alt={product.alt}
+                              fill
+                              sizes="(max-width: 760px) calc(100vw - 72px), (max-width: 1180px) 42vw, 22vw"
+                              className={styles.solutionImage}
+                            />
+                          </div>
+                        ) : (
+                          <div className={styles.systemMark} aria-hidden="true">
+                            <span>{product.model}</span>
+                          </div>
+                        )}
+                        <div className={styles.solutionBody}>
+                          <p>{product.model}</p>
+                          <h4>{product.title}</h4>
+                          <ul>
+                            {product.specs.map((spec) => (
+                              <li key={spec}>{spec}</li>
+                            ))}
+                          </ul>
+                        </div>
+                      </article>
+                    ))}
+                  </div>
+                </article>
+              </Reveal>
+            ))}
           </div>
+
+          <p className={styles.sourceNote}>
+            ※容量・構成・仕様は、接続条件や用途に応じて個別に設計します。
+          </p>
         </div>
       </section>
 
@@ -328,23 +513,24 @@ export default function BatteryEnergyStoragePage() {
 
           <Reveal direction="up" className={styles.packageReveal}>
             <div className={styles.packagePanel}>
-              <div className={styles.packageVisual}>
+              <figure className={styles.packageVisual}>
                 <Image
-                  src={asset("/assets/battery/bess-container-5mwh.png")}
-                  alt="2MW/8MWh系統用蓄電池パッケージ"
+                  src={asset("/assets/battery/ess-4178kwh-official.png")}
+                  alt="ESS100-2000/4180-LC 4.178MWh液冷式コンテナ蓄電池"
                   fill
                   sizes="(max-width: 960px) calc(100vw - 40px), 50vw"
                   className={styles.packageImage}
                 />
-              </div>
+                <figcaption>ESS100-2000/4180-LC 製品外観</figcaption>
+              </figure>
               <div className={styles.specPanel}>
-                <h3>特高圧・大規模案件に合わせて、構成を最適化。</h3>
+                <h3>2種類のESSから、2MW/8MWhの構成を選択。</h3>
                 <p>
-                  ESS100-1000/2090-LC、ESS100-2000/4180-LCを中心に、PCS、昇圧トランス、EMS、
-                  監視・運用保守プラットフォームまで組み合わせて設計します。
+                  2,089kWh機を4基、または4,178kWh機を2基配置し、995kWのPCSを2基、2,000kVAの昇圧変圧器、
+                  EMS、監視・運用保守プラットフォームを組み合わせます。
                 </p>
                 <div className={styles.specGrid}>
-                  {specs.map((spec) => (
+                  {packageComponents.map((spec) => (
                     <div key={spec.value} className={styles.spec}>
                       <b>{spec.value}</b>
                       <span>{spec.label}</span>
@@ -352,6 +538,46 @@ export default function BatteryEnergyStoragePage() {
                   ))}
                 </div>
               </div>
+            </div>
+          </Reveal>
+
+          <div className={styles.modelGrid}>
+            {modelSpecs.map((model, index) => (
+              <Reveal key={model.model} direction="up" delay={index * 80}>
+                <article className={styles.modelCard}>
+                  <p>MODEL {String(index + 1).padStart(2, "0")}</p>
+                  <h3>{model.model}</h3>
+                  <dl>
+                    <div>
+                      <dt>定格エネルギー</dt>
+                      <dd>{model.energy}</dd>
+                    </div>
+                    <div>
+                      <dt>定格充放電電力</dt>
+                      <dd>{model.power}</dd>
+                    </div>
+                    <div>
+                      <dt>直並列構成</dt>
+                      <dd>{model.connection}</dd>
+                    </div>
+                    <div>
+                      <dt>重量</dt>
+                      <dd>{model.weight}</dd>
+                    </div>
+                  </dl>
+                </article>
+              </Reveal>
+            ))}
+          </div>
+
+          <Reveal direction="up">
+            <div className={styles.commonSpecs}>
+              <h3>共通仕様</h3>
+              <ul>
+                {commonSpecs.map((spec) => (
+                  <li key={spec}>{spec}</li>
+                ))}
+              </ul>
             </div>
           </Reveal>
         </div>
@@ -413,9 +639,11 @@ export default function BatteryEnergyStoragePage() {
         />
         <div className={`container ${styles.proofInner}`}>
           <Reveal direction="left">
-            <SectionLabel eyebrow="CREDIBILITY" subtitle="技術力・実績" />
+            <SectionLabel eyebrow="TECHNOLOGY PARTNERS" subtitle="技術基盤・実績" />
             <h2 id="proof-title" className={styles.heading}>
-              技術標準と導入実績を、
+              パートナーの技術基盤と
+              <br />
+              NOAHの調達力を、
               <br />
               日本市場へ。
             </h2>
@@ -479,9 +707,9 @@ export default function BatteryEnergyStoragePage() {
               <Button href="/contact" variant="white">
                 お問い合わせ
               </Button>
-              <Button href="/contact" variant="outline" className={styles.darkButton}>
+              {/* <Button href="/contact" variant="cyan">
                 資料ダウンロード
-              </Button>
+              </Button> */}
             </div>
           </Reveal>
         </div>
