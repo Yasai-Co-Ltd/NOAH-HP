@@ -58,14 +58,12 @@ export default function MessagePage() {
               <span>トップメッセージ</span>
             </p>
             <h1 id="message-title" className={styles.heroTitle}>
-              信頼を起点に、
+              人と地球に優しい
               <br />
-              脱炭素の未来を形にする。
+              持続可能な未来を
+              <br />
+              創造する。
             </h1>
-            <p className={styles.heroLead}>
-              創業時から大切にしてきた想いを、現在の再生可能エネルギー事業へ。
-              お客様と社会に向けた、諾亜建設 代表取締役社長からのメッセージです。
-            </p>
             <div className={styles.heroActions}>
               <Button href="#message-body">メッセージを読む</Button>
               <Button href="/about" variant="outline">
@@ -127,39 +125,6 @@ export default function MessagePage() {
               </div>
             </article>
           </Reveal>
-        </div>
-      </section>
-
-      <section className={styles.commitment} aria-labelledby="commitment-title">
-        <div className="container">
-          <Reveal direction="up">
-            <div className={styles.sectionHeader}>
-              <div>
-                <SectionLabel eyebrow="COMMITMENT" subtitle="メッセージに込めた姿勢" />
-                <h2 id="commitment-title" className={styles.heading}>
-                  事業の前に、
-                  <br />
-                  約束がある。
-                </h2>
-              </div>
-              <p className={styles.sectionLead}>
-                信頼、脱炭素、環境保全への想いを、現在のNOAHの事業を通じて形にしていきます。
-                一つひとつの判断に、社会へ誠実に向き合う姿勢を込めています。
-              </p>
-            </div>
-          </Reveal>
-
-          <div className={styles.commitmentGrid}>
-            {commitments.map((item, index) => (
-              <Reveal key={item.title} direction="up" delay={index * 70}>
-                <article className={styles.commitmentItem}>
-                  <span>{String(index + 1).padStart(2, "0")}</span>
-                  <h3>{item.title}</h3>
-                  <p>{item.text}</p>
-                </article>
-              </Reveal>
-            ))}
-          </div>
         </div>
       </section>
 

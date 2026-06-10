@@ -738,7 +738,7 @@
 
 /* Typography alignment with top page */
 .heroTitle {
-  font-size: clamp(2.48rem, 4.2vw, 4.2rem);
+  font-size: clamp(2.48rem, 4.2vw, 3.4rem);
   font-weight: 800;
   line-height: 1.34;
 }
