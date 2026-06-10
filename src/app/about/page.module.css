@@ -46,6 +46,10 @@
   height: 100%;
 }
 
+.spBreak {
+  display: none;
+}
+
 .eyebrow {
   display: inline-flex;
   flex-direction: column;
@@ -669,7 +673,11 @@
 
 @media (max-width: 640px) {
   .heroTitle {
-    font-size: clamp(2.2rem, 11vw, 3.12rem);
+    font-size: clamp(2rem, 9vw, 3.12rem);
+  }
+
+  .spBreak {
+    display: inline;
   }
 
   .heading,

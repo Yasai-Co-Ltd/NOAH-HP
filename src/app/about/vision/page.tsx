@@ -18,38 +18,38 @@ export const metadata: Metadata = {
 const missionCards = [
   {
     title: "人に優しい",
-    text: "地域の暮らし、企業活動、働く人の安全を支えるインフラとして計画します。",
+    text: "地域の暮らしと、働く人の安全を支えるインフラを。",
   },
   {
     title: "地球に優しい",
-    text: "再生可能エネルギー、蓄電、水素、環境設備を組み合わせ、脱炭素化を進めます。",
+    text: "再エネ・蓄電・水素を組み合わせ、脱炭素化を前へ。",
   },
   {
     title: "持続可能にする",
-    text: "導入だけでなく、運用・保守・改善まで見据え、長く使える仕組みにします。",
+    text: "運用・保守まで見据えた、長く使える仕組みに。",
   },
 ];
 
 const visionActions = [
   {
-    title: "最適なエネルギーネットワークを構築する",
-    text: "地域事情に合わせて、発電、蓄電、供給、利用をつなぎ、経済性のある脱炭素インフラを設計します。",
+    title: "経済的な水素社会を創る",
+    text: "最適な水素事業ネットワークの構築により、経済的な水素社会の実現を目指します。",
   },
   {
-    title: "国内エネルギー供給を強くする",
-    text: "再生可能エネルギーや水素、蓄電池の活用を通じて、地域で使えるエネルギーの選択肢を広げます。",
+    title: "水素供給の強化を図る",
+    text: "水素の国内自給率向上により、水素供給の強化を図ります。",
   },
   {
-    title: "地域BCPと経済に貢献する",
-    text: "マイクログリッドや分散型電源を活用し、災害時にも地域を支える電力・燃料の仕組みを検討します。",
+    title: "地域経済・地域BCPに貢献する",
+    text: "マイクログリッドを活用した地域水素製造により、地域経済、地域BCP対応に貢献します。",
   },
   {
-    title: "余剰再エネを価値に変える",
-    text: "出力抑制や変動電源の課題に対して、蓄電池、水素、需要側設備を組み合わせて活用余地を広げます。",
+    title: "再生可能エネルギー導入拡大に貢献する",
+    text: "余剰となる再生可能エネルギーなどの活用により、再生可能エネルギーの導入拡大に貢献します。",
   },
   {
-    title: "環境に優しい世界を創る",
-    text: "再生可能エネルギーの導入拡大と脱炭素社会の普及を通じ、地球環境の保全に取り組みます。",
+    title: "「環境に優しい世界を創る」を果たす",
+    text: "再生可能エネルギーの導入拡大、水素社会の普及を通じて地球環境保全に努め、「環境に優しい世界を創る」という社会使命を果たします。",
   },
 ];
 
@@ -81,12 +81,10 @@ export default function VisionPage() {
             <h1 id="vision-title" className={styles.heroTitle}>
               人と地球に優しい、
               <br />
-              持続可能な社会を創造する。
+              持続可能な社会を
+              <br className={styles.spBreak} />
+              創造する。
             </h1>
-            <p className={styles.heroLead}>
-              NOAHの企業理念は、事業を広げるための言葉ではなく、判断の起点です。
-              再生可能エネルギー、蓄電、水素、AIデータセンターを社会に実装し、環境に優しい世界を目指します。
-            </p>
             <div className={styles.heroActions}>
               <Button href="#philosophy">理念を見る</Button>
               <Button href="/about" variant="outline">
@@ -112,29 +110,14 @@ export default function VisionPage() {
       </section>
 
       <section className={styles.philosophy} id="philosophy" aria-labelledby="philosophy-title">
-        <div className={`container ${styles.philosophyGrid}`}>
-          <Reveal direction="left">
+        <div className={`container ${styles.philosophyIntro}`}>
+          <Reveal direction="up">
             <SectionLabel eyebrow="PHILOSOPHY" subtitle="経営理念" />
-            <h2 id="philosophy-title" className={styles.heading}>
-              持続的な成長を支える、
+            <h2 id="philosophy-title" className={styles.statementHeading}>
+              人と地球に優しい
               <br />
-              NOAHの基盤。
+              持続可能な社会を創造する。
             </h2>
-            <p className={styles.lead}>
-              私たちの理念は、どの事業領域にも通底する判断の軸です。
-              技術、設備、プロジェクトの前に、何のために社会へ届けるのかを明確にします。
-            </p>
-          </Reveal>
-
-          <Reveal direction="right">
-            <div className={styles.statement}>
-              <span>OUR PHILOSOPHY</span>
-              <strong>
-                人と地球に優しい
-                <br />
-                持続可能な社会を創造する。
-              </strong>
-            </div>
           </Reveal>
         </div>
 
@@ -158,14 +141,15 @@ export default function VisionPage() {
               <div>
                 <SectionLabel eyebrow="VISION" subtitle="社会使命" inverse />
                 <h2 id="vision-body-title" className={styles.inverseHeading}>
-                  環境に優しい世界を、
+                  環境に優しい
                   <br />
-                  仕組みから創る。
+                  世界を創る。
                 </h2>
               </div>
               <p className={styles.inverseLead}>
-                再生可能エネルギーは、発電量の変動や出力抑制などの課題も抱えています。
-                NOAHは、発電、蓄電、水素、需要側設備を組み合わせ、地域に合うエネルギーシステムとして提案します。
+                再生可能エネルギーは環境に優しい一方、発電量の変動が課題となり、出力抑制も行われています。
+                さらに、再生可能エネルギーから水素を製造するコストの高さは、水素社会実現の大きな壁です。
+                NOAHは、水素の製造から供給、利用に至る一連の設備を取り扱い、地域事情に適したシステムのご提案により、次の5つを実行します。
               </p>
             </div>
           </Reveal>
@@ -181,32 +165,6 @@ export default function VisionPage() {
               </Reveal>
             ))}
           </div>
-        </div>
-      </section>
-
-      <section className={styles.implementation} aria-labelledby="implementation-title">
-        <div className={`container ${styles.implementationGrid}`}>
-          <Reveal direction="left">
-            <SectionLabel eyebrow="IMPLEMENTATION" subtitle="理念を事業へ" />
-            <h2 id="implementation-title" className={styles.heading}>
-              理念を、ページの言葉で終わらせない。
-            </h2>
-            <p className={styles.lead}>
-              持続可能な社会の実現は、具体的な事業と運用に落ちてはじめて意味を持ちます。
-              NOAHは複数の事業領域を組み合わせ、地域・企業ごとの課題に合わせた構想を進めます。
-            </p>
-          </Reveal>
-
-          <Reveal direction="right">
-            <div className={styles.businessLinks}>
-              {businessLinks.map((item, index) => (
-                <Link key={item.href} href={item.href}>
-                  <span>{String(index + 1).padStart(2, "0")}</span>
-                  <b>{item.label}</b>
-                </Link>
-              ))}
-            </div>
-          </Reveal>
         </div>
       </section>
 

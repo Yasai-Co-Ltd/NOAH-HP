@@ -101,7 +101,7 @@
 
 .heroVisual {
   top: 50%;
-  transform: translateY(-50%);
+  /* transform: translateY(-50%); */
   position: relative;
   min-height: 470px;
   margin: 0;
@@ -147,12 +147,19 @@
   background: var(--color-surface);
 }
 
-.philosophyGrid,
 .implementationGrid {
   display: grid;
   grid-template-columns: minmax(320px, 0.78fr) minmax(0, 1.22fr);
   gap: 72px;
   align-items: center;
+}
+
+.philosophyIntro {
+  text-align: center;
+}
+
+.spBreak {
+  display: none;
 }
 
 .heading {
@@ -174,31 +181,13 @@
   color: var(--color-text);
 }
 
-.statement {
-  position: relative;
-  padding: 54px 58px;
-  background:
-    linear-gradient(90deg, rgba(83, 193, 229, 0.08) 0, rgba(83, 193, 229, 0.08) 4px, transparent 4px),
-    var(--color-surface);
-  border: 1px solid var(--color-line);
-  box-shadow: 0 22px 56px rgba(5, 39, 102, 0.09);
-}
-
-.statement span {
-  color: var(--color-accent-cyan);
-  font-family: var(--font-numeric);
-  font-size: 0.76rem;
-  font-weight: 700;
-}
-
-.statement strong {
-  display: block;
-  margin-top: 22px;
+.statementHeading {
+  margin: 26px 0 0;
   color: var(--color-brand-900);
   font-family: var(--font-serif);
-  font-size: clamp(2.08rem, 3.6vw, 3.7rem);
+  font-size: clamp(2.08rem, 3.4vw, 3.3rem);
   font-weight: 800;
-  line-height: 1.42;
+  line-height: 1.55;
 }
 
 .missionGrid {
@@ -211,7 +200,6 @@
 }
 
 .missionCard {
-  min-height: 230px;
   padding: 34px 30px;
   background: var(--color-surface);
 }
@@ -286,16 +274,43 @@
 .actionGrid {
   position: relative;
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 1px;
-  background: rgba(255, 255, 255, 0.22);
-  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-top: 1px solid rgba(255, 255, 255, 0.22);
 }
 
 .actionItem {
-  min-height: 286px;
-  padding: 30px 24px;
-  background: rgba(255, 255, 255, 0.94);
+  position: relative;
+  display: grid;
+  grid-template-columns: 104px minmax(0, 0.88fr) minmax(0, 1.12fr);
+  gap: 36px;
+  align-items: center;
+  padding: 34px 28px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.22);
+  transition: background-color var(--duration-normal, 300ms) ease;
+}
+
+.actionItem::before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 3px;
+  content: "";
+  background: var(--color-accent-cyan);
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform var(--duration-normal, 300ms) ease;
+}
+
+.actionItem:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.actionItem:hover::before {
+  transform: scaleY(1);
+}
+
+.actionGrid > :last-child .actionItem {
+  background: linear-gradient(90deg, rgba(83, 193, 229, 0.16), rgba(83, 193, 229, 0.03) 64%);
 }
 
 .implementation {
@@ -339,10 +354,13 @@
 }
 
 .next {
-  color: var(--color-surface);
+  color: var(--color-ink);
   background:
-    linear-gradient(rgba(5, 39, 102, 0.9), rgba(5, 39, 102, 0.9)),
-    var(--bg-strengths-bg-integrated-energy) center / cover;
+    linear-gradient(180deg, #ffffff 0%, var(--color-brand-050) 100%),
+    linear-gradient(rgba(5, 39, 102, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(5, 39, 102, 0.05) 1px, transparent 1px);
+  background-size: auto, 72px 72px, 72px 72px;
+  border-top: 1px solid var(--color-line);
 }
 
 .nextInner {
@@ -355,7 +373,7 @@
 
 .nextEyebrow {
   margin: 0;
-  color: var(--color-accent-cyan);
+  color: var(--color-brand-600);
   font-size: 0.78rem;
   font-weight: 700;
   letter-spacing: 0;
@@ -363,7 +381,7 @@
 
 .nextTitle {
   margin-top: 18px;
-  color: var(--color-surface);
+  color: var(--color-brand-900);
   font-size: clamp(1.84rem, 3vw, 2.82rem);
   line-height: 1.45;
 }
@@ -379,22 +397,20 @@
 .nextLinks a {
   min-width: 190px;
   padding: 17px 20px;
-  color: var(--color-surface);
+  color: var(--color-brand-900);
   font-size: 0.88rem;
   font-weight: 700;
   text-decoration: none;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.52);
+  background: #ffffff;
+  border: 1px solid rgba(5, 39, 102, 0.36);
+  transition: background-color var(--duration-fast, 150ms) ease, color var(--duration-fast, 150ms) ease, border-color var(--duration-fast, 150ms) ease;
 }
 
-@media (max-width: 1180px) {
-  .actionGrid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .actionGrid > *:last-child {
-    grid-column: 1 / -1;
-  }
+.nextLinks a:hover,
+.nextLinks a:focus-visible {
+  color: var(--color-surface);
+  background: var(--color-brand-800);
+  border-color: var(--color-brand-800);
 }
 
 @media (max-width: 960px) {
@@ -407,7 +423,6 @@
   }
 
   .heroInner,
-  .philosophyGrid,
   .implementationGrid,
   .sectionHeader {
     grid-template-columns: 1fr;
@@ -419,8 +434,8 @@
   }
 
   .heroVisual {
-    top: 50%;
-    transform: translateY(-50%);
+    top: auto;
+    transform: none;
     min-height: 360px;
   }
 
@@ -444,8 +459,8 @@
   }
 
   .heroVisual {
-    top: 50%;
-    transform: translateY(-50%);
+    top: auto;
+    transform: none;
     min-height: 300px;
   }
 
@@ -455,23 +470,17 @@
     padding-block: 86px;
   }
 
-  .philosophyGrid,
   .implementationGrid,
   .sectionHeader {
     gap: 38px;
   }
 
-  .statement {
-    padding: 38px 28px;
+  .statementHeading {
+    font-size: 1.5rem;
   }
 
-  .actionGrid,
   .businessLinks {
     grid-template-columns: 1fr;
-  }
-
-  .actionGrid > *:last-child {
-    grid-column: auto;
   }
 
   .actionItem,
@@ -580,7 +589,6 @@
   line-height: 1.45;
 }
 
-.statement strong,
 .topNode b,
 .panelTitle,
 .messageTitle {
@@ -591,7 +599,11 @@
 
 @media (max-width: 640px) {
   .heroTitle {
-    font-size: clamp(2.2rem, 11vw, 3.12rem);
+    font-size: clamp(2rem, 9vw, 3.12rem);
+  }
+
+  .spBreak {
+    display: inline;
   }
 
   .heading,
@@ -601,7 +613,6 @@
   .nextTitle,
   .ctaTitle,
   .title,
-  .statement strong,
   .topNode b,
   .panelTitle,
   .messageTitle {
@@ -617,5 +628,46 @@
   .sourceNote,
   .note {
     font-size: 0.88rem;
+  }
+}
+
+/* Vision action rows — typography overrides (must follow the shared typography block) */
+.actionItem b {
+  color: var(--color-accent-cyan);
+  font-family: var(--font-numeric);
+  font-size: 2.35rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.actionItem h3 {
+  margin: 0;
+  color: var(--color-surface);
+  font-size: clamp(1.08rem, 1.4vw, 1.3rem);
+  font-weight: 700;
+  line-height: 1.55;
+}
+
+.actionItem p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.76);
+  font-size: 0.9rem;
+  font-weight: 500;
+  line-height: 1.9;
+}
+
+.actionGrid > :last-child .actionItem h3 {
+  color: var(--color-accent-cyan);
+}
+
+@media (max-width: 960px) {
+  .actionItem {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+    padding: 28px 18px 28px 22px;
+  }
+
+  .actionItem b {
+    font-size: 1.6rem;
   }
 }

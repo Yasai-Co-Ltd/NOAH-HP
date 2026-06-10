@@ -110,7 +110,9 @@ export default function AboutPage() {
             <h1 id="about-page-title" className={styles.heroTitle}>
               未来のインフラを、
               <br />
-              誠実に構想し、実装する。
+              誠実に構想し、
+              <br className={styles.spBreak} />
+              実装する。
             </h1>
             {/* <p className={styles.heroLead}>
               諾亜建設は、再生可能エネルギーを起点に、発電、蓄電、水素、AIデータセンターをつなぎ、

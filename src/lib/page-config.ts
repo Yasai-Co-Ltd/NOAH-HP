@@ -11,8 +11,8 @@ export const PAGES = {
 
   // 企業情報
   "/about": true,
-  "/about/message": false,
-  "/about/vision": false,
+  "/about/message": true,
+  "/about/vision": true,
   "/about/outline": false,
   "/about/organization": false,
   "/about/history": false,
