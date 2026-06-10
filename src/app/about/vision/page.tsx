@@ -112,7 +112,7 @@ export default function VisionPage() {
       <section className={styles.philosophy} id="philosophy" aria-labelledby="philosophy-title">
         <div className={`container ${styles.philosophyIntro}`}>
           <Reveal direction="up">
-            <SectionLabel eyebrow="PHILOSOPHY" subtitle="経営理念" />
+            <SectionLabel eyebrow="PHILOSOPHY" subtitle="企業理念" />
             <h2 id="philosophy-title" className={styles.statementHeading}>
               人と地球に優しい
               <br />
