@@ -11,7 +11,7 @@ import { asset } from "@/lib/asset";
 export const metadata: Metadata = {
   title: "風力発電事業 | 諾亜建設株式会社",
   description:
-    "風況調査、事業性評価、系統連系、許認可、設計・調達・施工、O&Mまで、諾亜建設の風力発電事業を紹介します。",
+    "地上風力と飛行船型の空中風力発電を含め、風況調査、事業性評価、系統連系、許認可、設計・調達・施工、O&Mまで、諾亜建設の風力発電事業を紹介します。",
 };
 
 const heroMetrics = [
@@ -30,30 +30,39 @@ const projectSpecs = [
   { label: "状況", value: "検討中・一次調査完了" },
 ];
 
-const technologyItems = [
+const technologyGroups = [
   {
-    title: "高効率",
-    text: "広い調整範囲と直駆動方式により、従来機比5%の効率向上を狙います。",
+    number: "01",
+    title: "発電性能",
+    subtitle: "高効率・捕風能力",
+    text: "大型ローター、高塔柱、カスタムブレードと直駆動方式を組み合わせ、低風速・複雑地形でも風を捉えて発電量を引き出します。",
   },
   {
-    title: "高信頼性",
-    text: "部品点数を抑え、システム誤差を回避しながら、98%以上の稼働率を目指します。",
+    number: "02",
+    title: "信頼性",
+    subtitle: "高信頼性・低コスト",
+    text: "部品点数とギアシステムの保守負担を抑え、安定稼働とライフサイクルコストの最適化を両立します。",
   },
   {
-    title: "低コスト",
-    text: "ギアシステムの保守負担を減らし、総コスト約20%低減の考え方を取り入れます。",
+    number: "03",
+    title: "運用高度化",
+    subtitle: "スマート制御・IoT運用",
+    text: "風況と設備状態を継続的に把握し、制御最適化と予知保全によって発電ロスと停止時間の低減につなげます。",
+  },
+];
+
+const airborneMechanism = [
+  {
+    title: "上空へ展開",
+    text: "浮力を利用した飛行船型の機体を係留し、地形や建物の影響を受けにくい上空の風へアクセスします。",
   },
   {
-    title: "捕風能力",
-    text: "大型ローター、高塔柱、カスタムブレードで、低風速・複雑地形でも出力を引き出します。",
+    title: "空中で発電",
+    text: "機体の風路に配置された風車で風力を電力へ変換し、高高度の風力資源を活用します。",
   },
   {
-    title: "スマート制御",
-    text: "風況を感知して事前に調整し、安全性を確保しながら発電効率を最大化します。",
-  },
-  {
-    title: "IoT運用",
-    text: "風車をIoT端末化し、データ連携と予知保全により、予防型の管理へつなげます。",
+    title: "地上へ送電",
+    text: "係留・送電システムを通じて地上設備と接続し、制御、回収、安全管理を一体で行います。",
   },
 ];
 
@@ -127,6 +136,29 @@ const projectFlow = [
   },
 ];
 
+const flowPhases = [
+  {
+    code: "PHASE A",
+    title: "調査・構想",
+    steps: projectFlow.slice(0, 2),
+  },
+  {
+    code: "PHASE B",
+    title: "事業性評価",
+    steps: projectFlow.slice(2, 4),
+  },
+  {
+    code: "PHASE C",
+    title: "系統・許認可",
+    steps: projectFlow.slice(4, 6),
+  },
+  {
+    code: "PHASE D",
+    title: "設計・運用",
+    steps: projectFlow.slice(6, 8),
+  },
+];
+
 export default function WindPowerPage() {
   if (!isPageEnabled("/business/windpower")) notFound();
 
@@ -161,7 +193,7 @@ export default function WindPowerPage() {
               <Button href="/contact" variant="white">
                 事業相談をする
               </Button>
-              <Button href="#project" variant="outline" className={styles.darkButton}>
+              <Button href="#project" variant="cyan" className={styles.darkButton}>
                 計画概要を見る
               </Button>
             </div>
@@ -219,30 +251,98 @@ export default function WindPowerPage() {
 
       <section className={styles.technology} aria-labelledby="technology-title">
         <div className={`container ${styles.technologyInner}`}>
-          <Reveal direction="left" className={styles.technologyCopy}>
-            <SectionLabel eyebrow="TECHNOLOGY" subtitle="風車技術の特徴" inverse />
-            <h2 id="technology-title" className={styles.inverseHeading}>
-              低風速・複雑地形でも、
-              <br />
-              風を逃さない設計へ。
-            </h2>
-            <p className={styles.inverseLead}>
-              大型ローター、高塔柱、直駆動方式、スマート制御、IoT運用を組み合わせ、
-              発電効率と保守性の両面から事業価値を高めます。
-            </p>
+          <Reveal direction="up">
+            <div className={styles.technologyHeader}>
+              <div>
+                <SectionLabel eyebrow="TECHNOLOGY" subtitle="風車技術の特徴" inverse />
+                <h2 id="technology-title" className={styles.inverseHeading}>
+                  風を捉え、
+                  <br />
+                  止めずに運用する。
+                </h2>
+              </div>
+              <p className={styles.inverseLead}>
+                大型ローター、高塔柱、直駆動方式、スマート制御、IoT運用を組み合わせ、
+                発電性能、信頼性、運用高度化の3つの視点から事業価値を高めます。
+              </p>
+            </div>
           </Reveal>
 
-          <div className={styles.technologyGrid}>
-            {technologyItems.map((item, index) => (
-              <Reveal key={item.title} direction="up" delay={index * 55}>
-                <article className={styles.technologyItem}>
-                  <span>{String(index + 1).padStart(2, "0")}</span>
-                  <h3>{item.title}</h3>
-                  <p>{item.text}</p>
-                </article>
-              </Reveal>
-            ))}
+          <div className={styles.technologyBody}>
+            <Reveal direction="left">
+              <figure className={styles.technologyVisual}>
+                <Image
+                  src={asset("/assets/windpower/technology-turbine-front.png")}
+                  alt="山間の風力発電所に設置された大型風車のローターハブ"
+                  fill
+                  sizes="(max-width: 960px) calc(100vw - 40px), 42vw"
+                  className={styles.technologyImage}
+                />
+              </figure>
+            </Reveal>
+
+            <ul className={styles.technologyList}>
+              {technologyGroups.map((item, index) => (
+                <Reveal
+                  key={item.title}
+                  as="li"
+                  direction="up"
+                  delay={index * 70}
+                  className={styles.technologyItem}
+                >
+                  <span className={styles.technologyNumber}>{item.number}</span>
+                  <div className={styles.technologyItemBody}>
+                    <h3>{item.title}</h3>
+                    <b>{item.subtitle}</b>
+                    <p>{item.text}</p>
+                  </div>
+                </Reveal>
+              ))}
+            </ul>
           </div>
+        </div>
+      </section>
+
+      <section className={styles.airborne} id="airborne-power" aria-labelledby="airborne-title">
+        <div className={`container ${styles.airborneInner}`}>
+          <Reveal direction="left" className={styles.airborneVisualReveal}>
+            <figure className={styles.airborneVisual}>
+              <Image
+                src={asset("/assets/airborne-power-noah.png")}
+                alt="NOAHロゴが入った飛行船型の空中風力発電システムのコンセプトイメージ"
+                fill
+                sizes="(max-width: 960px) calc(100vw - 40px), 54vw"
+                className={styles.airborneImage}
+              />
+              <figcaption>飛行船型空中風力発電システムのコンセプトイメージ</figcaption>
+            </figure>
+          </Reveal>
+
+          <Reveal direction="right" className={styles.airborneCopy}>
+            <SectionLabel eyebrow="AIRBORNE WIND ENERGY" subtitle="空中発電所" />
+            <p className={styles.airborneKicker}>NEXT-GENERATION WIND</p>
+            <h2 id="airborne-title" className={styles.heading}>
+              地上だけでなく、
+              <br />
+              空の風もエネルギーへ。
+            </h2>
+            <p className={styles.airborneLead}>
+              空中発電所は、飛行船型の発電ユニットを上空へ係留し、
+              地表より強く安定した風を活用する空中風力発電システムです。
+              従来の風力発電を補完する、新しい発電インフラとして導入可能性を検討しています。
+            </p>
+
+            <ul className={styles.airborneSteps}>
+              {airborneMechanism.map((item) => (
+                <li key={item.title}>
+                  <div>
+                    <h3>{item.title}</h3>
+                    <p>{item.text}</p>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </Reveal>
         </div>
       </section>
 
@@ -284,7 +384,6 @@ export default function WindPowerPage() {
                     />
                   </div>
                   <div className={styles.sceneBody}>
-                    <span>{String(index + 1).padStart(2, "0")}</span>
                     <h3>{scene.title}</h3>
                     <p>{scene.text}</p>
                   </div>
@@ -299,27 +398,45 @@ export default function WindPowerPage() {
         <div className="container">
           <Reveal direction="up">
             <div className={styles.flowHeader}>
-              <SectionLabel eyebrow="PROJECT FLOW" subtitle="風力発電プロジェクトの流れ" />
-              <h2 id="flow-title" className={styles.heading}>
-                構想から商業運転まで、
-                <br />
-                段階ごとに不確実性を減らす。
-              </h2>
+              <div>
+                <SectionLabel eyebrow="PROJECT FLOW" subtitle="風力発電プロジェクトの流れ" />
+                <h2 id="flow-title" className={styles.heading}>
+                  構想から商業運転まで、
+                  <br />
+                  判断の節目を見える化。
+                </h2>
+              </div>
+              <p className={styles.sectionLead}>
+                調査、事業性評価、系統・許認可、設計・運用の4フェーズで、
+                次に進むための条件とリスクを段階的に整理します。
+              </p>
             </div>
           </Reveal>
 
-          <ol className={styles.flowList}>
-            {projectFlow.map((step, index) => (
+          <ol className={styles.flowPhases}>
+            {flowPhases.map((phase, phaseIndex) => (
               <Reveal
-                key={step.number}
+                key={phase.code}
                 as="li"
                 direction="up"
-                delay={index * 45}
-                className={styles.flowItem}
+                delay={phaseIndex * 70}
+                className={styles.flowPhase}
               >
-                <b>{step.number}</b>
-                <h3>{step.title}</h3>
-                <p>{step.text}</p>
+                <header className={styles.flowPhaseHeader}>
+                  <span>{phase.code}</span>
+                  <h3>{phase.title}</h3>
+                </header>
+                <ol className={styles.flowSteps}>
+                  {phase.steps.map((step) => (
+                    <li key={step.number} className={styles.flowItem}>
+                      <b>{step.number}</b>
+                      <div>
+                        <h4>{step.title}</h4>
+                        <p>{step.text}</p>
+                      </div>
+                    </li>
+                  ))}
+                </ol>
               </Reveal>
             ))}
           </ol>
@@ -348,7 +465,7 @@ export default function WindPowerPage() {
               <Button href="/contact" variant="white">
                 お問い合わせ
               </Button>
-              <Button href="/business" variant="outline" className={styles.darkButton}>
+              <Button href="/business" variant="cyan" className={styles.darkButton}>
                 事業一覧へ戻る
               </Button>
             </div>
