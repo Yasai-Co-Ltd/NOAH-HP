@@ -14,13 +14,13 @@ export const PAGES = {
   "/about/message": true,
   "/about/vision": true,
   "/about/outline": false,
-  "/about/organization": false,
-  "/about/history": false,
+  "/about/organization": true,
+  "/about/history": true,
 
   // 事業紹介
   "/business": true,
   "/business/batteryenergystorage": true,
-  "/business/windpower": false,
+  "/business/windpower": true,
   "/business/biomasspower": false,
   "/business/hopper": false,
   "/business/hydrogen-mobility": false,
