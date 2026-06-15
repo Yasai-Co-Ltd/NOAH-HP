@@ -1,40 +1,16 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { isPageEnabled } from "@/lib/page-config";
-import Image from "next/image";
 import Link from "next/link";
 import { Reveal } from "@/components/animation/Reveal/Reveal";
-import { Button } from "@/components/ui/Button/Button";
 import { SectionLabel } from "@/components/ui/SectionLabel/SectionLabel";
 import styles from "./page.module.css";
-import { asset } from "@/lib/asset";
 
 export const metadata: Metadata = {
   title: "沿革 | 諾亜建設株式会社",
   description:
     "諾亜建設株式会社の沿革。2018年の設立から、防塵ホッパー、脱炭素製品、水素設備、新エネルギー車両、現在の主要事業領域までの歩みを紹介します。",
 };
-
-const heroFacts = [
-  { value: "2018", label: "会社設立" },
-  { value: "6", label: "現在の主要事業" },
-  { value: "Energy", label: "脱炭素インフラ" },
-];
-
-const focusItems = [
-  {
-    title: "発電所設備から始まる実装力",
-    text: "港湾荷卸し設備や発電所関連設備を通じ、現場で機能する設備を納入する経験を積み上げてきました。",
-  },
-  {
-    title: "水素・EV領域への展開",
-    text: "水素製造設備、水素ステーション、新エネルギー車両の取り扱いを広げ、移動体の脱炭素化にも対応しています。",
-  },
-  {
-    title: "複数事業をつなぐ現在地",
-    text: "蓄電池、風力、バイオマス、ホッパー、水素、AIデータセンターを横断し、地域と企業の課題に合わせて提案します。",
-  },
-];
 
 const timelineItems = [
   {
@@ -88,15 +64,6 @@ const timelineItems = [
   },
 ];
 
-const businessLinks = [
-  { href: "/business/batteryenergystorage", label: "蓄電池事業" },
-  { href: "/business/windpower", label: "風力発電事業" },
-  { href: "/business/biomasspower", label: "バイオマス" },
-  { href: "/business/hopper", label: "走行式集塵ホッパー事業" },
-  { href: "/business/hydrogen-mobility", label: "水素モビリティ事業" },
-  { href: "/business/ai-data-center", label: "AIデータセンター事業" },
-];
-
 const nextLinks = [
   { href: "/about/outline", label: "会社概要" },
   { href: "/about/network", label: "国内外拠点" },
@@ -110,81 +77,12 @@ export default function HistoryPage() {
     <>
       <section className={styles.hero} aria-labelledby="history-title">
         <div className={`container ${styles.heroInner}`}>
-          <Reveal direction="left" className={styles.heroCopy}>
-            <p className={styles.eyebrow}>
-              COMPANY HISTORY
-              <span>沿革</span>
-            </p>
+          <Reveal direction="up">
+            <p className={styles.eyebrow}>COMPANY HISTORY</p>
             <h1 id="history-title" className={styles.heroTitle}>
-              技術導入から、
-              <br />
-              脱炭素インフラの実装へ。
+              沿革
             </h1>
-            <p className={styles.heroLead}>
-              2018年の設立以降、発電所設備、脱炭素製品、水素設備、新エネルギー車両へと領域を広げてきました。
-              NOAHの歩みを、現在の主要事業につながる流れとして整理します。
-            </p>
-            <div className={styles.heroActions}>
-              <Button href="#timeline">年表を見る</Button>
-              <Button href="/about" variant="outline">
-                企業情報へ戻る
-              </Button>
-            </div>
           </Reveal>
-
-          <Reveal direction="right" className={styles.heroVisualReveal}>
-            <figure className={styles.heroVisual}>
-              <Image
-                src={asset("/assets/about-collage.png")}
-                alt="風力発電、水素モビリティ、EV、蓄電池設備を組み合わせたNOAHの事業イメージ"
-                fill
-                priority
-                sizes="(max-width: 960px) calc(100vw - 40px), 52vw"
-                className={styles.heroImage}
-              />
-              <figcaption className={styles.heroCaption}>
-                <span>2018</span>
-                <b>NOAH CONSTRUCTION</b>
-                <span>NOW</span>
-              </figcaption>
-            </figure>
-          </Reveal>
-        </div>
-
-        <div className={`container ${styles.factStrip}`} aria-label="沿革の概要">
-          {heroFacts.map((fact) => (
-            <div key={fact.value} className={styles.factItem}>
-              <b>{fact.value}</b>
-              <span>{fact.label}</span>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section className={styles.context} aria-labelledby="context-title">
-        <div className={`container ${styles.contextGrid}`}>
-          <Reveal direction="left">
-            <SectionLabel eyebrow="OUR PATH" subtitle="歩みの読み方" />
-            <h2 id="context-title" className={styles.heading}>
-              年表を、事業の広がりとして読む。
-            </h2>
-            <p className={styles.lead}>
-              沿革は出来事の羅列ではなく、NOAHがどの領域で経験を積み、現在の事業構成へたどり着いたかを示すものです。
-              発電所設備、脱炭素製品、水素・EV領域の流れを、今の6事業へ接続して見せます。
-            </p>
-          </Reveal>
-
-          <div className={styles.focusGrid}>
-            {focusItems.map((item, index) => (
-              <Reveal key={item.title} direction="up" delay={index * 70}>
-                <article className={styles.focusCard}>
-                  <span>{String(index + 1).padStart(2, "0")}</span>
-                  <h3>{item.title}</h3>
-                  <p>{item.text}</p>
-                </article>
-              </Reveal>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -193,12 +91,12 @@ export default function HistoryPage() {
           <Reveal direction="up">
             <div className={styles.sectionHeader}>
               <div>
-                <SectionLabel eyebrow="TIMELINE" subtitle="会社沿革" inverse />
-                <h2 id="timeline-title" className={styles.inverseHeading}>
+                <SectionLabel eyebrow="TIMELINE" subtitle="会社沿革" />
+                <h2 id="timeline-title" className={styles.heading}>
                   2018年から現在までの主な歩み。
                 </h2>
               </div>
-              <p className={styles.inverseLead}>
+              <p className={styles.lead}>
                 発電所設備、脱炭素製品、水素・モビリティへと広がってきた歩みが、現在の主要事業につながっています。
               </p>
             </div>
@@ -226,34 +124,6 @@ export default function HistoryPage() {
               </Reveal>
             ))}
           </div>
-        </div>
-      </section>
-
-      <section className={styles.business} aria-labelledby="business-title">
-        <div className={`container ${styles.businessGrid}`}>
-          <Reveal direction="left">
-            <SectionLabel eyebrow="CURRENT BUSINESS" subtitle="現在の主要事業" />
-            <h2 id="business-title" className={styles.heading}>
-              沿革の先にある、
-              <br />
-              6つの事業領域。
-            </h2>
-            <p className={styles.lead}>
-              これまでに広げてきた設備、発電、水素、モビリティの知見を、現在の事業ページへつなげます。
-              詳細は各事業ページからご確認ください。
-            </p>
-          </Reveal>
-
-          <Reveal direction="right">
-            <div className={styles.businessLinks}>
-              {businessLinks.map((item, index) => (
-                <Link key={item.href} href={item.href}>
-                  <span>{String(index + 1).padStart(2, "0")}</span>
-                  <b>{item.label}</b>
-                </Link>
-              ))}
-            </div>
-          </Reveal>
         </div>
       </section>
 
