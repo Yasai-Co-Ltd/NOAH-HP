@@ -1,0 +1,1134 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>サステナビリティページ ワイヤーフレーム v1</title>
+    <style>
+      :root {
+        --brand-900: #052766;
+        --brand-800: #0a3487;
+        --brand-700: #0c459e;
+        --brand-100: #e8f4ff;
+        --brand-050: #f5faff;
+        --cyan: #53c1e5;
+        --teal: #65bbb4;
+        --green: #5fbf83;
+        --gold: #d7a928;
+        --ink: #12264a;
+        --text: #26334d;
+        --muted: #5e6f8c;
+        --line: #d8e4f3;
+        --surface: #ffffff;
+        --sans: "Hiragino Sans", "Yu Gothic", "Meiryo", system-ui, sans-serif;
+        --serif: "Hiragino Mincho ProN", "Yu Mincho", "YuMincho", serif;
+        --numeric: Arial, sans-serif;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: #ffffff;
+        color: var(--text);
+        font-family: var(--sans);
+        letter-spacing: 0;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .container {
+        width: min(100% - 128px, 1360px);
+        margin-inline: auto;
+      }
+
+      .header {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 86px;
+        padding-inline: 48px;
+        background: rgba(255, 255, 255, 0.94);
+        border-bottom: 1px solid rgba(216, 228, 243, 0.88);
+        backdrop-filter: blur(16px);
+      }
+
+      .brand img {
+        width: 210px;
+        height: auto;
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        color: var(--brand-900);
+        font-size: 0.88rem;
+        font-weight: 700;
+      }
+
+      .nav .active {
+        color: var(--brand-700);
+      }
+
+      .navCta {
+        display: inline-grid;
+        min-height: 44px;
+        place-items: center;
+        padding-inline: 20px;
+        color: #ffffff;
+        background: var(--brand-900);
+        border: 1px solid var(--brand-900);
+      }
+
+      .hero {
+        position: relative;
+        overflow: hidden;
+        padding-block: 82px 52px;
+        background:
+          linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0.94) 38%, rgba(245, 250, 255, 0.5) 100%),
+          #f7fbff;
+      }
+
+      .hero::before {
+        position: absolute;
+        right: -12%;
+        bottom: -34%;
+        width: 54%;
+        aspect-ratio: 1;
+        content: "";
+        border: 1px solid rgba(83, 193, 229, 0.24);
+        border-radius: 50%;
+      }
+
+      .heroInner {
+        position: relative;
+        display: grid;
+        grid-template-columns: minmax(420px, 0.86fr) minmax(600px, 1.14fr);
+        gap: 72px;
+        align-items: center;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        margin: 0 0 22px;
+        color: var(--brand-700);
+        font-family: var(--numeric);
+        font-size: 0.76rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      .eyebrow span {
+        color: var(--muted);
+        font-family: var(--sans);
+        font-size: 0.76rem;
+        letter-spacing: 0;
+      }
+
+      .heroTitle {
+        margin: 0;
+        color: var(--brand-900);
+        font-family: var(--serif);
+        font-size: 4.25rem;
+        font-weight: 800;
+        line-height: 1.16;
+      }
+
+      .heroLead {
+        width: min(100%, 580px);
+        margin: 28px 0 0;
+        color: var(--text);
+        font-size: 1.02rem;
+        font-weight: 600;
+        line-height: 2;
+      }
+
+      .heroActions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        margin-top: 34px;
+      }
+
+      .button,
+      .buttonSecondary {
+        display: inline-grid;
+        min-height: 52px;
+        place-items: center;
+        padding-inline: 25px;
+        font-size: 0.9rem;
+        font-weight: 700;
+        border: 1px solid var(--brand-900);
+      }
+
+      .button {
+        color: #ffffff;
+        background: var(--brand-900);
+      }
+
+      .buttonSecondary {
+        color: var(--brand-900);
+        background: #ffffff;
+      }
+
+      .heroImagePanel {
+        position: relative;
+        min-height: 548px;
+        overflow: hidden;
+        background: var(--brand-050);
+        border: 1px solid rgba(216, 228, 243, 0.92);
+        box-shadow: 0 22px 52px rgba(15, 66, 130, 0.13);
+      }
+
+      .heroImagePanel img {
+        width: 100%;
+        height: 548px;
+        object-fit: cover;
+      }
+
+      .heroImagePanel::after {
+        position: absolute;
+        inset: auto 0 0;
+        height: 42%;
+        content: "";
+        background: linear-gradient(180deg, rgba(5, 39, 102, 0) 0%, rgba(5, 39, 102, 0.42) 100%);
+      }
+
+      .heroBadge {
+        position: absolute;
+        right: 24px;
+        bottom: 22px;
+        z-index: 1;
+        width: min(430px, calc(100% - 48px));
+        padding: 20px 22px;
+        color: #ffffff;
+        background: rgba(5, 39, 102, 0.8);
+        border: 1px solid rgba(255, 255, 255, 0.28);
+      }
+
+      .heroBadge b {
+        display: block;
+        font-size: 1.02rem;
+        line-height: 1.55;
+      }
+
+      .heroBadge span {
+        display: block;
+        margin-top: 6px;
+        color: rgba(255, 255, 255, 0.78);
+        font-size: 0.8rem;
+        font-weight: 600;
+        line-height: 1.7;
+      }
+
+      .heroStats {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1px;
+        margin-top: 52px;
+        background: var(--line);
+        border: 1px solid var(--line);
+      }
+
+      .heroStat {
+        padding: 25px 28px;
+        background: #ffffff;
+      }
+
+      .heroStat b {
+        display: block;
+        color: var(--brand-900);
+        font-family: var(--numeric);
+        font-size: 1.46rem;
+        line-height: 1;
+      }
+
+      .heroStat span {
+        display: block;
+        margin-top: 9px;
+        color: var(--muted);
+        font-size: 0.83rem;
+        font-weight: 700;
+        line-height: 1.55;
+      }
+
+      section {
+        position: relative;
+      }
+
+      .sectionLabel {
+        display: inline-grid;
+        gap: 5px;
+        margin: 0 0 18px;
+        color: var(--brand-700);
+        font-family: var(--numeric);
+        font-size: 0.74rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      .sectionLabel span {
+        color: var(--muted);
+        font-family: var(--sans);
+        font-size: 0.76rem;
+        letter-spacing: 0;
+      }
+
+      .heading {
+        margin: 0;
+        color: var(--brand-900);
+        font-family: var(--serif);
+        font-size: 2.72rem;
+        font-weight: 800;
+        line-height: 1.28;
+      }
+
+      .lead {
+        margin: 20px 0 0;
+        color: var(--text);
+        font-size: 0.98rem;
+        font-weight: 600;
+        line-height: 1.95;
+      }
+
+      .policy {
+        padding-block: 108px 104px;
+        background: #ffffff;
+      }
+
+      .policyInner {
+        display: grid;
+        grid-template-columns: minmax(360px, 0.82fr) minmax(580px, 1.18fr);
+        gap: 86px;
+        align-items: start;
+      }
+
+      .policyPanel {
+        position: sticky;
+        top: 118px;
+        padding: 38px;
+        color: #ffffff;
+        background:
+          linear-gradient(145deg, rgba(5, 39, 102, 0.96), rgba(12, 69, 158, 0.88)),
+          var(--brand-900);
+        box-shadow: 0 20px 44px rgba(5, 39, 102, 0.18);
+      }
+
+      .policyPanel .sectionLabel,
+      .policyPanel .sectionLabel span,
+      .policyPanel .heading {
+        color: #ffffff;
+      }
+
+      .policyPanel .lead {
+        color: rgba(255, 255, 255, 0.82);
+      }
+
+      .policyList {
+        display: grid;
+        gap: 18px;
+      }
+
+      .policyItem {
+        display: grid;
+        grid-template-columns: 74px minmax(0, 1fr);
+        gap: 24px;
+        align-items: start;
+        padding: 28px 0;
+        border-top: 1px solid rgba(216, 228, 243, 0.95);
+      }
+
+      .policyItem:last-child {
+        border-bottom: 1px solid rgba(216, 228, 243, 0.95);
+      }
+
+      .policyItem b {
+        color: var(--cyan);
+        font-family: var(--numeric);
+        font-size: 2.6rem;
+        line-height: 1;
+      }
+
+      .policyItem h3 {
+        margin: 0;
+        color: var(--brand-900);
+        font-size: 1.28rem;
+        font-weight: 800;
+        line-height: 1.45;
+      }
+
+      .policyItem p {
+        margin: 9px 0 0;
+        color: var(--text);
+        font-size: 0.9rem;
+        font-weight: 500;
+        line-height: 1.85;
+      }
+
+      .pillars {
+        padding-block: 104px 110px;
+        background:
+          linear-gradient(180deg, #f5faff 0%, #ffffff 46%, #eff8f4 100%);
+        border-top: 1px solid rgba(216, 228, 243, 0.9);
+        border-bottom: 1px solid rgba(216, 228, 243, 0.9);
+      }
+
+      .pillarsHeader {
+        display: grid;
+        grid-template-columns: minmax(360px, 0.72fr) minmax(520px, 1fr);
+        gap: 92px;
+        align-items: end;
+        margin-bottom: 42px;
+      }
+
+      .pillarGrid {
+        display: grid;
+        grid-template-columns: 1.16fr 0.84fr;
+        gap: 24px;
+        align-items: stretch;
+      }
+
+      .pillarCard {
+        position: relative;
+        min-height: 360px;
+        overflow: hidden;
+        color: #ffffff;
+        background: var(--brand-900);
+        box-shadow: 0 18px 40px rgba(15, 66, 130, 0.12);
+      }
+
+      .pillarCard.large {
+        min-height: 744px;
+      }
+
+      .pillarStack {
+        display: grid;
+        gap: 24px;
+      }
+
+      .pillarCard img {
+        width: 100%;
+        height: 100%;
+        min-height: inherit;
+        object-fit: cover;
+      }
+
+      .pillarCard::after {
+        position: absolute;
+        inset: 0;
+        content: "";
+        background: linear-gradient(180deg, rgba(5, 39, 102, 0.06) 0%, rgba(5, 39, 102, 0.8) 100%);
+      }
+
+      .pillarBody {
+        position: absolute;
+        inset: auto 0 0;
+        z-index: 1;
+        padding: 34px;
+      }
+
+      .pillarBody .num {
+        display: block;
+        color: var(--cyan);
+        font-family: var(--numeric);
+        font-size: 0.82rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      .pillarBody h3 {
+        margin: 10px 0 0;
+        font-size: 1.8rem;
+        font-weight: 800;
+        line-height: 1.35;
+      }
+
+      .pillarCard:not(.large) .pillarBody h3 {
+        font-size: 1.42rem;
+      }
+
+      .pillarBody p {
+        width: min(100%, 620px);
+        margin: 10px 0 0;
+        color: rgba(255, 255, 255, 0.86);
+        font-size: 0.88rem;
+        font-weight: 600;
+        line-height: 1.8;
+      }
+
+      .contribution {
+        padding-block: 108px 112px;
+        background: #ffffff;
+      }
+
+      .contributionHeader {
+        display: grid;
+        grid-template-columns: minmax(420px, 0.82fr) minmax(520px, 1fr);
+        gap: 90px;
+        align-items: start;
+        margin-bottom: 42px;
+      }
+
+      .matrix {
+        display: grid;
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+        overflow: hidden;
+        border: 1px solid rgba(196, 216, 239, 0.95);
+      }
+
+      .matrixItem {
+        min-height: 284px;
+        padding: 28px 22px;
+        background: #ffffff;
+        border-right: 1px solid rgba(216, 228, 243, 0.95);
+      }
+
+      .matrixItem:last-child {
+        border-right: 0;
+      }
+
+      .matrixItem:nth-child(2n) {
+        background: #f7fbff;
+      }
+
+      .matrixItem .tag {
+        display: inline-block;
+        padding: 6px 10px;
+        color: var(--brand-900);
+        font-family: var(--numeric);
+        font-size: 0.7rem;
+        font-weight: 700;
+        line-height: 1;
+        background: rgba(83, 193, 229, 0.18);
+      }
+
+      .matrixItem h3 {
+        margin: 22px 0 0;
+        color: var(--brand-900);
+        font-size: 1.08rem;
+        font-weight: 800;
+        line-height: 1.45;
+      }
+
+      .matrixItem p {
+        margin: 12px 0 0;
+        color: var(--text);
+        font-size: 0.82rem;
+        font-weight: 500;
+        line-height: 1.76;
+      }
+
+      .matrixItem .line {
+        width: 42px;
+        height: 2px;
+        margin-top: 24px;
+        background: var(--cyan);
+      }
+
+      .process {
+        overflow: hidden;
+        padding-block: 106px;
+        color: #ffffff;
+        background:
+          linear-gradient(90deg, rgba(5, 39, 102, 0.94) 0%, rgba(5, 39, 102, 0.82) 46%, rgba(5, 39, 102, 0.2) 100%),
+          url("../../assets/solution-integrated-landscape.jpg") center / cover;
+      }
+
+      .processGrid {
+        display: grid;
+        grid-template-columns: minmax(360px, 0.76fr) minmax(560px, 1fr);
+        gap: 84px;
+        align-items: center;
+      }
+
+      .process .sectionLabel,
+      .process .sectionLabel span,
+      .process .heading {
+        color: #ffffff;
+      }
+
+      .process .lead {
+        color: rgba(255, 255, 255, 0.82);
+      }
+
+      .processSteps {
+        display: grid;
+        gap: 14px;
+      }
+
+      .step {
+        display: grid;
+        grid-template-columns: 82px minmax(0, 1fr);
+        gap: 22px;
+        align-items: center;
+        padding: 22px 24px;
+        background: rgba(255, 255, 255, 0.92);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+      }
+
+      .step b {
+        color: var(--brand-700);
+        font-family: var(--numeric);
+        font-size: 1.62rem;
+        line-height: 1;
+      }
+
+      .step h3 {
+        margin: 0;
+        color: var(--brand-900);
+        font-size: 1.02rem;
+        font-weight: 800;
+      }
+
+      .step p {
+        margin: 6px 0 0;
+        color: var(--text);
+        font-size: 0.8rem;
+        font-weight: 600;
+        line-height: 1.65;
+      }
+
+      .lowerLinks {
+        padding-block: 98px 104px;
+        background: #f7fbff;
+      }
+
+      .lowerHeader {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        gap: 40px;
+        margin-bottom: 34px;
+      }
+
+      .lowerGrid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 20px;
+      }
+
+      .lowerCard {
+        display: grid;
+        gap: 0;
+        overflow: hidden;
+        background: #ffffff;
+        border: 1px solid rgba(196, 216, 239, 0.95);
+        box-shadow: 0 12px 32px rgba(15, 66, 130, 0.07);
+      }
+
+      .lowerCard img {
+        width: 100%;
+        aspect-ratio: 16 / 7.6;
+        object-fit: cover;
+      }
+
+      .lowerCardBody {
+        padding: 24px 26px 26px;
+      }
+
+      .lowerCardBody span {
+        color: var(--brand-700);
+        font-family: var(--numeric);
+        font-size: 0.7rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      .lowerCardBody h3 {
+        margin: 8px 0 0;
+        color: var(--brand-900);
+        font-size: 1.18rem;
+        font-weight: 800;
+        line-height: 1.45;
+      }
+
+      .lowerCardBody p {
+        margin: 10px 0 0;
+        color: var(--text);
+        font-size: 0.84rem;
+        font-weight: 500;
+        line-height: 1.75;
+      }
+
+      .cta {
+        padding-block: 84px;
+        color: #ffffff;
+        background:
+          linear-gradient(90deg, rgba(5, 39, 102, 0.92), rgba(10, 52, 135, 0.76)),
+          url("../../assets/contact-wind.png") center / cover;
+      }
+
+      .ctaInner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 56px;
+      }
+
+      .cta h2 {
+        margin: 0;
+        font-family: var(--serif);
+        font-size: 2.25rem;
+        font-weight: 800;
+        line-height: 1.38;
+      }
+
+      .cta p {
+        margin: 14px 0 0;
+        color: rgba(255, 255, 255, 0.82);
+        font-size: 0.92rem;
+        font-weight: 600;
+        line-height: 1.8;
+      }
+
+      .ctaButtons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+      }
+
+      .ctaButtons .buttonSecondary {
+        background: #ffffff;
+      }
+
+      .footer {
+        padding-block: 44px 52px;
+        color: #ffffff;
+        background: #031f52;
+      }
+
+      .footerInner {
+        display: flex;
+        justify-content: space-between;
+        gap: 60px;
+      }
+
+      .footer img {
+        width: 180px;
+        filter: brightness(0) invert(1);
+      }
+
+      .footerLinks {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(120px, 1fr));
+        gap: 42px;
+        color: rgba(255, 255, 255, 0.74);
+        font-size: 0.78rem;
+        font-weight: 600;
+        line-height: 2.1;
+      }
+
+      @media (max-width: 900px) {
+        .container {
+          width: min(100% - 40px, 720px);
+        }
+
+        .header {
+          height: 72px;
+          padding-inline: 20px;
+        }
+
+        .brand img {
+          width: 168px;
+        }
+
+        .nav {
+          display: none;
+        }
+
+        .hero,
+        .policy,
+        .pillars,
+        .contribution,
+        .process,
+        .lowerLinks {
+          padding-block: 72px;
+        }
+
+        .heroInner,
+        .policyInner,
+        .pillarsHeader,
+        .contributionHeader,
+        .processGrid {
+          grid-template-columns: 1fr;
+          gap: 34px;
+        }
+
+        .heroTitle {
+          font-size: 2.48rem;
+        }
+
+        .heading {
+          font-size: 2rem;
+        }
+
+        .heroImagePanel {
+          min-height: 360px;
+        }
+
+        .heroImagePanel img {
+          height: 360px;
+        }
+
+        .heroStats,
+        .pillarGrid,
+        .matrix,
+        .lowerGrid {
+          grid-template-columns: 1fr;
+        }
+
+        .pillarCard.large,
+        .pillarCard {
+          min-height: 320px;
+        }
+
+        .matrixItem {
+          min-height: auto;
+          border-right: 0;
+          border-bottom: 1px solid rgba(216, 228, 243, 0.95);
+        }
+
+        .lowerHeader,
+        .ctaInner,
+        .footerInner {
+          display: grid;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <a class="brand" href="#">
+        <img src="../../assets/noah_logo.png" alt="NOAH CONSTRUCTION CO.,LTD. 諾亜建設株式会社" />
+      </a>
+      <nav class="nav" aria-label="グローバルナビゲーション">
+        <a href="#">企業情報</a>
+        <a href="#">事業紹介</a>
+        <a class="active" href="#">サステナビリティ</a>
+        <a href="#">ニュース</a>
+        <a href="#">採用情報</a>
+        <a class="navCta" href="#">お問い合わせ</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="container heroInner">
+          <div>
+            <p class="eyebrow">SUSTAINABILITY <span>サステナビリティ</span></p>
+            <h1 id="hero-title" class="heroTitle">
+              地域と環境に、<br />
+              事業で応える。
+            </h1>
+            <p class="heroLead">
+              NOAHは、再生可能エネルギー、蓄電池、水素、AIデータセンターを組み合わせ、地域と企業の脱炭素化を実装するインフラづくりに取り組みます。
+            </p>
+            <div class="heroActions">
+              <a class="button" href="#">取り組みを見る</a>
+              <a class="buttonSecondary" href="#">事業紹介へ</a>
+            </div>
+          </div>
+
+          <figure class="heroImagePanel">
+            <img src="../../assets/strengths-bg-integrated-energy.png" alt="再生可能エネルギーと蓄電池、水素設備がつながる地域インフラ" />
+            <figcaption class="heroBadge">
+              <b>発電する、ためる、使う。その循環を地域の力に変えていく。</b>
+              <span>地域共生・環境保全・カーボンニュートラルを、事業開発と運用の両面から推進します。</span>
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="container heroStats" aria-label="サステナビリティの重点視点">
+          <div class="heroStat">
+            <b>01</b>
+            <span>地域とともに進める事業形成</span>
+          </div>
+          <div class="heroStat">
+            <b>02</b>
+            <span>自然環境と景観に配慮した計画</span>
+          </div>
+          <div class="heroStat">
+            <b>03</b>
+            <span>脱炭素インフラの社会実装</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="policy" aria-labelledby="policy-title">
+        <div class="container policyInner">
+          <div class="policyPanel">
+            <p class="sectionLabel">POLICY <span>基本方針</span></p>
+            <h2 id="policy-title" class="heading">
+              持続可能な社会を、<br />
+              現場で機能する<br />
+              インフラとして。
+            </h2>
+            <p class="lead">
+              事業の構想、導入、運用までを一体で考え、環境価値と事業価値が両立する形を目指します。
+            </p>
+          </div>
+
+          <div class="policyList">
+            <article class="policyItem">
+              <b>01</b>
+              <div>
+                <h3>地域の理解と共生を前提に、事業を育てる。</h3>
+                <p>
+                  立地や周辺環境、地域の暮らしを踏まえ、計画段階から対話と情報共有を重ねます。
+                </p>
+              </div>
+            </article>
+            <article class="policyItem">
+              <b>02</b>
+              <div>
+                <h3>環境への影響を抑え、自然と調和する計画へ。</h3>
+                <p>
+                  景観、生態系、騒音、安全性などを丁寧に確認し、運用後も継続的な改善につなげます。
+                </p>
+              </div>
+            </article>
+            <article class="policyItem">
+              <b>03</b>
+              <div>
+                <h3>脱炭素化を、発電・蓄電・利用の循環で支える。</h3>
+                <p>
+                  再生可能エネルギー、蓄電池、水素、AI制御を組み合わせ、電力を使い続けられる仕組みにします。
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="pillars" aria-labelledby="pillars-title">
+        <div class="container">
+          <div class="pillarsHeader">
+            <div>
+              <p class="sectionLabel">THREE THEMES <span>3つの重点テーマ</span></p>
+              <h2 id="pillars-title" class="heading">
+                NOAHの事業を支える、<br />
+                3つの視点。
+              </h2>
+            </div>
+            <p class="lead">
+              下層ページでは、地域共生、環境保全、カーボンニュートラルの各テーマについて、NOAHの考え方と取り組みを詳しく紹介します。
+            </p>
+          </div>
+
+          <div class="pillarGrid">
+            <a class="pillarCard large" href="#">
+              <img src="../../assets/sustainability-community-relations-v2.png" alt="地域の方々と現場スタッフが発電設備を見渡す様子" />
+              <div class="pillarBody">
+                <span class="num">THEME 01</span>
+                <h3>地域共生</h3>
+                <p>地域との対話を重ね、暮らしと事業が共に発展する関係づくりを進めます。</p>
+              </div>
+            </a>
+            <div class="pillarStack">
+              <a class="pillarCard" href="#">
+                <img src="../../assets/sustainability-environment-v2.png" alt="自然環境と調和する再生可能エネルギー設備" />
+                <div class="pillarBody">
+                  <span class="num">THEME 02</span>
+                  <h3>環境保全</h3>
+                  <p>計画から運用まで自然環境に配慮し、景観と生態系への影響低減に取り組みます。</p>
+                </div>
+              </a>
+              <a class="pillarCard" href="#">
+                <img src="../../assets/sustainability-carbon-neutrality-v2.png" alt="蓄電池、太陽光、水素設備が連携する脱炭素インフラ" />
+                <div class="pillarBody">
+                  <span class="num">THEME 03</span>
+                  <h3>カーボンニュートラル</h3>
+                  <p>蓄電池・再エネ・水素を組み合わせ、脱炭素社会を支える基盤づくりを進めます。</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contribution" aria-labelledby="contribution-title">
+        <div class="container">
+          <div class="contributionHeader">
+            <div>
+              <p class="sectionLabel">BUSINESS IMPACT <span>事業を通じた貢献</span></p>
+              <h2 id="contribution-title" class="heading">
+                6つの事業領域で、<br />
+                脱炭素の実装を進める。
+              </h2>
+            </div>
+            <p class="lead">
+              サステナビリティを独立した活動としてではなく、各事業の計画・施工・運用のなかに組み込みます。
+            </p>
+          </div>
+
+          <div class="matrix">
+            <article class="matrixItem">
+              <span class="tag">BATTERY</span>
+              <h3>蓄電池事業</h3>
+              <p>再エネの変動を吸収し、電力の安定利用とBCPを支えます。</p>
+              <div class="line"></div>
+            </article>
+            <article class="matrixItem">
+              <span class="tag">WIND</span>
+              <h3>風力発電事業</h3>
+              <p>地域特性に合わせた発電事業で、再生可能エネルギーの供給を広げます。</p>
+              <div class="line"></div>
+            </article>
+            <article class="matrixItem">
+              <span class="tag">BIOMASS</span>
+              <h3>バイオマス</h3>
+              <p>木質燃料やPKSなどを活用し、循環型エネルギー利用を進めます。</p>
+              <div class="line"></div>
+            </article>
+            <article class="matrixItem">
+              <span class="tag">HOPPER</span>
+              <h3>走行式集塵ホッパー</h3>
+              <p>港湾荷役の粉じん飛散を抑え、作業環境と周辺環境の改善に貢献します。</p>
+              <div class="line"></div>
+            </article>
+            <article class="matrixItem">
+              <span class="tag">HYDROGEN</span>
+              <h3>水素モビリティ</h3>
+              <p>商用車やステーションを通じて、物流・移動の脱炭素化を支えます。</p>
+              <div class="line"></div>
+            </article>
+            <article class="matrixItem">
+              <span class="tag">AI DC</span>
+              <h3>AIデータセンター</h3>
+              <p>電力・冷却・EMSを組み合わせ、次世代計算基盤の省エネ化を目指します。</p>
+              <div class="line"></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="process" aria-labelledby="process-title">
+        <div class="container processGrid">
+          <div>
+            <p class="sectionLabel">ACTION FLOW <span>取り組みプロセス</span></p>
+            <h2 id="process-title" class="heading">
+              構想から運用まで、<br />
+              継続して見直す。
+            </h2>
+            <p class="lead">
+              サステナビリティは計画時のチェック項目ではなく、事業を続けるほど価値を高める運用テーマです。
+            </p>
+          </div>
+          <div class="processSteps">
+            <article class="step">
+              <b>01</b>
+              <div>
+                <h3>立地・地域特性の把握</h3>
+                <p>風況、電力需要、周辺環境、物流動線などを整理します。</p>
+              </div>
+            </article>
+            <article class="step">
+              <b>02</b>
+              <div>
+                <h3>環境・安全・景観への配慮</h3>
+                <p>計画段階で影響を確認し、地域に合う導入形を検討します。</p>
+              </div>
+            </article>
+            <article class="step">
+              <b>03</b>
+              <div>
+                <h3>設備導入と運用設計</h3>
+                <p>発電・蓄電・利用をつなぐ設備構成と管理体制を設計します。</p>
+              </div>
+            </article>
+            <article class="step">
+              <b>04</b>
+              <div>
+                <h3>運用データにもとづく改善</h3>
+                <p>遠隔監視、O&M、CO2削減効果の把握を通じて継続改善します。</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="lowerLinks" aria-labelledby="lower-title">
+        <div class="container">
+          <div class="lowerHeader">
+            <div>
+              <p class="sectionLabel">CONTENTS <span>詳しく見る</span></p>
+              <h2 id="lower-title" class="heading">テーマ別の取り組み</h2>
+            </div>
+            <a class="buttonSecondary" href="#">事業紹介を見る</a>
+          </div>
+
+          <div class="lowerGrid">
+            <a class="lowerCard" href="#">
+              <img src="../../assets/sustainability-community-relations-v2.png" alt="地域共生の取り組み" />
+              <div class="lowerCardBody">
+                <span>COMMUNITY RELATIONS</span>
+                <h3>地域共生</h3>
+                <p>地域との対話、合意形成、事業を通じた地域価値の向上について紹介します。</p>
+              </div>
+            </a>
+            <a class="lowerCard" href="#">
+              <img src="../../assets/sustainability-environment-v2.png" alt="環境保全の取り組み" />
+              <div class="lowerCardBody">
+                <span>ENVIRONMENT</span>
+                <h3>環境保全</h3>
+                <p>自然環境、景観、生態系、安全性に配慮した計画と運用について紹介します。</p>
+              </div>
+            </a>
+            <a class="lowerCard" href="#">
+              <img src="../../assets/sustainability-carbon-neutrality-v2.png" alt="カーボンニュートラルの取り組み" />
+              <div class="lowerCardBody">
+                <span>CARBON NEUTRALITY</span>
+                <h3>カーボンニュートラル</h3>
+                <p>再生可能エネルギー、蓄電池、水素を組み合わせた脱炭素化支援を紹介します。</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta">
+        <div class="container ctaInner">
+          <div>
+            <h2>地域と企業の脱炭素化を、<br />事業計画からご相談ください。</h2>
+            <p>再生可能エネルギー、蓄電池、水素、AIデータセンターまで、目的に合わせた構想を一緒に検討します。</p>
+          </div>
+          <div class="ctaButtons">
+            <a class="button" href="#">お問い合わせ</a>
+            <a class="buttonSecondary" href="#">事業紹介を見る</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footerInner">
+        <div>
+          <img src="../../assets/noah_logo.png" alt="NOAH CONSTRUCTION CO.,LTD." />
+        </div>
+        <div class="footerLinks">
+          <div>企業情報<br />トップメッセージ<br />企業理念・ビジョン</div>
+          <div>事業紹介<br />蓄電池事業<br />風力発電事業</div>
+          <div>サステナビリティ<br />地域共生<br />環境保全</div>
+          <div>お問い合わせ<br />資料ダウンロード<br />ニュース</div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

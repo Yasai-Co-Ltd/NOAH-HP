@@ -1,0 +1,807 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>サステナビリティページ ワイヤーフレーム v2</title>
+    <style>
+      :root {
+        --brand-900: #052766;
+        --brand-800: #0a3487;
+        --brand-700: #0c459e;
+        --brand-100: #e8f4ff;
+        --brand-050: #f5faff;
+        --cyan: #53c1e5;
+        --teal: #65bbb4;
+        --green: #5fbf83;
+        --ink: #12264a;
+        --text: #26334d;
+        --muted: #5e6f8c;
+        --line: #d8e4f3;
+        --surface: #ffffff;
+        --sans: "Hiragino Sans", "Yu Gothic", "Meiryo", system-ui, sans-serif;
+        --serif: "Hiragino Mincho ProN", "Yu Mincho", "YuMincho", serif;
+        --numeric: Arial, sans-serif;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        color: var(--text);
+        font-family: var(--sans);
+        background: #ffffff;
+        letter-spacing: 0;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .container {
+        width: min(100% - 128px, 1360px);
+        margin-inline: auto;
+      }
+
+      .header {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 86px;
+        padding-inline: 48px;
+        background: rgba(255, 255, 255, 0.94);
+        border-bottom: 1px solid rgba(216, 228, 243, 0.88);
+        backdrop-filter: blur(16px);
+      }
+
+      .brand img {
+        width: 210px;
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        color: var(--brand-900);
+        font-size: 0.88rem;
+        font-weight: 700;
+      }
+
+      .nav .active {
+        color: var(--brand-700);
+      }
+
+      .navCta {
+        display: inline-grid;
+        min-height: 44px;
+        place-items: center;
+        padding-inline: 20px;
+        color: #ffffff;
+        background: var(--brand-900);
+      }
+
+      .eyebrow,
+      .sectionLabel {
+        display: inline-grid;
+        gap: 5px;
+        margin: 0 0 18px;
+        color: var(--brand-700);
+        font-family: var(--numeric);
+        font-size: 0.74rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      .eyebrow span,
+      .sectionLabel span {
+        color: var(--muted);
+        font-family: var(--sans);
+        font-size: 0.76rem;
+        letter-spacing: 0;
+      }
+
+      .hero {
+        position: relative;
+        overflow: hidden;
+        min-height: 492px;
+        color: #ffffff;
+        background: #082b6a;
+        isolation: isolate;
+      }
+
+      .heroImage {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center 62%;
+      }
+
+      .heroOverlay {
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        pointer-events: none;
+        background: linear-gradient(
+          90deg,
+          rgba(5, 39, 102, 0.9) 0%,
+          rgba(5, 39, 102, 0.58) 50%,
+          rgba(5, 39, 102, 0.08) 100%
+        );
+      }
+
+      .heroInner {
+        position: relative;
+        z-index: 2;
+        display: grid;
+        align-content: center;
+        min-height: 492px;
+        padding-block: 72px;
+      }
+
+      .heroTitle {
+        max-width: 940px;
+        margin: 0;
+        color: #ffffff;
+        font-family: var(--serif);
+        font-size: clamp(2.6rem, 4.6vw, 4.6rem);
+        font-weight: 800;
+        line-height: 1.28;
+      }
+
+      .hero .eyebrow {
+        color: #ffffff;
+      }
+
+      .hero .eyebrow span {
+        color: #d7efff;
+      }
+
+      .heroLead {
+        max-width: 900px;
+        margin: 34px 0 0;
+        color: rgba(255, 255, 255, 0.95);
+        font-size: 1rem;
+        font-weight: 700;
+        line-height: 1.9;
+      }
+
+      .heroActions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        margin-top: 24px;
+      }
+
+      .button,
+      .buttonSecondary {
+        display: inline-grid;
+        min-height: 52px;
+        place-items: center;
+        padding-inline: 25px;
+        font-size: 0.9rem;
+        font-weight: 700;
+        border: 1px solid var(--brand-900);
+      }
+
+      .button {
+        color: #ffffff;
+        background: var(--brand-900);
+      }
+
+      .buttonSecondary {
+        color: var(--brand-900);
+        background: #ffffff;
+      }
+
+      .hero .button {
+        color: var(--brand-900);
+        background: #ffffff;
+        border-color: #ffffff;
+      }
+
+      .hero .buttonSecondary {
+        color: #ffffff;
+        background: transparent;
+        border-color: rgba(255, 255, 255, 0.76);
+      }
+
+      .anchorStrip {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1px;
+        margin-top: 0;
+        transform: translateY(-1px);
+        overflow: hidden;
+        background: var(--line);
+        border: 1px solid var(--line);
+      }
+
+      .anchorStrip a {
+        display: grid;
+        grid-template-columns: auto minmax(0, 1fr);
+        gap: 16px;
+        align-items: center;
+        min-height: 82px;
+        padding: 21px 26px;
+        background: #ffffff;
+      }
+
+      .anchorStrip b {
+        color: var(--cyan);
+        font-family: var(--numeric);
+        font-size: 1.58rem;
+        line-height: 1;
+      }
+
+      .anchorStrip span {
+        color: var(--brand-900);
+        font-size: 0.88rem;
+        font-weight: 800;
+        line-height: 1.5;
+      }
+
+      .themes {
+        padding-block: 100px 108px;
+        background:
+          linear-gradient(180deg, #ffffff 0%, #f5faff 56%, #eef8f4 100%);
+      }
+
+      .themesHeader {
+        display: grid;
+        grid-template-columns: minmax(360px, 0.72fr) minmax(520px, 1fr);
+        gap: 96px;
+        align-items: end;
+        margin-bottom: 38px;
+      }
+
+      .heading {
+        margin: 0;
+        color: var(--brand-900);
+        font-family: var(--serif);
+        font-size: 2.72rem;
+        font-weight: 800;
+        line-height: 1.28;
+      }
+
+      .lead {
+        margin: 20px 0 0;
+        color: var(--text);
+        font-size: 0.96rem;
+        font-weight: 600;
+        line-height: 1.95;
+      }
+
+      .themeGrid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 22px;
+      }
+
+      .themeCard {
+        display: grid;
+        overflow: hidden;
+        background: #ffffff;
+        border: 1px solid rgba(196, 216, 239, 0.95);
+        box-shadow: 0 16px 38px rgba(15, 66, 130, 0.08);
+      }
+
+      .themeImage {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .themeImage img {
+        width: 100%;
+        aspect-ratio: 16 / 10;
+        object-fit: cover;
+      }
+
+      .themeImage::after {
+        position: absolute;
+        inset: 0;
+        content: "";
+        background: linear-gradient(180deg, rgba(5, 39, 102, 0) 46%, rgba(5, 39, 102, 0.32) 100%);
+      }
+
+      .themeBody {
+        display: grid;
+        min-height: 220px;
+        padding: 26px 28px 28px;
+      }
+
+      .themeBody .num {
+        color: var(--brand-700);
+        font-family: var(--numeric);
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      .themeBody h2 {
+        margin: 12px 0 0;
+        color: var(--brand-900);
+        font-size: 1.48rem;
+        font-weight: 800;
+        line-height: 1.4;
+      }
+
+      .themeBody p {
+        margin: 10px 0 0;
+        color: var(--text);
+        font-size: 0.86rem;
+        font-weight: 500;
+        line-height: 1.75;
+      }
+
+      .themeCta {
+        align-self: end;
+        margin-top: 20px;
+        color: var(--brand-700);
+        font-size: 0.82rem;
+        font-weight: 800;
+      }
+
+      .stance {
+        padding-block: 74px;
+        color: #ffffff;
+        background:
+          linear-gradient(90deg, rgba(5, 39, 102, 0.96), rgba(10, 52, 135, 0.86)),
+          var(--brand-900);
+      }
+
+      .stanceInner {
+        display: grid;
+        grid-template-columns: minmax(360px, 0.74fr) minmax(620px, 1fr);
+        gap: 82px;
+        align-items: center;
+      }
+
+      .stance .sectionLabel,
+      .stance .sectionLabel span,
+      .stance .heading {
+        color: #ffffff;
+      }
+
+      .stance .lead {
+        color: rgba(255, 255, 255, 0.82);
+      }
+
+      .stanceList {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1px;
+        background: rgba(255, 255, 255, 0.18);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+      }
+
+      .stanceItem {
+        min-height: 188px;
+        padding: 26px 24px;
+        background: rgba(255, 255, 255, 0.08);
+      }
+
+      .stanceItem b {
+        color: var(--cyan);
+        font-family: var(--numeric);
+        font-size: 1.72rem;
+        line-height: 1;
+      }
+
+      .stanceItem h3 {
+        margin: 18px 0 0;
+        color: #ffffff;
+        font-size: 1.08rem;
+        font-weight: 800;
+        line-height: 1.45;
+      }
+
+      .stanceItem p {
+        margin: 10px 0 0;
+        color: rgba(255, 255, 255, 0.76);
+        font-size: 0.8rem;
+        font-weight: 600;
+        line-height: 1.7;
+      }
+
+      .businessLink {
+        overflow: hidden;
+        padding-block: 88px;
+        background: #ffffff;
+      }
+
+      .businessPanel {
+        display: grid;
+        grid-template-columns: minmax(440px, 0.9fr) minmax(560px, 1.1fr);
+        min-height: 430px;
+        border: 1px solid rgba(196, 216, 239, 0.95);
+        box-shadow: 0 16px 38px rgba(15, 66, 130, 0.08);
+      }
+
+      .businessImage {
+        min-height: 430px;
+        background:
+          linear-gradient(90deg, rgba(5, 39, 102, 0.18), rgba(5, 39, 102, 0)),
+          url("../../assets/strengths-bg-integrated-energy.png") center / cover;
+      }
+
+      .businessBody {
+        display: grid;
+        align-content: center;
+        padding: 54px 60px;
+        background: #ffffff;
+      }
+
+      .businessBody .heading {
+        font-size: 2.35rem;
+      }
+
+      .businessTags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 28px;
+      }
+
+      .businessTags span {
+        display: inline-grid;
+        min-height: 36px;
+        place-items: center;
+        padding-inline: 13px;
+        color: var(--brand-900);
+        font-size: 0.78rem;
+        font-weight: 800;
+        background: var(--brand-050);
+        border: 1px solid rgba(196, 216, 239, 0.95);
+      }
+
+      .businessBody .buttonSecondary {
+        justify-self: start;
+        margin-top: 32px;
+      }
+
+      .cta {
+        padding-block: 84px;
+        color: #ffffff;
+        background:
+          linear-gradient(90deg, rgba(5, 39, 102, 0.94), rgba(10, 52, 135, 0.78)),
+          url("../../assets/strengths-bg-integrated-energy.png") center / cover;
+      }
+
+      .ctaInner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 56px;
+      }
+
+      .cta h2 {
+        margin: 0;
+        font-family: var(--serif);
+        font-size: 2.25rem;
+        font-weight: 800;
+        line-height: 1.38;
+      }
+
+      .cta p {
+        margin: 14px 0 0;
+        color: rgba(255, 255, 255, 0.82);
+        font-size: 0.92rem;
+        font-weight: 600;
+        line-height: 1.8;
+      }
+
+      .ctaButtons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+      }
+
+      .footer {
+        padding-block: 44px 52px;
+        color: #ffffff;
+        background: #031f52;
+      }
+
+      .footerInner {
+        display: flex;
+        justify-content: space-between;
+        gap: 60px;
+      }
+
+      .footer img {
+        width: 180px;
+        filter: brightness(0) invert(1);
+      }
+
+      .footerLinks {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(120px, 1fr));
+        gap: 42px;
+        color: rgba(255, 255, 255, 0.74);
+        font-size: 0.78rem;
+        font-weight: 600;
+        line-height: 2.1;
+      }
+
+      @media (max-width: 900px) {
+        .container {
+          width: min(100% - 40px, 720px);
+        }
+
+        .header {
+          height: 72px;
+          padding-inline: 20px;
+        }
+
+        .brand img {
+          width: 168px;
+        }
+
+        .nav {
+          display: none;
+        }
+
+        .hero,
+        .themes,
+        .stance,
+        .businessLink,
+        .cta {
+          padding-block: 72px;
+        }
+
+        .heroInner,
+        .themesHeader,
+        .stanceInner,
+        .businessPanel {
+          grid-template-columns: 1fr;
+          gap: 34px;
+        }
+
+        .heroTitle {
+          font-size: 2.48rem;
+        }
+
+        .heading,
+        .businessBody .heading {
+          font-size: 2rem;
+        }
+
+        .anchorStrip,
+        .themeGrid,
+        .stanceList {
+          grid-template-columns: 1fr;
+        }
+
+        .themeBody {
+          min-height: auto;
+        }
+
+        .businessBody {
+          padding: 34px 28px 38px;
+        }
+
+        .businessImage {
+          min-height: 280px;
+        }
+
+        .ctaInner,
+        .footerInner {
+          display: grid;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <a class="brand" href="#">
+        <img src="../../assets/noah_logo.png" alt="NOAH CONSTRUCTION CO.,LTD. 諾亜建設株式会社" />
+      </a>
+      <nav class="nav" aria-label="グローバルナビゲーション">
+        <a href="#">企業情報</a>
+        <a href="#">事業紹介</a>
+        <a class="active" href="#">サステナビリティ</a>
+        <a href="#">ニュース</a>
+        <a href="#">採用情報</a>
+        <a class="navCta" href="#">お問い合わせ</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <img
+          class="heroImage"
+          src="../../assets/sustainability-carbon-neutrality-v2.png"
+          alt=""
+          aria-hidden="true"
+        />
+        <div class="heroOverlay" aria-hidden="true"></div>
+        <div class="container heroInner">
+          <div>
+            <p class="eyebrow">SUSTAINABILITY <span>サステナビリティ</span></p>
+            <h1 id="hero-title" class="heroTitle">
+              地域・環境・脱炭素を、<br />
+              事業の中心に。
+            </h1>
+            <p class="heroLead">
+              NOAHは、再生可能エネルギー、蓄電池、水素、AIデータセンターを組み合わせ、持続可能なインフラの実装に取り組みます。
+            </p>
+            <div class="heroActions">
+              <a class="button" href="#themes">テーマを見る</a>
+              <a class="buttonSecondary" href="#">事業紹介へ</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="container anchorStrip" aria-label="サステナビリティの主要テーマ">
+        <a href="#themes">
+          <b>01</b>
+          <span>地域共生</span>
+        </a>
+        <a href="#themes">
+          <b>02</b>
+          <span>環境保全</span>
+        </a>
+        <a href="#themes">
+          <b>03</b>
+          <span>カーボンニュートラル</span>
+        </a>
+      </div>
+
+      <section class="themes" id="themes" aria-labelledby="themes-title">
+        <div class="container">
+          <div class="themesHeader">
+            <div>
+              <p class="sectionLabel">CONTENTS <span>テーマ別の取り組み</span></p>
+              <h2 id="themes-title" class="heading">
+                3つの視点で見る、<br />
+                NOAHの取り組み。
+              </h2>
+            </div>
+            <p class="lead">
+              地域共生、環境保全、カーボンニュートラルの3つの視点から、NOAHの考え方と取り組みを紹介します。
+            </p>
+          </div>
+
+          <div class="themeGrid">
+            <a class="themeCard" href="#">
+              <div class="themeImage">
+                <img src="../../assets/sustainability/community-relations-v3.png" alt="地域住民と現場スタッフが地図を見ながら地域の計画について話し合う様子" />
+              </div>
+              <div class="themeBody">
+                <span class="num">THEME 01</span>
+                <h2>地域共生</h2>
+                <p>地域との対話を重ね、暮らしと事業が共に発展する関係づくりを進めます。</p>
+                <span class="themeCta">詳しく見る</span>
+              </div>
+            </a>
+
+            <a class="themeCard" href="#">
+              <div class="themeImage">
+                <img src="../../assets/sustainability/environment-v3.png" alt="水辺の自然環境を調査する現場スタッフ" />
+              </div>
+              <div class="themeBody">
+                <span class="num">THEME 02</span>
+                <h2>環境保全</h2>
+                <p>計画から運用まで自然環境に配慮し、景観と生態系への影響低減に取り組みます。</p>
+                <span class="themeCta">詳しく見る</span>
+              </div>
+            </a>
+
+            <a class="themeCard" href="#">
+              <div class="themeImage">
+                <img src="../../assets/sustainability/carbon-neutrality-v3.png" alt="蓄電池、太陽光、水素設備が連携するカーボンニュートラルインフラ" />
+              </div>
+              <div class="themeBody">
+                <span class="num">THEME 03</span>
+                <h2>カーボンニュートラル</h2>
+                <p>蓄電池・再エネ・水素を組み合わせ、脱炭素社会を支える基盤づくりを進めます。</p>
+                <span class="themeCta">詳しく見る</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="stance" aria-labelledby="stance-title">
+        <div class="container stanceInner">
+          <div>
+            <p class="sectionLabel">NOAH'S STANCE <span>NOAHの考え方</span></p>
+            <h2 id="stance-title" class="heading">
+              理念で終わらせず、<br />
+              事業として実装する。
+            </h2>
+            <p class="lead">
+              発電、蓄電、利用、運用までをつなぎ、地域や企業の現場で使い続けられる仕組みにします。
+            </p>
+          </div>
+          <div class="stanceList">
+            <article class="stanceItem">
+              <b>01</b>
+              <h3>地域と進める</h3>
+              <p>立地や暮らしに配慮し、地域と対話しながら計画します。</p>
+            </article>
+            <article class="stanceItem">
+              <b>02</b>
+              <h3>環境を守る</h3>
+              <p>景観、生態系、安全性に配慮し、影響低減を図ります。</p>
+            </article>
+            <article class="stanceItem">
+              <b>03</b>
+              <h3>脱炭素を支える</h3>
+              <p>再エネ、蓄電池、水素、AI制御を組み合わせます。</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="businessLink" aria-labelledby="business-title">
+        <div class="container businessPanel">
+          <div class="businessImage" aria-hidden="true"></div>
+          <div class="businessBody">
+            <p class="sectionLabel">BUSINESS <span>事業を通じた貢献</span></p>
+            <h2 id="business-title" class="heading">
+              6つの事業領域で、<br />
+              持続可能なインフラへ。
+            </h2>
+            <p class="lead">
+              サステナビリティの考え方は各テーマで、具体的な事業内容は事業紹介ページで確認できます。
+            </p>
+            <div class="businessTags" aria-label="関連事業">
+              <span>蓄電池</span>
+              <span>風力発電</span>
+              <span>バイオマス</span>
+              <span>走行式集塵ホッパー</span>
+              <span>水素モビリティ</span>
+              <span>AIデータセンター</span>
+            </div>
+            <a class="buttonSecondary" href="#">事業紹介を見る</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta">
+        <div class="container ctaInner">
+          <div>
+            <h2>地域と企業の脱炭素化を、<br />事業計画からご相談ください。</h2>
+            <p>再生可能エネルギー、蓄電池、水素、AIデータセンターまで、目的に合わせた構想を一緒に検討します。</p>
+          </div>
+          <div class="ctaButtons">
+            <a class="button" href="#">お問い合わせ</a>
+            <a class="buttonSecondary" href="#">事業紹介を見る</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footerInner">
+        <div>
+          <img src="../../assets/noah_logo.png" alt="NOAH CONSTRUCTION CO.,LTD." />
+        </div>
+        <div class="footerLinks">
+          <div>企業情報<br />トップメッセージ<br />企業理念・ビジョン</div>
+          <div>事業紹介<br />蓄電池事業<br />風力発電事業</div>
+          <div>サステナビリティ<br />地域共生<br />環境保全</div>
+          <div>お問い合わせ<br />資料ダウンロード<br />ニュース</div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

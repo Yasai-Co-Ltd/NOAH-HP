@@ -114,7 +114,7 @@ const NAV_LINKS: NavLink[] = [
         },
       ],
       feature: {
-        image: "/assets/recruit-hq.jpg",
+        image: "/assets/sustainability/carbon-neutrality-v3.png",
         title: "3 つの視点でとらえる、サステナビリティ。",
         description: "サステナビリティトップを見る",
         href: "/sustainability",

@@ -27,7 +27,7 @@ export const PAGES = {
   "/business/ai-data-center": false,
 
   // サステナビリティ
-  "/sustainability": false,
+  "/sustainability": true,
   "/sustainability/community-relations": false,
   "/sustainability/environment": false,
   "/sustainability/carbon-neutrality": false,
