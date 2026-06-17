@@ -33,7 +33,7 @@ export const PAGES = {
   "/sustainability/carbon-neutrality": false,
 
   // その他
-  "/news": false,
+  "/news": true,
   "/recruit": false,
   "/contact": false,
   "/privacy": false,

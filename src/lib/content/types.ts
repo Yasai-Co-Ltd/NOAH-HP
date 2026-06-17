@@ -37,10 +37,15 @@ export interface NewsItem {
   id: string;
   slug: string;
   title: string;
+  excerpt?: string;
   /** ISO 8601 date string (YYYY-MM-DD). */
   publishedAt: string;
   category: string;
   href: string;
+  image?: {
+    src: string;
+    alt: string;
+  };
 }
 
 export interface FindParams {

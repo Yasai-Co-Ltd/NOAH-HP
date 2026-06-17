@@ -37,7 +37,7 @@ export async function NewsRecruit() {
                 </Reveal>
               ))}
             </div>
-            <TextLink href="#" className={styles.more}>
+            <TextLink href="/news" className={styles.more}>
               すべてのお知らせを見る
             </TextLink>
           </div>

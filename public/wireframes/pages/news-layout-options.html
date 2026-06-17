@@ -1,0 +1,645 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>NOAH News Layout Options</title>
+    <style>
+      :root {
+        --navy: #052766;
+        --navy-2: #0a3a85;
+        --cyan: #42c7e8;
+        --ink: #14223a;
+        --muted: #63718a;
+        --line: #c7d8ec;
+        --paper: #f6fbff;
+        --white: #ffffff;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        color: var(--ink);
+        font-family:
+          "Hiragino Kaku Gothic ProN",
+          "Yu Gothic",
+          "Noto Sans JP",
+          system-ui,
+          sans-serif;
+        background:
+          radial-gradient(circle at 88% 4%, rgba(66, 199, 232, 0.12), transparent 30%),
+          linear-gradient(180deg, #eef7ff 0%, #ffffff 22%, #f5faff 100%);
+      }
+
+      .page {
+        width: 1440px;
+        margin: 0 auto;
+        padding: 48px 54px 70px;
+      }
+
+      .intro {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 32px;
+        align-items: end;
+        margin-bottom: 34px;
+        padding-bottom: 28px;
+        border-bottom: 1px solid rgba(5, 39, 102, 0.16);
+      }
+
+      .eyebrow {
+        margin: 0 0 10px;
+        color: var(--cyan);
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin: 0;
+      }
+
+      h1 {
+        color: var(--navy);
+        font-family: Georgia, "Times New Roman", "Yu Mincho", serif;
+        font-size: 42px;
+        line-height: 1.24;
+      }
+
+      .intro p {
+        max-width: 620px;
+        margin-top: 16px;
+        color: var(--muted);
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 1.8;
+      }
+
+      .legend {
+        display: flex;
+        gap: 9px;
+        align-items: center;
+      }
+
+      .legend span,
+      .chip {
+        display: inline-grid;
+        min-height: 30px;
+        place-items: center;
+        padding: 0 12px;
+        color: var(--navy);
+        font-size: 12px;
+        font-weight: 800;
+        background: rgba(255, 255, 255, 0.88);
+        border: 1px solid rgba(199, 216, 236, 0.95);
+      }
+
+      .option {
+        margin-top: 42px;
+        overflow: hidden;
+        background: rgba(255, 255, 255, 0.88);
+        border: 1px solid rgba(199, 216, 236, 0.95);
+        box-shadow: 0 24px 70px rgba(15, 66, 130, 0.09);
+      }
+
+      .optionHead {
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        gap: 18px;
+        align-items: center;
+        padding: 26px 30px;
+        background:
+          linear-gradient(90deg, rgba(5, 39, 102, 0.97), rgba(8, 63, 142, 0.86)),
+          url("../../assets/news/default-eyecatch-noah.png") center / cover;
+        color: var(--white);
+      }
+
+      .optionMark {
+        display: grid;
+        width: 56px;
+        height: 56px;
+        place-items: center;
+        color: var(--cyan);
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 24px;
+        font-weight: 700;
+        background: rgba(255, 255, 255, 0.14);
+        border: 1px solid rgba(255, 255, 255, 0.32);
+      }
+
+      .optionHead h2 {
+        font-family: Georgia, "Times New Roman", "Yu Mincho", serif;
+        font-size: 30px;
+        line-height: 1.28;
+      }
+
+      .optionHead p {
+        margin-top: 8px;
+        color: rgba(255, 255, 255, 0.86);
+        font-size: 13px;
+        font-weight: 700;
+        line-height: 1.7;
+      }
+
+      .fit {
+        padding: 9px 12px;
+        color: var(--white);
+        font-size: 12px;
+        font-weight: 800;
+        border: 1px solid rgba(255, 255, 255, 0.34);
+      }
+
+      .canvas {
+        padding: 32px;
+        background:
+          radial-gradient(circle at 90% 0%, rgba(66, 199, 232, 0.1), transparent 36%),
+          linear-gradient(180deg, #ffffff 0%, #f7fbff 100%);
+      }
+
+      .meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 9px 10px;
+        align-items: center;
+        margin-bottom: 14px;
+      }
+
+      .date {
+        color: var(--muted);
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 13px;
+        font-weight: 700;
+      }
+
+      .tag {
+        display: inline-grid;
+        min-height: 28px;
+        place-items: center;
+        padding: 0 11px;
+        color: var(--navy);
+        font-size: 12px;
+        font-weight: 800;
+        background: rgba(66, 199, 232, 0.12);
+        border: 1px solid rgba(66, 199, 232, 0.42);
+      }
+
+      .thumb {
+        position: relative;
+        overflow: hidden;
+        background: #e8f4ff;
+      }
+
+      .thumb img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      .thumb::after {
+        position: absolute;
+        inset: 0;
+        content: "";
+        background: linear-gradient(180deg, transparent 48%, rgba(5, 39, 102, 0.18));
+      }
+
+      .title {
+        color: var(--navy);
+        font-size: 21px;
+        font-weight: 800;
+        line-height: 1.5;
+      }
+
+      .desc {
+        margin-top: 12px;
+        color: #42506a;
+        font-size: 13px;
+        font-weight: 650;
+        line-height: 1.82;
+      }
+
+      .link {
+        display: inline-grid;
+        min-height: 38px;
+        place-items: center;
+        margin-top: 18px;
+        padding: 0 15px;
+        color: var(--navy);
+        font-size: 12px;
+        font-weight: 800;
+        border: 1px solid var(--navy);
+      }
+
+      .aLayout {
+        display: grid;
+        grid-template-columns: minmax(0, 1.04fr) minmax(390px, 0.72fr);
+        gap: 24px;
+      }
+
+      .aLead,
+      .aSide,
+      .bLead,
+      .bRow,
+      .cCard,
+      .archiveBox {
+        background: var(--white);
+        border: 1px solid var(--line);
+        box-shadow: 0 16px 38px rgba(15, 66, 130, 0.06);
+      }
+
+      .aLead .thumb {
+        aspect-ratio: 16 / 8.4;
+      }
+
+      .aLeadBody,
+      .bLeadBody,
+      .cBody {
+        padding: 28px 30px 32px;
+      }
+
+      .aSide {
+        display: grid;
+        grid-template-rows: auto 1fr;
+      }
+
+      .sideHead {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        padding: 18px 20px;
+        color: var(--white);
+        background: var(--navy);
+      }
+
+      .sideHead span {
+        color: var(--cyan);
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      .sideHead b {
+        font-size: 13px;
+      }
+
+      .aSideItem {
+        display: grid;
+        grid-template-columns: 150px minmax(0, 1fr);
+        min-height: 158px;
+        border-top: 1px solid var(--line);
+      }
+
+      .aSideItem .thumb {
+        height: 100%;
+      }
+
+      .sideBody {
+        padding: 18px 18px 20px;
+      }
+
+      .sideBody .title {
+        margin-top: 10px;
+        font-size: 15px;
+      }
+
+      .sideBody .desc {
+        margin-top: 8px;
+        font-size: 12px;
+        line-height: 1.65;
+      }
+
+      .bLayout {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 260px;
+        gap: 24px;
+      }
+
+      .bMain {
+        display: grid;
+        gap: 16px;
+      }
+
+      .bLead {
+        display: grid;
+        grid-template-columns: 390px minmax(0, 1fr);
+        min-height: 300px;
+      }
+
+      .bLead .thumb {
+        height: 100%;
+      }
+
+      .bLeadBody {
+        display: grid;
+        align-content: center;
+      }
+
+      .bRow {
+        display: grid;
+        grid-template-columns: 180px minmax(0, 1fr) 86px;
+        align-items: stretch;
+        min-height: 154px;
+      }
+
+      .bRow .thumb {
+        height: 100%;
+      }
+
+      .bRowBody {
+        padding: 22px 24px;
+      }
+
+      .bRowBody .title {
+        margin-top: 10px;
+        font-size: 18px;
+      }
+
+      .arrow {
+        display: grid;
+        place-items: center;
+        color: var(--cyan);
+        font-size: 28px;
+        font-weight: 300;
+        border-left: 1px solid var(--line);
+      }
+
+      .filterBox,
+      .archiveBox {
+        padding: 24px;
+      }
+
+      .filterBox {
+        color: var(--white);
+        background: linear-gradient(180deg, var(--navy), #073b85);
+      }
+
+      .filterBox h3,
+      .archiveBox h3 {
+        font-size: 16px;
+        letter-spacing: 0;
+      }
+
+      .filterBox .chip {
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 12px;
+        color: var(--white);
+        background: rgba(255, 255, 255, 0.1);
+        border-color: rgba(255, 255, 255, 0.28);
+      }
+
+      .archiveBox {
+        margin-top: 16px;
+      }
+
+      .archiveLine {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 14px;
+        padding-bottom: 13px;
+        color: var(--navy);
+        font-family: Georgia, "Times New Roman", serif;
+        font-weight: 700;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .cLayout {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 18px;
+      }
+
+      .cCard {
+        overflow: hidden;
+      }
+
+      .cCard.large {
+        grid-column: span 6;
+        grid-row: span 2;
+      }
+
+      .cCard.medium {
+        grid-column: span 3;
+      }
+
+      .cCard.wide {
+        display: grid;
+        grid-column: span 6;
+        grid-template-columns: 220px minmax(0, 1fr);
+      }
+
+      .cCard.large .thumb {
+        aspect-ratio: 16 / 10;
+      }
+
+      .cCard.medium .thumb {
+        aspect-ratio: 4 / 3;
+      }
+
+      .cCard.wide .thumb {
+        height: 100%;
+        min-height: 210px;
+      }
+
+      .cCard.medium .cBody {
+        padding: 22px;
+      }
+
+      .cCard.medium .title {
+        font-size: 16px;
+      }
+
+      .cCard.wide .title {
+        font-size: 18px;
+      }
+
+      .recommend {
+        margin-top: 18px;
+        padding: 16px 18px;
+        color: var(--navy);
+        font-size: 13px;
+        font-weight: 800;
+        line-height: 1.7;
+        background: rgba(66, 199, 232, 0.09);
+        border-left: 4px solid var(--cyan);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <header class="intro">
+        <div>
+          <p class="eyebrow">NEWS PAGE WIREFRAME</p>
+          <h1>ニュース一覧の並び案</h1>
+          <p>
+            サムネイル付きの記事が増える前提で、NOAHらしい情報密度と読みやすさを保てる3案を比較します。
+            いずれも記事番号は使わず、日付・カテゴリ・画像・タイトルで記事を探せる構成です。
+          </p>
+        </div>
+        <div class="legend" aria-label="カテゴリ">
+          <span>お知らせ</span>
+          <span>プレスリリース</span>
+          <span>事業情報</span>
+        </div>
+      </header>
+
+      <section class="option">
+        <div class="optionHead">
+          <div class="optionMark">A</div>
+          <div>
+            <h2>Latest Focus + Side List</h2>
+            <p>最新記事を強く見せ、右側にその他の記事を並べる。現在案に近いが、見出しと余白を整理した実用型。</p>
+          </div>
+          <div class="fit">おすすめ: 少〜中件数</div>
+        </div>
+        <div class="canvas">
+          <div class="aLayout">
+            <article class="aLead">
+              <div class="thumb">
+                <img src="../../assets/news/default-eyecatch-noah.png" alt="" />
+              </div>
+              <div class="aLeadBody">
+                <div class="meta"><span class="date">2026.05.20</span><span class="tag">お知らせ</span></div>
+                <h3 class="title">コーポレートサイトをリニューアルしました。</h3>
+                <p class="desc">諾亜建設の事業領域や取り組みをより分かりやすくお伝えするため、サイト構成と掲載情報を更新しました。</p>
+                <span class="link">詳細を見る</span>
+              </div>
+            </article>
+            <aside class="aSide">
+              <div class="sideHead"><span>MORE NEWS</span><b>その他のお知らせ</b></div>
+              <article class="aSideItem">
+                <div class="thumb"><img src="../../assets/hero-wind-noah-nacelle.jpg" alt="" /></div>
+                <div class="sideBody">
+                  <div class="meta"><span class="date">2026.05.10</span><span class="tag">プレスリリース</span></div>
+                  <h3 class="title">再生可能エネルギー事業の新プロジェクトを開始</h3>
+                  <p class="desc">新たな取り組みを開始しました。</p>
+                </div>
+              </article>
+              <article class="aSideItem">
+                <div class="thumb"><img src="../../assets/business-ai-data-center.jpg" alt="" /></div>
+                <div class="sideBody">
+                  <div class="meta"><span class="date">2026.04.25</span><span class="tag">お知らせ</span></div>
+                  <h3 class="title">ゴールデンウィーク休業のお知らせ</h3>
+                  <p class="desc">期間中の営業日程についてお知らせします。</p>
+                </div>
+              </article>
+            </aside>
+          </div>
+          <p class="recommend">印象: 企業サイトらしい落ち着き。トップページから遷移した時に最新情報が一番目立つ。</p>
+        </div>
+      </section>
+
+      <section class="option">
+        <div class="optionHead">
+          <div class="optionMark">B</div>
+          <div>
+            <h2>Article Rows + Filter Sidebar</h2>
+            <p>ニュース一覧らしさを優先。カテゴリとアーカイブを右に置き、記事は横長の行で時系列に読む。</p>
+          </div>
+          <div class="fit">おすすめ: 中〜多件数</div>
+        </div>
+        <div class="canvas">
+          <div class="bLayout">
+            <div class="bMain">
+              <article class="bLead">
+                <div class="thumb"><img src="../../assets/news/default-eyecatch-noah.png" alt="" /></div>
+                <div class="bLeadBody">
+                  <div class="meta"><span class="date">2026.05.20</span><span class="tag">お知らせ</span></div>
+                  <h3 class="title">コーポレートサイトをリニューアルしました。</h3>
+                  <p class="desc">最新記事だけ少し大きく見せ、以降は読みやすい行リストへ流します。</p>
+                </div>
+              </article>
+              <article class="bRow">
+                <div class="thumb"><img src="../../assets/battery/battery-product-lineup-hero-ai.png" alt="" /></div>
+                <div class="bRowBody">
+                  <div class="meta"><span class="date">2026.05.10</span><span class="tag">プレスリリース</span></div>
+                  <h3 class="title">再生可能エネルギー事業の新プロジェクトを開始</h3>
+                  <p class="desc">カテゴリ、日付、概要が横並びで読みやすい構成。</p>
+                </div>
+                <div class="arrow">→</div>
+              </article>
+              <article class="bRow">
+                <div class="thumb"><img src="../../assets/sustainability/community-relations-v3.png" alt="" /></div>
+                <div class="bRowBody">
+                  <div class="meta"><span class="date">2026.04.25</span><span class="tag">お知らせ</span></div>
+                  <h3 class="title">ゴールデンウィーク休業のお知らせ</h3>
+                  <p class="desc">サムネイルがない記事はNOAH共通アイキャッチを使用。</p>
+                </div>
+                <div class="arrow">→</div>
+              </article>
+            </div>
+            <aside>
+              <div class="filterBox">
+                <h3>カテゴリ</h3>
+                <span class="chip">すべて <b>3</b></span>
+                <span class="chip">お知らせ <b>2</b></span>
+                <span class="chip">プレスリリース <b>1</b></span>
+                <span class="chip">事業情報 <b>0</b></span>
+              </div>
+              <div class="archiveBox">
+                <h3>ARCHIVE</h3>
+                <div class="archiveLine"><span>2026</span><span>3</span></div>
+                <div class="archiveLine"><span>2023</span><span>0</span></div>
+              </div>
+            </aside>
+          </div>
+          <p class="recommend">印象: 一覧ページとして一番分かりやすい。記事数が増えた時にも破綻しにくい。</p>
+        </div>
+      </section>
+
+      <section class="option">
+        <div class="optionHead">
+          <div class="optionMark">C</div>
+          <div>
+            <h2>Magazine Board</h2>
+            <p>サムネイルを主役にした変則グリッド。ニュースだけでなく事業トピックや実績記事が増えた時に映える。</p>
+          </div>
+          <div class="fit">おすすめ: 画像多め</div>
+        </div>
+        <div class="canvas">
+          <div class="cLayout">
+            <article class="cCard large">
+              <div class="thumb"><img src="../../assets/news/default-eyecatch-noah.png" alt="" /></div>
+              <div class="cBody">
+                <div class="meta"><span class="date">2026.05.20</span><span class="tag">お知らせ</span></div>
+                <h3 class="title">コーポレートサイトをリニューアルしました。</h3>
+                <p class="desc">大きな写真と本文の余白で、企業の更新情報をしっかり見せるカード。</p>
+              </div>
+            </article>
+            <article class="cCard medium">
+              <div class="thumb"><img src="../../assets/business-hydrogen-mobility-branded.jpg" alt="" /></div>
+              <div class="cBody">
+                <div class="meta"><span class="date">2026.05.10</span></div>
+                <h3 class="title">再生可能エネルギー事業の新プロジェクトを開始</h3>
+              </div>
+            </article>
+            <article class="cCard medium">
+              <div class="thumb"><img src="../../assets/business-biomasspower.png" alt="" /></div>
+              <div class="cBody">
+                <div class="meta"><span class="date">2026.04.25</span></div>
+                <h3 class="title">ゴールデンウィーク休業のお知らせ</h3>
+              </div>
+            </article>
+            <article class="cCard wide">
+              <div class="thumb"><img src="../../assets/windpower/technology-turbine-front.png" alt="" /></div>
+              <div class="cBody">
+                <div class="meta"><span class="date">2026.04.10</span><span class="tag">事業情報</span></div>
+                <h3 class="title">風力発電に関する取り組みを更新しました。</h3>
+                <p class="desc">画像付き記事が多い場合、ページ全体に動きが出る並び。</p>
+              </div>
+            </article>
+          </div>
+          <p class="recommend">印象: リッチで華やか。ニュースというより「トピックス」寄りに見せたい時に合う。</p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
