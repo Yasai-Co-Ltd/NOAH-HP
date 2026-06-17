@@ -46,6 +46,13 @@ export interface NewsItem {
     src: string;
     alt: string;
   };
+  content?: {
+    lead?: string;
+    sections: Array<{
+      heading: string;
+      paragraphs: string[];
+    }>;
+  };
 }
 
 export interface FindParams {
