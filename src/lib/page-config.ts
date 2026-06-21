@@ -28,9 +28,9 @@ export const PAGES = {
 
   // サステナビリティ
   "/sustainability": true,
-  "/sustainability/community-relations": false,
-  "/sustainability/environment": false,
-  "/sustainability/carbon-neutrality": false,
+  "/sustainability/community-relations": true,
+  "/sustainability/environment": true,
+  "/sustainability/carbon-neutrality": true,
 
   // その他
   "/news": true,
