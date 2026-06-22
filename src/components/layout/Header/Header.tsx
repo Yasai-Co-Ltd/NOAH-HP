@@ -80,7 +80,7 @@ const NAV_LINKS: NavLink[] = [
     label: "事業紹介",
     mega: {
       eyebrow: "OUR BUSINESS",
-      title: "6 つの事業領域、\nひとつの構想。",
+      title: "6つの事業領域、\nひとつの構想。",
       lead: "エネルギーから次世代インフラまで。社会基盤を支える事業を展開します。",
       href: "/business",
       groups: [
@@ -103,7 +103,7 @@ const NAV_LINKS: NavLink[] = [
       ],
       feature: {
         image: "/assets/strengths-bg-integrated-energy.png",
-        title: "6 つの事業領域、ひとつの構想。",
+        title: "6つの事業領域、ひとつの構想。",
         description: "事業紹介トップを見る",
         href: "/business",
       },
@@ -114,7 +114,7 @@ const NAV_LINKS: NavLink[] = [
     label: "サステナビリティ",
     mega: {
       eyebrow: "SUSTAINABILITY",
-      title: "3 つの視点でとらえる、\nサステナビリティ。",
+      title: "3つの視点でとらえる、\nサステナビリティ。",
       lead: "地域・環境・未来。持続可能な社会づくりに取り組みます。",
       href: "/sustainability",
       groups: [
@@ -129,7 +129,7 @@ const NAV_LINKS: NavLink[] = [
       ],
       feature: {
         image: "/assets/sustainability/carbon-neutrality-v3.png",
-        title: "3 つの視点でとらえる、サステナビリティ。",
+        title: "3つの視点でとらえる、サステナビリティ。",
         description: "サステナビリティトップを見る",
         href: "/sustainability",
       },
