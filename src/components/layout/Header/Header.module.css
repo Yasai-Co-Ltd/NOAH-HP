@@ -147,45 +147,106 @@
 
 .megaInner {
   display: grid;
-  grid-template-columns: minmax(220px, 0.78fr) minmax(0, 1.5fr) minmax(280px, 0.92fr);
-  gap: clamp(36px, 4vw, 72px);
-  align-items: start;
-  padding-block: 40px 48px;
+  grid-template-columns: minmax(230px, 0.84fr) minmax(0, 1.7fr) minmax(284px, 0.94fr);
+  gap: clamp(28px, 3vw, 52px);
+  align-items: stretch;
+  padding-block: 36px 40px;
 }
 
-.megaCopy {
-  padding-top: 2px;
+/* === Intro panel === */
+.megaIntro {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-right: clamp(20px, 2vw, 36px);
 }
 
-.megaCopy p {
+.megaEyebrow {
+  color: var(--color-brand-600);
+  font-family: var(--font-numeric);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+
+.megaTitle {
   margin: 0;
   color: var(--color-brand-900);
   font-family: var(--font-serif);
-  font-size: 1.72rem;
+  font-size: clamp(1.5rem, 1.2rem + 0.6vw, 1.85rem);
   font-weight: 800;
-  line-height: 1.35;
-  letter-spacing: 0;
+  line-height: 1.36;
+  white-space: pre-line;
 }
 
+.megaLead {
+  margin: 0;
+  max-width: 30ch;
+  color: var(--color-muted);
+  font-size: 0.84rem;
+  font-weight: 500;
+  line-height: 1.8;
+}
+
+.megaIntroLink {
+  margin-top: auto;
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  gap: 8px;
+  padding: 10px 20px;
+  color: var(--color-surface);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-decoration: none;
+  background: var(--color-brand-900);
+  border-radius: 999px;
+  transition:
+    background var(--duration-fast) var(--ease-out),
+    transform var(--duration-fast) var(--ease-out);
+}
+
+.megaIntroLink span {
+  transition: transform var(--duration-fast) var(--ease-out);
+}
+
+.megaIntroLink:hover {
+  background: var(--color-brand-700);
+  transform: translateY(-1px);
+}
+
+.megaIntroLink:hover span {
+  transform: translateX(3px);
+}
+
+/* === Link groups === */
 .megaGroups {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 36px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px clamp(28px, 3vw, 48px);
+  padding-left: clamp(28px, 3vw, 52px);
+  border-left: 1px solid var(--color-line);
+}
+
+.megaGroup {
+  flex: 1 1 230px;
+  min-width: 0;
 }
 
 .megaGroup h3 {
-  margin: 0 0 16px;
+  margin: 0 0 12px;
+  padding-left: 12px;
   color: var(--color-brand-700);
   font-family: var(--font-numeric);
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   font-weight: 700;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
 }
 
 .megaGroup ul {
   display: grid;
-  gap: 12px;
+  gap: 2px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -193,39 +254,64 @@
 
 .megaGroup a {
   position: relative;
-  display: inline-flex;
+  display: grid;
+  grid-template-columns: 1fr auto;
   align-items: center;
-  gap: 10px;
+  column-gap: 12px;
+  padding: 9px 12px;
   color: var(--color-brand-900);
-  font-size: 0.92rem;
-  font-weight: 700;
   text-decoration: none;
+  border-radius: 9px;
   transition:
-    color var(--duration-fast) var(--ease-out),
-    transform var(--duration-fast) var(--ease-out);
+    background var(--duration-fast) var(--ease-out),
+    color var(--duration-fast) var(--ease-out);
 }
 
-.megaGroup a::before {
-  content: "→";
-  color: var(--color-brand-700);
+.megaItemLabel {
+  grid-column: 1;
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.megaItemDesc {
+  grid-column: 1;
+  margin-top: 2px;
+  color: var(--color-muted);
+  font-size: 0.74rem;
+  font-weight: 500;
+  line-height: 1.4;
+  transition: color var(--duration-fast) var(--ease-out);
+}
+
+.megaItemArrow {
+  grid-column: 2;
+  grid-row: 1 / 3;
+  color: var(--color-brand-600);
   font-size: 0.86rem;
   opacity: 0;
-  transform: translateX(-4px);
+  transform: translateX(-6px);
   transition:
     opacity var(--duration-fast) var(--ease-out),
     transform var(--duration-fast) var(--ease-out);
 }
 
 .megaGroup a:hover {
+  background: var(--color-brand-050);
   color: var(--color-brand-700);
 }
 
-.megaGroup a:hover::before {
+.megaGroup a:hover .megaItemDesc {
+  color: var(--color-brand-600);
+}
+
+.megaGroup a:hover .megaItemArrow {
   opacity: 1;
   transform: translateX(0);
 }
 
 .megaFeature {
+  align-self: start;
   display: grid;
   grid-template-rows: auto auto;
   overflow: hidden;
@@ -233,6 +319,7 @@
   text-decoration: none;
   background: var(--color-brand-050);
   border: 1px solid rgba(216, 228, 243, 0.92);
+  border-radius: 12px;
   transition:
     border-color var(--duration-fast) var(--ease-out),
     box-shadow var(--duration-fast) var(--ease-out),

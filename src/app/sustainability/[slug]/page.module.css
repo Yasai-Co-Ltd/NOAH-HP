@@ -98,7 +98,7 @@
 .heroEyebrow {
   position: relative;
   margin: 0;
-  padding-bottom: 18px;
+  padding-bottom: 5px;
   color: var(--color-brand-800);
   font-size: 0.86rem;
   font-weight: 800;
@@ -106,7 +106,7 @@
   letter-spacing: 0.12em;
 }
 
-.heroEyebrow::after {
+/* .heroEyebrow::after {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -114,7 +114,7 @@
   height: 2px;
   content: "";
   background: var(--theme-accent);
-}
+} */
 
 .carbonPage .heroEyebrow {
   color: var(--color-surface);
@@ -137,7 +137,8 @@
   margin: 40px 0 0;
   color: var(--color-brand-900);
   font-family: var(--font-serif);
-  font-size: clamp(2.5rem, 4vw, 4.05rem);
+  /* font-size: clamp(2.5rem, 4vw, 4.05rem); */
+  font-size: clamp(2.48rem, 4.2vw, 3.4rem);
   font-weight: 800;
   line-height: 1.22;
   letter-spacing: 0;
@@ -258,7 +259,7 @@
   margin: 0;
   color: var(--color-brand-900);
   font-family: var(--font-serif);
-  font-size: clamp(2.05rem, 3vw, 2.92rem);
+  font-size: clamp(2.05rem, 3vw, 2.5rem);
   font-weight: 800;
   line-height: 1.36;
   letter-spacing: 0;

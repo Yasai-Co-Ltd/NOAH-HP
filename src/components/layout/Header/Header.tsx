@@ -8,6 +8,7 @@ import styles from "./Header.module.css";
 interface MegaMenuItem {
   href: string;
   label: string;
+  description?: string;
 }
 
 interface MegaMenuGroup {
@@ -23,7 +24,10 @@ interface MegaMenuFeature {
 }
 
 interface MegaMenuConfig {
-  description?: string;
+  eyebrow: string;
+  title: string;
+  lead?: string;
+  href: string;
   groups: MegaMenuGroup[];
   feature?: MegaMenuFeature;
 }
@@ -39,24 +43,27 @@ const NAV_LINKS: NavLink[] = [
     href: "/about",
     label: "企業情報",
     mega: {
-      description: "企業情報",
+      eyebrow: "ABOUT NOAH",
+      title: "会社のすがた、\nこれまでの歩み。",
+      lead: "理念、組織、沿革まで。諾亜建設という会社の輪郭をご紹介します。",
+      href: "/about",
       groups: [
         {
           heading: "私たちの考え",
           items: [
-            { href: "/about/message", label: "トップメッセージ" },
-            { href: "/about/vision", label: "企業理念・ビジョン" },
-            { href: "/about/standard", label: "行動基準" },
+            { href: "/about/message", label: "トップメッセージ", description: "代表挨拶と経営姿勢" },
+            { href: "/about/vision", label: "企業理念・ビジョン", description: "目指す未来と価値観" },
+            { href: "/about/standard", label: "行動基準", description: "判断と行動の指針" },
           ],
         },
         {
           heading: "会社の輪郭",
           items: [
-            { href: "/about/outline", label: "会社概要" },
-            { href: "/about/organization", label: "グループ・組織図" },
-            { href: "/about/network", label: "国内外拠点" },
-            { href: "/about/history", label: "沿革" },
-            { href: "/about/safety-health", label: "健康経営" },
+            { href: "/about/outline", label: "会社概要", description: "会社の基本情報" },
+            { href: "/about/organization", label: "グループ・組織図", description: "体制とグループ構成" },
+            { href: "/about/network", label: "国内外拠点", description: "事業ネットワーク" },
+            { href: "/about/history", label: "沿革", description: "創業からの歩み" },
+            { href: "/about/safety-health", label: "健康経営", description: "従業員の健康への取り組み" },
           ],
         },
       ],
@@ -72,22 +79,25 @@ const NAV_LINKS: NavLink[] = [
     href: "/business",
     label: "事業紹介",
     mega: {
-      description: "事業紹介",
+      eyebrow: "OUR BUSINESS",
+      title: "6 つの事業領域、\nひとつの構想。",
+      lead: "エネルギーから次世代インフラまで。社会基盤を支える事業を展開します。",
+      href: "/business",
       groups: [
         {
           heading: "電力・蓄電",
           items: [
-            { href: "/business/batteryenergystorage", label: "蓄電池事業" },
-            { href: "/business/windpower", label: "風力発電事業" },
-            { href: "/business/biomasspower", label: "バイオマス事業" },
+            { href: "/business/batteryenergystorage", label: "蓄電池事業", description: "大型蓄電で電力を安定化" },
+            { href: "/business/windpower", label: "風力発電事業", description: "自然の力をエネルギーに" },
+            { href: "/business/biomasspower", label: "バイオマス事業", description: "資源循環型の発電" },
           ],
         },
         {
           heading: "次世代インフラ",
           items: [
-            { href: "/business/hydrogen-mobility", label: "水素モビリティ事業" },
-            { href: "/business/ai-data-center", label: "AIデータセンター事業" },
-            { href: "/business/hopper", label: "走行式集塵ホッパー事業" },
+            { href: "/business/hydrogen-mobility", label: "水素モビリティ事業", description: "次世代の移動を実現" },
+            { href: "/business/ai-data-center", label: "AIデータセンター事業", description: "デジタル社会の基盤" },
+            { href: "/business/hopper", label: "走行式集塵ホッパー事業", description: "環境に配慮した集塵技術" },
           ],
         },
       ],
@@ -103,13 +113,17 @@ const NAV_LINKS: NavLink[] = [
     href: "/sustainability",
     label: "サステナビリティ",
     mega: {
-      description: "サステナビリティ",
+      eyebrow: "SUSTAINABILITY",
+      title: "3 つの視点でとらえる、\nサステナビリティ。",
+      lead: "地域・環境・未来。持続可能な社会づくりに取り組みます。",
+      href: "/sustainability",
       groups: [
         {
+          heading: "取り組みの領域",
           items: [
-            { href: "/sustainability/community-relations", label: "地域共生" },
-            { href: "/sustainability/environment", label: "環境保全" },
-            { href: "/sustainability/carbon-neutrality", label: "カーボンニュートラル" },
+            { href: "/sustainability/community-relations", label: "地域共生", description: "地域とともに歩む" },
+            { href: "/sustainability/environment", label: "環境保全", description: "自然環境を守る取り組み" },
+            { href: "/sustainability/carbon-neutrality", label: "カーボンニュートラル", description: "脱炭素社会の実現へ" },
           ],
         },
       ],
@@ -244,8 +258,14 @@ export function Header() {
       >
         {activeConfig && (
           <div className={`container ${styles.megaInner}`}>
-            <div className={styles.megaCopy}>
-              {activeConfig.description && <p>{activeConfig.description}</p>}
+            <div className={styles.megaIntro}>
+              <span className={styles.megaEyebrow}>{activeConfig.eyebrow}</span>
+              <h2 className={styles.megaTitle}>{activeConfig.title}</h2>
+              {activeConfig.lead && <p className={styles.megaLead}>{activeConfig.lead}</p>}
+              <Link href={activeConfig.href} className={styles.megaIntroLink} onClick={closeAll}>
+                すべて見る
+                <span aria-hidden="true">→</span>
+              </Link>
             </div>
             <div className={styles.megaGroups}>
               {activeConfig.groups.map((group, gi) => (
@@ -255,7 +275,13 @@ export function Header() {
                     {group.items.map((item) => (
                       <li key={item.href}>
                         <Link href={item.href} onClick={closeAll}>
-                          {item.label}
+                          <span className={styles.megaItemLabel}>{item.label}</span>
+                          {item.description && (
+                            <span className={styles.megaItemDesc}>{item.description}</span>
+                          )}
+                          <span className={styles.megaItemArrow} aria-hidden="true">
+                            →
+                          </span>
                         </Link>
                       </li>
                     ))}
