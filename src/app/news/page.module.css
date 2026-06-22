@@ -3,14 +3,12 @@
   min-height: 432px;
   overflow: hidden;
   color: var(--color-surface);
-  background:
-    linear-gradient(
-      90deg,
-      rgba(5, 39, 102, 0.92) 0%,
-      rgba(5, 39, 102, 0.66) 52%,
-      rgba(5, 39, 102, 0.18) 100%
-    ),
-    url("/assets/news/default-eyecatch.png") center 54% / cover;
+  /* background-image (gradient + photo) is set inline in page.tsx via asset()
+     so the basePath is applied correctly on GitHub Pages. */
+  background-color: var(--color-brand-900);
+  background-position: center 54%;
+  background-size: cover;
+  background-repeat: no-repeat;
   isolation: isolate;
 }
 

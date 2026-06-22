@@ -70,7 +70,13 @@ export default async function NewsPage() {
 
   return (
     <>
-      <section className={styles.hero} aria-labelledby="news-page-title">
+      <section
+        className={styles.hero}
+        aria-labelledby="news-page-title"
+        style={{
+          backgroundImage: `linear-gradient(90deg, rgba(5, 39, 102, 0.92) 0%, rgba(5, 39, 102, 0.66) 52%, rgba(5, 39, 102, 0.18) 100%), url(${asset("/assets/news/default-eyecatch.png")})`,
+        }}
+      >
         <div className={styles.heroOverlay} />
         <div className={`container ${styles.heroInner}`}>
           <Reveal direction="left">
