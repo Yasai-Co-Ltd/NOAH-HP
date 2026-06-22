@@ -107,7 +107,7 @@ export default function SustainabilityPage() {
               <Button href="#themes" variant="white" className={styles.heroButton}>
                 テーマを見る
               </Button>
-              <Button href="/business" variant="outline" className={styles.heroOutlineButton}>
+              <Button href="/business" variant="cyan" className={styles.heroOutlineButton}>
                 事業紹介へ
               </Button>
             </div>
