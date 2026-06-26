@@ -1,0 +1,225 @@
+.form {
+  display: grid;
+  gap: 26px;
+  padding: clamp(28px, 4vw, 44px);
+  background: var(--color-surface);
+  border: 1px solid var(--color-line);
+  box-shadow: var(--shadow-card);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px 24px;
+}
+
+.field {
+  display: grid;
+  gap: 8px;
+  min-width: 0;
+}
+
+.fieldFull {
+  grid-column: 1 / -1;
+}
+
+.field label {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--color-brand-900);
+  font-size: 0.84rem;
+  font-weight: 800;
+}
+
+.required {
+  padding: 3px 8px;
+  color: var(--color-surface);
+  font-family: var(--font-numeric);
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  background: var(--color-accent-cyan);
+  border-radius: 3px;
+}
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  padding: 13px 15px;
+  color: var(--color-ink);
+  font-family: inherit;
+  font-size: 0.92rem;
+  font-weight: 600;
+  background: #f8fbff;
+  border: 1px solid var(--color-line);
+  border-radius: 6px;
+  transition:
+    border-color var(--duration-fast) var(--ease-out),
+    box-shadow var(--duration-fast) var(--ease-out),
+    background var(--duration-fast) var(--ease-out);
+}
+
+.field textarea {
+  resize: vertical;
+  min-height: 132px;
+  line-height: 1.8;
+}
+
+.field select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%230c459e' d='M6 8 0 0h12z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  padding-right: 40px;
+  cursor: pointer;
+}
+
+.field input::placeholder,
+.field textarea::placeholder {
+  color: #9aa9c2;
+  font-weight: 500;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  outline: none;
+  background: var(--color-surface);
+  border-color: var(--color-brand-600);
+  box-shadow: 0 0 0 3px rgba(21, 89, 183, 0.14);
+}
+
+.field input[aria-invalid="true"],
+.field select[aria-invalid="true"],
+.field textarea[aria-invalid="true"] {
+  border-color: #d64550;
+  background: #fff6f6;
+}
+
+.error {
+  margin: 0;
+  color: #c83541;
+  font-size: 0.76rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.consent {
+  display: grid;
+  gap: 8px;
+}
+
+.checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  color: var(--color-text);
+  font-size: 0.86rem;
+  font-weight: 700;
+  line-height: 1.6;
+  cursor: pointer;
+}
+
+.checkbox input {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  margin-top: 1px;
+  accent-color: var(--color-brand-700);
+  cursor: pointer;
+}
+
+.checkbox span {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.success {
+  margin: 0;
+  padding: 16px 18px;
+  color: var(--color-brand-900);
+  font-size: 0.86rem;
+  font-weight: 700;
+  line-height: 1.7;
+  background: var(--color-brand-050);
+  border: 1px solid var(--color-brand-100);
+  border-radius: 6px;
+}
+
+.success a {
+  color: var(--color-brand-700);
+  font-weight: 800;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-width: 240px;
+  padding: 16px 32px;
+  color: var(--color-surface);
+  font-family: inherit;
+  font-size: 0.92rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  background: var(--color-brand-900);
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+  transition:
+    background var(--duration-fast) var(--ease-out),
+    transform var(--duration-fast) var(--ease-out),
+    box-shadow var(--duration-fast) var(--ease-out);
+}
+
+.submit span {
+  transition: transform var(--duration-fast) var(--ease-out);
+}
+
+.submit:hover {
+  background: var(--color-brand-700);
+  transform: translateY(-2px);
+  box-shadow: 0 16px 30px rgba(11, 61, 145, 0.2);
+}
+
+.submit:hover span {
+  transform: translateX(4px);
+}
+
+.submit:focus-visible {
+  outline: 3px solid rgba(21, 89, 183, 0.4);
+  outline-offset: 2px;
+}
+
+/* スクリーンから隠すハニーポット */
+.honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+@media (max-width: 720px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .submit {
+    width: 100%;
+  }
+
+  .actions {
+    justify-content: stretch;
+  }
+}

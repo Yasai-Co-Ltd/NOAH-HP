@@ -34,8 +34,8 @@ export const PAGES = {
 
   // その他
   "/news": true,
-  "/recruit": false,
-  "/contact": false,
+  "/recruit": true,
+  "/contact": true,
   "/privacy": false,
   "/sitemap": false,
 } as const satisfies Record<string, boolean>;

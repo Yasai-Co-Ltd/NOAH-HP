@@ -1,0 +1,746 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>採用情報ページ シンプルワイヤーフレーム | NOAH</title>
+    <style>
+      :root {
+        --brand-900: #052766;
+        --brand-800: #0a3487;
+        --brand-700: #0c459e;
+        --brand-050: #f5faff;
+        --cyan: #53c1e5;
+        --ink: #12264a;
+        --text: #26334d;
+        --muted: #5e6f8c;
+        --line: #d8e4f3;
+        --surface: #ffffff;
+        --serif: "Hiragino Mincho ProN", "Yu Mincho", "YuMincho", serif;
+        --sans: "Hiragino Sans", "Yu Gothic", "Meiryo", system-ui, sans-serif;
+        --numeric: Arial, sans-serif;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        color: var(--text);
+        font-family: var(--sans);
+        background: #ffffff;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .container {
+        width: min(1180px, calc(100% - 96px));
+        margin-inline: auto;
+      }
+
+      .header {
+        background: rgba(255, 255, 255, 0.96);
+        border-bottom: 1px solid rgba(216, 228, 243, 0.9);
+      }
+
+      .headerInner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 78px;
+      }
+
+      .logo {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        color: var(--brand-900);
+        font-weight: 800;
+      }
+
+      .logo img {
+        width: 52px;
+        height: 52px;
+        object-fit: contain;
+      }
+
+      .logo span {
+        display: grid;
+        gap: 3px;
+        font-size: 0.7rem;
+        letter-spacing: 0.08em;
+      }
+
+      .logo b {
+        font-size: 1rem;
+        letter-spacing: 0;
+      }
+
+      .nav {
+        display: flex;
+        gap: 26px;
+        align-items: center;
+        color: var(--brand-900);
+        font-size: 0.76rem;
+        font-weight: 800;
+      }
+
+      .nav .entry {
+        min-height: 42px;
+        padding: 13px 18px;
+        color: #ffffff;
+        background: var(--brand-900);
+      }
+
+      .hero {
+        padding-block: 78px 86px;
+        background:
+          linear-gradient(90deg, rgba(255, 255, 255, 0.94), rgba(255, 255, 255, 0.72)),
+          url("../../assets/recruit-hq.jpg") right center / 58% auto no-repeat,
+          linear-gradient(180deg, #ffffff 0%, #f6fbff 100%);
+        border-bottom: 1px solid var(--line);
+      }
+
+      .heroCopy {
+        width: min(680px, 58%);
+      }
+
+      .eyebrow {
+        position: relative;
+        margin: 0;
+        padding-bottom: 16px;
+        color: var(--brand-800);
+        font-family: var(--numeric);
+        font-size: 0.82rem;
+        font-weight: 800;
+        letter-spacing: 0.12em;
+      }
+
+      .eyebrow::after {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 64px;
+        height: 2px;
+        content: "";
+        background: var(--cyan);
+      }
+
+      .heroTitle {
+        margin: 36px 0 0;
+        color: var(--brand-900);
+        font-family: var(--serif);
+        font-size: clamp(2.6rem, 4.4vw, 4.6rem);
+        font-weight: 800;
+        line-height: 1.2;
+        letter-spacing: 0;
+      }
+
+      .heroLead {
+        max-width: 620px;
+        margin: 26px 0 0;
+        color: var(--ink);
+        font-size: 0.96rem;
+        font-weight: 800;
+        line-height: 1.95;
+      }
+
+      .heroActions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        margin-top: 28px;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 176px;
+        min-height: 54px;
+        padding-inline: 22px;
+        font-size: 0.86rem;
+        font-weight: 800;
+        border: 1px solid var(--brand-900);
+      }
+
+      .button.primary {
+        color: #ffffff;
+        background: var(--brand-900);
+      }
+
+      .button.secondary {
+        color: var(--brand-900);
+        background: #ffffff;
+      }
+
+      .breadcrumb {
+        padding-block: 18px;
+        color: var(--muted);
+        font-size: 0.74rem;
+        font-weight: 700;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .section {
+        padding-block: 84px 94px;
+      }
+
+      .sectionHeader {
+        display: grid;
+        grid-template-columns: minmax(260px, 0.42fr) minmax(0, 1fr);
+        gap: 70px;
+        align-items: end;
+        margin-bottom: 34px;
+      }
+
+      .label {
+        margin: 0;
+        color: var(--brand-800);
+        font-size: 0.92rem;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+      }
+
+      .label span {
+        display: block;
+        margin-top: 5px;
+        color: var(--brand-700);
+        font-size: 0.68rem;
+        font-weight: 700;
+      }
+
+      .sectionTitle {
+        margin: 12px 0 0;
+        color: var(--brand-900);
+        font-family: var(--serif);
+        font-size: clamp(2rem, 3vw, 2.8rem);
+        font-weight: 800;
+        line-height: 1.35;
+      }
+
+      .sectionLead {
+        margin: 0;
+        color: var(--text);
+        font-size: 0.92rem;
+        font-weight: 700;
+        line-height: 1.95;
+      }
+
+      .jobList {
+        display: grid;
+        gap: 18px;
+      }
+
+      .jobCard {
+        display: grid;
+        grid-template-columns: minmax(220px, 0.34fr) minmax(0, 1fr);
+        min-height: 228px;
+        background: #ffffff;
+        border: 1px solid var(--line);
+      }
+
+      .jobMeta {
+        display: grid;
+        align-content: start;
+        gap: 18px;
+        padding: 28px 30px;
+        background: linear-gradient(180deg, #ffffff 0%, #f6fbff 100%);
+        border-right: 1px solid var(--line);
+      }
+
+      .jobMeta span {
+        color: var(--cyan);
+        font-family: var(--numeric);
+        font-size: 0.76rem;
+        font-weight: 800;
+        letter-spacing: 0.12em;
+      }
+
+      .metaGrid {
+        display: grid;
+        gap: 10px;
+        color: var(--muted);
+        font-size: 0.78rem;
+        font-weight: 700;
+        line-height: 1.6;
+      }
+
+      .jobBody {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 158px;
+        gap: 28px;
+        align-items: center;
+        padding: 30px 32px;
+      }
+
+      .jobBody h3 {
+        margin: 0;
+        color: var(--brand-900);
+        font-size: 1.36rem;
+        font-weight: 800;
+        line-height: 1.45;
+      }
+
+      .jobBody p {
+        margin: 14px 0 0;
+        color: var(--text);
+        font-size: 0.88rem;
+        font-weight: 600;
+        line-height: 1.85;
+      }
+
+      .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 18px;
+      }
+
+      .tags b {
+        padding: 7px 10px;
+        color: var(--brand-800);
+        font-size: 0.7rem;
+        line-height: 1;
+        background: rgba(83, 193, 229, 0.12);
+      }
+
+      .jobAction {
+        display: grid;
+        gap: 10px;
+      }
+
+      .jobAction a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 46px;
+        color: #ffffff;
+        font-size: 0.78rem;
+        font-weight: 800;
+        background: var(--brand-900);
+      }
+
+      .jobAction small {
+        color: var(--muted);
+        font-size: 0.68rem;
+        font-weight: 700;
+        line-height: 1.6;
+        text-align: center;
+      }
+
+      .info {
+        padding-block: 82px 92px;
+        background: linear-gradient(180deg, #ffffff 0%, #f6fbff 100%);
+        border-top: 1px solid var(--line);
+      }
+
+      .infoGrid {
+        display: grid;
+        grid-template-columns: minmax(0, 0.72fr) minmax(360px, 0.48fr);
+        gap: 46px;
+        align-items: stretch;
+      }
+
+      .infoBox,
+      .applyBox {
+        padding: 34px 36px;
+        background: #ffffff;
+        border: 1px solid var(--line);
+      }
+
+      .infoBox h2,
+      .applyBox h2 {
+        margin: 0;
+        color: var(--brand-900);
+        font-family: var(--serif);
+        font-size: 1.8rem;
+        line-height: 1.35;
+      }
+
+      .infoTable {
+        display: grid;
+        margin-top: 26px;
+        border-top: 1px solid var(--line);
+      }
+
+      .infoRow {
+        display: grid;
+        grid-template-columns: 150px minmax(0, 1fr);
+        gap: 28px;
+        padding-block: 18px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .infoRow b {
+        color: var(--brand-900);
+        font-size: 0.86rem;
+      }
+
+      .infoRow span {
+        color: var(--text);
+        font-size: 0.86rem;
+        font-weight: 600;
+        line-height: 1.75;
+      }
+
+      .applyBox p {
+        margin: 20px 0 0;
+        color: var(--text);
+        font-size: 0.9rem;
+        font-weight: 700;
+        line-height: 1.9;
+      }
+
+      .applySteps {
+        display: grid;
+        gap: 1px;
+        margin-top: 26px;
+        background: var(--line);
+        border: 1px solid var(--line);
+      }
+
+      .applySteps span {
+        display: block;
+        padding: 16px 18px;
+        color: var(--brand-900);
+        font-size: 0.84rem;
+        font-weight: 800;
+        background: #ffffff;
+      }
+
+      .cta {
+        padding-block: 86px;
+        color: #ffffff;
+        background:
+          linear-gradient(90deg, rgba(5, 39, 102, 0.94), rgba(10, 52, 135, 0.78)),
+          url("../../assets/recruit-hq.jpg") center / cover;
+      }
+
+      .ctaInner {
+        display: flex;
+        gap: 50px;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .cta h2 {
+        margin: 0;
+        color: #ffffff;
+        font-family: var(--serif);
+        font-size: clamp(2rem, 3vw, 2.8rem);
+        line-height: 1.36;
+      }
+
+      .cta p {
+        margin: 16px 0 0;
+        color: rgba(255, 255, 255, 0.86);
+        font-size: 0.9rem;
+        font-weight: 700;
+        line-height: 1.85;
+      }
+
+      .ctaActions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        justify-content: flex-end;
+        min-width: max-content;
+      }
+
+      .cta .primary {
+        color: var(--brand-900);
+        background: #ffffff;
+        border-color: #ffffff;
+      }
+
+      .cta .secondary {
+        color: #ffffff;
+        background: transparent;
+        border-color: rgba(255, 255, 255, 0.72);
+      }
+
+      .footer {
+        padding-block: 42px;
+        color: rgba(255, 255, 255, 0.72);
+        background: #031944;
+      }
+
+      .footerInner {
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+        font-size: 0.76rem;
+        font-weight: 700;
+      }
+
+      @media (max-width: 900px) {
+        .container {
+          width: min(100% - 40px, 1180px);
+        }
+
+        .nav {
+          display: none;
+        }
+
+        .hero {
+          background:
+            linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(255, 255, 255, 0.9)),
+            url("../../assets/recruit-hq.jpg") center bottom / cover no-repeat;
+        }
+
+        .heroCopy {
+          width: 100%;
+        }
+
+        .sectionHeader,
+        .jobCard,
+        .jobBody,
+        .infoGrid,
+        .ctaInner {
+          grid-template-columns: 1fr;
+        }
+
+        .jobMeta {
+          border-right: 0;
+          border-bottom: 1px solid var(--line);
+        }
+
+        .jobAction {
+          max-width: 220px;
+        }
+
+        .ctaInner {
+          display: grid;
+        }
+
+        .ctaActions {
+          justify-content: start;
+          min-width: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container headerInner">
+        <a href="#" class="logo" aria-label="NOAH">
+          <img src="../../assets/noah_logo-mark.png" alt="" />
+          <span>
+            NOAH CONSTRUCTION CO., LTD.
+            <b>諾亜建設株式会社</b>
+          </span>
+        </a>
+        <nav class="nav" aria-label="グローバルナビゲーション">
+          <a href="#">事業内容</a>
+          <a href="#">企業情報</a>
+          <a href="#">ニュース</a>
+          <a href="#" class="entry">メールで応募</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="recruit-title">
+        <div class="container">
+          <div class="heroCopy">
+            <p class="eyebrow">RECRUIT</p>
+            <h1 id="recruit-title" class="heroTitle">採用情報</h1>
+            <p class="heroLead">
+              諾亜建設では、エネルギー・プラント・設備領域の事業を支える人材を募集しています。
+              募集中の職種、仕事内容、応募条件をご確認ください。
+            </p>
+            <div class="heroActions">
+              <a href="#jobs" class="button primary">募集職種を見る</a>
+              <a href="#apply" class="button secondary">応募方法を見る</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="breadcrumb">
+        <div class="container">ホーム　/　採用情報</div>
+      </div>
+
+      <section class="section" id="jobs" aria-labelledby="jobs-title">
+        <div class="container">
+          <div class="sectionHeader">
+            <div>
+              <p class="label">JOB OPENINGS <span>募集職種</span></p>
+              <h2 id="jobs-title" class="sectionTitle">現在募集中の職種</h2>
+            </div>
+            <p class="sectionLead">
+              参考ページの求人情報をもとに、職種ごとの概要が一覧で確認できる構成にしています。
+              詳細条件は各職種の詳細ページ、または応募時の確認項目として整理します。
+            </p>
+          </div>
+
+          <div class="jobList">
+            <article class="jobCard">
+              <div class="jobMeta">
+                <span>JOB 01</span>
+                <div class="metaGrid">
+                  <div>勤務地：東京都中野区</div>
+                  <div>募集人数：若干名</div>
+                  <div>給与：面談</div>
+                  <div>雇用形態：正社員／契約社員</div>
+                </div>
+              </div>
+              <div class="jobBody">
+                <div>
+                  <h3>人事・総務</h3>
+                  <p>
+                    総務関連事務、法務関連手続き、営業サポート、翻訳業務など、
+                    会社全体の管理業務を支えるポジションです。
+                  </p>
+                  <div class="tags">
+                    <b>総務</b>
+                    <b>法務手続き</b>
+                    <b>営業サポート</b>
+                    <b>中日翻訳</b>
+                  </div>
+                </div>
+                <div class="jobAction">
+                  <a href="#">メールで応募</a>
+                  <small>詳細条件を確認して応募</small>
+                </div>
+              </div>
+            </article>
+
+            <article class="jobCard">
+              <div class="jobMeta">
+                <span>JOB 02</span>
+                <div class="metaGrid">
+                  <div>勤務地：東京中野区</div>
+                  <div>募集人数：若干名</div>
+                  <div>給与：面談</div>
+                  <div>雇用形態：正社員／契約社員</div>
+                </div>
+              </div>
+              <div class="jobBody">
+                <div>
+                  <h3>営業募集</h3>
+                  <p>
+                    水素関連設備、バイオマス発電向け設備、ハンドリング装置などの提案営業。
+                    顧客、メーカー、パートナーと連携しながら案件を進めます。
+                  </p>
+                  <div class="tags">
+                    <b>法人営業</b>
+                    <b>水素</b>
+                    <b>プラント設備</b>
+                    <b>提案書作成</b>
+                  </div>
+                </div>
+                <div class="jobAction">
+                  <a href="#">メールで応募</a>
+                  <small>詳細条件を確認して応募</small>
+                </div>
+              </div>
+            </article>
+
+            <article class="jobCard">
+              <div class="jobMeta">
+                <span>JOB 03</span>
+                <div class="metaGrid">
+                  <div>勤務地：東京中野区</div>
+                  <div>募集人数：若干名</div>
+                  <div>給与：面談</div>
+                  <div>必要資格：普通自動車運転免許</div>
+                </div>
+              </div>
+              <div class="jobBody">
+                <div>
+                  <h3>電気設備エンジニア</h3>
+                  <p>
+                    プラント設備建設、設備増設に関わる配線工事の設計、見積り、
+                    工事管理、保全計画、設備点検などを担うポジションです。
+                  </p>
+                  <div class="tags">
+                    <b>電気設備</b>
+                    <b>施工管理</b>
+                    <b>保全計画</b>
+                    <b>高圧・低圧設備</b>
+                  </div>
+                </div>
+                <div class="jobAction">
+                  <a href="#">メールで応募</a>
+                  <small>詳細条件を確認して応募</small>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="info" id="apply" aria-labelledby="apply-title">
+        <div class="container infoGrid">
+          <div class="infoBox">
+            <h2>共通情報</h2>
+            <div class="infoTable">
+              <div class="infoRow">
+                <b>勤務地</b>
+                <span>東京都中野区本町2丁目46-1 サンブライトツインビル北棟15F</span>
+              </div>
+              <div class="infoRow">
+                <b>雇用形態</b>
+                <span>職種により正社員／契約社員。詳細は応募時に確認。</span>
+              </div>
+              <div class="infoRow">
+                <b>給与</b>
+                <span>面談のうえ決定。</span>
+              </div>
+              <div class="infoRow">
+                <b>応募方法</b>
+                <span>各職種の「メールで応募」から応募。必要情報を送信。</span>
+              </div>
+            </div>
+          </div>
+          <aside class="applyBox">
+            <h2 id="apply-title">応募の流れ</h2>
+            <p>
+              参考サイトの「メールで応募」導線を、現在のサイトデザインに合わせて整理した想定です。
+            </p>
+            <div class="applySteps">
+              <span>01　募集職種を確認</span>
+              <span>02　メールで応募</span>
+              <span>03　書類確認・面談</span>
+              <span>04　条件確認・採用</span>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="cta" aria-labelledby="entry-title">
+        <div class="container ctaInner">
+          <div>
+            <h2 id="entry-title">ご応募をお待ちしています。</h2>
+            <p>
+              募集内容をご確認のうえ、希望職種よりメールでご応募ください。
+              詳細条件は選考過程で確認できる想定です。
+            </p>
+          </div>
+          <div class="ctaActions">
+            <a href="#" class="button primary">メールで応募</a>
+            <a href="#jobs" class="button secondary">募集職種へ戻る</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footerInner">
+        <span>NOAH CONSTRUCTION CO., LTD.</span>
+        <span>Recruit Wireframe Simple</span>
+      </div>
+    </footer>
+  </body>
+</html>
