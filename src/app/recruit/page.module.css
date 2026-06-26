@@ -316,6 +316,7 @@
 
 .jobButton {
   min-width: 156px;
+  white-space: nowrap;
 }
 
 .guide {
