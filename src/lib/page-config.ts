@@ -41,9 +41,8 @@ export const PAGES = {
 
   // 採用情報
   "/recruit": true,
-  "/recruit/jobs": false,
-  "/recruit/jobs/[slug]": false,
-  "/recruit/apply": false,
+  "/recruit/[slug]": true,
+  "/recruit/apply": true,
 
   // お問い合わせ
   "/contact": true,

@@ -4,9 +4,9 @@ import Image from "next/image";
 import { Reveal } from "@/components/animation/Reveal/Reveal";
 import { Button } from "@/components/ui/Button/Button";
 import { SectionLabel } from "@/components/ui/SectionLabel/SectionLabel";
-import { RecruitForm } from "@/components/forms/RecruitForm/RecruitForm";
 import { asset } from "@/lib/asset";
 import { isPageEnabled } from "@/lib/page-config";
+import { jobOpenings, recruitCommonInfo, applySteps } from "@/lib/recruit";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = {
@@ -14,88 +14,6 @@ export const metadata: Metadata = {
   description:
     "諾亜建設株式会社の採用情報です。人事・総務、営業、電気設備エンジニアなど、現在募集中の職種と応募フォームを掲載します。",
 };
-
-const jobOpenings = [
-  {
-    title: "人事・総務",
-    summary:
-      "人事・総務に関する管理業務を中心に、法務関連手続き、営業サポート、翻訳、庶務まで会社運営を支える職種です。",
-    tags: ["総務関連事務", "法務手続き", "営業サポート", "中日翻訳"],
-    meta: [
-      { label: "勤務地", value: "東京都中野区" },
-      { label: "募集人数", value: "若干名" },
-      { label: "雇用形態", value: "正社員／契約社員" },
-      { label: "給与", value: "面談" },
-    ],
-    requirements: [
-      "専門学校卒以上",
-      "事務経験、Word・Excel・PowerPointなどの基本操作",
-      "日本語でのメール・電話対応ができる方",
-      "英語が話せる方は歓迎",
-    ],
-  },
-  {
-    title: "営業募集",
-    summary:
-      "水素関連設備、バイオマス発電向け設備、ハンドリング装置など、エネルギー・プラント領域の提案営業を担います。",
-    tags: ["法人営業", "水素・再エネ", "プラント設備", "提案資料作成"],
-    meta: [
-      { label: "勤務地", value: "東京都中野区" },
-      { label: "募集人数", value: "若干名" },
-      { label: "雇用形態", value: "正社員／契約社員" },
-      { label: "給与", value: "面談" },
-    ],
-    requirements: [
-      "産業用機械装置の営業経験",
-      "環境、プラント、自動車、水素を含むエネルギー分野への関心",
-      "社内外の関係者と円滑にコミュニケーションできる方",
-      "Word・Excel・Outlookなどの基本操作",
-    ],
-  },
-  {
-    title: "電気設備エンジニア",
-    summary:
-      "プラント設備建設や設備増設に関わる配線工事の設計、見積り、工事管理、保全計画、点検対応を行う職種です。",
-    tags: ["電気設備", "施工管理", "保全計画", "高圧・低圧設備"],
-    meta: [
-      { label: "勤務地", value: "東京都中野区" },
-      { label: "募集人数", value: "若干名" },
-      { label: "必要資格", value: "普通自動車運転免許" },
-      { label: "給与", value: "面談" },
-    ],
-    requirements: [
-      "工場、プラント、発電所での高圧・低圧電気設備の保全、メンテナンス、施工管理などの経験",
-      "電気工事士、電気主任技術者、電気工事施工管理技士などの資格保有者は歓迎",
-      "緊急時対応、外注業者管理、小規模工事の施工管理に対応できる方",
-    ],
-  },
-];
-
-const commonInfo = [
-  { label: "勤務地", value: "東京都中野区本町2丁目46-1 サンブライトツインビル北棟15F" },
-  { label: "雇用形態", value: "職種により正社員／契約社員。詳細は面談時に確認します。" },
-  { label: "給与", value: "経験・スキルを考慮し、面談のうえ決定します。" },
-  { label: "応募方法", value: "応募フォームに必要事項をご入力のうえ送信してください。" },
-];
-
-const applySteps = [
-  {
-    title: "募集職種を確認",
-    text: "仕事内容、応募条件、勤務地を確認してください。",
-  },
-  {
-    title: "フォームで応募",
-    text: "応募職種を選び、必要事項を入力して送信してください。",
-  },
-  {
-    title: "書類確認・面談",
-    text: "経験や希望を確認し、必要に応じて面談を行います。",
-  },
-  {
-    title: "条件確認・採用",
-    text: "雇用条件を確認し、入社までの手続きを進めます。",
-  },
-];
 
 export default function RecruitPage() {
   if (!isPageEnabled("/recruit")) notFound();
@@ -118,8 +36,8 @@ export default function RecruitPage() {
             </p>
             <div className={styles.heroActions}>
               <Button href="#positions">募集職種を見る</Button>
-              <Button href="#apply" variant="outline">
-                応募方法を見る
+              <Button href="/recruit/apply" variant="outline">
+                応募フォームへ
               </Button>
             </div>
           </Reveal>
@@ -155,14 +73,14 @@ export default function RecruitPage() {
               </div>
               <p className={styles.sectionLead}>
                 職種ごとの仕事内容、勤務地、募集条件を一覧で確認できます。
-                ご希望の職種を選び、応募フォームよりご応募ください。
+                気になる職種の詳細を開き、応募フォームよりご応募ください。
               </p>
             </div>
           </Reveal>
 
           <div className={styles.jobList}>
             {jobOpenings.map((job, index) => (
-              <Reveal key={job.title} direction="up" delay={index * 70}>
+              <Reveal key={job.slug} direction="up" delay={index * 70}>
                 <article className={styles.jobCard}>
                   <dl className={styles.jobMeta}>
                     <dt className={styles.jobNumber}>JOB {String(index + 1).padStart(2, "0")}</dt>
@@ -185,8 +103,12 @@ export default function RecruitPage() {
                   </div>
 
                   <div className={styles.jobAction}>
-                    <Button href="#entry" variant="primary" className={styles.jobButton}>
-                      この職種に応募
+                    <Button
+                      href={`/recruit/${job.slug}`}
+                      variant="primary"
+                      className={styles.jobButton}
+                    >
+                      募集要項の詳細
                     </Button>
                   </div>
                 </article>
@@ -203,7 +125,7 @@ export default function RecruitPage() {
               共通情報
             </h2>
             <dl className={styles.infoList}>
-              {commonInfo.map((item) => (
+              {recruitCommonInfo.map((item) => (
                 <div key={item.label}>
                   <dt>{item.label}</dt>
                   <dd>{item.value}</dd>
@@ -215,7 +137,7 @@ export default function RecruitPage() {
           <Reveal direction="right" className={styles.flowPanel}>
             <h2 className={styles.guideTitle}>応募の流れ</h2>
             <p className={styles.flowLead}>
-              募集内容をご確認のうえ、ページ下部の応募フォームよりご応募ください。
+              募集内容をご確認のうえ、応募フォームよりご応募ください。
             </p>
             <ol className={styles.flowList}>
               {applySteps.map((step, index) => (
@@ -245,36 +167,16 @@ export default function RecruitPage() {
               ご応募をお待ちしています。
             </h2>
             <p className={styles.ctaLead}>
-              募集職種をご確認のうえ、下記の応募フォームより必要事項をご入力ください。
+              募集職種をご確認のうえ、応募フォームより必要事項をご入力ください。
             </p>
           </Reveal>
           <Reveal direction="right" className={styles.ctaActions}>
-            <Button href="#entry" variant="white">
+            <Button href="/recruit/apply" variant="white">
               応募フォームへ
             </Button>
             <Button href="#positions" variant="cyan" className={styles.ctaOutline}>
               募集職種へ戻る
             </Button>
-          </Reveal>
-        </div>
-      </section>
-
-      <section className={styles.entry} id="entry" aria-labelledby="entry-title">
-        <div className={`container ${styles.entryInner}`}>
-          <Reveal direction="up">
-            <div className={styles.entryHeader}>
-              <SectionLabel eyebrow="ENTRY FORM" subtitle="応募フォーム" />
-              <h2 id="entry-title" className={styles.sectionTitle}>
-                応募フォーム
-              </h2>
-              <p className={styles.entryLead}>
-                以下のフォームに必要事項をご入力のうえ送信してください。
-                内容を確認のうえ、採用担当よりご連絡いたします。
-              </p>
-            </div>
-          </Reveal>
-          <Reveal direction="up" delay={80}>
-            <RecruitForm jobTitles={jobOpenings.map((job) => job.title)} />
           </Reveal>
         </div>
       </section>
