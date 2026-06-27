@@ -51,19 +51,19 @@ const NAV_LINKS: NavLink[] = [
         {
           heading: "私たちの考え",
           items: [
-            { href: "/about/message", label: "トップメッセージ", description: "代表挨拶と経営姿勢" },
-            { href: "/about/vision", label: "企業理念・ビジョン", description: "目指す未来と価値観" },
-            { href: "/about/standard", label: "行動基準", description: "判断と行動の指針" },
+            { href: "/about/message", label: "トップメッセージ" },
+            { href: "/about/vision", label: "企業理念・ビジョン" },
+            { href: "/about/standard", label: "行動基準" },
           ],
         },
         {
           heading: "会社の輪郭",
           items: [
-            { href: "/about/outline", label: "会社概要", description: "会社の基本情報" },
-            { href: "/about/organization", label: "グループ・組織図", description: "体制とグループ構成" },
-            { href: "/about/network", label: "国内外拠点", description: "事業ネットワーク" },
-            { href: "/about/history", label: "沿革", description: "創業からの歩み" },
-            { href: "/about/safety-health", label: "健康経営", description: "従業員の健康への取り組み" },
+            { href: "/about/outline", label: "会社概要" },
+            { href: "/about/organization", label: "グループ・組織図" },
+            { href: "/about/network", label: "国内外拠点" },
+            { href: "/about/history", label: "沿革" },
+            { href: "/about/safety-health", label: "健康経営" },
           ],
         },
       ],
@@ -87,17 +87,17 @@ const NAV_LINKS: NavLink[] = [
         {
           heading: "電力・蓄電",
           items: [
-            { href: "/business/batteryenergystorage", label: "蓄電池事業", description: "大型蓄電で電力を安定化" },
-            { href: "/business/windpower", label: "風力発電事業", description: "自然の力をエネルギーに" },
-            { href: "/business/biomasspower", label: "バイオマス事業", description: "資源循環型の発電" },
+            { href: "/business/batteryenergystorage", label: "蓄電池事業" },
+            { href: "/business/windpower", label: "風力発電事業" },
+            { href: "/business/biomasspower", label: "バイオマス事業" },
           ],
         },
         {
           heading: "次世代インフラ",
           items: [
-            { href: "/business/hydrogen-mobility", label: "水素モビリティ事業", description: "次世代の移動を実現" },
-            { href: "/business/ai-data-center", label: "AIデータセンター事業", description: "デジタル社会の基盤" },
-            { href: "/business/hopper", label: "走行式集塵ホッパー事業", description: "環境に配慮した集塵技術" },
+            { href: "/business/hydrogen-mobility", label: "水素モビリティ事業" },
+            { href: "/business/ai-data-center", label: "AIデータセンター事業" },
+            { href: "/business/hopper", label: "走行式集塵ホッパー事業" },
           ],
         },
       ],
@@ -121,9 +121,9 @@ const NAV_LINKS: NavLink[] = [
         {
           heading: "取り組みの領域",
           items: [
-            { href: "/sustainability/community-relations", label: "地域共生", description: "地域とともに歩む" },
-            { href: "/sustainability/environment", label: "環境保全", description: "自然環境を守る取り組み" },
-            { href: "/sustainability/carbon-neutrality", label: "カーボンニュートラル", description: "脱炭素社会の実現へ" },
+            { href: "/sustainability/community-relations", label: "地域共生" },
+            { href: "/sustainability/environment", label: "環境保全" },
+            { href: "/sustainability/carbon-neutrality", label: "カーボンニュートラル" },
           ],
         },
       ],

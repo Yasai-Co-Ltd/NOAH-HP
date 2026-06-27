@@ -9,9 +9,9 @@ import styles from "./page.module.css";
 import { asset } from "@/lib/asset";
 
 export const metadata: Metadata = {
-  title: "バイオマス | 諾亜建設株式会社",
+  title: "バイオマス発電事業 | 諾亜建設株式会社",
   description:
-    "PKS、炭化PKS、木質ペレットの調達から、認証工場との連携、輸送、粉塵管理まで、諾亜建設のバイオマス燃料事業を紹介します。",
+    "PKS、炭化PKS、木質ペレットの燃料供給から、バイオマス発電、乾燥設備、生産ライン、港湾荷役・粉塵管理まで、諾亜建設のバイオマス発電事業を紹介します。",
 };
 
 const heroMetrics = [
@@ -46,7 +46,22 @@ const fuelItems = [
     alt: "木質ペレットのサンプル",
     description:
       "木くずなどを直径6〜10mm程度に成形した燃料。化石燃料の代替として、欧州を中心に需要が拡大しています。",
-    points: ["FSC-COC認証取得工場との提携", "タイ・マレーシア・ベトナム等から調達", "上位発熱量 adv.4100kcal"],
+    points: ["FSC-COC認証取得工場との提携", "東南アジア各地域から調達", "上位発熱量 adv.4100kcal"],
+  },
+];
+
+const equipmentItems = [
+  {
+    title: "防塵ホッパー",
+    text: "バッグフィルター、サイクロン、ドライフォグなど、バイオマス燃料の荷卸し時に発生する粉塵を抑える設備を提案します。",
+  },
+  {
+    title: "ハンドリング設備",
+    text: "シップアンローダー、大型コンベヤ、生産ラインコンベヤなど、船から受入設備までの搬送効率を高めます。",
+  },
+  {
+    title: "乾燥設備・生産ライン",
+    text: "木質ペレット生産工場や木材工場向けに、チェーン式乾燥機など原料条件に応じた設備計画を支援します。",
   },
 ];
 
@@ -87,8 +102,8 @@ const specRows = [
   },
   {
     label: "主な調達地",
-    pks: "インドネシア、マレーシア、タイ等",
-    pellet: "タイ、マレーシア、ベトナム等",
+    pks: "東南アジア各地域",
+    pellet: "東南アジア各地域",
   },
 ];
 
@@ -100,13 +115,13 @@ const projectSteps = [
   },
   {
     number: "02",
-    title: "調達計画・見積",
-    text: "購入量、時期、引取方式、長期契約の可否を整理します。",
+    title: "供給条件・見積",
+    text: "購入量、時期、FOB・DDPなどの引取方式、長期契約の可否を整理します。",
   },
   {
     number: "03",
-    title: "輸送・港湾設計",
-    text: "指定港、荷役方法、粉塵対策、在庫管理を具体化します。",
+    title: "設備・荷役計画",
+    text: "港湾荷役、ハンドリング設備、乾燥設備、粉塵対策、在庫管理を具体化します。",
   },
   {
     number: "04",
@@ -124,20 +139,21 @@ export default function BiomassPowerPage() {
         <div className={`container ${styles.heroInner}`}>
           <Reveal direction="left" className={styles.heroCopy}>
             <p className={styles.eyebrow}>
-              BIOMASS FUEL
-              <span>バイオマス</span>
+              BIOMASS POWER
+              <span>バイオマス発電事業</span>
             </p>
             <h1 id="biomass-title" className={styles.heroTitle}>
-              燃料調達から粉塵管理まで、
+              燃料供給から設備計画まで、
               <br />
-              バイオマス運用を支える。
+              バイオマス発電を支える。
             </h1>
             <p className={styles.heroLead}>
-              PKS、炭化PKS、木質ペレットの安定調達に加え、認証工場との連携、輸送条件、港湾荷役、
-              粉塵対策までを一体で設計。燃料を「買う」だけでなく、受け入れて使い続けられる状態まで整えます。
+              PKS、炭化PKS、木質ペレットの安定供給に加え、バイオマス発電、乾燥設備、
+              生産ライン、港湾荷役・粉塵対策までを一体で整理。燃料を「買う」だけでなく、
+              受け入れて使い続けられる状態まで整えます。
             </p>
             <div className={styles.heroActions}>
-              <Button href="/contact">燃料調達を相談する</Button>
+              <Button href="/contact">燃料・設備計画を相談する</Button>
               <Button href="#fuel" variant="outline">
                 取扱燃料を見る
               </Button>
@@ -178,7 +194,7 @@ export default function BiomassPowerPage() {
             <h2 id="overview-title" className={styles.heading}>
               カーボンニュートラル燃料を、
               <br />
-              事業で使える供給体制へ。
+              発電事業で使える設備計画へ。
             </h2>
           </Reveal>
           <Reveal direction="right">
@@ -188,8 +204,8 @@ export default function BiomassPowerPage() {
                 樹木の成長過程でCO2を吸収するため、燃焼時の排出と相殺するカーボンニュートラル燃料として位置づけられます。
               </p>
               <p>
-                NOAHは、燃料の調達量や価格だけではなく、認証、海上輸送、受入時の粉塵、保管、長期契約まで含めて、
-                発電事業者が継続運用しやすい供給モデルを組み立てます。
+                NOAHは、燃料の調達量や価格だけではなく、認証、海上輸送、受入時の粉塵、
+                乾燥設備、生産ライン、長期契約まで含めて、発電事業者が継続運用しやすい供給・設備モデルを組み立てます。
               </p>
             </div>
           </Reveal>
@@ -298,13 +314,13 @@ export default function BiomassPowerPage() {
           <Reveal direction="right" className={styles.dustCopy}>
             <SectionLabel eyebrow="DUST CONTROL" subtitle="粉塵管理" />
             <h2 id="dust-title" className={styles.heading}>
-              燃料品質だけでなく、
+              荷役、搬送、乾燥まで、
               <br />
-              粉塵リスクまで抑える。
+              設備面から安定運用を支える。
             </h2>
             <p className={styles.lead}>
-              テレスコピックコンベアや集塵ホッパーを組み合わせ、港湾荷役・国内受入時の粉塵発生を抑制。
-              長期在庫による発酵や荷役時の飛散も含めて、燃料管理の安全性を高めます。
+              テレスコピックコンベアや防塵ホッパーを組み合わせ、港湾荷役・国内受入時の粉塵発生を抑制。
+              さらに、ハンドリング設備や乾燥設備まで含めて、燃料管理の安全性と作業効率を高めます。
             </p>
             <div className={styles.dustStats}>
               <div>
@@ -312,9 +328,17 @@ export default function BiomassPowerPage() {
                 <span>サプライチェーン全体の粉塵削減目標</span>
               </div>
               <div>
-                <b>99%+</b>
-                <span>高効率集塵ホッパーの集塵効率</span>
+                <b>3方式</b>
+                <span>バッグフィルター・サイクロン・ドライフォグに対応</span>
               </div>
+            </div>
+            <div className={styles.equipmentList}>
+              {equipmentItems.map((item) => (
+                <article key={item.title} className={styles.equipmentItem}>
+                  <h3>{item.title}</h3>
+                  <p>{item.text}</p>
+                </article>
+              ))}
             </div>
           </Reveal>
         </div>
@@ -363,9 +387,9 @@ export default function BiomassPowerPage() {
           <Reveal direction="up">
             <SectionLabel eyebrow="PROJECT FLOW" subtitle="導入までの流れ" />
             <h2 id="process-title" className={styles.heading}>
-              見積から継続供給まで、
+              見積から継続供給、
               <br />
-              燃料運用を一貫して支援。
+              設備計画まで一貫して支援。
             </h2>
           </Reveal>
           <div className={styles.processList}>
@@ -386,11 +410,11 @@ export default function BiomassPowerPage() {
         <div className={`container ${styles.ctaInner}`}>
           <Reveal direction="up">
             <h2 id="biomass-cta-title">
-              バイオマス燃料の調達・受入計画を
+              バイオマス発電・燃料供給・設備計画を
               <br />
               ご相談ください
             </h2>
-            <p>必要数量、燃料条件、港湾荷役、粉塵対策まで、初期段階から整理します。</p>
+            <p>必要数量、燃料条件、港湾荷役、乾燥設備、粉塵対策まで、初期段階から整理します。</p>
             <div className={styles.ctaActions}>
               <Button href="/contact" variant="white">
                 お問い合わせ

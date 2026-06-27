@@ -38,7 +38,7 @@
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
+  grid-template-columns: minmax(0, 1.02fr) minmax(0, 0.98fr);
   gap: 58px;
   align-items: center;
   min-height: 640px;
@@ -110,7 +110,7 @@
   top: 50%;
   /* transform: translateY(-50%); */
   position: relative;
-  min-height: 450px;
+  min-height: 380px;
   margin: 0;
   overflow: hidden;
   background: var(--color-surface);
@@ -1239,13 +1239,13 @@
 .nextTitle,
 .ctaTitle,
 .title {
-  font-size: clamp(1.8rem, 2.7vw, 2.65rem);
+  font-size: clamp(1.8rem, 2.4vw, 2.65rem);
   font-weight: 800;
   line-height: 1.55;
 }
 
 .heroLead {
-  font-size: clamp(1rem, 1.3vw, 1.18rem);
+  font-size: clamp(1rem, 1.3vw, 1rem);
   font-weight: 700;
   line-height: 2;
 }
@@ -1324,7 +1324,7 @@
 .topNode b,
 .panelTitle,
 .messageTitle {
-  font-size: clamp(1.8rem, 2.7vw, 2.65rem);
+  font-size: clamp(1.8rem, 2.4vw, 2.65rem);
   font-weight: 800;
   line-height: 1.45;
 }

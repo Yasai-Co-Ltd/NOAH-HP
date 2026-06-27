@@ -80,7 +80,7 @@
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-columns: minmax(0, 0.84fr) minmax(420px, 0.86fr);
+  grid-template-columns: minmax(0, 1.00fr) minmax(340px, 0.70fr);
   gap: 58px;
   align-items: stretch;
   min-height: 600px;

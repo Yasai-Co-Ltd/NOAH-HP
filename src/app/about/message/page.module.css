@@ -416,13 +416,13 @@
 .nextTitle,
 .ctaTitle,
 .title {
-  font-size: clamp(1.8rem, 2.7vw, 2.65rem);
+  font-size: clamp(1.8rem, 2.4vw, 2.65rem);
   font-weight: 800;
   line-height: 1.55;
 }
 
 .heroLead {
-  font-size: clamp(1rem, 1.3vw, 1.18rem);
+  font-size: clamp(1rem, 1.3vw, 1rem);
   font-weight: 700;
   line-height: 2;
 }
@@ -502,7 +502,7 @@
 .topNode b,
 .panelTitle,
 .messageTitle {
-  font-size: clamp(1.8rem, 2.7vw, 2.65rem);
+  font-size: clamp(1.8rem, 2.4vw, 2.65rem);
   font-weight: 800;
   line-height: 1.45;
 }
