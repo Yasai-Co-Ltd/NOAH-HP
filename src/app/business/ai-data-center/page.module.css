@@ -103,13 +103,11 @@
 }
 
 .heroVisual {
-  top: 50%;
-  /* transform: translateY(-50%); */
   position: relative;
   min-height: 436px;
   margin: 0;
   overflow: hidden;
-  background: #06152d;
+  background: linear-gradient(135deg, #06152d 0%, #0b2344 100%);
   border: 1px solid rgba(180, 201, 224, 0.86);
   box-shadow: 0 32px 76px rgba(3, 16, 38, 0.2);
 }
@@ -127,7 +125,18 @@
 .modelImage,
 .greenImage,
 .conceptImage {
-  object-fit: cover;
+  object-fit: contain;
+  object-position: center;
+}
+
+.heroImage {
+  padding: 18px 18px 118px;
+}
+
+.modelImage,
+.greenImage,
+.conceptImage {
+  padding: 24px;
 }
 
 .heroCaption {
@@ -255,8 +264,7 @@
   background: var(--color-surface);
 }
 
-.challengeItem span,
-.conceptItem span {
+.challengeItem > span {
   display: block;
   color: var(--color-accent-cyan);
   font-family: var(--font-numeric);
@@ -470,7 +478,7 @@
 
 .conceptImageWrap {
   min-height: 520px;
-  background: #06152d;
+  background: linear-gradient(135deg, #06152d 0%, #0b2344 100%);
   border: 1px solid var(--color-line);
   box-shadow: 0 20px 54px rgba(5, 39, 102, 0.1);
 }
@@ -483,9 +491,64 @@
 }
 
 .conceptItem {
-  min-height: 160px;
+  min-height: 210px;
   padding: 30px 28px;
   background: var(--color-surface);
+}
+
+.conceptMeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 14px;
+  align-items: center;
+}
+
+.conceptStatus {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 6px 10px;
+  color: var(--color-brand-900);
+  font-size: 0.72rem;
+  font-weight: 800;
+  line-height: 1;
+  background: var(--color-brand-050);
+  border: 1px solid rgba(83, 193, 229, 0.28);
+}
+
+.conceptMeta p {
+  margin: 0;
+  color: var(--color-accent-teal);
+  font-size: 0.78rem;
+  font-weight: 800;
+  line-height: 1.45;
+}
+
+.factList {
+  display: grid;
+  gap: 8px;
+  padding: 0;
+  margin: 20px 0 0;
+  list-style: none;
+}
+
+.factList li {
+  position: relative;
+  padding-left: 16px;
+  color: var(--color-muted);
+  font-size: 0.8rem;
+  font-weight: 700;
+  line-height: 1.55;
+}
+
+.factList li::before {
+  position: absolute;
+  top: 0.68em;
+  left: 0;
+  width: 5px;
+  height: 5px;
+  content: "";
+  background: var(--color-accent-cyan);
 }
 
 .process {
@@ -715,6 +778,16 @@
   .greenFigure,
   .conceptImageWrap {
     min-height: 260px;
+  }
+
+  .heroImage {
+    padding: 14px 14px 108px;
+  }
+
+  .modelImage,
+  .greenImage,
+  .conceptImage {
+    padding: 16px;
   }
 
   .emsImage,

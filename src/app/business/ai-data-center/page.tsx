@@ -11,14 +11,14 @@ import { asset } from "@/lib/asset";
 export const metadata: Metadata = {
   title: "AIデータセンター事業 | 諾亜建設株式会社",
   description:
-    "AI計算基盤に必要な大容量電力、再生可能エネルギー、蓄電池、EMS、冷却・運用計画を一体で検討する諾亜建設のAIデータセンター事業を紹介します。",
+    "川越市、和歌山県、千葉県、群馬県で検討を進めるAIデータセンター計画と、電力・蓄電池・EMS・冷却を一体で整理する諾亜建設の取り組みを紹介します。",
 };
 
 const heroMetrics = [
-  { value: "35kW", label: "現行AIデータセンター ラック電力目安" },
-  { value: "100kW", label: "次世代AIデータセンター ラック電力目安" },
-  { value: "200MW級", label: "データセンター建設構想" },
-  { value: "400MW級", label: "グリーン電力一体化モデル" },
+  { value: "4エリア", label: "建設計画・候補地を整理中" },
+  { value: "約23,000㎡", label: "和歌山市金谷 データセンター用地計画" },
+  { value: "約20万坪", label: "群馬・赤城事業所 場内規模" },
+  { value: "2026-2029", label: "和歌山県計画 工事期間予定" },
 ];
 
 const challengeItems = [
@@ -73,18 +73,34 @@ const emsFeatures = [
   "省エネ・脱炭素管理",
 ];
 
-const conceptModels = [
+const projectSites = [
   {
-    title: "川越200MWデータセンター建設構想",
-    text: "AI計算基盤に必要な電力・建屋・運用設備を一体で検討するモデル。",
+    status: "条件整理中",
+    area: "埼玉県 川越市",
+    title: "首都圏西側の計算需要を見据えた計画候補",
+    text: "詳細条件の整理後、受電条件、敷地条件、冷却・運用計画を確認しながら、AIデータセンターとしての成立条件を検討します。",
+    facts: ["詳細条件整理中", "電力・用地条件を確認予定"],
   },
   {
-    title: "群馬データセンター工場改修",
-    text: "既存施設の改修・転用を視野に入れた、データセンター整備の検討モデル。",
+    status: "計画確認済",
+    area: "和歌山県 和歌山市金谷",
+    title: "蓄電池とデータセンターを一体で整備する計画",
+    text: "再生可能エネルギーの安定供給と情報インフラの整備を目的に、蓄電池設備用地とデータセンター用地を同時に確保する計画です。",
+    facts: ["データセンター用地：約23,000㎡", "工事期間：2026年4月-2029年3月予定", "関西空港から車で45分、JR和歌山駅から20分"],
   },
   {
-    title: "銚子400MWグリーン電力モデル",
-    text: "再エネ電源、蓄電池、データセンターを組み合わせる大容量電力供給モデル。",
+    status: "条件整理中",
+    area: "千葉県",
+    title: "首都圏・湾岸エリアの電力需要を見据えた計画候補",
+    text: "詳細条件の整理後、再エネ電源、系統接続、蓄電池、運用監視の組み合わせを確認し、掲載情報を更新します。",
+    facts: ["詳細条件整理中", "再エネ・系統条件を確認予定"],
+  },
+  {
+    status: "計画確認済",
+    area: "群馬県 前橋市 赤城事業所",
+    title: "既存工場・大規模用地を活用する計画候補",
+    text: "Sanden Forest・赤城事業所の土地・建物条件を確認。既存建物、未利用地、山林を含む大規模敷地の活用可能性を検討します。",
+    facts: ["場内：687,557㎡（約20万坪）", "建物合計：21棟・120,110.42㎡", "東京から車約140km、電車約2時間"],
   },
 ];
 
@@ -129,8 +145,8 @@ export default function AiDataCenterPage() {
               電力インフラから構築する。
             </h1>
             <p className={styles.heroLead}>
-              AIデータセンターは、サーバーを並べるだけでは成立しません。
-              高密度な電力、冷却、蓄電池、再エネ、EMSを一体で設計し、グリーンでスマートな計算基盤を実装します。
+              現在、川越市、和歌山県、千葉県、群馬県を中心に、AIデータセンターの建設計画・候補地を整理しています。
+              高密度な電力、冷却、蓄電池、再エネ、EMSを一体で検討し、計算基盤を支えるインフラから事業化を進めます。
             </p>
             <div className={styles.heroActions}>
               <Button href="/contact">事業相談をする</Button>
@@ -151,7 +167,7 @@ export default function AiDataCenterPage() {
                 className={styles.heroImage}
               />
               <figcaption className={styles.heroCaption}>
-                AIサーバー、再エネ電源、蓄電池、EMSを統合したエネルギー起点のデータセンター計画。
+                計画地の用地条件、蓄電池、系統連系、運用監視を組み合わせ、AIデータセンターに必要な前提を整理します。
               </figcaption>
             </figure>
           </Reveal>
@@ -206,7 +222,7 @@ export default function AiDataCenterPage() {
             </div>
           </div>
           <p className={styles.sourceNote}>
-            ラック電力・構想規模は計画段階の目安です。実案件では最新仕様・系統条件・法規に合わせて個別に確認します。
+            AIサーバーの電力密度は導入機器・構成により変動します。実案件では受電条件、冷却方式、法規、運用要件を個別に確認します。
           </p>
         </div>
       </section>
@@ -332,11 +348,11 @@ export default function AiDataCenterPage() {
       <section className={styles.concepts} aria-labelledby="concepts-title">
         <div className="container">
           <Reveal direction="up">
-            <SectionLabel eyebrow="CONCEPT MODEL" subtitle="資料掲載モデル" />
+            <SectionLabel eyebrow="PROJECT AREA" subtitle="建設計画エリア" />
             <h2 id="concepts-title" className={styles.heading}>
-              建設・改修・電力供給を、
+              電力、用地、蓄電池を、
               <br />
-              案件ごとに組み合わせる。
+              エリアごとに整理する。
             </h2>
           </Reveal>
 
@@ -354,17 +370,28 @@ export default function AiDataCenterPage() {
             </Reveal>
 
             <div className={styles.conceptList}>
-              {conceptModels.map((model, index) => (
-                <Reveal key={model.title} direction="up" delay={index * 70}>
+              {projectSites.map((site, index) => (
+                <Reveal key={site.area} direction="up" delay={index * 70}>
                   <article className={styles.conceptItem}>
-                    <span>{String(index + 1).padStart(2, "0")}</span>
-                    <h3>{model.title}</h3>
-                    <p>{model.text}</p>
+                    <div className={styles.conceptMeta}>
+                      <span className={styles.conceptStatus}>{site.status}</span>
+                      <p>{site.area}</p>
+                    </div>
+                    <h3>{site.title}</h3>
+                    <p>{site.text}</p>
+                    <ul className={styles.factList}>
+                      {site.facts.map((fact) => (
+                        <li key={fact}>{fact}</li>
+                      ))}
+                    </ul>
                   </article>
                 </Reveal>
               ))}
             </div>
           </div>
+          <p className={styles.sourceNote}>
+            掲載内容は計画段階の情報です。川越市・千葉県は詳細条件が整い次第、掲載内容を更新します。
+          </p>
         </div>
       </section>
 
@@ -406,7 +433,7 @@ export default function AiDataCenterPage() {
               <Button href="/contact" variant="white">
                 お問い合わせ
               </Button>
-              <Button href="/business" variant="outline" className={styles.ctaOutline}>
+              <Button href="/business" variant="cyan" className={styles.ctaOutline}>
                 事業一覧へ戻る
               </Button>
             </div>
