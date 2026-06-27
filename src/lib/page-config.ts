@@ -13,9 +13,12 @@ export const PAGES = {
   "/about": true,
   "/about/message": true,
   "/about/vision": true,
-  "/about/outline": false,
+  "/about/standard": false,
+  "/about/outline": true,
   "/about/organization": true,
+  "/about/network": false,
   "/about/history": true,
+  "/about/safety-health": false,
 
   // 事業紹介
   "/business": true,
@@ -32,10 +35,21 @@ export const PAGES = {
   "/sustainability/environment": true,
   "/sustainability/carbon-neutrality": true,
 
-  // その他
+  // ニュース
   "/news": true,
+  "/news/[slug]": true,
+
+  // 採用情報
   "/recruit": true,
+  "/recruit/jobs": false,
+  "/recruit/jobs/[slug]": false,
+  "/recruit/apply": false,
+
+  // お問い合わせ
   "/contact": true,
+  "/contact/thanks": false,
+
+  // その他
   "/privacy": false,
   "/sitemap": false,
 } as const satisfies Record<string, boolean>;
