@@ -49,7 +49,7 @@ export const PAGES = {
   "/contact/thanks": false,
 
   // その他
-  "/privacy": false,
+  "/privacy": true,
   "/sitemap": false,
 } as const satisfies Record<string, boolean>;
 

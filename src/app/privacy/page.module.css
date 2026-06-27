@@ -1,0 +1,228 @@
+.hero {
+  position: relative;
+  overflow: hidden;
+  color: var(--color-surface);
+  background:
+    linear-gradient(118deg, rgba(3, 16, 38, 0.98) 0%, var(--color-brand-900) 100%),
+    linear-gradient(rgba(83, 193, 229, 0.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(83, 193, 229, 0.12) 1px, transparent 1px);
+  background-size: auto, 72px 72px, 72px 72px;
+  border-bottom: 1px solid var(--color-line);
+  isolation: isolate;
+}
+
+.hero::after {
+  position: absolute;
+  top: 44px;
+  right: 5vw;
+  z-index: -1;
+  content: "PRIVACY";
+  color: rgba(83, 193, 229, 0.09);
+  font-family: var(--font-numeric);
+  font-size: min(16vw, 10.4rem);
+  font-weight: 700;
+  line-height: 1;
+}
+
+.heroInner {
+  padding-block: 96px 88px;
+}
+
+.eyebrow {
+  margin: 0;
+  color: var(--color-accent-cyan);
+  font-size: 0.82rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+.heroTitle {
+  margin: 26px 0 0;
+  font-family: var(--font-serif);
+  font-size: clamp(2.48rem, 4.2vw, 3.4rem);
+  font-weight: 800;
+  line-height: 1.34;
+  letter-spacing: 0;
+}
+
+.heroLead {
+  max-width: 620px;
+  margin: 22px 0 0;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.85;
+}
+
+.body {
+  padding-block: 96px;
+  background: var(--color-surface);
+}
+
+.bodyInner {
+  max-width: 880px;
+  margin-inline: auto;
+}
+
+.policyList {
+  display: grid;
+  gap: 52px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.policyItem {
+  min-width: 0;
+}
+
+.policyHeading {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  margin: 0 0 18px;
+  padding-bottom: 16px;
+  color: var(--color-brand-900);
+  font-family: var(--font-serif);
+  font-size: clamp(1.32rem, 2vw, 1.62rem);
+  font-weight: 800;
+  line-height: 1.4;
+  letter-spacing: 0;
+  border-bottom: 1px solid var(--color-line);
+}
+
+.policyNumber {
+  flex-shrink: 0;
+  color: var(--color-accent-cyan);
+  font-family: var(--font-numeric);
+  font-size: 0.96rem;
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+.policyText {
+  margin: 0;
+  color: var(--color-text);
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 2;
+}
+
+.policyText + .policyText {
+  margin-top: 16px;
+}
+
+.policyBullets {
+  display: grid;
+  gap: 12px;
+  margin: 18px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.policyBullets li {
+  position: relative;
+  padding-left: 24px;
+  color: var(--color-text);
+  font-size: 0.92rem;
+  font-weight: 600;
+  line-height: 1.85;
+}
+
+.policyBullets li::before {
+  position: absolute;
+  top: 0.7em;
+  left: 4px;
+  width: 7px;
+  height: 7px;
+  content: "";
+  background: var(--color-accent-cyan);
+  border-radius: 50%;
+}
+
+.contact {
+  margin-top: 64px;
+  padding: 36px 36px 40px;
+  background: var(--color-brand-050);
+  border: 1px solid var(--color-line);
+}
+
+.contactHeading {
+  margin: 0 0 16px;
+  color: var(--color-brand-900);
+  font-family: var(--font-serif);
+  font-size: 1.28rem;
+  font-weight: 800;
+  line-height: 1.4;
+}
+
+.contactInfo {
+  display: grid;
+  gap: 14px;
+  margin: 22px 0 0;
+}
+
+.contactInfo > div {
+  display: grid;
+  grid-template-columns: 112px minmax(0, 1fr);
+  gap: 16px;
+}
+
+.contactInfo dt {
+  color: var(--color-muted);
+  font-size: 0.84rem;
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+.contactInfo dd {
+  margin: 0;
+  color: var(--color-brand-900);
+  font-size: 0.92rem;
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+.contactLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 26px;
+  color: var(--color-brand-800);
+  font-size: 0.92rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.contactLink span {
+  transition: transform var(--duration-fast) var(--ease-out);
+}
+
+.contactLink:hover {
+  text-decoration: underline;
+}
+
+.contactLink:hover span {
+  transform: translateX(4px);
+}
+
+.revision {
+  margin: 48px 0 0;
+  color: var(--color-muted);
+  font-size: 0.86rem;
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: right;
+}
+
+@media (max-width: 640px) {
+  .contact {
+    padding: 28px 22px 30px;
+  }
+
+  .contactInfo > div {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+}
