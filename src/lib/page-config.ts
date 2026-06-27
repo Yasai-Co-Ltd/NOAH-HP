@@ -22,7 +22,7 @@ export const PAGES = {
   "/business/batteryenergystorage": true,
   "/business/windpower": true,
   "/business/biomasspower": true,
-  "/business/hopper": false,
+  "/business/hopper": true,
   "/business/hydrogen-mobility": true,
   "/business/ai-data-center": true,
 

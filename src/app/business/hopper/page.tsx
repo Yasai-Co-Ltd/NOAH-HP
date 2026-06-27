@@ -16,9 +16,9 @@ export const metadata: Metadata = {
 
 const heroSpecs = [
   { value: "300〜500m³/h", label: "最大処理能力" },
-  { value: "30μm+", label: "捕捉対象粉塵" },
-  { value: "25t", label: "ホッパー内容量" },
-  { value: "約60t", label: "本体重量" },
+  { value: "30μm以上", label: "捕捉対象粉塵の目安" },
+  { value: "25トン", label: "ホッパー内容量" },
+  { value: "約60トン", label: "総重量" },
 ];
 
 const operationSteps = [
@@ -73,7 +73,7 @@ const architectureItems = [
 
 const dustStats = [
   { value: "59,000m³/h", label: "開口部風量" },
-  { value: "22kW×2", label: "集塵ファンモーター" },
+  { value: "22kW×4", label: "開口部集塵ファンモーター" },
   { value: "2.4m³/分", label: "エアコンプレッサー風量" },
   { value: "0.8MPa", label: "定格圧力" },
 ];
@@ -86,7 +86,9 @@ const specRows = [
   { label: "総高", value: "9000mm（遮風板含む）" },
   { label: "トラック通路空間高さ", value: "4250mm" },
   { label: "長さ×幅", value: "7000mm×6000mm（輪距離）" },
-  { label: "ホッパー容量", value: "24m³ / 警告レベル40m³" },
+  { label: "ホッパー内容量", value: "25トン" },
+  { label: "移動方式", value: "自走式移動歩行" },
+  { label: "総重量", value: "約60トン" },
   { label: "電源", value: "220V、60Hz、三相4線" },
   { label: "制御方式", value: "PLC制御（三菱PLC）" },
 ];
@@ -146,15 +148,15 @@ export default function HopperPage() {
           <Reveal direction="right" className={styles.heroVisualReveal}>
             <figure className={styles.heroVisual}>
               <Image
-                src={asset("/assets/hopper/hopper-render-45.png")}
-                alt="走行式集塵ホッパーの3D図面"
+                src={asset("/assets/hopper/hopper-hero-port-v2.png")}
+                alt="港湾で木質ペレットを荷役する走行式集塵ホッパー"
                 fill
                 priority
                 sizes="(max-width: 960px) calc(100vw - 40px), 54vw"
                 className={styles.heroImage}
               />
               <figcaption className={styles.heroCaption}>
-                密閉グリル、集塵装置、走行輪、サポートレッグを一体化した移動式設備。
+                港湾荷役の現場で、船からトラックへの移載と粉塵抑制を一体で支える移動式設備。
               </figcaption>
             </figure>
           </Reveal>
@@ -334,6 +336,9 @@ export default function HopperPage() {
               </div>
             </Reveal>
           </div>
+          <p className={styles.specNote}>
+            上記は走行式集塵ホッパーの代表仕様です。実案件では対象材料、処理量、港湾条件、電源条件に合わせて個別に確認します。
+          </p>
         </div>
       </section>
 
@@ -375,7 +380,7 @@ export default function HopperPage() {
               <Button href="/contact" variant="white">
                 お問い合わせ
               </Button>
-              <Button href="/business" variant="outline" className={styles.ctaOutline}>
+              <Button href="/business" variant="cyan" className={styles.ctaOutline}>
                 事業一覧へ戻る
               </Button>
             </div>
