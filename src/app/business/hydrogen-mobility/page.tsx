@@ -11,14 +11,14 @@ import { asset } from "@/lib/asset";
 export const metadata: Metadata = {
   title: "水素モビリティ事業 | 諾亜建設株式会社",
   description:
-    "FCVトラックの導入、充填インフラ、補助金・TCO検討、運用開始までを一体で支援する諾亜建設の水素モビリティ事業を紹介します。",
+    "FCVトラックの導入、水素製造、水素ステーション、補助金・TCO検討、運用開始までを一体で支援する諾亜建設の水素モビリティ事業を紹介します。",
 };
 
 const heroMetrics = [
-  { value: "500km", label: "参考航続距離（WLTC）" },
-  { value: "30分", label: "水素充填時間" },
-  { value: "140kW", label: "燃料電池システム" },
-  { value: "35MPa", label: "水素タンク圧力" },
+  { value: "500km", label: "FCEVトレーラーヘッド想定輸送半径" },
+  { value: "20分", label: "資料記載の充填時間" },
+  { value: "140kW", label: "実車搭載済み燃料電池製品" },
+  { value: "20km/kg", label: "資料記載のFCトラック燃費" },
 ];
 
 const supportSteps = [
@@ -29,8 +29,8 @@ const supportSteps = [
   },
   {
     number: "02",
-    title: "水素供給計画",
-    text: "水素ステーション、オンサイト製造、タンク輸送など、拠点と走行ルートに合わせて供給方法を検討します。",
+    title: "水素供給・ステーション計画",
+    text: "水素発生装置、メタノール供給、水素ステーションの能力や設置条件を、拠点と走行ルートに合わせて検討します。",
   },
   {
     number: "03",
@@ -45,22 +45,19 @@ const supportSteps = [
 ];
 
 const vehicleSpecs = [
-  { label: "参考モデル", value: "SX4257MJ4XFCEV17" },
-  { label: "タイプ", value: "FCV（水素燃料電池車）" },
-  { label: "動力バッテリー", value: "CATL 108kWh" },
-  { label: "燃料電池システム", value: "140kW" },
-  { label: "水素供給システム", value: "385Lタンク × 6本（35MPa）" },
-  { label: "駆動モーター出力", value: "定格270kW / ピーク410kW" },
-  { label: "モータートルク", value: "定格1400N.m / ピーク2400N.m" },
-  { label: "駆動形式", value: "6×4" },
-  { label: "最高速度", value: "89km/h" },
-  { label: "変速機", value: "4速 AMT" },
+  { label: "対象車両", value: "FCVトラクターヘッドを中心とした商用車" },
+  { label: "想定用途", value: "石炭、鋼材、港湾などの500km圏輸送" },
+  { label: "燃料電池", value: "140kW級製品を実車搭載済み" },
+  { label: "参考燃費", value: "FCトラック 20km/kg" },
+  { label: "充填時間", value: "20分（資料記載値）" },
+  { label: "導入支援", value: "車両、補助金、ステーション、運用計画を一体で整理" },
+  { label: "運用実績", value: "FCEVトレーラーヘッド900台超の納車・運営実績" },
 ];
 
 const infrastructureItems = [
   {
     title: "つくる",
-    text: "再エネ電力やメタノール水素発生装置など、地域条件に合う製造・調達方法を比較します。",
+    text: "メタノール水素発生装置など、地域条件に合う水素製造・調達方法を比較します。",
   },
   {
     title: "貯める",
@@ -98,10 +95,10 @@ const operationScenes = [
 ];
 
 const technologyStats = [
-  { value: "8.6秒", label: "燃料電池始動時間" },
-  { value: "-30〜85℃", label: "動作温度範囲" },
-  { value: "15,000h以上", label: "燃料電池寿命" },
-  { value: "682W/kg", label: "パワー密度" },
+  { value: "140kW", label: "実車搭載済み燃料電池製品" },
+  { value: "5.3kW/L", label: "金属板双極板スタックのパワー密度" },
+  { value: "500人規模", label: "新エネルギー・知能ネットワーク化チーム" },
+  { value: "4領域", label: "知能化・電動化・ネットワーク化・軽量化" },
 ];
 
 const proofStats = [
@@ -151,7 +148,8 @@ export default function HydrogenMobilityPage() {
               運用から設計する。
             </h1>
             <p className={styles.heroLead}>
-              FCVトラックは、車両だけでは導入できません。走行ルート、充填インフラ、補助金、燃料費、保守体制をひとつの事業計画として整理し、
+              FCVトラックは、車両だけでは導入できません。走行ルート、水素製造、水素ステーション、
+              補助金、燃料費、保守体制をひとつの事業計画として整理し、
               商用フリートの脱炭素化を現実的に進めます。
             </p>
             <div className={styles.heroActions}>
@@ -173,7 +171,7 @@ export default function HydrogenMobilityPage() {
                 className={styles.heroImage}
               />
               <figcaption className={styles.heroCaption}>
-                FCVトラック、充填インフラ、補助金・運用コストを一体で検討。
+                FCVトラック、水素製造、水素ステーション、補助金・運用コストを一体で検討。
               </figcaption>
             </figure>
           </Reveal>
@@ -240,8 +238,8 @@ export default function HydrogenMobilityPage() {
               水素へ置き換える。
             </h2>
             <p className={styles.inverseLead}>
-              トレーラーヘッドを中心に、500km級の輸送半径、短時間充填、長時間稼働が求められる商用用途での導入を想定。
-              車両仕様はメーカーの最新情報を確認し、国内運用条件に合わせてご提案します。
+              トレーラーヘッドを中心に、500km圏の輸送半径、短時間充填、長時間稼働が求められる商用用途での導入を想定。
+              資料掲載値を起点に、国内運用条件、法規、補助金制度に合わせて導入条件を整理します。
             </p>
           </Reveal>
 
@@ -360,7 +358,7 @@ export default function HydrogenMobilityPage() {
             </h2>
             <p className={styles.inverseLead}>
               メーカー資料では、140kW級燃料電池システム、車両制御、ネットワーク化、軽量化を組み合わせた商用車プラットフォームを展開。
-              NOAHは国内導入時の条件整理と事業化支援を担います。
+              NOAHは水素製造・水素ステーション・車両運用を含む国内導入時の条件整理と事業化支援を担います。
             </p>
             <div className={styles.techStats}>
               {technologyStats.map((stat) => (
