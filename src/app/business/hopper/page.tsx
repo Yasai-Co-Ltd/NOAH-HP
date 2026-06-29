@@ -235,8 +235,8 @@ export default function HopperPage() {
           <Reveal direction="right">
             <figure className={styles.blueprint}>
               <Image
-                src={asset("/assets/hopper/hopper-top.png")}
-                alt="走行式集塵ホッパーの上面図"
+                src={asset("/assets/hopper/hopper-structure-cutaway-v2.png")}
+                alt="走行式集塵ホッパーの構成が分かる3Dビジュアル"
                 fill
                 sizes="(max-width: 960px) calc(100vw - 40px), 44vw"
                 className={styles.blueprintImage}
