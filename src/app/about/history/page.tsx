@@ -66,7 +66,7 @@ const timelineItems = [
 
 const nextLinks = [
   { href: "/about/outline", label: "会社概要" },
-  { href: "/about/network", label: "国内外拠点" },
+  { href: "/about/organization", label: "グループ・組織図" },
   { href: "/about/safety-health", label: "健康経営" },
 ];
 

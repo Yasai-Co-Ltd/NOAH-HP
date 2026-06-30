@@ -12,7 +12,7 @@ import { asset } from "@/lib/asset";
 export const metadata: Metadata = {
   title: "企業情報 | 諾亜建設株式会社",
   description:
-    "諾亜建設株式会社のトップメッセージ、企業理念・ビジョン、行動基準、会社概要、組織、拠点、沿革、健康経営に関する企業情報です。",
+    "諾亜建設株式会社のトップメッセージ、企業理念・ビジョン、行動基準、会社概要、組織、沿革、健康経営に関する企業情報です。",
 };
 
 const overviewItems = [
@@ -56,13 +56,6 @@ const aboutLinks = [
     title: "グループ・組織図",
     text: "事業領域を横断してプロジェクトを支える組織体制を紹介します。",
     image:asset("/assets/about/menu/organization-v2.png"),
-  },
-  {
-    href: "/about/network",
-    eyebrow: "NETWORK",
-    title: "国内外拠点",
-    text: "国内外のパートナー、拠点、プロジェクト対応エリアを整理します。",
-    image:asset("/assets/about/menu/network-v2.png"),
   },
   {
     href: "/about/history",

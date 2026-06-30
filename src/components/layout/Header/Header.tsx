@@ -61,7 +61,6 @@ const NAV_LINKS: NavLink[] = [
           items: [
             { href: "/about/outline", label: "会社概要" },
             { href: "/about/organization", label: "グループ・組織図" },
-            { href: "/about/network", label: "国内外拠点" },
             { href: "/about/history", label: "沿革" },
             { href: "/about/safety-health", label: "健康経営" },
           ],
