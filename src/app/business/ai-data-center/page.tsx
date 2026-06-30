@@ -78,6 +78,8 @@ const projectSites = [
     status: "条件整理中",
     area: "埼玉県 川越市",
     title: "首都圏西側の計算需要を見据えた計画候補",
+    image: "/assets/ai-data-center/project-kawagoe.png",
+    alt: "川越市周辺を想定したAIデータセンター計画イメージ",
     text: "詳細条件の整理後、受電条件、敷地条件、冷却・運用計画を確認しながら、AIデータセンターとしての成立条件を検討します。",
     facts: ["詳細条件整理中", "電力・用地条件を確認予定"],
   },
@@ -85,6 +87,8 @@ const projectSites = [
     status: "計画確認済",
     area: "和歌山県 和歌山市金谷",
     title: "蓄電池とデータセンターを一体で整備する計画",
+    image: "/assets/ai-data-center/project-wakayama-kanaya-source.jpg",
+    alt: "和歌山市金谷の開発地区を示す衛星図",
     text: "再生可能エネルギーの安定供給と情報インフラの整備を目的に、蓄電池設備用地とデータセンター用地を同時に確保する計画です。",
     facts: ["データセンター用地：約23,000㎡", "工事期間：2026年4月-2029年3月予定", "関西空港から車で45分、JR和歌山駅から20分"],
   },
@@ -92,6 +96,8 @@ const projectSites = [
     status: "条件整理中",
     area: "千葉県",
     title: "首都圏・湾岸エリアの電力需要を見据えた計画候補",
+    image: "/assets/ai-data-center/project-chiba.png",
+    alt: "千葉県湾岸エリアを想定したAIデータセンター計画イメージ",
     text: "詳細条件の整理後、再エネ電源、系統接続、蓄電池、運用監視の組み合わせを確認し、掲載情報を更新します。",
     facts: ["詳細条件整理中", "再エネ・系統条件を確認予定"],
   },
@@ -99,6 +105,8 @@ const projectSites = [
     status: "計画確認済",
     area: "群馬県 前橋市 赤城事業所",
     title: "既存工場・大規模用地を活用する計画候補",
+    image: "/assets/ai-data-center/project-gunma-akagi-source.jpg",
+    alt: "群馬県前橋市赤城事業所の空撮写真",
     text: "Sanden Forest・赤城事業所の土地・建物条件を確認。既存建物、未利用地、山林を含む大規模敷地の活用可能性を検討します。",
     facts: ["場内：687,557㎡（約20万坪）", "建物合計：21棟・120,110.42㎡", "東京から車約140km、電車約2時間"],
   },
@@ -356,23 +364,20 @@ export default function AiDataCenterPage() {
             </h2>
           </Reveal>
 
-          <div className={styles.conceptLayout}>
-            <Reveal direction="left">
-              <figure className={styles.conceptImageWrap}>
-                <Image
-                  src={asset("/assets/ai-data-center/renewable-ems.jpg")}
-                  alt="再エネ統合スマート管理システム"
-                  fill
-                  sizes="(max-width: 960px) calc(100vw - 40px), 54vw"
-                  className={styles.conceptImage}
-                />
-              </figure>
-            </Reveal>
-
-            <div className={styles.conceptList}>
-              {projectSites.map((site, index) => (
-                <Reveal key={site.area} direction="up" delay={index * 70}>
-                  <article className={styles.conceptItem}>
+          <div className={styles.projectGrid}>
+            {projectSites.map((site, index) => (
+              <Reveal key={site.area} direction="up" delay={index * 70}>
+                <article className={styles.conceptItem}>
+                  <figure className={styles.projectPhoto}>
+                    <Image
+                      src={asset(site.image)}
+                      alt={site.alt}
+                      fill
+                      sizes="(max-width: 960px) calc(100vw - 40px), 50vw"
+                      className={styles.projectImage}
+                    />
+                  </figure>
+                  <div className={styles.conceptBody}>
                     <div className={styles.conceptMeta}>
                       <span className={styles.conceptStatus}>{site.status}</span>
                       <p>{site.area}</p>
@@ -384,13 +389,13 @@ export default function AiDataCenterPage() {
                         <li key={fact}>{fact}</li>
                       ))}
                     </ul>
-                  </article>
-                </Reveal>
-              ))}
-            </div>
+                  </div>
+                </article>
+              </Reveal>
+            ))}
           </div>
           <p className={styles.sourceNote}>
-            掲載内容は計画段階の情報です。川越市・千葉県は詳細条件が整い次第、掲載内容を更新します。
+            掲載画像には計画説明用の図版・イメージを含みます。掲載内容は計画段階の情報です。川越市・千葉県は詳細条件が整い次第、掲載内容を更新します。
           </p>
         </div>
       </section>
