@@ -122,6 +122,15 @@ export default function HopperPage() {
   return (
     <>
       <section className={styles.hero} aria-labelledby="hopper-title">
+        <Image
+          src={asset("/assets/hopper/hopper-hero-port-v2.png")}
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className={styles.heroBackground}
+        />
+        <div className={styles.heroOverlay} />
         <div className={`container ${styles.heroInner}`}>
           <Reveal direction="left" className={styles.heroCopy}>
             <p className={styles.eyebrow}>
@@ -138,27 +147,13 @@ export default function HopperPage() {
               密閉グリル、集塵ファン、テレスコピック、フィルターで抑制。設計・製造・輸送・据付まで一貫して支援します。
             </p>
             <div className={styles.heroActions}>
-              <Button href="/contact">設備導入を相談する</Button>
-              <Button href="#spec" variant="outline">
+              <Button href="/contact" variant="white">
+                設備導入を相談する
+              </Button>
+              <Button href="#spec" variant="cyan" className={styles.darkButton}>
                 仕様を見る
               </Button>
             </div>
-          </Reveal>
-
-          <Reveal direction="right" className={styles.heroVisualReveal}>
-            <figure className={styles.heroVisual}>
-              <Image
-                src={asset("/assets/hopper/hopper-hero-port-v2.png")}
-                alt="港湾で木質ペレットを荷役する走行式集塵ホッパー"
-                fill
-                priority
-                sizes="(max-width: 960px) calc(100vw - 40px), 54vw"
-                className={styles.heroImage}
-              />
-              <figcaption className={styles.heroCaption}>
-                港湾荷役の現場で、船からトラックへの移載と粉塵抑制を一体で支える移動式設備。
-              </figcaption>
-            </figure>
           </Reveal>
         </div>
 

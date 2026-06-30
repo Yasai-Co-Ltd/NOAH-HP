@@ -136,6 +136,15 @@ export default function HydrogenMobilityPage() {
   return (
     <>
       <section className={styles.hero} aria-labelledby="hydrogen-title">
+        <Image
+          src={asset("/assets/hydrogen-mobility/hero-fcv-truck.jpg")}
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className={styles.heroBackground}
+        />
+        <div className={styles.heroOverlay} />
         <div className={`container ${styles.heroInner}`}>
           <Reveal direction="left" className={styles.heroCopy}>
             <p className={styles.eyebrow}>
@@ -153,27 +162,13 @@ export default function HydrogenMobilityPage() {
               商用フリートの脱炭素化を現実的に進めます。
             </p>
             <div className={styles.heroActions}>
-              <Button href="/contact">導入相談をする</Button>
-              <Button href="#vehicle" variant="outline">
+              <Button href="/contact" variant="white">
+                導入相談をする
+              </Button>
+              <Button href="#vehicle" variant="cyan" className={styles.darkButton}>
                 車両仕様を見る
               </Button>
             </div>
-          </Reveal>
-
-          <Reveal direction="right" className={styles.heroVisualReveal}>
-            <figure className={styles.heroVisual}>
-              <Image
-                src={asset("/assets/hydrogen-mobility/hero-fcv-truck.jpg")}
-                alt="FCVトラック"
-                fill
-                priority
-                sizes="(max-width: 960px) calc(100vw - 40px), 54vw"
-                className={styles.heroImage}
-              />
-              <figcaption className={styles.heroCaption}>
-                FCVトラック、水素製造、水素ステーション、補助金・運用コストを一体で検討。
-              </figcaption>
-            </figure>
           </Reveal>
         </div>
 

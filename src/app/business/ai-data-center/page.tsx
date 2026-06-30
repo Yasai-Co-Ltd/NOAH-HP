@@ -141,6 +141,15 @@ export default function AiDataCenterPage() {
   return (
     <>
       <section className={styles.hero} aria-labelledby="ai-dc-title">
+        <Image
+          src={asset("/assets/ai-data-center/hero-data-center.jpg")}
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className={styles.heroBackground}
+        />
+        <div className={styles.heroOverlay} />
         <div className={`container ${styles.heroInner}`}>
           <Reveal direction="left" className={styles.heroCopy}>
             <p className={styles.eyebrow}>
@@ -157,27 +166,13 @@ export default function AiDataCenterPage() {
               高密度な電力、冷却、蓄電池、再エネ、EMSを一体で検討し、計算基盤を支えるインフラから事業化を進めます。
             </p>
             <div className={styles.heroActions}>
-              <Button href="/contact">事業相談をする</Button>
-              <Button href="#energy-model" variant="outline">
+              <Button href="/contact" variant="white">
+                事業相談をする
+              </Button>
+              <Button href="#energy-model" variant="cyan" className={styles.darkButton}>
                 統合モデルを見る
               </Button>
             </div>
-          </Reveal>
-
-          <Reveal direction="right" className={styles.heroVisualReveal}>
-            <figure className={styles.heroVisual}>
-              <Image
-                src={asset("/assets/ai-data-center/hero-data-center.jpg")}
-                alt="再生可能エネルギーと連携するAIデータセンター"
-                fill
-                priority
-                sizes="(max-width: 960px) calc(100vw - 40px), 54vw"
-                className={styles.heroImage}
-              />
-              <figcaption className={styles.heroCaption}>
-                計画地の用地条件、蓄電池、系統連系、運用監視を組み合わせ、AIデータセンターに必要な前提を整理します。
-              </figcaption>
-            </figure>
           </Reveal>
         </div>
 

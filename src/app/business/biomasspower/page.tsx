@@ -136,6 +136,15 @@ export default function BiomassPowerPage() {
   return (
     <>
       <section className={styles.hero} aria-labelledby="biomass-title">
+        <Image
+          src={asset("/assets/biomasspower/biomass-plant-hero.png")}
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className={styles.heroBackground}
+        />
+        <div className={styles.heroOverlay} />
         <div className={`container ${styles.heroInner}`}>
           <Reveal direction="left" className={styles.heroCopy}>
             <p className={styles.eyebrow}>
@@ -153,27 +162,13 @@ export default function BiomassPowerPage() {
               受け入れて使い続けられる状態まで整えます。
             </p>
             <div className={styles.heroActions}>
-              <Button href="/contact">燃料・設備計画を相談する</Button>
-              <Button href="#fuel" variant="outline">
+              <Button href="/contact" variant="white">
+                燃料・設備計画を相談する
+              </Button>
+              <Button href="#fuel" variant="cyan" className={styles.darkButton}>
                 取扱燃料を見る
               </Button>
             </div>
-          </Reveal>
-
-          <Reveal direction="right" className={styles.heroVisualReveal}>
-            <figure className={styles.heroVisual}>
-              <Image
-                src={asset("/assets/biomasspower/biomass-plant-hero.png")}
-                alt="バイオマス発電設備"
-                fill
-                priority
-                sizes="(max-width: 960px) calc(100vw - 40px), 54vw"
-                className={styles.heroImage}
-              />
-              <figcaption className={styles.heroCaption}>
-                燃料・港湾・発電設備をひとつの運用線でつなぐ。
-              </figcaption>
-            </figure>
           </Reveal>
         </div>
 

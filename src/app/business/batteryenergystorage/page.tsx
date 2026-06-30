@@ -39,6 +39,13 @@ const overviewSteps = [
 
 const marketBadges = ["卸電力市場", "容量市場", "需給調整市場", "一次調整力対応"];
 
+const heroMetrics = [
+  { value: "2MW/8MWh", label: "系統用蓄電池" },
+  { value: "EMS", label: "遠隔監視・制御" },
+  { value: "4領域", label: "系統用・産業商業用・太陽光・マイクログリッド" },
+  { value: "O&M", label: "運用保守まで一貫支援" },
+];
+
 const solutionSeries = [
   {
     number: "01",
@@ -313,6 +320,15 @@ export default function BatteryEnergyStoragePage() {
   return (
     <>
       <section className={styles.hero} aria-labelledby="battery-page-title">
+        <Image
+          src={asset("/assets/battery/battery-product-lineup-hero-ai.png")}
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className={styles.heroBackground}
+        />
+        <div className={styles.heroOverlay} />
         <div className={`container ${styles.heroInner}`}>
           <Reveal direction="left" className={styles.heroCopy}>
             <p className={styles.kicker}>
@@ -339,19 +355,15 @@ export default function BatteryEnergyStoragePage() {
               </Button>
             </div>
           </Reveal>
+        </div>
 
-          <Reveal direction="right" className={styles.heroVisualReveal}>
-            <figure className={styles.heroVisual}>
-              <Image
-                src={asset("/assets/battery/battery-product-lineup-hero-ai.png")}
-                alt="蓄電池、PCS、充電設備、監視制御システムを含む製品ラインアップ"
-                fill
-                priority
-                sizes="(max-width: 900px) calc(100vw - 40px), 54vw"
-                className={styles.heroImage}
-              />
-            </figure>
-          </Reveal>
+        <div className={`container ${styles.metricBoard}`} aria-label="蓄電池事業の参考指標">
+          {heroMetrics.map((metric) => (
+            <div key={metric.value} className={styles.metricItem}>
+              <b>{metric.value}</b>
+              <span>{metric.label}</span>
+            </div>
+          ))}
         </div>
       </section>
 
