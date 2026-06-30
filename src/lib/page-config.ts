@@ -13,12 +13,12 @@ export const PAGES = {
   "/about": true,
   "/about/message": true,
   "/about/vision": true,
-  "/about/standard": false,
+  "/about/standard": true,
   "/about/outline": true,
   "/about/organization": true,
   "/about/network": false,
   "/about/history": true,
-  "/about/safety-health": false,
+  "/about/safety-health": true,
 
   // 事業紹介
   "/business": true,
