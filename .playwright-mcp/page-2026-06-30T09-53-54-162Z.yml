@@ -1,0 +1,247 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - link "諾亜建設株式会社 ホーム" [ref=e3] [cursor=pointer]:
+      - /url: /
+      - img "NOAH CONSTRUCTION CO.,LTD. 諾亜建設株式会社" [ref=e4]
+    - navigation "グローバルナビゲーション" [ref=e5]:
+      - link "企業情報" [ref=e7] [cursor=pointer]:
+        - /url: /about/
+      - link "事業紹介" [ref=e9] [cursor=pointer]:
+        - /url: /business/
+      - link "サステナビリティ" [ref=e11] [cursor=pointer]:
+        - /url: /sustainability/
+      - link "ニュース" [ref=e13] [cursor=pointer]:
+        - /url: /news/
+      - link "採用情報" [ref=e15] [cursor=pointer]:
+        - /url: /recruit/
+    - link "お問い合わせ" [ref=e16] [cursor=pointer]:
+      - /url: /contact/
+      - img [ref=e17]
+      - text: お問い合わせ
+  - main [ref=e20]:
+    - region "信頼される事業を、 誠実な行動からつくる。" [ref=e21]:
+      - generic [ref=e22]:
+        - generic [ref=e23]:
+          - paragraph [ref=e24]:
+            - text: CODE OF CONDUCT
+            - generic [ref=e25]: 行動基準
+          - heading "信頼される事業を、 誠実な行動からつくる。" [level=1] [ref=e26]:
+            - text: 信頼される事業を、
+            - text: 誠実な行動からつくる。
+          - paragraph [ref=e27]: 脱炭素インフラを社会へ実装する企業として、NOAHは法令遵守、安全、品質、地域共生、環境保全を日々の判断基準に置きます。 事業に関わるすべての人と信頼を築くため、次の行動基準を定めます。
+          - generic [ref=e28]:
+            - link "基準を見る" [ref=e29] [cursor=pointer]:
+              - /url: "#standards"
+              - text: 基準を見る
+              - generic [ref=e30]: →
+            - link "理念を見る" [ref=e31] [cursor=pointer]:
+              - /url: /about/vision/
+              - text: 理念を見る
+              - generic [ref=e32]: →
+        - figure "安全と品質を、現場の行動で積み上げる。" [ref=e34]:
+          - img "水素設備と蓄電池設備を点検する作業員" [ref=e35]
+          - generic [ref=e36]: 安全と品質を、現場の行動で積み上げる。
+      - text: STANDARD
+    - region "判断に迷ったとき、 立ち返る3つの姿勢。" [ref=e37]:
+      - generic [ref=e38]:
+        - generic [ref=e40]:
+          - generic [ref=e41]:
+            - paragraph [ref=e42]:
+              - text: BASIC STANCE
+              - generic [ref=e43]: 基本姿勢
+            - heading "判断に迷ったとき、 立ち返る3つの姿勢。" [level=2] [ref=e44]:
+              - text: 判断に迷ったとき、
+              - text: 立ち返る3つの姿勢。
+          - paragraph [ref=e45]: 行動基準は、個人の良識だけに委ねるものではなく、会社として守るべき共通の約束です。 事業スピードを高めながらも、誠実さ、安全性、社会性を損なわない判断を重視します。
+        - generic [ref=e46]:
+          - article [ref=e48]:
+            - generic [ref=e49]: "01"
+            - heading "誠実に判断する" [level=3] [ref=e50]
+            - paragraph [ref=e51]: 法令、契約、社会規範を守り、短期的な利益よりも長期的な信頼を優先します。
+          - article [ref=e53]:
+            - generic [ref=e54]: "02"
+            - heading "安全を守る" [level=3] [ref=e55]
+            - paragraph [ref=e56]: 現場で働く人、地域、設備、環境に対するリスクを把握し、事故の未然防止を徹底します。
+          - article [ref=e58]:
+            - generic [ref=e59]: "03"
+            - heading "未来へつなぐ" [level=3] [ref=e60]
+            - paragraph [ref=e61]: 脱炭素インフラの社会実装に携わる企業として、環境と地域に責任ある行動を選びます。
+    - region "事業活動のあらゆる場面で、 守るべきこと。" [ref=e62]:
+      - generic [ref=e63]:
+        - generic [ref=e65]:
+          - paragraph [ref=e66]:
+            - text: STANDARD
+            - generic [ref=e67]: 10の行動基準
+          - heading "事業活動のあらゆる場面で、 守るべきこと。" [level=2] [ref=e68]:
+            - text: 事業活動のあらゆる場面で、
+            - text: 守るべきこと。
+        - generic [ref=e69]:
+          - article [ref=e71]:
+            - generic [ref=e72]: "01"
+            - generic [ref=e73]:
+              - heading "法令の遵守と社会規範の尊重" [level=3] [ref=e74]
+              - list [ref=e75]:
+                - listitem [ref=e76]: 国内外の法令、契約、社内ルールを遵守します。
+                - listitem [ref=e77]: 社会の一員として、人と地域に対して誠実な姿勢で行動します。
+                - listitem [ref=e78]: 約束を守り、公正で透明性のある企業活動を行います。
+          - article [ref=e80]:
+            - generic [ref=e81]: "02"
+            - generic [ref=e82]:
+              - heading "安全・品質を最優先する事業運営" [level=3] [ref=e83]
+              - list [ref=e84]:
+                - listitem [ref=e85]: 施工、設備導入、保守、運用の各段階で安全確認を徹底します。
+                - listitem [ref=e86]: 蓄電池、水素、発電設備、データセンターなどの特性を理解し、品質と安全性を両立します。
+                - listitem [ref=e87]: 協力会社とも安全情報を共有し、現場全体で事故防止に取り組みます。
+          - article [ref=e89]:
+            - generic [ref=e90]: "03"
+            - generic [ref=e91]:
+              - heading "公正な取引と信頼関係の構築" [level=3] [ref=e92]
+              - list [ref=e93]:
+                - listitem [ref=e94]: 取引先、協力会社、行政、地域関係者と健全で透明な関係を保ちます。
+                - listitem [ref=e95]: 不当な利益供与、利益相反、優越的地位の濫用を行いません。
+                - listitem [ref=e96]: 節度ある態度で業務にあたり、信頼されるパートナーであり続けます。
+          - article [ref=e98]:
+            - generic [ref=e99]: "04"
+            - generic [ref=e100]:
+              - heading "地域社会との対話と共生" [level=3] [ref=e101]
+              - list [ref=e102]:
+                - listitem [ref=e103]: 事業計画に関わる地域の声を丁寧に受け止めます。
+                - listitem [ref=e104]: 景観、騒音、交通、安全、環境への影響に配慮し、説明責任を果たします。
+                - listitem [ref=e105]: 地域の暮らしと産業に役立つインフラづくりを目指します。
+          - article [ref=e107]:
+            - generic [ref=e108]: "05"
+            - generic [ref=e109]:
+              - heading "環境保全と脱炭素への貢献" [level=3] [ref=e110]
+              - list [ref=e111]:
+                - listitem [ref=e112]: 再生可能エネルギー、蓄電池、水素、AIデータセンターを通じて脱炭素化に貢献します。
+                - listitem [ref=e113]: 自然環境、生態系、資源利用への影響を把握し、環境負荷の低減に努めます。
+                - listitem [ref=e114]: 環境に優しい世界を創るという理念を、日々の事業判断に反映します。
+          - article [ref=e116]:
+            - generic [ref=e117]: "06"
+            - generic [ref=e118]:
+              - heading "人権・多様性・健康への配慮" [level=3] [ref=e119]
+              - list [ref=e120]:
+                - listitem [ref=e121]: 従業員、取引先、地域の方々の人権と個性を尊重します。
+                - listitem [ref=e122]: ハラスメントや差別を許さず、安心して意見を交わせる職場をつくります。
+                - listitem [ref=e123]: 安全で健康に働ける環境づくりに継続して取り組みます。
+          - article [ref=e125]:
+            - generic [ref=e126]: "07"
+            - generic [ref=e127]:
+              - heading "情報と知的財産の適正管理" [level=3] [ref=e128]
+              - list [ref=e129]:
+                - listitem [ref=e130]: 個人情報、機密情報、事業資料、技術情報を適切に管理します。
+                - listitem [ref=e131]: 知的財産権を尊重し、他者の権利を侵害しません。
+                - listitem [ref=e132]: 情報を不正に取得、利用、開示せず、必要な範囲で正確に取り扱います。
+          - article [ref=e134]:
+            - generic [ref=e135]: "08"
+            - generic [ref=e136]:
+              - heading "反社会的勢力との関係遮断" [level=3] [ref=e137]
+              - list [ref=e138]:
+                - listitem [ref=e139]: 社会の秩序や安全に脅威を与える組織・団体とは一切関係を持ちません。
+                - listitem [ref=e140]: 不当な要求には毅然と対応し、関係機関とも連携して対処します。
+          - article [ref=e142]:
+            - generic [ref=e143]: "09"
+            - generic [ref=e144]:
+              - heading "社内体制と教育の充実" [level=3] [ref=e145]
+              - list [ref=e146]:
+                - listitem [ref=e147]: 事業活動に必要な法規制、安全基準、社内ルールの理解を深めます。
+                - listitem [ref=e148]: 社員教育、現場共有、ルールの見直しを通じて、企業倫理の実効性を高めます。
+                - listitem [ref=e149]: 新しい事業領域に応じて、必要な知識と管理体制を更新します。
+          - article [ref=e151]:
+            - generic [ref=e152]: "10"
+            - generic [ref=e153]:
+              - heading "問題の早期発見と是正・再発防止" [level=3] [ref=e154]
+              - list [ref=e155]:
+                - listitem [ref=e156]: 行動基準に反するおそれのある事態を見つけた場合、速やかに共有します。
+                - listitem [ref=e157]: 原因を確認し、是正措置と再発防止策を講じます。
+                - listitem [ref=e158]: 失敗や課題を隠さず、よりよい事業運営につなげます。
+    - region "掲げるだけでなく、 実務に反映する。" [ref=e159]:
+      - generic [ref=e160]:
+        - generic [ref=e161]:
+          - paragraph [ref=e162]:
+            - text: OPERATION
+            - generic [ref=e163]: 運用方針
+          - heading "掲げるだけでなく、 実務に反映する。" [level=2] [ref=e164]:
+            - text: 掲げるだけでなく、
+            - text: 実務に反映する。
+        - list [ref=e166]:
+          - listitem [ref=e167]: 事業判断に迷ったときの共通基準として活用します。
+          - listitem [ref=e168]: 社内外の関係者との対話、契約、現場運営に反映します。
+          - listitem [ref=e169]: 必要に応じて内容を見直し、事業環境の変化に対応します。
+    - region "理念や健康経営の取り組みもご覧ください。" [ref=e170]:
+      - generic [ref=e172]:
+        - paragraph [ref=e173]: NEXT CONTENTS
+        - heading "理念や健康経営の取り組みもご覧ください。" [level=2] [ref=e174]
+        - generic [ref=e175]:
+          - link "企業理念・ビジョン" [ref=e176] [cursor=pointer]:
+            - /url: /about/vision/
+          - link "健康経営" [ref=e177] [cursor=pointer]:
+            - /url: /about/safety-health/
+          - link "会社概要" [ref=e178] [cursor=pointer]:
+            - /url: /about/outline/
+  - contentinfo [ref=e179]:
+    - generic [ref=e181]:
+      - link "諾亜建設株式会社" [ref=e182] [cursor=pointer]:
+        - /url: /
+        - img "諾亜建設株式会社" [ref=e183]
+      - generic [ref=e184]:
+        - generic [ref=e185]:
+          - heading "企業情報" [level=3] [ref=e186]:
+            - link "企業情報" [ref=e187] [cursor=pointer]:
+              - /url: /about/
+          - link "トップメッセージ" [ref=e188] [cursor=pointer]:
+            - /url: /about/message/
+          - link "企業理念・ビジョン" [ref=e189] [cursor=pointer]:
+            - /url: /about/vision/
+          - link "行動基準" [ref=e190] [cursor=pointer]:
+            - /url: /about/standard/
+          - link "会社概要" [ref=e191] [cursor=pointer]:
+            - /url: /about/outline/
+          - link "グループ・組織図" [ref=e192] [cursor=pointer]:
+            - /url: /about/organization/
+          - link "沿革" [ref=e193] [cursor=pointer]:
+            - /url: /about/history/
+          - link "健康経営" [ref=e194] [cursor=pointer]:
+            - /url: /about/safety-health/
+        - generic [ref=e195]:
+          - heading "事業紹介" [level=3] [ref=e196]:
+            - link "事業紹介" [ref=e197] [cursor=pointer]:
+              - /url: /business/
+          - link "蓄電池事業" [ref=e198] [cursor=pointer]:
+            - /url: /business/batteryenergystorage/
+          - link "風力発電事業" [ref=e199] [cursor=pointer]:
+            - /url: /business/windpower/
+          - link "バイオマス" [ref=e200] [cursor=pointer]:
+            - /url: /business/biomasspower/
+          - link "走行式集塵ホッパー事業" [ref=e201] [cursor=pointer]:
+            - /url: /business/hopper/
+          - link "水素モビリティ事業" [ref=e202] [cursor=pointer]:
+            - /url: /business/hydrogen-mobility/
+          - link "AIデータセンター事業" [ref=e203] [cursor=pointer]:
+            - /url: /business/ai-data-center/
+        - generic [ref=e204]:
+          - heading "サステナビリティ" [level=3] [ref=e205]:
+            - link "サステナビリティ" [ref=e206] [cursor=pointer]:
+              - /url: /sustainability/
+          - link "地域共生" [ref=e207] [cursor=pointer]:
+            - /url: /sustainability/community-relations/
+          - link "環境保全" [ref=e208] [cursor=pointer]:
+            - /url: /sustainability/environment/
+          - link "カーボンニュートラル" [ref=e209] [cursor=pointer]:
+            - /url: /sustainability/carbon-neutrality/
+        - generic [ref=e210]:
+          - heading "その他" [level=3] [ref=e211]
+          - link "お問い合わせ" [ref=e212] [cursor=pointer]:
+            - /url: /contact/
+          - link "ニュース" [ref=e213] [cursor=pointer]:
+            - /url: /news/
+          - link "採用情報" [ref=e214] [cursor=pointer]:
+            - /url: /recruit/
+          - link "プライバシーポリシー" [ref=e215] [cursor=pointer]:
+            - /url: /privacy/
+          - link "サイトマップ" [ref=e216] [cursor=pointer]:
+            - /url: /sitemap/
+    - paragraph [ref=e217]: © NOAH CONSTRUCTION CO.,LTD. All Rights Reserved.
+  - button "Open Next.js Dev Tools" [ref=e223] [cursor=pointer]:
+    - img [ref=e224]
+  - alert [ref=e227]

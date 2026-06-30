@@ -7,6 +7,9 @@ const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
+  // 開発時のみ表示される Next.js のインジケータ（左下の丸い「N」）を無効化。
+  // 本番（output: export）には元々出ないが、ローカル確認時のコンテンツ重なりを防ぐ。
+  devIndicators: false,
   output: "export",
   basePath: BASE_PATH,
   assetPrefix: BASE_PATH,

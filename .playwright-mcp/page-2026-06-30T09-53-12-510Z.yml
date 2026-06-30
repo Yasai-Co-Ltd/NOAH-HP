@@ -1,0 +1,226 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - link "諾亜建設株式会社 ホーム" [ref=e3] [cursor=pointer]:
+      - /url: /
+      - img "NOAH CONSTRUCTION CO.,LTD. 諾亜建設株式会社" [ref=e4]
+    - button "メニューを開く" [ref=e5] [cursor=pointer]
+  - main [ref=e9]:
+    - region "働く人の安全と健康を、 事業継続の基盤に。" [ref=e10]:
+      - generic [ref=e11]:
+        - generic [ref=e12]:
+          - paragraph [ref=e13]:
+            - text: HEALTH MANAGEMENT
+            - generic [ref=e14]: 健康経営
+          - heading "働く人の安全と健康を、 事業継続の基盤に。" [level=1] [ref=e15]:
+            - text: 働く人の安全と健康を、
+            - text: 事業継続の基盤に。
+          - paragraph [ref=e16]: 諾亜建設は、脱炭素インフラを支える事業を継続的に展開するために、従業員一人ひとりの安全と心身の健康を重要な経営基盤と考えます。 現場とオフィスの双方で、安心して力を発揮できる職場づくりに取り組みます。
+          - generic [ref=e17]:
+            - link "健康宣言を見る" [ref=e18] [cursor=pointer]:
+              - /url: "#declaration"
+              - text: 健康宣言を見る
+              - generic [ref=e19]: →
+            - link "推進体制を見る" [ref=e20] [cursor=pointer]:
+              - /url: "#system"
+              - text: 推進体制を見る
+              - generic [ref=e21]: →
+        - figure "現場で働く人、支える人の健康を守る。" [ref=e23]:
+          - img "ヘルメットを持つ社員が屋外でストレッチをしている様子" [ref=e24]
+          - generic [ref=e25]: 現場で働く人、支える人の健康を守る。
+      - text: HEALTH
+    - region "健康で安全に働ける環境を整え、 持続可能な事業成長につなげます。" [ref=e26]:
+      - generic [ref=e27]:
+        - generic [ref=e29]:
+          - paragraph [ref=e30]:
+            - text: DECLARATION
+            - generic [ref=e31]: 健康宣言
+          - heading "健康で安全に働ける環境を整え、 持続可能な事業成長につなげます。" [level=2] [ref=e32]:
+            - text: 健康で安全に働ける環境を整え、
+            - text: 持続可能な事業成長につなげます。
+          - paragraph [ref=e33]: 従業員の健康管理を経営的な視点で捉え、事業活動の基盤として安全衛生と健康づくりを推進します。 再生可能エネルギー、蓄電池、水素、AIデータセンターなど多様な事業を支える人材が、長く安心して働ける会社を目指します。
+          - generic [ref=e34]:
+            - generic [ref=e35]: 諾亜建設株式会社
+            - generic [ref=e36]: 代表取締役社長 鈴木 仲娜
+        - list [ref=e38]:
+          - listitem [ref=e39]: 経営層が率先して安全衛生と健康づくりを推進します。
+          - listitem [ref=e40]: 健康診断の受診と結果に応じたフォローを大切にします。
+          - listitem [ref=e41]: 現場・事務所の双方で、事故や疾病を未然に防ぐ環境づくりを進めます。
+          - listitem [ref=e42]: 心身の不調を早期に相談できる、風通しのよい職場を目指します。
+          - listitem [ref=e43]: 取り組み状況を継続的に確認し、改善につなげます。
+    - region "安全・健康・働き方を、 一体で整える。" [ref=e44]:
+      - generic [ref=e45]:
+        - generic [ref=e47]:
+          - generic [ref=e48]:
+            - paragraph [ref=e49]:
+              - text: POLICY
+              - generic [ref=e50]: 推進方針
+            - heading "安全・健康・働き方を、 一体で整える。" [level=2] [ref=e51]:
+              - text: 安全・健康・働き方を、
+              - text: 一体で整える。
+          - paragraph [ref=e52]: 健康経営は、福利厚生にとどまらず、現場品質、施工安全、事業継続、採用力にも関わる取り組みです。 NOAHでは、日々の安全確認と健康管理を結びつけ、事業を支える人のコンディションを整えます。
+        - generic [ref=e53]:
+          - article [ref=e55]:
+            - text: "01"
+            - heading "安全を最優先する" [level=3] [ref=e56]
+            - paragraph [ref=e57]: 再エネ設備、蓄電池、モビリティ、港湾設備など、現場ごとに異なるリスクを把握し、作業前の確認と安全教育を徹底します。
+          - article [ref=e59]:
+            - text: "02"
+            - heading "心身の健康を守る" [level=3] [ref=e60]
+            - paragraph [ref=e61]: 定期健康診断、生活習慣への配慮、メンタルヘルスの相談しやすさを重視し、従業員が安定して働ける状態を支えます。
+          - article [ref=e63]:
+            - text: "03"
+            - heading "働き続けられる環境をつくる" [level=3] [ref=e64]
+            - paragraph [ref=e65]: 長時間労働の抑制、休暇取得、職場コミュニケーションの改善に取り組み、事業成長を支える人材基盤を整えます。
+    - region "日々の行動に落とし込む、 健康経営のテーマ。" [ref=e66]:
+      - generic [ref=e67]:
+        - generic [ref=e69]:
+          - generic [ref=e70]:
+            - paragraph [ref=e71]:
+              - text: FOCUS
+              - generic [ref=e72]: 重点取り組み
+            - heading "日々の行動に落とし込む、 健康経営のテーマ。" [level=2] [ref=e73]:
+              - text: 日々の行動に落とし込む、
+              - text: 健康経営のテーマ。
+          - paragraph [ref=e74]: 事業領域が広がるほど、働く場所、移動、作業環境、関係者の数も変化します。 それぞれの現場に合わせて、必要な対策を一つずつ整えていきます。
+        - generic [ref=e75]:
+          - article [ref=e77]:
+            - generic [ref=e78]: "01"
+            - generic [ref=e79]:
+              - heading "健康状態の把握" [level=3] [ref=e80]
+              - paragraph [ref=e81]: 定期健康診断の受診状況を確認し、必要に応じて再検査・保健指導につなげます。
+          - article [ref=e83]:
+            - generic [ref=e84]: "02"
+            - generic [ref=e85]:
+              - heading "現場安全と衛生管理" [level=3] [ref=e86]
+              - paragraph [ref=e87]: 施工・設備導入・保守の現場で、作業前確認、保護具、熱中症対策、動線管理を重視します。
+          - article [ref=e89]:
+            - generic [ref=e90]: "03"
+            - generic [ref=e91]:
+              - heading "メンタルヘルスケア" [level=3] [ref=e92]
+              - paragraph [ref=e93]: 業務負荷や人間関係の変化を早期に捉え、相談しやすいコミュニケーションを整えます。
+          - article [ref=e95]:
+            - generic [ref=e96]: "04"
+            - generic [ref=e97]:
+              - heading "働き方の改善" [level=3] [ref=e98]
+              - paragraph [ref=e99]: 業務の偏り、移動負担、繁忙期の負荷を見直し、無理なく成果を出せる働き方を目指します。
+          - article [ref=e101]:
+            - generic [ref=e102]: "05"
+            - generic [ref=e103]:
+              - heading "協力会社との安全連携" [level=3] [ref=e104]
+              - paragraph [ref=e105]: プロジェクトに関わる協力会社とも安全情報を共有し、現場全体で事故防止に取り組みます。
+    - region "経営層から現場まで、 状況を共有し改善する。" [ref=e106]:
+      - generic [ref=e107]:
+        - generic [ref=e109]:
+          - paragraph [ref=e110]:
+            - text: SYSTEM
+            - generic [ref=e111]: 推進体制
+          - heading "経営層から現場まで、 状況を共有し改善する。" [level=2] [ref=e112]:
+            - text: 経営層から現場まで、
+            - text: 状況を共有し改善する。
+        - generic [ref=e113]:
+          - article [ref=e115]:
+            - text: "01"
+            - heading "経営層" [level=3] [ref=e116]
+            - paragraph [ref=e117]: 健康経営方針の発信、取り組み状況の確認
+          - article [ref=e119]:
+            - text: "02"
+            - heading "管理部門" [level=3] [ref=e120]
+            - paragraph [ref=e121]: 健康診断、労務管理、相談対応、改善施策の推進
+          - article [ref=e123]:
+            - text: "03"
+            - heading "各事業部・現場責任者" [level=3] [ref=e124]
+            - paragraph [ref=e125]: 現場リスクの共有、安全衛生教育、日々の声かけ
+          - article [ref=e127]:
+            - text: "04"
+            - heading "従業員・協力会社" [level=3] [ref=e128]
+            - paragraph [ref=e129]: 安全ルールの遵守、体調変化の共有、相互確認
+        - generic [ref=e131]:
+          - generic [ref=e132]:
+            - generic [ref=e133]: "01"
+            - generic [ref=e134]: 健康課題の把握
+          - generic [ref=e135]:
+            - generic [ref=e136]: "02"
+            - generic [ref=e137]: 施策の計画
+          - generic [ref=e138]:
+            - generic [ref=e139]: "03"
+            - generic [ref=e140]: 現場・職場で実行
+          - generic [ref=e141]:
+            - generic [ref=e142]: "04"
+            - generic [ref=e143]: 評価と改善
+    - region "理念や会社概要もあわせてご覧ください。" [ref=e144]:
+      - generic [ref=e146]:
+        - paragraph [ref=e147]: NEXT CONTENTS
+        - heading "理念や会社概要もあわせてご覧ください。" [level=2] [ref=e148]
+        - generic [ref=e149]:
+          - link "企業理念・ビジョン" [ref=e150] [cursor=pointer]:
+            - /url: /about/vision/
+          - link "会社概要" [ref=e151] [cursor=pointer]:
+            - /url: /about/outline/
+          - link "採用情報" [ref=e152] [cursor=pointer]:
+            - /url: /recruit/
+  - contentinfo [ref=e153]:
+    - generic [ref=e155]:
+      - link "諾亜建設株式会社" [ref=e156] [cursor=pointer]:
+        - /url: /
+        - img "諾亜建設株式会社" [ref=e157]
+      - generic [ref=e158]:
+        - generic [ref=e159]:
+          - heading "企業情報" [level=3] [ref=e160]:
+            - link "企業情報" [ref=e161] [cursor=pointer]:
+              - /url: /about/
+          - link "トップメッセージ" [ref=e162] [cursor=pointer]:
+            - /url: /about/message/
+          - link "企業理念・ビジョン" [ref=e163] [cursor=pointer]:
+            - /url: /about/vision/
+          - link "行動基準" [ref=e164] [cursor=pointer]:
+            - /url: /about/standard/
+          - link "会社概要" [ref=e165] [cursor=pointer]:
+            - /url: /about/outline/
+          - link "グループ・組織図" [ref=e166] [cursor=pointer]:
+            - /url: /about/organization/
+          - link "沿革" [ref=e167] [cursor=pointer]:
+            - /url: /about/history/
+          - link "健康経営" [ref=e168] [cursor=pointer]:
+            - /url: /about/safety-health/
+        - generic [ref=e169]:
+          - heading "事業紹介" [level=3] [ref=e170]:
+            - link "事業紹介" [ref=e171] [cursor=pointer]:
+              - /url: /business/
+          - link "蓄電池事業" [ref=e172] [cursor=pointer]:
+            - /url: /business/batteryenergystorage/
+          - link "風力発電事業" [ref=e173] [cursor=pointer]:
+            - /url: /business/windpower/
+          - link "バイオマス" [ref=e174] [cursor=pointer]:
+            - /url: /business/biomasspower/
+          - link "走行式集塵ホッパー事業" [ref=e175] [cursor=pointer]:
+            - /url: /business/hopper/
+          - link "水素モビリティ事業" [ref=e176] [cursor=pointer]:
+            - /url: /business/hydrogen-mobility/
+          - link "AIデータセンター事業" [ref=e177] [cursor=pointer]:
+            - /url: /business/ai-data-center/
+        - generic [ref=e178]:
+          - heading "サステナビリティ" [level=3] [ref=e179]:
+            - link "サステナビリティ" [ref=e180] [cursor=pointer]:
+              - /url: /sustainability/
+          - link "地域共生" [ref=e181] [cursor=pointer]:
+            - /url: /sustainability/community-relations/
+          - link "環境保全" [ref=e182] [cursor=pointer]:
+            - /url: /sustainability/environment/
+          - link "カーボンニュートラル" [ref=e183] [cursor=pointer]:
+            - /url: /sustainability/carbon-neutrality/
+        - generic [ref=e184]:
+          - heading "その他" [level=3] [ref=e185]
+          - link "お問い合わせ" [ref=e186] [cursor=pointer]:
+            - /url: /contact/
+          - link "ニュース" [ref=e187] [cursor=pointer]:
+            - /url: /news/
+          - link "採用情報" [ref=e188] [cursor=pointer]:
+            - /url: /recruit/
+          - link "プライバシーポリシー" [ref=e189] [cursor=pointer]:
+            - /url: /privacy/
+          - link "サイトマップ" [ref=e190] [cursor=pointer]:
+            - /url: /sitemap/
+    - paragraph [ref=e191]: © NOAH CONSTRUCTION CO.,LTD. All Rights Reserved.
+  - button "Open Next.js Dev Tools" [ref=e197] [cursor=pointer]:
+    - img [ref=e198]
+  - alert [ref=e201]

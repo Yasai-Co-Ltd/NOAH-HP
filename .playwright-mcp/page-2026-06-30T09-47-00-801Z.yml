@@ -1,0 +1,326 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - link "諾亜建設株式会社 ホーム" [ref=e3] [cursor=pointer]:
+      - /url: /
+      - img "NOAH CONSTRUCTION CO.,LTD. 諾亜建設株式会社" [ref=e4]
+    - navigation "グローバルナビゲーション" [ref=e5]:
+      - link "企業情報" [ref=e7] [cursor=pointer]:
+        - /url: /about/
+      - link "事業紹介" [ref=e9] [cursor=pointer]:
+        - /url: /business/
+      - link "サステナビリティ" [ref=e11] [cursor=pointer]:
+        - /url: /sustainability/
+      - link "ニュース" [ref=e13] [cursor=pointer]:
+        - /url: /news/
+      - link "採用情報" [ref=e15] [cursor=pointer]:
+        - /url: /recruit/
+    - link "お問い合わせ" [ref=e16] [cursor=pointer]:
+      - /url: /contact/
+      - img [ref=e17]
+      - text: お問い合わせ
+  - main [ref=e20]:
+    - region "一つひとつの風を、 クリーンエネルギーに。" [ref=e21]:
+      - generic [ref=e23]:
+        - paragraph [ref=e24]:
+          - text: WIND POWER
+          - generic [ref=e25]: 風力発電事業
+        - heading "一つひとつの風を、 クリーンエネルギーに。" [level=1] [ref=e26]:
+          - text: 一つひとつの風を、
+          - text: クリーンエネルギーに。
+        - paragraph [ref=e27]: 風況調査、事業性評価、系統連系、許認可、設計・調達・施工、O&Mまで。 NOAHは地域の風を読み、発電所として長く運用できる計画へ落とし込みます。
+        - generic [ref=e28]:
+          - link "事業相談をする" [ref=e29] [cursor=pointer]:
+            - /url: /contact/
+            - text: 事業相談をする
+            - generic [ref=e30]: →
+          - link "計画概要を見る" [ref=e31] [cursor=pointer]:
+            - /url: "#project"
+            - text: 計画概要を見る
+            - generic [ref=e32]: →
+      - generic "風力発電事業の参考指標" [ref=e33]:
+        - generic [ref=e34]:
+          - generic [ref=e35]: 2.5MW級
+          - generic [ref=e36]: 想定風車モデル
+        - generic [ref=e37]:
+          - generic [ref=e38]: 45MW
+          - generic [ref=e39]: 岩屋計画の設備容量案
+        - generic [ref=e40]:
+          - generic [ref=e41]: 7.2m/s
+          - generic [ref=e42]: 平均風速参考値
+        - generic [ref=e43]:
+          - generic [ref=e44]: 2027年以降
+          - generic [ref=e45]: 運転開始検討
+    - region "既設小型風車を、 次世代の発電所へ更新する。" [ref=e46]:
+      - generic [ref=e47]:
+        - generic [ref=e48]:
+          - paragraph [ref=e49]:
+            - text: IWAYA WIND FARM
+            - generic [ref=e50]: 岩屋ウインドファーム計画
+          - heading "既設小型風車を、 次世代の発電所へ更新する。" [level=2] [ref=e51]:
+            - text: 既設小型風車を、
+            - text: 次世代の発電所へ更新する。
+          - paragraph [ref=e52]: 青森県東通村の風況と既存インフラを活かし、既設小型風力発電設備を2.5MW級風車へリプレースする計画です。 発電設備、搬入動線、変電設備、地域との調整をひとつの計画として整理します。
+          - generic [ref=e53]:
+            - generic [ref=e54]:
+              - term [ref=e55]: 所在地
+              - definition [ref=e56]: 青森県下北郡東通村大字岩屋
+            - generic [ref=e57]:
+              - term [ref=e58]: 計画種別
+              - definition [ref=e59]: 既設小型風車のリプレース計画
+            - generic [ref=e60]:
+              - term [ref=e61]: 想定機種
+              - definition [ref=e62]: 2.5MW級 風力発電機
+            - generic [ref=e63]:
+              - term [ref=e64]: 計画基数
+              - definition [ref=e65]: 18基（計画想定）
+            - generic [ref=e66]:
+              - term [ref=e67]: 計画容量
+              - definition [ref=e68]: 45MW（計画想定）
+            - generic [ref=e69]:
+              - term [ref=e70]: 状況
+              - definition [ref=e71]: 検討中・一次調査完了
+          - paragraph [ref=e72]: 計画値は検討段階の目安です。最終仕様は調査、許認可、系統条件により変動します。
+        - figure [ref=e74]:
+          - img "青森県東通村 岩屋ウインドファームの計画概要" [ref=e75]
+    - region "風を捉え、 止めずに運用する。" [ref=e76]:
+      - generic [ref=e77]:
+        - generic [ref=e79]:
+          - generic [ref=e80]:
+            - paragraph [ref=e81]:
+              - text: TECHNOLOGY
+              - generic [ref=e82]: 風車技術の特徴
+            - heading "風を捉え、 止めずに運用する。" [level=2] [ref=e83]:
+              - text: 風を捉え、
+              - text: 止めずに運用する。
+          - paragraph [ref=e84]: 大型ローター、高塔柱、直駆動方式、スマート制御、IoT運用を組み合わせ、 発電性能、信頼性、運用高度化の3つの視点から事業価値を高めます。
+        - generic [ref=e85]:
+          - figure [ref=e87]:
+            - img "山間の風力発電所に設置された大型風車のローターハブ" [ref=e88]
+          - list [ref=e89]:
+            - listitem [ref=e90]:
+              - generic [ref=e91]: "01"
+              - generic [ref=e92]:
+                - heading "発電性能" [level=3] [ref=e93]
+                - generic [ref=e94]: 高効率・捕風能力
+                - paragraph [ref=e95]: 大型ローター、高塔柱、カスタムブレードと直駆動方式を組み合わせ、低風速・複雑地形でも風を捉えて発電量を引き出します。
+            - listitem [ref=e96]:
+              - generic [ref=e97]: "02"
+              - generic [ref=e98]:
+                - heading "信頼性" [level=3] [ref=e99]
+                - generic [ref=e100]: 高信頼性・低コスト
+                - paragraph [ref=e101]: 部品点数とギアシステムの保守負担を抑え、安定稼働とライフサイクルコストの最適化を両立します。
+            - listitem [ref=e102]:
+              - generic [ref=e103]: "03"
+              - generic [ref=e104]:
+                - heading "運用高度化" [level=3] [ref=e105]
+                - generic [ref=e106]: スマート制御・IoT運用
+                - paragraph [ref=e107]: 風況と設備状態を継続的に把握し、制御最適化と予知保全によって発電ロスと停止時間の低減につなげます。
+    - region "地上だけでなく、 空の風もエネルギーへ。" [ref=e108]:
+      - generic [ref=e109]:
+        - figure "飛行船型空中風力発電システムのコンセプトイメージ" [ref=e111]:
+          - img "NOAHロゴが入った飛行船型の空中風力発電システムのコンセプトイメージ" [ref=e112]
+          - generic [ref=e113]: 飛行船型空中風力発電システムのコンセプトイメージ
+        - generic [ref=e114]:
+          - paragraph [ref=e115]:
+            - text: AIRBORNE WIND ENERGY
+            - generic [ref=e116]: 空中発電所
+          - paragraph [ref=e117]: NEXT-GENERATION WIND
+          - heading "地上だけでなく、 空の風もエネルギーへ。" [level=2] [ref=e118]:
+            - text: 地上だけでなく、
+            - text: 空の風もエネルギーへ。
+          - paragraph [ref=e119]: 空中発電所は、飛行船型の発電ユニットを上空へ係留し、 地表より強く安定した風を活用する空中風力発電システムです。 従来の風力発電を補完する、新しい発電インフラとして導入可能性を検討しています。
+          - list [ref=e120]:
+            - listitem [ref=e121]:
+              - generic [ref=e122]:
+                - heading "上空へ展開" [level=3] [ref=e123]
+                - paragraph [ref=e124]: 浮力を利用した飛行船型の機体を係留し、地形や建物の影響を受けにくい上空の風へアクセスします。
+            - listitem [ref=e125]:
+              - generic [ref=e126]:
+                - heading "空中で発電" [level=3] [ref=e127]
+                - paragraph [ref=e128]: 機体の風路に配置された風車で風力を電力へ変換し、高高度の風力資源を活用します。
+            - listitem [ref=e129]:
+              - generic [ref=e130]:
+                - heading "地上へ送電" [level=3] [ref=e131]
+                - paragraph [ref=e132]: 係留・送電システムを通じて地上設備と接続し、制御、回収、安全管理を一体で行います。
+    - region "発電機だけでなく、 現場全体を更新する。" [ref=e133]:
+      - generic [ref=e134]:
+        - generic [ref=e136]:
+          - generic [ref=e137]:
+            - paragraph [ref=e138]:
+              - text: REPLACEMENT SCOPE
+              - generic [ref=e139]: リプレース計画の視点
+            - heading "発電機だけでなく、 現場全体を更新する。" [level=2] [ref=e140]:
+              - text: 発電機だけでなく、
+              - text: 現場全体を更新する。
+          - paragraph [ref=e141]: 既設風車の更新では、機種選定だけでなく、搬入、造成、送変電、保守動線までが成否を左右します。 風力発電所を長く運用できる状態へ整えます。
+        - generic [ref=e142]:
+          - article [ref=e144]:
+            - img "既設小型風車のある山間部" [ref=e146]
+            - generic [ref=e147]:
+              - heading "既設小型風車" [level=3] [ref=e148]
+              - paragraph [ref=e149]: 既存設備の稼働状況、地形、道路、系統条件を確認します。
+          - article [ref=e151]:
+            - img "大型風車へリプレースした風力発電所のイメージ" [ref=e153]
+            - generic [ref=e154]:
+              - heading "リプレース後" [level=3] [ref=e155]
+              - paragraph [ref=e156]: 大型化による発電量向上と、配置の最適化を検討します。
+          - article [ref=e158]:
+            - img "大型ブレードを輸送するトラック" [ref=e160]
+            - generic [ref=e161]:
+              - heading "大型部材の搬入" [level=3] [ref=e162]
+              - paragraph [ref=e163]: ブレード輸送、道路幅、曲線半径、仮設計画まで事前に整理します。
+          - article [ref=e165]:
+            - img "風力発電所に併設される変電設備" [ref=e167]
+            - generic [ref=e168]:
+              - heading "変電・連系設備" [level=3] [ref=e169]
+              - paragraph [ref=e170]: 発電所内設備、変電設備、系統連系の条件をまとめます。
+    - region "構想から商業運転まで、 判断の節目を見える化。" [ref=e171]:
+      - generic [ref=e172]:
+        - generic [ref=e174]:
+          - generic [ref=e175]:
+            - paragraph [ref=e176]:
+              - text: PROJECT FLOW
+              - generic [ref=e177]: 風力発電プロジェクトの流れ
+            - heading "構想から商業運転まで、 判断の節目を見える化。" [level=2] [ref=e178]:
+              - text: 構想から商業運転まで、
+              - text: 判断の節目を見える化。
+          - paragraph [ref=e179]: 調査、事業性評価、系統・許認可、設計・運用の4フェーズで、 次に進むための条件とリスクを段階的に整理します。
+        - list [ref=e180]:
+          - listitem [ref=e181]:
+            - generic [ref=e182]:
+              - generic [ref=e183]: PHASE A
+              - heading "調査・構想" [level=3] [ref=e184]
+            - list [ref=e185]:
+              - listitem [ref=e186]:
+                - generic [ref=e187]: "01"
+                - generic [ref=e188]:
+                  - heading "計画・立項" [level=4] [ref=e189]
+                  - paragraph [ref=e190]: 候補地選定、土地権利、地域との初期協議を整理します。
+              - listitem [ref=e191]:
+                - generic [ref=e192]: "02"
+                - generic [ref=e193]:
+                  - heading "初期調査" [level=4] [ref=e194]
+                  - paragraph [ref=e195]: 風況、地形・地質、環境条件を現地で確認します。
+          - listitem [ref=e196]:
+            - generic [ref=e197]:
+              - generic [ref=e198]: PHASE B
+              - heading "事業性評価" [level=3] [ref=e199]
+            - list [ref=e200]:
+              - listitem [ref=e201]:
+                - generic [ref=e202]: "03"
+                - generic [ref=e203]:
+                  - heading "事業性評価" [level=4] [ref=e204]
+                  - paragraph [ref=e205]: 発電量予測、コスト、投資回収の見通しを検討します。
+              - listitem [ref=e206]:
+                - generic [ref=e207]: "04"
+                - generic [ref=e208]:
+                  - heading "詳細評価" [level=4] [ref=e209]
+                  - paragraph [ref=e210]: 精密風況評価、環境影響評価、地質調査を進めます。
+          - listitem [ref=e211]:
+            - generic [ref=e212]:
+              - generic [ref=e213]: PHASE C
+              - heading "系統・許認可" [level=3] [ref=e214]
+            - list [ref=e215]:
+              - listitem [ref=e216]:
+                - generic [ref=e217]: "05"
+                - generic [ref=e218]:
+                  - heading "系統連系" [level=4] [ref=e219]
+                  - paragraph [ref=e220]: 電力会社への連系申込と技術条件の調整を行います。
+              - listitem [ref=e221]:
+                - generic [ref=e222]: "06"
+                - generic [ref=e223]:
+                  - heading "認定・許認可" [level=4] [ref=e224]
+                  - paragraph [ref=e225]: FIT/FIP認定や各種法令に基づく許可取得を支援します。
+          - listitem [ref=e226]:
+            - generic [ref=e227]:
+              - generic [ref=e228]: PHASE D
+              - heading "設計・運用" [level=3] [ref=e229]
+            - list [ref=e230]:
+              - listitem [ref=e231]:
+                - generic [ref=e232]: "07"
+                - generic [ref=e233]:
+                  - heading "設計・建設" [level=4] [ref=e234]
+                  - paragraph [ref=e235]: 詳細設計、設備調達、施工、据付、試運転へ進めます。
+              - listitem [ref=e236]:
+                - generic [ref=e237]: "08"
+                - generic [ref=e238]:
+                  - heading "運転・O&M" [level=4] [ref=e239]
+                  - paragraph [ref=e240]: COD後の運営、保守、予防管理、改善を継続します。
+    - region "風力発電・リプレース計画のご相談はこちら" [ref=e241]:
+      - generic [ref=e244]:
+        - paragraph [ref=e245]: WIND PROJECT CONSULTING
+        - heading "風力発電・リプレース計画のご相談はこちら" [level=2] [ref=e246]
+        - paragraph [ref=e247]: 候補地、既存設備、系統条件、搬入条件、地域調整の初期整理からご相談ください。
+        - generic [ref=e248]:
+          - link "お問い合わせ" [ref=e249] [cursor=pointer]:
+            - /url: /contact/
+            - text: お問い合わせ
+            - generic [ref=e250]: →
+          - link "事業一覧へ戻る" [ref=e251] [cursor=pointer]:
+            - /url: /business/
+            - text: 事業一覧へ戻る
+            - generic [ref=e252]: →
+  - contentinfo [ref=e253]:
+    - generic [ref=e255]:
+      - link "諾亜建設株式会社" [ref=e256] [cursor=pointer]:
+        - /url: /
+        - img "諾亜建設株式会社" [ref=e257]
+      - generic [ref=e258]:
+        - generic [ref=e259]:
+          - heading "企業情報" [level=3] [ref=e260]:
+            - link "企業情報" [ref=e261] [cursor=pointer]:
+              - /url: /about/
+          - link "トップメッセージ" [ref=e262] [cursor=pointer]:
+            - /url: /about/message/
+          - link "企業理念・ビジョン" [ref=e263] [cursor=pointer]:
+            - /url: /about/vision/
+          - link "行動基準" [ref=e264] [cursor=pointer]:
+            - /url: /about/standard/
+          - link "会社概要" [ref=e265] [cursor=pointer]:
+            - /url: /about/outline/
+          - link "グループ・組織図" [ref=e266] [cursor=pointer]:
+            - /url: /about/organization/
+          - link "沿革" [ref=e267] [cursor=pointer]:
+            - /url: /about/history/
+          - link "健康経営" [ref=e268] [cursor=pointer]:
+            - /url: /about/safety-health/
+        - generic [ref=e269]:
+          - heading "事業紹介" [level=3] [ref=e270]:
+            - link "事業紹介" [ref=e271] [cursor=pointer]:
+              - /url: /business/
+          - link "蓄電池事業" [ref=e272] [cursor=pointer]:
+            - /url: /business/batteryenergystorage/
+          - link "風力発電事業" [ref=e273] [cursor=pointer]:
+            - /url: /business/windpower/
+          - link "バイオマス" [ref=e274] [cursor=pointer]:
+            - /url: /business/biomasspower/
+          - link "走行式集塵ホッパー事業" [ref=e275] [cursor=pointer]:
+            - /url: /business/hopper/
+          - link "水素モビリティ事業" [ref=e276] [cursor=pointer]:
+            - /url: /business/hydrogen-mobility/
+          - link "AIデータセンター事業" [ref=e277] [cursor=pointer]:
+            - /url: /business/ai-data-center/
+        - generic [ref=e278]:
+          - heading "サステナビリティ" [level=3] [ref=e279]:
+            - link "サステナビリティ" [ref=e280] [cursor=pointer]:
+              - /url: /sustainability/
+          - link "地域共生" [ref=e281] [cursor=pointer]:
+            - /url: /sustainability/community-relations/
+          - link "環境保全" [ref=e282] [cursor=pointer]:
+            - /url: /sustainability/environment/
+          - link "カーボンニュートラル" [ref=e283] [cursor=pointer]:
+            - /url: /sustainability/carbon-neutrality/
+        - generic [ref=e284]:
+          - heading "その他" [level=3] [ref=e285]
+          - link "お問い合わせ" [ref=e286] [cursor=pointer]:
+            - /url: /contact/
+          - link "ニュース" [ref=e287] [cursor=pointer]:
+            - /url: /news/
+          - link "採用情報" [ref=e288] [cursor=pointer]:
+            - /url: /recruit/
+          - link "プライバシーポリシー" [ref=e289] [cursor=pointer]:
+            - /url: /privacy/
+          - link "サイトマップ" [ref=e290] [cursor=pointer]:
+            - /url: /sitemap/
+    - paragraph [ref=e291]: © NOAH CONSTRUCTION CO.,LTD. All Rights Reserved.
+  - alert [ref=e292]

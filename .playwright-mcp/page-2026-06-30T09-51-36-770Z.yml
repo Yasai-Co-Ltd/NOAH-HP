@@ -1,0 +1,187 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - link "諾亜建設株式会社 ホーム" [ref=e3] [cursor=pointer]:
+      - /url: /
+      - img "NOAH CONSTRUCTION CO.,LTD. 諾亜建設株式会社" [ref=e4]
+    - button "メニューを開く" [ref=e5] [cursor=pointer]
+  - main [ref=e9]:
+    - region "地域・環境・脱炭素を、 事業の中心に。" [ref=e10]:
+      - generic [ref=e13]:
+        - paragraph [ref=e14]: SUSTAINABILITY
+        - generic [ref=e15]: サステナビリティ
+        - heading "地域・環境・脱炭素を、 事業の中心に。" [level=1] [ref=e16]:
+          - text: 地域・環境・脱炭素を、
+          - text: 事業の中心に。
+        - paragraph [ref=e17]: NOAHは、再生可能エネルギー、蓄電池、水素、AIデータセンターを組み合わせ、 持続可能なインフラの実装に取り組みます。
+        - generic [ref=e18]:
+          - link "テーマを見る" [ref=e19] [cursor=pointer]:
+            - /url: "#themes"
+            - text: テーマを見る
+            - generic [ref=e20]: →
+          - link "事業紹介へ" [ref=e21] [cursor=pointer]:
+            - /url: /business/
+            - text: 事業紹介へ
+            - generic [ref=e22]: →
+    - region "3つの視点で見る、 NOAHの取り組み。" [ref=e23]:
+      - generic [ref=e24]:
+        - generic [ref=e26]:
+          - generic [ref=e27]:
+            - paragraph [ref=e28]:
+              - text: CONTENTS
+              - generic [ref=e29]: テーマ別の取り組み
+            - heading "3つの視点で見る、 NOAHの取り組み。" [level=2] [ref=e30]:
+              - text: 3つの視点で見る、
+              - text: NOAHの取り組み。
+          - paragraph [ref=e31]: 地域共生、環境保全、カーボンニュートラルの3つの視点から、 NOAHの考え方と取り組みを紹介します。
+        - generic [ref=e32]:
+          - link "地域住民と現場スタッフが地図を見ながら地域の計画について話し合う様子 THEME 01 地域共生 地域との対話を重ね、暮らしと事業が共に発展する関係づくりを進めます。 詳しく見る" [ref=e34] [cursor=pointer]:
+            - /url: /sustainability/community-relations/
+            - img "地域住民と現場スタッフが地図を見ながら地域の計画について話し合う様子" [ref=e36]
+            - generic [ref=e37]:
+              - generic [ref=e38]: THEME 01
+              - heading "地域共生" [level=3] [ref=e39]
+              - generic [ref=e40]: 地域との対話を重ね、暮らしと事業が共に発展する関係づくりを進めます。
+              - generic [ref=e41]: 詳しく見る
+          - link "水辺の自然環境を調査する現場スタッフ THEME 02 環境保全 計画から運用まで自然環境に配慮し、景観と生態系への影響低減に取り組みます。 詳しく見る" [ref=e43] [cursor=pointer]:
+            - /url: /sustainability/environment/
+            - img "水辺の自然環境を調査する現場スタッフ" [ref=e45]
+            - generic [ref=e46]:
+              - generic [ref=e47]: THEME 02
+              - heading "環境保全" [level=3] [ref=e48]
+              - generic [ref=e49]: 計画から運用まで自然環境に配慮し、景観と生態系への影響低減に取り組みます。
+              - generic [ref=e50]: 詳しく見る
+          - link "蓄電池、太陽光、水素設備が連携するカーボンニュートラルインフラ THEME 03 カーボンニュートラル 蓄電池・再エネ・水素を組み合わせ、脱炭素社会を支える基盤づくりを進めます。 詳しく見る" [ref=e52] [cursor=pointer]:
+            - /url: /sustainability/carbon-neutrality/
+            - img "蓄電池、太陽光、水素設備が連携するカーボンニュートラルインフラ" [ref=e54]
+            - generic [ref=e55]:
+              - generic [ref=e56]: THEME 03
+              - heading "カーボンニュートラル" [level=3] [ref=e57]
+              - generic [ref=e58]: 蓄電池・再エネ・水素を組み合わせ、脱炭素社会を支える基盤づくりを進めます。
+              - generic [ref=e59]: 詳しく見る
+    - region "理念で終わらせず、 事業として実装する。" [ref=e60]:
+      - generic [ref=e61]:
+        - generic [ref=e62]:
+          - paragraph [ref=e63]:
+            - text: NOAH'S STANCE
+            - generic [ref=e64]: NOAHの考え方
+          - heading "理念で終わらせず、 事業として実装する。" [level=2] [ref=e65]:
+            - text: 理念で終わらせず、
+            - text: 事業として実装する。
+          - paragraph [ref=e66]: 発電、蓄電、利用、運用までをつなぎ、地域や企業の現場で使い続けられる仕組みにします。
+        - generic [ref=e67]:
+          - article [ref=e69]:
+            - text: "01"
+            - heading "地域と進める" [level=3] [ref=e70]
+            - paragraph [ref=e71]: 立地や暮らしに配慮し、地域と対話しながら計画します。
+          - article [ref=e73]:
+            - text: "02"
+            - heading "環境を守る" [level=3] [ref=e74]
+            - paragraph [ref=e75]: 景観、生態系、安全性に配慮し、影響低減を図ります。
+          - article [ref=e77]:
+            - text: "03"
+            - heading "脱炭素を支える" [level=3] [ref=e78]
+            - paragraph [ref=e79]: 再エネ、蓄電池、水素、AI制御を組み合わせます。
+    - region "6つの事業領域で、 持続可能なインフラへ。" [ref=e80]:
+      - generic [ref=e81]:
+        - img "発電設備、蓄電池、水素設備が地域インフラとして配置された風景" [ref=e84]
+        - generic [ref=e85]:
+          - paragraph [ref=e86]:
+            - text: BUSINESS
+            - generic [ref=e87]: 事業を通じた貢献
+          - heading "6つの事業領域で、 持続可能なインフラへ。" [level=2] [ref=e88]:
+            - text: 6つの事業領域で、
+            - text: 持続可能なインフラへ。
+          - paragraph [ref=e89]: サステナビリティの考え方を起点に、各事業領域で具体的な取り組みを紹介します。
+          - generic "関連事業" [ref=e90]:
+            - generic [ref=e91]: 蓄電池
+            - generic [ref=e92]: 風力発電
+            - generic [ref=e93]: バイオマス
+            - generic [ref=e94]: 走行式集塵ホッパー
+            - generic [ref=e95]: 水素モビリティ
+            - generic [ref=e96]: AIデータセンター
+          - link "事業紹介を見る" [ref=e97] [cursor=pointer]:
+            - /url: /business/
+            - text: 事業紹介を見る
+            - generic [ref=e98]: →
+    - region "地域と企業の脱炭素化を、 事業計画からご相談ください。" [ref=e99]:
+      - generic [ref=e100]:
+        - generic [ref=e101]:
+          - heading "地域と企業の脱炭素化を、 事業計画からご相談ください。" [level=2] [ref=e102]:
+            - text: 地域と企業の脱炭素化を、
+            - text: 事業計画からご相談ください。
+          - paragraph [ref=e103]: 再生可能エネルギー、蓄電池、水素、AIデータセンターまで、 目的に合わせた構想を一緒に検討します。
+        - generic [ref=e104]:
+          - link "お問い合わせ" [ref=e105] [cursor=pointer]:
+            - /url: /contact/
+            - text: お問い合わせ
+            - generic [ref=e106]: →
+          - link "事業紹介を見る" [ref=e107] [cursor=pointer]:
+            - /url: /business/
+            - text: 事業紹介を見る
+            - generic [ref=e108]: →
+  - contentinfo [ref=e109]:
+    - generic [ref=e111]:
+      - link "諾亜建設株式会社" [ref=e112] [cursor=pointer]:
+        - /url: /
+        - img "諾亜建設株式会社" [ref=e113]
+      - generic [ref=e114]:
+        - generic [ref=e115]:
+          - heading "企業情報" [level=3] [ref=e116]:
+            - link "企業情報" [ref=e117] [cursor=pointer]:
+              - /url: /about/
+          - link "トップメッセージ" [ref=e118] [cursor=pointer]:
+            - /url: /about/message/
+          - link "企業理念・ビジョン" [ref=e119] [cursor=pointer]:
+            - /url: /about/vision/
+          - link "行動基準" [ref=e120] [cursor=pointer]:
+            - /url: /about/standard/
+          - link "会社概要" [ref=e121] [cursor=pointer]:
+            - /url: /about/outline/
+          - link "グループ・組織図" [ref=e122] [cursor=pointer]:
+            - /url: /about/organization/
+          - link "沿革" [ref=e123] [cursor=pointer]:
+            - /url: /about/history/
+          - link "健康経営" [ref=e124] [cursor=pointer]:
+            - /url: /about/safety-health/
+        - generic [ref=e125]:
+          - heading "事業紹介" [level=3] [ref=e126]:
+            - link "事業紹介" [ref=e127] [cursor=pointer]:
+              - /url: /business/
+          - link "蓄電池事業" [ref=e128] [cursor=pointer]:
+            - /url: /business/batteryenergystorage/
+          - link "風力発電事業" [ref=e129] [cursor=pointer]:
+            - /url: /business/windpower/
+          - link "バイオマス" [ref=e130] [cursor=pointer]:
+            - /url: /business/biomasspower/
+          - link "走行式集塵ホッパー事業" [ref=e131] [cursor=pointer]:
+            - /url: /business/hopper/
+          - link "水素モビリティ事業" [ref=e132] [cursor=pointer]:
+            - /url: /business/hydrogen-mobility/
+          - link "AIデータセンター事業" [ref=e133] [cursor=pointer]:
+            - /url: /business/ai-data-center/
+        - generic [ref=e134]:
+          - heading "サステナビリティ" [level=3] [ref=e135]:
+            - link "サステナビリティ" [ref=e136] [cursor=pointer]:
+              - /url: /sustainability/
+          - link "地域共生" [ref=e137] [cursor=pointer]:
+            - /url: /sustainability/community-relations/
+          - link "環境保全" [ref=e138] [cursor=pointer]:
+            - /url: /sustainability/environment/
+          - link "カーボンニュートラル" [ref=e139] [cursor=pointer]:
+            - /url: /sustainability/carbon-neutrality/
+        - generic [ref=e140]:
+          - heading "その他" [level=3] [ref=e141]
+          - link "お問い合わせ" [ref=e142] [cursor=pointer]:
+            - /url: /contact/
+          - link "ニュース" [ref=e143] [cursor=pointer]:
+            - /url: /news/
+          - link "採用情報" [ref=e144] [cursor=pointer]:
+            - /url: /recruit/
+          - link "プライバシーポリシー" [ref=e145] [cursor=pointer]:
+            - /url: /privacy/
+          - link "サイトマップ" [ref=e146] [cursor=pointer]:
+            - /url: /sitemap/
+    - paragraph [ref=e147]: © NOAH CONSTRUCTION CO.,LTD. All Rights Reserved.
+  - button "Open Next.js Dev Tools" [ref=e153] [cursor=pointer]:
+    - img [ref=e154]
+  - alert [ref=e157]

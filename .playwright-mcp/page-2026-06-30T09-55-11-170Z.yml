@@ -1,0 +1,326 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - link "諾亜建設株式会社 ホーム" [ref=e3] [cursor=pointer]:
+      - /url: /
+      - img "NOAH CONSTRUCTION CO.,LTD. 諾亜建設株式会社" [ref=e4]
+    - navigation "グローバルナビゲーション" [ref=e5]:
+      - link "企業情報" [ref=e7] [cursor=pointer]:
+        - /url: /about/
+      - link "事業紹介" [ref=e9] [cursor=pointer]:
+        - /url: /business/
+      - link "サステナビリティ" [ref=e11] [cursor=pointer]:
+        - /url: /sustainability/
+      - link "ニュース" [ref=e13] [cursor=pointer]:
+        - /url: /news/
+      - link "採用情報" [ref=e15] [cursor=pointer]:
+        - /url: /recruit/
+    - link "お問い合わせ" [ref=e16] [cursor=pointer]:
+      - /url: /contact/
+      - img [ref=e17]
+      - text: お問い合わせ
+  - main [ref=e20]:
+    - region "水素商用車の導入を、 運用から設計する。" [ref=e21]:
+      - generic [ref=e23]:
+        - paragraph [ref=e24]:
+          - text: HYDROGEN MOBILITY
+          - generic [ref=e25]: 水素モビリティ事業
+        - heading "水素商用車の導入を、 運用から設計する。" [level=1] [ref=e26]:
+          - text: 水素商用車の導入を、
+          - text: 運用から設計する。
+        - paragraph [ref=e27]: FCVトラックは、車両だけでは導入できません。走行ルート、水素製造、水素ステーション、 補助金、燃料費、保守体制をひとつの事業計画として整理し、 商用フリートの脱炭素化を現実的に進めます。
+        - generic [ref=e28]:
+          - link "導入相談をする" [ref=e29] [cursor=pointer]:
+            - /url: /contact/
+            - text: 導入相談をする
+            - generic [ref=e30]: →
+          - link "車両仕様を見る" [ref=e31] [cursor=pointer]:
+            - /url: "#vehicle"
+            - text: 車両仕様を見る
+            - generic [ref=e32]: →
+      - generic "FCVトラックの参考仕様" [ref=e33]:
+        - generic [ref=e34]:
+          - generic [ref=e35]: 500km
+          - generic [ref=e36]: FCEVトレーラーヘッド想定輸送半径
+        - generic [ref=e37]:
+          - generic [ref=e38]: 20分
+          - generic [ref=e39]: 資料記載の充填時間
+        - generic [ref=e40]:
+          - generic [ref=e41]: 140kW
+          - generic [ref=e42]: 実車搭載済み燃料電池製品
+        - generic [ref=e43]:
+          - generic [ref=e44]: 20km/kg
+          - generic [ref=e45]: 資料記載のFCトラック燃費
+    - region "車両を買う前に、 運用条件を固める。" [ref=e46]:
+      - generic [ref=e47]:
+        - generic [ref=e49]:
+          - paragraph [ref=e50]:
+            - text: INTRODUCTION PROGRAM
+            - generic [ref=e51]: 導入支援プログラム
+          - heading "車両を買う前に、 運用条件を固める。" [level=2] [ref=e52]:
+            - text: 車両を買う前に、
+            - text: 運用条件を固める。
+        - generic [ref=e53]:
+          - figure [ref=e55]:
+            - img "水素ステーション" [ref=e56]
+          - generic [ref=e57]:
+            - article [ref=e59]:
+              - generic [ref=e60]: "01"
+              - heading "車両・用途整理" [level=3] [ref=e61]
+              - paragraph [ref=e62]: 輸送距離、積載量、稼働時間、既存車両の更新計画を整理し、FCVトラックの導入条件を明確にします。
+            - article [ref=e64]:
+              - generic [ref=e65]: "02"
+              - heading "水素供給・ステーション計画" [level=3] [ref=e66]
+              - paragraph [ref=e67]: 水素発生装置、メタノール供給、水素ステーションの能力や設置条件を、拠点と走行ルートに合わせて検討します。
+            - article [ref=e69]:
+              - generic [ref=e70]: "03"
+              - heading "補助金・TCO試算" [level=3] [ref=e71]
+              - paragraph [ref=e72]: 国・自治体の制度、燃料単価、走行距離、リース条件を踏まえ、導入判断に必要な費用感を可視化します。
+            - article [ref=e74]:
+              - generic [ref=e75]: "04"
+              - heading "導入・運用開始" [level=3] [ref=e76]
+              - paragraph [ref=e77]: 車両調達、充填設備、ドライバー教育、点検・保守まで、商用運用へ移行するための実務を支援します。
+    - region "大型商用車を、 水素へ置き換える。" [ref=e78]:
+      - generic [ref=e79]:
+        - generic [ref=e80]:
+          - paragraph [ref=e81]:
+            - text: FCV TRUCK
+            - generic [ref=e82]: 対象車両
+          - heading "大型商用車を、 水素へ置き換える。" [level=2] [ref=e83]:
+            - text: 大型商用車を、
+            - text: 水素へ置き換える。
+          - paragraph [ref=e84]: トレーラーヘッドを中心に、500km圏の輸送半径、短時間充填、長時間稼働が求められる商用用途での導入を想定。 資料掲載値を起点に、国内運用条件、法規、補助金制度に合わせて導入条件を整理します。
+        - generic [ref=e86]:
+          - figure [ref=e87]:
+            - img "FCVトラックの正面" [ref=e88]
+          - table "FCVトラック参考仕様" [ref=e89]:
+            - rowgroup [ref=e90]:
+              - row "対象車両 FCVトラクターヘッドを中心とした商用車" [ref=e91]:
+                - rowheader "対象車両" [ref=e92]
+                - cell "FCVトラクターヘッドを中心とした商用車" [ref=e93]
+              - row "想定用途 石炭、鋼材、港湾などの500km圏輸送" [ref=e94]:
+                - rowheader "想定用途" [ref=e95]
+                - cell "石炭、鋼材、港湾などの500km圏輸送" [ref=e96]
+              - row "燃料電池 140kW級製品を実車搭載済み" [ref=e97]:
+                - rowheader "燃料電池" [ref=e98]
+                - cell "140kW級製品を実車搭載済み" [ref=e99]
+              - row "参考燃費 FCトラック 20km/kg" [ref=e100]:
+                - rowheader "参考燃費" [ref=e101]
+                - cell "FCトラック 20km/kg" [ref=e102]
+              - row "充填時間 20分（資料記載値）" [ref=e103]:
+                - rowheader "充填時間" [ref=e104]
+                - cell "20分（資料記載値）" [ref=e105]
+              - row "導入支援 車両、補助金、ステーション、運用計画を一体で整理" [ref=e106]:
+                - rowheader "導入支援" [ref=e107]
+                - cell "車両、補助金、ステーション、運用計画を一体で整理" [ref=e108]
+              - row "運用実績 FCEVトレーラーヘッド900台超の納車・運営実績" [ref=e109]:
+                - rowheader "運用実績" [ref=e110]
+                - cell "FCEVトレーラーヘッド900台超の納車・運営実績" [ref=e111]
+    - region "つくる、貯める、充填する。 車両台数から逆算する。" [ref=e112]:
+      - generic [ref=e113]:
+        - generic [ref=e115]:
+          - paragraph [ref=e116]:
+            - text: HYDROGEN INFRASTRUCTURE
+            - generic [ref=e117]: 水素供給・充填インフラ
+          - heading "つくる、貯める、充填する。 車両台数から逆算する。" [level=2] [ref=e118]:
+            - text: つくる、貯める、充填する。
+            - text: 車両台数から逆算する。
+        - generic [ref=e119]:
+          - figure [ref=e121]:
+            - img "メタノール水素発生装置の構成図" [ref=e122]
+          - generic [ref=e123]:
+            - article [ref=e125]:
+              - generic [ref=e126]: つくる
+              - paragraph [ref=e127]: メタノール水素発生装置など、地域条件に合う水素製造・調達方法を比較します。
+            - article [ref=e129]:
+              - generic [ref=e130]: 貯める
+              - paragraph [ref=e131]: タンク、圧縮、保安距離、補給頻度を踏まえ、拠点で必要な貯蔵容量を検討します。
+            - article [ref=e133]:
+              - generic [ref=e134]: 充填する
+              - paragraph [ref=e135]: 大型車の稼働計画に合わせて、充填能力、動線、待機時間、安全運用を設計します。
+            - article [ref=e137]:
+              - generic [ref=e138]: 走らせる
+              - paragraph [ref=e139]: 走行データ、燃料費、保守履歴を管理し、商用運用として継続できる状態に整えます。
+    - region "まずは、走行ルートが読める 商用フリートから。" [ref=e140]:
+      - generic [ref=e141]:
+        - generic [ref=e143]:
+          - paragraph [ref=e144]:
+            - text: OPERATION SCENE
+            - generic [ref=e145]: 想定運用シーン
+          - heading "まずは、走行ルートが読める 商用フリートから。" [level=2] [ref=e146]:
+            - text: まずは、走行ルートが読める
+            - text: 商用フリートから。
+        - generic [ref=e147]:
+          - article [ref=e149]:
+            - figure [ref=e150]:
+              - img "寒冷地の道路を走行するFCVトラック" [ref=e151]
+            - generic [ref=e152]:
+              - generic [ref=e153]: "01"
+              - heading "幹線・港湾輸送" [level=3] [ref=e154]
+              - paragraph [ref=e155]: 長距離・中距離の輸送半径を持つトレーラーヘッドを中心に、充填拠点と走行ルートをセットで検討します。
+          - article [ref=e157]:
+            - figure [ref=e158]:
+              - img "建設現場で稼働する新エネルギー商用車" [ref=e159]
+            - generic [ref=e160]:
+              - generic [ref=e161]: "02"
+              - heading "建設・構内輸送" [level=3] [ref=e162]
+              - paragraph [ref=e163]: 工事現場、港湾、鉱山、構内物流など、決まった運行範囲で稼働する車両から導入効果を見極めます。
+          - article [ref=e165]:
+            - figure [ref=e166]:
+              - img "複数台並ぶ新エネルギー商用車" [ref=e167]
+            - generic [ref=e168]:
+              - generic [ref=e169]: "03"
+              - heading "フリート導入" [level=3] [ref=e170]
+              - paragraph [ref=e171]: 複数台導入では、補給順序、待機スペース、点検体制、ドライバー教育まで運用設計が重要になります。
+    - region "燃料電池、制御、車両設計を 商用運用へつなぐ。" [ref=e172]:
+      - generic [ref=e173]:
+        - generic [ref=e174]:
+          - paragraph [ref=e175]:
+            - text: TECHNOLOGY
+            - generic [ref=e176]: 燃料電池・車両技術
+          - heading "燃料電池、制御、車両設計を 商用運用へつなぐ。" [level=2] [ref=e177]:
+            - text: 燃料電池、制御、車両設計を
+            - text: 商用運用へつなぐ。
+          - paragraph [ref=e178]: メーカー資料では、140kW級燃料電池システム、車両制御、ネットワーク化、軽量化を組み合わせた商用車プラットフォームを展開。 NOAHは水素製造・水素ステーション・車両運用を含む国内導入時の条件整理と事業化支援を担います。
+          - generic [ref=e179]:
+            - generic [ref=e180]:
+              - generic [ref=e181]: 140kW
+              - generic [ref=e182]: 実車搭載済み燃料電池製品
+            - generic [ref=e183]:
+              - generic [ref=e184]: 5.3kW/L
+              - generic [ref=e185]: 金属板双極板スタックのパワー密度
+            - generic [ref=e186]:
+              - generic [ref=e187]: 500人規模
+              - generic [ref=e188]: 新エネルギー・知能ネットワーク化チーム
+            - generic [ref=e189]:
+              - generic [ref=e190]: 4領域
+              - generic [ref=e191]: 知能化・電動化・ネットワーク化・軽量化
+        - generic [ref=e193]:
+          - figure [ref=e194]:
+            - img "燃料電池システム" [ref=e195]
+          - figure [ref=e196]:
+            - img "FCVトラックのシステム配置" [ref=e197]
+    - region "導入判断に必要な根拠を、 数字と運用実績で確認する。" [ref=e198]:
+      - generic [ref=e199]:
+        - generic [ref=e200]:
+          - paragraph [ref=e201]:
+            - text: PARTNER MATERIALS
+            - generic [ref=e202]: 資料掲載実績
+          - heading "導入判断に必要な根拠を、 数字と運用実績で確認する。" [level=2] [ref=e203]:
+            - text: 導入判断に必要な根拠を、
+            - text: 数字と運用実績で確認する。
+        - generic [ref=e204]:
+          - generic [ref=e206]:
+            - generic [ref=e207]: 900台超
+            - generic [ref=e208]: FCEVトレーラーヘッド納車実績
+          - generic [ref=e210]:
+            - generic [ref=e211]: 4,000万km
+            - generic [ref=e212]: トレーラーヘッド総走行距離
+          - generic [ref=e214]:
+            - generic [ref=e215]: 200車種超
+            - generic [ref=e216]: 商用車運用シーン対応車種
+        - paragraph [ref=e217]: メーカー・パートナー情報は導入条件により変動します。国内導入時は、最新仕様、法規、補助金制度、運用条件を個別に確認します。
+    - region "1台の検討から、 フリート展開まで支援。" [ref=e218]:
+      - generic [ref=e219]:
+        - generic [ref=e220]:
+          - paragraph [ref=e221]:
+            - text: PROJECT FLOW
+            - generic [ref=e222]: 導入までの流れ
+          - heading "1台の検討から、 フリート展開まで支援。" [level=2] [ref=e223]:
+            - text: 1台の検討から、
+            - text: フリート展開まで支援。
+        - generic [ref=e224]:
+          - article [ref=e226]:
+            - generic [ref=e227]: "01"
+            - heading "ヒアリング" [level=3] [ref=e228]
+            - paragraph [ref=e229]: 保有車両、走行距離、積載量、拠点、更新時期を整理します。
+          - article [ref=e231]:
+            - generic [ref=e232]: "02"
+            - heading "導入モデル設計" [level=3] [ref=e233]
+            - paragraph [ref=e234]: 車両、充填方式、補助金、リース、保守条件を組み合わせます。
+          - article [ref=e236]:
+            - generic [ref=e237]: "03"
+            - heading "実行計画" [level=3] [ref=e238]
+            - paragraph [ref=e239]: 調達、設備、許認可、安全教育、運用開始日程を具体化します。
+          - article [ref=e241]:
+            - generic [ref=e242]: "04"
+            - heading "運用改善" [level=3] [ref=e243]
+            - paragraph [ref=e244]: 走行データと燃料費を確認し、台数拡大や充填能力の増強を検討します。
+    - region "水素商用車の導入条件を、 一緒に整理しませんか。" [ref=e245]:
+      - generic [ref=e247]:
+        - heading "水素商用車の導入条件を、 一緒に整理しませんか。" [level=2] [ref=e248]:
+          - text: 水素商用車の導入条件を、
+          - text: 一緒に整理しませんか。
+        - paragraph [ref=e249]: 車両更新、走行距離、拠点、補助金、充填インフラの前提をまとめ、現実的な導入モデルを検討します。
+        - generic [ref=e250]:
+          - link "お問い合わせ" [ref=e251] [cursor=pointer]:
+            - /url: /contact/
+            - text: お問い合わせ
+            - generic [ref=e252]: →
+          - link "事業一覧へ戻る" [ref=e253] [cursor=pointer]:
+            - /url: /business/
+            - text: 事業一覧へ戻る
+            - generic [ref=e254]: →
+  - contentinfo [ref=e255]:
+    - generic [ref=e257]:
+      - link "諾亜建設株式会社" [ref=e258] [cursor=pointer]:
+        - /url: /
+        - img "諾亜建設株式会社" [ref=e259]
+      - generic [ref=e260]:
+        - generic [ref=e261]:
+          - heading "企業情報" [level=3] [ref=e262]:
+            - link "企業情報" [ref=e263] [cursor=pointer]:
+              - /url: /about/
+          - link "トップメッセージ" [ref=e264] [cursor=pointer]:
+            - /url: /about/message/
+          - link "企業理念・ビジョン" [ref=e265] [cursor=pointer]:
+            - /url: /about/vision/
+          - link "行動基準" [ref=e266] [cursor=pointer]:
+            - /url: /about/standard/
+          - link "会社概要" [ref=e267] [cursor=pointer]:
+            - /url: /about/outline/
+          - link "グループ・組織図" [ref=e268] [cursor=pointer]:
+            - /url: /about/organization/
+          - link "沿革" [ref=e269] [cursor=pointer]:
+            - /url: /about/history/
+          - link "健康経営" [ref=e270] [cursor=pointer]:
+            - /url: /about/safety-health/
+        - generic [ref=e271]:
+          - heading "事業紹介" [level=3] [ref=e272]:
+            - link "事業紹介" [ref=e273] [cursor=pointer]:
+              - /url: /business/
+          - link "蓄電池事業" [ref=e274] [cursor=pointer]:
+            - /url: /business/batteryenergystorage/
+          - link "風力発電事業" [ref=e275] [cursor=pointer]:
+            - /url: /business/windpower/
+          - link "バイオマス" [ref=e276] [cursor=pointer]:
+            - /url: /business/biomasspower/
+          - link "走行式集塵ホッパー事業" [ref=e277] [cursor=pointer]:
+            - /url: /business/hopper/
+          - link "水素モビリティ事業" [ref=e278] [cursor=pointer]:
+            - /url: /business/hydrogen-mobility/
+          - link "AIデータセンター事業" [ref=e279] [cursor=pointer]:
+            - /url: /business/ai-data-center/
+        - generic [ref=e280]:
+          - heading "サステナビリティ" [level=3] [ref=e281]:
+            - link "サステナビリティ" [ref=e282] [cursor=pointer]:
+              - /url: /sustainability/
+          - link "地域共生" [ref=e283] [cursor=pointer]:
+            - /url: /sustainability/community-relations/
+          - link "環境保全" [ref=e284] [cursor=pointer]:
+            - /url: /sustainability/environment/
+          - link "カーボンニュートラル" [ref=e285] [cursor=pointer]:
+            - /url: /sustainability/carbon-neutrality/
+        - generic [ref=e286]:
+          - heading "その他" [level=3] [ref=e287]
+          - link "お問い合わせ" [ref=e288] [cursor=pointer]:
+            - /url: /contact/
+          - link "ニュース" [ref=e289] [cursor=pointer]:
+            - /url: /news/
+          - link "採用情報" [ref=e290] [cursor=pointer]:
+            - /url: /recruit/
+          - link "プライバシーポリシー" [ref=e291] [cursor=pointer]:
+            - /url: /privacy/
+          - link "サイトマップ" [ref=e292] [cursor=pointer]:
+            - /url: /sitemap/
+    - paragraph [ref=e293]: © NOAH CONSTRUCTION CO.,LTD. All Rights Reserved.
+  - alert [ref=e294]

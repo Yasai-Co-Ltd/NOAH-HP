@@ -82,7 +82,7 @@ export default function VisionPage() {
               人と地球に優しい、
               <br />
               持続可能な社会を
-              <br className={styles.spBreak} />
+              <br />
               創造する。
             </h1>
             <div className={styles.heroActions}>

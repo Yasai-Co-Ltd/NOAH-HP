@@ -1,0 +1,155 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - link "諾亜建設株式会社 ホーム" [ref=e3] [cursor=pointer]:
+      - /url: /
+      - img "NOAH CONSTRUCTION CO.,LTD. 諾亜建設株式会社" [ref=e4]
+    - button "メニューを開く" [ref=e5] [cursor=pointer]
+  - main [ref=e9]:
+    - region "応募フォーム" [ref=e10]:
+      - generic [ref=e12]:
+        - navigation "パンくず" [ref=e13]:
+          - link "採用情報" [ref=e14] [cursor=pointer]:
+            - /url: /recruit/
+          - generic [ref=e15]: /
+          - generic [ref=e16]: 応募フォーム
+        - paragraph [ref=e17]: ENTRY FORM
+        - heading "応募フォーム" [level=1] [ref=e18]
+        - paragraph [ref=e19]: 以下のフォームに必要事項をご入力のうえ送信してください。 内容を確認のうえ、採用担当よりご連絡いたします。
+        - list [ref=e20]:
+          - listitem [ref=e21]:
+            - generic [ref=e22]: "01"
+            - generic [ref=e23]: 募集職種を確認
+          - listitem [ref=e24]:
+            - generic [ref=e25]: "02"
+            - generic [ref=e26]: フォームで応募
+          - listitem [ref=e27]:
+            - generic [ref=e28]: "03"
+            - generic [ref=e29]: 書類確認・面談
+          - listitem [ref=e30]:
+            - generic [ref=e31]: "04"
+            - generic [ref=e32]: 条件確認・採用
+    - region "応募内容のご入力" [ref=e33]:
+      - generic [ref=e34]:
+        - generic [ref=e36]:
+          - paragraph [ref=e37]:
+            - text: ENTRY
+            - generic [ref=e38]: 応募内容のご入力
+          - heading "応募内容のご入力" [level=2] [ref=e39]
+          - paragraph [ref=e40]: 応募職種を選び、お名前・連絡先・志望内容をご入力ください。 内容を確認のうえ、採用担当よりご連絡いたします。
+        - generic [ref=e42]:
+          - generic [ref=e43]:
+            - generic [ref=e44]:
+              - generic [ref=e45]:
+                - text: 応募職種
+                - generic [ref=e46]: 必須
+              - combobox "応募職種 必須" [ref=e47] [cursor=pointer]:
+                - option "選択してください" [disabled] [selected]
+                - option "人事・総務"
+                - option "営業募集"
+                - option "電気設備エンジニア"
+                - option "その他・職種未定"
+            - generic [ref=e48]:
+              - generic [ref=e49]:
+                - text: お名前
+                - generic [ref=e50]: 必須
+              - textbox "お名前 必須" [ref=e51]:
+                - /placeholder: 諾亜 太郎
+            - generic [ref=e52]:
+              - generic [ref=e53]: フリガナ
+              - textbox "フリガナ" [ref=e54]:
+                - /placeholder: ノア タロウ
+            - generic [ref=e55]:
+              - generic [ref=e56]:
+                - text: メールアドレス
+                - generic [ref=e57]: 必須
+              - textbox "メールアドレス 必須" [ref=e58]:
+                - /placeholder: example@email.com
+            - generic [ref=e59]:
+              - generic [ref=e60]:
+                - text: 電話番号
+                - generic [ref=e61]: 必須
+              - textbox "電話番号 必須" [ref=e62]:
+                - /placeholder: 090-1234-5678
+            - generic [ref=e63]:
+              - generic [ref=e64]: 志望動機・自己PR
+              - textbox "志望動機・自己PR" [ref=e65]:
+                - /placeholder: これまでのご経験や、志望のきっかけなどをご記入ください。
+          - generic [ref=e66]:
+            - text: 会社名（入力しないでください）
+            - textbox [ref=e67]
+          - generic [ref=e69] [cursor=pointer]:
+            - checkbox "個人情報の取り扱いに同意のうえ応募します。 必須" [ref=e70]
+            - generic [ref=e71]:
+              - text: 個人情報の取り扱いに同意のうえ応募します。
+              - generic [ref=e72]: 必須
+          - button "応募内容を送信する" [ref=e74] [cursor=pointer]:
+            - text: 応募内容を送信する
+            - generic [ref=e75]: →
+        - link "← 募集職種一覧へ戻る" [ref=e77] [cursor=pointer]:
+          - /url: /recruit/
+  - contentinfo [ref=e78]:
+    - generic [ref=e80]:
+      - link "諾亜建設株式会社" [ref=e81] [cursor=pointer]:
+        - /url: /
+        - img "諾亜建設株式会社" [ref=e82]
+      - generic [ref=e83]:
+        - generic [ref=e84]:
+          - heading "企業情報" [level=3] [ref=e85]:
+            - link "企業情報" [ref=e86] [cursor=pointer]:
+              - /url: /about/
+          - link "トップメッセージ" [ref=e87] [cursor=pointer]:
+            - /url: /about/message/
+          - link "企業理念・ビジョン" [ref=e88] [cursor=pointer]:
+            - /url: /about/vision/
+          - link "行動基準" [ref=e89] [cursor=pointer]:
+            - /url: /about/standard/
+          - link "会社概要" [ref=e90] [cursor=pointer]:
+            - /url: /about/outline/
+          - link "グループ・組織図" [ref=e91] [cursor=pointer]:
+            - /url: /about/organization/
+          - link "沿革" [ref=e92] [cursor=pointer]:
+            - /url: /about/history/
+          - link "健康経営" [ref=e93] [cursor=pointer]:
+            - /url: /about/safety-health/
+        - generic [ref=e94]:
+          - heading "事業紹介" [level=3] [ref=e95]:
+            - link "事業紹介" [ref=e96] [cursor=pointer]:
+              - /url: /business/
+          - link "蓄電池事業" [ref=e97] [cursor=pointer]:
+            - /url: /business/batteryenergystorage/
+          - link "風力発電事業" [ref=e98] [cursor=pointer]:
+            - /url: /business/windpower/
+          - link "バイオマス" [ref=e99] [cursor=pointer]:
+            - /url: /business/biomasspower/
+          - link "走行式集塵ホッパー事業" [ref=e100] [cursor=pointer]:
+            - /url: /business/hopper/
+          - link "水素モビリティ事業" [ref=e101] [cursor=pointer]:
+            - /url: /business/hydrogen-mobility/
+          - link "AIデータセンター事業" [ref=e102] [cursor=pointer]:
+            - /url: /business/ai-data-center/
+        - generic [ref=e103]:
+          - heading "サステナビリティ" [level=3] [ref=e104]:
+            - link "サステナビリティ" [ref=e105] [cursor=pointer]:
+              - /url: /sustainability/
+          - link "地域共生" [ref=e106] [cursor=pointer]:
+            - /url: /sustainability/community-relations/
+          - link "環境保全" [ref=e107] [cursor=pointer]:
+            - /url: /sustainability/environment/
+          - link "カーボンニュートラル" [ref=e108] [cursor=pointer]:
+            - /url: /sustainability/carbon-neutrality/
+        - generic [ref=e109]:
+          - heading "その他" [level=3] [ref=e110]
+          - link "お問い合わせ" [ref=e111] [cursor=pointer]:
+            - /url: /contact/
+          - link "ニュース" [ref=e112] [cursor=pointer]:
+            - /url: /news/
+          - link "採用情報" [ref=e113] [cursor=pointer]:
+            - /url: /recruit/
+          - link "プライバシーポリシー" [ref=e114] [cursor=pointer]:
+            - /url: /privacy/
+          - link "サイトマップ" [ref=e115] [cursor=pointer]:
+            - /url: /sitemap/
+    - paragraph [ref=e116]: © NOAH CONSTRUCTION CO.,LTD. All Rights Reserved.
+  - button "Open Next.js Dev Tools" [ref=e122] [cursor=pointer]:
+    - img [ref=e123]
+  - alert [ref=e126]

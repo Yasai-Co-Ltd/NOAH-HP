@@ -1,0 +1,178 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - link "諾亜建設株式会社 ホーム" [ref=e3] [cursor=pointer]:
+      - /url: /
+      - img "NOAH CONSTRUCTION CO.,LTD. 諾亜建設株式会社" [ref=e4]
+    - navigation "グローバルナビゲーション" [ref=e5]:
+      - link "企業情報" [ref=e7] [cursor=pointer]:
+        - /url: /about/
+      - link "事業紹介" [ref=e9] [cursor=pointer]:
+        - /url: /business/
+      - link "サステナビリティ" [ref=e11] [cursor=pointer]:
+        - /url: /sustainability/
+      - link "ニュース" [ref=e13] [cursor=pointer]:
+        - /url: /news/
+      - link "採用情報" [ref=e15] [cursor=pointer]:
+        - /url: /recruit/
+    - link "お問い合わせ" [ref=e16] [cursor=pointer]:
+      - /url: /contact/
+      - img [ref=e17]
+      - text: お問い合わせ
+  - main [ref=e20]:
+    - main [ref=e21]:
+      - region "地域との対話から始める、再生可能エネルギー事業。" [ref=e22]:
+        - generic [ref=e23]:
+          - generic [ref=e24]:
+            - paragraph [ref=e25]: SUSTAINABILITY
+            - generic [ref=e26]: COMMUNITY RELATIONS
+            - heading "地域との対話から始める、再生可能エネルギー事業。" [level=1] [ref=e27]
+            - paragraph [ref=e28]: 自治体、土地所有者、地域住民との対話を大切にし、暮らしや産業と調和する事業運営を進めます。
+          - figure "地域共生" [ref=e30]:
+            - img "地域住民と現場スタッフが地図を見ながら地域の計画について話し合う様子" [ref=e31]
+            - generic [ref=e33]: 地域共生
+      - region "合意形成と地域メリットを、計画の初期から設計する。" [ref=e34]:
+        - generic [ref=e35]:
+          - generic [ref=e36]:
+            - paragraph [ref=e37]:
+              - text: COMMUNITY RELATIONS
+              - generic [ref=e38]: 地域共生
+            - generic "地域との関係づくりで確認すること。" [ref=e39]:
+              - generic [ref=e40]: 自治体・地域住民・土地所有者との対話
+              - generic [ref=e41]: 景観・騒音・交通・安全面への配慮
+              - generic [ref=e42]: 地元企業との連携と地域雇用の創出
+              - generic [ref=e43]: 地域行事・地域活動への協力
+          - generic [ref=e44]:
+            - heading "合意形成と地域メリットを、計画の初期から設計する。" [level=2] [ref=e45]
+            - paragraph [ref=e46]: 発電設備は、地域の暮らしや産業の近くで長く運用されるインフラです。だからこそ、事業の初期段階から地域との関係づくりを大切にします。
+            - generic [ref=e47]:
+              - paragraph [ref=e48]: 自治体、土地所有者、近隣住民の皆さまとの対話を通じて、事業の目的、工事内容、運転開始後の管理体制を分かりやすく共有します。
+              - paragraph [ref=e49]: 景観、騒音、工事車両の動線、安全説明など、日常生活に関わる項目を丁寧に確認し、地域の不安を事業計画へ反映します。
+              - paragraph [ref=e50]: 地元企業との連携、地域雇用、地域活動への協力、災害時の情報共有など、事業が地域にとって意味のある存在となる関係づくりを進めます。
+      - region "地域関係者との接点を、計画の中心に置く。" [ref=e51]:
+        - generic [ref=e52]:
+          - generic [ref=e54]:
+            - generic [ref=e55]:
+              - paragraph [ref=e56]:
+                - text: SYSTEM VIEW
+                - generic [ref=e57]: 地域共生で重視すること
+              - heading "地域関係者との接点を、計画の中心に置く。" [level=2] [ref=e58]
+            - paragraph [ref=e59]: 発電事業は土地、生活道路、景観、地域経済と接続します。関係者ごとの接点を整理し、説明・確認・協力を同時に進めます。
+          - figure "自治体、住民、土地所有者、地元企業、交通動線を一つの地域マップとして捉えるイメージ。" [ref=e61]:
+            - img "地域共生における自治体、住民、土地所有者、地元企業との関係を示す図" [ref=e62]
+            - generic [ref=e63]: 自治体、住民、土地所有者、地元企業、交通動線を一つの地域マップとして捉えるイメージ。
+      - region "対話・説明・協力を、地域対応の基本に。" [ref=e64]:
+        - generic [ref=e65]:
+          - generic [ref=e66]:
+            - paragraph [ref=e67]:
+              - text: ACTION
+              - generic [ref=e68]: 具体的な取り組み
+            - heading "対話・説明・協力を、地域対応の基本に。" [level=2] [ref=e69]
+            - paragraph [ref=e70]: 地域共生では、設備そのものよりも、関係者との接点をどう設計するかが重要です。説明機会、生活影響の確認、地域活動との関わりを一つずつ積み上げます。
+          - generic [ref=e71]:
+            - article [ref=e73]:
+              - heading "計画段階からの対話" [level=3] [ref=e75]
+              - paragraph [ref=e76]: 地域の不安や期待を早期に把握し、事業計画へ反映できるコミュニケーションを重視します。
+            - article [ref=e78]:
+              - heading "暮らしへの配慮" [level=3] [ref=e80]
+              - paragraph [ref=e81]: 工事車両、景観、騒音、安全管理など、地域の日常生活に関わる項目を丁寧に確認します。
+            - article [ref=e83]:
+              - heading "地域経済への貢献" [level=3] [ref=e85]
+              - paragraph [ref=e86]: 地元企業との協力や雇用機会の創出を通じて、事業の地域メリットを広げます。
+      - region "地域に受け入れられる事業へ。" [ref=e87]:
+        - generic [ref=e88]:
+          - generic [ref=e89]:
+            - heading "地域に受け入れられる事業へ。" [level=2] [ref=e90]
+            - paragraph [ref=e91]: 地域との信頼関係を大切にしながら、暮らしや産業と調和するエネルギー事業を進めます。
+          - generic [ref=e92]:
+            - link "お問い合わせ" [ref=e93] [cursor=pointer]:
+              - /url: /contact/
+              - text: お問い合わせ
+              - generic [ref=e94]: →
+            - link "サステナビリティへ戻る" [ref=e95] [cursor=pointer]:
+              - /url: /sustainability/
+              - text: サステナビリティへ戻る
+              - generic [ref=e96]: →
+      - region "その他のテーマもご確認ください。" [ref=e97]:
+        - generic [ref=e98]:
+          - generic [ref=e99]:
+            - paragraph [ref=e100]:
+              - text: RELATED CONTENTS
+              - generic [ref=e101]: 関連する取り組み
+            - heading "その他のテーマもご確認ください。" [level=2] [ref=e102]
+          - generic [ref=e103]:
+            - link "ENVIRONMENTAL CONSERVATION 環境保全 地形、植生、鳥類、水環境、土壌、景観などを確認し、事業地ごとの環境負荷低減に取り組みます。" [ref=e105] [cursor=pointer]:
+              - /url: /sustainability/environment/
+              - generic [ref=e106]: ENVIRONMENTAL CONSERVATION
+              - generic [ref=e107]: 環境保全
+              - generic [ref=e108]: 地形、植生、鳥類、水環境、土壌、景観などを確認し、事業地ごとの環境負荷低減に取り組みます。
+            - link "CARBON NEUTRALITY カーボンニュートラル 再生可能電源、蓄電池、水素、AI制御を組み合わせ、CO₂排出量削減に向けたエネルギー基盤を構想します。" [ref=e110] [cursor=pointer]:
+              - /url: /sustainability/carbon-neutrality/
+              - generic [ref=e111]: CARBON NEUTRALITY
+              - generic [ref=e112]: カーボンニュートラル
+              - generic [ref=e113]: 再生可能電源、蓄電池、水素、AI制御を組み合わせ、CO₂排出量削減に向けたエネルギー基盤を構想します。
+  - contentinfo [ref=e114]:
+    - generic [ref=e116]:
+      - link "諾亜建設株式会社" [ref=e117] [cursor=pointer]:
+        - /url: /
+        - img "諾亜建設株式会社" [ref=e118]
+      - generic [ref=e119]:
+        - generic [ref=e120]:
+          - heading "企業情報" [level=3] [ref=e121]:
+            - link "企業情報" [ref=e122] [cursor=pointer]:
+              - /url: /about/
+          - link "トップメッセージ" [ref=e123] [cursor=pointer]:
+            - /url: /about/message/
+          - link "企業理念・ビジョン" [ref=e124] [cursor=pointer]:
+            - /url: /about/vision/
+          - link "行動基準" [ref=e125] [cursor=pointer]:
+            - /url: /about/standard/
+          - link "会社概要" [ref=e126] [cursor=pointer]:
+            - /url: /about/outline/
+          - link "グループ・組織図" [ref=e127] [cursor=pointer]:
+            - /url: /about/organization/
+          - link "沿革" [ref=e128] [cursor=pointer]:
+            - /url: /about/history/
+          - link "健康経営" [ref=e129] [cursor=pointer]:
+            - /url: /about/safety-health/
+        - generic [ref=e130]:
+          - heading "事業紹介" [level=3] [ref=e131]:
+            - link "事業紹介" [ref=e132] [cursor=pointer]:
+              - /url: /business/
+          - link "蓄電池事業" [ref=e133] [cursor=pointer]:
+            - /url: /business/batteryenergystorage/
+          - link "風力発電事業" [ref=e134] [cursor=pointer]:
+            - /url: /business/windpower/
+          - link "バイオマス" [ref=e135] [cursor=pointer]:
+            - /url: /business/biomasspower/
+          - link "走行式集塵ホッパー事業" [ref=e136] [cursor=pointer]:
+            - /url: /business/hopper/
+          - link "水素モビリティ事業" [ref=e137] [cursor=pointer]:
+            - /url: /business/hydrogen-mobility/
+          - link "AIデータセンター事業" [ref=e138] [cursor=pointer]:
+            - /url: /business/ai-data-center/
+        - generic [ref=e139]:
+          - heading "サステナビリティ" [level=3] [ref=e140]:
+            - link "サステナビリティ" [ref=e141] [cursor=pointer]:
+              - /url: /sustainability/
+          - link "地域共生" [ref=e142] [cursor=pointer]:
+            - /url: /sustainability/community-relations/
+          - link "環境保全" [ref=e143] [cursor=pointer]:
+            - /url: /sustainability/environment/
+          - link "カーボンニュートラル" [ref=e144] [cursor=pointer]:
+            - /url: /sustainability/carbon-neutrality/
+        - generic [ref=e145]:
+          - heading "その他" [level=3] [ref=e146]
+          - link "お問い合わせ" [ref=e147] [cursor=pointer]:
+            - /url: /contact/
+          - link "ニュース" [ref=e148] [cursor=pointer]:
+            - /url: /news/
+          - link "採用情報" [ref=e149] [cursor=pointer]:
+            - /url: /recruit/
+          - link "プライバシーポリシー" [ref=e150] [cursor=pointer]:
+            - /url: /privacy/
+          - link "サイトマップ" [ref=e151] [cursor=pointer]:
+            - /url: /sitemap/
+    - paragraph [ref=e152]: © NOAH CONSTRUCTION CO.,LTD. All Rights Reserved.
+  - button "Open Next.js Dev Tools" [ref=e158] [cursor=pointer]:
+    - img [ref=e159]
+  - alert [ref=e162]

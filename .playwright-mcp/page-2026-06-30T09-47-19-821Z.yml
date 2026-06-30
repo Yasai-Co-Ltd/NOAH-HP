@@ -1,0 +1,299 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - link "諾亜建設株式会社 ホーム" [ref=e3] [cursor=pointer]:
+      - /url: /
+      - img "NOAH CONSTRUCTION CO.,LTD. 諾亜建設株式会社" [ref=e4]
+    - navigation "グローバルナビゲーション" [ref=e5]:
+      - link "企業情報" [ref=e7] [cursor=pointer]:
+        - /url: /about/
+      - link "事業紹介" [ref=e9] [cursor=pointer]:
+        - /url: /business/
+      - link "サステナビリティ" [ref=e11] [cursor=pointer]:
+        - /url: /sustainability/
+      - link "ニュース" [ref=e13] [cursor=pointer]:
+        - /url: /news/
+      - link "採用情報" [ref=e15] [cursor=pointer]:
+        - /url: /recruit/
+    - link "お問い合わせ" [ref=e16] [cursor=pointer]:
+      - /url: /contact/
+      - img [ref=e17]
+      - text: お問い合わせ
+  - main [ref=e20]:
+    - region "燃料供給から設備計画まで、 バイオマス発電を支える。" [ref=e21]:
+      - generic [ref=e23]:
+        - paragraph [ref=e24]:
+          - text: BIOMASS POWER
+          - generic [ref=e25]: バイオマス発電事業
+        - heading "燃料供給から設備計画まで、 バイオマス発電を支える。" [level=1] [ref=e26]:
+          - text: 燃料供給から設備計画まで、
+          - text: バイオマス発電を支える。
+        - paragraph [ref=e27]: PKS、炭化PKS、木質ペレットの安定供給に加え、バイオマス発電、乾燥設備、 生産ライン、港湾荷役・粉塵対策までを一体で整理。燃料を「買う」だけでなく、 受け入れて使い続けられる状態まで整えます。
+        - generic [ref=e28]:
+          - link "燃料・設備計画を相談する" [ref=e29] [cursor=pointer]:
+            - /url: /contact/
+            - text: 燃料・設備計画を相談する
+            - generic [ref=e30]: →
+          - link "取扱燃料を見る" [ref=e31] [cursor=pointer]:
+            - /url: "#fuel"
+            - text: 取扱燃料を見る
+            - generic [ref=e32]: →
+      - generic "バイオマス燃料の主要指標" [ref=e33]:
+        - generic [ref=e34]:
+          - generic [ref=e35]: 200,000MT/月
+          - generic [ref=e36]: PKS調達可能量
+        - generic [ref=e37]:
+          - generic [ref=e38]: 100,000MT/月
+          - generic [ref=e39]: 木質ペレット調達可能量
+        - generic [ref=e40]:
+          - generic [ref=e41]: FOB / DDP
+          - generic [ref=e42]: 引取方式に対応
+    - region "カーボンニュートラル燃料を、 発電事業で使える設備計画へ。" [ref=e43]:
+      - generic [ref=e44]:
+        - generic [ref=e45]:
+          - paragraph [ref=e46]:
+            - text: OVERVIEW
+            - generic [ref=e47]: 事業概要
+          - heading "カーボンニュートラル燃料を、 発電事業で使える設備計画へ。" [level=2] [ref=e48]:
+            - text: カーボンニュートラル燃料を、
+            - text: 発電事業で使える設備計画へ。
+        - generic [ref=e50]:
+          - paragraph [ref=e51]: 木質バイオマス燃料は、木材や枝葉などから作られる再生可能なエネルギー源です。 樹木の成長過程でCO2を吸収するため、燃焼時の排出と相殺するカーボンニュートラル燃料として位置づけられます。
+          - paragraph [ref=e52]: NOAHは、燃料の調達量や価格だけではなく、認証、海上輸送、受入時の粉塵、 乾燥設備、生産ライン、長期契約まで含めて、発電事業者が継続運用しやすい供給・設備モデルを組み立てます。
+    - region "用途と設備条件に合わせて、 燃料を選定する。" [ref=e53]:
+      - generic [ref=e54]:
+        - generic [ref=e56]:
+          - paragraph [ref=e57]:
+            - text: FUEL PORTFOLIO
+            - generic [ref=e58]: 取扱燃料
+          - heading "用途と設備条件に合わせて、 燃料を選定する。" [level=2] [ref=e59]:
+            - text: 用途と設備条件に合わせて、
+            - text: 燃料を選定する。
+        - generic [ref=e60]:
+          - article [ref=e62]:
+            - img "PKSの原料ヤード" [ref=e64]
+            - generic [ref=e65]:
+              - generic [ref=e66]: "01"
+              - paragraph [ref=e67]: Palm Kernel Shell
+              - heading "PKS" [level=3] [ref=e68]
+              - paragraph [ref=e69]: パーム油の生産過程で発生するパーム椰子殻。水分が少なく発熱量が高いため、石炭代替・混焼燃料として注目されています。
+              - list [ref=e70]:
+                - listitem [ref=e71]: RSPO認証取得工場との提携
+                - listitem [ref=e72]: 東南アジア各地域から調達
+                - listitem [ref=e73]: 上位発熱量 adv.4000kcal
+          - article [ref=e75]:
+            - img "炭化PKSの燃料サンプル" [ref=e77]
+            - generic [ref=e78]:
+              - generic [ref=e79]: "02"
+              - paragraph [ref=e80]: Carbonized PKS
+              - heading "炭化PKS" [level=3] [ref=e81]
+              - paragraph [ref=e82]: 低温炭化により、エネルギー密度、ハンドリング性、粉砕性を高めたPKS。既存燃料との混焼率向上を狙えます。
+              - list [ref=e83]:
+                - listitem [ref=e84]: 木質チップ同等の貯蔵性
+                - listitem [ref=e85]: 粉砕性・ハンドリング性を向上
+                - listitem [ref=e86]: 販売予約受付中
+          - article [ref=e88]:
+            - img "木質ペレットのサンプル" [ref=e90]
+            - generic [ref=e91]:
+              - generic [ref=e92]: "03"
+              - paragraph [ref=e93]: Wood Pellet
+              - heading "木質ペレット" [level=3] [ref=e94]
+              - paragraph [ref=e95]: 木くずなどを直径6〜10mm程度に成形した燃料。化石燃料の代替として、欧州を中心に需要が拡大しています。
+              - list [ref=e96]:
+                - listitem [ref=e97]: FSC-COC認証取得工場との提携
+                - listitem [ref=e98]: 東南アジア各地域から調達
+                - listitem [ref=e99]: 上位発熱量 adv.4100kcal
+    - region "調達、輸送、荷役を、 一連の品質管理として設計。" [ref=e100]:
+      - generic [ref=e101]:
+        - generic [ref=e102]:
+          - paragraph [ref=e103]:
+            - text: SUPPLY CHAIN
+            - generic [ref=e104]: 安定供給モデル
+          - heading "調達、輸送、荷役を、 一連の品質管理として設計。" [level=2] [ref=e105]:
+            - text: 調達、輸送、荷役を、
+            - text: 一連の品質管理として設計。
+          - paragraph [ref=e106]: 燃料品質だけでなく、工場内粉塵、輸送距離、船積み、国内受入時の粉塵まで。 サプライチェーン全体で燃料管理の安全性を高めます。
+        - figure [ref=e108]:
+          - img "屋内に保管されたバイオマス燃料" [ref=e109]
+        - generic [ref=e110]:
+          - article [ref=e112]:
+            - generic [ref=e113]: "01"
+            - heading "認証工場と連携" [level=3] [ref=e114]
+            - paragraph [ref=e115]: RSPO、FSC-COCなど、持続可能性に配慮した供給元を選定します。
+          - article [ref=e117]:
+            - generic [ref=e118]: "02"
+            - heading "直接契約で安定供給" [level=3] [ref=e119]
+            - paragraph [ref=e120]: 現地工場との契約により、商社任せにしない供給体制を構築します。
+          - article [ref=e122]:
+            - generic [ref=e123]: "03"
+            - heading "FOB / DDPに対応" [level=3] [ref=e124]
+            - paragraph [ref=e125]: 指定出発港渡し、海上運賃・輸入関税込みなど条件に合わせて設計します。
+          - article [ref=e127]:
+            - generic [ref=e128]: "04"
+            - heading "粉塵を抑えて荷役" [level=3] [ref=e129]
+            - paragraph [ref=e130]: 工場、輸送、港湾、国内受入まで、粉塵発生を抑える設備計画を組み込みます。
+    - region "荷役、搬送、乾燥まで、 設備面から安定運用を支える。" [ref=e131]:
+      - generic [ref=e132]:
+        - figure [ref=e134]:
+          - img "走行式集塵ホッパー" [ref=e135]
+        - generic [ref=e136]:
+          - paragraph [ref=e137]:
+            - text: DUST CONTROL
+            - generic [ref=e138]: 粉塵管理
+          - heading "荷役、搬送、乾燥まで、 設備面から安定運用を支える。" [level=2] [ref=e139]:
+            - text: 荷役、搬送、乾燥まで、
+            - text: 設備面から安定運用を支える。
+          - paragraph [ref=e140]: テレスコピックコンベアや防塵ホッパーを組み合わせ、港湾荷役・国内受入時の粉塵発生を抑制。 さらに、ハンドリング設備や乾燥設備まで含めて、燃料管理の安全性と作業効率を高めます。
+          - generic [ref=e141]:
+            - generic [ref=e142]:
+              - generic [ref=e143]: 20%
+              - generic [ref=e144]: サプライチェーン全体の粉塵削減目標
+            - generic [ref=e145]:
+              - generic [ref=e146]: 3方式
+              - generic [ref=e147]: バッグフィルター・サイクロン・ドライフォグに対応
+          - generic [ref=e148]:
+            - article [ref=e149]:
+              - heading "防塵ホッパー" [level=3] [ref=e150]
+              - paragraph [ref=e151]: バッグフィルター、サイクロン、ドライフォグなど、バイオマス燃料の荷卸し時に発生する粉塵を抑える設備を提案します。
+            - article [ref=e152]:
+              - heading "ハンドリング設備" [level=3] [ref=e153]
+              - paragraph [ref=e154]: シップアンローダー、大型コンベヤ、生産ラインコンベヤなど、船から受入設備までの搬送効率を高めます。
+            - article [ref=e155]:
+              - heading "乾燥設備・生産ライン" [level=3] [ref=e156]
+              - paragraph [ref=e157]: 木質ペレット生産工場や木材工場向けに、チェーン式乾燥機など原料条件に応じた設備計画を支援します。
+    - region "導入判断に必要な燃料条件を、 比較して確認する。" [ref=e158]:
+      - generic [ref=e159]:
+        - generic [ref=e161]:
+          - paragraph [ref=e162]:
+            - text: FUEL SPEC
+            - generic [ref=e163]: 燃料分析データ
+          - heading "導入判断に必要な燃料条件を、 比較して確認する。" [level=2] [ref=e164]:
+            - text: 導入判断に必要な燃料条件を、
+            - text: 比較して確認する。
+        - table [ref=e167]:
+          - rowgroup [ref=e168]:
+            - row "項目 PKS 木質ペレット" [ref=e169]:
+              - columnheader "項目" [ref=e170]
+              - columnheader "PKS" [ref=e171]
+              - columnheader "木質ペレット" [ref=e172]
+          - rowgroup [ref=e173]:
+            - row "低位発熱量 3,990kcal/kg 4,200kcal/kg" [ref=e174]:
+              - rowheader "低位発熱量" [ref=e175]
+              - cell "3,990kcal/kg" [ref=e176]
+              - cell "4,200kcal/kg" [ref=e177]
+            - row "含水率 13.3% 10%以下" [ref=e178]:
+              - rowheader "含水率" [ref=e179]
+              - cell "13.3%" [ref=e180]
+              - cell "10%以下" [ref=e181]
+            - row "灰分 1.8% 0.6%以下" [ref=e182]:
+              - rowheader "灰分" [ref=e183]
+              - cell "1.8%" [ref=e184]
+              - cell "0.6%以下" [ref=e185]
+            - row "主な調達地 東南アジア各地域 東南アジア各地域" [ref=e186]:
+              - rowheader "主な調達地" [ref=e187]
+              - cell "東南アジア各地域" [ref=e188]
+              - cell "東南アジア各地域" [ref=e189]
+    - region "見積から継続供給、 設備計画まで一貫して支援。" [ref=e190]:
+      - generic [ref=e191]:
+        - generic [ref=e192]:
+          - paragraph [ref=e193]:
+            - text: PROJECT FLOW
+            - generic [ref=e194]: 導入までの流れ
+          - heading "見積から継続供給、 設備計画まで一貫して支援。" [level=2] [ref=e195]:
+            - text: 見積から継続供給、
+            - text: 設備計画まで一貫して支援。
+        - generic [ref=e196]:
+          - article [ref=e198]:
+            - generic [ref=e199]: "01"
+            - heading "燃料条件の確認" [level=3] [ref=e200]
+            - paragraph [ref=e201]: 発熱量、含水率、灰分、荷姿、受入設備を確認します。
+          - article [ref=e203]:
+            - generic [ref=e204]: "02"
+            - heading "供給条件・見積" [level=3] [ref=e205]
+            - paragraph [ref=e206]: 購入量、時期、FOB・DDPなどの引取方式、長期契約の可否を整理します。
+          - article [ref=e208]:
+            - generic [ref=e209]: "03"
+            - heading "設備・荷役計画" [level=3] [ref=e210]
+            - paragraph [ref=e211]: 港湾荷役、ハンドリング設備、乾燥設備、粉塵対策、在庫管理を具体化します。
+          - article [ref=e213]:
+            - generic [ref=e214]: "04"
+            - heading "継続供給・改善" [level=3] [ref=e215]
+            - paragraph [ref=e216]: 品質、納期、粉塵、在庫を見ながら運用改善を続けます。
+    - region "バイオマス発電・燃料供給・設備計画を ご相談ください" [ref=e217]:
+      - generic [ref=e219]:
+        - heading "バイオマス発電・燃料供給・設備計画を ご相談ください" [level=2] [ref=e220]:
+          - text: バイオマス発電・燃料供給・設備計画を
+          - text: ご相談ください
+        - paragraph [ref=e221]: 必要数量、燃料条件、港湾荷役、乾燥設備、粉塵対策まで、初期段階から整理します。
+        - generic [ref=e222]:
+          - link "お問い合わせ" [ref=e223] [cursor=pointer]:
+            - /url: /contact/
+            - text: お問い合わせ
+            - generic [ref=e224]: →
+          - link "事業一覧へ戻る" [ref=e225] [cursor=pointer]:
+            - /url: /business/
+            - text: 事業一覧へ戻る
+            - generic [ref=e226]: →
+  - contentinfo [ref=e227]:
+    - generic [ref=e229]:
+      - link "諾亜建設株式会社" [ref=e230] [cursor=pointer]:
+        - /url: /
+        - img "諾亜建設株式会社" [ref=e231]
+      - generic [ref=e232]:
+        - generic [ref=e233]:
+          - heading "企業情報" [level=3] [ref=e234]:
+            - link "企業情報" [ref=e235] [cursor=pointer]:
+              - /url: /about/
+          - link "トップメッセージ" [ref=e236] [cursor=pointer]:
+            - /url: /about/message/
+          - link "企業理念・ビジョン" [ref=e237] [cursor=pointer]:
+            - /url: /about/vision/
+          - link "行動基準" [ref=e238] [cursor=pointer]:
+            - /url: /about/standard/
+          - link "会社概要" [ref=e239] [cursor=pointer]:
+            - /url: /about/outline/
+          - link "グループ・組織図" [ref=e240] [cursor=pointer]:
+            - /url: /about/organization/
+          - link "沿革" [ref=e241] [cursor=pointer]:
+            - /url: /about/history/
+          - link "健康経営" [ref=e242] [cursor=pointer]:
+            - /url: /about/safety-health/
+        - generic [ref=e243]:
+          - heading "事業紹介" [level=3] [ref=e244]:
+            - link "事業紹介" [ref=e245] [cursor=pointer]:
+              - /url: /business/
+          - link "蓄電池事業" [ref=e246] [cursor=pointer]:
+            - /url: /business/batteryenergystorage/
+          - link "風力発電事業" [ref=e247] [cursor=pointer]:
+            - /url: /business/windpower/
+          - link "バイオマス" [ref=e248] [cursor=pointer]:
+            - /url: /business/biomasspower/
+          - link "走行式集塵ホッパー事業" [ref=e249] [cursor=pointer]:
+            - /url: /business/hopper/
+          - link "水素モビリティ事業" [ref=e250] [cursor=pointer]:
+            - /url: /business/hydrogen-mobility/
+          - link "AIデータセンター事業" [ref=e251] [cursor=pointer]:
+            - /url: /business/ai-data-center/
+        - generic [ref=e252]:
+          - heading "サステナビリティ" [level=3] [ref=e253]:
+            - link "サステナビリティ" [ref=e254] [cursor=pointer]:
+              - /url: /sustainability/
+          - link "地域共生" [ref=e255] [cursor=pointer]:
+            - /url: /sustainability/community-relations/
+          - link "環境保全" [ref=e256] [cursor=pointer]:
+            - /url: /sustainability/environment/
+          - link "カーボンニュートラル" [ref=e257] [cursor=pointer]:
+            - /url: /sustainability/carbon-neutrality/
+        - generic [ref=e258]:
+          - heading "その他" [level=3] [ref=e259]
+          - link "お問い合わせ" [ref=e260] [cursor=pointer]:
+            - /url: /contact/
+          - link "ニュース" [ref=e261] [cursor=pointer]:
+            - /url: /news/
+          - link "採用情報" [ref=e262] [cursor=pointer]:
+            - /url: /recruit/
+          - link "プライバシーポリシー" [ref=e263] [cursor=pointer]:
+            - /url: /privacy/
+          - link "サイトマップ" [ref=e264] [cursor=pointer]:
+            - /url: /sitemap/
+    - paragraph [ref=e265]: © NOAH CONSTRUCTION CO.,LTD. All Rights Reserved.
+  - alert [ref=e266]

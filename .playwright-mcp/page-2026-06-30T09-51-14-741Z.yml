@@ -1,0 +1,160 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - link "諾亜建設株式会社 ホーム" [ref=e3] [cursor=pointer]:
+      - /url: /
+      - img "NOAH CONSTRUCTION CO.,LTD. 諾亜建設株式会社" [ref=e4]
+    - button "メニューを開く" [ref=e5] [cursor=pointer]
+  - main [ref=e9]:
+    - region "未来のインフラを、 誠実に構想し、 実装する。" [ref=e10]:
+      - generic [ref=e11]:
+        - generic [ref=e12]:
+          - paragraph [ref=e13]:
+            - text: ABOUT NOAH
+            - generic [ref=e14]: 企業情報
+          - heading "未来のインフラを、 誠実に構想し、 実装する。" [level=1] [ref=e15]:
+            - text: 未来のインフラを、
+            - text: 誠実に構想し、
+            - text: 実装する。
+        - figure [ref=e17]:
+          - img "NOAHロゴを配したブランドパネルと再生可能エネルギー、蓄電池、水素設備を組み合わせた企業イメージ" [ref=e18]
+      - generic "NOAHの企業姿勢" [ref=e19]:
+        - generic [ref=e20]:
+          - generic [ref=e21]: Energy
+          - generic [ref=e22]: 再生可能エネルギーを軸にした事業開発
+        - generic [ref=e23]:
+          - generic [ref=e24]: Regional
+          - generic [ref=e25]: 地域・企業の課題に合わせた構想設計
+        - generic [ref=e26]:
+          - generic [ref=e27]: Operation
+          - generic [ref=e28]: 導入後の運用まで見据えた支援体制
+      - text: NOAH
+    - region "企業情報メニュー" [ref=e29]:
+      - generic [ref=e30]:
+        - generic [ref=e32]:
+          - paragraph [ref=e33]:
+            - text: COMPANY MENU
+            - generic [ref=e34]: 企業情報メニュー
+          - heading "企業情報メニュー" [level=2] [ref=e35]
+        - generic [ref=e36]:
+          - link "01 MESSAGE トップメッセージ 詳しく見る →" [ref=e38] [cursor=pointer]:
+            - /url: /about/message/
+            - generic [ref=e39]: "01"
+            - generic [ref=e40]: MESSAGE
+            - heading "トップメッセージ" [level=3] [ref=e41]
+            - generic [ref=e42]: 詳しく見る →
+          - link "02 VISION 企業理念・ビジョン 詳しく見る →" [ref=e44] [cursor=pointer]:
+            - /url: /about/vision/
+            - generic [ref=e45]: "02"
+            - generic [ref=e46]: VISION
+            - heading "企業理念・ビジョン" [level=3] [ref=e47]
+            - generic [ref=e48]: 詳しく見る →
+          - link "03 STANDARD 行動基準 詳しく見る →" [ref=e50] [cursor=pointer]:
+            - /url: /about/standard/
+            - generic [ref=e51]: "03"
+            - generic [ref=e52]: STANDARD
+            - heading "行動基準" [level=3] [ref=e53]
+            - generic [ref=e54]: 詳しく見る →
+          - link "04 OUTLINE 会社概要 詳しく見る →" [ref=e56] [cursor=pointer]:
+            - /url: /about/outline/
+            - generic [ref=e57]: "04"
+            - generic [ref=e58]: OUTLINE
+            - heading "会社概要" [level=3] [ref=e59]
+            - generic [ref=e60]: 詳しく見る →
+          - link "05 ORGANIZATION グループ・組織図 詳しく見る →" [ref=e62] [cursor=pointer]:
+            - /url: /about/organization/
+            - generic [ref=e63]: "05"
+            - generic [ref=e64]: ORGANIZATION
+            - heading "グループ・組織図" [level=3] [ref=e65]
+            - generic [ref=e66]: 詳しく見る →
+          - link "06 HISTORY 沿革 詳しく見る →" [ref=e68] [cursor=pointer]:
+            - /url: /about/history/
+            - generic [ref=e69]: "06"
+            - generic [ref=e70]: HISTORY
+            - heading "沿革" [level=3] [ref=e71]
+            - generic [ref=e72]: 詳しく見る →
+          - link "07 SAFETY & HEALTH 健康経営 詳しく見る →" [ref=e74] [cursor=pointer]:
+            - /url: /about/safety-health/
+            - generic [ref=e75]: "07"
+            - generic [ref=e76]: SAFETY & HEALTH
+            - heading "健康経営" [level=3] [ref=e77]
+            - generic [ref=e78]: 詳しく見る →
+    - region "会社情報・事業連携に関するお問い合わせ" [ref=e79]:
+      - generic [ref=e81]:
+        - paragraph [ref=e82]: CONTACT
+        - heading "会社情報・事業連携に関するお問い合わせ" [level=2] [ref=e83]
+        - paragraph [ref=e84]: 会社案内、事業連携、資料請求など、お気軽にお問い合わせください。
+        - generic [ref=e85]:
+          - link "お問い合わせ" [ref=e86] [cursor=pointer]:
+            - /url: /contact/
+            - text: お問い合わせ
+            - generic [ref=e87]: →
+          - link "事業紹介を見る" [ref=e88] [cursor=pointer]:
+            - /url: /business/
+            - text: 事業紹介を見る
+            - generic [ref=e89]: →
+  - contentinfo [ref=e90]:
+    - generic [ref=e92]:
+      - link "諾亜建設株式会社" [ref=e93] [cursor=pointer]:
+        - /url: /
+        - img "諾亜建設株式会社" [ref=e94]
+      - generic [ref=e95]:
+        - generic [ref=e96]:
+          - heading "企業情報" [level=3] [ref=e97]:
+            - link "企業情報" [ref=e98] [cursor=pointer]:
+              - /url: /about/
+          - link "トップメッセージ" [ref=e99] [cursor=pointer]:
+            - /url: /about/message/
+          - link "企業理念・ビジョン" [ref=e100] [cursor=pointer]:
+            - /url: /about/vision/
+          - link "行動基準" [ref=e101] [cursor=pointer]:
+            - /url: /about/standard/
+          - link "会社概要" [ref=e102] [cursor=pointer]:
+            - /url: /about/outline/
+          - link "グループ・組織図" [ref=e103] [cursor=pointer]:
+            - /url: /about/organization/
+          - link "沿革" [ref=e104] [cursor=pointer]:
+            - /url: /about/history/
+          - link "健康経営" [ref=e105] [cursor=pointer]:
+            - /url: /about/safety-health/
+        - generic [ref=e106]:
+          - heading "事業紹介" [level=3] [ref=e107]:
+            - link "事業紹介" [ref=e108] [cursor=pointer]:
+              - /url: /business/
+          - link "蓄電池事業" [ref=e109] [cursor=pointer]:
+            - /url: /business/batteryenergystorage/
+          - link "風力発電事業" [ref=e110] [cursor=pointer]:
+            - /url: /business/windpower/
+          - link "バイオマス" [ref=e111] [cursor=pointer]:
+            - /url: /business/biomasspower/
+          - link "走行式集塵ホッパー事業" [ref=e112] [cursor=pointer]:
+            - /url: /business/hopper/
+          - link "水素モビリティ事業" [ref=e113] [cursor=pointer]:
+            - /url: /business/hydrogen-mobility/
+          - link "AIデータセンター事業" [ref=e114] [cursor=pointer]:
+            - /url: /business/ai-data-center/
+        - generic [ref=e115]:
+          - heading "サステナビリティ" [level=3] [ref=e116]:
+            - link "サステナビリティ" [ref=e117] [cursor=pointer]:
+              - /url: /sustainability/
+          - link "地域共生" [ref=e118] [cursor=pointer]:
+            - /url: /sustainability/community-relations/
+          - link "環境保全" [ref=e119] [cursor=pointer]:
+            - /url: /sustainability/environment/
+          - link "カーボンニュートラル" [ref=e120] [cursor=pointer]:
+            - /url: /sustainability/carbon-neutrality/
+        - generic [ref=e121]:
+          - heading "その他" [level=3] [ref=e122]
+          - link "お問い合わせ" [ref=e123] [cursor=pointer]:
+            - /url: /contact/
+          - link "ニュース" [ref=e124] [cursor=pointer]:
+            - /url: /news/
+          - link "採用情報" [ref=e125] [cursor=pointer]:
+            - /url: /recruit/
+          - link "プライバシーポリシー" [ref=e126] [cursor=pointer]:
+            - /url: /privacy/
+          - link "サイトマップ" [ref=e127] [cursor=pointer]:
+            - /url: /sitemap/
+    - paragraph [ref=e128]: © NOAH CONSTRUCTION CO.,LTD. All Rights Reserved.
+  - button "Open Next.js Dev Tools" [ref=e134] [cursor=pointer]:
+    - img [ref=e135]
+  - alert [ref=e138]

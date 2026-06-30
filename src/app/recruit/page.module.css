@@ -170,6 +170,7 @@
   font-weight: 800;
   line-height: 1.35;
   letter-spacing: 0;
+  text-wrap: balance;
 }
 
 .guideTitle {

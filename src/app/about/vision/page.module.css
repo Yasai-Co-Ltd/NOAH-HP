@@ -69,6 +69,7 @@
   color: var(--color-surface);
   font-size: clamp(2.45rem, 4.45vw, 4.36rem);
   line-height: 1.32;
+  text-wrap: balance;
 }
 
 .heroLead {

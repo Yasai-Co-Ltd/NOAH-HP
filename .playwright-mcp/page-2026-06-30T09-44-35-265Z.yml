@@ -1,0 +1,135 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - link "諾亜建設株式会社 ホーム" [ref=e3] [cursor=pointer]:
+      - /url: /
+      - img "NOAH CONSTRUCTION CO.,LTD. 諾亜建設株式会社" [ref=e4]
+    - navigation "グローバルナビゲーション" [ref=e5]:
+      - link "企業情報" [ref=e7] [cursor=pointer]:
+        - /url: /about/
+      - link "事業紹介" [ref=e9] [cursor=pointer]:
+        - /url: /business/
+      - link "サステナビリティ" [ref=e11] [cursor=pointer]:
+        - /url: /sustainability/
+      - link "ニュース" [ref=e13] [cursor=pointer]:
+        - /url: /news/
+      - link "採用情報" [ref=e15] [cursor=pointer]:
+        - /url: /recruit/
+    - link "お問い合わせ" [ref=e16] [cursor=pointer]:
+      - /url: /contact/
+      - img [ref=e17]
+      - text: お問い合わせ
+  - main [ref=e20]:
+    - region "人事・総務" [ref=e21]:
+      - generic [ref=e23]:
+        - navigation "パンくず" [ref=e24]:
+          - link "採用情報" [ref=e25] [cursor=pointer]:
+            - /url: /recruit/
+          - generic [ref=e26]: /
+          - generic [ref=e27]: 人事・総務
+        - paragraph [ref=e28]: JOB 01
+        - heading "人事・総務" [level=1] [ref=e29]
+        - paragraph [ref=e30]: 人事・総務に関する管理業務を中心に、法務関連手続き、営業サポート、翻訳、庶務まで会社運営を支える職種です。
+        - generic "人事・総務の関連領域" [ref=e31]:
+          - generic [ref=e32]: 総務関連事務
+          - generic [ref=e33]: 法務手続き
+          - generic [ref=e34]: 営業サポート
+          - generic [ref=e35]: 中日翻訳
+    - region "求める経験・スキル" [ref=e36]:
+      - generic [ref=e37]:
+        - generic [ref=e38]:
+          - paragraph [ref=e39]:
+            - text: REQUIREMENTS
+            - generic [ref=e40]: 応募条件
+          - heading "求める経験・スキル" [level=2] [ref=e41]
+          - list [ref=e42]:
+            - listitem [ref=e43]: ✓ 専門学校卒以上
+            - listitem [ref=e44]: ✓ 事務経験、Word・Excel・PowerPointなどの基本操作
+            - listitem [ref=e45]: ✓ 日本語でのメール・電話対応ができる方
+            - listitem [ref=e46]: ✓ 英語が話せる方は歓迎
+        - generic [ref=e47]:
+          - heading "募集要項" [level=2] [ref=e48]
+          - generic [ref=e49]:
+            - generic [ref=e50]:
+              - term [ref=e51]: 勤務地
+              - definition [ref=e52]: 東京都中野区
+            - generic [ref=e53]:
+              - term [ref=e54]: 募集人数
+              - definition [ref=e55]: 若干名
+            - generic [ref=e56]:
+              - term [ref=e57]: 雇用形態
+              - definition [ref=e58]: 正社員／契約社員
+            - generic [ref=e59]:
+              - term [ref=e60]: 給与
+              - definition [ref=e61]: 面談
+          - link "この職種に応募する" [ref=e62] [cursor=pointer]:
+            - /url: /recruit/apply/
+            - text: この職種に応募する
+            - generic [ref=e63]: →
+          - link "← 募集職種一覧へ戻る" [ref=e64] [cursor=pointer]:
+            - /url: /recruit/
+  - contentinfo [ref=e65]:
+    - generic [ref=e67]:
+      - link "諾亜建設株式会社" [ref=e68] [cursor=pointer]:
+        - /url: /
+        - img "諾亜建設株式会社" [ref=e69]
+      - generic [ref=e70]:
+        - generic [ref=e71]:
+          - heading "企業情報" [level=3] [ref=e72]:
+            - link "企業情報" [ref=e73] [cursor=pointer]:
+              - /url: /about/
+          - link "トップメッセージ" [ref=e74] [cursor=pointer]:
+            - /url: /about/message/
+          - link "企業理念・ビジョン" [ref=e75] [cursor=pointer]:
+            - /url: /about/vision/
+          - link "行動基準" [ref=e76] [cursor=pointer]:
+            - /url: /about/standard/
+          - link "会社概要" [ref=e77] [cursor=pointer]:
+            - /url: /about/outline/
+          - link "グループ・組織図" [ref=e78] [cursor=pointer]:
+            - /url: /about/organization/
+          - link "沿革" [ref=e79] [cursor=pointer]:
+            - /url: /about/history/
+          - link "健康経営" [ref=e80] [cursor=pointer]:
+            - /url: /about/safety-health/
+        - generic [ref=e81]:
+          - heading "事業紹介" [level=3] [ref=e82]:
+            - link "事業紹介" [ref=e83] [cursor=pointer]:
+              - /url: /business/
+          - link "蓄電池事業" [ref=e84] [cursor=pointer]:
+            - /url: /business/batteryenergystorage/
+          - link "風力発電事業" [ref=e85] [cursor=pointer]:
+            - /url: /business/windpower/
+          - link "バイオマス" [ref=e86] [cursor=pointer]:
+            - /url: /business/biomasspower/
+          - link "走行式集塵ホッパー事業" [ref=e87] [cursor=pointer]:
+            - /url: /business/hopper/
+          - link "水素モビリティ事業" [ref=e88] [cursor=pointer]:
+            - /url: /business/hydrogen-mobility/
+          - link "AIデータセンター事業" [ref=e89] [cursor=pointer]:
+            - /url: /business/ai-data-center/
+        - generic [ref=e90]:
+          - heading "サステナビリティ" [level=3] [ref=e91]:
+            - link "サステナビリティ" [ref=e92] [cursor=pointer]:
+              - /url: /sustainability/
+          - link "地域共生" [ref=e93] [cursor=pointer]:
+            - /url: /sustainability/community-relations/
+          - link "環境保全" [ref=e94] [cursor=pointer]:
+            - /url: /sustainability/environment/
+          - link "カーボンニュートラル" [ref=e95] [cursor=pointer]:
+            - /url: /sustainability/carbon-neutrality/
+        - generic [ref=e96]:
+          - heading "その他" [level=3] [ref=e97]
+          - link "お問い合わせ" [ref=e98] [cursor=pointer]:
+            - /url: /contact/
+          - link "ニュース" [ref=e99] [cursor=pointer]:
+            - /url: /news/
+          - link "採用情報" [ref=e100] [cursor=pointer]:
+            - /url: /recruit/
+          - link "プライバシーポリシー" [ref=e101] [cursor=pointer]:
+            - /url: /privacy/
+          - link "サイトマップ" [ref=e102] [cursor=pointer]:
+            - /url: /sitemap/
+    - paragraph [ref=e103]: © NOAH CONSTRUCTION CO.,LTD. All Rights Reserved.
+  - button "Open Next.js Dev Tools" [ref=e109] [cursor=pointer]:
+    - img [ref=e110]
+  - alert [ref=e113]

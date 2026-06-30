@@ -1,0 +1,558 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - link "諾亜建設株式会社 ホーム" [ref=e3] [cursor=pointer]:
+      - /url: /
+      - img "NOAH CONSTRUCTION CO.,LTD. 諾亜建設株式会社" [ref=e4]
+    - navigation "グローバルナビゲーション" [ref=e5]:
+      - link "企業情報" [ref=e7] [cursor=pointer]:
+        - /url: /about/
+      - link "事業紹介" [ref=e9] [cursor=pointer]:
+        - /url: /business/
+      - link "サステナビリティ" [ref=e11] [cursor=pointer]:
+        - /url: /sustainability/
+      - link "ニュース" [ref=e13] [cursor=pointer]:
+        - /url: /news/
+      - link "採用情報" [ref=e15] [cursor=pointer]:
+        - /url: /recruit/
+    - link "お問い合わせ" [ref=e16] [cursor=pointer]:
+      - /url: /contact/
+      - img [ref=e17]
+      - text: お問い合わせ
+  - main [ref=e20]:
+    - region "系統用蓄電池を、 安定電源と 収益基盤へ。" [ref=e21]:
+      - generic [ref=e23]:
+        - paragraph [ref=e24]:
+          - text: BATTERY ENERGY STORAGE
+          - generic [ref=e25]: 蓄電池事業
+        - heading "系統用蓄電池を、 安定電源と 収益基盤へ。" [level=1] [ref=e26]:
+          - text: 系統用蓄電池を、
+          - text: 安定電源と
+          - text: 収益基盤へ。
+        - paragraph [ref=e27]: 2MW/8MWhの系統用蓄電池から、産業・商業用、太陽光蓄電充電、マイクログリッドまで。 NOAHは設備の選定・設計・調達・施工、EMSによる遠隔監視、運用保守を一貫して支援します。
+        - generic [ref=e28]:
+          - link "導入相談をする" [ref=e29] [cursor=pointer]:
+            - /url: /contact/
+            - text: 導入相談をする
+            - generic [ref=e30]: →
+          - link "ソリューションを見る" [ref=e31] [cursor=pointer]:
+            - /url: "#solution"
+            - text: ソリューションを見る
+            - generic [ref=e32]: →
+      - generic "蓄電池事業の参考指標" [ref=e33]:
+        - generic [ref=e34]:
+          - generic [ref=e35]: 2MW/8MWh
+          - generic [ref=e36]: 系統用蓄電池
+        - generic [ref=e37]:
+          - generic [ref=e38]: EMS
+          - generic [ref=e39]: 遠隔監視・制御
+        - generic [ref=e40]:
+          - generic [ref=e41]: 4領域
+          - generic [ref=e42]: 系統用・産業商業用・太陽光・マイクログリッド
+        - generic [ref=e43]:
+          - generic [ref=e44]: O&M
+          - generic [ref=e45]: 運用保守まで一貫支援
+    - region "電力を蓄えるだけでなく、 制御して運用する。" [ref=e46]:
+      - generic [ref=e47]:
+        - generic [ref=e48]:
+          - paragraph [ref=e49]:
+            - text: OVERVIEW
+            - generic [ref=e50]: 系統用蓄電池とは
+          - heading "電力を蓄えるだけでなく、 制御して運用する。" [level=2] [ref=e51]:
+            - text: 電力を蓄えるだけでなく、
+            - text: 制御して運用する。
+          - paragraph [ref=e52]: 系統用蓄電池は、再生可能エネルギーの余剰電力を蓄え、必要なタイミングで放電するだけではありません。 EMS、PCS、HCS、アグリゲーター運営を連携させ、需給調整、周波数制御、各電力市場での活用を支えます。
+          - generic "対応市場" [ref=e53]:
+            - generic [ref=e54]: 卸電力市場
+            - generic [ref=e55]: 容量市場
+            - generic [ref=e56]: 需給調整市場
+            - generic [ref=e57]: 一次調整力対応
+        - generic [ref=e59]:
+          - article [ref=e60]:
+            - generic [ref=e61]: "01"
+            - heading "電力を受ける" [level=3] [ref=e62]
+            - paragraph [ref=e63]: 再エネ発電所、変電所、需要地に接続し、余剰電力や調整力を受け入れます。
+          - article [ref=e64]:
+            - generic [ref=e65]: "02"
+            - heading "安全に蓄える" [level=3] [ref=e66]
+            - paragraph [ref=e67]: 液冷式ESSと多次元監視により、温度・電圧・防火を一体で管理します。
+          - article [ref=e68]:
+            - generic [ref=e69]: "03"
+            - heading "高速に制御する" [level=3] [ref=e70]
+            - paragraph [ref=e71]: EMS/HCSが充放電、一次調整、系統連系をリアルタイムに制御します。
+          - article [ref=e72]:
+            - generic [ref=e73]: "04"
+            - heading "市場活用につなげる" [level=3] [ref=e74]
+            - paragraph [ref=e75]: アグリゲーター運営と遠隔O&Mを組み合わせ、各電力市場での活用を支援します。
+    - region "用途と容量に合わせて、 最適な蓄電池を選ぶ。" [ref=e76]:
+      - generic [ref=e77]:
+        - generic [ref=e79]:
+          - generic [ref=e80]:
+            - paragraph [ref=e81]:
+              - text: PRODUCT LINEUP
+              - generic [ref=e82]: 製品ラインアップ
+            - heading "用途と容量に合わせて、 最適な蓄電池を選ぶ。" [level=2] [ref=e83]:
+              - text: 用途と容量に合わせて、
+              - text: 最適な蓄電池を選ぶ。
+          - paragraph [ref=e84]: デマンド、太陽光蓄電充電、マイクログリッド、系統用蓄電池まで。 各シリーズに必要なPCS、EMS、監視・制御システムを組み合わせ、用途に合った構成を提案します。
+        - generic [ref=e85]:
+          - article [ref=e87]:
+            - generic [ref=e88]:
+              - generic [ref=e89]: "01"
+              - generic [ref=e90]:
+                - paragraph [ref=e91]: DEMAND SERIES
+                - heading "デマンドシリーズ" [level=3] [ref=e92]
+              - generic [ref=e93]: 工場・商業施設のピークカット、非常用電源、需要側のエネルギー管理に対応します。
+            - generic [ref=e94]:
+              - article [ref=e95]:
+                - img "100kW／215kWh産業・商業用蓄電池" [ref=e97]
+                - generic [ref=e98]:
+                  - paragraph [ref=e99]: 100kW/215kWh・125kW/261kWh
+                  - heading "空冷／液冷蓄電" [level=4] [ref=e100]
+                  - list [ref=e101]:
+                    - listitem [ref=e102]: 需要側蓄電
+                    - listitem [ref=e103]: ピークカット・BCP
+                    - listitem [ref=e104]: 空冷／液冷方式
+              - article [ref=e105]:
+                - img "200kW／418kWh液冷式蓄電池" [ref=e107]
+                - generic [ref=e108]:
+                  - paragraph [ref=e109]: 200kW/418kWh
+                  - heading "液冷蓄電" [level=4] [ref=e110]
+                  - list [ref=e111]:
+                    - listitem [ref=e112]: 液冷方式
+                    - listitem [ref=e113]: 産業・商業施設向け
+                    - listitem [ref=e114]: 分散型電源に対応
+              - article [ref=e115]:
+                - img "分散型電源統合クラウドプラットフォーム" [ref=e117]
+                - generic [ref=e118]:
+                  - paragraph [ref=e119]: CLOUD PLATFORM
+                  - heading "分散型電源統合クラウドプラットフォーム・アシスト" [level=4] [ref=e120]
+                  - list [ref=e121]:
+                    - listitem [ref=e122]: 遠隔監視
+                    - listitem [ref=e123]: 運転データ管理
+                    - listitem [ref=e124]: 複数設備を統合
+          - article [ref=e126]:
+            - generic [ref=e127]:
+              - generic [ref=e128]: "02"
+              - generic [ref=e129]:
+                - paragraph [ref=e130]: SOLAR / CHARGING SERIES
+                - heading "太陽光蓄電充電シリーズ" [level=3] [ref=e131]
+              - generic [ref=e132]: 太陽光発電、蓄電池、充電設備を組み合わせ、発電電力を施設内で有効活用します。
+            - generic [ref=e133]:
+              - article [ref=e134]:
+                - img "100kW／215kWh太陽光蓄電一体型装置" [ref=e136]
+                - generic [ref=e137]:
+                  - paragraph [ref=e138]: 100kW/215kWh
+                  - heading "太陽光蓄電一体型装置" [level=4] [ref=e139]
+                  - list [ref=e140]:
+                    - listitem [ref=e141]: 太陽光発電と蓄電を統合
+                    - listitem [ref=e142]: 一体型キャビネット
+                    - listitem [ref=e143]: 自家消費を支援
+              - article [ref=e144]:
+                - img "蓄電充電設備" [ref=e146]
+                - generic [ref=e147]:
+                  - paragraph [ref=e148]: 209kWh/180kW
+                  - heading "蓄電充電器" [level=4] [ref=e149]
+                  - list [ref=e150]:
+                    - listitem [ref=e151]: 蓄電・充電を一体化
+                    - listitem [ref=e152]: 急速充電用途
+                    - listitem [ref=e153]: 液冷システム
+              - article [ref=e154]:
+                - img "4台構成の太陽光蓄電充電装置" [ref=e156]
+                - generic [ref=e157]:
+                  - paragraph [ref=e158]: 4×240kW
+                  - heading "太陽光蓄電充電装置" [level=4] [ref=e159]
+                  - list [ref=e160]:
+                    - listitem [ref=e161]: 複数充電器を構成
+                    - listitem [ref=e162]: 太陽光発電と連携
+                    - listitem [ref=e163]: 大規模充電拠点向け
+              - article [ref=e164]:
+                - img "iEFC100蓄電充電一体機" [ref=e166]
+                - generic [ref=e167]:
+                  - paragraph [ref=e168]: iEFC100
+                  - heading "蓄電充電一体機" [level=4] [ref=e169]
+                  - list [ref=e170]:
+                    - listitem [ref=e171]: 蓄電容量186kWh
+                    - listitem [ref=e172]: 入力30〜90kW・出力180kW
+                    - listitem [ref=e173]: 液冷・IP54
+          - article [ref=e175]:
+            - generic [ref=e176]:
+              - generic [ref=e177]: "03"
+              - generic [ref=e178]:
+                - paragraph [ref=e179]: MICROGRID SERIES
+                - heading "マイクログリッド蓄電シリーズ" [level=3] [ref=e180]
+              - generic [ref=e181]: 分散型電源を監視・制御し、施設や地域単位での安定した電力運用を支えます。
+            - generic [ref=e182]:
+              - article [ref=e183]:
+                - img "100kW／215kWh太陽光蓄電一体型キャビネット" [ref=e185]
+                - generic [ref=e186]:
+                  - paragraph [ref=e187]: 100kW/215kWh
+                  - heading "（太陽光）蓄電一体型キャビネット" [level=4] [ref=e188]
+                  - list [ref=e189]:
+                    - listitem [ref=e190]: 太陽光・蓄電を統合
+                    - listitem [ref=e191]: 分散型電源として運用
+                    - listitem [ref=e192]: 施設・地域単位に対応
+              - article [ref=e193]:
+                - img "マイクログリッド監視・運用管理プラットフォーム" [ref=e195]
+                - generic [ref=e196]:
+                  - paragraph [ref=e197]: OPERATION PLATFORM
+                  - heading "監視・運用管理プラットフォーム" [level=4] [ref=e198]
+                  - list [ref=e199]:
+                    - listitem [ref=e200]: 発電・蓄電設備を監視
+                    - listitem [ref=e201]: 運転計画を管理
+                    - listitem [ref=e202]: 遠隔O&Mを支援
+          - article [ref=e204]:
+            - generic [ref=e205]:
+              - generic [ref=e206]: "04"
+              - generic [ref=e207]:
+                - paragraph [ref=e208]: UTILITY SCALE SERIES
+                - heading "系統用蓄電池" [level=3] [ref=e209]
+              - generic [ref=e210]: 中規模から大規模まで、ESS、PCS、昇圧設備、EMSを組み合わせ、系統連系案件を構成します。
+            - generic [ref=e211]:
+              - article [ref=e212]:
+                - img "4.178MWh液冷式コンテナ蓄電池" [ref=e214]
+                - generic [ref=e215]:
+                  - paragraph [ref=e216]: 2MW/8MWh
+                  - heading "コンテナ型系統用蓄電池" [level=4] [ref=e217]
+                  - list [ref=e218]:
+                    - listitem [ref=e219]: 2,089kWh×4基／4,178kWh×2基
+                    - listitem [ref=e220]: 液冷・IP55
+                    - listitem [ref=e221]: EMS・O&Mと連携
+              - article [ref=e222]:
+                - img "コンテナ型蓄電システム" [ref=e224]
+                - generic [ref=e225]:
+                  - paragraph [ref=e226]: CONTAINER ESS
+                  - heading "コンテナ型蓄電システム" [level=4] [ref=e227]
+                  - list [ref=e228]:
+                    - listitem [ref=e229]: 200〜5,000kW
+                    - listitem [ref=e230]: 1,000〜5,000kWh
+                    - listitem [ref=e231]: 20ft／40ft・IP54
+              - article [ref=e232]:
+                - img "PWS1-1725KTL-H-EX-XMY-O蓄電池用パワーコンディショナー" [ref=e234]
+                - generic [ref=e235]:
+                  - paragraph [ref=e236]: PWS1-1725KTL-H-EX-XMY-O
+                  - heading "蓄電池用パワーコンディショナー" [level=4] [ref=e237]
+                  - list [ref=e238]:
+                    - listitem [ref=e239]: 215kW〜1.72MW
+                    - listitem [ref=e240]: 690Vac直接接続
+                    - listitem [ref=e241]: 応答時間20ms未満・IP54
+              - article [ref=e242]:
+                - img "PWX1-1575KTL-H蓄電池用パワーコンディショナー" [ref=e244]
+                - generic [ref=e245]:
+                  - paragraph [ref=e246]: PWX1-1575KTL-H
+                  - heading "蓄電池用パワーコンディショナー" [level=4] [ref=e247]
+                  - list [ref=e248]:
+                    - listitem [ref=e249]: 1,500V対応
+                    - listitem [ref=e250]: IP65・C5耐環境設計
+                    - listitem [ref=e251]: グリッドフォーミング対応
+              - article [ref=e252]:
+                - img "SES2H-5000-MV-EX変圧器・PCS一体型コンテナ" [ref=e254]
+                - generic [ref=e255]:
+                  - paragraph [ref=e256]: SES2H-5000-MV-EX
+                  - heading "変圧器・PCS一体型コンテナ" [level=4] [ref=e257]
+                  - list [ref=e258]:
+                    - listitem [ref=e259]: 5MWh・1,500V対応
+                    - listitem [ref=e260]: 変圧器とPCSを一体化
+                    - listitem [ref=e261]: 応答時間20ms未満
+          - article [ref=e263]:
+            - generic [ref=e264]:
+              - generic [ref=e265]: "05"
+              - generic [ref=e266]:
+                - paragraph [ref=e267]: 6S+EDR CORE COMPONENTS
+                - heading "コアコンポーネント・制御システム" [level=3] [ref=e268]
+              - generic [ref=e269]: 蓄電池本体とPCS、EMS、高速制御、故障記録を統合し、安全性・応答性・運用性を高めます。
+            - generic [ref=e270]:
+              - article [ref=e271]:
+                - generic [ref=e273]: 100kW PCS
+                - generic [ref=e274]:
+                  - paragraph [ref=e275]: 100kW PCS
+                  - heading "蓄電PCS" [level=4] [ref=e276]
+                  - list [ref=e277]:
+                    - listitem [ref=e278]: モジュール構成
+                    - listitem [ref=e279]: 系統連系・変換制御
+                    - listitem [ref=e280]: 用途に応じて構成
+              - article [ref=e281]:
+                - img "125kW／215kWモジュール式蓄電PCS" [ref=e283]
+                - generic [ref=e284]:
+                  - paragraph [ref=e285]: iPCS 125kW / 215kW
+                  - heading "モジュール式蓄電PCS" [level=4] [ref=e286]
+                  - list [ref=e287]:
+                    - listitem [ref=e288]: AC400V／AC690V
+                    - listitem [ref=e289]: DC1,000V／1,500V
+                    - listitem [ref=e290]: RS485・CAN通信
+              - article [ref=e291]:
+                - img "監視・運用エネルギー管理システム" [ref=e293]
+                - generic [ref=e294]:
+                  - paragraph [ref=e295]: EMS
+                  - heading "監視・運用エネルギー管理システム" [level=4] [ref=e296]
+                  - list [ref=e297]:
+                    - listitem [ref=e298]: 充放電計画
+                    - listitem [ref=e299]: 遠隔監視
+                    - listitem [ref=e300]: アグリゲーター運用と連携
+              - article [ref=e301]:
+                - generic [ref=e303]: HCS
+                - generic [ref=e304]:
+                  - paragraph [ref=e305]: HCS
+                  - heading "高速制御システム" [level=4] [ref=e306]
+                  - list [ref=e307]:
+                    - listitem [ref=e308]: 応答速度0.05秒
+                    - listitem [ref=e309]: 一次調整力対応
+                    - listitem [ref=e310]: リアルタイム制御
+              - article [ref=e311]:
+                - generic [ref=e313]: EDR
+                - generic [ref=e314]:
+                  - paragraph [ref=e315]: EDR
+                  - heading "故障記録システム／ブラックボックス" [level=4] [ref=e316]
+                  - list [ref=e317]:
+                    - listitem [ref=e318]: 事故記録
+                    - listitem [ref=e319]: 故障分析・追跡
+                    - listitem [ref=e320]: 運用改善に活用
+              - article [ref=e321]:
+                - generic [ref=e323]: SMART GRID CONTROL
+                - generic [ref=e324]:
+                  - paragraph [ref=e325]: SMART GRID CONTROL
+                  - heading "分散スマートグリッド運用制御システム" [level=4] [ref=e326]
+                  - list [ref=e327]:
+                    - listitem [ref=e328]: 分散電源を統合
+                    - listitem [ref=e329]: 運用計画を制御
+                    - listitem [ref=e330]: 複数拠点に対応
+        - paragraph [ref=e331]: ※容量・構成・仕様は、接続条件や用途に応じて個別に設計します。
+    - region "安全性・制御性・可視化を、 ひとつの基盤に統合。" [ref=e332]:
+      - generic [ref=e333]:
+        - generic [ref=e334]:
+          - paragraph [ref=e335]:
+            - text: CORE TECHNOLOGY
+            - generic [ref=e336]: 6S+EDR
+          - heading "安全性・制御性・可視化を、 ひとつの基盤に統合。" [level=2] [ref=e337]:
+            - text: 安全性・制御性・可視化を、
+            - text: ひとつの基盤に統合。
+          - paragraph [ref=e338]: 6S+EDRは、PCS・BMS・EMSに加え、HCS高速制御、BWS予兆警報、OMS予防安全、EDR故障記録を統合する制御基盤です。 AI・IoTと電力制御技術を組み合わせ、安全性、グリッド適応性、運用判断を高めます。
+        - figure [ref=e340]:
+          - img "6S+EDRの安全制御基盤を示す図" [ref=e341]
+    - region "2MW/8MWh 系統用蓄電池パッケージ。" [ref=e342]:
+      - generic [ref=e343]:
+        - generic [ref=e344]:
+          - paragraph [ref=e345]:
+            - text: MAIN PRODUCT
+            - generic [ref=e346]: 主力製品
+          - heading "2MW/8MWh 系統用蓄電池パッケージ。" [level=2] [ref=e347]:
+            - text: 2MW/8MWh
+            - text: 系統用蓄電池パッケージ。
+        - generic [ref=e349]:
+          - figure "ESS100-2000/4180-LC 製品外観" [ref=e350]:
+            - img "ESS100-2000/4180-LC 4.178MWh液冷式コンテナ蓄電池" [ref=e351]
+            - generic [ref=e352]: ESS100-2000/4180-LC 製品外観
+          - generic [ref=e353]:
+            - heading "2種類のESSから、2MW/8MWhの構成を選択。" [level=3] [ref=e354]
+            - paragraph [ref=e355]: 2,089kWh機を4基、または4,178kWh機を2基配置し、995kWのPCSを2基、2,000kVAの昇圧変圧器、 EMS、監視・運用保守プラットフォームを組み合わせます。
+            - generic [ref=e356]:
+              - generic [ref=e357]:
+                - generic [ref=e358]: 2,089kWh×4
+                - generic [ref=e359]: ESS100-1000/2090-LC構成
+              - generic [ref=e360]:
+                - generic [ref=e361]: 4,178kWh×2
+                - generic [ref=e362]: ESS100-2000/4180-LC構成
+              - generic [ref=e363]:
+                - generic [ref=e364]: 995kW×2
+                - generic [ref=e365]: PCS定格出力
+              - generic [ref=e366]:
+                - generic [ref=e367]: 2,000kVA×1
+                - generic [ref=e368]: 昇圧変圧器
+        - generic [ref=e369]:
+          - article [ref=e371]:
+            - paragraph [ref=e372]: MODEL 01
+            - heading "ESS100-1000/2090-LC" [level=3] [ref=e373]
+            - generic [ref=e374]:
+              - generic [ref=e375]:
+                - term [ref=e376]: 定格エネルギー
+                - definition [ref=e377]: 2,089kWh
+              - generic [ref=e378]:
+                - term [ref=e379]: 定格充放電電力
+                - definition [ref=e380]: 1,000kW
+              - generic [ref=e381]:
+                - term [ref=e382]: 直並列構成
+                - definition [ref=e383]: 10P416S
+              - generic [ref=e384]:
+                - term [ref=e385]: 重量
+                - definition [ref=e386]: 30t以下
+          - article [ref=e388]:
+            - paragraph [ref=e389]: MODEL 02
+            - heading "ESS100-2000/4180-LC" [level=3] [ref=e390]
+            - generic [ref=e391]:
+              - generic [ref=e392]:
+                - term [ref=e393]: 定格エネルギー
+                - definition [ref=e394]: 4,178kWh
+              - generic [ref=e395]:
+                - term [ref=e396]: 定格充放電電力
+                - definition [ref=e397]: 2,000kW
+              - generic [ref=e398]:
+                - term [ref=e399]: 直並列構成
+                - definition [ref=e400]: 5P416S
+              - generic [ref=e401]:
+                - term [ref=e402]: 重量
+                - definition [ref=e403]: 40t以下
+        - generic [ref=e405]:
+          - heading "共通仕様" [level=3] [ref=e406]
+          - list [ref=e407]:
+            - listitem [ref=e408]: リン酸鉄リチウムイオン電池
+            - listitem [ref=e409]: 定格電圧 DC1,331.2V
+            - listitem [ref=e410]: 電圧範囲 DC1,164.8〜1,497.6V
+            - listitem [ref=e411]: 液冷方式（50%エチレングリコール水溶液）
+            - listitem [ref=e412]: 動作温度 -25〜45℃
+            - listitem [ref=e413]: 保護等級 IP55
+            - listitem [ref=e414]: 外形 6,058×2,438×2,896mm（L×W×H）
+            - listitem [ref=e415]: PCS：CAN／Modbus、EMS：IEC104／IEC61850／Modbus
+    - region "クラウドから現場設備まで、 一元管理する。" [ref=e416]:
+      - generic [ref=e417]:
+        - generic [ref=e419]:
+          - generic [ref=e420]:
+            - paragraph [ref=e421]:
+              - text: OPERATION PLATFORM
+              - generic [ref=e422]: EMS・NOAH Cloud
+            - heading "クラウドから現場設備まで、 一元管理する。" [level=2] [ref=e423]:
+              - text: クラウドから現場設備まで、
+              - text: 一元管理する。
+          - paragraph [ref=e424]: 4G/5G回線でクラウドに接続し、蓄電池データ、液冷冷却、防火防災、ガス監視、PCS、計量、HMIを統合。 運転状況や異常兆候を可視化し、遠隔制御・OTA・市場運用の判断まで支援します。
+        - generic [ref=e425]:
+          - figure [ref=e427]:
+            - img "EMSとクラウド運用を示す図" [ref=e428]
+          - generic [ref=e429]:
+            - article [ref=e431]:
+              - heading "Battery / Cooling" [level=3] [ref=e432]
+              - paragraph [ref=e433]: 電池データ、液冷冷却、防火防災、ガス監視を常時取得。
+            - article [ref=e435]:
+              - heading "PCS / Transformer" [level=3] [ref=e436]
+              - paragraph [ref=e437]: 系統連系、出力制御、昇圧、保護機能を統合。
+            - article [ref=e439]:
+              - heading "EMS / HCS" [level=3] [ref=e440]
+              - paragraph [ref=e441]: 充放電計画、一次調整、高速制御、負荷分配を実行。
+            - article [ref=e443]:
+              - heading "NOAH Cloud" [level=3] [ref=e444]
+              - paragraph [ref=e445]: 4G/5Gで遠隔監視し、運転履歴・異常兆候を蓄積。
+            - article [ref=e447]:
+              - heading "O&M" [level=3] [ref=e448]
+              - paragraph [ref=e449]: 予兆保全、OTAアップグレード、運用レポートを支援。
+            - article [ref=e451]:
+              - heading "Aggregator" [level=3] [ref=e452]
+              - paragraph [ref=e453]: 卸電力・容量・需給調整市場での活用を支援します。
+    - region "パートナーの技術基盤と NOAHの調達力を、 日本市場へ。" [ref=e454]:
+      - generic [ref=e455]:
+        - generic [ref=e456]:
+          - paragraph [ref=e457]:
+            - text: TECHNOLOGY PARTNERS
+            - generic [ref=e458]: 技術基盤・実績
+          - heading "パートナーの技術基盤と NOAHの調達力を、 日本市場へ。" [level=2] [ref=e459]:
+            - text: パートナーの技術基盤と
+            - text: NOAHの調達力を、
+            - text: 日本市場へ。
+        - generic [ref=e460]:
+          - article [ref=e462]:
+            - generic [ref=e463]: 20年以上
+            - generic [ref=e464]: 連携する技術パートナーを含む電力分野の研究開発・エンジニアリング経験
+          - article [ref=e466]:
+            - generic [ref=e467]: 40件以上
+            - generic [ref=e468]: 技術パートナーが保有する製品・コアシステム関連の知的財産
+          - article [ref=e470]:
+            - generic [ref=e471]: 50MW / 200MWh
+            - generic [ref=e472]: 技術パートナーによる大規模蓄電発電所の導入実績
+          - article [ref=e474]:
+            - generic [ref=e475]: 2GWh
+            - generic [ref=e476]: NOAHによる蓄電池調達の戦略的パートナー体制
+    - region "調査から運用まで、 蓄電池プロジェクトを一貫支援。" [ref=e477]:
+      - generic [ref=e478]:
+        - generic [ref=e479]:
+          - paragraph [ref=e480]:
+            - text: PROJECT FLOW
+            - generic [ref=e481]: 導入までの流れ
+          - heading "調査から運用まで、 蓄電池プロジェクトを一貫支援。" [level=2] [ref=e482]:
+            - text: 調査から運用まで、
+            - text: 蓄電池プロジェクトを一貫支援。
+        - generic [ref=e483]:
+          - article [ref=e485]:
+            - generic [ref=e486]: "01"
+            - heading "調査・企画" [level=3] [ref=e487]
+            - paragraph [ref=e488]: 設置候補地、系統連系、用途、電力市場の活用方針を整理します。
+          - article [ref=e490]:
+            - generic [ref=e491]: "02"
+            - heading "システム設計" [level=3] [ref=e492]
+            - paragraph [ref=e493]: ESS、PCS、EMS、変圧設備、通信構成を要件に合わせて設計します。
+          - article [ref=e495]:
+            - generic [ref=e496]: "03"
+            - heading "調達・施工" [level=3] [ref=e497]
+            - paragraph [ref=e498]: 機器調達、据付、電気工事、試運転、連系手続きを進めます。
+          - article [ref=e500]:
+            - generic [ref=e501]: "04"
+            - heading "運用・保守" [level=3] [ref=e502]
+            - paragraph [ref=e503]: 遠隔監視、予兆保全、一次調整力対応、市場活用まで継続的に支援します。
+    - region "系統用蓄電池・産業用蓄電池の 導入相談はこちら" [ref=e504]:
+      - generic [ref=e506]:
+        - heading "系統用蓄電池・産業用蓄電池の 導入相談はこちら" [level=2] [ref=e507]:
+          - text: 系統用蓄電池・産業用蓄電池の
+          - text: 導入相談はこちら
+        - paragraph [ref=e508]: 事業計画の初期段階から、候補地・容量・運用モデルまでご相談ください。
+        - link "お問い合わせ" [ref=e510] [cursor=pointer]:
+          - /url: /contact/
+          - text: お問い合わせ
+          - generic [ref=e511]: →
+  - contentinfo [ref=e512]:
+    - generic [ref=e514]:
+      - link "諾亜建設株式会社" [ref=e515] [cursor=pointer]:
+        - /url: /
+        - img "諾亜建設株式会社" [ref=e516]
+      - generic [ref=e517]:
+        - generic [ref=e518]:
+          - heading "企業情報" [level=3] [ref=e519]:
+            - link "企業情報" [ref=e520] [cursor=pointer]:
+              - /url: /about/
+          - link "トップメッセージ" [ref=e521] [cursor=pointer]:
+            - /url: /about/message/
+          - link "企業理念・ビジョン" [ref=e522] [cursor=pointer]:
+            - /url: /about/vision/
+          - link "行動基準" [ref=e523] [cursor=pointer]:
+            - /url: /about/standard/
+          - link "会社概要" [ref=e524] [cursor=pointer]:
+            - /url: /about/outline/
+          - link "グループ・組織図" [ref=e525] [cursor=pointer]:
+            - /url: /about/organization/
+          - link "沿革" [ref=e526] [cursor=pointer]:
+            - /url: /about/history/
+          - link "健康経営" [ref=e527] [cursor=pointer]:
+            - /url: /about/safety-health/
+        - generic [ref=e528]:
+          - heading "事業紹介" [level=3] [ref=e529]:
+            - link "事業紹介" [ref=e530] [cursor=pointer]:
+              - /url: /business/
+          - link "蓄電池事業" [ref=e531] [cursor=pointer]:
+            - /url: /business/batteryenergystorage/
+          - link "風力発電事業" [ref=e532] [cursor=pointer]:
+            - /url: /business/windpower/
+          - link "バイオマス" [ref=e533] [cursor=pointer]:
+            - /url: /business/biomasspower/
+          - link "走行式集塵ホッパー事業" [ref=e534] [cursor=pointer]:
+            - /url: /business/hopper/
+          - link "水素モビリティ事業" [ref=e535] [cursor=pointer]:
+            - /url: /business/hydrogen-mobility/
+          - link "AIデータセンター事業" [ref=e536] [cursor=pointer]:
+            - /url: /business/ai-data-center/
+        - generic [ref=e537]:
+          - heading "サステナビリティ" [level=3] [ref=e538]:
+            - link "サステナビリティ" [ref=e539] [cursor=pointer]:
+              - /url: /sustainability/
+          - link "地域共生" [ref=e540] [cursor=pointer]:
+            - /url: /sustainability/community-relations/
+          - link "環境保全" [ref=e541] [cursor=pointer]:
+            - /url: /sustainability/environment/
+          - link "カーボンニュートラル" [ref=e542] [cursor=pointer]:
+            - /url: /sustainability/carbon-neutrality/
+        - generic [ref=e543]:
+          - heading "その他" [level=3] [ref=e544]
+          - link "お問い合わせ" [ref=e545] [cursor=pointer]:
+            - /url: /contact/
+          - link "ニュース" [ref=e546] [cursor=pointer]:
+            - /url: /news/
+          - link "採用情報" [ref=e547] [cursor=pointer]:
+            - /url: /recruit/
+          - link "プライバシーポリシー" [ref=e548] [cursor=pointer]:
+            - /url: /privacy/
+          - link "サイトマップ" [ref=e549] [cursor=pointer]:
+            - /url: /sitemap/
+    - paragraph [ref=e550]: © NOAH CONSTRUCTION CO.,LTD. All Rights Reserved.

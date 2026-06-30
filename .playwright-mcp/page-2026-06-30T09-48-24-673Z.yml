@@ -1,0 +1,387 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - link "諾亜建設株式会社 ホーム" [ref=e3] [cursor=pointer]:
+      - /url: /
+      - img "NOAH CONSTRUCTION CO.,LTD. 諾亜建設株式会社" [ref=e4]
+    - button "メニューを開く" [ref=e5] [cursor=pointer]
+  - main [ref=e9]:
+    - region "風を、未来の インフラに。" [ref=e10]:
+      - generic [ref=e13]:
+        - heading "風を、未来の インフラに。" [level=1] [ref=e14]:
+          - text: 風を、未来の
+          - text: インフラに。
+        - paragraph [ref=e15]:
+          - text: 再生可能エネルギーで、地域と企業の
+          - text: 持続可能な未来をつくる。
+        - link "事業内容を見る" [ref=e17] [cursor=pointer]:
+          - /url: /business/
+          - text: 事業内容を見る
+          - generic [ref=e18]: →
+    - region "エネルギーの未来を見据え、 社会に価値あるインフラを。" [ref=e19]:
+      - generic [ref=e22]:
+        - paragraph [ref=e23]:
+          - text: ABOUT US
+          - generic [ref=e24]: 私たちについて
+        - heading "エネルギーの未来を見据え、 社会に価値あるインフラを。" [level=2] [ref=e25]:
+          - text: エネルギーの未来を見据え、
+          - text: 社会に価値あるインフラを。
+        - paragraph [ref=e26]: 諾亜建設は、再生可能エネルギーの可能性を信じ、 蓄電池・風力発電・発電・水素モビリティ・AIデータセンター事業を通じて、 脱炭素社会の実現に貢献します。
+        - link "私たちについて" [ref=e27] [cursor=pointer]:
+          - /url: /about/
+          - text: 私たちについて
+          - generic [ref=e28]: →
+    - region "私たちが大切にすること" [ref=e32]:
+      - generic [ref=e33]:
+        - generic [ref=e35]:
+          - paragraph [ref=e36]:
+            - text: OUR VALUE
+            - generic [ref=e37]: 私たちの価値観
+          - heading "私たちが大切にすること" [level=2] [ref=e38]
+        - generic [ref=e39]:
+          - generic [ref=e40]:
+            - img [ref=e42]
+            - heading "地域とともに、未来をつくる" [level=3] [ref=e47]
+            - paragraph [ref=e48]: 地域資源を活かしたエネルギー事業で、持続可能な地域社会の実現に貢献します。
+          - generic [ref=e49]:
+            - img [ref=e51]
+            - heading "共生を大切に、信頼を築く" [level=3] [ref=e58]
+            - paragraph [ref=e59]: 地域との対話を重ね、環境と社会に配慮した事業運営を徹底します。
+          - generic [ref=e60]:
+            - img [ref=e62]
+            - heading "確かな技術で、カタチにする" [level=3] [ref=e65]
+            - paragraph [ref=e66]: 調査・設計・施工・保守まで、確かな技術と専門性でプロジェクトを推進します。
+          - generic [ref=e67]:
+            - img [ref=e69]
+            - heading "未来を見据え、挑戦を続ける" [level=3] [ref=e73]
+            - paragraph [ref=e74]: 再生可能エネルギーの可能性を広げ、新しい価値創出に挑戦し続けます。
+    - region "6つの事業領域から、 最適なインフラを提案。" [ref=e75]:
+      - generic [ref=e76]:
+        - generic [ref=e78]:
+          - generic [ref=e79]:
+            - paragraph [ref=e80]:
+              - text: OUR BUSINESS
+              - generic [ref=e81]: 事業内容
+            - heading "6つの事業領域から、 最適なインフラを提案。" [level=2] [ref=e82]:
+              - text: 6つの事業領域から、
+              - text: 最適なインフラを提案。
+          - paragraph [ref=e83]: 蓄電池、風力発電、水素モビリティ、AIデータセンターまで。 地域と企業の課題に合わせて、最適なエネルギーインフラを組み立てます。
+        - generic [ref=e84]:
+          - article [ref=e86]:
+            - link "蓄電池事業の詳細を見る" [ref=e87] [cursor=pointer]:
+              - /url: /business/batteryenergystorage
+              - img "大型蓄電池設備" [ref=e89]
+              - generic [ref=e90]:
+                - generic [ref=e91]:
+                  - generic [ref=e92]: "01"
+                  - heading "蓄電池事業" [level=3] [ref=e93]
+                - paragraph [ref=e94]: 大規模蓄電システムの導入により、再生可能エネルギーの安定活用と地域のレジリエンス向上に貢献します。
+          - article [ref=e96]:
+            - link "風力発電事業の詳細を見る" [ref=e97] [cursor=pointer]:
+              - /url: /business/windpower
+              - img "風力発電設備" [ref=e99]
+              - generic [ref=e100]:
+                - generic [ref=e101]:
+                  - generic [ref=e102]: "02"
+                  - heading "風力発電事業" [level=3] [ref=e103]
+                - paragraph [ref=e104]: 風況調査から設計・施工・保守まで、風力発電プロジェクトを一貫してサポートします。
+          - article [ref=e106]:
+            - link "バイオマスの詳細を見る" [ref=e107] [cursor=pointer]:
+              - /url: /business/biomasspower
+              - img "バイオマス発電設備" [ref=e109]
+              - generic [ref=e110]:
+                - generic [ref=e111]:
+                  - generic [ref=e112]: "03"
+                  - heading "バイオマス" [level=3] [ref=e113]
+                - paragraph [ref=e114]: 木質資源などを活用したバイオマス発電により、地域資源の循環と安定した再生可能エネルギー供給を支えます。
+          - article [ref=e116]:
+            - link "走行式集塵ホッパー事業の詳細を見る" [ref=e117] [cursor=pointer]:
+              - /url: /business/hopper
+              - img "走行式集塵ホッパー設備" [ref=e119]
+              - generic [ref=e120]:
+                - generic [ref=e121]:
+                  - generic [ref=e122]: "04"
+                  - heading "走行式集塵ホッパー事業" [level=3] [ref=e123]
+                - paragraph [ref=e124]: 港湾・発電所・資源受入施設に向けて、粉じんを抑えながら原料を効率的に荷役する走行式集塵ホッパーを提案します。
+          - article [ref=e126]:
+            - link "水素モビリティ事業の詳細を見る" [ref=e127] [cursor=pointer]:
+              - /url: /business/hydrogen-mobility
+              - img "NOAHロゴ入り水素トラックの充填設備" [ref=e129]
+              - generic [ref=e130]:
+                - generic [ref=e131]:
+                  - generic [ref=e132]: "05"
+                  - heading "水素モビリティ事業" [level=3] [ref=e133]
+                - paragraph [ref=e134]: 水素ステーションや関連設備の整備を通じて、商用車・産業車両を中心とした次世代モビリティを支えます。
+          - article [ref=e136]:
+            - link "AIデータセンター事業の詳細を見る" [ref=e137] [cursor=pointer]:
+              - /url: /business/ai-data-center
+              - img "再生可能エネルギーと連携するAIデータセンター" [ref=e139]
+              - generic [ref=e140]:
+                - generic [ref=e141]:
+                  - generic [ref=e142]: "06"
+                  - heading "AIデータセンター事業" [level=3] [ref=e143]
+                - paragraph [ref=e144]: AI計算基盤を支えるデータセンターの電力・冷却・エネルギーマネジメントを総合的に計画します。
+    - region "空を活用する、 次世代の電源。" [ref=e145]:
+      - generic [ref=e146]:
+        - generic [ref=e147]:
+          - paragraph [ref=e148]:
+            - text: AIRBORNE POWER
+            - generic [ref=e149]: 空中発電所
+          - heading "空を活用する、 次世代の電源。" [level=2] [ref=e150]:
+            - text: 空を活用する、
+            - text: 次世代の電源。
+          - paragraph [ref=e151]: 上空の安定した風を活用する、飛行船型の空中風力発電システム。 離島・災害拠点・既存風力との併設へ。
+          - link "導入相談をする" [ref=e152] [cursor=pointer]:
+            - /url: "#contact"
+            - text: 導入相談をする
+            - generic [ref=e153]: →
+        - figure "空に浮かぶ、可搬型の発電所。" [ref=e155]:
+          - img "NOAHロゴが入った飛行船型の空中風力発電システム" [ref=e156]
+          - generic [ref=e157]: 空に浮かぶ、可搬型の発電所。
+          - generic [ref=e158]: NOAH AIRBORNE WIND
+    - region "構想から運用まで、 一貫して支える。" [ref=e159]:
+      - generic [ref=e160]:
+        - generic [ref=e162]:
+          - generic [ref=e163]:
+            - paragraph [ref=e164]:
+              - text: INTEGRATED SOLUTION
+              - generic [ref=e165]: 統合ソリューション
+            - heading "構想から運用まで、 一貫して支える。" [level=2] [ref=e166]:
+              - text: 構想から運用まで、
+              - text: 一貫して支える。
+          - paragraph [ref=e167]: 複数の事業領域を並べるだけではなく、計画・導入・運用までをつなげて設計。 NOAHの横断支援で、プロジェクトを前に進めます。
+        - generic [ref=e169]:
+          - generic [ref=e171]: 一貫した支援体制
+          - list "統合ソリューションの流れ" [ref=e172]:
+            - listitem [ref=e173]:
+              - generic [ref=e174]:
+                - generic [ref=e175]: "01"
+                - generic [ref=e176]: STEP
+              - generic [ref=e177]:
+                - heading "調査・企画" [level=3] [ref=e178]
+                - paragraph [ref=e179]: 風況・需要・立地を読み、事業化の入口を整理。
+            - listitem [ref=e180]:
+              - generic [ref=e181]:
+                - generic [ref=e182]: "02"
+                - generic [ref=e183]: STEP
+              - generic [ref=e184]:
+                - heading "設計・調達" [level=3] [ref=e185]
+                - paragraph [ref=e186]: 設備構成、系統、調達を横断して計画。
+            - listitem [ref=e187]:
+              - generic [ref=e188]:
+                - generic [ref=e189]: "03"
+                - generic [ref=e190]: STEP
+              - generic [ref=e191]:
+                - heading "施工・導入" [level=3] [ref=e192]
+                - paragraph [ref=e193]: 現場・電気・設備をつなぎ、導入を推進。
+            - listitem [ref=e194]:
+              - generic [ref=e195]:
+                - generic [ref=e196]: "04"
+                - generic [ref=e197]: STEP
+              - generic [ref=e198]:
+                - heading "運用・改善" [level=3] [ref=e199]
+                - paragraph [ref=e200]: 保守、監視、更新まで継続して支える。
+    - region "複数の事業領域をつなぎ、 エネルギーインフラを支える。" [ref=e201]:
+      - generic [ref=e202]:
+        - generic [ref=e203]:
+          - generic [ref=e204]:
+            - paragraph [ref=e205]:
+              - text: OUR STRENGTHS
+              - generic [ref=e206]: NOAHの強み
+            - heading "複数の事業領域をつなぎ、 エネルギーインフラを支える。" [level=2] [ref=e207]:
+              - generic [ref=e208]: 複数の事業領域をつなぎ、
+              - generic [ref=e209]: エネルギーインフラを支える。
+            - paragraph [ref=e210]: 蓄電池・風力・バイオマス・集塵ホッパー・水素モビリティ・AIデータセンターを横断し、 地域や企業の課題に合わせた導入計画と実行体制を提供します。
+          - generic [ref=e211]:
+            - article [ref=e213]:
+              - img "複数のエネルギー設備を俯瞰して計画するイメージ" [ref=e215]
+              - generic [ref=e216]:
+                - generic [ref=e217]: "01"
+                - heading "横断的な提案力" [level=3] [ref=e218]
+                - paragraph [ref=e219]: 複数領域を組み合わせ、事業目的に合うインフラ構成を設計。
+            - article [ref=e221]:
+              - img "風力発電設備を確認する技術者" [ref=e223]
+              - generic [ref=e224]:
+                - generic [ref=e225]: "02"
+                - heading "構想から運用まで対応" [level=3] [ref=e226]
+                - paragraph [ref=e227]: 調査・設計・施工・運用保守まで、各フェーズを一貫支援。
+            - article [ref=e229]:
+              - img "地域に配置された蓄電池設備" [ref=e231]
+              - generic [ref=e232]:
+                - generic [ref=e233]: "03"
+                - heading "地域課題に合わせる設計" [level=3] [ref=e234]
+                - paragraph [ref=e235]: 立地、電力需要、災害対策、周辺環境を踏まえた計画。
+            - article [ref=e237]:
+              - img "水素設備と再生可能エネルギー設備" [ref=e239]
+              - generic [ref=e240]:
+                - generic [ref=e241]: "04"
+                - heading "脱炭素とBCPに貢献" [level=3] [ref=e242]
+                - paragraph [ref=e243]: 再エネ活用、蓄電、水素、電力安定化を組み合わせる提案。
+        - generic [ref=e244]:
+          - generic [ref=e246]:
+            - term [ref=e247]: 年間施工実績
+            - definition [ref=e248]:
+              - strong [ref=e249]: "80"
+              - generic [ref=e250]: 件
+          - generic [ref=e252]:
+            - term [ref=e253]: 再エネ関連実績
+            - definition [ref=e254]:
+              - strong [ref=e255]: "150"
+              - generic [ref=e256]: MW+
+          - generic [ref=e258]:
+            - term [ref=e259]: 取引先企業数
+            - definition [ref=e260]:
+              - strong [ref=e261]: "200"
+              - generic [ref=e262]: 社
+          - generic [ref=e264]:
+            - term [ref=e265]: 対応エリア
+            - definition [ref=e266]:
+              - strong [ref=e267]: 全国
+              - generic [ref=e268]: 対応可能
+          - generic [ref=e270]:
+            - term [ref=e271]: 運用・保守実績
+            - definition [ref=e272]:
+              - strong [ref=e273]: "10"
+              - generic [ref=e274]: 年+
+    - region "地域・環境・脱炭素を、 事業の中心に。" [ref=e275]:
+      - generic [ref=e276]:
+        - generic [ref=e278]:
+          - generic [ref=e279]:
+            - paragraph [ref=e280]:
+              - text: SUSTAINABILITY
+              - generic [ref=e281]: サステナビリティ
+            - heading "地域・環境・脱炭素を、 事業の中心に。" [level=2] [ref=e282]:
+              - text: 地域・環境・脱炭素を、
+              - text: 事業の中心に。
+          - paragraph [ref=e283]: 再生可能エネルギー事業を通じて、地域との共生、自然環境への配慮、 脱炭素社会への貢献を一体で推進します。
+        - generic [ref=e284]:
+          - article [ref=e286]:
+            - link "地域共生の詳細を見る" [ref=e287] [cursor=pointer]:
+              - /url: /sustainability/community-relations/
+              - img "地域の方々と風力発電設備を見渡す現場スタッフ" [ref=e289]
+              - generic [ref=e290]:
+                - heading "地域共生" [level=3] [ref=e291]
+                - paragraph [ref=e292]: 地域との対話を重ね、暮らしと事業が共に発展する関係を築きます。
+          - article [ref=e294]:
+            - link "環境保全の詳細を見る" [ref=e295] [cursor=pointer]:
+              - /url: /sustainability/environment/
+              - img "海と森に調和して並ぶ風力発電設備" [ref=e297]
+              - generic [ref=e298]:
+                - heading "環境保全" [level=3] [ref=e299]
+                - paragraph [ref=e300]: 計画から運用まで自然環境に配慮し、景観と生態系への影響低減に取り組みます。
+          - article [ref=e302]:
+            - link "カーボンニュートラルの詳細を見る" [ref=e303] [cursor=pointer]:
+              - /url: /sustainability/carbon-neutrality/
+              - img "蓄電池と太陽光、水素設備が連携する脱炭素インフラ" [ref=e305]
+              - generic [ref=e306]:
+                - heading "カーボンニュートラル" [level=3] [ref=e307]
+                - paragraph [ref=e308]: 蓄電池・再エネ・水素を組み合わせ、脱炭素社会を支える基盤づくりを進めます。
+    - region "お知らせ" [ref=e309]:
+      - generic [ref=e310]:
+        - generic [ref=e312]:
+          - paragraph [ref=e313]:
+            - text: NEWS
+            - generic [ref=e314]: お知らせ
+          - heading "お知らせ" [level=2] [ref=e315]
+          - generic [ref=e316]:
+            - link "2026.05.20 お知らせ コーポレートサイトをリニューアルしました。" [ref=e318] [cursor=pointer]:
+              - /url: /news/site-renewal/
+              - time [ref=e319]: 2026.05.20
+              - generic [ref=e320]: お知らせ
+              - strong [ref=e321]: コーポレートサイトをリニューアルしました。
+            - link "2026.05.10 プレスリリース 再生可能エネルギー事業の新プロジェクトを開始" [ref=e323] [cursor=pointer]:
+              - /url: /news/new-renewable-project/
+              - time [ref=e324]: 2026.05.10
+              - generic [ref=e325]: プレスリリース
+              - strong [ref=e326]: 再生可能エネルギー事業の新プロジェクトを開始
+            - link "2026.04.25 お知らせ ゴールデンウィーク休業のお知らせ" [ref=e328] [cursor=pointer]:
+              - /url: /news/gw-holiday/
+              - time [ref=e329]: 2026.04.25
+              - generic [ref=e330]: お知らせ
+              - strong [ref=e331]: ゴールデンウィーク休業のお知らせ
+          - link "すべてのお知らせを見る" [ref=e332] [cursor=pointer]:
+            - /url: /news/
+            - text: すべてのお知らせを見る
+            - generic [ref=e333]: →
+        - link "採用情報 ともに未来をつくる 仲間を募集しています。 詳しく見る →" [ref=e335] [cursor=pointer]:
+          - /url: "#contact"
+          - generic [ref=e336]:
+            - generic [ref=e337]: 採用情報
+            - emphasis [ref=e338]:
+              - text: ともに未来をつくる
+              - text: 仲間を募集しています。
+            - generic [ref=e339]: 詳しく見る →
+    - region "お気軽にご相談ください" [ref=e340]:
+      - generic [ref=e342]:
+        - img [ref=e344]
+        - generic [ref=e347]:
+          - paragraph [ref=e348]: 再生可能エネルギーに関するご相談・お問い合わせ
+          - heading "お気軽にご相談ください" [level=2] [ref=e349]
+          - generic [ref=e350]: プロジェクトのご相談やお見積りなど、専門スタッフが丁寧に対応いたします。
+        - link "お問い合わせフォームへ" [ref=e351] [cursor=pointer]:
+          - /url: mailto:info@example.com
+          - text: お問い合わせフォームへ
+          - generic [ref=e352]: →
+  - contentinfo [ref=e353]:
+    - generic [ref=e355]:
+      - link "諾亜建設株式会社" [ref=e356] [cursor=pointer]:
+        - /url: /
+        - img "諾亜建設株式会社" [ref=e357]
+      - generic [ref=e358]:
+        - generic [ref=e359]:
+          - heading "企業情報" [level=3] [ref=e360]:
+            - link "企業情報" [ref=e361] [cursor=pointer]:
+              - /url: /about/
+          - link "トップメッセージ" [ref=e362] [cursor=pointer]:
+            - /url: /about/message/
+          - link "企業理念・ビジョン" [ref=e363] [cursor=pointer]:
+            - /url: /about/vision/
+          - link "行動基準" [ref=e364] [cursor=pointer]:
+            - /url: /about/standard/
+          - link "会社概要" [ref=e365] [cursor=pointer]:
+            - /url: /about/outline/
+          - link "グループ・組織図" [ref=e366] [cursor=pointer]:
+            - /url: /about/organization/
+          - link "沿革" [ref=e367] [cursor=pointer]:
+            - /url: /about/history/
+          - link "健康経営" [ref=e368] [cursor=pointer]:
+            - /url: /about/safety-health/
+        - generic [ref=e369]:
+          - heading "事業紹介" [level=3] [ref=e370]:
+            - link "事業紹介" [ref=e371] [cursor=pointer]:
+              - /url: /business/
+          - link "蓄電池事業" [ref=e372] [cursor=pointer]:
+            - /url: /business/batteryenergystorage/
+          - link "風力発電事業" [ref=e373] [cursor=pointer]:
+            - /url: /business/windpower/
+          - link "バイオマス" [ref=e374] [cursor=pointer]:
+            - /url: /business/biomasspower/
+          - link "走行式集塵ホッパー事業" [ref=e375] [cursor=pointer]:
+            - /url: /business/hopper/
+          - link "水素モビリティ事業" [ref=e376] [cursor=pointer]:
+            - /url: /business/hydrogen-mobility/
+          - link "AIデータセンター事業" [ref=e377] [cursor=pointer]:
+            - /url: /business/ai-data-center/
+        - generic [ref=e378]:
+          - heading "サステナビリティ" [level=3] [ref=e379]:
+            - link "サステナビリティ" [ref=e380] [cursor=pointer]:
+              - /url: /sustainability/
+          - link "地域共生" [ref=e381] [cursor=pointer]:
+            - /url: /sustainability/community-relations/
+          - link "環境保全" [ref=e382] [cursor=pointer]:
+            - /url: /sustainability/environment/
+          - link "カーボンニュートラル" [ref=e383] [cursor=pointer]:
+            - /url: /sustainability/carbon-neutrality/
+        - generic [ref=e384]:
+          - heading "その他" [level=3] [ref=e385]
+          - link "お問い合わせ" [ref=e386] [cursor=pointer]:
+            - /url: /contact/
+          - link "ニュース" [ref=e387] [cursor=pointer]:
+            - /url: /news/
+          - link "採用情報" [ref=e388] [cursor=pointer]:
+            - /url: /recruit/
+          - link "プライバシーポリシー" [ref=e389] [cursor=pointer]:
+            - /url: /privacy/
+          - link "サイトマップ" [ref=e390] [cursor=pointer]:
+            - /url: /sitemap/
+    - paragraph [ref=e391]: © NOAH CONSTRUCTION CO.,LTD. All Rights Reserved.
+  - alert [ref=e392]

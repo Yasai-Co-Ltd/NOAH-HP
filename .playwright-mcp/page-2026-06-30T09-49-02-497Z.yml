@@ -1,0 +1,232 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - link "諾亜建設株式会社 ホーム" [ref=e3] [cursor=pointer]:
+      - /url: /
+      - img "NOAH CONSTRUCTION CO.,LTD. 諾亜建設株式会社" [ref=e4]
+    - button "メニューを開く" [ref=e5] [cursor=pointer]
+  - main [ref=e9]:
+    - region "採用情報" [ref=e10]:
+      - generic [ref=e11]:
+        - generic [ref=e12]:
+          - paragraph [ref=e13]: RECRUIT
+          - heading "採用情報" [level=1] [ref=e14]
+          - paragraph [ref=e15]: 諾亜建設では、エネルギー・プラント・設備領域の事業を支える人材を募集しています。 募集中の職種、仕事内容、応募条件をご確認ください。
+          - generic [ref=e16]:
+            - link "募集職種を見る" [ref=e17] [cursor=pointer]:
+              - /url: "#positions"
+              - text: 募集職種を見る
+              - generic [ref=e18]: →
+            - link "応募フォームへ" [ref=e19] [cursor=pointer]:
+              - /url: /recruit/apply/
+              - text: 応募フォームへ
+              - generic [ref=e20]: →
+        - figure "NOAH RECRUIT Energy Infrastructure" [ref=e22]:
+          - img "風力発電設備を背景に現場で打ち合わせを行うスタッフ" [ref=e23]
+          - generic [ref=e24]:
+            - generic [ref=e25]: NOAH RECRUIT
+            - generic [ref=e26]: Energy Infrastructure
+    - region "現在募集中の職種" [ref=e27]:
+      - generic [ref=e28]:
+        - generic [ref=e30]:
+          - generic [ref=e31]:
+            - paragraph [ref=e32]:
+              - text: JOB OPENINGS
+              - generic [ref=e33]: 募集職種
+            - heading "現在募集中の職種" [level=2] [ref=e34]
+          - paragraph [ref=e35]: 職種ごとの仕事内容、勤務地、募集条件を一覧で確認できます。 気になる職種の詳細を開き、応募フォームよりご応募ください。
+        - generic [ref=e36]:
+          - article [ref=e38]:
+            - generic [ref=e39]:
+              - term [ref=e40]: JOB 01
+              - generic [ref=e41]:
+                - term [ref=e42]: 勤務地
+                - definition [ref=e43]: 東京都中野区
+              - generic [ref=e44]:
+                - term [ref=e45]: 募集人数
+                - definition [ref=e46]: 若干名
+              - generic [ref=e47]:
+                - term [ref=e48]: 雇用形態
+                - definition [ref=e49]: 正社員／契約社員
+              - generic [ref=e50]:
+                - term [ref=e51]: 給与
+                - definition [ref=e52]: 面談
+            - generic [ref=e53]:
+              - heading "人事・総務" [level=3] [ref=e54]
+              - paragraph [ref=e55]: 人事・総務に関する管理業務を中心に、法務関連手続き、営業サポート、翻訳、庶務まで会社運営を支える職種です。
+              - generic "人事・総務の関連領域" [ref=e56]:
+                - generic [ref=e57]: 総務関連事務
+                - generic [ref=e58]: 法務手続き
+                - generic [ref=e59]: 営業サポート
+                - generic [ref=e60]: 中日翻訳
+            - link "募集要項の詳細" [ref=e62] [cursor=pointer]:
+              - /url: /recruit/hr-general-affairs/
+              - text: 募集要項の詳細
+              - generic [ref=e63]: →
+          - article [ref=e65]:
+            - generic [ref=e66]:
+              - term [ref=e67]: JOB 02
+              - generic [ref=e68]:
+                - term [ref=e69]: 勤務地
+                - definition [ref=e70]: 東京都中野区
+              - generic [ref=e71]:
+                - term [ref=e72]: 募集人数
+                - definition [ref=e73]: 若干名
+              - generic [ref=e74]:
+                - term [ref=e75]: 雇用形態
+                - definition [ref=e76]: 正社員／契約社員
+              - generic [ref=e77]:
+                - term [ref=e78]: 給与
+                - definition [ref=e79]: 面談
+            - generic [ref=e80]:
+              - heading "営業募集" [level=3] [ref=e81]
+              - paragraph [ref=e82]: 水素関連設備、バイオマス発電向け設備、ハンドリング装置など、エネルギー・プラント領域の提案営業を担います。
+              - generic "営業募集の関連領域" [ref=e83]:
+                - generic [ref=e84]: 法人営業
+                - generic [ref=e85]: 水素・再エネ
+                - generic [ref=e86]: プラント設備
+                - generic [ref=e87]: 提案資料作成
+            - link "募集要項の詳細" [ref=e89] [cursor=pointer]:
+              - /url: /recruit/sales/
+              - text: 募集要項の詳細
+              - generic [ref=e90]: →
+          - article [ref=e92]:
+            - generic [ref=e93]:
+              - term [ref=e94]: JOB 03
+              - generic [ref=e95]:
+                - term [ref=e96]: 勤務地
+                - definition [ref=e97]: 東京都中野区
+              - generic [ref=e98]:
+                - term [ref=e99]: 募集人数
+                - definition [ref=e100]: 若干名
+              - generic [ref=e101]:
+                - term [ref=e102]: 雇用形態
+                - definition [ref=e103]: 正社員／契約社員
+              - generic [ref=e104]:
+                - term [ref=e105]: 給与
+                - definition [ref=e106]: 面談
+            - generic [ref=e107]:
+              - heading "電気設備エンジニア" [level=3] [ref=e108]
+              - paragraph [ref=e109]: プラント設備建設や設備増設に関わる配線工事の設計、見積り、工事管理、保全計画、点検対応を行う職種です。
+              - generic "電気設備エンジニアの関連領域" [ref=e110]:
+                - generic [ref=e111]: 電気設備
+                - generic [ref=e112]: 施工管理
+                - generic [ref=e113]: 保全計画
+                - generic [ref=e114]: 高圧・低圧設備
+            - link "募集要項の詳細" [ref=e116] [cursor=pointer]:
+              - /url: /recruit/electrical-engineer/
+              - text: 募集要項の詳細
+              - generic [ref=e117]: →
+    - region "共通情報" [ref=e118]:
+      - generic [ref=e119]:
+        - generic [ref=e120]:
+          - heading "共通情報" [level=2] [ref=e121]
+          - generic [ref=e122]:
+            - generic [ref=e123]:
+              - term [ref=e124]: 勤務地
+              - definition [ref=e125]: 東京都中野区本町2丁目46-1 サンブライトツインビル北棟15F
+            - generic [ref=e126]:
+              - term [ref=e127]: 雇用形態
+              - definition [ref=e128]: 職種により正社員／契約社員。詳細は面談時に確認します。
+            - generic [ref=e129]:
+              - term [ref=e130]: 給与
+              - definition [ref=e131]: 経験・スキルを考慮し、面談のうえ決定します。
+            - generic [ref=e132]:
+              - term [ref=e133]: 応募方法
+              - definition [ref=e134]: 応募フォームに必要事項をご入力のうえ送信してください。
+        - generic [ref=e135]:
+          - heading "応募の流れ" [level=2] [ref=e136]
+          - paragraph [ref=e137]: 募集内容をご確認のうえ、応募フォームよりご応募ください。
+          - list [ref=e138]:
+            - listitem [ref=e139]:
+              - generic [ref=e140]: "01"
+              - generic [ref=e141]: 募集職種を確認
+            - listitem [ref=e142]:
+              - generic [ref=e143]: "02"
+              - generic [ref=e144]: フォームで応募
+            - listitem [ref=e145]:
+              - generic [ref=e146]: "03"
+              - generic [ref=e147]: 書類確認・面談
+            - listitem [ref=e148]:
+              - generic [ref=e149]: "04"
+              - generic [ref=e150]: 条件確認・採用
+    - region "ご応募をお待ちしています。" [ref=e151]:
+      - generic [ref=e152]:
+        - generic [ref=e153]:
+          - paragraph [ref=e154]: ENTRY
+          - heading "ご応募をお待ちしています。" [level=2] [ref=e155]
+          - paragraph [ref=e156]: 募集職種をご確認のうえ、応募フォームより必要事項をご入力ください。
+        - generic [ref=e157]:
+          - link "応募フォームへ" [ref=e158] [cursor=pointer]:
+            - /url: /recruit/apply/
+            - text: 応募フォームへ
+            - generic [ref=e159]: →
+          - link "募集職種へ戻る" [ref=e160] [cursor=pointer]:
+            - /url: "#positions"
+            - text: 募集職種へ戻る
+            - generic [ref=e161]: →
+  - contentinfo [ref=e162]:
+    - generic [ref=e164]:
+      - link "諾亜建設株式会社" [ref=e165] [cursor=pointer]:
+        - /url: /
+        - img "諾亜建設株式会社" [ref=e166]
+      - generic [ref=e167]:
+        - generic [ref=e168]:
+          - heading "企業情報" [level=3] [ref=e169]:
+            - link "企業情報" [ref=e170] [cursor=pointer]:
+              - /url: /about/
+          - link "トップメッセージ" [ref=e171] [cursor=pointer]:
+            - /url: /about/message/
+          - link "企業理念・ビジョン" [ref=e172] [cursor=pointer]:
+            - /url: /about/vision/
+          - link "行動基準" [ref=e173] [cursor=pointer]:
+            - /url: /about/standard/
+          - link "会社概要" [ref=e174] [cursor=pointer]:
+            - /url: /about/outline/
+          - link "グループ・組織図" [ref=e175] [cursor=pointer]:
+            - /url: /about/organization/
+          - link "沿革" [ref=e176] [cursor=pointer]:
+            - /url: /about/history/
+          - link "健康経営" [ref=e177] [cursor=pointer]:
+            - /url: /about/safety-health/
+        - generic [ref=e178]:
+          - heading "事業紹介" [level=3] [ref=e179]:
+            - link "事業紹介" [ref=e180] [cursor=pointer]:
+              - /url: /business/
+          - link "蓄電池事業" [ref=e181] [cursor=pointer]:
+            - /url: /business/batteryenergystorage/
+          - link "風力発電事業" [ref=e182] [cursor=pointer]:
+            - /url: /business/windpower/
+          - link "バイオマス" [ref=e183] [cursor=pointer]:
+            - /url: /business/biomasspower/
+          - link "走行式集塵ホッパー事業" [ref=e184] [cursor=pointer]:
+            - /url: /business/hopper/
+          - link "水素モビリティ事業" [ref=e185] [cursor=pointer]:
+            - /url: /business/hydrogen-mobility/
+          - link "AIデータセンター事業" [ref=e186] [cursor=pointer]:
+            - /url: /business/ai-data-center/
+        - generic [ref=e187]:
+          - heading "サステナビリティ" [level=3] [ref=e188]:
+            - link "サステナビリティ" [ref=e189] [cursor=pointer]:
+              - /url: /sustainability/
+          - link "地域共生" [ref=e190] [cursor=pointer]:
+            - /url: /sustainability/community-relations/
+          - link "環境保全" [ref=e191] [cursor=pointer]:
+            - /url: /sustainability/environment/
+          - link "カーボンニュートラル" [ref=e192] [cursor=pointer]:
+            - /url: /sustainability/carbon-neutrality/
+        - generic [ref=e193]:
+          - heading "その他" [level=3] [ref=e194]
+          - link "お問い合わせ" [ref=e195] [cursor=pointer]:
+            - /url: /contact/
+          - link "ニュース" [ref=e196] [cursor=pointer]:
+            - /url: /news/
+          - link "採用情報" [ref=e197] [cursor=pointer]:
+            - /url: /recruit/
+          - link "プライバシーポリシー" [ref=e198] [cursor=pointer]:
+            - /url: /privacy/
+          - link "サイトマップ" [ref=e199] [cursor=pointer]:
+            - /url: /sitemap/
+    - paragraph [ref=e200]: © NOAH CONSTRUCTION CO.,LTD. All Rights Reserved.
+  - button "Open Next.js Dev Tools" [ref=e206] [cursor=pointer]:
+    - img [ref=e207]
+  - alert [ref=e210]

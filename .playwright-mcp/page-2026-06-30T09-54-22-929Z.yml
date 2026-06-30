@@ -1,0 +1,138 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - link "諾亜建設株式会社 ホーム" [ref=e3] [cursor=pointer]:
+      - /url: /
+      - img "NOAH CONSTRUCTION CO.,LTD. 諾亜建設株式会社" [ref=e4]
+    - navigation "グローバルナビゲーション" [ref=e5]:
+      - link "企業情報" [ref=e7] [cursor=pointer]:
+        - /url: /about/
+      - link "事業紹介" [ref=e9] [cursor=pointer]:
+        - /url: /business/
+      - link "サステナビリティ" [ref=e11] [cursor=pointer]:
+        - /url: /sustainability/
+      - link "ニュース" [ref=e13] [cursor=pointer]:
+        - /url: /news/
+      - link "採用情報" [ref=e15] [cursor=pointer]:
+        - /url: /recruit/
+    - link "お問い合わせ" [ref=e16] [cursor=pointer]:
+      - /url: /contact/
+      - img [ref=e17]
+      - text: お問い合わせ
+  - main [ref=e20]:
+    - region "会社概要" [ref=e21]:
+      - generic [ref=e23]:
+        - paragraph [ref=e24]: COMPANY PROFILE
+        - heading "会社概要" [level=1] [ref=e25]
+      - text: OUTLINE
+    - region "会社の基本情報" [ref=e26]:
+      - generic [ref=e30]:
+        - generic [ref=e31]:
+          - term [ref=e32]: 会社名
+          - definition [ref=e33]: 諾亜建設株式会社
+        - generic [ref=e34]:
+          - term [ref=e35]: 設立
+          - definition [ref=e36]: 2018年10月
+        - generic [ref=e37]:
+          - term [ref=e38]: 所在地
+          - definition [ref=e39]: 〒160-0022 東京都中野区本町2丁目46-1 サンブライトツインビル北棟15F 1501-3
+        - generic [ref=e40]:
+          - term [ref=e41]: 連絡先
+          - definition [ref=e42]: TEL：03-5341-4696 FAX：03-5341-4697
+        - generic [ref=e43]:
+          - term [ref=e44]: 代表者
+          - definition [ref=e45]: 代表取締役社長 鈴木 仲娜
+        - generic [ref=e46]:
+          - term [ref=e47]: 資本金
+          - definition [ref=e48]: 99,000,000円
+        - generic [ref=e49]:
+          - term [ref=e50]: 事業内容
+          - definition [ref=e51]: エネルギー事業関連の製品・システム・サービスの開発・製造・販売
+        - generic [ref=e52]:
+          - term [ref=e53]: 登録・許可
+          - definition [ref=e54]: 建設業許可（特定）：建築工事業、大工工事業、鋼構造物工事業、内装仕上工事業 東京都知事許可（特-30）第149709号
+        - generic [ref=e55]:
+          - term [ref=e56]: 弁護士
+          - definition [ref=e57]: 古宮 憲一郎（弁護士法人リオ．パートナーズ）
+        - generic [ref=e58]:
+          - term [ref=e59]: 監査役
+          - definition [ref=e60]: 高木 泰（税理士）
+        - generic [ref=e61]:
+          - term [ref=e62]: 取引先銀行
+          - definition [ref=e63]: 三井住友銀行 新宿支店、東京スター銀行
+    - region "組織体制や沿革もあわせてご覧ください。" [ref=e64]:
+      - generic [ref=e66]:
+        - paragraph [ref=e67]: NEXT CONTENTS
+        - heading "組織体制や沿革もあわせてご覧ください。" [level=2] [ref=e68]
+        - generic [ref=e69]:
+          - link "グループ・組織図" [ref=e70] [cursor=pointer]:
+            - /url: /about/organization/
+          - link "沿革" [ref=e71] [cursor=pointer]:
+            - /url: /about/history/
+          - link "トップメッセージ" [ref=e72] [cursor=pointer]:
+            - /url: /about/message/
+  - contentinfo [ref=e73]:
+    - generic [ref=e75]:
+      - link "諾亜建設株式会社" [ref=e76] [cursor=pointer]:
+        - /url: /
+        - img "諾亜建設株式会社" [ref=e77]
+      - generic [ref=e78]:
+        - generic [ref=e79]:
+          - heading "企業情報" [level=3] [ref=e80]:
+            - link "企業情報" [ref=e81] [cursor=pointer]:
+              - /url: /about/
+          - link "トップメッセージ" [ref=e82] [cursor=pointer]:
+            - /url: /about/message/
+          - link "企業理念・ビジョン" [ref=e83] [cursor=pointer]:
+            - /url: /about/vision/
+          - link "行動基準" [ref=e84] [cursor=pointer]:
+            - /url: /about/standard/
+          - link "会社概要" [ref=e85] [cursor=pointer]:
+            - /url: /about/outline/
+          - link "グループ・組織図" [ref=e86] [cursor=pointer]:
+            - /url: /about/organization/
+          - link "沿革" [ref=e87] [cursor=pointer]:
+            - /url: /about/history/
+          - link "健康経営" [ref=e88] [cursor=pointer]:
+            - /url: /about/safety-health/
+        - generic [ref=e89]:
+          - heading "事業紹介" [level=3] [ref=e90]:
+            - link "事業紹介" [ref=e91] [cursor=pointer]:
+              - /url: /business/
+          - link "蓄電池事業" [ref=e92] [cursor=pointer]:
+            - /url: /business/batteryenergystorage/
+          - link "風力発電事業" [ref=e93] [cursor=pointer]:
+            - /url: /business/windpower/
+          - link "バイオマス" [ref=e94] [cursor=pointer]:
+            - /url: /business/biomasspower/
+          - link "走行式集塵ホッパー事業" [ref=e95] [cursor=pointer]:
+            - /url: /business/hopper/
+          - link "水素モビリティ事業" [ref=e96] [cursor=pointer]:
+            - /url: /business/hydrogen-mobility/
+          - link "AIデータセンター事業" [ref=e97] [cursor=pointer]:
+            - /url: /business/ai-data-center/
+        - generic [ref=e98]:
+          - heading "サステナビリティ" [level=3] [ref=e99]:
+            - link "サステナビリティ" [ref=e100] [cursor=pointer]:
+              - /url: /sustainability/
+          - link "地域共生" [ref=e101] [cursor=pointer]:
+            - /url: /sustainability/community-relations/
+          - link "環境保全" [ref=e102] [cursor=pointer]:
+            - /url: /sustainability/environment/
+          - link "カーボンニュートラル" [ref=e103] [cursor=pointer]:
+            - /url: /sustainability/carbon-neutrality/
+        - generic [ref=e104]:
+          - heading "その他" [level=3] [ref=e105]
+          - link "お問い合わせ" [ref=e106] [cursor=pointer]:
+            - /url: /contact/
+          - link "ニュース" [ref=e107] [cursor=pointer]:
+            - /url: /news/
+          - link "採用情報" [ref=e108] [cursor=pointer]:
+            - /url: /recruit/
+          - link "プライバシーポリシー" [ref=e109] [cursor=pointer]:
+            - /url: /privacy/
+          - link "サイトマップ" [ref=e110] [cursor=pointer]:
+            - /url: /sitemap/
+    - paragraph [ref=e111]: © NOAH CONSTRUCTION CO.,LTD. All Rights Reserved.
+  - button "Open Next.js Dev Tools" [ref=e117] [cursor=pointer]:
+    - img [ref=e118]
+  - alert [ref=e121]

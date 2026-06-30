@@ -1,0 +1,318 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - link "諾亜建設株式会社 ホーム" [ref=e3] [cursor=pointer]:
+      - /url: /
+      - img "NOAH CONSTRUCTION CO.,LTD. 諾亜建設株式会社" [ref=e4]
+    - navigation "グローバルナビゲーション" [ref=e5]:
+      - link "企業情報" [ref=e7] [cursor=pointer]:
+        - /url: /about/
+      - link "事業紹介" [ref=e9] [cursor=pointer]:
+        - /url: /business/
+      - link "サステナビリティ" [ref=e11] [cursor=pointer]:
+        - /url: /sustainability/
+      - link "ニュース" [ref=e13] [cursor=pointer]:
+        - /url: /news/
+      - link "採用情報" [ref=e15] [cursor=pointer]:
+        - /url: /recruit/
+    - link "お問い合わせ" [ref=e16] [cursor=pointer]:
+      - /url: /contact/
+      - img [ref=e17]
+      - text: お問い合わせ
+  - main [ref=e20]:
+    - region "AI計算基盤を、 電力インフラから構築する。" [ref=e21]:
+      - generic [ref=e23]:
+        - paragraph [ref=e24]:
+          - text: AI DATA CENTER
+          - generic [ref=e25]: AIデータセンター事業
+        - heading "AI計算基盤を、 電力インフラから構築する。" [level=1] [ref=e26]:
+          - text: AI計算基盤を、
+          - text: 電力インフラから構築する。
+        - paragraph [ref=e27]: 現在、川越市、和歌山県、千葉県、群馬県を中心に、AIデータセンターの建設計画・候補地を整理しています。 高密度な電力、冷却、蓄電池、再エネ、EMSを一体で検討し、計算基盤を支えるインフラから事業化を進めます。
+        - generic [ref=e28]:
+          - link "事業相談をする" [ref=e29] [cursor=pointer]:
+            - /url: /contact/
+            - text: 事業相談をする
+            - generic [ref=e30]: →
+          - link "統合モデルを見る" [ref=e31] [cursor=pointer]:
+            - /url: "#energy-model"
+            - text: 統合モデルを見る
+            - generic [ref=e32]: →
+      - generic "AIデータセンター事業の参考指標" [ref=e33]:
+        - generic [ref=e34]:
+          - generic [ref=e35]: 4エリア
+          - generic [ref=e36]: 建設計画・候補地を整理中
+        - generic [ref=e37]:
+          - generic [ref=e38]: 約23,000㎡
+          - generic [ref=e39]: 和歌山市金谷 データセンター用地計画
+        - generic [ref=e40]:
+          - generic [ref=e41]: 約20万坪
+          - generic [ref=e42]: 群馬・赤城事業所 場内規模
+        - generic [ref=e43]:
+          - generic [ref=e44]: 2026-2029
+          - generic [ref=e45]: 和歌山県計画 工事期間予定
+    - region "ラック電力の上昇が、 データセンター設計を変える。" [ref=e46]:
+      - generic [ref=e47]:
+        - generic [ref=e49]:
+          - paragraph [ref=e50]:
+            - text: POWER DENSITY
+            - generic [ref=e51]: AI計算基盤の課題
+          - heading "ラック電力の上昇が、 データセンター設計を変える。" [level=2] [ref=e52]:
+            - text: ラック電力の上昇が、
+            - text: データセンター設計を変える。
+        - generic [ref=e53]:
+          - figure [ref=e55]:
+            - img "AIデータセンター向けエネルギー一体化モデル" [ref=e56]
+          - generic [ref=e57]:
+            - article [ref=e59]:
+              - generic [ref=e60]: "01"
+              - heading "電力密度" [level=3] [ref=e61]
+              - paragraph [ref=e62]: AIサーバーはラック当たりの消費電力が大きく、受電容量、配電、冷却、非常用電源を同時に設計する必要があります。
+            - article [ref=e64]:
+              - generic [ref=e65]: "02"
+              - heading "電力の安定性" [level=3] [ref=e66]
+              - paragraph [ref=e67]: 再エネを活用する場合でも、蓄電池とEMSで変動を吸収し、計算基盤へ安定した電力を届ける構成が重要です。
+            - article [ref=e69]:
+              - generic [ref=e70]: "03"
+              - heading "運用の可視化" [level=3] [ref=e71]
+              - paragraph [ref=e72]: 発電、充放電、負荷、故障、CO2削減量をリアルタイムに把握し、設備運用を継続的に改善します。
+        - paragraph [ref=e73]: AIサーバーの電力密度は導入機器・構成により変動します。実案件では受電条件、冷却方式、法規、運用要件を個別に確認します。
+    - region "再エネ、蓄電池、EMSを、 AI計算基盤へ直結する。" [ref=e74]:
+      - generic [ref=e75]:
+        - generic [ref=e76]:
+          - paragraph [ref=e77]:
+            - text: INTEGRATED ENERGY MODEL
+            - generic [ref=e78]: エネルギー一体化モデル
+          - heading "再エネ、蓄電池、EMSを、 AI計算基盤へ直結する。" [level=2] [ref=e79]:
+            - text: 再エネ、蓄電池、EMSを、
+            - text: AI計算基盤へ直結する。
+          - paragraph [ref=e80]: データセンターの立地、受電、再エネ調達、蓄電池、冷却、遠隔監視を一体で検討。 電力の安定性と脱炭素性を両立する構成を計画します。
+        - figure [ref=e82]:
+          - img "グリーンでスマートなAI計算インフラ構想" [ref=e83]
+        - generic [ref=e84]:
+          - article [ref=e86]:
+            - text: "01"
+            - heading "電源・系統接続" [level=3] [ref=e87]
+            - paragraph [ref=e88]: 大容量受電、変電設備、送電ルート、系統接続条件を整理し、AI計算基盤の前提をつくります。
+          - article [ref=e90]:
+            - text: "02"
+            - heading "再エネ電力" [level=3] [ref=e91]
+            - paragraph [ref=e92]: 太陽光・風力などの再生可能エネルギーを組み合わせ、データセンターの電力調達を計画します。
+          - article [ref=e94]:
+            - text: "03"
+            - heading "蓄電池・調整力" [level=3] [ref=e95]
+            - paragraph [ref=e96]: BESSで出力変動を吸収し、ピークカット、バックアップ、需給調整の可能性を検討します。
+          - article [ref=e98]:
+            - text: "04"
+            - heading "冷却・建屋計画" [level=3] [ref=e99]
+            - paragraph [ref=e100]: サーバー負荷と発熱量を前提に、空調・冷却設備、電源室、動線、保守性を計画します。
+          - article [ref=e102]:
+            - text: "05"
+            - heading "EMS・遠隔監視" [level=3] [ref=e103]
+            - paragraph [ref=e104]: 発電・蓄電・消費電力を統合監視し、遠隔操作、異常検知、運用データ分析へ接続します。
+    - region "電力を見える化し、 AIで運用を最適化する。" [ref=e105]:
+      - generic [ref=e106]:
+        - figure [ref=e108]:
+          - img "EMS管理画面" [ref=e109]
+        - generic [ref=e110]:
+          - paragraph [ref=e111]:
+            - text: EMS / NOAH CLOUD
+            - generic [ref=e112]: 監視・制御基盤
+          - heading "電力を見える化し、 AIで運用を最適化する。" [level=2] [ref=e113]:
+            - text: 電力を見える化し、
+            - text: AIで運用を最適化する。
+          - paragraph [ref=e114]: 発電設備、蓄電池、サーバー負荷、充放電、異常情報をクラウドで統合。 分析・予測・遠隔操作により、電力コストと停止リスクを抑えながら運用します。
+          - list "EMSの主な機能" [ref=e115]:
+            - listitem [ref=e116]: リアルタイム監視
+            - listitem [ref=e117]: データ分析・予測
+            - listitem [ref=e118]: 故障診断・保守
+            - listitem [ref=e119]: エネルギー最適化管理
+            - listitem [ref=e120]: 遠隔監視・遠隔操作
+            - listitem [ref=e121]: 省エネ・脱炭素管理
+    - region "多源データを集め、 事故と停止を先回りする。" [ref=e122]:
+      - generic [ref=e123]:
+        - generic [ref=e124]:
+          - paragraph [ref=e125]:
+            - text: AI CONTROL
+            - generic [ref=e126]: AI制御・安全運用
+          - heading "多源データを集め、 事故と停止を先回りする。" [level=2] [ref=e127]:
+            - text: 多源データを集め、
+            - text: 事故と停止を先回りする。
+          - paragraph [ref=e128]: 発電・蓄電・負荷・設備状態のデータを集め、予測、異常検知、保守提案へつなげます。 AIデータセンターの価値は、建設後の運用品質で決まります。
+          - generic [ref=e129]:
+            - generic [ref=e130]:
+              - generic [ref=e131]: 5min
+              - generic [ref=e132]: 事前予警イメージ
+            - generic [ref=e133]:
+              - generic [ref=e134]: 50ms
+              - generic [ref=e135]: 調頻時間短縮イメージ
+            - generic [ref=e136]:
+              - generic [ref=e137]: 3%+
+              - generic [ref=e138]: アルゴリズム精度向上イメージ
+        - figure [ref=e140]:
+          - img "AI制御・データ収集・安全予測の概念図" [ref=e141]
+    - region "電力、用地、蓄電池を、 エリアごとに整理する。" [ref=e142]:
+      - generic [ref=e143]:
+        - generic [ref=e144]:
+          - paragraph [ref=e145]:
+            - text: PROJECT AREA
+            - generic [ref=e146]: 建設計画エリア
+          - heading "電力、用地、蓄電池を、 エリアごとに整理する。" [level=2] [ref=e147]:
+            - text: 電力、用地、蓄電池を、
+            - text: エリアごとに整理する。
+        - generic [ref=e148]:
+          - article [ref=e150]:
+            - figure [ref=e151]:
+              - img "川越市周辺を想定したAIデータセンター計画イメージ" [ref=e152]
+            - generic [ref=e153]:
+              - generic [ref=e154]:
+                - generic [ref=e155]: 条件整理中
+                - paragraph [ref=e156]: 埼玉県 川越市
+              - heading "首都圏西側の計算需要を見据えた計画候補" [level=3] [ref=e157]
+              - paragraph [ref=e158]: 詳細条件の整理後、受電条件、敷地条件、冷却・運用計画を確認しながら、AIデータセンターとしての成立条件を検討します。
+              - list [ref=e159]:
+                - listitem [ref=e160]: 詳細条件整理中
+                - listitem [ref=e161]: 電力・用地条件を確認予定
+          - article [ref=e163]:
+            - figure [ref=e164]:
+              - img "和歌山市金谷の開発地区を示す衛星図" [ref=e165]
+            - generic [ref=e166]:
+              - generic [ref=e167]:
+                - generic [ref=e168]: 計画確認済
+                - paragraph [ref=e169]: 和歌山県 和歌山市金谷
+              - heading "蓄電池とデータセンターを一体で整備する計画" [level=3] [ref=e170]
+              - paragraph [ref=e171]: 再生可能エネルギーの安定供給と情報インフラの整備を目的に、蓄電池設備用地とデータセンター用地を同時に確保する計画です。
+              - list [ref=e172]:
+                - listitem [ref=e173]: データセンター用地：約23,000㎡
+                - listitem [ref=e174]: 工事期間：2026年4月-2029年3月予定
+                - listitem [ref=e175]: 関西空港から車で45分、JR和歌山駅から20分
+          - article [ref=e177]:
+            - figure [ref=e178]:
+              - img "千葉県湾岸エリアを想定したAIデータセンター計画イメージ" [ref=e179]
+            - generic [ref=e180]:
+              - generic [ref=e181]:
+                - generic [ref=e182]: 条件整理中
+                - paragraph [ref=e183]: 千葉県
+              - heading "首都圏・湾岸エリアの電力需要を見据えた計画候補" [level=3] [ref=e184]
+              - paragraph [ref=e185]: 詳細条件の整理後、再エネ電源、系統接続、蓄電池、運用監視の組み合わせを確認し、掲載情報を更新します。
+              - list [ref=e186]:
+                - listitem [ref=e187]: 詳細条件整理中
+                - listitem [ref=e188]: 再エネ・系統条件を確認予定
+          - article [ref=e190]:
+            - figure [ref=e191]:
+              - img "群馬県前橋市赤城事業所の空撮写真" [ref=e192]
+            - generic [ref=e193]:
+              - generic [ref=e194]:
+                - generic [ref=e195]: 計画確認済
+                - paragraph [ref=e196]: 群馬県 前橋市 赤城事業所
+              - heading "既存工場・大規模用地を活用する計画候補" [level=3] [ref=e197]
+              - paragraph [ref=e198]: Sanden Forest・赤城事業所の土地・建物条件を確認。既存建物、未利用地、山林を含む大規模敷地の活用可能性を検討します。
+              - list [ref=e199]:
+                - listitem [ref=e200]: 場内：687,557㎡（約20万坪）
+                - listitem [ref=e201]: 建物合計：21棟・120,110.42㎡
+                - listitem [ref=e202]: 東京から車約140km、電車約2時間
+        - paragraph [ref=e203]: 掲載画像には計画説明用の図版・イメージを含みます。掲載内容は計画段階の情報です。川越市・千葉県は詳細条件が整い次第、掲載内容を更新します。
+    - region "計算需要から逆算して、 電力と建屋を設計する。" [ref=e204]:
+      - generic [ref=e205]:
+        - generic [ref=e206]:
+          - paragraph [ref=e207]:
+            - text: PROJECT FLOW
+            - generic [ref=e208]: 導入までの流れ
+          - heading "計算需要から逆算して、 電力と建屋を設計する。" [level=2] [ref=e209]:
+            - text: 計算需要から逆算して、
+            - text: 電力と建屋を設計する。
+        - generic [ref=e210]:
+          - article [ref=e212]:
+            - generic [ref=e213]: "01"
+            - heading "需要整理" [level=3] [ref=e214]
+            - paragraph [ref=e215]: GPUサーバー規模、ラック電力、冗長性、運用開始時期を整理します。
+          - article [ref=e217]:
+            - generic [ref=e218]: "02"
+            - heading "電力・敷地検討" [level=3] [ref=e219]
+            - paragraph [ref=e220]: 受電容量、再エネ候補、蓄電池容量、建屋条件、冷却方式を比較します。
+          - article [ref=e222]:
+            - generic [ref=e223]: "03"
+            - heading "統合設計" [level=3] [ref=e224]
+            - paragraph [ref=e225]: 電源、BESS、EMS、冷却、監視、保守動線を一体の計画に落とし込みます。
+          - article [ref=e227]:
+            - generic [ref=e228]: "04"
+            - heading "構築・運用" [level=3] [ref=e229]
+            - paragraph [ref=e230]: 施工、試運転、遠隔監視、運用改善まで継続的に支援します。
+    - region "AIデータセンターの電力計画を、 初期構想から整理します。" [ref=e231]:
+      - generic [ref=e233]:
+        - heading "AIデータセンターの電力計画を、 初期構想から整理します。" [level=2] [ref=e234]:
+          - text: AIデータセンターの電力計画を、
+          - text: 初期構想から整理します。
+        - paragraph [ref=e235]: 計算需要、受電容量、再エネ、蓄電池、冷却、運用監視まで、事業化に必要な前提を一緒に具体化します。
+        - generic [ref=e236]:
+          - link "お問い合わせ" [ref=e237] [cursor=pointer]:
+            - /url: /contact/
+            - text: お問い合わせ
+            - generic [ref=e238]: →
+          - link "事業一覧へ戻る" [ref=e239] [cursor=pointer]:
+            - /url: /business/
+            - text: 事業一覧へ戻る
+            - generic [ref=e240]: →
+  - contentinfo [ref=e241]:
+    - generic [ref=e243]:
+      - link "諾亜建設株式会社" [ref=e244] [cursor=pointer]:
+        - /url: /
+        - img "諾亜建設株式会社" [ref=e245]
+      - generic [ref=e246]:
+        - generic [ref=e247]:
+          - heading "企業情報" [level=3] [ref=e248]:
+            - link "企業情報" [ref=e249] [cursor=pointer]:
+              - /url: /about/
+          - link "トップメッセージ" [ref=e250] [cursor=pointer]:
+            - /url: /about/message/
+          - link "企業理念・ビジョン" [ref=e251] [cursor=pointer]:
+            - /url: /about/vision/
+          - link "行動基準" [ref=e252] [cursor=pointer]:
+            - /url: /about/standard/
+          - link "会社概要" [ref=e253] [cursor=pointer]:
+            - /url: /about/outline/
+          - link "グループ・組織図" [ref=e254] [cursor=pointer]:
+            - /url: /about/organization/
+          - link "沿革" [ref=e255] [cursor=pointer]:
+            - /url: /about/history/
+          - link "健康経営" [ref=e256] [cursor=pointer]:
+            - /url: /about/safety-health/
+        - generic [ref=e257]:
+          - heading "事業紹介" [level=3] [ref=e258]:
+            - link "事業紹介" [ref=e259] [cursor=pointer]:
+              - /url: /business/
+          - link "蓄電池事業" [ref=e260] [cursor=pointer]:
+            - /url: /business/batteryenergystorage/
+          - link "風力発電事業" [ref=e261] [cursor=pointer]:
+            - /url: /business/windpower/
+          - link "バイオマス" [ref=e262] [cursor=pointer]:
+            - /url: /business/biomasspower/
+          - link "走行式集塵ホッパー事業" [ref=e263] [cursor=pointer]:
+            - /url: /business/hopper/
+          - link "水素モビリティ事業" [ref=e264] [cursor=pointer]:
+            - /url: /business/hydrogen-mobility/
+          - link "AIデータセンター事業" [ref=e265] [cursor=pointer]:
+            - /url: /business/ai-data-center/
+        - generic [ref=e266]:
+          - heading "サステナビリティ" [level=3] [ref=e267]:
+            - link "サステナビリティ" [ref=e268] [cursor=pointer]:
+              - /url: /sustainability/
+          - link "地域共生" [ref=e269] [cursor=pointer]:
+            - /url: /sustainability/community-relations/
+          - link "環境保全" [ref=e270] [cursor=pointer]:
+            - /url: /sustainability/environment/
+          - link "カーボンニュートラル" [ref=e271] [cursor=pointer]:
+            - /url: /sustainability/carbon-neutrality/
+        - generic [ref=e272]:
+          - heading "その他" [level=3] [ref=e273]
+          - link "お問い合わせ" [ref=e274] [cursor=pointer]:
+            - /url: /contact/
+          - link "ニュース" [ref=e275] [cursor=pointer]:
+            - /url: /news/
+          - link "採用情報" [ref=e276] [cursor=pointer]:
+            - /url: /recruit/
+          - link "プライバシーポリシー" [ref=e277] [cursor=pointer]:
+            - /url: /privacy/
+          - link "サイトマップ" [ref=e278] [cursor=pointer]:
+            - /url: /sitemap/
+    - paragraph [ref=e279]: © NOAH CONSTRUCTION CO.,LTD. All Rights Reserved.
+  - alert [ref=e280]

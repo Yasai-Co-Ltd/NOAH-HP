@@ -1,0 +1,299 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - link "諾亜建設株式会社 ホーム" [ref=e3] [cursor=pointer]:
+      - /url: /
+      - img "NOAH CONSTRUCTION CO.,LTD. 諾亜建設株式会社" [ref=e4]
+    - navigation "グローバルナビゲーション" [ref=e5]:
+      - link "企業情報" [ref=e7] [cursor=pointer]:
+        - /url: /about/
+      - link "事業紹介" [ref=e9] [cursor=pointer]:
+        - /url: /business/
+      - link "サステナビリティ" [ref=e11] [cursor=pointer]:
+        - /url: /sustainability/
+      - link "ニュース" [ref=e13] [cursor=pointer]:
+        - /url: /news/
+      - link "採用情報" [ref=e15] [cursor=pointer]:
+        - /url: /recruit/
+    - link "お問い合わせ" [ref=e16] [cursor=pointer]:
+      - /url: /contact/
+      - img [ref=e17]
+      - text: お問い合わせ
+  - main [ref=e20]:
+    - region "粉塵を閉じ込め、 港湾荷役を止めない。" [ref=e21]:
+      - generic [ref=e23]:
+        - paragraph [ref=e24]:
+          - text: MOBILE DUST COLLECTION HOPPER
+          - generic [ref=e25]: 走行式集塵ホッパー事業
+        - heading "粉塵を閉じ込め、 港湾荷役を止めない。" [level=1] [ref=e26]:
+          - text: 粉塵を閉じ込め、
+          - text: 港湾荷役を止めない。
+        - paragraph [ref=e27]: 木質ペレット・PKSなどのバルク燃料を船からトラックへ移載する際に発生する粉塵を、 密閉グリル、集塵ファン、テレスコピック、フィルターで抑制。設計・製造・輸送・据付まで一貫して支援します。
+        - generic [ref=e28]:
+          - link "設備導入を相談する" [ref=e29] [cursor=pointer]:
+            - /url: /contact/
+            - text: 設備導入を相談する
+            - generic [ref=e30]: →
+          - link "仕様を見る" [ref=e31] [cursor=pointer]:
+            - /url: "#spec"
+            - text: 仕様を見る
+            - generic [ref=e32]: →
+      - generic "走行式集塵ホッパーの主要仕様" [ref=e33]:
+        - generic [ref=e34]:
+          - generic [ref=e35]: 300〜500m³/h
+          - generic [ref=e36]: 最大処理能力
+        - generic [ref=e37]:
+          - generic [ref=e38]: 30μm以上
+          - generic [ref=e39]: 捕捉対象粉塵の目安
+        - generic [ref=e40]:
+          - generic [ref=e41]: 25トン
+          - generic [ref=e42]: ホッパー内容量
+        - generic [ref=e43]:
+          - generic [ref=e44]: 約60トン
+          - generic [ref=e45]: 総重量
+    - region "投入から払い出しまで、 粉塵を設備内で処理する。" [ref=e46]:
+      - generic [ref=e47]:
+        - generic [ref=e49]:
+          - paragraph [ref=e50]:
+            - text: OPERATION
+            - generic [ref=e51]: 荷役時の粉塵抑制
+          - heading "投入から払い出しまで、 粉塵を設備内で処理する。" [level=2] [ref=e52]:
+            - text: 投入から払い出しまで、
+            - text: 粉塵を設備内で処理する。
+        - generic [ref=e53]:
+          - figure [ref=e55]:
+            - img "工場内で組み立てられた走行式集塵ホッパー" [ref=e56]
+          - list "荷役フロー" [ref=e57]:
+            - listitem [ref=e58]:
+              - generic [ref=e59]: "01"
+              - heading "船から受ける" [level=3] [ref=e60]
+              - paragraph [ref=e61]: グラブバケットで木質ペレットやPKSをつかみ、上部ホッパーへ投入します。
+            - listitem [ref=e62]:
+              - generic [ref=e63]: "02"
+              - heading "粉塵を閉じ込める" [level=3] [ref=e64]
+              - paragraph [ref=e65]: 密閉グリルと防風板で、投入時に発生する粉塵の外部飛散を抑えます。
+            - listitem [ref=e66]:
+              - generic [ref=e67]: "03"
+              - heading "吸引・濾過する" [level=3] [ref=e68]
+              - paragraph [ref=e69]: 負圧と集塵ファンにより粉塵を吸引し、フィルターで捕集します。
+            - listitem [ref=e70]:
+              - generic [ref=e71]: "04"
+              - heading "トラックへ払い出す" [level=3] [ref=e72]
+              - paragraph [ref=e73]: 開閉ゲートとテレスコピックで粉塵を抑えながら積み込みます。
+    - region "荷役、集塵、走行、安全を、 一台にまとめる。" [ref=e74]:
+      - generic [ref=e75]:
+        - generic [ref=e76]:
+          - paragraph [ref=e77]:
+            - text: EQUIPMENT STRUCTURE
+            - generic [ref=e78]: 構成機能
+          - heading "荷役、集塵、走行、安全を、 一台にまとめる。" [level=2] [ref=e79]:
+            - text: 荷役、集塵、走行、安全を、
+            - text: 一台にまとめる。
+          - paragraph [ref=e80]: 上部ホッパー、密閉グリル、集塵装置、開閉ゲート、テレスコピック、走行輪、操作室を一体化。 現場の荷役動線に合わせて、粉塵を抑えながら移載作業を進めます。
+        - figure [ref=e82]:
+          - img "走行式集塵ホッパーの構成が分かる3Dビジュアル" [ref=e83]
+        - generic [ref=e84]:
+          - article [ref=e86]:
+            - generic [ref=e87]: "01"
+            - heading "密閉グリル" [level=3] [ref=e88]
+            - paragraph [ref=e89]: 燃料投入後にゴムシートが閉じ、粉塵を内部に閉じ込めます。
+          - article [ref=e91]:
+            - generic [ref=e92]: "02"
+            - heading "集塵システム" [level=3] [ref=e93]
+            - paragraph [ref=e94]: 集塵機、配管、ファン、エアコンプレッサーで負圧を形成します。
+          - article [ref=e96]:
+            - generic [ref=e97]: "03"
+            - heading "粉塵逆洗回収" [level=3] [ref=e98]
+            - paragraph [ref=e99]: フィルターに残った粉塵を圧縮空気でホッパーへ戻し、材料ロスを抑えます。
+          - article [ref=e101]:
+            - generic [ref=e102]: "04"
+            - heading "テレスコピック" [level=3] [ref=e103]
+            - paragraph [ref=e104]: 二重構造の排出口で、積込部の粉塵も集塵経路へ導きます。
+          - article [ref=e106]:
+            - generic [ref=e107]: "05"
+            - heading "自走・旋回機構" [level=3] [ref=e108]
+            - paragraph [ref=e109]: 駆動輪、旋回ベアリング、サポートレッグにより現場内移動に対応します。
+          - article [ref=e111]:
+            - generic [ref=e112]: "06"
+            - heading "安全保護" [level=3] [ref=e113]
+            - paragraph [ref=e114]: レベル警告灯、移動警報灯、衝突防止部材、防風チェーンを備えます。
+    - region "負圧で吸引し、 フィルターで捕集する。" [ref=e115]:
+      - generic [ref=e116]:
+        - figure [ref=e118]:
+          - img "側面から見た走行式集塵ホッパー" [ref=e119]
+        - generic [ref=e120]:
+          - paragraph [ref=e121]:
+            - text: DUST COLLECTION
+            - generic [ref=e122]: 集塵システム
+          - heading "負圧で吸引し、 フィルターで捕集する。" [level=2] [ref=e123]:
+            - text: 負圧で吸引し、
+            - text: フィルターで捕集する。
+          - paragraph [ref=e124]: 密閉グリルの下部に集塵装置を配置し、投入時に舞い上がる粉塵をファンで吸引。 フィルター表面に残った粉塵は圧縮空気でホッパーへ戻し、材料ロスを抑えます。
+          - generic [ref=e125]:
+            - generic [ref=e126]:
+              - generic [ref=e127]: 59,000m³/h
+              - generic [ref=e128]: 開口部風量
+            - generic [ref=e129]:
+              - generic [ref=e130]: 22kW×4
+              - generic [ref=e131]: 開口部集塵ファンモーター
+            - generic [ref=e132]:
+              - generic [ref=e133]: 2.4m³/分
+              - generic [ref=e134]: エアコンプレッサー風量
+            - generic [ref=e135]:
+              - generic [ref=e136]: 0.8MPa
+              - generic [ref=e137]: 定格圧力
+    - region "港湾条件に合わせて、 仕様を確認する。" [ref=e138]:
+      - generic [ref=e139]:
+        - generic [ref=e141]:
+          - paragraph [ref=e142]:
+            - text: TECHNICAL SPEC
+            - generic [ref=e143]: 主要仕様
+          - heading "港湾条件に合わせて、 仕様を確認する。" [level=2] [ref=e144]:
+            - text: 港湾条件に合わせて、
+            - text: 仕様を確認する。
+        - generic [ref=e145]:
+          - figure [ref=e147]:
+            - img "走行式集塵ホッパーの海側図面" [ref=e148]
+          - table [ref=e151]:
+            - rowgroup [ref=e152]:
+              - row "機器タイプ 走行式集塵ホッパー" [ref=e153]:
+                - rowheader "機器タイプ" [ref=e154]
+                - cell "走行式集塵ホッパー" [ref=e155]
+              - row "適用材料 木質ペレット、PKS" [ref=e156]:
+                - rowheader "適用材料" [ref=e157]
+                - cell "木質ペレット、PKS" [ref=e158]
+              - row "材料比重 0.5〜0.7t/m³" [ref=e159]:
+                - rowheader "材料比重" [ref=e160]
+                - cell "0.5〜0.7t/m³" [ref=e161]
+              - row "定格作業効率 300m³/時" [ref=e162]:
+                - rowheader "定格作業効率" [ref=e163]
+                - cell "300m³/時" [ref=e164]
+              - row "総高 9000mm（遮風板含む）" [ref=e165]:
+                - rowheader "総高" [ref=e166]
+                - cell "9000mm（遮風板含む）" [ref=e167]
+              - row "トラック通路空間高さ 4250mm" [ref=e168]:
+                - rowheader "トラック通路空間高さ" [ref=e169]
+                - cell "4250mm" [ref=e170]
+              - row "長さ×幅 7000mm×6000mm（輪距離）" [ref=e171]:
+                - rowheader "長さ×幅" [ref=e172]
+                - cell "7000mm×6000mm（輪距離）" [ref=e173]
+              - row "ホッパー内容量 25トン" [ref=e174]:
+                - rowheader "ホッパー内容量" [ref=e175]
+                - cell "25トン" [ref=e176]
+              - row "移動方式 自走式移動歩行" [ref=e177]:
+                - rowheader "移動方式" [ref=e178]
+                - cell "自走式移動歩行" [ref=e179]
+              - row "総重量 約60トン" [ref=e180]:
+                - rowheader "総重量" [ref=e181]
+                - cell "約60トン" [ref=e182]
+              - row "電源 220V、60Hz、三相4線" [ref=e183]:
+                - rowheader "電源" [ref=e184]
+                - cell "220V、60Hz、三相4線" [ref=e185]
+              - row "制御方式 PLC制御（三菱PLC）" [ref=e186]:
+                - rowheader "制御方式" [ref=e187]
+                - cell "PLC制御（三菱PLC）" [ref=e188]
+        - paragraph [ref=e189]: 上記は走行式集塵ホッパーの代表仕様です。実案件では対象材料、処理量、港湾条件、電源条件に合わせて個別に確認します。
+    - region "設計・製造から据付まで、 重量設備を一貫して届ける。" [ref=e190]:
+      - generic [ref=e191]:
+        - generic [ref=e192]:
+          - paragraph [ref=e193]:
+            - text: DELIVERY SUPPORT
+            - generic [ref=e194]: 導入支援
+          - heading "設計・製造から据付まで、 重量設備を一貫して届ける。" [level=2] [ref=e195]:
+            - text: 設計・製造から据付まで、
+            - text: 重量設備を一貫して届ける。
+        - generic [ref=e196]:
+          - article [ref=e198]:
+            - generic [ref=e199]: "01"
+            - heading "仕様整理" [level=3] [ref=e200]
+            - paragraph [ref=e201]: 荷役対象、港湾条件、処理量、粉塵基準、運用動線を整理します。
+          - article [ref=e203]:
+            - generic [ref=e204]: "02"
+            - heading "設計・製造" [level=3] [ref=e205]
+            - paragraph [ref=e206]: 海外パートナーと連携し、設計・製造・検査まで進めます。
+          - article [ref=e208]:
+            - generic [ref=e209]: "03"
+            - heading "輸送・通関" [level=3] [ref=e210]
+            - paragraph [ref=e211]: 海上輸送、日本国内の通関、陸上輸送まで一体で管理します。
+          - article [ref=e213]:
+            - generic [ref=e214]: "04"
+            - heading "据付・運用支援" [level=3] [ref=e215]
+            - paragraph [ref=e216]: 据付、試運転、操作手順、メンテナンス体制まで支援します。
+    - region "港湾荷役・粉塵対策設備の 導入相談はこちら" [ref=e217]:
+      - generic [ref=e219]:
+        - heading "港湾荷役・粉塵対策設備の 導入相談はこちら" [level=2] [ref=e220]:
+          - text: 港湾荷役・粉塵対策設備の
+          - text: 導入相談はこちら
+        - paragraph [ref=e221]: 対象燃料、処理量、港湾条件、輸送・据付条件まで、初期段階から整理します。
+        - generic [ref=e222]:
+          - link "お問い合わせ" [ref=e223] [cursor=pointer]:
+            - /url: /contact/
+            - text: お問い合わせ
+            - generic [ref=e224]: →
+          - link "事業一覧へ戻る" [ref=e225] [cursor=pointer]:
+            - /url: /business/
+            - text: 事業一覧へ戻る
+            - generic [ref=e226]: →
+  - contentinfo [ref=e227]:
+    - generic [ref=e229]:
+      - link "諾亜建設株式会社" [ref=e230] [cursor=pointer]:
+        - /url: /
+        - img "諾亜建設株式会社" [ref=e231]
+      - generic [ref=e232]:
+        - generic [ref=e233]:
+          - heading "企業情報" [level=3] [ref=e234]:
+            - link "企業情報" [ref=e235] [cursor=pointer]:
+              - /url: /about/
+          - link "トップメッセージ" [ref=e236] [cursor=pointer]:
+            - /url: /about/message/
+          - link "企業理念・ビジョン" [ref=e237] [cursor=pointer]:
+            - /url: /about/vision/
+          - link "行動基準" [ref=e238] [cursor=pointer]:
+            - /url: /about/standard/
+          - link "会社概要" [ref=e239] [cursor=pointer]:
+            - /url: /about/outline/
+          - link "グループ・組織図" [ref=e240] [cursor=pointer]:
+            - /url: /about/organization/
+          - link "沿革" [ref=e241] [cursor=pointer]:
+            - /url: /about/history/
+          - link "健康経営" [ref=e242] [cursor=pointer]:
+            - /url: /about/safety-health/
+        - generic [ref=e243]:
+          - heading "事業紹介" [level=3] [ref=e244]:
+            - link "事業紹介" [ref=e245] [cursor=pointer]:
+              - /url: /business/
+          - link "蓄電池事業" [ref=e246] [cursor=pointer]:
+            - /url: /business/batteryenergystorage/
+          - link "風力発電事業" [ref=e247] [cursor=pointer]:
+            - /url: /business/windpower/
+          - link "バイオマス" [ref=e248] [cursor=pointer]:
+            - /url: /business/biomasspower/
+          - link "走行式集塵ホッパー事業" [ref=e249] [cursor=pointer]:
+            - /url: /business/hopper/
+          - link "水素モビリティ事業" [ref=e250] [cursor=pointer]:
+            - /url: /business/hydrogen-mobility/
+          - link "AIデータセンター事業" [ref=e251] [cursor=pointer]:
+            - /url: /business/ai-data-center/
+        - generic [ref=e252]:
+          - heading "サステナビリティ" [level=3] [ref=e253]:
+            - link "サステナビリティ" [ref=e254] [cursor=pointer]:
+              - /url: /sustainability/
+          - link "地域共生" [ref=e255] [cursor=pointer]:
+            - /url: /sustainability/community-relations/
+          - link "環境保全" [ref=e256] [cursor=pointer]:
+            - /url: /sustainability/environment/
+          - link "カーボンニュートラル" [ref=e257] [cursor=pointer]:
+            - /url: /sustainability/carbon-neutrality/
+        - generic [ref=e258]:
+          - heading "その他" [level=3] [ref=e259]
+          - link "お問い合わせ" [ref=e260] [cursor=pointer]:
+            - /url: /contact/
+          - link "ニュース" [ref=e261] [cursor=pointer]:
+            - /url: /news/
+          - link "採用情報" [ref=e262] [cursor=pointer]:
+            - /url: /recruit/
+          - link "プライバシーポリシー" [ref=e263] [cursor=pointer]:
+            - /url: /privacy/
+          - link "サイトマップ" [ref=e264] [cursor=pointer]:
+            - /url: /sitemap/
+    - paragraph [ref=e265]: © NOAH CONSTRUCTION CO.,LTD. All Rights Reserved.
+  - alert [ref=e266]

@@ -1,0 +1,172 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - link "諾亜建設株式会社 ホーム" [ref=e3] [cursor=pointer]:
+      - /url: /
+      - img "NOAH CONSTRUCTION CO.,LTD. 諾亜建設株式会社" [ref=e4]
+    - navigation "グローバルナビゲーション" [ref=e5]:
+      - link "企業情報" [ref=e7] [cursor=pointer]:
+        - /url: /about/
+      - link "事業紹介" [ref=e9] [cursor=pointer]:
+        - /url: /business/
+      - link "サステナビリティ" [ref=e11] [cursor=pointer]:
+        - /url: /sustainability/
+      - link "ニュース" [ref=e13] [cursor=pointer]:
+        - /url: /news/
+      - link "採用情報" [ref=e15] [cursor=pointer]:
+        - /url: /recruit/
+    - link "お問い合わせ" [ref=e16] [cursor=pointer]:
+      - /url: /contact/
+      - img [ref=e17]
+      - text: お問い合わせ
+  - main [ref=e20]:
+    - region "人と地球に優しい、 持続可能な社会を 創造する。" [ref=e21]:
+      - generic [ref=e22]:
+        - generic [ref=e23]:
+          - paragraph [ref=e24]:
+            - text: PHILOSOPHY & VISION
+            - generic [ref=e25]: 企業理念・ビジョン
+          - heading "人と地球に優しい、 持続可能な社会を 創造する。" [level=1] [ref=e26]:
+            - text: 人と地球に優しい、
+            - text: 持続可能な社会を
+            - text: 創造する。
+          - generic [ref=e27]:
+            - link "理念を見る" [ref=e28] [cursor=pointer]:
+              - /url: "#philosophy"
+              - text: 理念を見る
+              - generic [ref=e29]: →
+            - link "企業情報へ戻る" [ref=e30] [cursor=pointer]:
+              - /url: /about/
+              - text: 企業情報へ戻る
+              - generic [ref=e31]: →
+        - figure "環境に優しい世界を、事業として実装する。" [ref=e33]:
+          - img "手の上の若木と地球" [ref=e34]
+          - generic [ref=e35]: 環境に優しい世界を、事業として実装する。
+      - text: VISION
+    - region "人と地球に優しい 持続可能な社会を創造する。" [ref=e36]:
+      - generic [ref=e38]:
+        - paragraph [ref=e39]:
+          - text: PHILOSOPHY
+          - generic [ref=e40]: 企業理念
+        - heading "人と地球に優しい 持続可能な社会を創造する。" [level=2] [ref=e41]:
+          - text: 人と地球に優しい
+          - text: 持続可能な社会を創造する。
+      - generic "理念を構成する3つの視点" [ref=e42]:
+        - article [ref=e44]:
+          - generic [ref=e45]: "01"
+          - heading "人に優しい" [level=3] [ref=e46]
+          - paragraph [ref=e47]: 地域の暮らしと、働く人の安全を支えるインフラを。
+        - article [ref=e49]:
+          - generic [ref=e50]: "02"
+          - heading "地球に優しい" [level=3] [ref=e51]
+          - paragraph [ref=e52]: 再エネ・蓄電・水素を組み合わせ、脱炭素化を前へ。
+        - article [ref=e54]:
+          - generic [ref=e55]: "03"
+          - heading "持続可能にする" [level=3] [ref=e56]
+          - paragraph [ref=e57]: 運用・保守まで見据えた、長く使える仕組みに。
+    - region "環境に優しい 世界を創る。" [ref=e58]:
+      - generic [ref=e59]:
+        - generic [ref=e61]:
+          - generic [ref=e62]:
+            - paragraph [ref=e63]:
+              - text: VISION
+              - generic [ref=e64]: 社会使命
+            - heading "環境に優しい 世界を創る。" [level=2] [ref=e65]:
+              - text: 環境に優しい
+              - text: 世界を創る。
+          - paragraph [ref=e66]: 再生可能エネルギーは環境に優しい一方、発電量の変動が課題となり、出力抑制も行われています。 さらに、再生可能エネルギーから水素を製造するコストの高さは、水素社会実現の大きな壁です。 NOAHは、水素の製造から供給、利用に至る一連の設備を取り扱い、地域事情に適したシステムのご提案により、次の5つを実行します。
+        - generic [ref=e67]:
+          - article [ref=e69]:
+            - generic [ref=e70]: "01"
+            - heading "経済的な水素社会を創る" [level=3] [ref=e71]
+            - paragraph [ref=e72]: 最適な水素事業ネットワークの構築により、経済的な水素社会の実現を目指します。
+          - article [ref=e74]:
+            - generic [ref=e75]: "02"
+            - heading "水素供給の強化を図る" [level=3] [ref=e76]
+            - paragraph [ref=e77]: 水素の国内自給率向上により、水素供給の強化を図ります。
+          - article [ref=e79]:
+            - generic [ref=e80]: "03"
+            - heading "地域経済・地域BCPに貢献する" [level=3] [ref=e81]
+            - paragraph [ref=e82]: マイクログリッドを活用した地域水素製造により、地域経済、地域BCP対応に貢献します。
+          - article [ref=e84]:
+            - generic [ref=e85]: "04"
+            - heading "再生可能エネルギー導入拡大に貢献する" [level=3] [ref=e86]
+            - paragraph [ref=e87]: 余剰となる再生可能エネルギーなどの活用により、再生可能エネルギーの導入拡大に貢献します。
+          - article [ref=e89]:
+            - generic [ref=e90]: "05"
+            - heading "「環境に優しい世界を創る」を果たす" [level=3] [ref=e91]
+            - paragraph [ref=e92]: 再生可能エネルギーの導入拡大、水素社会の普及を通じて地球環境保全に努め、「環境に優しい世界を創る」という社会使命を果たします。
+    - region "理念を支えるメッセージや行動基準もご覧ください。" [ref=e93]:
+      - generic [ref=e95]:
+        - paragraph [ref=e96]: NEXT CONTENTS
+        - heading "理念を支えるメッセージや行動基準もご覧ください。" [level=2] [ref=e97]
+        - generic [ref=e98]:
+          - link "トップメッセージ" [ref=e99] [cursor=pointer]:
+            - /url: /about/message/
+          - link "行動基準" [ref=e100] [cursor=pointer]:
+            - /url: /about/standard/
+          - link "会社概要" [ref=e101] [cursor=pointer]:
+            - /url: /about/outline/
+  - contentinfo [ref=e102]:
+    - generic [ref=e104]:
+      - link "諾亜建設株式会社" [ref=e105] [cursor=pointer]:
+        - /url: /
+        - img "諾亜建設株式会社" [ref=e106]
+      - generic [ref=e107]:
+        - generic [ref=e108]:
+          - heading "企業情報" [level=3] [ref=e109]:
+            - link "企業情報" [ref=e110] [cursor=pointer]:
+              - /url: /about/
+          - link "トップメッセージ" [ref=e111] [cursor=pointer]:
+            - /url: /about/message/
+          - link "企業理念・ビジョン" [ref=e112] [cursor=pointer]:
+            - /url: /about/vision/
+          - link "行動基準" [ref=e113] [cursor=pointer]:
+            - /url: /about/standard/
+          - link "会社概要" [ref=e114] [cursor=pointer]:
+            - /url: /about/outline/
+          - link "グループ・組織図" [ref=e115] [cursor=pointer]:
+            - /url: /about/organization/
+          - link "沿革" [ref=e116] [cursor=pointer]:
+            - /url: /about/history/
+          - link "健康経営" [ref=e117] [cursor=pointer]:
+            - /url: /about/safety-health/
+        - generic [ref=e118]:
+          - heading "事業紹介" [level=3] [ref=e119]:
+            - link "事業紹介" [ref=e120] [cursor=pointer]:
+              - /url: /business/
+          - link "蓄電池事業" [ref=e121] [cursor=pointer]:
+            - /url: /business/batteryenergystorage/
+          - link "風力発電事業" [ref=e122] [cursor=pointer]:
+            - /url: /business/windpower/
+          - link "バイオマス" [ref=e123] [cursor=pointer]:
+            - /url: /business/biomasspower/
+          - link "走行式集塵ホッパー事業" [ref=e124] [cursor=pointer]:
+            - /url: /business/hopper/
+          - link "水素モビリティ事業" [ref=e125] [cursor=pointer]:
+            - /url: /business/hydrogen-mobility/
+          - link "AIデータセンター事業" [ref=e126] [cursor=pointer]:
+            - /url: /business/ai-data-center/
+        - generic [ref=e127]:
+          - heading "サステナビリティ" [level=3] [ref=e128]:
+            - link "サステナビリティ" [ref=e129] [cursor=pointer]:
+              - /url: /sustainability/
+          - link "地域共生" [ref=e130] [cursor=pointer]:
+            - /url: /sustainability/community-relations/
+          - link "環境保全" [ref=e131] [cursor=pointer]:
+            - /url: /sustainability/environment/
+          - link "カーボンニュートラル" [ref=e132] [cursor=pointer]:
+            - /url: /sustainability/carbon-neutrality/
+        - generic [ref=e133]:
+          - heading "その他" [level=3] [ref=e134]
+          - link "お問い合わせ" [ref=e135] [cursor=pointer]:
+            - /url: /contact/
+          - link "ニュース" [ref=e136] [cursor=pointer]:
+            - /url: /news/
+          - link "採用情報" [ref=e137] [cursor=pointer]:
+            - /url: /recruit/
+          - link "プライバシーポリシー" [ref=e138] [cursor=pointer]:
+            - /url: /privacy/
+          - link "サイトマップ" [ref=e139] [cursor=pointer]:
+            - /url: /sitemap/
+    - paragraph [ref=e140]: © NOAH CONSTRUCTION CO.,LTD. All Rights Reserved.
+  - alert [ref=e141]

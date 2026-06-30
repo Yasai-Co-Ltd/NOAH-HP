@@ -1,0 +1,201 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - link "諾亜建設株式会社 ホーム" [ref=e3] [cursor=pointer]:
+      - /url: /
+      - img "NOAH CONSTRUCTION CO.,LTD. 諾亜建設株式会社" [ref=e4]
+    - navigation "グローバルナビゲーション" [ref=e5]:
+      - link "企業情報" [ref=e7] [cursor=pointer]:
+        - /url: /about/
+      - link "事業紹介" [ref=e9] [cursor=pointer]:
+        - /url: /business/
+      - link "サステナビリティ" [ref=e11] [cursor=pointer]:
+        - /url: /sustainability/
+      - link "ニュース" [ref=e13] [cursor=pointer]:
+        - /url: /news/
+      - link "採用情報" [ref=e15] [cursor=pointer]:
+        - /url: /recruit/
+    - link "お問い合わせ" [ref=e16] [cursor=pointer]:
+      - /url: /contact/
+      - img [ref=e17]
+      - text: お問い合わせ
+  - main [ref=e20]:
+    - region "エネルギーの生成・蓄電・活用を、 ひとつの構想でつなぐ。" [ref=e21]:
+      - generic [ref=e24]:
+        - paragraph [ref=e25]: BUSINESS
+        - generic [ref=e26]: 事業紹介
+        - heading "エネルギーの生成・蓄電・活用を、 ひとつの構想でつなぐ。" [level=1] [ref=e27]:
+          - text: エネルギーの生成・蓄電・活用を、
+          - text: ひとつの構想でつなぐ。
+        - paragraph [ref=e28]: 蓄電池、風力発電、バイオマス、走行式集塵ホッパー、水素モビリティ、AIデータセンター。 NOAHは地域と企業の課題に合わせ、最適なインフラを設計します。
+        - link "導入相談をする" [ref=e29] [cursor=pointer]:
+          - /url: /contact/
+          - text: 導入相談をする
+          - generic [ref=e30]: →
+    - region "空を活用する、 次世代の電源。" [ref=e31]:
+      - generic [ref=e32]:
+        - generic [ref=e33]:
+          - paragraph [ref=e34]:
+            - text: FEATURED TECHNOLOGY
+            - generic [ref=e35]: 注目技術
+          - heading "空を活用する、 次世代の電源。" [level=2] [ref=e36]:
+            - text: 空を活用する、
+            - text: 次世代の電源。
+          - paragraph [ref=e37]: 飛行船型の空中風力発電システムを、離島・災害拠点・既存風力との併設へ。NOAHらしい新しい発電インフラとして訴求します。
+          - link "詳しく見る" [ref=e38] [cursor=pointer]:
+            - /url: /business/airborne-power/
+            - text: 詳しく見る
+            - generic [ref=e39]: →
+        - figure "空に浮かぶ、可搬型の発電所。" [ref=e41]:
+          - img "NOAHロゴが入った飛行船型の空中発電所" [ref=e42]
+          - generic [ref=e43]: NOAH AIRBORNE WIND
+          - generic [ref=e44]: 空に浮かぶ、可搬型の発電所。
+    - region "複数の事業領域を結び、 最適なインフラを設計する。" [ref=e45]:
+      - generic [ref=e46]:
+        - generic [ref=e49]:
+          - paragraph [ref=e50]:
+            - text: BUSINESS DOMAIN
+            - generic [ref=e51]: 主要事業領域
+          - heading "複数の事業領域を結び、 最適なインフラを設計する。" [level=2] [ref=e52]:
+            - text: 複数の事業領域を結び、
+            - text: 最適なインフラを設計する。
+        - generic [ref=e53]:
+          - article [ref=e55]:
+            - link "大型蓄電池設備 01 蓄電池事業 大規模蓄電システムの導入により、再生可能エネルギーの安定活用と地域のレジリエンス向上に貢献します。 詳しく見る →" [ref=e56] [cursor=pointer]:
+              - /url: /business/batteryenergystorage/
+              - img "大型蓄電池設備" [ref=e58]
+              - generic [ref=e59]:
+                - heading "01 蓄電池事業" [level=3] [ref=e60]:
+                  - generic [ref=e61]: "01"
+                  - text: 蓄電池事業
+                - paragraph [ref=e62]: 大規模蓄電システムの導入により、再生可能エネルギーの安定活用と地域のレジリエンス向上に貢献します。
+                - generic [ref=e63]: 詳しく見る →
+          - article [ref=e65]:
+            - link "風力発電設備 02 風力発電事業 風況調査から設計・施工・保守まで、風力発電プロジェクトを一貫してサポートします。 詳しく見る →" [ref=e66] [cursor=pointer]:
+              - /url: /business/windpower/
+              - img "風力発電設備" [ref=e68]
+              - generic [ref=e69]:
+                - heading "02 風力発電事業" [level=3] [ref=e70]:
+                  - generic [ref=e71]: "02"
+                  - text: 風力発電事業
+                - paragraph [ref=e72]: 風況調査から設計・施工・保守まで、風力発電プロジェクトを一貫してサポートします。
+                - generic [ref=e73]: 詳しく見る →
+          - article [ref=e75]:
+            - link "バイオマス発電設備 03 バイオマス 木質資源などを活用したバイオマス発電により、地域資源の循環と安定した再生可能エネルギー供給を支えます。 詳しく見る →" [ref=e76] [cursor=pointer]:
+              - /url: /business/biomasspower/
+              - img "バイオマス発電設備" [ref=e78]
+              - generic [ref=e79]:
+                - heading "03 バイオマス" [level=3] [ref=e80]:
+                  - generic [ref=e81]: "03"
+                  - text: バイオマス
+                - paragraph [ref=e82]: 木質資源などを活用したバイオマス発電により、地域資源の循環と安定した再生可能エネルギー供給を支えます。
+                - generic [ref=e83]: 詳しく見る →
+          - article [ref=e85]:
+            - link "走行式集塵ホッパー設備 04 走行式集塵ホッパー事業 港湾・発電所・資源受入施設に向けて、粉じんを抑えながら原料を効率的に荷役する走行式集塵ホッパーを提案します。 詳しく見る →" [ref=e86] [cursor=pointer]:
+              - /url: /business/hopper/
+              - img "走行式集塵ホッパー設備" [ref=e88]
+              - generic [ref=e89]:
+                - heading "04 走行式集塵ホッパー事業" [level=3] [ref=e90]:
+                  - generic [ref=e91]: "04"
+                  - text: 走行式集塵ホッパー事業
+                - paragraph [ref=e92]: 港湾・発電所・資源受入施設に向けて、粉じんを抑えながら原料を効率的に荷役する走行式集塵ホッパーを提案します。
+                - generic [ref=e93]: 詳しく見る →
+          - article [ref=e95]:
+            - link "NOAHロゴ入り水素トラックの充填設備 05 水素モビリティ事業 水素ステーションや関連設備の整備を通じて、商用車・産業車両を中心とした次世代モビリティを支えます。 詳しく見る →" [ref=e96] [cursor=pointer]:
+              - /url: /business/hydrogen-mobility/
+              - img "NOAHロゴ入り水素トラックの充填設備" [ref=e98]
+              - generic [ref=e99]:
+                - heading "05 水素モビリティ事業" [level=3] [ref=e100]:
+                  - generic [ref=e101]: "05"
+                  - text: 水素モビリティ事業
+                - paragraph [ref=e102]: 水素ステーションや関連設備の整備を通じて、商用車・産業車両を中心とした次世代モビリティを支えます。
+                - generic [ref=e103]: 詳しく見る →
+          - article [ref=e105]:
+            - link "再生可能エネルギーと連携するAIデータセンター 06 AIデータセンター事業 AI計算基盤を支えるデータセンターの電力・冷却・エネルギーマネジメントを総合的に計画します。 詳しく見る →" [ref=e106] [cursor=pointer]:
+              - /url: /business/ai-data-center/
+              - img "再生可能エネルギーと連携するAIデータセンター" [ref=e108]
+              - generic [ref=e109]:
+                - heading "06 AIデータセンター事業" [level=3] [ref=e110]:
+                  - generic [ref=e111]: "06"
+                  - text: AIデータセンター事業
+                - paragraph [ref=e112]: AI計算基盤を支えるデータセンターの電力・冷却・エネルギーマネジメントを総合的に計画します。
+                - generic [ref=e113]: 詳しく見る →
+    - region "構想から運用まで、 一貫して支援。" [ref=e114]:
+      - generic [ref=e117]:
+        - generic [ref=e118]:
+          - paragraph [ref=e119]: INTEGRATED SUPPORT
+          - heading "構想から運用まで、 一貫して支援。" [level=2] [ref=e120]:
+            - text: 構想から運用まで、
+            - text: 一貫して支援。
+        - generic [ref=e121]:
+          - paragraph [ref=e122]: 調査・企画、設計・調達、施工・導入、運用・改善まで、 6つの事業領域を横断してプロジェクトを支えます。
+          - list "統合支援の流れ" [ref=e123]:
+            - listitem [ref=e124]: 調査・企画
+            - listitem [ref=e125]: 設計・調達
+            - listitem [ref=e126]: 施工・導入
+            - listitem [ref=e127]: 運用・改善
+  - contentinfo [ref=e128]:
+    - generic [ref=e130]:
+      - link "諾亜建設株式会社" [ref=e131] [cursor=pointer]:
+        - /url: /
+        - img "諾亜建設株式会社" [ref=e132]
+      - generic [ref=e133]:
+        - generic [ref=e134]:
+          - heading "企業情報" [level=3] [ref=e135]:
+            - link "企業情報" [ref=e136] [cursor=pointer]:
+              - /url: /about/
+          - link "トップメッセージ" [ref=e137] [cursor=pointer]:
+            - /url: /about/message/
+          - link "企業理念・ビジョン" [ref=e138] [cursor=pointer]:
+            - /url: /about/vision/
+          - link "行動基準" [ref=e139] [cursor=pointer]:
+            - /url: /about/standard/
+          - link "会社概要" [ref=e140] [cursor=pointer]:
+            - /url: /about/outline/
+          - link "グループ・組織図" [ref=e141] [cursor=pointer]:
+            - /url: /about/organization/
+          - link "沿革" [ref=e142] [cursor=pointer]:
+            - /url: /about/history/
+          - link "健康経営" [ref=e143] [cursor=pointer]:
+            - /url: /about/safety-health/
+        - generic [ref=e144]:
+          - heading "事業紹介" [level=3] [ref=e145]:
+            - link "事業紹介" [ref=e146] [cursor=pointer]:
+              - /url: /business/
+          - link "蓄電池事業" [ref=e147] [cursor=pointer]:
+            - /url: /business/batteryenergystorage/
+          - link "風力発電事業" [ref=e148] [cursor=pointer]:
+            - /url: /business/windpower/
+          - link "バイオマス" [ref=e149] [cursor=pointer]:
+            - /url: /business/biomasspower/
+          - link "走行式集塵ホッパー事業" [ref=e150] [cursor=pointer]:
+            - /url: /business/hopper/
+          - link "水素モビリティ事業" [ref=e151] [cursor=pointer]:
+            - /url: /business/hydrogen-mobility/
+          - link "AIデータセンター事業" [ref=e152] [cursor=pointer]:
+            - /url: /business/ai-data-center/
+        - generic [ref=e153]:
+          - heading "サステナビリティ" [level=3] [ref=e154]:
+            - link "サステナビリティ" [ref=e155] [cursor=pointer]:
+              - /url: /sustainability/
+          - link "地域共生" [ref=e156] [cursor=pointer]:
+            - /url: /sustainability/community-relations/
+          - link "環境保全" [ref=e157] [cursor=pointer]:
+            - /url: /sustainability/environment/
+          - link "カーボンニュートラル" [ref=e158] [cursor=pointer]:
+            - /url: /sustainability/carbon-neutrality/
+        - generic [ref=e159]:
+          - heading "その他" [level=3] [ref=e160]
+          - link "お問い合わせ" [ref=e161] [cursor=pointer]:
+            - /url: /contact/
+          - link "ニュース" [ref=e162] [cursor=pointer]:
+            - /url: /news/
+          - link "採用情報" [ref=e163] [cursor=pointer]:
+            - /url: /recruit/
+          - link "プライバシーポリシー" [ref=e164] [cursor=pointer]:
+            - /url: /privacy/
+          - link "サイトマップ" [ref=e165] [cursor=pointer]:
+            - /url: /sitemap/
+    - paragraph [ref=e166]: © NOAH CONSTRUCTION CO.,LTD. All Rights Reserved.
+  - button "Open Next.js Dev Tools" [ref=e172] [cursor=pointer]:
+    - img [ref=e173]
+  - alert [ref=e176]

@@ -1,0 +1,176 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - link "諾亜建設株式会社 ホーム" [ref=e3] [cursor=pointer]:
+      - /url: /
+      - img "NOAH CONSTRUCTION CO.,LTD. 諾亜建設株式会社" [ref=e4]
+    - navigation "グローバルナビゲーション" [ref=e5]:
+      - link "企業情報" [ref=e7] [cursor=pointer]:
+        - /url: /about/
+      - link "事業紹介" [ref=e9] [cursor=pointer]:
+        - /url: /business/
+      - link "サステナビリティ" [ref=e11] [cursor=pointer]:
+        - /url: /sustainability/
+      - link "ニュース" [ref=e13] [cursor=pointer]:
+        - /url: /news/
+      - link "採用情報" [ref=e15] [cursor=pointer]:
+        - /url: /recruit/
+    - link "お問い合わせ" [ref=e16] [cursor=pointer]:
+      - /url: /contact/
+      - img [ref=e17]
+      - text: お問い合わせ
+  - main [ref=e20]:
+    - region "プライバシーポリシー" [ref=e21]:
+      - generic [ref=e23]:
+        - paragraph [ref=e24]: PRIVACY POLICY
+        - heading "プライバシーポリシー" [level=1] [ref=e25]
+        - paragraph [ref=e26]: 諾亜建設株式会社における個人情報の取り扱い方針を定めたものです。
+      - text: PRIVACY
+    - region "プライバシーポリシー本文" [ref=e27]:
+      - generic [ref=e29]:
+        - list [ref=e30]:
+          - listitem [ref=e31]:
+            - heading "01 基本方針" [level=2] [ref=e32]:
+              - generic [ref=e33]: "01"
+              - text: 基本方針
+            - paragraph [ref=e34]: 諾亜建設株式会社（以下「当社」といいます。）は、エネルギー事業をはじめとする事業活動において、お客様、取引先、採用応募者など関係者の皆様の個人情報を取り扱います。当社は、個人情報の保護に関する法律その他の関係法令およびガイドラインを遵守し、個人情報を適切に取得・利用・管理することを社会的責務と認識し、本プライバシーポリシーを定めます。
+          - listitem [ref=e35]:
+            - heading "02 個人情報の定義" [level=2] [ref=e36]:
+              - generic [ref=e37]: "02"
+              - text: 個人情報の定義
+            - paragraph [ref=e38]: 本ポリシーにおいて「個人情報」とは、生存する個人に関する情報であって、氏名、生年月日、住所、電話番号、メールアドレスその他の記述等により特定の個人を識別することができるもの、および他の情報と容易に照合することができ、それにより特定の個人を識別することができることとなるものをいいます。
+          - listitem [ref=e39]:
+            - heading "03 個人情報の取得" [level=2] [ref=e40]:
+              - generic [ref=e41]: "03"
+              - text: 個人情報の取得
+            - paragraph [ref=e42]: 当社は、適法かつ公正な手段により個人情報を取得します。お問い合わせフォーム、採用応募フォーム、お電話・メール、お取引等を通じて、必要な範囲で個人情報をご提供いただく場合があります。
+          - listitem [ref=e43]:
+            - heading "04 利用目的" [level=2] [ref=e44]:
+              - generic [ref=e45]: "04"
+              - text: 利用目的
+            - paragraph [ref=e46]: 当社は、取得した個人情報を以下の目的の範囲内で利用します。
+            - list [ref=e47]:
+              - listitem [ref=e48]: お問い合わせ・ご相談への対応およびご連絡のため
+              - listitem [ref=e49]: 採用選考および採用に関するご連絡・手続きのため
+              - listitem [ref=e50]: ご契約の履行、製品・サービスの提供、アフターサポートのため
+              - listitem [ref=e51]: 取引先との連絡・調整および業務上必要な手続きのため
+              - listitem [ref=e52]: 当社事業に関する情報やご案内の提供のため
+              - listitem [ref=e53]: 上記利用目的に付随する業務の遂行のため
+          - listitem [ref=e54]:
+            - heading "05 第三者提供" [level=2] [ref=e55]:
+              - generic [ref=e56]: "05"
+              - text: 第三者提供
+            - paragraph [ref=e57]: 当社は、次のいずれかに該当する場合を除き、あらかじめご本人の同意を得ることなく、個人情報を第三者に提供しません。
+            - list [ref=e58]:
+              - listitem [ref=e59]: 法令に基づく場合
+              - listitem [ref=e60]: 人の生命、身体または財産の保護のために必要があり、ご本人の同意を得ることが困難な場合
+              - listitem [ref=e61]: 公衆衛生の向上または児童の健全な育成の推進のために特に必要があり、ご本人の同意を得ることが困難な場合
+              - listitem [ref=e62]: 国の機関等が法令の定める事務を遂行することに協力する必要があり、同意を得ることにより当該事務の遂行に支障を及ぼすおそれがある場合
+          - listitem [ref=e63]:
+            - heading "06 業務委託" [level=2] [ref=e64]:
+              - generic [ref=e65]: "06"
+              - text: 業務委託
+            - paragraph [ref=e66]: 当社は、利用目的の達成に必要な範囲内で個人情報の取り扱いを外部に委託する場合があります。この場合、委託先について適切な調査を行い、必要かつ適切な監督を行います。
+          - listitem [ref=e67]:
+            - heading "07 安全管理措置" [level=2] [ref=e68]:
+              - generic [ref=e69]: "07"
+              - text: 安全管理措置
+            - paragraph [ref=e70]: 当社は、個人情報の漏えい、滅失またはき損の防止その他の安全管理のために、必要かつ適切な措置を講じるとともに、個人情報を取り扱う従業者に対して適切な監督を行います。
+          - listitem [ref=e71]:
+            - heading "08 開示・訂正・利用停止等" [level=2] [ref=e72]:
+              - generic [ref=e73]: "08"
+              - text: 開示・訂正・利用停止等
+            - paragraph [ref=e74]: ご本人から、個人情報の開示、訂正、追加、削除、利用停止または第三者提供の停止のご請求があった場合には、ご本人であることを確認のうえ、法令に従い、合理的な範囲で速やかに対応します。ご請求は、末尾のお問い合わせ窓口までご連絡ください。
+          - listitem [ref=e75]:
+            - heading "09 Cookie・アクセス解析" [level=2] [ref=e76]:
+              - generic [ref=e77]: "09"
+              - text: Cookie・アクセス解析
+            - paragraph [ref=e78]: 当社ウェブサイトでは、利用状況の把握やサービス改善のためにCookieやアクセス解析ツールを利用する場合があります。これらにより取得される情報には、単独で特定の個人を識別できる情報は含まれません。ブラウザの設定によりCookieを無効化することができますが、その場合、一部の機能がご利用いただけないことがあります。
+          - listitem [ref=e79]:
+            - heading "10 本ポリシーの改定" [level=2] [ref=e80]:
+              - generic [ref=e81]: "10"
+              - text: 本ポリシーの改定
+            - paragraph [ref=e82]: 当社は、法令の改正や事業内容の変更等に応じて、本プライバシーポリシーを改定することがあります。改定後の内容は、当社ウェブサイトに掲載した時点から効力を生じるものとします。
+        - generic [ref=e83]:
+          - heading "お問い合わせ窓口" [level=2] [ref=e84]
+          - paragraph [ref=e85]: 本ポリシーおよび個人情報の取り扱いに関するお問い合わせ、開示等のご請求は、以下までご連絡ください。
+          - generic [ref=e86]:
+            - generic [ref=e87]:
+              - term [ref=e88]: 事業者名
+              - definition [ref=e89]: 諾亜建設株式会社
+            - generic [ref=e90]:
+              - term [ref=e91]: 所在地
+              - definition [ref=e92]: 〒160-0022 東京都中野区本町2丁目46-1 サンブライトツインビル北棟15F 1501-3
+            - generic [ref=e93]:
+              - term [ref=e94]: 電話番号
+              - definition [ref=e95]: TEL：03-5341-4696 FAX：03-5341-4697
+          - link "お問い合わせフォームへ" [ref=e96] [cursor=pointer]:
+            - /url: /contact/
+            - text: お問い合わせフォームへ
+            - generic [ref=e97]: →
+        - paragraph [ref=e98]: 制定日：2026年4月1日
+  - contentinfo [ref=e99]:
+    - generic [ref=e101]:
+      - link "諾亜建設株式会社" [ref=e102] [cursor=pointer]:
+        - /url: /
+        - img "諾亜建設株式会社" [ref=e103]
+      - generic [ref=e104]:
+        - generic [ref=e105]:
+          - heading "企業情報" [level=3] [ref=e106]:
+            - link "企業情報" [ref=e107] [cursor=pointer]:
+              - /url: /about/
+          - link "トップメッセージ" [ref=e108] [cursor=pointer]:
+            - /url: /about/message/
+          - link "企業理念・ビジョン" [ref=e109] [cursor=pointer]:
+            - /url: /about/vision/
+          - link "行動基準" [ref=e110] [cursor=pointer]:
+            - /url: /about/standard/
+          - link "会社概要" [ref=e111] [cursor=pointer]:
+            - /url: /about/outline/
+          - link "グループ・組織図" [ref=e112] [cursor=pointer]:
+            - /url: /about/organization/
+          - link "沿革" [ref=e113] [cursor=pointer]:
+            - /url: /about/history/
+          - link "健康経営" [ref=e114] [cursor=pointer]:
+            - /url: /about/safety-health/
+        - generic [ref=e115]:
+          - heading "事業紹介" [level=3] [ref=e116]:
+            - link "事業紹介" [ref=e117] [cursor=pointer]:
+              - /url: /business/
+          - link "蓄電池事業" [ref=e118] [cursor=pointer]:
+            - /url: /business/batteryenergystorage/
+          - link "風力発電事業" [ref=e119] [cursor=pointer]:
+            - /url: /business/windpower/
+          - link "バイオマス" [ref=e120] [cursor=pointer]:
+            - /url: /business/biomasspower/
+          - link "走行式集塵ホッパー事業" [ref=e121] [cursor=pointer]:
+            - /url: /business/hopper/
+          - link "水素モビリティ事業" [ref=e122] [cursor=pointer]:
+            - /url: /business/hydrogen-mobility/
+          - link "AIデータセンター事業" [ref=e123] [cursor=pointer]:
+            - /url: /business/ai-data-center/
+        - generic [ref=e124]:
+          - heading "サステナビリティ" [level=3] [ref=e125]:
+            - link "サステナビリティ" [ref=e126] [cursor=pointer]:
+              - /url: /sustainability/
+          - link "地域共生" [ref=e127] [cursor=pointer]:
+            - /url: /sustainability/community-relations/
+          - link "環境保全" [ref=e128] [cursor=pointer]:
+            - /url: /sustainability/environment/
+          - link "カーボンニュートラル" [ref=e129] [cursor=pointer]:
+            - /url: /sustainability/carbon-neutrality/
+        - generic [ref=e130]:
+          - heading "その他" [level=3] [ref=e131]
+          - link "お問い合わせ" [ref=e132] [cursor=pointer]:
+            - /url: /contact/
+          - link "ニュース" [ref=e133] [cursor=pointer]:
+            - /url: /news/
+          - link "採用情報" [ref=e134] [cursor=pointer]:
+            - /url: /recruit/
+          - link "プライバシーポリシー" [ref=e135] [cursor=pointer]:
+            - /url: /privacy/
+          - link "サイトマップ" [ref=e136] [cursor=pointer]:
+            - /url: /sitemap/
+    - paragraph [ref=e137]: © NOAH CONSTRUCTION CO.,LTD. All Rights Reserved.
+  - button "Open Next.js Dev Tools" [ref=e143] [cursor=pointer]:
+    - img [ref=e144]
+  - alert [ref=e147]

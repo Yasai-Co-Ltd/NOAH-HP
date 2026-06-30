@@ -1,0 +1,121 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - link "諾亜建設株式会社 ホーム" [ref=e3] [cursor=pointer]:
+      - /url: /
+      - img "NOAH CONSTRUCTION CO.,LTD. 諾亜建設株式会社" [ref=e4]
+    - button "メニューを開く" [ref=e5] [cursor=pointer]
+  - main [ref=e9]:
+    - region "コーポレートサイトをリニューアルしました。" [ref=e10]:
+      - generic [ref=e13]:
+        - navigation "パンくず" [ref=e14]:
+          - link "NEWS" [ref=e15] [cursor=pointer]:
+            - /url: /news/
+          - generic [ref=e16]: /お知らせ
+        - generic [ref=e17]:
+          - time [ref=e18]: 2026.05.20
+          - generic [ref=e19]: お知らせ
+        - heading "コーポレートサイトをリニューアルしました。" [level=1] [ref=e20]
+        - paragraph [ref=e21]: 諾亜建設の事業領域や取り組みをより分かりやすくお伝えするため、サイト構成と掲載情報を更新しました。
+    - region "コーポレートサイトをリニューアルしました。" [ref=e22]:
+      - generic [ref=e23]:
+        - article [ref=e25]:
+          - heading "コーポレートサイトをリニューアルしました。" [level=2] [ref=e26]
+          - paragraph [ref=e27]: このたび、諾亜建設株式会社のコーポレートサイトをリニューアルしました。
+          - generic [ref=e28]:
+            - heading "リニューアルの目的" [level=3] [ref=e29]
+            - paragraph [ref=e30]: 蓄電池、風力発電、バイオマス、水素モビリティ、AIデータセンターなど、諾亜建設が取り組む事業領域をより分かりやすくお伝えするため、サイト構成と掲載情報を見直しました。
+            - paragraph [ref=e31]: 各事業の概要や強み、会社情報、サステナビリティに関する情報へスムーズにアクセスできる構成としています。
+          - generic [ref=e32]:
+            - heading "今後の情報発信について" [level=3] [ref=e33]
+            - paragraph [ref=e34]: 今後も事業に関するお知らせ、プレスリリース、導入事例、各種取り組みを順次掲載してまいります。
+        - complementary "記事情報" [ref=e36]:
+          - generic [ref=e37]:
+            - heading "ARTICLE INFO" [level=2] [ref=e38]
+            - generic [ref=e39]:
+              - generic [ref=e40]:
+                - term [ref=e41]: 日付
+                - definition [ref=e42]: 2026.05.20
+              - generic [ref=e43]:
+                - term [ref=e44]: カテゴリ
+                - definition [ref=e45]: お知らせ
+            - link "ニュース一覧へ戻る" [ref=e46] [cursor=pointer]:
+              - /url: /news/
+          - generic [ref=e47]:
+            - heading "RELATED NEWS" [level=2] [ref=e48]
+            - generic [ref=e49]:
+              - link "2026.05.10 プレスリリース 再生可能エネルギー事業の新プロジェクトを開始" [ref=e50] [cursor=pointer]:
+                - /url: /news/new-renewable-project/
+                - time [ref=e51]: 2026.05.10
+                - generic [ref=e52]: プレスリリース
+                - generic [ref=e53]: 再生可能エネルギー事業の新プロジェクトを開始
+              - link "2026.04.25 お知らせ ゴールデンウィーク休業のお知らせ" [ref=e54] [cursor=pointer]:
+                - /url: /news/gw-holiday/
+                - time [ref=e55]: 2026.04.25
+                - generic [ref=e56]: お知らせ
+                - generic [ref=e57]: ゴールデンウィーク休業のお知らせ
+  - contentinfo [ref=e58]:
+    - generic [ref=e60]:
+      - link "諾亜建設株式会社" [ref=e61] [cursor=pointer]:
+        - /url: /
+        - img "諾亜建設株式会社" [ref=e62]
+      - generic [ref=e63]:
+        - generic [ref=e64]:
+          - heading "企業情報" [level=3] [ref=e65]:
+            - link "企業情報" [ref=e66] [cursor=pointer]:
+              - /url: /about/
+          - link "トップメッセージ" [ref=e67] [cursor=pointer]:
+            - /url: /about/message/
+          - link "企業理念・ビジョン" [ref=e68] [cursor=pointer]:
+            - /url: /about/vision/
+          - link "行動基準" [ref=e69] [cursor=pointer]:
+            - /url: /about/standard/
+          - link "会社概要" [ref=e70] [cursor=pointer]:
+            - /url: /about/outline/
+          - link "グループ・組織図" [ref=e71] [cursor=pointer]:
+            - /url: /about/organization/
+          - link "沿革" [ref=e72] [cursor=pointer]:
+            - /url: /about/history/
+          - link "健康経営" [ref=e73] [cursor=pointer]:
+            - /url: /about/safety-health/
+        - generic [ref=e74]:
+          - heading "事業紹介" [level=3] [ref=e75]:
+            - link "事業紹介" [ref=e76] [cursor=pointer]:
+              - /url: /business/
+          - link "蓄電池事業" [ref=e77] [cursor=pointer]:
+            - /url: /business/batteryenergystorage/
+          - link "風力発電事業" [ref=e78] [cursor=pointer]:
+            - /url: /business/windpower/
+          - link "バイオマス" [ref=e79] [cursor=pointer]:
+            - /url: /business/biomasspower/
+          - link "走行式集塵ホッパー事業" [ref=e80] [cursor=pointer]:
+            - /url: /business/hopper/
+          - link "水素モビリティ事業" [ref=e81] [cursor=pointer]:
+            - /url: /business/hydrogen-mobility/
+          - link "AIデータセンター事業" [ref=e82] [cursor=pointer]:
+            - /url: /business/ai-data-center/
+        - generic [ref=e83]:
+          - heading "サステナビリティ" [level=3] [ref=e84]:
+            - link "サステナビリティ" [ref=e85] [cursor=pointer]:
+              - /url: /sustainability/
+          - link "地域共生" [ref=e86] [cursor=pointer]:
+            - /url: /sustainability/community-relations/
+          - link "環境保全" [ref=e87] [cursor=pointer]:
+            - /url: /sustainability/environment/
+          - link "カーボンニュートラル" [ref=e88] [cursor=pointer]:
+            - /url: /sustainability/carbon-neutrality/
+        - generic [ref=e89]:
+          - heading "その他" [level=3] [ref=e90]
+          - link "お問い合わせ" [ref=e91] [cursor=pointer]:
+            - /url: /contact/
+          - link "ニュース" [ref=e92] [cursor=pointer]:
+            - /url: /news/
+          - link "採用情報" [ref=e93] [cursor=pointer]:
+            - /url: /recruit/
+          - link "プライバシーポリシー" [ref=e94] [cursor=pointer]:
+            - /url: /privacy/
+          - link "サイトマップ" [ref=e95] [cursor=pointer]:
+            - /url: /sitemap/
+    - paragraph [ref=e96]: © NOAH CONSTRUCTION CO.,LTD. All Rights Reserved.
+  - button "Open Next.js Dev Tools" [ref=e102] [cursor=pointer]:
+    - img [ref=e103]
+  - alert [ref=e106]
