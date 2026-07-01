@@ -1,0 +1,135 @@
+.notice {
+  display: grid;
+  grid-template-columns: minmax(190px, 0.32fr) minmax(0, 1fr);
+  gap: 1px;
+  overflow: hidden;
+  border: 1px solid rgba(180, 201, 224, 0.7);
+  box-shadow: 0 20px 48px rgba(5, 39, 102, 0.08);
+}
+
+.light {
+  background: var(--color-line);
+}
+
+.dark {
+  background: rgba(255, 255, 255, 0.18);
+  border-color: rgba(255, 255, 255, 0.24);
+  box-shadow: 0 22px 58px rgba(0, 0, 0, 0.22);
+}
+
+.logoPanel,
+.body {
+  min-width: 0;
+}
+
+.logoPanel {
+  display: grid;
+  align-content: center;
+  gap: 18px;
+  padding: 26px;
+  background:
+    linear-gradient(145deg, rgba(255, 197, 31, 0.1), transparent 48%),
+    #ffffff;
+}
+
+.logoPanel span {
+  color: #f08b1c;
+  font-family: var(--font-numeric);
+  font-size: 0.72rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.logo {
+  display: block;
+  width: min(100%, 220px);
+  height: auto;
+}
+
+.body {
+  padding: 28px 34px;
+  background:
+    linear-gradient(120deg, rgba(83, 193, 229, 0.08), transparent 42%),
+    var(--color-surface);
+}
+
+.dark .body {
+  background:
+    linear-gradient(120deg, rgba(83, 193, 229, 0.12), transparent 42%),
+    rgba(255, 255, 255, 0.08);
+}
+
+.eyebrow {
+  margin: 0;
+  color: var(--color-accent-teal);
+  font-family: var(--font-numeric);
+  font-size: 0.72rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.dark .eyebrow {
+  color: var(--color-accent-cyan);
+}
+
+.body h3 {
+  margin: 13px 0 0;
+  color: var(--color-brand-900);
+  font-size: clamp(1.08rem, 1.4vw, 1.3rem);
+  line-height: 1.45;
+}
+
+.dark .body h3 {
+  color: var(--color-surface);
+}
+
+.body p:not(.eyebrow) {
+  margin: 14px 0 0;
+  color: var(--color-text);
+  font-size: 0.88rem;
+  font-weight: 500;
+  line-height: 1.78;
+}
+
+.dark .body p:not(.eyebrow) {
+  color: rgba(255, 255, 255, 0.84);
+}
+
+.body ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 20px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.body li {
+  padding: 8px 10px;
+  color: var(--color-brand-900);
+  font-size: 0.74rem;
+  font-weight: 800;
+  line-height: 1.35;
+  background: var(--color-brand-050);
+  border: 1px solid rgba(180, 201, 224, 0.7);
+}
+
+.dark .body li {
+  color: var(--color-surface);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 760px) {
+  .notice {
+    grid-template-columns: 1fr;
+  }
+
+  .logoPanel {
+    padding: 22px 24px;
+  }
+
+  .body {
+    padding: 24px;
+  }
+}

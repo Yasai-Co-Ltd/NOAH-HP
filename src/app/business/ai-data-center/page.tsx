@@ -4,6 +4,7 @@ import { isPageEnabled } from "@/lib/page-config";
 import Image from "next/image";
 import { Reveal } from "@/components/animation/Reveal/Reveal";
 import { Button } from "@/components/ui/Button/Button";
+import { JcStarNotice } from "@/components/ui/JcStarNotice/JcStarNotice";
 import { SectionLabel } from "@/components/ui/SectionLabel/SectionLabel";
 import styles from "./page.module.css";
 import { asset } from "@/lib/asset";
@@ -301,6 +302,17 @@ export default function AiDataCenterPage() {
                 <li key={feature}>{feature}</li>
               ))}
             </ul>
+          </Reveal>
+        </div>
+
+        <div className="container">
+          <Reveal direction="up">
+            <JcStarNotice
+              className={styles.jcStarNotice}
+              title="監視・制御基盤の接続機器にも、選定段階から配慮。"
+              description="AIデータセンターのEMS、蓄電池、監視制御機器では、ネットワーク接続を前提にセキュリティ要件を確認します。JC-STAR適合製品の活用も視野に入れ、設備計画を進めます。"
+              points={["EMS / NOAH Cloud", "蓄電池連携", "接続機器"]}
+            />
           </Reveal>
         </div>
       </section>

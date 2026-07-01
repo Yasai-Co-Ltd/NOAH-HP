@@ -423,6 +423,10 @@
   background: var(--color-surface);
 }
 
+.jcStarNotice {
+  margin-top: 44px;
+}
+
 .controlVisual {
   min-height: 560px;
   background: rgba(255, 255, 255, 0.96);

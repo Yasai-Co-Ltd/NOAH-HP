@@ -4,6 +4,7 @@ import { isPageEnabled } from "@/lib/page-config";
 import Image from "next/image";
 import { Reveal } from "@/components/animation/Reveal/Reveal";
 import { Button } from "@/components/ui/Button/Button";
+import { JcStarNotice } from "@/components/ui/JcStarNotice/JcStarNotice";
 import { SectionLabel } from "@/components/ui/SectionLabel/SectionLabel";
 import styles from "./page.module.css";
 import { asset } from "@/lib/asset";
@@ -508,6 +509,14 @@ export default function BatteryEnergyStoragePage() {
                 className={styles.techImage}
               />
             </figure>
+          </Reveal>
+          <Reveal direction="up">
+            <JcStarNotice
+              className={styles.jcStarNotice}
+              title="蓄電池システムの機器選定にも、セキュリティ要件を。"
+              description="EMS、PCS、クラウド運用を含む蓄電池システムでは、JC-STAR適合製品の取扱いを通じて、導入時のセキュリティ要件にも配慮します。適合対象は製品・機器ごとに確認します。"
+              points={["EMS / PCS", "遠隔監視", "機器選定"]}
+            />
           </Reveal>
         </div>
       </section>
