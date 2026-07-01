@@ -54,6 +54,7 @@ const NAV_LINKS: NavLink[] = [
             { href: "/about/message", label: "トップメッセージ" },
             { href: "/about/vision", label: "企業理念・ビジョン" },
             { href: "/about/standard", label: "行動基準" },
+            { href: "/about/safety-health", label: "健康経営" },
           ],
         },
         {
@@ -62,7 +63,6 @@ const NAV_LINKS: NavLink[] = [
             { href: "/about/outline", label: "会社概要" },
             { href: "/about/organization", label: "グループ・組織図" },
             { href: "/about/history", label: "沿革" },
-            { href: "/about/safety-health", label: "健康経営" },
           ],
         },
       ],
