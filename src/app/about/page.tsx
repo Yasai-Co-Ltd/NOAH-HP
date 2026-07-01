@@ -157,7 +157,10 @@ export default function AboutPage() {
           <div className={styles.linkGrid}>
             {aboutLinks.map((item, index) => (
               <Reveal key={item.href} direction="up" delay={index * 45} className={styles.cardReveal}>
-                <Link href={item.href} className={styles.infoCard}>
+                <Link
+                  href={item.href}
+                  className={`${styles.infoCard} ${index === 0 ? styles.featuredCard : ""} ${styles[`tone${index + 1}`]}`}
+                >
                   <span className={styles.cardImage} aria-hidden="true">
                     <Image
                       src={item.image}
@@ -171,6 +174,7 @@ export default function AboutPage() {
                   <span className={styles.cardNumber}>{String(index + 1).padStart(2, "0")}</span>
                   <span className={styles.cardEyebrow}>{item.eyebrow}</span>
                   <h3>{item.title}</h3>
+                  <p>{item.text}</p>
                   <span className={styles.cardCta}>詳しく見る</span>
                 </Link>
               </Reveal>

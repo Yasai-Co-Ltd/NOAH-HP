@@ -11,7 +11,7 @@ import { asset } from "@/lib/asset";
 export const metadata: Metadata = {
   title: "グループ・組織図 | 諾亜建設株式会社",
   description:
-    "諾亜建設株式会社のグループ・関連体制と、脱炭素、水素エネルギー、発電、新エネルギー自動車、ハンドリング設備、IOTソリューションの事業組織、契約販売店を紹介します。",
+    "諾亜建設株式会社のグループ会社、関連体制と、脱炭素、水素エネルギー、発電、新エネルギー自動車、ハンドリング設備、IOTソリューションの事業組織、契約販売店を紹介します。",
 };
 
 const groupCompanies = [
@@ -36,6 +36,18 @@ const partnerCapabilities = [
   "海外メーカー調達",
   "代理・販売ネットワーク",
   "案件別プロジェクト体制",
+];
+
+const affiliatedCompanies = [
+  { category: "ゲーム事業", company: "サイバーステップ株式会社" },
+  { category: "プライズ事業", company: "トレバ株式会社" },
+  { category: "マーチャンダイジング事業", company: "ミライラツナグ株式会社" },
+  { category: "フィンテック事業", company: "CrypTech Capital 株式会社" },
+  { category: "Web3事業", company: "テノーラ株式会社" },
+  { category: "セールス事業", company: "株式会社3rd" },
+  { category: "AI・DX事業", company: "NAXA株式会社" },
+  { category: "キャスティング・マーケティング事業", company: "株式会社TRUXiA" },
+  { category: "防災事業", company: "ココロツナグ株式会社" },
 ];
 
 const businessDivisions = [
@@ -100,6 +112,41 @@ export default function OrganizationPage() {
             <span className={styles.groupConnection} aria-hidden="true">
               連携
             </span>
+          </div>
+
+          <div className={styles.affiliatedBlock} aria-labelledby="affiliated-title">
+            <Reveal direction="up">
+              <div className={styles.affiliatedHeader}>
+                <div>
+                  <SectionLabel eyebrow="GROUP COMPANIES" subtitle="グループ会社" />
+                  <h2 id="affiliated-title" className={styles.heading}>
+                    多様な事業領域へ広がる、
+                    <br />
+                    グループ会社。
+                  </h2>
+                </div>
+                <p className={styles.sectionLead}>
+                  ゲーム、プライズ、Web3、AI・DX、防災など、各領域の専門会社と連携しながら、
+                  グループ全体で事業機会を広げています。
+                </p>
+              </div>
+            </Reveal>
+
+            <div className={styles.affiliatedGrid}>
+              {affiliatedCompanies.map((item, index) => (
+                <Reveal key={item.company} direction="up" delay={index * 35}>
+                  <article className={styles.affiliatedCard}>
+                    <span className={styles.affiliatedNumber}>
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
+                    <div>
+                      <p>{item.category}</p>
+                      <h3>{item.company}</h3>
+                    </div>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -186,7 +233,7 @@ export default function OrganizationPage() {
           <Reveal direction="up">
             <p className={styles.nextEyebrow}>NEXT CONTENTS</p>
             <h2 id="next-title" className={styles.nextTitle}>
-              拠点、沿革、会社概要もあわせてご覧ください。
+              沿革、会社概要、健康経営もあわせてご覧ください。
             </h2>
             <div className={styles.nextLinks}>
               {nextLinks.map((item) => (
