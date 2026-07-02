@@ -12,7 +12,7 @@ import styles from "./page.module.css";
 export const metadata: Metadata = {
   title: "サステナビリティ | 諾亜建設株式会社",
   description:
-    "諾亜建設株式会社のサステナビリティ。地域共生、環境保全、カーボンニュートラルの3つの視点から、持続可能なインフラづくりへの取り組みを紹介します。",
+    "諾亜建設株式会社のサステナビリティ。地域共生、環境保全、カーボンニュートラルの3つの視点と、次世代への理解促進を通じて、持続可能なインフラづくりへの取り組みを紹介します。",
 };
 
 const themes = [
@@ -20,7 +20,7 @@ const themes = [
     href: "/sustainability/community-relations",
     number: "THEME 01",
     title: "地域共生",
-    text: "地域との対話を重ね、暮らしと事業が共に発展する関係づくりを進めます。",
+    text: "地域との対話を重ね、暮らし、産業、事業が共に発展する関係づくりを進めます。",
     image: {
       src: "/assets/sustainability/community-relations-v3.png",
       alt: "地域住民と現場スタッフが地図を見ながら地域の計画について話し合う様子",
@@ -30,7 +30,7 @@ const themes = [
     href: "/sustainability/environment",
     number: "THEME 02",
     title: "環境保全",
-    text: "計画から運用まで自然環境に配慮し、景観と生態系への影響低減に取り組みます。",
+    text: "計画から運用まで自然環境に配慮し、生物多様性や水・土壌環境への影響低減に取り組みます。",
     image: {
       src: "/assets/sustainability/environment-v3.png",
       alt: "水辺の自然環境を調査する現場スタッフ",
@@ -40,7 +40,7 @@ const themes = [
     href: "/sustainability/carbon-neutrality",
     number: "THEME 03",
     title: "カーボンニュートラル",
-    text: "蓄電池・再エネ・水素を組み合わせ、脱炭素社会を支える基盤づくりを進めます。",
+    text: "再生可能エネルギー、蓄電池、水素、AI制御を組み合わせ、脱炭素社会を支える基盤づくりを進めます。",
     image: {
       src: "/assets/sustainability/carbon-neutrality-v3.png",
       alt: "蓄電池、太陽光、水素設備が連携するカーボンニュートラルインフラ",
@@ -52,17 +52,22 @@ const stanceItems = [
   {
     number: "01",
     title: "地域と進める",
-    text: "立地や暮らしに配慮し、地域と対話しながら計画します。",
+    text: "地域の皆さまとの対話を起点に、立地や暮らしに配慮して計画します。",
   },
   {
     number: "02",
     title: "環境を守る",
-    text: "景観、生態系、安全性に配慮し、影響低減を図ります。",
+    text: "自然環境への負荷低減と生物多様性への配慮を事業計画に組み込みます。",
   },
   {
     number: "03",
     title: "脱炭素を支える",
-    text: "再エネ、蓄電池、水素、AI制御を組み合わせます。",
+    text: "再エネ、蓄電池、水素、AI制御を組み合わせ、CO₂削減価値を高めます。",
+  },
+  {
+    number: "04",
+    title: "未来へ伝える",
+    text: "見学、情報発信、地域活動を通じて、再エネや環境保全への理解を広げます。",
   },
 ];
 
@@ -95,12 +100,13 @@ export default function SustainabilityPage() {
             <p className={styles.heroEyebrow}>SUSTAINABILITY</p>
             <span className={styles.heroSubtitle}>サステナビリティ</span>
             <h1 id="sustainability-title" className={styles.heroTitle}>
-              地域・環境・脱炭素を、
+              地域と共につくる、
               <br />
-              事業の中心に。
+              持続可能な未来。
             </h1>
             <p className={styles.heroLead}>
-              NOAHは、再生可能エネルギー、蓄電池、水素、AIデータセンターを組み合わせ、
+              NOAHは、地域共生、環境保全、カーボンニュートラルを事業の中心に置き、
+              再生可能エネルギー、蓄電池、水素、AIデータセンターを組み合わせた
               持続可能なインフラの実装に取り組みます。
             </p>
             <div className={styles.heroActions}>
@@ -122,14 +128,15 @@ export default function SustainabilityPage() {
               <div>
                 <SectionLabel eyebrow="CONTENTS" subtitle="テーマ別の取り組み" />
                 <h2 id="themes-title" className={styles.sectionTitle}>
-                  3つの視点で見る、
+                  地域・環境・脱炭素を、
                   <br />
-                  NOAHの取り組み。
+                  事業でつなぐ。
                 </h2>
               </div>
               <p className={styles.sectionLead}>
-                地域共生、環境保全、カーボンニュートラルの3つの視点から、
-                NOAHの考え方と取り組みを紹介します。
+                持続可能な社会づくりは、理念だけでは進みません。
+                地域との関係づくり、自然環境への配慮、CO₂削減価値の創出を、
+                事業の設計と運用に結びつけていきます。
               </p>
             </div>
           </Reveal>
@@ -176,6 +183,7 @@ export default function SustainabilityPage() {
             </h2>
             <p className={styles.inverseLead}>
               発電、蓄電、利用、運用までをつなぎ、地域や企業の現場で使い続けられる仕組みにします。
+              次世代に向けた情報発信や理解促進も、持続可能な事業運営の一部として捉えます。
             </p>
           </Reveal>
 
@@ -215,7 +223,8 @@ export default function SustainabilityPage() {
               持続可能なインフラへ。
             </h2>
             <p className={styles.bridgeLead}>
-              サステナビリティの考え方を起点に、各事業領域で具体的な取り組みを紹介します。
+              サステナビリティの考え方を起点に、発電、蓄電、次世代モビリティ、AIデータセンターまで、
+              各事業領域で具体的な取り組みを紹介します。
             </p>
             <div className={styles.businessTags} aria-label="関連事業">
               {businessTags.map((tag) => (
