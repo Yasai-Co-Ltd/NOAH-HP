@@ -1,0 +1,105 @@
+/*
+ * WordPress 固有 UI のスタイル。
+ * Next.js ビルド由来の CSS ではカバーされない、ページネーションと
+ * エディタ入力本文 (.noah-article-content) の見た目を補完する。
+ */
+
+/* --- ニュース一覧: ページネーション --- */
+.noah-pagination {
+  margin-top: 3rem;
+}
+
+.noah-pagination .nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.noah-pagination .page-numbers {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.5rem;
+  padding: 0.5rem 0.9rem;
+  border: 1px solid rgba(5, 39, 102, 0.25);
+  border-radius: 999px;
+  color: #052766;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: background-color 150ms ease, color 150ms ease;
+}
+
+.noah-pagination .page-numbers.current {
+  background: #052766;
+  border-color: #052766;
+  color: #fff;
+}
+
+.noah-pagination a.page-numbers:hover,
+.noah-pagination a.page-numbers:focus-visible {
+  background: rgba(5, 39, 102, 0.08);
+}
+
+.noah-news-empty {
+  padding: 2rem 0;
+  color: rgba(5, 39, 102, 0.7);
+}
+
+/* --- ニュース詳細: エディタ入力本文 --- */
+.noah-article-content > * + * {
+  margin-top: 1.25em;
+}
+
+.noah-article-content h3 {
+  margin-top: 2.2em;
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid rgba(5, 39, 102, 0.15);
+  font-size: 1.15rem;
+  color: #052766;
+}
+
+.noah-article-content h4 {
+  margin-top: 1.8em;
+  font-size: 1.05rem;
+  color: #052766;
+}
+
+.noah-article-content p {
+  line-height: 1.9;
+}
+
+.noah-article-content ul,
+.noah-article-content ol {
+  padding-left: 1.4em;
+  line-height: 1.9;
+}
+
+.noah-article-content a {
+  color: #0a4fd6;
+  text-decoration: underline;
+}
+
+.noah-article-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.noah-article-content blockquote {
+  margin: 1.5em 0;
+  padding: 0.75em 1.25em;
+  border-left: 3px solid rgba(5, 39, 102, 0.4);
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.noah-article-content figure {
+  margin: 1.5em 0;
+}
+
+.noah-article-content figcaption {
+  margin-top: 0.5em;
+  font-size: 0.85rem;
+  color: rgba(0, 0, 0, 0.55);
+}

@@ -1,0 +1,79 @@
+# NOAH コーポレートサイト WordPress 開発環境
+#
+# 使い方:
+#   1. yarn build:wp-theme   … Next.js を静的ビルドし、wp/themes/noah テーマを生成
+#   2. docker compose up -d  … WordPress + MySQL を起動
+#   3. http://localhost:8080 で WordPress を初期セットアップ
+#   4. 管理画面 > 外観 > テーマ で「NOAH Corporate」を有効化
+#      (有効化時に固定ページ・ニュース記事・パーマリンクが自動セットアップされます)
+#
+# phpMyAdmin: http://localhost:8081 (root / ${DB_ROOT_PASSWORD})
+# WP-CLI:     docker compose run --rm wpcli <command>
+
+services:
+  db:
+    image: mysql:8.0
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: ${DB_NAME:-wordpress}
+      MYSQL_USER: ${DB_USER:-wordpress}
+      MYSQL_PASSWORD: ${DB_PASSWORD:-wordpress}
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD:-root}
+    volumes:
+      - db_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-p${DB_ROOT_PASSWORD:-root}"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+  wordpress:
+    image: wordpress:6.8-php8.3-apache
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - "${WP_PORT:-8080}:80"
+    environment:
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_NAME: ${DB_NAME:-wordpress}
+      WORDPRESS_DB_USER: ${DB_USER:-wordpress}
+      WORDPRESS_DB_PASSWORD: ${DB_PASSWORD:-wordpress}
+      WORDPRESS_DEBUG: "1"
+    volumes:
+      - wp_data:/var/www/html
+      - ./wp/themes/noah:/var/www/html/wp-content/themes/noah
+
+  wpcli:
+    image: wordpress:cli-php8.3
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_NAME: ${DB_NAME:-wordpress}
+      WORDPRESS_DB_USER: ${DB_USER:-wordpress}
+      WORDPRESS_DB_PASSWORD: ${DB_PASSWORD:-wordpress}
+    volumes:
+      - wp_data:/var/www/html
+      - ./wp/themes/noah:/var/www/html/wp-content/themes/noah
+    profiles: ["cli"]
+    entrypoint: ["wp"]
+    command: ["--info"]
+
+  phpmyadmin:
+    image: phpmyadmin:latest
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - "${PMA_PORT:-8081}:80"
+    environment:
+      PMA_HOST: db
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD:-root}
+
+volumes:
+  db_data:
+  wp_data:

@@ -1,0 +1,16 @@
+/*
+Theme Name: NOAH Corporate
+Theme URI: https://github.com/yasai-co-ltd/NOAH-HP
+Author: NOAH Construction Co.,Ltd.
+Description: 諾亜建設株式会社コーポレートサイトのWordPressテーマ。Next.js (src/) の静的エクスポートから scripts/build-wp-theme.mjs で生成されたテンプレートを含みます。ニュースはWordPressの投稿として管理され、その他のページは固定ページ+専用テンプレートで表示されます。
+Version: 1.0.0
+Requires at least: 6.0
+Requires PHP: 8.0
+License: Proprietary
+Text Domain: noah
+*/
+
+/*
+ * 実際のスタイルは assets/css/ 配下の生成CSS(Next.jsビルド由来)と
+ * noah-wp.css が担当します。このファイルはテーマ定義のみです。
+ */
