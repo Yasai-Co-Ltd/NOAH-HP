@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { isPageEnabled } from "@/lib/page-config";
 import Image from "next/image";
+import Link from "next/link";
 import { Reveal } from "@/components/animation/Reveal/Reveal";
 import { Button } from "@/components/ui/Button/Button";
 import { JcStarNotice } from "@/components/ui/JcStarNotice/JcStarNotice";
@@ -290,6 +291,28 @@ const proofItems = [
   { value: "40件以上", label: "技術パートナーが保有する製品・コアシステム関連の知的財産" },
   { value: "50MW / 200MWh", label: "技術パートナーによる大規模蓄電発電所の導入実績" },
   { value: "2GWh", label: "NOAHによる蓄電池調達の戦略的パートナー体制" },
+];
+
+const pipelineStats = [
+  { value: "約25件", label: "保有する特別高圧蓄電池プラント案件" },
+  { value: "約790MW", label: "合計出力規模" },
+  { value: "約21件", label: "うち特別高圧級の案件" },
+  { value: "2年以内", label: "系統連系が可能な案件を多数保有" },
+];
+
+const pipelineRoles = [
+  {
+    number: "01",
+    company: "諾亜建設",
+    note: "用地・権利のオーナー",
+    items: ["特別高圧蓄電池プラント用地・権利の取得・保有", "建設業者の選定"],
+  },
+  {
+    number: "02",
+    company: "株式会社Birdman",
+    note: "アドバイザリーパートナー（東証グロース：7063）",
+    items: ["開発事業者の選定・紹介", "蓄電池システムの部材の調達・確保"],
+  },
 ];
 
 const processSteps = [
@@ -680,6 +703,68 @@ export default function BatteryEnergyStoragePage() {
               </Reveal>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className={styles.pipeline} aria-labelledby="pipeline-title">
+        <div className="container">
+          <Reveal direction="up">
+            <div className={styles.sectionHeading}>
+              <div>
+                <SectionLabel
+                  eyebrow="DEVELOPMENT PIPELINE"
+                  subtitle="特別高圧蓄電池プラント"
+                  inverse
+                />
+                <h2 id="pipeline-title" className={styles.pipelineHeading}>
+                  特別高圧蓄電池プラントを、
+                  <br />
+                  開発パートナーとともに。
+                </h2>
+              </div>
+              <p className={styles.pipelineLead}>
+                当社は、系統連系および必要な許認可の取得が完了し、運転可能な状態にある特別高圧蓄電池プラントの用地・権利を多数保有しています。
+                2026年7月には株式会社Birdmanとの業務提携により、開発事業者の参画から蓄電池システムの部材調達までを含む開発体制を構築しました。
+              </p>
+            </div>
+          </Reveal>
+
+          <div className={styles.pipelineStats} aria-label="保有案件の規模">
+            {pipelineStats.map((stat, index) => (
+              <Reveal key={stat.value} direction="up" delay={index * 70}>
+                <article className={styles.pipelineStat}>
+                  <b>{stat.value}</b>
+                  <span>{stat.label}</span>
+                </article>
+              </Reveal>
+            ))}
+          </div>
+
+          <div className={styles.pipelineRoles}>
+            {pipelineRoles.map((role, index) => (
+              <Reveal key={role.company} direction="up" delay={index * 80}>
+                <article className={styles.pipelineRole}>
+                  <p>ROLE {role.number}</p>
+                  <h3>{role.company}</h3>
+                  <span>{role.note}</span>
+                  <ul>
+                    {role.items.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                </article>
+              </Reveal>
+            ))}
+          </div>
+
+          <Reveal direction="up">
+            <div className={styles.pipelineFooter}>
+              <p>※ 案件数・出力規模は2026年7月時点。個別案件の詳細はお問い合わせください。</p>
+              <Link href="/news/birdman-partnership" className={styles.pipelineLink}>
+                業務提携のプレスリリースを見る<span aria-hidden="true">→</span>
+              </Link>
+            </div>
+          </Reveal>
         </div>
       </section>
 

@@ -20,6 +20,10 @@ add_action( 'after_switch_theme', 'noah_setup_site_content' );
  * サイト初期コンテンツを作成する。
  */
 function noah_setup_site_content() {
+	// 日本のサイトのため JST に固定。当日日付の記事が UTC 判定で
+	// 「予約投稿」扱いになるのも防ぐ (シードは日付のみ・00:00 起点)。
+	update_option( 'timezone_string', 'Asia/Tokyo' );
+
 	noah_setup_pages();
 	noah_setup_news();
 	noah_setup_permalinks();

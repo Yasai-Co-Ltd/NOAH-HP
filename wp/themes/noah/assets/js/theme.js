@@ -81,7 +81,9 @@
     var anyOpen = false;
     panels.forEach(function (panel) {
       var on = key !== null && panel.getAttribute("data-noah-mega") === key;
+      // hidden 属性は CSS の display:grid に負けるため、インライン display も切り替える。
       panel.hidden = !on;
+      panel.style.display = on ? "" : "none";
       if (on) anyOpen = true;
     });
     if (CLS.Header_megaActive) header.classList.toggle(CLS.Header_megaActive, anyOpen);

@@ -283,7 +283,8 @@ function buildMegaPanels(cls) {
     const feature = `<a class="${c("Header_megaFeature")}" href="${homeHref(menu.feature.href)}"><span class="${c("Header_megaFeatureImage")}"><img src="${ASSETS_PHP}${menu.feature.image}" alt=""/></span><span class="${c("Header_megaFeatureBody")}"><strong>${menu.feature.title}</strong><em>${menu.feature.description}<span aria-hidden="true"> →</span></em></span></a>`;
 
     return (
-      `<div class="container ${c("Header_megaInner")}" data-noah-mega="${menu.key}" hidden>` +
+      // hidden 属性は .megaInner の display:grid に負けるため、インライン display で隠す。
+      `<div class="container ${c("Header_megaInner")}" data-noah-mega="${menu.key}" hidden style="display:none">` +
       `<div class="${c("Header_megaIntro")}"><span class="${c("Header_megaEyebrow")}">${menu.eyebrow}</span>` +
       `<h2 class="${c("Header_megaTitle")}">${menu.title}</h2>` +
       `<p class="${c("Header_megaLead")}">${menu.lead}</p>` +
@@ -318,7 +319,8 @@ function extractNewsSeed(html, slug) {
   return {
     slug,
     title,
-    date: `${date} 10:00:00`,
+    // 00:00 とし、当日公開の記事がサーバー時刻次第で「予約投稿」扱いになるのを防ぐ。
+    date: `${date} 00:00:00`,
     category,
     excerpt,
     content: blocks.join("\n"),
