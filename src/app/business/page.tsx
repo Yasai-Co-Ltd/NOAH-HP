@@ -13,7 +13,7 @@ import { asset } from "@/lib/asset";
 export const metadata: Metadata = {
   title: "事業紹介 | 諾亜建設株式会社",
   description:
-    "蓄電池、風力発電、バイオマス、走行式集塵ホッパー、水素モビリティ、AIデータセンターまで、諾亜建設の事業領域を紹介します。",
+    "蓄電池、風力発電、バイオマス、走行式集塵ホッパー、水素モビリティ、水素コンプレッサー、AIデータセンターまで、諾亜建設の事業領域を紹介します。",
 };
 
 const FEATURE = {
@@ -56,7 +56,7 @@ export default async function BusinessPage() {
               ひとつの構想でつなぐ。
             </h1>
             <p className={styles.heroLead}>
-              蓄電池、風力発電、バイオマス、走行式集塵ホッパー、水素モビリティ、AIデータセンター。
+              蓄電池、風力発電、バイオマス、走行式集塵ホッパー、水素モビリティ、水素コンプレッサー、AIデータセンター。
               NOAHは地域と企業の課題に合わせ、最適なインフラを設計します。
             </p>
             <Button href="/contact" variant="white" className={styles.heroButton}>
@@ -115,7 +115,7 @@ export default async function BusinessPage() {
               </div>
               {/* <p className={styles.domainLead}>
                 再生可能エネルギーの導入、電力の安定化、環境設備、次世代モビリティ、AI時代のデータ基盤まで。
-                6つの領域を組み合わせて提案します。
+                  7つの領域を組み合わせて提案します。
               </p> */}
             </div>
           </Reveal>
@@ -172,7 +172,7 @@ export default async function BusinessPage() {
               <div className={styles.supportBody}>
                 <p>
                   調査・企画、設計・調達、施工・導入、運用・改善まで、
-                  6つの事業領域を横断してプロジェクトを支えます。
+                  7つの事業領域を横断してプロジェクトを支えます。
                 </p>
                 <ol className={styles.supportSteps} aria-label="統合支援の流れ">
                   {SUPPORT_STEPS.map((step) => (

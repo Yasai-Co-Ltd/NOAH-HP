@@ -36,6 +36,7 @@ const GROUPS: FooterGroup[] = [
       { href: "/business/biomasspower", label: "バイオマス" },
       { href: "/business/hopper", label: "走行式集塵ホッパー事業" },
       { href: "/business/hydrogen-mobility", label: "水素モビリティ事業" },
+      { href: "/business/hydrogen-compressor", label: "水素コンプレッサー事業" },
       { href: "/business/ai-data-center", label: "AIデータセンター事業" },
     ],
   },

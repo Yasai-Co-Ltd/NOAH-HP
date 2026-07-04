@@ -56,6 +56,19 @@ const services: Service[] = [
     href: "/business/hydrogen-mobility",
   },
   {
+    id: "svc-hydrogen-compressor",
+    slug: "hydrogen-compressor",
+    title: "水素コンプレッサー事業",
+    description:
+      "水素充填・オンサイト水素ステーションに向けて、高圧圧縮設備の選定、構成、導入計画を支援します。",
+    image: {
+      src: "/assets/hydrogen-compressor/compressor-hero.jpg",
+      alt: "工場内に設置された水素コンプレッサーユニット",
+    },
+    icon: { tone: "cyan", label: "HC" },
+    href: "/business/hydrogen-compressor",
+  },
+  {
     id: "svc-ai-data-center",
     slug: "ai-data-center",
     title: "AIデータセンター事業",

@@ -17,13 +17,13 @@ export async function Business() {
             <div>
               <SectionLabel eyebrow="OUR BUSINESS" subtitle="事業内容" />
               <h2 id="business-title" className={styles.title}>
-                6つの事業領域から、
+                7つの事業領域から、
                 <br />
                 最適なインフラを提案。
               </h2>
             </div>
             <p className={styles.lead}>
-              蓄電池、風力発電、水素モビリティ、AIデータセンターまで。
+              発電、蓄電、水素、環境設備、AIデータセンターまで。
               地域と企業の課題に合わせて、最適なエネルギーインフラを組み立てます。
             </p>
           </div>

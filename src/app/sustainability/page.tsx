@@ -77,6 +77,7 @@ const businessTags = [
   "バイオマス",
   "走行式集塵ホッパー",
   "水素モビリティ",
+  "水素コンプレッサー",
   "AIデータセンター",
 ];
 
@@ -218,7 +219,7 @@ export default function SustainabilityPage() {
           <Reveal direction="right" className={styles.businessBody}>
             <SectionLabel eyebrow="BUSINESS" subtitle="事業を通じた貢献" />
             <h2 id="business-bridge-title" className={styles.bridgeTitle}>
-              6つの事業領域で、
+              7つの事業領域で、
               <br />
               持続可能なインフラへ。
             </h2>

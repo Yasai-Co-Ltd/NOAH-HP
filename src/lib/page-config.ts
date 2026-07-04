@@ -27,6 +27,7 @@ export const PAGES = {
   "/business/biomasspower": true,
   "/business/hopper": true,
   "/business/hydrogen-mobility": true,
+  "/business/hydrogen-compressor": true,
   "/business/ai-data-center": true,
 
   // サステナビリティ

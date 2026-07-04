@@ -14,6 +14,7 @@ return array(
 	'business/batteryenergystorage' => array( 'title' => '蓄電池事業', 'template' => 'templates/page-business-batteryenergystorage.php' ),
 	'business/biomasspower' => array( 'title' => 'バイオマス発電事業', 'template' => 'templates/page-business-biomasspower.php' ),
 	'business/hopper' => array( 'title' => '走行式集塵ホッパー事業', 'template' => 'templates/page-business-hopper.php' ),
+	'business/hydrogen-compressor' => array( 'title' => '水素コンプレッサー事業', 'template' => 'templates/page-business-hydrogen-compressor.php' ),
 	'business/hydrogen-mobility' => array( 'title' => '水素モビリティ事業', 'template' => 'templates/page-business-hydrogen-mobility.php' ),
 	'business/windpower' => array( 'title' => '風力発電事業', 'template' => 'templates/page-business-windpower.php' ),
 	'contact' => array( 'title' => 'お問い合わせ', 'template' => 'templates/page-contact.php' ),

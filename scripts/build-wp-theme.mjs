@@ -68,7 +68,7 @@ const MEGA_MENUS = [
   {
     key: "/business/",
     eyebrow: "OUR BUSINESS",
-    title: "6つの事業領域、<br/>ひとつの構想。",
+    title: "7つの事業領域、<br/>ひとつの構想。",
     lead: "エネルギーから次世代インフラまで。社会基盤を支える事業を展開します。",
     href: "/business/",
     groups: [
@@ -84,6 +84,7 @@ const MEGA_MENUS = [
         heading: "次世代インフラ",
         items: [
           { href: "/business/hydrogen-mobility/", label: "水素モビリティ事業" },
+          { href: "/business/hydrogen-compressor/", label: "水素コンプレッサー事業" },
           { href: "/business/ai-data-center/", label: "AIデータセンター事業" },
           { href: "/business/hopper/", label: "走行式集塵ホッパー事業" },
         ],
@@ -91,7 +92,7 @@ const MEGA_MENUS = [
     ],
     feature: {
       image: "/strengths-bg-integrated-energy.png",
-      title: "6つの事業領域、ひとつの構想。",
+      title: "7つの事業領域、ひとつの構想。",
       description: "事業紹介トップを見る",
       href: "/business/",
     },
