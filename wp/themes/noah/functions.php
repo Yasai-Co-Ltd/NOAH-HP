@@ -45,3 +45,4 @@ function noah_post_category_name( $post = null ) {
 }
 
 require get_template_directory() . '/inc/setup-content.php';
+require get_template_directory() . '/inc/contact.php';

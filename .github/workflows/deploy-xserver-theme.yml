@@ -1,0 +1,82 @@
+name: Deploy WordPress theme to XServer
+
+# main への push で WordPress テーマ (wp/themes/noah) をビルドし、
+# エックスサーバーのテーマディレクトリへ rsync で同期する。
+# 初期設定は DEPLOY-XSERVER.md を参照。
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: xserver-theme
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      SSH_HOST: ${{ secrets.XSERVER_SSH_HOST }}
+      SSH_USER: ${{ secrets.XSERVER_SSH_USER }}
+      SSH_PORT: ${{ secrets.XSERVER_SSH_PORT || '10022' }}
+      THEME_PATH: ${{ secrets.XSERVER_THEME_PATH }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: yarn
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      # ローカルの `yarn build:wp-theme` と同一。Next ビルド → テーマ生成。
+      - name: Build WordPress theme
+        run: yarn build:wp-theme
+
+      - name: Configure SSH
+        env:
+          SSH_KEY: ${{ secrets.XSERVER_SSH_KEY }}
+        run: |
+          mkdir -p ~/.ssh
+          printf '%s\n' "$SSH_KEY" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          ssh-keyscan -p "$SSH_PORT" "$SSH_HOST" >> ~/.ssh/known_hosts 2>/dev/null
+
+      # --delete で誤って親ディレクトリを消さないよう、転送先が本当に
+      # テーマディレクトリ (style.css を含む) であることを事前確認する。
+      # 初回は手動で WordPress にテーマを設置・有効化しておくこと。
+      - name: Verify remote theme directory
+        run: |
+          ssh -i ~/.ssh/deploy_key -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" \
+            "test -f '$THEME_PATH/style.css'" \
+          || { echo "::error::リモートにテーマが見つかりません ($THEME_PATH)。初回は手動でテーマ設置・有効化が必要です。"; exit 1; }
+
+      # --checksum: CI は毎回ファイルを再生成し mtime が変わるため、
+      # 既定の size+mtime 比較だと毎回全 170MB を再送してしまう。
+      # 中身の一致で判定させ、実際に変わったファイルだけ転送する。
+      - name: Deploy theme via rsync
+        run: |
+          rsync -rlz --delete --checksum \
+            -e "ssh -i ~/.ssh/deploy_key -p $SSH_PORT" \
+            wp/themes/noah/ \
+            "$SSH_USER@$SSH_HOST:$THEME_PATH/"
+
+      # 任意: 新規固定ページの作成やニュースのシードをサーバー側で同期する。
+      # サーバーに WP-CLI があり、リポジトリ変数 RUN_WP_SETUP=true のときのみ実行。
+      - name: Sync WordPress content (optional, needs WP-CLI)
+        if: ${{ vars.RUN_WP_SETUP == 'true' }}
+        env:
+          WP_PATH: ${{ secrets.XSERVER_WP_PATH }}
+        run: |
+          ssh -i ~/.ssh/deploy_key -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" \
+            "cd '$WP_PATH' && wp eval 'noah_setup_site_content();'"
+
+      - name: Cleanup SSH key
+        if: always()
+        run: rm -f ~/.ssh/deploy_key

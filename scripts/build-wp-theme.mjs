@@ -220,16 +220,20 @@ function transformPage(html, { megaPanels }) {
   return s;
 }
 
-/** フォームへ mailto 送信用のデータ属性を付与する。 */
-function attachFormAttributes(html, mailConstants) {
+/**
+ * フォームへ送信種別の識別属性を付与する。
+ * 送信先アドレスはクライアントに露出させず、サーバー側 (inc/contact.php) の
+ * オプションで決定する。theme.js は data-noah-form を見て REST 送信する。
+ */
+function attachFormAttributes(html) {
   return html
     .replace(
       /<form class="([^"]*ContactForm_form[^"]*)"/g,
-      `<form data-noah-mailto="${mailConstants.contact}" data-noah-subject="お問い合わせ" class="$1"`
+      `<form data-noah-form="contact" data-noah-subject="お問い合わせ" class="$1"`
     )
     .replace(
       /<form class="([^"]*RecruitForm_form[^"]*)"/g,
-      `<form data-noah-mailto="${mailConstants.recruit}" data-noah-subject="採用エントリー" class="$1"`
+      `<form data-noah-form="recruit" data-noah-subject="採用エントリー" class="$1"`
     );
 }
 
@@ -407,20 +411,6 @@ async function main() {
   }
   await writeFile(path.join(THEME_DIR, "assets", "js", "theme.js"), themeJs);
 
-  /* ---- フォームの mailto 定数をソースから拾う ---- */
-  const contactSrc = await fs.readFile(
-    path.join(ROOT, "src/components/forms/ContactForm/ContactForm.tsx"),
-    "utf8"
-  );
-  const recruitSrc = await fs.readFile(
-    path.join(ROOT, "src/components/forms/RecruitForm/RecruitForm.tsx"),
-    "utf8"
-  );
-  const mailConstants = {
-    contact: contactSrc.match(/CONTACT_MAIL_TO = "([^"]+)"/)?.[1] ?? "info@example.com",
-    recruit: recruitSrc.match(/RECRUIT_MAIL_TO = "([^"]+)"/)?.[1] ?? "info@example.com",
-  };
-
   const megaPanels = buildMegaPanels(globalClassMap);
 
   /* ---- ルート探索 ---- */
@@ -452,7 +442,7 @@ async function main() {
 
     let html = await fs.readFile(path.join(OUT_DIR, route, "index.html"), "utf8");
     if (route === "") html = patchCountUps(html);
-    html = attachFormAttributes(html, mailConstants);
+    html = attachFormAttributes(html);
     const php = transformPage(html, { megaPanels });
 
     if (route === "") {

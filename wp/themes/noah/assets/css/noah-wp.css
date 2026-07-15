@@ -103,3 +103,36 @@
   font-size: 0.85rem;
   color: rgba(0, 0, 0, 0.55);
 }
+
+/* お問い合わせ / 採用フォームの送信ステータス (theme.js が生成) */
+.noah-form-status {
+  display: none;
+  margin-top: 20px;
+  padding: 14px 16px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1.7;
+  border-left: 4px solid transparent;
+}
+
+.noah-form-status.is-visible {
+  display: block;
+}
+
+.noah-form-status.is-pending {
+  color: rgba(5, 39, 102, 0.85);
+  background: rgba(5, 39, 102, 0.06);
+  border-left-color: rgba(5, 39, 102, 0.5);
+}
+
+.noah-form-status.is-success {
+  color: #0a7a4b;
+  background: rgba(10, 122, 75, 0.08);
+  border-left-color: #0a7a4b;
+}
+
+.noah-form-status.is-error {
+  color: #c0392b;
+  background: rgba(192, 57, 43, 0.08);
+  border-left-color: #c0392b;
+}

@@ -190,11 +190,11 @@
   }
 
   /* ---------------------------------------------------------------- *
-   * Forms: mailto 送信(お問い合わせ / 採用エントリー)
+   * Forms: サーバー送信(お問い合わせ / 採用エントリー)
    *
-   * 元実装(ContactForm / RecruitForm)と同じく、入力内容を整形して
-   * 窓口宛メールを起動する暫定実装。本送信が必要になったら
-   * フォームプラグイン(Contact Form 7 等)へ置き換えること。
+   * data-noah-form を持つフォームを、WordPress REST API
+   * (window.NOAH_CONTACT.endpoint) へ非同期 POST する。送信先アドレスは
+   * サーバー側 (inc/contact.php) が決定し、クライアントには持たせない。
    * ---------------------------------------------------------------- */
   var REQUIRED_FIELDS = ["type", "name", "email", "message"];
 
@@ -212,18 +212,40 @@
     return text.replace(/\s+/g, " ").replace(/必須/g, "").trim();
   }
 
-  Array.prototype.forEach.call(document.querySelectorAll("form[data-noah-mailto]"), function (form) {
+  function ensureStatusEl(form) {
+    var el = form.querySelector(".noah-form-status");
+    if (!el) {
+      el = document.createElement("p");
+      el.className = "noah-form-status";
+      el.setAttribute("role", "status");
+      el.setAttribute("aria-live", "polite");
+      form.appendChild(el);
+    }
+    return el;
+  }
+
+  function setStatus(el, message, kind) {
+    el.textContent = message;
+    el.className = "noah-form-status is-visible is-" + kind;
+  }
+
+  Array.prototype.forEach.call(document.querySelectorAll("form[data-noah-form]"), function (form) {
     form.removeAttribute("novalidate");
 
     REQUIRED_FIELDS.forEach(function (name) {
       var field = form.elements[name];
       if (field && typeof field.setAttribute === "function") field.required = true;
     });
-    var agree = form.elements.agree;
-    if (agree && typeof agree.setAttribute === "function") agree.required = true;
+    var agreeField = form.elements.agree;
+    if (agreeField && typeof agreeField.setAttribute === "function") agreeField.required = true;
+
+    var submitBtn = form.querySelector('button[type="submit"], [type="submit"]');
+    var status = ensureStatusEl(form);
+    var sending = false;
 
     form.addEventListener("submit", function (event) {
       event.preventDefault();
+      if (sending) return;
 
       // ハニーポット: 入力があればボットとみなし黙って無視する。
       var honeypot = form.elements.fax;
@@ -231,24 +253,77 @@
 
       if (!form.reportValidity()) return;
 
-      var lines = [];
+      var config = window.NOAH_CONTACT;
+      if (!config || !config.endpoint) {
+        setStatus(status, "送信先が設定されていません。時間をおいて再度お試しください。", "error");
+        return;
+      }
+
+      // ラベル付きフィールド一覧 (本文組み立て用) と主要項目を収集する。
+      var fields = [];
       Array.prototype.forEach.call(form.elements, function (el) {
         if (!el.name || el.name === "fax") return;
-        if (el.type === "submit" || el.type === "button" || el.type === "checkbox") return;
-        lines.push(fieldLabel(form, el) + ": " + (el.value.trim() || "（未入力）"));
+        if (el.type === "submit" || el.type === "button") return;
+        if (el.type === "checkbox") return;
+        fields.push({ label: fieldLabel(form, el), value: (el.value || "").trim() });
       });
 
       var subject = form.getAttribute("data-noah-subject") || "お問い合わせ";
       var typeField = form.elements.type;
       if (typeField && typeField.value) subject += "（" + typeField.value + "）";
 
-      window.location.href =
-        "mailto:" +
-        form.getAttribute("data-noah-mailto") +
-        "?subject=" +
-        encodeURIComponent(subject) +
-        "&body=" +
-        encodeURIComponent(lines.join("\n"));
+      var payload = {
+        form: form.getAttribute("data-noah-form") || "contact",
+        subject: subject,
+        name: form.elements.name ? form.elements.name.value : "",
+        email: form.elements.email ? form.elements.email.value : "",
+        agree: agreeField ? !!agreeField.checked : true,
+        fax: honeypot ? honeypot.value : "",
+        fields: fields,
+      };
+
+      sending = true;
+      if (submitBtn) submitBtn.disabled = true;
+      setStatus(status, "送信しています…", "pending");
+
+      fetch(config.endpoint, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "X-WP-Nonce": config.nonce },
+        body: JSON.stringify(payload),
+      })
+        .then(function (res) {
+          return res
+            .json()
+            .catch(function () {
+              return {};
+            })
+            .then(function (data) {
+              return { ok: res.ok, data: data };
+            });
+        })
+        .then(function (r) {
+          if (r.ok && r.data && r.data.success) {
+            form.reset();
+            setStatus(
+              status,
+              r.data.message || "送信しました。担当者より折り返しご連絡いたします。",
+              "success"
+            );
+          } else {
+            setStatus(
+              status,
+              (r.data && r.data.message) || "送信に失敗しました。時間をおいて再度お試しください。",
+              "error"
+            );
+          }
+        })
+        .catch(function () {
+          setStatus(status, "通信エラーが発生しました。時間をおいて再度お試しください。", "error");
+        })
+        .then(function () {
+          sending = false;
+          if (submitBtn) submitBtn.disabled = false;
+        });
     });
   });
 })();
