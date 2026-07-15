@@ -144,6 +144,7 @@ const CLOSE_DELAY_MS = 180;
 export function Header() {
   const [open, setOpen] = useState(false);
   const [activeMega, setActiveMega] = useState<string | null>(null);
+  const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const headerClasses = [
@@ -175,17 +176,41 @@ export function Header() {
     cancelClose();
     setOpen(false);
     setActiveMega(null);
+    setMobileExpanded(null);
   };
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") setActiveMega(null);
+      if (e.key === "Escape") closeAll();
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
   }, []);
 
   useEffect(() => cancelClose, []);
+
+  useEffect(() => {
+    const desktopQuery = window.matchMedia("(min-width: 921px)");
+    const closeMobileMenu = (event: MediaQueryListEvent) => {
+      if (!event.matches) return;
+      setOpen(false);
+      setMobileExpanded(null);
+    };
+
+    desktopQuery.addEventListener("change", closeMobileMenu);
+    return () => desktopQuery.removeEventListener("change", closeMobileMenu);
+  }, []);
+
+  useEffect(() => {
+    if (!open) return;
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+    };
+  }, [open]);
 
   const activeConfig = NAV_LINKS.find((l) => l.href === activeMega)?.mega ?? null;
 
@@ -208,7 +233,11 @@ export function Header() {
         className={styles.toggle}
         aria-label={open ? "メニューを閉じる" : "メニューを開く"}
         aria-expanded={open}
-        onClick={() => setOpen((v) => !v)}
+        aria-controls="mobile-navigation"
+        onClick={() => {
+          setOpen((value) => !value);
+          setActiveMega(null);
+        }}
       >
         <span className={styles.toggleBar} />
         <span className={styles.toggleBar} />
@@ -249,6 +278,112 @@ export function Header() {
         </svg>
         お問い合わせ
       </Link>
+
+      <div
+        id="mobile-navigation"
+        className={styles.mobileMenu}
+        aria-hidden={!open}
+      >
+        <div className={styles.mobileMenuInner}>
+          <div className={styles.mobileMenuHeading}>
+            <span>MENU</span>
+            <p>NOAH CONSTRUCTION CO., LTD.</p>
+          </div>
+
+          <nav className={styles.mobileNav} aria-label="モバイルナビゲーション">
+            {NAV_LINKS.map((link) => {
+              const isExpanded = mobileExpanded === link.href;
+
+              if (!link.mega) {
+                return (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className={styles.mobileDirectLink}
+                    onClick={closeAll}
+                  >
+                    <span>{link.label}</span>
+                    <span aria-hidden="true">→</span>
+                  </Link>
+                );
+              }
+
+              return (
+                <section key={link.href} className={styles.mobileSection}>
+                  <div className={styles.mobileSectionRow}>
+                    <Link href={link.href} onClick={closeAll}>
+                      <span className={styles.mobileEyebrow}>{link.mega.eyebrow}</span>
+                      <strong>{link.label}</strong>
+                    </Link>
+                    <button
+                      type="button"
+                      className={styles.mobileExpandButton}
+                      aria-label={`${link.label}の下層メニューを${isExpanded ? "閉じる" : "開く"}`}
+                      aria-expanded={isExpanded}
+                      aria-controls={`mobile-submenu-${link.href.replaceAll("/", "-")}`}
+                      onClick={() =>
+                        setMobileExpanded((current) =>
+                          current === link.href ? null : link.href,
+                        )
+                      }
+                    >
+                      <span aria-hidden="true" />
+                    </button>
+                  </div>
+
+                  <div
+                    id={`mobile-submenu-${link.href.replaceAll("/", "-")}`}
+                    className={[
+                      styles.mobileSubmenu,
+                      isExpanded ? styles.mobileSubmenuOpen : null,
+                    ]
+                      .filter(Boolean)
+                      .join(" ")}
+                  >
+                    <div className={styles.mobileSubmenuInner}>
+                      <Link
+                        href={link.href}
+                        className={styles.mobileOverviewLink}
+                        onClick={closeAll}
+                      >
+                        {link.label}トップ
+                        <span aria-hidden="true">→</span>
+                      </Link>
+                      {link.mega.groups.map((group, groupIndex) => (
+                        <div key={groupIndex} className={styles.mobileGroup}>
+                          {group.heading && <p>{group.heading}</p>}
+                          <ul>
+                            {group.items.map((item) => (
+                              <li key={item.href}>
+                                <Link href={item.href} onClick={closeAll}>
+                                  {item.label}
+                                  <span aria-hidden="true">→</span>
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </section>
+              );
+            })}
+          </nav>
+
+          <Link href="/contact" className={styles.mobileContact} onClick={closeAll}>
+            <svg aria-hidden="true" viewBox="0 0 24 24">
+              <path d="M4 6h16v12H4z" />
+              <path d="m4 7 8 6 8-6" />
+            </svg>
+            <span>
+              <small>CONTACT</small>
+              お問い合わせ
+            </span>
+            <b aria-hidden="true">→</b>
+          </Link>
+        </div>
+      </div>
 
       <div
         className={[styles.mega, activeMega ? styles.megaOpen : null].filter(Boolean).join(" ")}

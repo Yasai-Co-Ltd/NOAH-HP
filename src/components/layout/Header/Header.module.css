@@ -114,6 +114,10 @@
     opacity var(--duration-fast) var(--ease-out);
 }
 
+.mobileMenu {
+  display: none;
+}
+
 /* === Mega menu panel === */
 .mega {
   position: absolute;
@@ -396,9 +400,11 @@
   .header {
     position: sticky;
     top: 0;
+    z-index: 100;
     grid-template-columns: minmax(180px, 240px) auto;
-    min-height: 72px;
-    padding: 12px 20px;
+    min-height: 68px;
+    padding: 10px 20px;
+    box-shadow: 0 1px 0 rgba(11, 61, 145, 0.1);
   }
 
   .mega {
@@ -410,49 +416,35 @@
   }
 
   .toggle {
+    position: relative;
+    z-index: 2;
     display: block;
+    width: 44px;
+    height: 44px;
+    border: 1px solid rgba(12, 69, 158, 0.14);
+    border-radius: 4px;
+    background: var(--color-brand-050);
   }
 
   .nav,
   .contact {
-    position: absolute;
-    right: 0;
-    left: 0;
     display: none;
   }
 
-  .nav {
-    top: 72px;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0;
-    padding: 10px 20px 20px;
-    background: rgba(255, 255, 255, 0.98);
-    box-shadow: 0 16px 28px rgba(9, 45, 105, 0.12);
+  .toggleBar {
+    width: 22px;
+    height: 1.5px;
+    margin-block: 5px;
   }
 
-  .navItem {
-    padding-block: 12px;
-    border-bottom: 1px solid var(--color-line);
-  }
-
-  .navItem::after {
-    display: none;
-  }
-
-  .contact {
-    top: 394px;
-    margin: 0 20px 20px;
-    min-height: 54px;
-  }
-
-  .navOpen .nav,
-  .navOpen .contact {
-    display: flex;
+  .navOpen .toggle {
+    color: var(--color-surface);
+    background: var(--color-brand-900);
+    border-color: var(--color-brand-900);
   }
 
   .navOpen .toggleBar:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
+    transform: translateY(6.5px) rotate(45deg);
   }
 
   .navOpen .toggleBar:nth-child(2) {
@@ -460,7 +452,299 @@
   }
 
   .navOpen .toggleBar:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
+    transform: translateY(-6.5px) rotate(-45deg);
+  }
+
+  .mobileMenu {
+    position: fixed;
+    top: 68px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 99;
+    display: block;
+    overflow-x: hidden;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    visibility: hidden;
+    opacity: 0;
+    background: var(--color-surface);
+    transform: translateY(-10px);
+    transition:
+      opacity 180ms var(--ease-out),
+      transform 220ms var(--ease-out),
+      visibility 0s linear 220ms;
+  }
+
+  .navOpen .mobileMenu {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+    transition:
+      opacity 180ms var(--ease-out),
+      transform 220ms var(--ease-out),
+      visibility 0s linear 0s;
+  }
+
+  .mobileMenuInner {
+    width: min(100%, 680px);
+    min-height: 100%;
+    margin-inline: auto;
+    padding: 28px 24px max(32px, env(safe-area-inset-bottom));
+  }
+
+  .mobileMenuHeading {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 16px;
+    padding-bottom: 18px;
+    border-bottom: 2px solid var(--color-brand-900);
+  }
+
+  .mobileMenuHeading span {
+    color: var(--color-brand-900);
+    font-family: var(--font-numeric);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+  }
+
+  .mobileMenuHeading p {
+    margin: 0;
+    color: var(--color-muted);
+    font-size: 0.72rem;
+    font-weight: 600;
+  }
+
+  .mobileNav {
+    display: grid;
+  }
+
+  .mobileSection,
+  .mobileDirectLink {
+    border-bottom: 1px solid var(--color-line);
+  }
+
+  .mobileSectionRow {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 52px;
+    align-items: stretch;
+    min-height: 76px;
+  }
+
+  .mobileSectionRow > a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+    min-width: 0;
+    padding: 15px 12px 15px 2px;
+    color: var(--color-ink);
+    text-decoration: none;
+  }
+
+  .mobileEyebrow {
+    color: var(--color-brand-600);
+    font-family: var(--font-numeric);
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    line-height: 1.2;
+  }
+
+  .mobileSectionRow strong {
+    font-size: 1.04rem;
+    font-weight: 700;
+    line-height: 1.35;
+  }
+
+  .mobileExpandButton {
+    position: relative;
+    align-self: center;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: 0;
+    color: var(--color-brand-900);
+    background: var(--color-brand-050);
+    border-radius: 4px;
+  }
+
+  .mobileExpandButton span::before,
+  .mobileExpandButton span::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 14px;
+    height: 1.5px;
+    content: "";
+    background: currentColor;
+    transform: translate(-50%, -50%);
+    transition: transform var(--duration-fast) var(--ease-out);
+  }
+
+  .mobileExpandButton span::after {
+    transform: translate(-50%, -50%) rotate(90deg);
+  }
+
+  .mobileExpandButton[aria-expanded="true"] {
+    color: var(--color-surface);
+    background: var(--color-brand-900);
+  }
+
+  .mobileExpandButton[aria-expanded="true"] span::after {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  .mobileSubmenu {
+    display: grid;
+    grid-template-rows: 0fr;
+    visibility: hidden;
+    opacity: 0;
+    transition:
+      grid-template-rows 240ms var(--ease-out),
+      opacity 180ms var(--ease-out),
+      visibility 0s linear 240ms;
+  }
+
+  .mobileSubmenuOpen {
+    grid-template-rows: 1fr;
+    visibility: visible;
+    opacity: 1;
+    transition:
+      grid-template-rows 240ms var(--ease-out),
+      opacity 200ms var(--ease-out),
+      visibility 0s linear 0s;
+  }
+
+  .mobileSubmenuInner {
+    min-height: 0;
+    overflow: hidden;
+    padding-inline: 12px;
+    background: var(--color-brand-050);
+  }
+
+  .mobileSubmenuOpen .mobileSubmenuInner {
+    padding-block: 8px 18px;
+  }
+
+  .mobileOverviewLink,
+  .mobileGroup a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    color: var(--color-text);
+    text-decoration: none;
+  }
+
+  .mobileOverviewLink {
+    min-height: 46px;
+    padding-inline: 12px;
+    color: var(--color-brand-800);
+    font-size: 0.84rem;
+    font-weight: 700;
+    border-bottom: 1px solid rgba(12, 69, 158, 0.14);
+  }
+
+  .mobileOverviewLink span,
+  .mobileGroup a span {
+    color: var(--color-brand-600);
+    font-family: var(--font-numeric);
+    font-size: 0.78rem;
+  }
+
+  .mobileGroup {
+    padding: 14px 12px 0;
+  }
+
+  .mobileGroup p {
+    margin: 0 0 3px;
+    color: var(--color-muted);
+    font-size: 0.66rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+  }
+
+  .mobileGroup ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .mobileGroup li + li {
+    border-top: 1px solid rgba(216, 228, 243, 0.8);
+  }
+
+  .mobileGroup a {
+    min-height: 43px;
+    padding-block: 8px;
+    font-size: 0.86rem;
+    font-weight: 600;
+    line-height: 1.45;
+  }
+
+  .mobileDirectLink {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 68px;
+    gap: 16px;
+    padding-inline: 2px 14px;
+    color: var(--color-ink);
+    font-size: 1.04rem;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .mobileDirectLink > span:last-child {
+    color: var(--color-brand-600);
+    font-family: var(--font-numeric);
+    font-size: 0.84rem;
+  }
+
+  .mobileContact {
+    display: grid;
+    grid-template-columns: 28px 1fr auto;
+    align-items: center;
+    gap: 14px;
+    min-height: 78px;
+    margin-top: 28px;
+    padding: 16px 20px;
+    color: var(--color-surface);
+    text-decoration: none;
+    background: var(--color-brand-900);
+    border-radius: 4px;
+    box-shadow: 0 14px 30px rgba(5, 39, 102, 0.16);
+  }
+
+  .mobileContact svg {
+    width: 24px;
+    height: 24px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.7;
+  }
+
+  .mobileContact span {
+    display: grid;
+    gap: 2px;
+    font-size: 0.94rem;
+    font-weight: 700;
+  }
+
+  .mobileContact small {
+    color: #9ed8f2;
+    font-family: var(--font-numeric);
+    font-size: 0.58rem;
+    letter-spacing: 0.14em;
+  }
+
+  .mobileContact b {
+    font-family: var(--font-numeric);
+    font-size: 0.9rem;
+    font-weight: 400;
   }
 }
 
@@ -471,5 +755,13 @@
 
   .brand {
     max-width: 190px;
+  }
+
+  .mobileMenuInner {
+    padding-inline: 18px;
+  }
+
+  .mobileMenuHeading p {
+    display: none;
   }
 }

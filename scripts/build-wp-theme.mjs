@@ -384,6 +384,8 @@ async function main() {
     "Header_header",
     "Header_toggle",
     "Header_navOpen",
+    "Header_mobileExpandButton",
+    "Header_mobileSubmenuOpen",
     "Header_mega",
     "Header_megaOpen",
     "Header_navItemWrap",
