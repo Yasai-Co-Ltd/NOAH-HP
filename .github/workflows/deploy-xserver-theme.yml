@@ -43,19 +43,32 @@ jobs:
         env:
           SSH_KEY: ${{ secrets.XSERVER_SSH_KEY }}
         run: |
+          if [ -z "$SSH_KEY" ]; then
+            echo "::error::XSERVER_SSH_KEY が未設定です。GitHub Secrets を確認してください。"
+            exit 1
+          fi
           mkdir -p ~/.ssh
           printf '%s\n' "$SSH_KEY" > ~/.ssh/deploy_key
           chmod 600 ~/.ssh/deploy_key
-          ssh-keyscan -p "$SSH_PORT" "$SSH_HOST" >> ~/.ssh/known_hosts 2>/dev/null
+          if ! grep -q "PRIVATE KEY" ~/.ssh/deploy_key; then
+            echo "::error::XSERVER_SSH_KEY が秘密鍵ではありません。-----BEGIN ... PRIVATE KEY----- を含む秘密鍵の全文を登録してください。"
+            exit 1
+          fi
+          # ホスト鍵の事前取得はベストエフォート。失敗しても接続時に accept-new で信頼するため
+          # ステップは失敗させない (ssh-keyscan の非ゼロ終了で -e により落ちるのを防ぐ)。
+          ssh-keyscan -p "$SSH_PORT" "$SSH_HOST" >> ~/.ssh/known_hosts 2>/dev/null \
+            || echo "::warning::ssh-keyscan がホスト鍵を取得できませんでした。接続時に accept-new で信頼します。"
 
       # --delete で誤って親ディレクトリを消さないよう、転送先が本当に
       # テーマディレクトリ (style.css を含む) であることを事前確認する。
       # 初回は手動で WordPress にテーマを設置・有効化しておくこと。
       - name: Verify remote theme directory
         run: |
-          ssh -i ~/.ssh/deploy_key -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" \
+          ssh -i ~/.ssh/deploy_key -p "$SSH_PORT" \
+            -o StrictHostKeyChecking=accept-new -o ConnectTimeout=20 \
+            "$SSH_USER@$SSH_HOST" \
             "test -f '$THEME_PATH/style.css'" \
-          || { echo "::error::リモートにテーマが見つかりません ($THEME_PATH)。初回は手動でテーマ設置・有効化が必要です。"; exit 1; }
+          || { echo "::error::リモートに接続できないか、テーマが見つかりません ($THEME_PATH)。SSH接続情報 (ホスト/ユーザー/鍵/ポート10022) と、初回のテーマ設置・有効化を確認してください。"; exit 1; }
 
       # --checksum: CI は毎回ファイルを再生成し mtime が変わるため、
       # 既定の size+mtime 比較だと毎回全 170MB を再送してしまう。
@@ -63,7 +76,7 @@ jobs:
       - name: Deploy theme via rsync
         run: |
           rsync -rlz --delete --checksum \
-            -e "ssh -i ~/.ssh/deploy_key -p $SSH_PORT" \
+            -e "ssh -i ~/.ssh/deploy_key -p $SSH_PORT -o StrictHostKeyChecking=accept-new -o ConnectTimeout=20" \
             wp/themes/noah/ \
             "$SSH_USER@$SSH_HOST:$THEME_PATH/"
 
@@ -74,7 +87,9 @@ jobs:
         env:
           WP_PATH: ${{ secrets.XSERVER_WP_PATH }}
         run: |
-          ssh -i ~/.ssh/deploy_key -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" \
+          ssh -i ~/.ssh/deploy_key -p "$SSH_PORT" \
+            -o StrictHostKeyChecking=accept-new -o ConnectTimeout=20 \
+            "$SSH_USER@$SSH_HOST" \
             "cd '$WP_PATH' && wp eval 'noah_setup_site_content();'"
 
       - name: Cleanup SSH key
