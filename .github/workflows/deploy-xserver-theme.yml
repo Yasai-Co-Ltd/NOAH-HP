@@ -59,6 +59,17 @@ jobs:
           ssh-keyscan -p "$SSH_PORT" "$SSH_HOST" >> ~/.ssh/known_hosts 2>/dev/null \
             || echo "::warning::ssh-keyscan がホスト鍵を取得できませんでした。接続時に accept-new で信頼します。"
 
+      # 接続失敗時の切り分け用。ハンドシェイクの詳細を出力する。
+      # ジョブは止めない (本判定は次の Verify ステップで行う)。
+      - name: SSH connectivity diagnostic
+        continue-on-error: true
+        run: |
+          echo "接続先ポート: $SSH_PORT / ユーザー長: ${#SSH_USER} 文字"
+          ssh -vvv -i ~/.ssh/deploy_key -p "$SSH_PORT" \
+            -o StrictHostKeyChecking=accept-new -o ConnectTimeout=20 \
+            -o PreferredAuthentications=publickey -o IdentitiesOnly=yes \
+            "$SSH_USER@$SSH_HOST" "echo CONNECTED_OK" 2>&1 | tail -50 || true
+
       # --delete で誤って親ディレクトリを消さないよう、転送先が本当に
       # テーマディレクトリ (style.css を含む) であることを事前確認する。
       # 初回は手動で WordPress にテーマを設置・有効化しておくこと。
