@@ -14,6 +14,7 @@
 import { promises as fs } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { createHash } from "node:crypto";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const OUT_DIR = path.join(ROOT, "out");
@@ -179,7 +180,7 @@ function resolvePlaceholders(template, map, context) {
  * HTML → PHP テンプレート変換
  * ------------------------------------------------------------------ */
 
-function transformPage(html, { megaPanels }) {
+function transformPage(html, { megaPanels, themeJsVer, cssVer }) {
   let s = html;
 
   // Next.js ランタイムを丸ごと除去(インライン RSC ペイロード含む)。
@@ -209,8 +210,8 @@ function transformPage(html, { megaPanels }) {
   // WordPress フック類の挿入。
   s = s.replace(
     "</head>",
-    `<link rel="stylesheet" href="${THEME_URI}/assets/css/noah-wp.css"/>` +
-      `<script src="${THEME_URI}/assets/js/theme.js" defer></script>` +
+    `<link rel="stylesheet" href="${THEME_URI}/assets/css/noah-wp.css?v=${cssVer}"/>` +
+      `<script src="${THEME_URI}/assets/js/theme.js?v=${themeJsVer}" defer></script>` +
       `<noscript><style>[class*="Reveal_root"]{opacity:1!important;transform:none!important}</style></noscript>` +
       `<?php wp_head(); ?></head>`
   );
@@ -413,6 +414,12 @@ async function main() {
   }
   await writeFile(path.join(THEME_DIR, "assets", "js", "theme.js"), themeJs);
 
+  // キャッシュバスティング: 固定ファイル名の theme.js / noah-wp.css は
+  // 内容ハッシュを ?v= に付け、更新時にブラウザ/サーバーのキャッシュを無効化する。
+  const hash8 = (content) => createHash("sha1").update(content).digest("hex").slice(0, 8);
+  const themeJsVer = hash8(themeJs);
+  const cssVer = hash8(await fs.readFile(path.join(TPL_DIR, "noah-wp.css"), "utf8"));
+
   const megaPanels = buildMegaPanels(globalClassMap);
 
   /* ---- ルート探索 ---- */
@@ -445,7 +452,7 @@ async function main() {
     let html = await fs.readFile(path.join(OUT_DIR, route, "index.html"), "utf8");
     if (route === "") html = patchCountUps(html);
     html = attachFormAttributes(html);
-    const php = transformPage(html, { megaPanels });
+    const php = transformPage(html, { megaPanels, themeJsVer, cssVer });
 
     if (route === "") {
       await writeFile(
@@ -485,7 +492,7 @@ async function main() {
     newsListMap,
     "home.php"
   );
-  let homePhp = transformPage(newsListHtmlRaw, { megaPanels });
+  let homePhp = transformPage(newsListHtmlRaw, { megaPanels, themeJsVer, cssVer });
   homePhp = homePhp.replace(/<main>[\s\S]*<\/main>/, () => homeMain);
   await writeFile(
     path.join(THEME_DIR, "home.php"),
@@ -512,7 +519,7 @@ async function main() {
     detailMap,
     "single.php"
   );
-  let singlePhp = transformPage(detailHtmlRaw, { megaPanels });
+  let singlePhp = transformPage(detailHtmlRaw, { megaPanels, themeJsVer, cssVer });
   singlePhp = singlePhp.replace(/<main>[\s\S]*<\/main>/, () => singleMain);
   singlePhp = singlePhp.replace(
     /<title>[\s\S]*?<\/title>/,
