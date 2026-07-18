@@ -3,7 +3,7 @@ export const ASSET_BG_VARS: Readonly<Record<string, string>> = {
   "--bg-ai-data-center-hero-data-center": "/assets/ai-data-center/hero-data-center.jpg",
   "--bg-biomasspower-wood-chip-storage": "/assets/biomasspower/wood-chip-storage.jpg",
   "--bg-hero-wind-hq": "/assets/hero-wind-hq.jpg",
-  "--bg-hopper-hopper-port-hero": "/assets/hopper/hopper-port-hero.png",
+  "--bg-hopper-hopper-cta-port": "/assets/hopper/hopper-cta-port.jpg",
   "--bg-hydrogen-mobility-station-night": "/assets/hydrogen-mobility/station-night.jpg",
   "--bg-noah_logo-mark": "/assets/noah_logo-mark.png",
   "--bg-strengths-bg-integrated-energy": "/assets/strengths-bg-integrated-energy.png",

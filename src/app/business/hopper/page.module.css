@@ -570,7 +570,7 @@
   content: "";
   background:
     linear-gradient(90deg, rgba(5, 39, 102, 0.82), rgba(5, 39, 102, 0.72)),
-    var(--bg-hopper-hopper-port-hero) center / cover;
+    var(--bg-hopper-hopper-cta-port) center / cover;
 }
 
 .ctaInner {

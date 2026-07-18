@@ -137,7 +137,7 @@ export default function BiomassPowerPage() {
     <>
       <section className={styles.hero} aria-labelledby="biomass-title">
         <Image
-          src={asset("/assets/biomasspower/biomass-plant-hero.png")}
+          src={asset("/assets/biomasspower/biomass-plant-hero-v2.jpg")}
           alt=""
           fill
           priority
