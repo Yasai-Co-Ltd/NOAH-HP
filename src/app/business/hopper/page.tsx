@@ -123,7 +123,7 @@ export default function HopperPage() {
     <>
       <section className={styles.hero} aria-labelledby="hopper-title">
         <Image
-          src={asset("/assets/hopper/hopper-hero-port-v2.png")}
+          src={asset("/assets/hopper/hopper-hero-port-v3.jpg")}
           alt=""
           fill
           priority
