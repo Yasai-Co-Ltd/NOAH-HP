@@ -146,12 +146,12 @@
   line-height: 1;
 }
 
-.logo {
-  display: block;
-  width: 100%;
-  max-width: 330px;
-  height: auto;
-  margin: 26px auto 0;
+.status {
+  margin: 26px 0 0;
+  color: var(--color-brand-900);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5;
 }
 
 .badge h3 {
@@ -202,7 +202,7 @@
     grid-column: 1 / -1;
   }
 
-  .logo {
+  .status {
     margin: 0;
   }
 
@@ -252,7 +252,7 @@
     grid-column: auto;
   }
 
-  .logo {
-    max-width: 280px;
+  .status {
+    font-size: 0.94rem;
   }
 }

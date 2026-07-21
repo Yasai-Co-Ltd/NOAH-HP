@@ -1,5 +1,3 @@
-import Image from "next/image";
-import { asset } from "@/lib/asset";
 import styles from "./JcStarNotice.module.css";
 
 interface JcStarNoticeProps {
@@ -23,14 +21,7 @@ export function JcStarNotice({
     <aside className={classes} aria-label="JC-STAR適合製品の取扱い">
       <div className={styles.logoPanel}>
         <span>JC-STAR</span>
-        <Image
-          src={asset("/assets/security/jc-star.jpg")}
-          alt="JC-STAR"
-          width={1230}
-          height={562}
-          sizes="(max-width: 760px) 180px, 220px"
-          className={styles.logo}
-        />
+        <p className={styles.status}>現在JC-STAR認証対応中</p>
       </div>
       <div className={styles.body}>
         <p className={styles.eyebrow}>SECURITY REQUIREMENT</p>

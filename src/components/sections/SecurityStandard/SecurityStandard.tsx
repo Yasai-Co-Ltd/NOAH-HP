@@ -1,7 +1,5 @@
-import Image from "next/image";
 import { Reveal } from "@/components/animation/Reveal/Reveal";
 import { SectionLabel } from "@/components/ui/SectionLabel/SectionLabel";
-import { asset } from "@/lib/asset";
 import styles from "./SecurityStandard.module.css";
 
 const securityPoints = [
@@ -40,14 +38,7 @@ export function SecurityStandard() {
 
             <aside className={styles.badge} aria-label="JC-STAR適合製品の取扱い">
               <p className={styles.badgeLabel}>JC-STAR</p>
-              <Image
-                src={asset("/assets/security/jc-star.jpg")}
-                alt="JC-STAR"
-                width={1230}
-                height={562}
-                sizes="(max-width: 760px) calc(100vw - 80px), 360px"
-                className={styles.logo}
-              />
+              <p className={styles.status}>現在JC-STAR認証対応中</p>
               <h3>適合製品の取扱い</h3>
               <p className={styles.note}>
                 適合対象は製品・機器ごとに確認します。
