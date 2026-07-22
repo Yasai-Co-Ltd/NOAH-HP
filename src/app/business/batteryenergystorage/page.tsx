@@ -813,9 +813,9 @@ export default function BatteryEnergyStoragePage() {
               <Button href="/contact" variant="white">
                 お問い合わせ
               </Button>
-              {/* <Button href="/contact" variant="cyan">
-                資料ダウンロード
-              </Button> */}
+              <Button href="/business" variant="cyan">
+                事業一覧へ戻る
+              </Button>
             </div>
           </Reveal>
         </div>

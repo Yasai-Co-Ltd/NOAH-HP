@@ -76,8 +76,8 @@ export default async function BusinessPage() {
               次世代の電源。
             </h2>
             <p className={styles.featureLead}>{FEATURE.description}</p>
-            <Button href="/business/airborne-power" className={styles.featureButton}>
-              詳しく見る
+            <Button href="/contact" className={styles.featureButton}>
+              導入相談をする
             </Button>
           </Reveal>
 

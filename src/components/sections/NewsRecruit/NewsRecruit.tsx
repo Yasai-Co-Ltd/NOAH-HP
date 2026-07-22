@@ -43,7 +43,7 @@ export async function NewsRecruit() {
           </div>
         </Reveal>
         <Reveal direction="right" delay={120}>
-          <Link href="#contact" className={styles.banner}>
+          <Link href="/recruit" className={styles.banner}>
             <span className={styles.bannerCopy}>
               <b className={styles.bannerTitle}>採用情報</b>
               <em className={styles.bannerDescription}>

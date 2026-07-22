@@ -670,11 +670,6 @@
   line-height: 1.9;
 }
 
-.ctaOutline {
-  color: var(--color-surface);
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.68);
-}
 
 @media (max-width: 1180px) {
   .hero {

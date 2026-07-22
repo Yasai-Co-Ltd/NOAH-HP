@@ -33,7 +33,7 @@ export function ContactCta() {
               プロジェクトのご相談やお見積りなど、専門スタッフが丁寧に対応いたします。
             </span>
           </div>
-          <Button href="mailto:info@example.com" variant="white">
+          <Button href="/contact" variant="white">
             お問い合わせフォームへ
           </Button>
         </div>

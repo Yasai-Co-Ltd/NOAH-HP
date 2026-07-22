@@ -91,6 +91,13 @@
   margin-top: 34px;
 }
 
+.heroActions a:first-child {
+  color: var(--color-brand-900);
+  background: var(--color-surface);
+  border-color: var(--color-surface);
+}
+
+.heroActions a:nth-child(2),
 .darkButton {
   color: var(--color-surface);
   background: rgba(255, 255, 255, 0.1);

@@ -115,7 +115,7 @@
   margin: 26px 0 0;
   color: var(--color-brand-900);
   font-family: var(--font-serif);
-  font-size: clamp(2.25rem, 3.45vw, 3.4rem);
+  font-size: clamp(2.75rem, 3.4vw, 4.05rem);
   font-weight: 800;
   line-height: 1.34;
   letter-spacing: 0;
@@ -485,7 +485,11 @@
     gap: 34px;
   }
 
-  .featureTitle,
+  .featureTitle {
+    font-size: 2.1rem;
+    line-height: 1.45;
+  }
+
   .domainTitle {
     font-size: 2rem;
     line-height: 1.48;

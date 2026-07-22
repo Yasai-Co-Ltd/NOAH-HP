@@ -445,7 +445,7 @@ export default function AiDataCenterPage() {
               <Button href="/contact" variant="white">
                 お問い合わせ
               </Button>
-              <Button href="/business" variant="cyan" className={styles.ctaOutline}>
+              <Button href="/business" variant="cyan">
                 事業一覧へ戻る
               </Button>
             </div>
