@@ -58,14 +58,14 @@ const solutionSeries = [
       {
         model: "100kW/215kWh・125kW/261kWh",
         title: "空冷／液冷蓄電",
-        image: asset("/assets/battery/bess-215kwh.png"),
+        image: asset("/assets/battery/bess-215kwh-noah-ai.webp"),
         alt: "100kW／215kWh産業・商業用蓄電池",
         specs: ["需要側蓄電", "ピークカット・BCP", "空冷／液冷方式"],
       },
       {
         model: "200kW/418kWh",
         title: "液冷蓄電",
-        image: asset("/assets/battery/bess-418kwh.png"),
+        image: asset("/assets/battery/bess-418kwh-noah-ai.webp"),
         alt: "200kW／418kWh液冷式蓄電池",
         specs: ["液冷方式", "産業・商業施設向け", "分散型電源に対応"],
       },
@@ -87,28 +87,28 @@ const solutionSeries = [
       {
         model: "100kW/215kWh",
         title: "太陽光蓄電一体型装置",
-        image: asset("/assets/battery/pdf-solar-storage-100-215.png"),
+        image: asset("/assets/battery/solar-storage-100-215-noah-ai.webp"),
         alt: "100kW／215kWh太陽光蓄電一体型装置",
         specs: ["太陽光発電と蓄電を統合", "一体型キャビネット", "自家消費を支援"],
       },
       {
         model: "209kWh/180kW",
         title: "蓄電充電器",
-        image: asset("/assets/battery/pdf-storage-charger-209-180.png"),
+        image: asset("/assets/battery/storage-charger-209-180-noah-ai.webp"),
         alt: "蓄電充電設備",
         specs: ["蓄電・充電を一体化", "急速充電用途", "液冷システム"],
       },
       {
         model: "4×240kW",
         title: "太陽光蓄電充電装置",
-        image: asset("/assets/battery/pdf-solar-charging-4x240.png"),
+        image: asset("/assets/battery/solar-charging-4x240-noah-ai.webp"),
         alt: "4台構成の太陽光蓄電充電装置",
         specs: ["複数充電器を構成", "太陽光発電と連携", "大規模充電拠点向け"],
       },
       {
         model: "iEFC100",
         title: "蓄電充電一体機",
-        image: asset("/assets/battery/product-iefc100.png"),
+        image: asset("/assets/battery/product-iefc100-noah-ai.webp"),
         alt: "iEFC100蓄電充電一体機",
         specs: ["蓄電容量186kWh", "入力30〜90kW・出力180kW", "液冷・IP54"],
       },
@@ -123,7 +123,7 @@ const solutionSeries = [
       {
         model: "100kW/215kWh",
         title: "（太陽光）蓄電一体型キャビネット",
-        image: asset("/assets/battery/pdf-microgrid-100-215.png"),
+        image: asset("/assets/battery/solar-storage-100-215-noah-ai.webp"),
         alt: "100kW／215kWh太陽光蓄電一体型キャビネット",
         specs: ["太陽光・蓄電を統合", "分散型電源として運用", "施設・地域単位に対応"],
       },
@@ -145,35 +145,35 @@ const solutionSeries = [
       {
         model: "2MW/8MWh",
         title: "コンテナ型系統用蓄電池",
-        image: asset("/assets/battery/ess-4178kwh-official.png"),
+        image: asset("/assets/battery/ess-4178kwh-noah-ai.webp"),
         alt: "4.178MWh液冷式コンテナ蓄電池",
         specs: ["2,089kWh×4基／4,178kWh×2基", "液冷・IP55", "EMS・O&Mと連携"],
       },
       {
         model: "CONTAINER ESS",
         title: "コンテナ型蓄電システム",
-        image: asset("/assets/battery/product-container-ess.png"),
+        image: asset("/assets/battery/product-container-ess-noah-ai.webp"),
         alt: "コンテナ型蓄電システム",
         specs: ["200〜5,000kW", "1,000〜5,000kWh", "20ft／40ft・IP54"],
       },
       {
         model: "PWS1-1725KTL-H-EX-XMY-O",
         title: "蓄電池用パワーコンディショナー",
-        image: asset("/assets/battery/product-pws1-1725.png"),
+        image: asset("/assets/battery/product-pws1-1725-noah-ai.webp"),
         alt: "PWS1-1725KTL-H-EX-XMY-O蓄電池用パワーコンディショナー",
         specs: ["215kW〜1.72MW", "690Vac直接接続", "応答時間20ms未満・IP54"],
       },
       {
         model: "PWX1-1575KTL-H",
         title: "蓄電池用パワーコンディショナー",
-        image: asset("/assets/battery/product-pwx1-1575.png"),
+        image: asset("/assets/battery/product-pwx1-1575-noah-ai.webp"),
         alt: "PWX1-1575KTL-H蓄電池用パワーコンディショナー",
         specs: ["1,500V対応", "IP65・C5耐環境設計", "グリッドフォーミング対応"],
       },
       {
         model: "SES2H-5000-MV-EX",
         title: "変圧器・PCS一体型コンテナ",
-        image: asset("/assets/battery/product-ses2h-5000.png"),
+        image: asset("/assets/battery/product-ses2h-5000-noah-ai.webp"),
         alt: "SES2H-5000-MV-EX変圧器・PCS一体型コンテナ",
         specs: ["5MWh・1,500V対応", "変圧器とPCSを一体化", "応答時間20ms未満"],
       },
@@ -194,7 +194,7 @@ const solutionSeries = [
       {
         model: "iPCS 125kW / 215kW",
         title: "モジュール式蓄電PCS",
-        image: asset("/assets/battery/product-ipcs-modular.png"),
+        image: asset("/assets/battery/product-ipcs-modular-noah-ai.webp"),
         alt: "125kW／215kWモジュール式蓄電PCS",
         specs: ["AC400V／AC690V", "DC1,000V／1,500V", "RS485・CAN通信"],
       },
@@ -345,7 +345,7 @@ export default function BatteryEnergyStoragePage() {
     <>
       <section className={styles.hero} aria-labelledby="battery-page-title">
         <Image
-          src={asset("/assets/battery/battery-product-lineup-hero-ai.png")}
+          src={asset("/assets/battery/battery-product-lineup-hero-noah-ai.webp")}
           alt=""
           fill
           priority
@@ -559,7 +559,7 @@ export default function BatteryEnergyStoragePage() {
             <div className={styles.packagePanel}>
               <figure className={styles.packageVisual}>
                 <Image
-                  src={asset("/assets/battery/ess-4178kwh-official.png")}
+                  src={asset("/assets/battery/ess-4178kwh-noah-ai.webp")}
                   alt="ESS100-2000/4180-LC 4.178MWh液冷式コンテナ蓄電池"
                   fill
                   sizes="(max-width: 960px) calc(100vw - 40px), 50vw"
@@ -675,7 +675,7 @@ export default function BatteryEnergyStoragePage() {
 
       <section className={styles.proof} aria-labelledby="proof-title">
         <Image
-          src={asset("/assets/battery/battery-system-lineup.jpg")}
+          src={asset("/assets/battery/battery-product-lineup-hero-noah-ai.webp")}
           alt=""
           fill
           sizes="100vw"
