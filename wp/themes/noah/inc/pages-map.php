@@ -11,7 +11,7 @@ return array(
 	'about/vision' => array( 'title' => '企業理念・ビジョン', 'template' => 'templates/page-about-vision.php' ),
 	'business' => array( 'title' => '事業紹介', 'template' => 'templates/page-business.php' ),
 	'business/ai-data-center' => array( 'title' => 'AIデータセンター事業', 'template' => 'templates/page-business-ai-data-center.php' ),
-	'business/batteryenergystorage' => array( 'title' => '蓄電池事業', 'template' => 'templates/page-business-batteryenergystorage.php' ),
+	'business/batteryenergystorage' => array( 'title' => '蓄電池事業（系統用蓄電池発電所開発）', 'template' => 'templates/page-business-batteryenergystorage.php' ),
 	'business/biomasspower' => array( 'title' => 'バイオマス発電事業', 'template' => 'templates/page-business-biomasspower.php' ),
 	'business/hopper' => array( 'title' => '走行式集塵ホッパー事業', 'template' => 'templates/page-business-hopper.php' ),
 	'business/hydrogen-compressor' => array( 'title' => '水素コンプレッサー事業', 'template' => 'templates/page-business-hydrogen-compressor.php' ),
