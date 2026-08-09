@@ -8,7 +8,7 @@ import styles from "./page.module.css";
 export const metadata: Metadata = {
   title: "会社概要 | 諾亜建設株式会社",
   description:
-    "諾亜建設株式会社の会社名、設立、所在地、連絡先、代表者、資本金、事業内容、登録・許可、取引銀行などの会社概要です。",
+    "諾亜建設株式会社の会社名、設立、所在地、連絡先、代表者、資本金、事業内容、取引銀行などの会社概要です。",
 };
 
 const companyRows = [
