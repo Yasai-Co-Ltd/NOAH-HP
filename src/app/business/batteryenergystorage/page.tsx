@@ -429,6 +429,12 @@ const processSteps = [
   },
 ];
 
+/**
+ * 製品カタログ（製品ラインアップ / 6S+EDR / 主力製品 / EMS）の表示フラグ。
+ * 経営レビューを受けて一旦非表示。復活または完全削除は今後判断する。
+ */
+const SHOW_PRODUCT_CATALOG = false;
+
 export default function BatteryEnergyStoragePage() {
   if (!isPageEnabled("/business/batteryenergystorage")) notFound();
 
@@ -645,6 +651,15 @@ export default function BatteryEnergyStoragePage() {
               </Reveal>
             ))}
           </div>
+
+          <Reveal direction="up">
+            <JcStarNotice
+              className={styles.jcStarNotice}
+              title="蓄電池システムの機器選定にも、セキュリティ要件を。"
+              description="EMS、PCS、クラウド運用を含む蓄電池システムでは、JC-STAR適合製品の取扱いを通じて、導入時のセキュリティ要件にも配慮します。適合対象は製品・機器ごとに確認します。"
+              points={["EMS / PCS", "遠隔監視", "機器選定"]}
+            />
+          </Reveal>
         </div>
       </section>
 
@@ -682,6 +697,9 @@ export default function BatteryEnergyStoragePage() {
         </div>
       </section>
 
+      {/* 製品カタログここから（SHOW_PRODUCT_CATALOG=false で一旦非表示中） */}
+      {SHOW_PRODUCT_CATALOG && (
+        <>
       <section className={styles.lineup} id="lineup" aria-labelledby="lineup-title">
         <div className="container">
           <Reveal direction="up">
@@ -790,14 +808,6 @@ export default function BatteryEnergyStoragePage() {
                 className={styles.techImage}
               />
             </figure>
-          </Reveal>
-          <Reveal direction="up">
-            <JcStarNotice
-              className={styles.jcStarNotice}
-              title="蓄電池システムの機器選定にも、セキュリティ要件を。"
-              description="EMS、PCS、クラウド運用を含む蓄電池システムでは、JC-STAR適合製品の取扱いを通じて、導入時のセキュリティ要件にも配慮します。適合対象は製品・機器ごとに確認します。"
-              points={["EMS / PCS", "遠隔監視", "機器選定"]}
-            />
           </Reveal>
         </div>
       </section>
@@ -932,6 +942,9 @@ export default function BatteryEnergyStoragePage() {
           </div>
         </div>
       </section>
+        </>
+      )}
+      {/* 製品カタログここまで */}
 
       <section className={styles.proof} aria-labelledby="proof-title">
         <Image
