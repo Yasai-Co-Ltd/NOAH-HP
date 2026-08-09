@@ -865,6 +865,14 @@
   box-shadow: 0 16px 34px rgba(22, 96, 102, 0.08);
 }
 
+.proofOwner {
+  margin: 0 0 10px;
+  color: var(--color-muted);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
 .proofCard b {
   color: #228f8a;
   font-size: clamp(1.2rem, 1.5vw, 1.7rem);
@@ -1572,33 +1580,7 @@
   line-height: 1.94;
 }
 
-.pipelineStats {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 14px;
-}
-
-.pipelineStat {
-  min-height: 150px;
-  padding: 28px;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(139, 173, 232, 0.34);
-  backdrop-filter: blur(2px);
-}
-
-.pipelineStat b {
-  color: var(--color-accent-cyan);
-  font-size: clamp(1.4rem, 1.8vw, 2rem);
-}
-
-.pipelineStat span {
-  display: block;
-  margin-top: 12px;
-  color: rgba(232, 240, 255, 0.85);
-  font-size: 0.92rem;
-  font-weight: 700;
-  line-height: 1.55;
-}
+/* 旧 .pipelineStats（統計グリッド）はJSX削除に伴い除去。数値は hero の metricBoard に集約。 */
 
 .pipelineRoles {
   display: grid;
@@ -1699,18 +1681,11 @@
   background: var(--color-surface);
 }
 
-@media (max-width: 1180px) {
-  .pipelineStats {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
 @media (max-width: 760px) {
   .pipeline {
     padding-block: 72px;
   }
 
-  .pipelineStats,
   .pipelineRoles {
     grid-template-columns: 1fr;
   }

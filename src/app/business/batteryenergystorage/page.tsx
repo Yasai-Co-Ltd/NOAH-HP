@@ -287,11 +287,12 @@ const platformItems = [
   },
 ];
 
+/** 実績・体制の数値。owner で NOAH自身の実績とパートナーの実績を明示的に区別する。 */
 const proofItems = [
-  { value: "20年以上", label: "連携する技術パートナーを含む電力分野の研究開発・エンジニアリング経験" },
-  { value: "40件以上", label: "技術パートナーが保有する製品・コアシステム関連の知的財産" },
-  { value: "50MW / 200MWh", label: "技術パートナーによる大規模蓄電発電所の導入実績" },
-  { value: "2GWh", label: "NOAHによる蓄電池調達の戦略的パートナー体制" },
+  { owner: "NOAH", value: "約790MW", label: "保有する特別高圧蓄電池プラント案件の合計出力規模（約25件）" },
+  { owner: "NOAH", value: "2GWh", label: "蓄電池調達の戦略的パートナー体制" },
+  { owner: "技術パートナー", value: "20年以上", label: "電力分野の研究開発・エンジニアリング経験" },
+  { owner: "技術パートナー", value: "50MW / 200MWh", label: "大規模蓄電発電所の導入実績" },
 ];
 
 const pipelineRoles = [
@@ -553,15 +554,15 @@ export default function BatteryEnergyStoragePage() {
                 </h2>
               </div>
               <p className={styles.sectionLead}>
-                用地・権利を確保し、系統連系・許認可の手続きとあわせて開発を進める代表的な蓄電所案件です。
-                連系先はいずれも九州電力送配電株式会社です。
+                用地・権利を確保し、系統連系・許認可の手続きとあわせて開発を進める蓄電所案件です。
+                保有する約25件のうち代表的な16件を掲載しています。連系先はいずれも九州電力送配電株式会社です。
               </p>
             </div>
           </Reveal>
 
           <Reveal direction="up">
             <div className={styles.projectTableWrap}>
-              <table className={styles.projectTable}>
+              <table className={styles.projectTable} aria-label="保有する蓄電所案件の一覧">
                 <thead>
                   <tr>
                     <th scope="col">No.</th>
@@ -957,11 +958,11 @@ export default function BatteryEnergyStoragePage() {
         <AiImageNote position="top-right" />
         <div className={`container ${styles.proofInner}`}>
           <Reveal direction="left">
-            <SectionLabel eyebrow="TECHNOLOGY PARTNERS" subtitle="技術基盤・実績" />
+            <SectionLabel eyebrow="TRACK RECORD" subtitle="実績・技術基盤" />
             <h2 id="proof-title" className={styles.heading}>
-              パートナーの技術基盤と
+              NOAHの開発力と、
               <br />
-              NOAHの調達力を、
+              パートナーの技術基盤を、
               <br />
               日本市場へ。
             </h2>
@@ -971,6 +972,7 @@ export default function BatteryEnergyStoragePage() {
             {proofItems.map((item, index) => (
               <Reveal key={item.value} direction="up" delay={index * 70}>
                 <article className={styles.proofCard}>
+                  <p className={styles.proofOwner}>{item.owner}</p>
                   <b>{item.value}</b>
                   <span>{item.label}</span>
                 </article>
@@ -1016,11 +1018,11 @@ export default function BatteryEnergyStoragePage() {
         <div className={`container ${styles.ctaInner}`}>
           <Reveal direction="up">
             <h2 id="battery-cta-title">
-              系統用蓄電池・産業用蓄電池の
+              特別高圧蓄電池発電所の
               <br />
-              導入相談はこちら
+              開発・投資協業のご相談はこちら
             </h2>
-            <p>事業計画の初期段階から、候補地・容量・運用モデルまでご相談ください。</p>
+            <p>用地・系統・許認可の初期整理から、EPC建設、SPC組成、案件売却まで、開発と投資のご相談を承ります。</p>
             <div className={styles.ctaActions}>
               <Button href="/contact" variant="white">
                 お問い合わせ
