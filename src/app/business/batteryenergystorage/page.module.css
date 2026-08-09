@@ -1724,3 +1724,206 @@
     align-items: flex-start;
   }
 }
+
+/* ===== Project portfolio（保有案件一覧） ===== */
+
+.projects {
+  padding-block: 112px;
+  background: #f4f8fd;
+}
+
+.projectTableWrap {
+  overflow-x: auto;
+  background: #ffffff;
+  border: 1px solid rgba(180, 201, 224, 0.7);
+}
+
+.projectTable {
+  width: 100%;
+  min-width: 880px;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+
+.projectTable thead th {
+  padding: 14px 18px;
+  color: var(--color-surface);
+  background: var(--color-brand-900);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.projectTable tbody th,
+.projectTable tbody td,
+.projectTable tfoot th,
+.projectTable tfoot td {
+  padding: 13px 18px;
+  border-bottom: 1px solid rgba(180, 201, 224, 0.55);
+  text-align: left;
+  vertical-align: top;
+}
+
+.projectTable tbody th {
+  color: var(--color-brand-900);
+  font-weight: 700;
+}
+
+.projectTable tbody tr:nth-child(even) {
+  background: rgba(233, 242, 251, 0.55);
+}
+
+.projectTable td:first-child {
+  color: var(--color-muted);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.projectTable thead th:nth-child(n + 4),
+.projectTable tbody td:nth-child(n + 4),
+.projectTable tfoot td:nth-child(n + 4) {
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.projectTable tfoot th,
+.projectTable tfoot td {
+  color: var(--color-brand-900);
+  background: rgba(233, 242, 251, 0.8);
+  border-top: 2px solid var(--color-brand-900);
+  border-bottom: none;
+  font-weight: 800;
+}
+
+.projectPhotoGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 30px;
+}
+
+.projectPhotoCard {
+  margin: 0;
+}
+
+.projectPhotoImage {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border: 1px solid rgba(180, 201, 224, 0.7);
+}
+
+.projectPhotoCard figcaption {
+  display: grid;
+  gap: 2px;
+  margin-top: 10px;
+}
+
+.projectPhotoCard figcaption b {
+  color: var(--color-brand-900);
+  font-size: 0.86rem;
+  font-weight: 700;
+}
+
+.projectPhotoCard figcaption span {
+  color: var(--color-muted);
+  font-size: 0.74rem;
+  font-weight: 500;
+}
+
+/* ===== Core capabilities（NOAHのコア能力） ===== */
+
+.capabilities {
+  padding-block: 124px;
+  background: #ffffff;
+}
+
+.capabilityGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  margin-top: 56px;
+}
+
+.capabilityCard {
+  height: 100%;
+  padding: 30px 28px 32px;
+  background: #f7fafd;
+  border: 1px solid rgba(180, 201, 224, 0.7);
+  border-top: 3px solid var(--color-accent-cyan);
+}
+
+.capabilityCard b {
+  display: block;
+  margin-bottom: 14px;
+  color: var(--color-brand-700);
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.capabilityCard h3 {
+  margin: 0 0 14px;
+  color: var(--color-brand-900);
+  font-size: 1.06rem;
+  font-weight: 800;
+  line-height: 1.5;
+}
+
+.capabilityCard ul {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.capabilityCard li {
+  position: relative;
+  padding-left: 14px;
+  color: var(--color-text);
+  font-size: 0.86rem;
+  font-weight: 500;
+  line-height: 1.7;
+}
+
+.capabilityCard li::before {
+  content: "";
+  position: absolute;
+  top: 0.62em;
+  left: 0;
+  width: 6px;
+  height: 2px;
+  background: var(--color-accent-cyan);
+}
+
+@media (max-width: 1180px) {
+  .capabilityGrid,
+  .projectPhotoGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 920px) {
+  .projects,
+  .capabilities {
+    padding-block: var(--space-section-mobile);
+  }
+
+  .capabilityGrid {
+    grid-template-columns: 1fr;
+    margin-top: 36px;
+  }
+}
+
+@media (max-width: 760px) {
+  .projectPhotoGrid {
+    grid-template-columns: 1fr;
+  }
+}

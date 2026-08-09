@@ -12,9 +12,9 @@ import styles from "./page.module.css";
 import { asset } from "@/lib/asset";
 
 export const metadata: Metadata = {
-  title: "蓄電池事業 | 諾亜建設株式会社",
+  title: "蓄電池事業（系統用蓄電池発電所開発） | 諾亜建設株式会社",
   description:
-    "系統用、産業・商業用、太陽光蓄電充電、マイクログリッド向けの蓄電池を、設計・調達・施工、EMSによる遠隔監視、運用保守まで一貫して支援します。",
+    "特別高圧・高圧系統用蓄電池発電所の開発事業。用地・権利の取得、系統連系、行政許認可、EPC建設、運用・EXITまで一貫して推進します。保有案件約25件・合計約790MW。",
 };
 
 const overviewSteps = [
@@ -43,10 +43,10 @@ const overviewSteps = [
 const marketBadges = ["卸電力市場", "容量市場", "需給調整市場", "一次調整力対応"];
 
 const heroMetrics = [
-  { value: "2MW/8MWh", label: "系統用蓄電池" },
-  { value: "EMS", label: "遠隔監視・制御" },
-  { value: "4領域", label: "系統用・産業商業用・太陽光・マイクログリッド" },
-  { value: "O&M", label: "運用保守まで一貫支援" },
+  { value: "約25件", label: "保有する特別高圧蓄電池プラント案件" },
+  { value: "約790MW", label: "合計出力規模" },
+  { value: "約21件", label: "うち特別高圧級の案件" },
+  { value: "2年以内", label: "系統連系が可能な案件を多数保有" },
 ];
 
 const solutionSeries = [
@@ -294,13 +294,6 @@ const proofItems = [
   { value: "2GWh", label: "NOAHによる蓄電池調達の戦略的パートナー体制" },
 ];
 
-const pipelineStats = [
-  { value: "約25件", label: "保有する特別高圧蓄電池プラント案件" },
-  { value: "約790MW", label: "合計出力規模" },
-  { value: "約21件", label: "うち特別高圧級の案件" },
-  { value: "2年以内", label: "系統連系が可能な案件を多数保有" },
-];
-
 const pipelineRoles = [
   {
     number: "01",
@@ -316,26 +309,123 @@ const pipelineRoles = [
   },
 ];
 
-const processSteps = [
+/** 保有・開発中の蓄電所案件一覧。所在地は市区町村・町字レベルで掲載（地番は非公開）。 */
+const storageProjects = [
+  { name: "鹿児島宮之浦町蓄電所", location: "鹿児島県鹿児島市宮之浦町", siteArea: "6,484", powerKw: "9,500", energyKwh: "38,000" },
+  { name: "C-42蓄電所", location: "福岡県飯塚市横田", siteArea: "5,011", powerKw: "19,780", energyKwh: "79,120" },
+  { name: "C-02蓄電所", location: "佐賀県佐賀市大和町尼寺", siteArea: "3,139", powerKw: "29,950", energyKwh: "119,800" },
+  { name: "C-53蓄電所", location: "福岡県筑紫野市原", siteArea: "4,530", powerKw: "17,230", energyKwh: "68,920" },
+  { name: "1-70蓄電所", location: "佐賀県鳥栖市幸津町", siteArea: "5,419", powerKw: "19,950", energyKwh: "79,800" },
+  { name: "1-72蓄電所", location: "佐賀県鳥栖市幸津町", siteArea: "10,498", powerKw: "19,950", energyKwh: "79,800" },
+  { name: "E-36-2蓄電所", location: "大分県大分市毛井", siteArea: "9,722", powerKw: "89,080", energyKwh: "356,320" },
+  { name: "1-71蓄電所", location: "佐賀県鳥栖市幸津町", siteArea: "1,013", powerKw: "9,950", energyKwh: "39,800" },
+  { name: "1-95蓄電所", location: "佐賀県三養基郡上峰町", siteArea: "6,012", powerKw: "29,950", energyKwh: "119,800" },
+  { name: "C-09蓄電所", location: "福岡県大川市中古賀", siteArea: "3,294", powerKw: "19,950", energyKwh: "79,800" },
+  {
+    name: "日向市富高・日向市塩見 メガバッテリーステーション",
+    location: "宮崎県日向市富高・塩見",
+    siteArea: "6,962",
+    powerKw: "29,270",
+    energyKwh: "117,080",
+  },
+  { name: "1-78蓄電所", location: "福岡県朝倉市一木", siteArea: "7,691", powerKw: "29,950", energyKwh: "119,800" },
+  { name: "C-10蓄電所", location: "福岡県大川市中古賀", siteArea: "2,825", powerKw: "29,950", energyKwh: "119,800" },
+  { name: "高圧14蓄電所", location: "宮崎県えびの市向江", siteArea: "1,934", powerKw: "1,997", energyKwh: "7,988" },
+  { name: "C-06蓄電所", location: "佐賀県佐賀市高木瀬西", siteArea: "2,241", powerKw: "1,996", energyKwh: "7,984" },
+  { name: "C-05蓄電所", location: "佐賀県佐賀市高木瀬町長瀬", siteArea: "4,500", powerKw: "29,950", energyKwh: "119,800" },
+];
+
+const projectTotals = {
+  count: storageProjects.length,
+  powerKw: "388,403",
+  energyKwh: "1,553,612",
+};
+
+/** 開発用地の現地写真（NOAH撮影）。 */
+const projectPhotos = [
+  {
+    src: "/assets/battery/projects/site-c42.jpg",
+    name: "C-42蓄電所",
+    area: "福岡県飯塚市",
+    width: 1107,
+    height: 622,
+  },
+  {
+    src: "/assets/battery/projects/site-c53.jpg",
+    name: "C-53蓄電所",
+    area: "福岡県筑紫野市",
+    width: 947,
+    height: 532,
+  },
+  {
+    src: "/assets/battery/projects/site-1-72.jpg",
+    name: "1-72蓄電所",
+    area: "佐賀県鳥栖市",
+    width: 1144,
+    height: 858,
+  },
+  {
+    src: "/assets/battery/projects/site-1-78.jpg",
+    name: "1-78蓄電所",
+    area: "福岡県朝倉市",
+    width: 1331,
+    height: 748,
+  },
+];
+
+const coreCapabilities = [
   {
     number: "01",
-    title: "調査・企画",
-    text: "設置候補地、系統連系、用途、電力市場の活用方針を整理します。",
+    title: "プロジェクトリソース開発",
+    items: ["土地選定・用地取得", "案件ID取得", "権利調整"],
   },
   {
     number: "02",
-    title: "システム設計",
-    text: "ESS、PCS、EMS、変圧設備、通信構成を要件に合わせて設計します。",
+    title: "系統連系推進",
+    items: ["接続検討申込", "保証金・工事負担金対応", "連系協議"],
   },
   {
     number: "03",
-    title: "調達・施工",
-    text: "機器調達、据付、電気工事、試運転、連系手続きを進めます。",
+    title: "行政許認可",
+    items: ["開発許可", "農地転用・林地開発", "消防・環境調査"],
   },
   {
     number: "04",
-    title: "運用・保守",
-    text: "遠隔監視、予兆保全、一次調整力対応、市場活用まで継続的に支援します。",
+    title: "EPC建設",
+    items: ["土木・電気工事", "設備設置・変電設備", "システム統合"],
+  },
+  {
+    number: "05",
+    title: "設備統合",
+    items: ["蓄電池・PCS・EMS", "変圧器", "防災・監視システム"],
+  },
+  {
+    number: "06",
+    title: "投資・EXIT",
+    items: ["SPC・GK-TKスキーム", "銀行融資対応", "案件売却・長期運営"],
+  },
+];
+
+const processSteps = [
+  {
+    number: "01",
+    title: "用地・案件開発",
+    text: "土地選定、権利調整、案件ID取得まで、事業の起点となるリソースを確保します。",
+  },
+  {
+    number: "02",
+    title: "系統連系・許認可",
+    text: "接続検討、保証金・工事負担金、連系協議、開発許可・農地転用などを推進します。",
+  },
+  {
+    number: "03",
+    title: "EPC建設",
+    text: "設計、土木・電気工事、設備設置、変電設備、試運転まで一貫して施工します。",
+  },
+  {
+    number: "04",
+    title: "運用・EXIT",
+    text: "遠隔監視・O&M、市場運用に加え、SPC組成や案件売却まで対応します。",
   },
 ];
 
@@ -362,22 +452,22 @@ export default function BatteryEnergyStoragePage() {
               <span>蓄電池事業</span>
             </p>
             <h1 id="battery-page-title" className={styles.heroTitle}>
-              系統用蓄電池を、
+              特別高圧蓄電池発電所を、
               <br />
-              安定電源と
+              開発から
               <br />
-              収益基盤へ。
+              運用・EXITまで。
             </h1>
             <p className={styles.heroLead}>
-              2MW/8MWhの系統用蓄電池から、産業・商業用、太陽光蓄電充電、マイクログリッドまで。
-              NOAHは設備の選定・設計・調達・施工、EMSによる遠隔監視、運用保守を一貫して支援します。
+              NOAHは、日本国内で特別高圧・高圧系統用蓄電池発電所の開発・設計・建設・投資協業を推進しています。
+              用地取得、系統連系、行政許認可、EPC施工、竣工引渡しから運営・EXITまで一貫して対応します。
             </p>
             <div className={styles.heroActions}>
               <Button href="/contact" variant="white">
-                導入相談をする
+                事業相談をする
               </Button>
-              <Button href="#solution" variant="outline" className={styles.darkButton}>
-                ソリューションを見る
+              <Button href="#projects" variant="outline" className={styles.darkButton}>
+                保有案件を見る
               </Button>
             </div>
           </Reveal>
@@ -390,6 +480,171 @@ export default function BatteryEnergyStoragePage() {
               <span>{metric.label}</span>
             </div>
           ))}
+        </div>
+      </section>
+
+      <section className={styles.pipeline} aria-labelledby="pipeline-title">
+        <div className="container">
+          <Reveal direction="up">
+            <div className={styles.sectionHeading}>
+              <div>
+                <SectionLabel
+                  eyebrow="DEVELOPMENT PIPELINE"
+                  subtitle="特別高圧蓄電池プラント"
+                  inverse
+                />
+                <h2 id="pipeline-title" className={styles.pipelineHeading}>
+                  特別高圧蓄電池プラントを、
+                  <br />
+                  開発パートナーとともに。
+                </h2>
+              </div>
+              <p className={styles.pipelineLead}>
+                当社は、系統連系および必要な許認可の取得が完了し、運転可能な状態にある特別高圧蓄電池プラントの用地・権利を多数保有しています。
+                2026年7月には株式会社Birdmanとの業務提携により、開発事業者の参画から蓄電池システムの部材調達までを含む開発体制を構築しました。
+              </p>
+            </div>
+          </Reveal>
+
+          <div className={styles.pipelineRoles}>
+            {pipelineRoles.map((role, index) => (
+              <Reveal key={role.company} direction="up" delay={index * 80}>
+                <article className={styles.pipelineRole}>
+                  <p>ROLE {role.number}</p>
+                  <h3>{role.company}</h3>
+                  <span>{role.note}</span>
+                  <ul>
+                    {role.items.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                </article>
+              </Reveal>
+            ))}
+          </div>
+
+          <Reveal direction="up">
+            <div className={styles.pipelineFooter}>
+              <p>※ 案件数・出力規模は2026年7月時点。個別案件の詳細はお問い合わせください。</p>
+              <Link href="/news/birdman-partnership" className={styles.pipelineLink}>
+                業務提携のプレスリリースを見る<span aria-hidden="true">→</span>
+              </Link>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      <section className={styles.projects} id="projects" aria-labelledby="projects-title">
+        <div className="container">
+          <Reveal direction="up">
+            <div className={styles.sectionHeading}>
+              <div>
+                <SectionLabel eyebrow="PROJECT PORTFOLIO" subtitle="保有案件一覧" />
+                <h2 id="projects-title" className={styles.heading}>
+                  九州エリアを中心に、
+                  <br />
+                  蓄電所案件を保有。
+                </h2>
+              </div>
+              <p className={styles.sectionLead}>
+                用地・権利を確保し、系統連系・許認可の手続きとあわせて開発を進める代表的な蓄電所案件です。
+                連系先はいずれも九州電力送配電株式会社です。
+              </p>
+            </div>
+          </Reveal>
+
+          <Reveal direction="up">
+            <div className={styles.projectTableWrap}>
+              <table className={styles.projectTable}>
+                <thead>
+                  <tr>
+                    <th scope="col">No.</th>
+                    <th scope="col">蓄電所名</th>
+                    <th scope="col">所在地</th>
+                    <th scope="col">開発用地</th>
+                    <th scope="col">定格出力</th>
+                    <th scope="col">蓄電容量</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {storageProjects.map((project, index) => (
+                    <tr key={project.name}>
+                      <td>{String(index + 1).padStart(2, "0")}</td>
+                      <th scope="row">{project.name}</th>
+                      <td>{project.location}</td>
+                      <td>{project.siteArea}㎡</td>
+                      <td>{project.powerKw}kW</td>
+                      <td>{project.energyKwh}kWh</td>
+                    </tr>
+                  ))}
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <td />
+                    <th scope="row">合計（{projectTotals.count}件）</th>
+                    <td />
+                    <td />
+                    <td>{projectTotals.powerKw}kW</td>
+                    <td>{projectTotals.energyKwh}kWh</td>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
+          </Reveal>
+
+          <div className={styles.projectPhotoGrid}>
+            {projectPhotos.map((photo, index) => (
+              <Reveal key={photo.name} direction="up" delay={index * 60}>
+                <figure className={styles.projectPhotoCard}>
+                  <Image
+                    src={asset(photo.src)}
+                    alt={`${photo.name}（${photo.area}）の開発用地の現地写真`}
+                    width={photo.width}
+                    height={photo.height}
+                    sizes="(max-width: 760px) calc(100vw - 40px), (max-width: 1180px) 46vw, 24vw"
+                    className={styles.projectPhotoImage}
+                  />
+                  <figcaption>
+                    <b>{photo.name}</b>
+                    <span>{photo.area}｜現地写真</span>
+                  </figcaption>
+                </figure>
+              </Reveal>
+            ))}
+          </div>
+
+          <p className={styles.sourceNote}>
+            ※ 保有・開発中案件の一部を掲載。所在地は町字までを表記しています。個別案件の詳細はお問い合わせください。
+          </p>
+        </div>
+      </section>
+
+      <section className={styles.capabilities} aria-labelledby="capabilities-title">
+        <div className="container">
+          <Reveal direction="up">
+            <SectionLabel eyebrow="CORE CAPABILITIES" subtitle="NOAHのコア能力" />
+            <h2 id="capabilities-title" className={styles.heading}>
+              開発・連系・許認可・EPCを、
+              <br />
+              ひとつの体制で推進する。
+            </h2>
+          </Reveal>
+
+          <div className={styles.capabilityGrid}>
+            {coreCapabilities.map((capability, index) => (
+              <Reveal key={capability.number} direction="up" delay={index * 60}>
+                <article className={styles.capabilityCard}>
+                  <b>{capability.number}</b>
+                  <h3>{capability.title}</h3>
+                  <ul>
+                    {capability.items.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                </article>
+              </Reveal>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -712,76 +967,14 @@ export default function BatteryEnergyStoragePage() {
         </div>
       </section>
 
-      <section className={styles.pipeline} aria-labelledby="pipeline-title">
-        <div className="container">
-          <Reveal direction="up">
-            <div className={styles.sectionHeading}>
-              <div>
-                <SectionLabel
-                  eyebrow="DEVELOPMENT PIPELINE"
-                  subtitle="特別高圧蓄電池プラント"
-                  inverse
-                />
-                <h2 id="pipeline-title" className={styles.pipelineHeading}>
-                  特別高圧蓄電池プラントを、
-                  <br />
-                  開発パートナーとともに。
-                </h2>
-              </div>
-              <p className={styles.pipelineLead}>
-                当社は、系統連系および必要な許認可の取得が完了し、運転可能な状態にある特別高圧蓄電池プラントの用地・権利を多数保有しています。
-                2026年7月には株式会社Birdmanとの業務提携により、開発事業者の参画から蓄電池システムの部材調達までを含む開発体制を構築しました。
-              </p>
-            </div>
-          </Reveal>
-
-          <div className={styles.pipelineStats} aria-label="保有案件の規模">
-            {pipelineStats.map((stat, index) => (
-              <Reveal key={stat.value} direction="up" delay={index * 70}>
-                <article className={styles.pipelineStat}>
-                  <b>{stat.value}</b>
-                  <span>{stat.label}</span>
-                </article>
-              </Reveal>
-            ))}
-          </div>
-
-          <div className={styles.pipelineRoles}>
-            {pipelineRoles.map((role, index) => (
-              <Reveal key={role.company} direction="up" delay={index * 80}>
-                <article className={styles.pipelineRole}>
-                  <p>ROLE {role.number}</p>
-                  <h3>{role.company}</h3>
-                  <span>{role.note}</span>
-                  <ul>
-                    {role.items.map((item) => (
-                      <li key={item}>{item}</li>
-                    ))}
-                  </ul>
-                </article>
-              </Reveal>
-            ))}
-          </div>
-
-          <Reveal direction="up">
-            <div className={styles.pipelineFooter}>
-              <p>※ 案件数・出力規模は2026年7月時点。個別案件の詳細はお問い合わせください。</p>
-              <Link href="/news/birdman-partnership" className={styles.pipelineLink}>
-                業務提携のプレスリリースを見る<span aria-hidden="true">→</span>
-              </Link>
-            </div>
-          </Reveal>
-        </div>
-      </section>
-
       <section className={styles.process} aria-labelledby="process-title">
         <div className="container">
           <Reveal direction="up">
-            <SectionLabel eyebrow="PROJECT FLOW" subtitle="導入までの流れ" />
+            <SectionLabel eyebrow="PROJECT FLOW" subtitle="開発の流れ" />
             <h2 id="process-title" className={styles.heading}>
-              調査から運用まで、
+              用地開発から運用・EXITまで、
               <br />
-              蓄電池プロジェクトを一貫支援。
+              一貫して推進する。
             </h2>
           </Reveal>
 

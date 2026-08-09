@@ -45,3 +45,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# 社内資料（機微情報を含むためコミット禁止）
+*.pptx
