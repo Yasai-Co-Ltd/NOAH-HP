@@ -7,13 +7,14 @@ import { AiImageNote } from "@/components/ui/AiImageNote/AiImageNote";
 import { Button } from "@/components/ui/Button/Button";
 import { JcStarNotice } from "@/components/ui/JcStarNotice/JcStarNotice";
 import { SectionLabel } from "@/components/ui/SectionLabel/SectionLabel";
+import { TextLink } from "@/components/ui/TextLink/TextLink";
 import styles from "./page.module.css";
 import { asset } from "@/lib/asset";
 
 export const metadata: Metadata = {
   title: "AIデータセンター事業 | 諾亜建設株式会社",
   description:
-    "川越市、和歌山県、千葉県、群馬県で検討を進めるAIデータセンター計画と、電力・蓄電池・EMS・冷却を一体で整理する諾亜建設の取り組みを紹介します。",
+    "候補地・電力容量・変電受電・通信・EPC建設・投融資まで、日本でAIデータセンターを実現する諾亜建設の事業を紹介します。川越・和歌山・千葉・群馬で計画を推進中。",
 };
 
 const heroMetrics = [
@@ -141,6 +142,39 @@ const processSteps = [
   },
 ];
 
+const dcCapabilities = [
+  {
+    number: "01",
+    title: "土地・候補地開発",
+    items: ["候補地の確保・権利調整", "既存建物・大規模用地の活用", "道路・水利・地盤条件の確認"],
+  },
+  {
+    number: "02",
+    title: "電力・系統",
+    items: ["受電容量の確保", "変電・送電条件の整理", "電力会社との協議"],
+  },
+  {
+    number: "03",
+    title: "蓄電池連携",
+    items: ["特別高圧蓄電池との一体開発", "ピークカット・バックアップ", "電力コストの低減"],
+  },
+  {
+    number: "04",
+    title: "通信・冷却・道路",
+    items: ["通信ルートの確保", "冷却方式・水利条件の計画", "搬入・保守動線の設計"],
+  },
+  {
+    number: "05",
+    title: "EPC建設",
+    items: ["建屋・電気設備の設計施工", "GPUサーバー・ラック構築", "試運転・引渡し"],
+  },
+  {
+    number: "06",
+    title: "投融資・行政手続き",
+    items: ["プロジェクトファイナンス", "SPC組成・投資協業", "開発許可・環境調査"],
+  },
+];
+
 export default function AiDataCenterPage() {
   if (!isPageEnabled("/business/ai-data-center")) notFound();
 
@@ -163,20 +197,20 @@ export default function AiDataCenterPage() {
               <span>AIデータセンター事業</span>
             </p>
             <h1 id="ai-dc-title" className={styles.heroTitle}>
-              AI計算基盤を、
+              AIデータセンターを、
               <br />
-              電力インフラから構築する。
+              土地と電力から実現する。
             </h1>
             <p className={styles.heroLead}>
-              現在、川越市、和歌山県、千葉県、群馬県を中心に、AIデータセンターの建設計画・候補地を整理しています。
-              高密度な電力、冷却、蓄電池、再エネ、EMSを一体で検討し、計算基盤を支えるインフラから事業化を進めます。
+              NOAHは、候補地の確保、受電容量・変電条件の整理、電力会社との協議、蓄電池連携、EPC建設、投融資協業まで、
+              日本でAIデータセンターを実現するために必要な工程を一体で推進します。現在、川越市、和歌山県、千葉県、群馬県で計画を進めています。
             </p>
             <div className={styles.heroActions}>
               <Button href="/contact" variant="white">
                 事業相談をする
               </Button>
-              <Button href="#energy-model" variant="cyan" className={styles.darkButton}>
-                統合モデルを見る
+              <Button href="#project-area" variant="cyan" className={styles.darkButton}>
+                計画エリアを見る
               </Button>
             </div>
           </Reveal>
@@ -189,6 +223,92 @@ export default function AiDataCenterPage() {
               <span>{metric.label}</span>
             </div>
           ))}
+        </div>
+      </section>
+
+      <section className={styles.concepts} id="project-area" aria-labelledby="concepts-title">
+        <div className="container">
+          <Reveal direction="up">
+            <SectionLabel eyebrow="PROJECT AREA" subtitle="建設計画エリア" />
+            <h2 id="concepts-title" className={styles.heading}>
+              電力、用地、蓄電池を、
+              <br />
+              エリアごとに整理する。
+            </h2>
+          </Reveal>
+
+          <div className={styles.projectGrid}>
+            {projectSites.map((site, index) => (
+              <Reveal key={site.area} direction="up" delay={index * 70}>
+                <article className={styles.conceptItem}>
+                  <figure className={styles.projectPhoto}>
+                    <Image
+                      src={asset(site.image)}
+                      alt={site.alt}
+                      fill
+                      sizes="(max-width: 960px) calc(100vw - 40px), 50vw"
+                      className={styles.projectImage}
+                    />
+                    {site.isAiImage && <AiImageNote />}
+                  </figure>
+                  <div className={styles.conceptBody}>
+                    <div className={styles.conceptMeta}>
+                      <span className={styles.conceptStatus}>{site.status}</span>
+                      <p>{site.area}</p>
+                    </div>
+                    <h3>{site.title}</h3>
+                    <p>{site.text}</p>
+                    <ul className={styles.factList}>
+                      {site.facts.map((fact) => (
+                        <li key={fact}>{fact}</li>
+                      ))}
+                    </ul>
+                  </div>
+                </article>
+              </Reveal>
+            ))}
+          </div>
+          <p className={styles.sourceNote}>
+            掲載画像には計画説明用の図版・イメージを含みます。掲載内容は計画段階の情報です。川越市・千葉県は詳細条件が整い次第、掲載内容を更新します。
+          </p>
+        </div>
+      </section>
+
+      <section className={styles.capabilities} aria-labelledby="dc-capabilities-title">
+        <div className="container">
+          <Reveal direction="up">
+            <SectionLabel eyebrow="CORE CAPABILITIES" subtitle="NOAHの実現能力" />
+            <h2 id="dc-capabilities-title" className={styles.heading}>
+              土地・電力・EPC・投融資を、
+              <br />
+              ひとつの体制で推進する。
+            </h2>
+          </Reveal>
+
+          <div className={styles.capabilityGrid}>
+            {dcCapabilities.map((capability, index) => (
+              <Reveal key={capability.number} direction="up" delay={index * 60}>
+                <article className={styles.capabilityCard}>
+                  <b>{capability.number}</b>
+                  <h3>{capability.title}</h3>
+                  <ul>
+                    {capability.items.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                </article>
+              </Reveal>
+            ))}
+          </div>
+
+          <Reveal direction="up">
+            <div className={styles.capabilityFooter}>
+              <p>
+                蓄電池連携では、当社が保有する特別高圧蓄電池プラント案件（約25件・合計約790MW）との一体開発が可能です。
+              </p>
+              <TextLink href="/business/batteryenergystorage">蓄電池事業を見る</TextLink>
+            </div>
+          </Reveal>
         </div>
       </section>
 
@@ -335,20 +455,6 @@ export default function AiDataCenterPage() {
               発電・蓄電・負荷・設備状態のデータを集め、予測、異常検知、保守提案へつなげます。
               AIデータセンターの価値は、建設後の運用品質で決まります。
             </p>
-            <div className={styles.controlStats}>
-              <div>
-                <b>5min</b>
-                <span>事前予警イメージ</span>
-              </div>
-              <div>
-                <b>50ms</b>
-                <span>調頻時間短縮イメージ</span>
-              </div>
-              <div>
-                <b>3%+</b>
-                <span>アルゴリズム精度向上イメージ</span>
-              </div>
-            </div>
           </Reveal>
 
           <Reveal direction="right">
@@ -362,54 +468,6 @@ export default function AiDataCenterPage() {
               />
             </figure>
           </Reveal>
-        </div>
-      </section>
-
-      <section className={styles.concepts} aria-labelledby="concepts-title">
-        <div className="container">
-          <Reveal direction="up">
-            <SectionLabel eyebrow="PROJECT AREA" subtitle="建設計画エリア" />
-            <h2 id="concepts-title" className={styles.heading}>
-              電力、用地、蓄電池を、
-              <br />
-              エリアごとに整理する。
-            </h2>
-          </Reveal>
-
-          <div className={styles.projectGrid}>
-            {projectSites.map((site, index) => (
-              <Reveal key={site.area} direction="up" delay={index * 70}>
-                <article className={styles.conceptItem}>
-                  <figure className={styles.projectPhoto}>
-                    <Image
-                      src={asset(site.image)}
-                      alt={site.alt}
-                      fill
-                      sizes="(max-width: 960px) calc(100vw - 40px), 50vw"
-                      className={styles.projectImage}
-                    />
-                    {site.isAiImage && <AiImageNote />}
-                  </figure>
-                  <div className={styles.conceptBody}>
-                    <div className={styles.conceptMeta}>
-                      <span className={styles.conceptStatus}>{site.status}</span>
-                      <p>{site.area}</p>
-                    </div>
-                    <h3>{site.title}</h3>
-                    <p>{site.text}</p>
-                    <ul className={styles.factList}>
-                      {site.facts.map((fact) => (
-                        <li key={fact}>{fact}</li>
-                      ))}
-                    </ul>
-                  </div>
-                </article>
-              </Reveal>
-            ))}
-          </div>
-          <p className={styles.sourceNote}>
-            掲載画像には計画説明用の図版・イメージを含みます。掲載内容は計画段階の情報です。川越市・千葉県は詳細条件が整い次第、掲載内容を更新します。
-          </p>
         </div>
       </section>
 
