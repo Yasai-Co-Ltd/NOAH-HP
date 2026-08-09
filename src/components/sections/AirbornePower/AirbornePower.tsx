@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Reveal } from "@/components/animation/Reveal/Reveal";
+import { AiImageNote } from "@/components/ui/AiImageNote/AiImageNote";
 import { Button } from "@/components/ui/Button/Button";
 import { SectionLabel } from "@/components/ui/SectionLabel/SectionLabel";
 import { asset } from "@/lib/asset";
@@ -38,6 +39,7 @@ export function AirbornePower() {
               sizes="(max-width: 920px) calc(100vw - 40px), 63vw"
               className={styles.image}
             />
+            <AiImageNote />
             <figcaption className={styles.caption}>
               空に浮かぶ、可搬型の発電所。
             </figcaption>

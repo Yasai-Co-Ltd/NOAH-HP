@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { isPageEnabled } from "@/lib/page-config";
 import Image from "next/image";
 import { Reveal } from "@/components/animation/Reveal/Reveal";
+import { AiImageNote } from "@/components/ui/AiImageNote/AiImageNote";
 import { Button } from "@/components/ui/Button/Button";
 import { SectionLabel } from "@/components/ui/SectionLabel/SectionLabel";
 import styles from "./page.module.css";
@@ -314,6 +315,7 @@ export default function WindPowerPage() {
                 sizes="(max-width: 960px) calc(100vw - 40px), 54vw"
                 className={styles.airborneImage}
               />
+              <AiImageNote />
               <figcaption>飛行船型空中風力発電システムのコンセプトイメージ</figcaption>
             </figure>
           </Reveal>

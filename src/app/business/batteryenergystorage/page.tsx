@@ -4,6 +4,7 @@ import { isPageEnabled } from "@/lib/page-config";
 import Image from "next/image";
 import Link from "next/link";
 import { Reveal } from "@/components/animation/Reveal/Reveal";
+import { AiImageNote } from "@/components/ui/AiImageNote/AiImageNote";
 import { Button } from "@/components/ui/Button/Button";
 import { JcStarNotice } from "@/components/ui/JcStarNotice/JcStarNotice";
 import { SectionLabel } from "@/components/ui/SectionLabel/SectionLabel";
@@ -353,6 +354,7 @@ export default function BatteryEnergyStoragePage() {
           className={styles.heroBackground}
         />
         <div className={styles.heroOverlay} />
+        <AiImageNote position="top-right" />
         <div className={`container ${styles.heroInner}`}>
           <Reveal direction="left" className={styles.heroCopy}>
             <p className={styles.kicker}>
@@ -478,6 +480,7 @@ export default function BatteryEnergyStoragePage() {
                               sizes="(max-width: 760px) calc(100vw - 72px), (max-width: 1180px) 42vw, 22vw"
                               className={styles.solutionImage}
                             />
+                            <AiImageNote />
                           </div>
                         ) : (
                           <div className={styles.systemMark} aria-hidden="true">
@@ -565,7 +568,8 @@ export default function BatteryEnergyStoragePage() {
                   sizes="(max-width: 960px) calc(100vw - 40px), 50vw"
                   className={styles.packageImage}
                 />
-                <figcaption>ESS100-2000/4180-LC 製品外観</figcaption>
+                <AiImageNote />
+                <figcaption>ESS100-2000/4180-LC 完成イメージ図</figcaption>
               </figure>
               <div className={styles.specPanel}>
                 <h3>2種類のESSから、2MW/8MWhの構成を選択。</h3>
@@ -656,6 +660,7 @@ export default function BatteryEnergyStoragePage() {
                   sizes="(max-width: 960px) calc(100vw - 40px), 44vw"
                   className={styles.platformImage}
                 />
+                <AiImageNote label="イメージ図" />
               </figure>
             </Reveal>
 
@@ -681,6 +686,7 @@ export default function BatteryEnergyStoragePage() {
           sizes="100vw"
           className={styles.proofBg}
         />
+        <AiImageNote position="top-right" />
         <div className={`container ${styles.proofInner}`}>
           <Reveal direction="left">
             <SectionLabel eyebrow="TECHNOLOGY PARTNERS" subtitle="技術基盤・実績" />

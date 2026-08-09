@@ -4,6 +4,7 @@ import { isPageEnabled } from "@/lib/page-config";
 import Image from "next/image";
 import Link from "next/link";
 import { Reveal } from "@/components/animation/Reveal/Reveal";
+import { AiImageNote } from "@/components/ui/AiImageNote/AiImageNote";
 import { Button } from "@/components/ui/Button/Button";
 import { SectionLabel } from "@/components/ui/SectionLabel/SectionLabel";
 import { content } from "@/lib/content";
@@ -90,6 +91,7 @@ export default async function BusinessPage() {
                 sizes="(max-width: 920px) calc(100vw - 40px), 58vw"
                 className={styles.featureImage}
               />
+              <AiImageNote />
               <span className={styles.featureTag} aria-hidden="true">
                 NOAH AIRBORNE WIND
               </span>

@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { isPageEnabled } from "@/lib/page-config";
 import Image from "next/image";
 import { Reveal } from "@/components/animation/Reveal/Reveal";
+import { AiImageNote } from "@/components/ui/AiImageNote/AiImageNote";
 import { Button } from "@/components/ui/Button/Button";
 import { JcStarNotice } from "@/components/ui/JcStarNotice/JcStarNotice";
 import { SectionLabel } from "@/components/ui/SectionLabel/SectionLabel";
@@ -80,6 +81,7 @@ const projectSites = [
     area: "埼玉県 川越市",
     title: "首都圏西側の計算需要を見据えた計画候補",
     image: "/assets/ai-data-center/project-kawagoe.png",
+    isAiImage: true,
     alt: "川越市周辺を想定したAIデータセンター計画イメージ",
     text: "詳細条件の整理後、受電条件、敷地条件、冷却・運用計画を確認しながら、AIデータセンターとしての成立条件を検討します。",
     facts: ["詳細条件整理中", "電力・用地条件を確認予定"],
@@ -89,6 +91,7 @@ const projectSites = [
     area: "和歌山県 和歌山市金谷",
     title: "蓄電池とデータセンターを一体で整備する計画",
     image: "/assets/ai-data-center/project-wakayama-kanaya-source.jpg",
+    isAiImage: false,
     alt: "和歌山市金谷の開発地区を示す衛星図",
     text: "再生可能エネルギーの安定供給と情報インフラの整備を目的に、蓄電池設備用地とデータセンター用地を同時に確保する計画です。",
     facts: ["データセンター用地：約23,000㎡", "工事期間：2026年4月-2029年3月予定", "関西空港から車で45分、JR和歌山駅から20分"],
@@ -98,6 +101,7 @@ const projectSites = [
     area: "千葉県",
     title: "首都圏・湾岸エリアの電力需要を見据えた計画候補",
     image: "/assets/ai-data-center/project-chiba.png",
+    isAiImage: true,
     alt: "千葉県湾岸エリアを想定したAIデータセンター計画イメージ",
     text: "詳細条件の整理後、再エネ電源、系統接続、蓄電池、運用監視の組み合わせを確認し、掲載情報を更新します。",
     facts: ["詳細条件整理中", "再エネ・系統条件を確認予定"],
@@ -107,6 +111,7 @@ const projectSites = [
     area: "群馬県 前橋市 赤城事業所",
     title: "既存工場・大規模用地を活用する計画候補",
     image: "/assets/ai-data-center/project-gunma-akagi-source.jpg",
+    isAiImage: false,
     alt: "群馬県前橋市赤城事業所の空撮写真",
     text: "Sanden Forest・赤城事業所の土地・建物条件を確認。既存建物、未利用地、山林を含む大規模敷地の活用可能性を検討します。",
     facts: ["場内：687,557㎡（約20万坪）", "建物合計：21棟・120,110.42㎡", "東京から車約140km、電車約2時間"],
@@ -383,6 +388,7 @@ export default function AiDataCenterPage() {
                       sizes="(max-width: 960px) calc(100vw - 40px), 50vw"
                       className={styles.projectImage}
                     />
+                    {site.isAiImage && <AiImageNote />}
                   </figure>
                   <div className={styles.conceptBody}>
                     <div className={styles.conceptMeta}>
