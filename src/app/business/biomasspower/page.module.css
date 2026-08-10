@@ -1078,3 +1078,10 @@
     font-size: 0.88rem;
   }
 }
+
+/* 大画面(コンテナ上限1360px到達後)で見出しが列幅を超えないようサイズ上限を調整 */
+@media (min-width: 1441px) {
+  .heading {
+    font-size: 2.3rem;
+  }
+}

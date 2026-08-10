@@ -1082,3 +1082,17 @@
     font-size: min(7.2vw, 3rem);
   }
 }
+
+/* PC2カラム圧縮域で見出し(13字)が折り返さないよう調整 */
+@media (min-width: 921px) and (max-width: 1180px) {
+  .inverseHeading {
+    font-size: 2.7vw;
+  }
+}
+
+/* 大画面(コンテナ上限1360px到達後)で見出しが列幅を超えないようサイズ上限を調整 */
+@media (min-width: 1441px) {
+  .inverseHeading {
+    font-size: 2.45rem;
+  }
+}
