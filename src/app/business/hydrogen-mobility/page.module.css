@@ -1136,3 +1136,10 @@
     border-top: 0;
   }
 }
+
+/* SPでheroタイトルの固定改行(<br>)が行内で再折返しされないよう、最長行が収まるサイズに調整 */
+@media (max-width: 760px) {
+  .heroTitle {
+    font-size: min(8.7vw, 3.1rem);
+  }
+}
