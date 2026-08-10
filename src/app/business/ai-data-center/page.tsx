@@ -279,7 +279,9 @@ export default function AiDataCenterPage() {
           <Reveal direction="up">
             <SectionLabel eyebrow="CORE CAPABILITIES" subtitle="NOAHの実現能力" />
             <h2 id="dc-capabilities-title" className={styles.heading}>
-              土地・電力・EPC・投融資を、
+              土地・電力・
+              <br className="sp-br" />
+              EPC・投融資を、
               <br />
               ひとつの体制で推進する。
             </h2>
@@ -320,7 +322,9 @@ export default function AiDataCenterPage() {
               <h2 id="challenge-title" className={styles.heading}>
                 ラック電力の上昇が、
                 <br />
-                データセンター設計を変える。
+                データセンター
+                <br className="sp-br" />
+                設計を変える。
               </h2>
             </div>
           </Reveal>
@@ -500,7 +504,9 @@ export default function AiDataCenterPage() {
         <div className={`container ${styles.ctaInner}`}>
           <Reveal direction="up">
             <h2 id="ai-dc-cta-title">
-              AIデータセンターの電力計画を、
+              AIデータセンターの
+              <br className="sp-br" />
+              電力計画を、
               <br />
               初期構想から整理します。
             </h2>

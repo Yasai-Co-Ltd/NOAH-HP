@@ -22,3 +22,14 @@
   white-space: nowrap;
   border: 0;
 }
+
+/* SPのみ有効な改行。長い見出しセグメントをスマホで分割するために使う。 */
+.sp-br {
+  display: none;
+}
+
+@media (max-width: 760px) {
+  .sp-br {
+    display: inline;
+  }
+}

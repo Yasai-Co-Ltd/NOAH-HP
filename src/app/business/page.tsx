@@ -52,7 +52,9 @@ export default async function BusinessPage() {
             <p className={styles.heroEyebrow}>BUSINESS</p>
             <span className={styles.heroSubtitle}>事業紹介</span>
             <h1 id="business-page-title" className={styles.heroTitle}>
-              エネルギーの生成・蓄電・活用を、
+              エネルギーの生成・
+              <br className="sp-br" />
+              蓄電・活用を、
               <br />
               ひとつの構想でつなぐ。
             </h1>

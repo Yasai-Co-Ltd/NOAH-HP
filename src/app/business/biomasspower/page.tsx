@@ -408,7 +408,9 @@ export default function BiomassPowerPage() {
         <div className={`container ${styles.ctaInner}`}>
           <Reveal direction="up">
             <h2 id="biomass-cta-title">
-              バイオマス発電・燃料供給・設備計画を
+              バイオマス発電・
+              <br className="sp-br" />
+              燃料供給・設備計画を
               <br />
               ご相談ください
             </h2>

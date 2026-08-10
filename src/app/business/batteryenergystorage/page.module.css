@@ -1917,10 +1917,28 @@
   }
 
   .heading {
-    font-size: min(5.4vw, 2.4rem);
+    font-size: min(7.2vw, 2.8rem);
   }
 
   .cta h2 {
-    font-size: min(5.8vw, 2.4rem);
+    font-size: min(7.9vw, 2.6rem);
+  }
+}
+
+/* SPの視覚ヒエラルキー調整: 見出し縮小に合わせてリード文も一段下げる */
+@media (max-width: 760px) {
+  .heroLead {
+    font-size: 0.92rem;
+  }
+
+  .lead,
+  .sectionLead,
+  .techLead,
+  .pipelineLead {
+    font-size: 0.88rem;
+  }
+
+  .cta p {
+    font-size: 0.88rem;
   }
 }

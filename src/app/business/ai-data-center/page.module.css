@@ -1241,7 +1241,7 @@
 /* SPで見出しの固定改行(<br>)が行内で再折返しされないよう、最長行が収まるサイズに調整 */
 @media (max-width: 760px) {
   .heading {
-    font-size: min(5.8vw, 2.6rem);
+    font-size: min(7.2vw, 2.8rem);
   }
 
   .inverseHeading {
@@ -1249,6 +1249,23 @@
   }
 
   .ctaInner h2 {
-    font-size: min(5.4vw, 2.4rem);
+    font-size: min(7.2vw, 2.6rem);
+  }
+}
+
+/* SPの視覚ヒエラルキー調整: 見出し縮小に合わせてリード文も一段下げる */
+@media (max-width: 760px) {
+  .heroLead {
+    font-size: 0.92rem;
+  }
+
+  .lead,
+  .inverseLead,
+  .sectionLead {
+    font-size: 0.88rem;
+  }
+
+  .ctaInner p {
+    font-size: 0.88rem;
   }
 }

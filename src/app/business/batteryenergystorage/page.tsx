@@ -632,7 +632,9 @@ export default function BatteryEnergyStoragePage() {
           <Reveal direction="up">
             <SectionLabel eyebrow="CORE CAPABILITIES" subtitle="NOAHのコア能力" />
             <h2 id="capabilities-title" className={styles.heading}>
-              開発・連系・許認可・EPCを、
+              開発・連系・
+              <br className="sp-br" />
+              許認可・EPCを、
               <br />
               ひとつの体制で推進する。
             </h2>
@@ -988,7 +990,9 @@ export default function BatteryEnergyStoragePage() {
           <Reveal direction="up">
             <SectionLabel eyebrow="PROJECT FLOW" subtitle="開発の流れ" />
             <h2 id="process-title" className={styles.heading}>
-              用地開発から運用・EXITまで、
+              用地開発から
+              <br className="sp-br" />
+              運用・EXITまで、
               <br />
               一貫して推進する。
             </h2>
@@ -1021,7 +1025,9 @@ export default function BatteryEnergyStoragePage() {
             <h2 id="battery-cta-title">
               特別高圧蓄電池発電所の
               <br />
-              開発・投資協業のご相談はこちら
+              開発・投資協業の
+              <br className="sp-br" />
+              ご相談はこちら
             </h2>
             <p>用地・系統・許認可の初期整理から、EPC建設、SPC組成、案件売却まで、開発と投資のご相談を承ります。</p>
             <div className={styles.ctaActions}>
