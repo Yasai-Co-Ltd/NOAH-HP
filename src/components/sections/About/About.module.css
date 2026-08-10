@@ -213,3 +213,10 @@
     transform: none;
   }
 }
+
+/* SPで見出しの固定改行(<br>)が行内で再折返しされないよう調整（:globalの特異度に合わせる） */
+@media (max-width: 760px) {
+  .copy :global(.section-heading) {
+    font-size: min(6.6vw, 1.72rem);
+  }
+}

@@ -1909,3 +1909,18 @@
     font-size: min(7.2vw, 3rem);
   }
 }
+
+/* SPで見出しの固定改行(<br>)が行内で再折返しされないよう、最長行が収まるサイズに調整 */
+@media (max-width: 760px) {
+  .pipelineHeading {
+    font-size: min(6.6vw, 2.8rem);
+  }
+
+  .heading {
+    font-size: min(5.4vw, 2.4rem);
+  }
+
+  .cta h2 {
+    font-size: min(5.8vw, 2.4rem);
+  }
+}

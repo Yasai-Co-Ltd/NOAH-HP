@@ -84,3 +84,10 @@
     gap: 18px;
   }
 }
+
+/* SPで見出しの固定改行(<br>)が行内で再折返しされないよう、最長行が収まるサイズに調整 */
+@media (max-width: 760px) {
+  .title {
+    font-size: min(6.2vw, 2.6rem);
+  }
+}

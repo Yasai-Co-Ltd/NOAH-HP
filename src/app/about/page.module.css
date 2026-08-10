@@ -803,3 +803,10 @@
     font-size: 0.88rem;
   }
 }
+
+/* SPで見出しの固定改行(<br>)が行内で再折返しされないよう、最長行が収まるサイズに調整 */
+@media (max-width: 760px) {
+  .heroTitle {
+    font-size: min(7.2vw, 3rem);
+  }
+}

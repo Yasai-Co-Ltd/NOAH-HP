@@ -595,3 +595,25 @@
     min-width: 0;
   }
 }
+
+/* SPで見出しの固定改行(<br>)が行内で再折返しされないよう、最長行が収まるサイズに調整 */
+@media (max-width: 760px) {
+  .heading {
+    font-size: min(7.2vw, 3rem);
+  }
+
+  .ctaCopy h2 {
+    font-size: min(7.2vw, 3rem);
+  }
+}
+
+/* SPで見出しの固定改行(<br>)が行内で再折返しされないよう、最長行が収まるサイズに調整 */
+@media (max-width: 760px) {
+  .heroTitle {
+    font-size: min(9.6vw, 3.2rem);
+  }
+
+  .inverseHeading {
+    font-size: min(8.7vw, 3rem);
+  }
+}
