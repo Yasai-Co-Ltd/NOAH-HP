@@ -462,7 +462,7 @@ export default function BatteryEnergyStoragePage() {
               特別高圧蓄電池発電所を、
               <br />
               開発から
-              <br />
+              <br className="sp-br" />
               運用・EXITまで。
             </h1>
             <p className={styles.heroLead}>
