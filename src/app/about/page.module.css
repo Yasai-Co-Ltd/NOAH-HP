@@ -814,6 +814,6 @@
 /* PCでheroタイトル2行目(12字)が折り返さないようサイズ調整 */
 @media (min-width: 761px) {
   .heroTitle {
-    font-size: min(3.7vw, 3.2rem);
+    font-size: min(3.6vw, 3.2rem);
   }
 }
