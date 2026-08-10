@@ -580,7 +580,7 @@ export default function BatteryEnergyStoragePage() {
                       <td>{project.location}</td>
                       <td>{project.siteArea}㎡</td>
                       <td>
-                        {project.powerKw}kW、{project.energyKwh}kWh
+                        {project.powerKw}kW / {project.energyKwh}kWh
                       </td>
                     </tr>
                   ))}
@@ -592,7 +592,7 @@ export default function BatteryEnergyStoragePage() {
                     <td />
                     <td />
                     <td>
-                      {projectTotals.powerKw}kW、{projectTotals.energyKwh}kWh
+                      {projectTotals.powerKw}kW / {projectTotals.energyKwh}kWh
                     </td>
                   </tr>
                 </tfoot>
