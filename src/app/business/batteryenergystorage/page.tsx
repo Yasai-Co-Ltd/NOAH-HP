@@ -310,30 +310,30 @@ const pipelineRoles = [
   },
 ];
 
-/** 保有・開発中の蓄電所案件一覧。所在地は市区町村・町字レベルで掲載（地番は非公開）。 */
+/** 保有・開発中の蓄電所案件一覧。NOAH16資料の記載どおり（全角数字のみ半角に正規化）。 */
 const storageProjects = [
-  { name: "鹿児島宮之浦町蓄電所", location: "鹿児島県鹿児島市宮之浦町", siteArea: "6,484", powerKw: "9,500", energyKwh: "38,000" },
-  { name: "C-42蓄電所", location: "福岡県飯塚市横田", siteArea: "5,011", powerKw: "19,780", energyKwh: "79,120" },
-  { name: "C-02蓄電所", location: "佐賀県佐賀市大和町尼寺", siteArea: "3,139", powerKw: "29,950", energyKwh: "119,800" },
-  { name: "C-53蓄電所", location: "福岡県筑紫野市原", siteArea: "4,530", powerKw: "17,230", energyKwh: "68,920" },
-  { name: "1-70蓄電所", location: "佐賀県鳥栖市幸津町", siteArea: "5,419", powerKw: "19,950", energyKwh: "79,800" },
-  { name: "1-72蓄電所", location: "佐賀県鳥栖市幸津町", siteArea: "10,498", powerKw: "19,950", energyKwh: "79,800" },
-  { name: "E-36-2蓄電所", location: "大分県大分市毛井", siteArea: "9,722", powerKw: "89,080", energyKwh: "356,320" },
-  { name: "1-71蓄電所", location: "佐賀県鳥栖市幸津町", siteArea: "1,013", powerKw: "9,950", energyKwh: "39,800" },
-  { name: "1-95蓄電所", location: "佐賀県三養基郡上峰町", siteArea: "6,012", powerKw: "29,950", energyKwh: "119,800" },
-  { name: "C-09蓄電所", location: "福岡県大川市中古賀", siteArea: "3,294", powerKw: "19,950", energyKwh: "79,800" },
+  { name: "鹿児島宮之浦町蓄電所", location: "鹿児島県鹿児島市宮之浦町4016-18、19、20", siteArea: "6,484", powerKw: "9,500", energyKwh: "38,000" },
+  { name: "C-42蓄電所", location: "福岡県飯塚市横田37-1", siteArea: "5,011", powerKw: "19,780", energyKwh: "79,120" },
+  { name: "C-02蓄電所", location: "佐賀県佐賀市大和町尼寺3293-3他", siteArea: "3,139", powerKw: "29,950", energyKwh: "119,800" },
+  { name: "C-53蓄電所", location: "福岡県筑紫野市原518", siteArea: "4,530", powerKw: "17,230", energyKwh: "68,920" },
+  { name: "1-70蓄電所", location: "佐賀県鳥栖市幸津町120-1他", siteArea: "5,419", powerKw: "19,950", energyKwh: "79,800" },
+  { name: "1-72蓄電所", location: "佐賀県鳥栖市幸津町211-1他", siteArea: "10,498", powerKw: "19,950", energyKwh: "79,800" },
+  { name: "E-36-2蓄電所", location: "大分県大分市毛井1492-1", siteArea: "9,722", powerKw: "89,080", energyKwh: "356,320" },
+  { name: "1-71蓄電所", location: "佐賀県鳥栖市幸津町195-1他", siteArea: "1,013", powerKw: "9,950", energyKwh: "39,800" },
+  { name: "1-95蓄電所", location: "佐賀県三養基郡上峰町314-1他", siteArea: "6,012", powerKw: "29,950", energyKwh: "119,800" },
+  { name: "C-09蓄電所", location: "福岡県大川市中古賀515他", siteArea: "3,294", powerKw: "19,950", energyKwh: "79,800" },
   {
     name: "日向市富高・日向市塩見 メガバッテリーステーション",
-    location: "宮崎県日向市富高・塩見",
+    location: "宮崎県日向市富高2411-1・日向市塩見3660他",
     siteArea: "6,962",
     powerKw: "29,270",
     energyKwh: "117,080",
   },
-  { name: "1-78蓄電所", location: "福岡県朝倉市一木", siteArea: "7,691", powerKw: "29,950", energyKwh: "119,800" },
-  { name: "C-10蓄電所", location: "福岡県大川市中古賀", siteArea: "2,825", powerKw: "29,950", energyKwh: "119,800" },
-  { name: "高圧14蓄電所", location: "宮崎県えびの市向江", siteArea: "1,934", powerKw: "1,997", energyKwh: "7,988" },
-  { name: "C-06蓄電所", location: "佐賀県佐賀市高木瀬西", siteArea: "2,241", powerKw: "1,996", energyKwh: "7,984" },
-  { name: "C-05蓄電所", location: "佐賀県佐賀市高木瀬町長瀬", siteArea: "4,500", powerKw: "29,950", energyKwh: "119,800" },
+  { name: "1-78蓄電所", location: "福岡県朝倉市一木122-1他", siteArea: "7,691", powerKw: "29,950", energyKwh: "119,800" },
+  { name: "C-10蓄電所", location: "福岡県大川市中古賀974-1他", siteArea: "2,825", powerKw: "29,950", energyKwh: "119,800" },
+  { name: "高圧14蓄電所", location: "宮崎県えびの市向江480-4他", siteArea: "1,934", powerKw: "1,997", energyKwh: "7,988" },
+  { name: "C-06蓄電所", location: "佐賀県佐賀市高木瀬西1296", siteArea: "2,241", powerKw: "1,996", energyKwh: "7,984" },
+  { name: "C-05蓄電所", location: "佐賀県佐賀市高木瀬町長瀬1706-1", siteArea: "4,500", powerKw: "29,950", energyKwh: "119,800" },
 ];
 
 const projectTotals = {
@@ -567,10 +567,9 @@ export default function BatteryEnergyStoragePage() {
                   <tr>
                     <th scope="col">No.</th>
                     <th scope="col">蓄電所名</th>
-                    <th scope="col">所在地</th>
+                    <th scope="col">設置場所</th>
                     <th scope="col">開発用地</th>
-                    <th scope="col">定格出力</th>
-                    <th scope="col">蓄電容量</th>
+                    <th scope="col">案件容量</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -580,8 +579,9 @@ export default function BatteryEnergyStoragePage() {
                       <th scope="row">{project.name}</th>
                       <td>{project.location}</td>
                       <td>{project.siteArea}㎡</td>
-                      <td>{project.powerKw}kW</td>
-                      <td>{project.energyKwh}kWh</td>
+                      <td>
+                        {project.powerKw}kW、{project.energyKwh}kWh
+                      </td>
                     </tr>
                   ))}
                 </tbody>
@@ -591,8 +591,9 @@ export default function BatteryEnergyStoragePage() {
                     <th scope="row">合計（{projectTotals.count}件）</th>
                     <td />
                     <td />
-                    <td>{projectTotals.powerKw}kW</td>
-                    <td>{projectTotals.energyKwh}kWh</td>
+                    <td>
+                      {projectTotals.powerKw}kW、{projectTotals.energyKwh}kWh
+                    </td>
                   </tr>
                 </tfoot>
               </table>
@@ -621,7 +622,7 @@ export default function BatteryEnergyStoragePage() {
           </div>
 
           <p className={styles.sourceNote}>
-            ※ 保有・開発中案件の一部を掲載。所在地は町字までを表記しています。個別案件の詳細はお問い合わせください。
+            ※ 保有・開発中案件の一部を掲載しています。個別案件の詳細はお問い合わせください。
           </p>
         </div>
       </section>
