@@ -1957,11 +1957,22 @@
   background: linear-gradient(180deg, #ffffff 0%, #f4f8fd 100%);
 }
 
+.devFlowFigure {
+  max-width: 1104px;
+  margin: 44px auto 0;
+}
+
+.devFlowImage {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .devFlowTrack {
   display: grid;
   grid-template-columns: repeat(6, minmax(0, 1fr));
   gap: 14px;
-  margin-top: 54px;
+  margin-top: 30px;
 }
 
 .devFlowReveal {
@@ -1971,7 +1982,7 @@
 .devFlowStep {
   position: relative;
   height: 100%;
-  padding: 26px 16px 24px;
+  padding: 18px 14px 16px;
   text-align: center;
   background: var(--color-surface);
   border: 1px solid rgba(180, 201, 224, 0.7);
@@ -1991,25 +2002,8 @@
   display: none;
 }
 
-.devFlowIcon {
-  display: grid;
-  place-items: center;
-  width: 58px;
-  height: 58px;
-  margin: 0 auto;
-  color: var(--color-brand-700);
-  background: #eaf4fd;
-  border-radius: 50%;
-}
-
-.devFlowIcon svg {
-  width: 30px;
-  height: 30px;
-}
-
 .devFlowStep b {
   display: block;
-  margin-top: 14px;
   color: var(--color-accent-cyan);
   font-family: var(--font-numeric);
   font-size: 0.8rem;

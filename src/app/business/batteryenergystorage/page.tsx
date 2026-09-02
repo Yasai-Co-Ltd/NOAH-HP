@@ -1,4 +1,3 @@
-import type { ReactNode } from "react";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { isPageEnabled } from "@/lib/page-config";
@@ -354,59 +353,13 @@ const projectPhotos = [
 
 /** 開発から売却までの一気通貫フロー。旧コア能力・開発の流れを1つの図解に統合。 */
 const devFlowSteps = [
-  { number: "01", title: "用地・権利の確保", sub: "土地選定・案件ID取得", icon: "site" },
-  { number: "02", title: "系統連系", sub: "接続検討・連系協議", icon: "grid" },
-  { number: "03", title: "行政許認可", sub: "開発許可・農地転用", icon: "permit" },
-  { number: "04", title: "EPC建設", sub: "設計・施工・試運転", icon: "construction" },
-  { number: "05", title: "運用・O&M", sub: "遠隔監視・市場運用", icon: "operation" },
-  { number: "06", title: "売却・EXIT", sub: "SPC組成・長期運営", icon: "exit" },
+  { number: "01", title: "用地・権利の確保", sub: "土地選定・案件ID取得" },
+  { number: "02", title: "系統連系", sub: "接続検討・連系協議" },
+  { number: "03", title: "行政許認可", sub: "開発許可・農地転用" },
+  { number: "04", title: "EPC建設", sub: "設計・施工・試運転" },
+  { number: "05", title: "運用・O&M", sub: "遠隔監視・市場運用" },
+  { number: "06", title: "売却・EXIT", sub: "SPC組成・長期運営" },
 ];
-
-const devFlowIcons: Record<string, ReactNode> = {
-  site: (
-    <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M16 28c6-6.2 9-11 9-14.6A9 9 0 0 0 7 13.4C7 17 10 21.8 16 28Z" />
-      <circle cx="16" cy="13" r="3.4" />
-    </svg>
-  ),
-  grid: (
-    <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M13 28 16 5l3 23" />
-      <path d="M9 12h14M11 18h10" />
-      <path d="m9 12 6 6m8-6-6 6m-6 0 4 5m8-5-4 5" />
-    </svg>
-  ),
-  permit: (
-    <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M9 4h10l5 5v19H9Z" />
-      <path d="M19 4v5h5" />
-      <path d="m13 19 2.4 2.4L20 16.8" />
-    </svg>
-  ),
-  construction: (
-    <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M7 28h18" />
-      <path d="M11 28V7l13 4" />
-      <path d="M11 11h13" />
-      <path d="M24 11v5" />
-      <path d="M21.5 16h5v4h-5z" />
-    </svg>
-  ),
-  operation: (
-    <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-      <rect x="5" y="6" width="22" height="15" rx="1.5" />
-      <path d="M13 26h6M16 21v5" />
-      <path d="M9 14h4l2-3.4 2.4 6L19 14h4" />
-    </svg>
-  ),
-  exit: (
-    <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M6 27h20" />
-      <path d="m8 22 6.4-6.4 4 4L26 11" />
-      <path d="M26 16v-5h-5" />
-    </svg>
-  ),
-};
 
 /**
  * 製品ラインアップ（約20製品のカタログ）の表示フラグ。
@@ -482,13 +435,23 @@ export default function BatteryEnergyStoragePage() {
             </p>
           </Reveal>
 
+          <Reveal direction="up">
+            <figure className={styles.devFlowFigure}>
+              <Image
+                src={asset("/assets/battery/dev-flow-panorama.webp")}
+                alt="用地の確保から系統連系、許認可、EPC建設、運用、売却までの開発フローを描いたイラスト"
+                width={1536}
+                height={1024}
+                sizes="(max-width: 1180px) calc(100vw - 40px), 1104px"
+                className={styles.devFlowImage}
+              />
+            </figure>
+          </Reveal>
+
           <div className={styles.devFlowTrack} role="list">
             {devFlowSteps.map((step, index) => (
               <Reveal key={step.number} direction="up" delay={index * 60} className={styles.devFlowReveal}>
                 <div className={styles.devFlowStep} role="listitem">
-                  <span className={styles.devFlowIcon} aria-hidden="true">
-                    {devFlowIcons[step.icon]}
-                  </span>
                   <b>{step.number}</b>
                   <h3>{step.title}</h3>
                   <p>{step.sub}</p>
