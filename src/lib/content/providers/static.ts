@@ -13,6 +13,19 @@ const services: Service[] = [
     href: "/business/batteryenergystorage",
   },
   {
+    id: "svc-ai-data-center",
+    slug: "ai-data-center",
+    title: "AIデータセンター事業",
+    description:
+      "AI計算基盤を支えるデータセンターの電力・冷却・エネルギーマネジメントを総合的に計画します。",
+    image: {
+      src: "/assets/business-ai-data-center.jpg",
+      alt: "再生可能エネルギーと連携するAIデータセンター",
+    },
+    icon: { tone: "cyan", label: "AI" },
+    href: "/business/ai-data-center",
+  },
+  {
     id: "svc-windpower",
     slug: "windpower",
     title: "風力発電事業",
@@ -67,19 +80,6 @@ const services: Service[] = [
     },
     icon: { tone: "cyan", label: "HC" },
     href: "/business/hydrogen-compressor",
-  },
-  {
-    id: "svc-ai-data-center",
-    slug: "ai-data-center",
-    title: "AIデータセンター事業",
-    description:
-      "AI計算基盤を支えるデータセンターの電力・冷却・エネルギーマネジメントを総合的に計画します。",
-    image: {
-      src: "/assets/business-ai-data-center.jpg",
-      alt: "再生可能エネルギーと連携するAIデータセンター",
-    },
-    icon: { tone: "cyan", label: "AI" },
-    href: "/business/ai-data-center",
   },
 ];
 
