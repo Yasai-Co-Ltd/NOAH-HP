@@ -18,29 +18,6 @@ export const metadata: Metadata = {
     "特別高圧・高圧系統用蓄電池発電所の開発事業。用地・権利の取得、系統連系、行政許認可、EPC建設、運用・EXITまで一貫して推進します。保有26案件・開発規模約1.2GW。",
 };
 
-const overviewSteps = [
-  {
-    number: "01",
-    title: "電力を受ける",
-    text: "再エネ発電所、変電所、需要地に接続し、余剰電力や調整力を受け入れます。",
-  },
-  {
-    number: "02",
-    title: "安全に蓄える",
-    text: "液冷式ESSと多次元監視により、温度・電圧・防火を一体で管理します。",
-  },
-  {
-    number: "03",
-    title: "高速に制御する",
-    text: "EMS/HCSが充放電、一次調整、系統連系をリアルタイムに制御します。",
-  },
-  {
-    number: "04",
-    title: "市場活用につなげる",
-    text: "アグリゲーター運営と遠隔O&Mを組み合わせ、各電力市場での活用を支援します。",
-  },
-];
-
 const marketBadges = ["卸電力市場", "容量市場", "需給調整市場", "一次調整力対応"];
 
 const heroMetrics = [
@@ -290,7 +267,7 @@ const platformItems = [
 
 /** 実績・体制の数値。owner で NOAH自身の実績とパートナーの実績を明示的に区別する。 */
 const proofItems = [
-  { owner: "NOAH", value: "約1.2GW", label: "保有する系統用蓄電池案件の合計開発規模（26案件）" },
+  { owner: "NOAH", value: "9社中4社", label: "日本の主要電力会社との協業・案件実績" },
   { owner: "NOAH", value: "2GWh", label: "蓄電池調達の戦略的パートナー体制" },
   { owner: "技術パートナー", value: "20年以上", label: "電力分野の研究開発・エンジニアリング経験" },
   { owner: "技術パートナー", value: "50MW / 200MWh", label: "大規模蓄電発電所の導入実績" },
@@ -659,129 +636,6 @@ export default function BatteryEnergyStoragePage() {
         </div>
       </section>
 
-      <section className={styles.overview} aria-labelledby="overview-title">
-        <div className={`container ${styles.twoColumn}`}>
-          <Reveal direction="left">
-            <SectionLabel eyebrow="OVERVIEW" subtitle="系統用蓄電池とは" />
-            <h2 id="overview-title" className={styles.heading}>
-              電力を蓄えるだけでなく、
-              <br />
-              制御して運用する。
-            </h2>
-            <p className={styles.lead}>
-              系統用蓄電池は、再生可能エネルギーの余剰電力を蓄え、必要なタイミングで放電するだけではありません。
-              EMS、PCS、HCS、アグリゲーター運営を連携させ、需給調整、周波数制御、各電力市場での活用を支えます。
-            </p>
-            <div className={styles.marketBadges} aria-label="対応市場">
-              {marketBadges.map((badge) => (
-                <span key={badge}>{badge}</span>
-              ))}
-            </div>
-          </Reveal>
-
-          <Reveal direction="right">
-            <div className={styles.powerFlow}>
-              {overviewSteps.map((step) => (
-                <article key={step.number} className={styles.flowItem}>
-                  <span>{step.number}</span>
-                  <h3>{step.title}</h3>
-                  <p>{step.text}</p>
-                </article>
-              ))}
-            </div>
-          </Reveal>
-        </div>
-      </section>
-
-      {/* 製品ラインアップここから（SHOW_PRODUCT_CATALOG=false で非表示中） */}
-      {SHOW_PRODUCT_CATALOG && (
-        <>
-      <section className={styles.lineup} id="lineup" aria-labelledby="lineup-title">
-        <div className="container">
-          <Reveal direction="up">
-            <div className={styles.sectionHeading}>
-              <div>
-                <SectionLabel eyebrow="PRODUCT LINEUP" subtitle="製品ラインアップ" />
-                <h2 id="lineup-title" className={styles.heading}>
-                  用途と容量に合わせて、
-                  <br />
-                  最適な蓄電池を選ぶ。
-                </h2>
-              </div>
-              <p className={styles.sectionLead}>
-                デマンド、太陽光蓄電充電、マイクログリッド、系統用蓄電池まで。
-                各シリーズに必要なPCS、EMS、監視・制御システムを組み合わせ、用途に合った構成を提案します。
-              </p>
-            </div>
-          </Reveal>
-
-          <div className={styles.solutionList}>
-            {solutionSeries.map((series, index) => (
-              <Reveal
-                key={series.number}
-                direction="up"
-                delay={(index % 2) * 70}
-                className={styles.solutionReveal}
-              >
-                <article className={styles.solutionGroup}>
-                  <header className={styles.solutionHeader}>
-                    <div className={styles.solutionNumber}>{series.number}</div>
-                    <div>
-                      <p>{series.category}</p>
-                      <h3>{series.title}</h3>
-                    </div>
-                    <span>{series.text}</span>
-                  </header>
-
-                  <div
-                    className={`${styles.solutionProducts} ${
-                      series.products.length <= 2 ? styles.solutionProductsCompact : ""
-                    }`}
-                  >
-                    {series.products.map((product) => (
-                      <article key={`${series.number}-${product.model}`} className={styles.solutionProduct}>
-                        {product.image ? (
-                          <div className={styles.solutionVisual}>
-                            <Image
-                              src={product.image}
-                              alt={product.alt}
-                              fill
-                              sizes="(max-width: 760px) calc(100vw - 72px), (max-width: 1180px) 42vw, 22vw"
-                              className={styles.solutionImage}
-                            />
-                            <AiImageNote />
-                          </div>
-                        ) : (
-                          <div className={styles.systemMark} aria-hidden="true">
-                            <span>{product.model}</span>
-                          </div>
-                        )}
-                        <div className={styles.solutionBody}>
-                          <p>{product.model}</p>
-                          <h4>{product.title}</h4>
-                          <ul>
-                            {product.specs.map((spec) => (
-                              <li key={spec}>{spec}</li>
-                            ))}
-                          </ul>
-                        </div>
-                      </article>
-                    ))}
-                  </div>
-                </article>
-              </Reveal>
-            ))}
-          </div>
-
-          <p className={styles.sourceNote}>
-            ※容量・構成・仕様は、接続条件や用途に応じて個別に設計します。
-          </p>
-        </div>
-      </section>
-        </>
-      )}
-      {/* 製品ラインアップここまで */}
-
       <section className={styles.technology} id="solution" aria-labelledby="technology-title">
         <div className="container">
           <Reveal direction="up">
@@ -955,6 +809,17 @@ export default function BatteryEnergyStoragePage() {
               ))}
             </div>
           </div>
+
+          <Reveal direction="up">
+            <div className={styles.marketRow} aria-label="対応市場">
+              <span className={styles.marketRowLabel}>対応市場</span>
+              <div className={styles.marketBadges}>
+                {marketBadges.map((badge) => (
+                  <span key={badge}>{badge}</span>
+                ))}
+              </div>
+            </div>
+          </Reveal>
         </div>
       </section>
 

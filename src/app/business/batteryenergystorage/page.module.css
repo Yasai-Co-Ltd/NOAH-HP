@@ -2062,3 +2062,23 @@
     display: none;
   }
 }
+
+/* EMSセクション内の対応市場バッジ行（旧overviewから移設） */
+.marketRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 18px;
+  align-items: center;
+  margin-top: 38px;
+}
+
+.marketRowLabel {
+  color: var(--color-brand-800);
+  font-size: 0.82rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.marketRow .marketBadges {
+  margin-top: 0;
+}
