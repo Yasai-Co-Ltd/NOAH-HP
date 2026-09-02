@@ -14,13 +14,6 @@ export const metadata: Metadata = {
     "水素充填、オンサイト水素ステーション、高純度ガス圧縮に対応する隔膜式・ピストン式コンプレッサーの選定、設備構成、導入支援を行う諾亜建設の水素コンプレッサー事業を紹介します。",
 };
 
-const heroMetrics = [
-  { value: "87MPa", label: "水素用途の最大排気圧レンジ" },
-  { value: "100-1000Nm³/h", label: "水素用途の資料掲載流量" },
-  { value: "15-185kW", label: "水素用途の資料掲載モーター出力" },
-  { value: "GD / GL / GV / GZ", label: "隔膜式コンプレッサーシリーズ" },
-];
-
 const lineupItems = [
   {
     title: "水素充填用 隔膜式コンプレッサー",
@@ -134,19 +127,13 @@ export default function HydrogenCompressorPage() {
         <div className={styles.heroOverlay} />
         <div className={`container ${styles.heroInner}`}>
           <Reveal direction="left" className={styles.heroCopy}>
-            <p className={styles.eyebrow}>
-              HYDROGEN COMPRESSOR
-              <span>水素コンプレッサー事業</span>
-            </p>
+            <p className={styles.eyebrow}>HYDROGEN COMPRESSOR</p>
             <h1 id="hydrogen-compressor-title" className={styles.heroTitle}>
-              水素供給を支える、
-              <br />
-              高圧圧縮設備。
+              水素コンプレッサー事業
             </h1>
             <p className={styles.heroLead}>
-              水素ステーションやオンサイト水素供給では、圧縮機の選定が設備全体の安全性、
-              充填能力、保守性を左右します。隔膜式・ピストン式コンプレッサーを用途に合わせて整理し、
-              水素インフラの導入計画を支援します。
+              水素供給を支える、高圧圧縮設備。
+              隔膜式・ピストン式コンプレッサーを用途に合わせて整理し、水素インフラの導入計画を支援します。
             </p>
             <div className={styles.heroActions}>
               <Button href="/contact" variant="white">
@@ -157,15 +144,6 @@ export default function HydrogenCompressorPage() {
               </Button>
             </div>
           </Reveal>
-        </div>
-
-        <div className={`container ${styles.metricStrip}`} aria-label="水素コンプレッサーの参考レンジ">
-          {heroMetrics.map((metric) => (
-            <div key={metric.value} className={styles.metricItem}>
-              <b>{metric.value}</b>
-              <span>{metric.label}</span>
-            </div>
-          ))}
         </div>
       </section>
 

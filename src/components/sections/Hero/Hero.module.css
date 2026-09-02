@@ -1,6 +1,6 @@
 .hero {
   position: relative;
-  min-height: 520px;
+  min-height: 680px;
   isolation: isolate;
   overflow: hidden;
   background: var(--color-brand-050);
@@ -8,50 +8,45 @@
 
 .media {
   position: absolute;
-  inset: 0 0 0 31%;
+  inset: 0 0 0 22%;
   z-index: -3;
   background-image: var(--bg-image);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  animation: slowZoom 8000ms var(--motion-ease-soft) both;
+  animation: heroDrift 22s ease-in-out infinite alternate;
+}
+
+@keyframes heroDrift {
+  from {
+    transform: scale(1.02) translateX(0);
+  }
+
+  to {
+    transform: scale(1.1) translateX(-1.8%);
+  }
 }
 
 .media::after {
   position: absolute;
   inset: 0;
   content: "";
-  background:
-    linear-gradient(
-      115deg,
-      rgba(255, 255, 255, 0.94) 0%,
-      rgba(255, 255, 255, 0.68) 20%,
-      rgba(255, 255, 255, 0.02) 50%
-    ),
-    linear-gradient(0deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.08));
+  background: linear-gradient(
+    100deg,
+    rgba(245, 250, 255, 1) 0%,
+    rgba(245, 250, 255, 0.94) 16%,
+    rgba(245, 250, 255, 0.55) 36%,
+    rgba(245, 250, 255, 0) 58%
+  );
 }
 
+/* ベール用オーバーレイは不使用(テキストは無地背景側に配置し、画像はフェザーのみで馴染ませる) */
 .overlay {
-  position: absolute;
-  inset: 0;
-  z-index: -2;
-  background:
-    radial-gradient(
-      circle at 0 20%,
-      rgba(255, 255, 255, 0.92) 0 24%,
-      rgba(255, 255, 255, 0) 52%
-    ),
-    linear-gradient(
-      90deg,
-      #fff 0%,
-      rgba(255, 255, 255, 0.95) 22%,
-      rgba(255, 255, 255, 0.28) 54%,
-      rgba(255, 255, 255, 0) 100%
-    );
+  display: none;
 }
 
 .inner {
-  min-height: 520px;
+  min-height: 680px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -60,14 +55,38 @@
 }
 
 .heading {
-  max-width: 13em;
   font-size: 3rem;
   line-height: 1.45;
 }
 
-.heading span {
+.line {
   display: block;
+  overflow: hidden;
   white-space: nowrap;
+}
+
+.lineInner {
+  display: inline-block;
+  transform: translateY(112%);
+  animation: lineRise 760ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.line:nth-child(1) .lineInner {
+  animation-delay: 120ms;
+}
+
+.line:nth-child(2) .lineInner {
+  animation-delay: 240ms;
+}
+
+.line:nth-child(3) .lineInner {
+  animation-delay: 360ms;
+}
+
+@keyframes lineRise {
+  to {
+    transform: translateY(0);
+  }
 }
 
 .copy {
@@ -78,12 +97,28 @@
   line-height: 1.8;
 }
 
+.heroAction {
+  display: flex;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 12px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
 .fadeIn {
   animation: fadeUp var(--motion-slow) var(--motion-ease-soft) both;
 }
 
 .delay1 {
-  animation-delay: 160ms;
+  animation-delay: 60ms;
 }
 
 .delay2 {
@@ -91,33 +126,37 @@
 }
 
 .delay3 {
-  animation-delay: 700ms;
+  animation-delay: 620ms;
 }
 
 .delay4 {
-  animation-delay: 980ms;
+  animation-delay: 760ms;
 }
 
 @media (max-width: 920px) {
   .hero,
   .inner {
-    min-height: 620px;
+    min-height: 600px;
+  }
+
+  .inner {
+    justify-content: center;
+    padding-block: 56px;
   }
 
   .media {
     inset: 0;
-    background-position: 58% center;
+    background-position: 62% center;
   }
 
-  .overlay {
-    background:
-      linear-gradient(
-        90deg,
-        rgba(255, 255, 255, 0.98) 0%,
-        rgba(255, 255, 255, 0.82) 50%,
-        rgba(255, 255, 255, 0.18) 100%
-      ),
-      linear-gradient(0deg, rgba(255, 255, 255, 0.48), rgba(255, 255, 255, 0));
+  /* 背景は全面に使い、可読性のための最小限の淡いベールだけ上部に敷く */
+  .media::after {
+    background: linear-gradient(
+      180deg,
+      rgba(245, 250, 255, 0.7) 0%,
+      rgba(245, 250, 255, 0.34) 48%,
+      rgba(245, 250, 255, 0) 74%
+    );
   }
 
   .heading {
@@ -130,23 +169,57 @@
     min-height: 560px;
   }
 
+  /* typography.css のSP非表示ルールを上書きし、eyebrowを表示する */
+  .inner :global(.eyebrow) {
+    display: block;
+  }
+
   .media {
     background-position: 86% center;
   }
 
+  .media::after {
+    background: linear-gradient(
+      180deg,
+      rgba(245, 250, 255, 0.82) 0%,
+      rgba(245, 250, 255, 0.58) 56%,
+      rgba(245, 250, 255, 0.2) 100%
+    );
+  }
+
   .inner {
+    align-items: center;
     min-height: 560px;
-    padding-block: 52px;
+    padding-block: 48px;
+    text-align: center;
   }
 
   .heading {
     max-width: none;
-    font-size: 1.75rem;
+    font-size: min(5.8vw, 1.75rem);
     line-height: 1.62;
   }
 
   .copy {
     margin-top: 20px;
     font-size: 0.95rem;
+    text-align: center;
+  }
+
+  .heroAction {
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .media,
+  .fadeIn,
+  .lineInner {
+    animation: none;
+  }
+
+  .lineInner {
+    transform: none;
   }
 }

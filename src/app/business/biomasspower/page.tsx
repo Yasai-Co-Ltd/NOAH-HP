@@ -14,12 +14,6 @@ export const metadata: Metadata = {
     "PKS、炭化PKS、木質ペレットの燃料供給から、バイオマス発電、乾燥設備、生産ライン、港湾荷役・粉塵管理まで、諾亜建設のバイオマス発電事業を紹介します。",
 };
 
-const heroMetrics = [
-  { value: "200,000MT/月", label: "PKS調達可能量" },
-  { value: "100,000MT/月", label: "木質ペレット調達可能量" },
-  { value: "FOB / DDP", label: "引取方式に対応" },
-];
-
 const fuelItems = [
   {
     name: "PKS",
@@ -50,6 +44,49 @@ const fuelItems = [
     // 会社概要2026年版に基づく（木質ペレット＝FSC認証取得・GGL認証取得、中国8箇所製造工場）
     points: ["FSC・GGL認証取得工場で製造", "中国8箇所の製造工場から安定供給", "化石燃料の代替として需要拡大"],
   },
+];
+
+const pelletStrengths = [
+  {
+    label: "MATERIAL SUPPLY",
+    title: "安定供給と認証対応",
+    text: "地域の資源と燃料サプライヤーを結び、年間最大150万tまでの安定供給に対応。藁・松など、FSC認証の取得に配慮した原料調達を進めます。",
+  },
+  {
+    label: "QUALITY CONTROL",
+    title: "高品質なペレット製造",
+    text: "高圧縮成形によって粉塵発生を抑制。設備構造、製造工程での集塵、流通工程での封じ込めを組み合わせます。",
+  },
+  {
+    label: "DUST REDUCTION",
+    title: "粉塵拡散を約15%削減",
+    text: "テレスコピックベルト式コンベヤを採用し、積込み・搬送時の粉塵拡散を抑えます。",
+  },
+  {
+    label: "LOCAL LOGISTICS",
+    title: "近距離でつなぐ地域物流",
+    text: "原材料は工場から50km圏内で調達し、製品は工場から港まで約10kmの動線で輸送します。",
+  },
+];
+
+const pelletMetrics = [
+  { value: "3,500〜4,500", unit: "kcal/kg", label: "発熱量" },
+  { value: "2,000", unit: "ppm以下", label: "Na＋K含有量" },
+  { value: "約15%", unit: "削減", label: "粉塵拡散" },
+  { value: "約1,200万", unit: "t/年", label: "年間CO₂削減効果" },
+];
+
+const overseasDustMeasures = [
+  "製造工程で発生する粉塵を設備構造と集塵装置で管理",
+  "原料・製造・搬送の各段階に粉塵抑制技術を導入",
+  "高圧縮成形と集塵フィルターで生産ラインを低粉塵化",
+  "工場から港まで約10kmの短距離輸送で摩擦・振動を低減",
+];
+
+const domesticDustMeasures = [
+  "港湾用集塵ホッパーで、荷役時の粉塵を処理",
+  "テレスコピック設備で低粉塵排出し、荷降ろし時の拡散を防止",
+  "到着後3日以内を目安に倉庫へ搬入し、長期屋外保管による劣化を抑制",
 ];
 
 /** 会社概要資料（2026年版）P8「火力発電所に向けて木粉燃料改造・炭化ペレット設備設計」に基づく。 */
@@ -150,19 +187,13 @@ export default function BiomassPowerPage() {
         <div className={styles.heroOverlay} />
         <div className={`container ${styles.heroInner}`}>
           <Reveal direction="left" className={styles.heroCopy}>
-            <p className={styles.eyebrow}>
-              BIOMASS POWER
-              <span>バイオマス発電事業</span>
-            </p>
+            <p className={styles.eyebrow}>BIOMASS POWER</p>
             <h1 id="biomass-title" className={styles.heroTitle}>
-              燃料供給から設備計画まで、
-              <br />
-              バイオマス発電を支える。
+              バイオマス発電事業
             </h1>
             <p className={styles.heroLead}>
-              PKS、炭化PKS、木質ペレットの安定供給に加え、バイオマス発電、乾燥設備、
-              生産ライン、港湾荷役・粉塵対策までを一体で整理。燃料を「買う」だけでなく、
-              受け入れて使い続けられる状態まで整えます。
+              燃料供給から設備計画まで、バイオマス発電を支える。
+              PKS・炭化PKS・木質ペレットの安定供給と、乾燥設備、港湾荷役・粉塵対策までを一体で整理します。
             </p>
             <div className={styles.heroActions}>
               <Button href="/contact" variant="white">
@@ -174,18 +205,191 @@ export default function BiomassPowerPage() {
             </div>
           </Reveal>
         </div>
+      </section>
 
-        <div className={`container ${styles.metricBoard}`} aria-label="バイオマス燃料の主要指標">
-          {heroMetrics.map((metric) => (
-            <div key={metric.value} className={styles.metric}>
-              <b>{metric.value}</b>
-              <span>{metric.label}</span>
+      <section className={styles.pelletStrength} aria-labelledby="pellet-strength-title">
+        <div className="container">
+          <Reveal direction="up">
+            <div className={styles.pelletStrengthHeader}>
+              <div>
+                <SectionLabel eyebrow="BIOMASS PELLET" subtitle="諾亜バイオマスペレットの強み" />
+                <h2 id="pellet-strength-title" className={styles.pelletStrengthTitle}>
+                  高品質・低粉塵・地域循環型の、
+                  <br />
+                  再生可能エネルギー燃料。
+                </h2>
+              </div>
+              <p>
+                原料調達から製造、粉塵対策、港湾への輸送までを地域内でつなぎ、発電所で扱いやすい燃料供給モデルを構築します。
+              </p>
             </div>
-          ))}
+          </Reveal>
+
+          <div className={styles.pelletStrengthStage}>
+            <Reveal direction="left" className={styles.pelletCycleReveal}>
+              <figure className={styles.pelletCycleVisual}>
+                <Image
+                  src={asset("/assets/biomasspower/biomass-pellet-regional-cycle-2026.png")}
+                  alt="原料調達、ペレット製造、粉塵を抑えた輸送、港湾までを結ぶ地域循環モデル"
+                  fill
+                  sizes="(max-width: 960px) calc(100vw - 40px), 57vw"
+                  className={styles.pelletCycleImage}
+                />
+                <figcaption>REGIONAL BIOMASS PELLET CYCLE</figcaption>
+              </figure>
+            </Reveal>
+
+            <div className={styles.pelletStrengthList} role="list" aria-label="バイオマスペレットの特徴">
+              {pelletStrengths.map((strength, index) => (
+                <Reveal key={strength.title} direction="up" delay={index * 60} className={styles.pelletStrengthReveal}>
+                  <article role="listitem">
+                    <p>{strength.label}</p>
+                    <h3>{strength.title}</h3>
+                    <span>{strength.text}</span>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+          </div>
+
+          <Reveal direction="up">
+            <dl className={styles.pelletMetricBand} aria-label="バイオマスペレットの品質・環境指標">
+              {pelletMetrics.map((metric) => (
+                <div key={metric.label}>
+                  <dt>{metric.label}</dt>
+                  <dd>
+                    {metric.value}<small>{metric.unit}</small>
+                  </dd>
+                </div>
+              ))}
+            </dl>
+          </Reveal>
+
+          <Reveal direction="up">
+            <p className={styles.pelletStatement}>
+              諾亜バイオマスペレットは、地域の資源を発電へつなぎ、持続可能な社会づくりに貢献します。
+            </p>
+            <p className={styles.pelletSourceNote}>※ CO₂削減効果は資料記載の試算値であり、原料・輸送・運用条件により変動します。</p>
+          </Reveal>
         </div>
       </section>
 
-      <section className={styles.overview} aria-labelledby="overview-title">
+      <section className={styles.dustChain} aria-labelledby="dust-chain-title">
+        <div className="container">
+          <Reveal direction="up">
+            <div className={styles.dustChainHeader}>
+              <div>
+                <SectionLabel eyebrow="DUST REDUCTION SOLUTION" subtitle="諾亜の粉塵削減ソリューション" inverse />
+                <h2 id="dust-chain-title" className={styles.dustChainTitle}>
+                  製造から港湾荷役まで、
+                  <br />
+                  粉塵を全体で抑える。
+                </h2>
+              </div>
+              <p>
+                中国での原料調達・ペレット製造から、海上輸送、日本の港湾での荷役・保管まで。工程ごとの粉塵対策をひとつのサプライチェーンとして設計します。
+              </p>
+            </div>
+          </Reveal>
+
+          <div className={styles.dustChainFlow}>
+            <article className={styles.dustChainStage}>
+              <Reveal direction="left" className={styles.dustChainVisualReveal}>
+                <figure className={styles.dustChainVisual}>
+                  <Image
+                    src={asset("/assets/biomasspower/fuel-storage.jpg")}
+                    alt="屋内保管施設に積み上げられたバイオマス燃料"
+                    fill
+                    sizes="(max-width: 960px) calc(100vw - 40px), 56vw"
+                    className={styles.dustChainImage}
+                  />
+                  <figcaption>OVERSEAS / CHINA</figcaption>
+                </figure>
+              </Reveal>
+              <Reveal direction="right" className={styles.dustChainCopyReveal}>
+                <div className={styles.dustChainCopy}>
+                  <p className={styles.dustChainKicker}>海外（中国）</p>
+                  <h3>製造・港湾までを、低粉塵でつなぐ。</h3>
+                  <dl className={styles.dustChainFacts}>
+                    <div><dt>原料供給</dt><dd>年間150万t</dd></div>
+                    <div><dt>生産能力</dt><dd>年間100万t</dd></div>
+                    <div><dt>原料調達圏</dt><dd>50km以内</dd></div>
+                    <div><dt>工場〜港湾</dt><dd>約10km</dd></div>
+                  </dl>
+                  <p className={styles.dustCertification}>藁・松由来原料のFSC認証取得に対応</p>
+                  <ul>
+                    {overseasDustMeasures.map((measure) => <li key={measure}>{measure}</li>)}
+                  </ul>
+                </div>
+              </Reveal>
+            </article>
+
+            <div className={styles.dustChainConnector} aria-label="次の工程へ輸送">
+              <span>輸送</span>
+              <i aria-hidden="true" />
+            </div>
+
+            <Reveal direction="up">
+              <figure className={styles.dustTransportVisual}>
+                <Image
+                  src={asset("/assets/biomasspower/dust-chain-sea-transport-2026.png")}
+                  alt="密閉船倉でバイオマスペレットを輸送する貨物船"
+                  fill
+                  sizes="(max-width: 960px) calc(100vw - 40px), 1180px"
+                  className={styles.dustTransportImage}
+                />
+                <figcaption>
+                  <span>SEA TRANSPORT</span>
+                  <strong>安定した品質のまま、日本の指定港へ。</strong>
+                </figcaption>
+              </figure>
+            </Reveal>
+
+            <div className={styles.dustChainConnector} aria-label="次の工程へ輸送">
+              <span>輸送</span>
+              <i aria-hidden="true" />
+            </div>
+
+            <article className={`${styles.dustChainStage} ${styles.dustChainStageDomestic}`}>
+              <Reveal direction="left" className={styles.dustChainCopyReveal}>
+                <div className={styles.dustChainCopy}>
+                  <p className={styles.dustChainKicker}>国内（日本）</p>
+                  <h3>日本到着後も、荷役・保管で粉塵を管理。</h3>
+                  <ul>
+                    {domesticDustMeasures.map((measure) => <li key={measure}>{measure}</li>)}
+                  </ul>
+                </div>
+              </Reveal>
+              <Reveal direction="right" className={styles.dustChainVisualReveal}>
+                <figure className={styles.dustChainVisual}>
+                  <Image
+                    src={asset("/assets/biomasspower/dust-collection-hopper.png")}
+                    alt="港湾荷役で粉塵を抑制する走行式集塵ホッパー"
+                    fill
+                    sizes="(max-width: 960px) calc(100vw - 40px), 56vw"
+                    className={styles.dustChainImage}
+                  />
+                  <figcaption>DOMESTIC / JAPAN</figcaption>
+                </figure>
+              </Reveal>
+            </article>
+          </div>
+
+          <Reveal direction="up">
+            <div className={styles.dustChainOutcome}>
+              <div>
+                <p>TOTAL DUST REDUCTION</p>
+                <strong>約20<small>%</small></strong>
+              </div>
+              <p>
+                全サプライチェーンを通じて粉塵を削減し、燃料管理の安全性・作業環境・品質を高めます。
+              </p>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* <section className={styles.overview} aria-labelledby="overview-title">
         <div className={`container ${styles.overviewGrid}`}>
           <Reveal direction="left">
             <SectionLabel eyebrow="OVERVIEW" subtitle="事業概要" />
@@ -208,7 +412,7 @@ export default function BiomassPowerPage() {
             </div>
           </Reveal>
         </div>
-      </section>
+      </section> */}
 
       <section className={styles.fuelSection} id="fuel" aria-labelledby="fuel-title">
         <div className="container">
@@ -254,7 +458,7 @@ export default function BiomassPowerPage() {
         </div>
       </section>
 
-      <section className={styles.supply} aria-labelledby="supply-title">
+      {/* <section className={styles.supply} aria-labelledby="supply-title">
         <div className={`container ${styles.supplyInner}`}>
           <Reveal direction="left" className={styles.supplyCopy}>
             <SectionLabel eyebrow="SUPPLY CHAIN" subtitle="安定供給モデル" inverse />
@@ -293,9 +497,9 @@ export default function BiomassPowerPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
-      <section className={styles.dust} aria-labelledby="dust-title">
+      {/* <section className={styles.dust} aria-labelledby="dust-title">
         <div className={`container ${styles.dustGrid}`}>
           <Reveal direction="left">
             <figure className={styles.dustVisual}>
@@ -340,7 +544,7 @@ export default function BiomassPowerPage() {
             </div>
           </Reveal>
         </div>
-      </section>
+      </section> */}
 
       <section className={styles.specs} aria-labelledby="specs-title">
         <div className="container">

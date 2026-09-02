@@ -1140,7 +1140,7 @@
 /* SPでheroタイトルの固定改行(<br>)が行内で再折返しされないよう、最長行が収まるサイズに調整 */
 @media (max-width: 760px) {
   .heroTitle {
-    font-size: min(8.7vw, 3.1rem);
+    font-size: min(8.6vw, 3.2rem);
   }
 }
 
@@ -1153,5 +1153,12 @@
 
   .ctaInner h2 {
     font-size: min(7.2vw, 3rem);
+  }
+}
+
+/* SPは横グラデーションをやめ、均一の薄い暗幕で背景画像を見せる */
+@media (max-width: 760px) {
+  .heroOverlay {
+    background: rgba(5, 39, 102, 0.52);
   }
 }

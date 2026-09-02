@@ -16,18 +16,21 @@ export function Hero() {
         <p className={`eyebrow ${styles.fadeIn} ${styles.delay1}`}>
           Sustainable Future
         </p>
-        <h1
-          id="hero-title"
-          className={`hero-heading ${styles.heading} ${styles.fadeIn} ${styles.delay2}`}
-        >
-          <span>地球と自然に寄り添い、</span>
-          <span>再生可能エネルギーで</span>
-          <span>緑あふれる共生社会を創造する。</span>
+        <h1 id="hero-title" className={`hero-heading ${styles.heading}`}>
+          <span className={styles.line}>
+            <span className={styles.lineInner}>地球と自然に寄り添い、</span>
+          </span>
+          <span className={styles.line}>
+            <span className={styles.lineInner}>再生可能エネルギーで</span>
+          </span>
+          <span className={styles.line}>
+            <span className={styles.lineInner}>緑あふれる共生社会を創造する。</span>
+          </span>
         </h1>
         <p className={`${styles.copy} ${styles.fadeIn} ${styles.delay3}`}>
           持続可能な未来へ
         </p>
-        <div className={`${styles.fadeIn} ${styles.delay4}`}>
+        <div className={`${styles.heroAction} ${styles.fadeIn} ${styles.delay4}`}>
           <Button href="/business" variant="primary">
             事業内容を見る
           </Button>

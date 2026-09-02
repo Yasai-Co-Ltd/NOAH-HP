@@ -17,13 +17,6 @@ export const metadata: Metadata = {
     "候補地・電力容量・変電受電・通信・EPC建設・投融資まで、日本でAIデータセンターを実現する諾亜建設の事業を紹介します。全国10案件・想定約1.2GWの開発候補を推進中。",
 };
 
-const heroMetrics = [
-  { value: "10案件", label: "AIデータセンター開発候補地（全国）" },
-  { value: "約1.2GW", label: "想定開発規模" },
-  { value: "500MW", label: "重点案件（石川県）" },
-  { value: "2026-2029", label: "和歌山県計画 工事期間予定" },
-];
-
 const challengeItems = [
   {
     title: "電力密度",
@@ -192,18 +185,13 @@ export default function AiDataCenterPage() {
         <div className={styles.heroOverlay} />
         <div className={`container ${styles.heroInner}`}>
           <Reveal direction="left" className={styles.heroCopy}>
-            <p className={styles.eyebrow}>
-              AI DATA CENTER
-              <span>AIデータセンター事業</span>
-            </p>
+            <p className={styles.eyebrow}>AI DATA CENTER</p>
             <h1 id="ai-dc-title" className={styles.heroTitle}>
-              AIデータセンターを、
-              <br />
-              土地と電力から実現する。
+              AIデータセンター事業
             </h1>
             <p className={styles.heroLead}>
-              NOAHは、候補地の確保、受電容量・変電条件の整理、電力会社との協議、蓄電池連携、EPC建設、投融資協業まで、
-              日本でAIデータセンターを実現するために必要な工程を一体で推進します。現在、全国10案件・想定約1.2GWの開発候補を整理し、計画を進めています。
+              AIデータセンターを、土地と電力から実現する。
+              候補地の確保、受電・変電、蓄電池連携、EPC建設、投融資協業まで一体で推進します。
             </p>
             <div className={styles.heroActions}>
               <Button href="/contact" variant="white">
@@ -214,15 +202,6 @@ export default function AiDataCenterPage() {
               </Button>
             </div>
           </Reveal>
-        </div>
-
-        <div className={`container ${styles.metricStrip}`} aria-label="AIデータセンター事業の参考指標">
-          {heroMetrics.map((metric) => (
-            <div key={metric.value} className={styles.metricItem}>
-              <b>{metric.value}</b>
-              <span>{metric.label}</span>
-            </div>
-          ))}
         </div>
       </section>
 

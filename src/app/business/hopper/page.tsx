@@ -14,13 +14,6 @@ export const metadata: Metadata = {
     "木質ペレット・PKSなどの港湾荷役に対応する走行式集塵ホッパー。密閉グリル、集塵システム、テレスコピック、自走機構、PLC制御まで備えた設備事業を紹介します。",
 };
 
-const heroSpecs = [
-  { value: "300〜500m³/h", label: "最大処理能力" },
-  { value: "30μm以上", label: "捕捉対象粉塵の目安" },
-  { value: "25トン", label: "ホッパー内容量" },
-  { value: "約60トン", label: "総重量" },
-];
-
 const operationSteps = [
   {
     number: "01",
@@ -161,18 +154,13 @@ export default function HopperPage() {
         <div className={styles.heroOverlay} />
         <div className={`container ${styles.heroInner}`}>
           <Reveal direction="left" className={styles.heroCopy}>
-            <p className={styles.eyebrow}>
-              MOBILE DUST COLLECTION HOPPER
-              <span>走行式集塵ホッパー事業</span>
-            </p>
+            <p className={styles.eyebrow}>MOBILE DUST COLLECTION HOPPER</p>
             <h1 id="hopper-title" className={styles.heroTitle}>
-              粉塵を閉じ込め、
-              <br />
-              港湾荷役を止めない。
+              走行式集塵ホッパー事業
             </h1>
             <p className={styles.heroLead}>
-              木質ペレット・PKSなどのバルク燃料を船からトラックへ移載する際に発生する粉塵を、
-              密閉グリル、集塵ファン、テレスコピック、フィルターで抑制。設計・製造・輸送・据付まで一貫して支援します。
+              粉塵を閉じ込め、港湾荷役を止めない。
+              バルク燃料の荷役で発生する粉塵を設備で抑制し、設計・製造・輸送・据付まで一貫して支援します。
             </p>
             <div className={styles.heroActions}>
               <Button href="/contact" variant="white">
@@ -183,15 +171,6 @@ export default function HopperPage() {
               </Button>
             </div>
           </Reveal>
-        </div>
-
-        <div className={`container ${styles.specStrip}`} aria-label="走行式集塵ホッパーの主要仕様">
-          {heroSpecs.map((spec) => (
-            <div key={spec.value} className={styles.specItem}>
-              <b>{spec.value}</b>
-              <span>{spec.label}</span>
-            </div>
-          ))}
         </div>
       </section>
 

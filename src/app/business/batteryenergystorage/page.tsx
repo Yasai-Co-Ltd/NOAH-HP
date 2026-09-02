@@ -19,13 +19,6 @@ export const metadata: Metadata = {
 
 const marketBadges = ["卸電力市場", "容量市場", "需給調整市場", "一次調整力対応"];
 
-const heroMetrics = [
-  { value: "26案件", label: "保有する系統用蓄電池案件" },
-  { value: "約1.2GW", label: "合計開発規模" },
-  { value: "九州中心", label: "全国で案件を開発" },
-  { value: "2年以内", label: "系統連系が可能な案件を多数保有" },
-];
-
 const solutionSeries = [
   {
     number: "01",
@@ -351,12 +344,61 @@ const projectPhotos = [
   },
 ];
 
+/** パンフレット「蓄電事業」面の技術特徴に基づく。 */
+const platformFeatures = [
+  { label: "信頼性", text: "独自「6S＋EDR」の革新的システムで、安全性と寿命を大幅に向上。" },
+  { label: "効率性", text: "業界最高水準の充放電効率を実現し、エネルギー損失を低減。" },
+  { label: "拡張性", text: "多様な設置環境と容量要件に柔軟に対応。" },
+  { label: "長寿命", text: "劣化抑制技術と包括的なライフサイクル管理で、長期コストを削減。" },
+  { label: "智能管理", text: "クラウドサービスによる遠隔監視・運用・メンテナンスに対応。" },
+];
+
+const highVoltageSolutionItems = [
+  {
+    category: "SYSTEM BESS",
+    title: "システム用蓄電池",
+    models: ["ESS100-1000/2090-LC", "ESS100-2000/4180-LC"],
+    image: asset("/assets/battery/ess-4178kwh-official.png"),
+    alt: "システム用コンテナ型蓄電池のイメージ",
+    capacity: "2,090kWh×4基 / 4,180kWh×2基",
+    text: "安全かつ安定した蓄電池により、常時システムへ強力な電力を供給します。",
+  },
+  {
+    category: "POWER CONDITIONER",
+    title: "PCS（パワーコンディショナー）",
+    models: ["PCS1-1375KTL-H-JP-6M1"],
+    image: asset("/assets/battery/product-pws1-1725.png"),
+    alt: "蓄電池用パワーコンディショナーのイメージ",
+    capacity: "定格出力：995kW×2台",
+    text: "高効率インバータ制御により、蓄電池発電所の心臓部として機能します。",
+  },
+  {
+    category: "STEP-UP TRANSFORMER",
+    title: "昇圧トランス",
+    models: ["プロジェクト要件に応じて構成"],
+    image: asset("/assets/battery/temp-step-up-transformer.jpg"),
+    alt: "昇圧トランスのイメージ",
+    capacity: "定格容量：2,000kVA×1台",
+    text: "蓄電池システムを電力網に接続するための機器です。",
+  },
+];
+
+const solutionSoftwareItems = [
+  { title: "監視プラットフォーム", text: "リアルタイム監視・故障診断・アラーム管理を実現。" },
+  { title: "運用保守プラットフォーム", text: "設備の運用状況を可視化し、効率的な保守を支援。" },
+  { title: "バッテリー予告負荷予測", text: "AIアルゴリズムで負荷を予測し、最適な運用計画を支援。" },
+];
+
+const solutionBenefits = ["高い安全性", "高い信頼性", "高い経済性", "フルサポート体制"];
+
 /** 会社概要資料（2026年版）P9「蓄電池システム仕様詳細」に基づく主力モデル。 */
 const systemModels = [
   {
     name: "EnerD コンテナ型液冷式蓄電池システム",
     tag: "5,015kWh仕様",
     description: "高いエネルギー密度と安全性を兼ね備えた、コンテナ型の大容量蓄電システム。",
+    image: asset("/assets/battery/bess-container-5mwh.png"),
+    imageAlt: "コンテナ型液冷式蓄電池システムのイメージ",
     specs: [
       { label: "標準容量", value: "5,015kWh" },
       { label: "公称電圧", value: "1,331.2V" },
@@ -371,6 +413,8 @@ const systemModels = [
     name: "産業・商業向け一体型蓄電池システム",
     tag: "233kWh仕様",
     description: "コンパクト設計で導入が容易。産業・商業施設の安定運用をサポート。",
+    image: asset("/assets/battery/bess-215kwh.png"),
+    imageAlt: "産業・商業向け一体型蓄電池システムのイメージ",
     specs: [
       { label: "定格容量", value: "233kWh" },
       { label: "公称電圧", value: "832V" },
@@ -414,23 +458,15 @@ export default function BatteryEnergyStoragePage() {
           className={styles.heroBackground}
         />
         <div className={styles.heroOverlay} />
-        <AiImageNote position="top-right" />
         <div className={`container ${styles.heroInner}`}>
           <Reveal direction="left" className={styles.heroCopy}>
-            <p className={styles.kicker}>
-              BATTERY ENERGY STORAGE
-              <span>蓄電池事業</span>
-            </p>
+            <p className={styles.kicker}>BATTERY ENERGY STORAGE</p>
             <h1 id="battery-page-title" className={styles.heroTitle}>
-              特別高圧蓄電池発電所を、
-              <br />
-              開発から
-              <br className="sp-br" />
-              運用・EXITまで。
+              蓄電池事業
             </h1>
             <p className={styles.heroLead}>
-              NOAHは、日本国内で特別高圧・高圧系統用蓄電池発電所の開発・設計・建設・投資協業を推進しています。
-              用地取得、系統連系、行政許認可、EPC施工、竣工引渡しから運営・EXITまで一貫して対応します。
+              特別高圧蓄電池発電所を、開発から運用・EXITまで。
+              用地取得、系統連系、行政許認可、EPC施工、竣工引渡しまで一貫して対応します。
             </p>
             <div className={styles.heroActions}>
               <Button href="/contact" variant="white">
@@ -442,18 +478,327 @@ export default function BatteryEnergyStoragePage() {
             </div>
           </Reveal>
         </div>
+      </section>
 
-        <div className={`container ${styles.metricBoard}`} aria-label="蓄電池事業の参考指標">
-          {heroMetrics.map((metric) => (
-            <div key={metric.value} className={styles.metricItem}>
-              <b>{metric.value}</b>
-              <span>{metric.label}</span>
+      <section className={styles.emsSystem} aria-labelledby="ems-system-title">
+        <div className="container">
+          <Reveal direction="up">
+            <div className={styles.emsSystemHeading}>
+              <div>
+                <SectionLabel eyebrow="EMS MANAGEMENT SYSTEM" subtitle="電力安定化プラットフォーム" />
+                <h2 id="ems-system-title" className={styles.emsSystemTitle}>
+                  世界トップレベルの、
+                  <br />
+                  統合制御性能。
+                </h2>
+              </div>
+              <div className={styles.emsSystemIntro}>
+                <p>
+                  全体を統括する頭脳となるEMS管理システムに、一次周波数調整技術を搭載。
+                  電力の安定供給に欠かせない「系統安定化制御」に最適です。
+                </p>
+                <dl className={styles.emsPerformance} aria-label="EMS管理システムの制御性能">
+                  <div>
+                    <dt>&lt;100ms</dt>
+                    <dd>応答速度（高速）</dd>
+                  </div>
+                  <div>
+                    <dt>99%以上</dt>
+                    <dd>制御精度（高信頼制御）</dd>
+                  </div>
+                </dl>
+              </div>
             </div>
-          ))}
+          </Reveal>
+
+          <Reveal direction="up" className={styles.emsDiagramReveal}>
+            <figure className={styles.emsDiagram}>
+              <Image
+                src={asset("/assets/battery/ems-system-hierarchy-2026.png")}
+                alt="EMSが昇圧トランス、PCS、蓄電池モジュールを統合制御し、グリッド側からユーザー側へつながるシステム階層図"
+                width={1536}
+                height={1024}
+                sizes="(max-width: 760px) calc(100vw - 40px), (max-width: 1280px) calc(100vw - 64px), 1180px"
+                className={styles.emsDiagramImage}
+              />
+              <span className={`${styles.emsDiagramLayer} ${styles.emsDiagramControl}`}>EMS CONTROL</span>
+              <span className={`${styles.emsDiagramLayer} ${styles.emsDiagramFlow}`}>APPLICATION FLOW</span>
+              <span className={`${styles.emsDiagramLabel} ${styles.emsDiagramEms}`}>
+                EMS 管理システム<small>全体を統括する頭脳</small>
+              </span>
+              <span className={`${styles.emsDiagramLabel} ${styles.emsDiagramTransformer}`}>
+                昇圧トランス<small>電圧を変換</small>
+              </span>
+              <span className={`${styles.emsDiagramLabel} ${styles.emsDiagramPcs}`}>
+                PCS<small>電力を変換・制御</small>
+              </span>
+              <span className={`${styles.emsDiagramLabel} ${styles.emsDiagramBattery}`}>
+                蓄電池モジュール<small>電力を蓄える</small>
+              </span>
+              <span className={`${styles.emsDiagramLabel} ${styles.emsDiagramGrid}`}>
+                グリッド側<small>送配電ネットワーク</small>
+              </span>
+              <span className={`${styles.emsDiagramLabel} ${styles.emsDiagramUser}`}>
+                ユーザー側<small>電力利用を支える</small>
+              </span>
+            </figure>
+          </Reveal>
+
+          <div className={styles.emsFeatures} role="list" aria-label="蓄電池システムの技術特徴">
+            {platformFeatures.map((feature, index) => (
+              <Reveal key={feature.label} direction="up" delay={index * 55} className={styles.emsFeatureReveal}>
+                <article role="listitem">
+                  <b>{feature.label}</b>
+                  <span>{feature.text}</span>
+                </article>
+              </Reveal>
+            ))}
+          </div>
+          <Reveal direction="up">
+            <p className={styles.emsStatement}>
+              諾亜の系統用蓄電池システムは「安全・高効率・高信頼性」を兼ね備えた、次世代型の電力安定化プラットフォームです。
+            </p>
+          </Reveal>
         </div>
       </section>
 
-      <section className={styles.devFlow} aria-labelledby="devflow-title">
+      <section className={styles.modelShowcase} aria-labelledby="model-showcase-title">
+        <div className="container">
+          <Reveal direction="up">
+            <div className={styles.modelShowcaseHeading}>
+              <div>
+                <SectionLabel eyebrow="BATTERY SYSTEM MODELS" subtitle="蓄電池システム仕様" inverse />
+                <h2 id="model-showcase-title" className={styles.modelShowcaseTitle}>
+                  用途に合わせて選べる、
+                  <br />
+                  2つの主力モデル。
+                </h2>
+              </div>
+              <p>
+                系統側・大規模用途のコンテナ型と、工場・施設向けの一体型。
+                導入環境と容量要件に応じて、適した蓄電池システムを提案します。
+              </p>
+            </div>
+          </Reveal>
+
+          <div className={styles.modelShowcaseGrid}>
+            {systemModels.map((model, index) => (
+              <Reveal key={model.name} direction="up" delay={index * 80}>
+                <article className={styles.modelShowcaseCard}>
+                  <figure className={styles.modelShowcaseVisual}>
+                    <Image
+                      src={model.image}
+                      alt={model.imageAlt}
+                      fill
+                      sizes="(max-width: 760px) calc(100vw - 40px), (max-width: 1040px) calc(100vw - 64px), 50vw"
+                      className={styles.modelShowcaseImage}
+                    />
+                  </figure>
+                  <div className={styles.modelShowcaseBody}>
+                    <p className={styles.modelShowcaseTag}>{model.tag}</p>
+                    <h3>{model.name}</h3>
+                    <p className={styles.modelShowcaseDescription}>{model.description}</p>
+                    <dl>
+                      {model.specs.map((spec) => (
+                        <div key={spec.label}>
+                          <dt>{spec.label}</dt>
+                          <dd>{spec.value}</dd>
+                        </div>
+                      ))}
+                    </dl>
+                  </div>
+                </article>
+              </Reveal>
+            ))}
+          </div>
+
+          <Reveal direction="up">
+            <div className={styles.certificationBand} aria-label="国際認証・セキュリティ基準">
+              <div>
+                <p>STANDARDS &amp; SECURITY</p>
+                <h3>国際認証・セキュリティ基準に対応</h3>
+              </div>
+              <ul>
+                <li>IEC 62619</li>
+                <li>IEC 62477-1</li>
+                <li>UL 1973</li>
+                <li>UL 9540A</li>
+              </ul>
+              <Image
+                src={asset("/assets/security/jc-star.jpg")}
+                alt="JC-STARロゴ"
+                width={220}
+                height={120}
+                sizes="110px"
+                className={styles.modelJcStarLogo}
+              />
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      <section className={styles.technology} id="solution" aria-labelledby="technology-title">
+        <div className="container">
+          <Reveal direction="up">
+            <SectionLabel eyebrow="CORE TECHNOLOGY" subtitle="6S+EDR" />
+            <h2 id="technology-title" className={styles.technologyTitle}>
+              安全性・制御性・
+              <br className="sp-br" />
+              可視化を、
+              <br />
+              ひとつの基盤に統合。
+            </h2>
+            <p className={styles.technologyLead}>
+              6S+EDRは、PCS・BMS・EMSに加え、HCS高速制御、BWS予兆警報、OMS予防安全、EDR故障記録を統合する制御基盤です。
+              AI・IoTと電力制御技術を組み合わせ、安全性、グリッド適応性、運用判断を高めます。
+            </p>
+          </Reveal>
+          <Reveal direction="up" className={styles.techFigureReveal}>
+            <figure className={styles.techFigure}>
+              <Image
+                src={asset("/assets/battery/core-technology-ai-diagram.png")}
+                alt="6S+EDRの安全制御基盤を示す図"
+                width={1672}
+                height={941}
+                sizes="(max-width: 900px) calc(100vw - 40px), 1280px"
+                className={styles.techImage}
+              />
+            </figure>
+          </Reveal>
+          <Reveal direction="up">
+            <JcStarNotice
+              className={styles.jcStarNotice}
+              title="蓄電池システムの機器選定にも、セキュリティ要件を。"
+              description="EMS、PCS、クラウド運用を含む蓄電池システムでは、JC-STAR適合製品の取扱いを通じて、導入時のセキュリティ要件にも配慮します。適合対象は製品・機器ごとに確認します。"
+              points={["EMS / PCS", "遠隔監視", "機器選定"]}
+            />
+          </Reveal>
+        </div>
+      </section>
+
+      <section className={styles.highVoltageSolution} aria-labelledby="high-voltage-solution-title">
+        <div className="container">
+          <Reveal direction="up">
+            <div className={styles.highVoltageHeading}>
+              <div>
+                <SectionLabel eyebrow="HIGH-VOLTAGE SOLUTION" subtitle="主力製品" />
+                <h2 id="high-voltage-solution-title" className={styles.highVoltageTitle}>
+                  高圧・特高圧システム用
+                  <br />
+                  蓄電池ソリューション。
+                </h2>
+              </div>
+              <p>
+                システム用蓄電池、PCS、昇圧トランスから、監視・保守・EMS運用までを一体で構成。プロジェクトの規模と要件に合わせて、最適な蓄電池発電所を設計します。
+              </p>
+            </div>
+          </Reveal>
+
+          <div className={styles.solutionProofs}>
+            {[
+              ["中規模から大規模まで", "多様なプロジェクト規模に柔軟に対応"],
+              ["6S+EDRに完全適合", "発電・配電・需要の各領域を統合して管理"],
+              ["アグリゲーター運営まで", "建設後の運用まで一貫して支援"],
+            ].map(([title, text], index) => (
+              <Reveal key={title} direction="up" delay={index * 70} className={styles.solutionProofReveal}>
+                <article className={styles.solutionProof}>
+                  <h3>{title}</h3>
+                  <p>{text}</p>
+                </article>
+              </Reveal>
+            ))}
+          </div>
+
+          <div className={styles.solutionHardware}>
+            {highVoltageSolutionItems.map((item, index) => (
+              <Reveal key={item.title} direction="up" delay={index * 80} className={styles.solutionHardwareReveal}>
+                <article className={styles.solutionHardwareCard}>
+                  <figure className={styles.solutionHardwareVisual}>
+                    <Image
+                      src={item.image}
+                      alt={item.alt}
+                      fill
+                      sizes="(max-width: 760px) calc(100vw - 40px), (max-width: 1040px) calc(100vw - 64px), 33vw"
+                      className={styles.solutionHardwareImage}
+                    />
+                  </figure>
+                  <div className={styles.solutionHardwareBody}>
+                    <p className={styles.solutionHardwareCategory}>{item.category}</p>
+                    <h3>{item.title}</h3>
+                    <ul>
+                      {item.models.map((model) => (
+                        <li key={model}>{model}</li>
+                      ))}
+                    </ul>
+                    <strong>{item.capacity}</strong>
+                    <p>{item.text}</p>
+                  </div>
+                </article>
+              </Reveal>
+            ))}
+          </div>
+
+          <div className={styles.solutionOperation}>
+            <Reveal direction="up" className={styles.solutionSoftwareReveal}>
+              <section className={styles.solutionSoftware} aria-labelledby="solution-software-title">
+                <div className={styles.solutionSoftwareContent}>
+                  <p className={styles.solutionPanelEyebrow}>SOFTWARE PRODUCTS</p>
+                  <h3 id="solution-software-title">運用を支えるソフトウェア</h3>
+                  <ol>
+                  {solutionSoftwareItems.map((item) => (
+                    <li key={item.title}>
+                      <div>
+                          <h4>{item.title}</h4>
+                          <p>{item.text}</p>
+                        </div>
+                      </li>
+                    ))}
+                  </ol>
+                </div>
+                <figure className={styles.solutionSoftwareVisual}>
+                  <Image
+                    src={asset("/assets/battery/solution-software-operations-2026.png")}
+                    alt="蓄電池の監視・診断・予測を行う運用ソフトウェアのイメージ"
+                    fill
+                    sizes="(max-width: 760px) calc(100vw - 40px), 28vw"
+                    className={styles.solutionSoftwareImage}
+                  />
+                </figure>
+              </section>
+            </Reveal>
+
+            <Reveal direction="up" delay={100} className={styles.solutionEmsReveal}>
+              <section className={styles.solutionEms} aria-labelledby="solution-ems-title">
+                <div>
+                  <p className={styles.solutionPanelEyebrow}>EMS &amp; AGGREGATOR</p>
+                  <h3 id="solution-ems-title">エネルギーを統合し、
+                    <br />最適な運用へ。</h3>
+                  <p>EMSを中心にエネルギーリソースを統合。電力市場での最適運用と収益機会の最大化を支援します。</p>
+                </div>
+                <figure className={styles.solutionEmsVisual}>
+                  <Image
+                    src={asset("/assets/battery/solution-ems-aggregator-network-2026.png")}
+                    alt="EMSが蓄電池、PCS、送電網、太陽光設備、施設を統合するイメージ"
+                    fill
+                    sizes="(max-width: 760px) calc(100vw - 40px), 44vw"
+                    className={styles.solutionEmsImage}
+                  />
+                </figure>
+              </section>
+            </Reveal>
+          </div>
+
+          <Reveal direction="up">
+            <ul className={styles.solutionBenefitBand} aria-label="蓄電池ソリューションの特長">
+              {solutionBenefits.map((benefit) => (
+                <li key={benefit}>{benefit}</li>
+              ))}
+            </ul>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* <section className={styles.devFlow} aria-labelledby="devflow-title">
         <div className="container">
           <Reveal direction="up">
             <SectionLabel eyebrow="ONE-STOP DEVELOPMENT" subtitle="NOAHができること" />
@@ -492,7 +837,7 @@ export default function BatteryEnergyStoragePage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section className={styles.pipeline} aria-labelledby="pipeline-title">
         <div className="container">
@@ -631,90 +976,7 @@ export default function BatteryEnergyStoragePage() {
         </div>
       </section>
 
-      <section className={styles.systems} aria-labelledby="systems-title">
-        <div className="container">
-          <Reveal direction="up">
-            <div className={styles.sectionHeading}>
-              <div>
-                <SectionLabel eyebrow="SYSTEM SPEC" subtitle="蓄電池システム仕様" />
-                <h2 id="systems-title" className={styles.heading}>
-                  用途に合わせて選べる、
-                  <br />
-                  2つの主力モデル。
-                </h2>
-              </div>
-              <p className={styles.sectionLead}>
-                高性能・高安全性の蓄電池システムで、持続可能なエネルギー社会に貢献します。
-              </p>
-            </div>
-          </Reveal>
-
-          <div className={styles.systemGrid}>
-            {systemModels.map((model, index) => (
-              <Reveal key={model.name} direction="up" delay={index * 80}>
-                <article className={styles.systemCard}>
-                  <p className={styles.systemTag}>{model.tag}</p>
-                  <h3>{model.name}</h3>
-                  <p className={styles.systemDescription}>{model.description}</p>
-                  <dl>
-                    {model.specs.map((spec) => (
-                      <div key={spec.label}>
-                        <dt>{spec.label}</dt>
-                        <dd>{spec.value}</dd>
-                      </div>
-                    ))}
-                  </dl>
-                </article>
-              </Reveal>
-            ))}
-          </div>
-
-          <p className={styles.sourceNote}>
-            国際認証：IEC 62619、IEC 62477-1、UL 1973、UL 9540A を取得しています。
-          </p>
-        </div>
-      </section>
-
-      <section className={styles.technology} id="solution" aria-labelledby="technology-title">
-        <div className="container">
-          <Reveal direction="up">
-            <SectionLabel eyebrow="CORE TECHNOLOGY" subtitle="6S+EDR" />
-            <h2 id="technology-title" className={styles.heading}>
-              安全性・制御性・
-              <br className="sp-br" />
-              可視化を、
-              <br />
-              ひとつの基盤に統合。
-            </h2>
-            <p className={styles.techLead}>
-              6S+EDRは、PCS・BMS・EMSに加え、HCS高速制御、BWS予兆警報、OMS予防安全、EDR故障記録を統合する制御基盤です。
-              AI・IoTと電力制御技術を組み合わせ、安全性、グリッド適応性、運用判断を高めます。
-            </p>
-          </Reveal>
-          <Reveal direction="up" className={styles.techFigureReveal}>
-            <figure className={styles.techFigure}>
-              <Image
-                src={asset("/assets/battery/core-technology-ai-diagram.png")}
-                alt="6S+EDRの安全制御基盤を示す図"
-                width={1672}
-                height={941}
-                sizes="(max-width: 900px) calc(100vw - 40px), 1280px"
-                className={styles.techImage}
-              />
-            </figure>
-          </Reveal>
-          <Reveal direction="up">
-            <JcStarNotice
-              className={styles.jcStarNotice}
-              title="蓄電池システムの機器選定にも、セキュリティ要件を。"
-              description="EMS、PCS、クラウド運用を含む蓄電池システムでは、JC-STAR適合製品の取扱いを通じて、導入時のセキュリティ要件にも配慮します。適合対象は製品・機器ごとに確認します。"
-              points={["EMS / PCS", "遠隔監視", "機器選定"]}
-            />
-          </Reveal>
-        </div>
-      </section>
-
-      <section className={styles.package} aria-labelledby="package-title">
+      {/* <section className={styles.package} aria-labelledby="package-title">
         <div className="container">
           <Reveal direction="up">
             <SectionLabel eyebrow="MAIN PRODUCT" subtitle="主力製品" />
@@ -796,9 +1058,9 @@ export default function BatteryEnergyStoragePage() {
             </div>
           </Reveal>
         </div>
-      </section>
+      </section> */}
 
-      <section className={styles.platform} aria-labelledby="platform-title">
+      {/* <section className={styles.platform} aria-labelledby="platform-title">
         <div className="container">
           <Reveal direction="up">
             <div className={styles.sectionHeading}>
@@ -856,7 +1118,7 @@ export default function BatteryEnergyStoragePage() {
             </div>
           </Reveal>
         </div>
-      </section>
+      </section> */}
 
       <section className={styles.proof} aria-labelledby="proof-title">
         <Image

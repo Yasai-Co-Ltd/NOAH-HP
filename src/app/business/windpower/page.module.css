@@ -104,6 +104,523 @@
   border-color: rgba(255, 255, 255, 0.72);
 }
 
+/* ===== 陸上風力 ===== */
+
+.onshoreIntro {
+  position: relative;
+  overflow: hidden;
+  padding-block: 124px 112px;
+  background:
+    linear-gradient(90deg, rgba(225, 245, 240, 0.72), transparent 34%),
+    var(--color-surface);
+}
+
+.onshoreHeader {
+  max-width: 1060px;
+}
+
+.onshoreTitle {
+  margin: 22px 0 0;
+  color: var(--color-brand-900);
+  font-family: var(--font-serif);
+  font-size: clamp(2.25rem, 3.28vw, 3.25rem);
+  font-weight: 800;
+  line-height: 1.48;
+  letter-spacing: 0;
+}
+
+.onshoreStage {
+  display: grid;
+  grid-template-columns: minmax(0, 1.16fr) minmax(330px, 0.84fr);
+  gap: 56px;
+  align-items: stretch;
+  margin-top: 52px;
+}
+
+.onshoreVisualReveal {
+  min-width: 0;
+  height: 100%;
+}
+
+.onshoreVisual {
+  position: relative;
+  height: 100%;
+  min-height: 468px;
+  margin: 0;
+  overflow: hidden;
+  background: #dcecf4;
+  box-shadow: 0 24px 58px rgba(5, 39, 102, 0.14);
+}
+
+.onshoreImage {
+  object-fit: cover;
+  object-position: center;
+}
+
+.onshoreVisual figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  padding: 13px 18px;
+  color: var(--color-surface);
+  background: var(--color-brand-900);
+  font-family: var(--font-numeric);
+  font-size: 0.66rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+.onshoreStrengthArea {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  height: 100%;
+}
+
+.onshoreStrengthEyebrow {
+  margin: 0;
+  color: var(--color-accent-teal);
+  font-family: var(--font-numeric);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.11em;
+}
+
+.onshoreStrengthTitle {
+  margin: 9px 0 22px;
+  color: var(--color-brand-900);
+  font-family: var(--font-serif);
+  font-size: 1.48rem;
+  font-weight: 800;
+  line-height: 1.4;
+}
+
+.onshoreStrengths {
+  display: grid;
+  flex: 1;
+  grid-template-rows: repeat(5, minmax(0, 1fr));
+  border-top: 1px solid rgba(5, 39, 102, 0.24);
+}
+
+.onshoreStrengthReveal {
+  display: flex;
+  min-width: 0;
+  border-bottom: 1px solid rgba(5, 39, 102, 0.18);
+}
+
+.onshoreStrengthReveal article {
+  position: relative;
+  width: 100%;
+  padding: 17px 0 17px 19px;
+}
+
+.onshoreStrengthReveal article::before {
+  position: absolute;
+  top: 24px;
+  left: 0;
+  width: 5px;
+  height: 5px;
+  content: "";
+  background: var(--color-accent-teal);
+}
+
+.onshoreStrengthReveal h4 {
+  margin: 0;
+  color: var(--color-brand-900);
+  font-size: 1rem;
+  font-weight: 800;
+  line-height: 1.45;
+}
+
+.onshoreStrengthReveal p {
+  margin: 7px 0 0;
+  color: var(--color-muted);
+  font-size: 0.78rem;
+  font-weight: 600;
+  line-height: 1.7;
+}
+
+.onshoreStatement {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  margin: 48px 0 0;
+  padding: 28px 34px;
+  color: var(--color-surface);
+  background: var(--color-brand-900);
+  box-shadow: 0 18px 40px rgba(5, 39, 102, 0.16);
+}
+
+.onshoreStatement span {
+  flex: 0 0 auto;
+  padding: 8px 11px;
+  color: var(--color-brand-900);
+  background: var(--color-accent-cyan);
+  font-size: 0.76rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.onshoreStatement strong {
+  font-family: var(--font-serif);
+  font-size: clamp(1.35rem, 2.05vw, 2rem);
+  font-weight: 800;
+  line-height: 1.5;
+}
+
+@media (max-width: 960px) {
+  .onshoreIntro {
+    padding-block: var(--space-section-mobile);
+  }
+
+  .onshoreStage {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .onshoreVisualReveal {
+    height: auto;
+  }
+
+  .onshoreVisual {
+    height: auto;
+    min-height: 0;
+    aspect-ratio: 16 / 10;
+  }
+
+  .onshoreStrengths {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: none;
+    border-left: 1px solid rgba(5, 39, 102, 0.18);
+  }
+
+  .onshoreStrengthReveal {
+    border-right: 1px solid rgba(5, 39, 102, 0.18);
+  }
+}
+
+@media (max-width: 760px) {
+  .onshoreTitle {
+    font-size: min(7.2vw, 2.25rem);
+  }
+
+  .onshoreStage {
+    gap: 26px;
+    margin-top: 36px;
+  }
+
+  .onshoreVisual {
+    aspect-ratio: 4 / 3;
+  }
+
+  .onshoreStrengths {
+    grid-template-columns: 1fr;
+    border-left: 0;
+  }
+
+  .onshoreStrengthReveal {
+    border-right: 0;
+  }
+
+  .onshoreStrengthReveal article {
+    padding-block: 15px;
+  }
+
+  .onshoreStrengthTitle {
+    margin-bottom: 18px;
+  }
+
+  .onshoreStatement {
+    display: grid;
+    gap: 13px;
+    margin-top: 33px;
+    padding: 23px 21px;
+  }
+
+  .onshoreStatement strong {
+    font-size: 1.28rem;
+  }
+}
+
+/* ===== 風力発電事業戦略 ===== */
+
+.windStrategy {
+  padding-block: 124px;
+  background: #f3f8fb;
+}
+
+.windStrategyHeader {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.74fr);
+  gap: 72px;
+  align-items: end;
+}
+
+.windStrategyTitle {
+  margin: 22px 0 0;
+  color: var(--color-brand-900);
+  font-family: var(--font-serif);
+  font-size: clamp(2.22rem, 3.18vw, 3.18rem);
+  font-weight: 800;
+  line-height: 1.48;
+  letter-spacing: 0;
+}
+
+.windStrategyHeader > p {
+  max-width: 455px;
+  margin: 0 0 3px;
+  color: var(--color-text);
+  font-size: 0.94rem;
+  font-weight: 600;
+  line-height: 1.9;
+}
+
+.windStrategyStage {
+  display: grid;
+  grid-template-columns: minmax(0, 0.98fr) minmax(340px, 1.02fr);
+  gap: 52px;
+  align-items: stretch;
+  margin-top: 54px;
+}
+
+.windStrategyPillars {
+  display: grid;
+  align-content: stretch;
+  border-top: 1px solid rgba(5, 39, 102, 0.2);
+}
+
+.windStrategyPillarReveal {
+  display: flex;
+  min-width: 0;
+  border-bottom: 1px solid rgba(5, 39, 102, 0.18);
+}
+
+.windStrategyPillar {
+  position: relative;
+  width: 100%;
+  padding: 29px 0 28px 28px;
+}
+
+.windStrategyPillar::before {
+  position: absolute;
+  top: 34px;
+  left: 0;
+  width: 7px;
+  height: 7px;
+  content: "";
+  background: var(--color-accent-teal);
+  border-radius: 50%;
+  box-shadow: 0 0 0 6px rgba(83, 193, 229, 0.14);
+}
+
+.windStrategyPillarblue::before {
+  background: #268bda;
+  box-shadow: 0 0 0 6px rgba(38, 139, 218, 0.12);
+}
+
+.windStrategyPillarviolet::before {
+  background: #6557c8;
+  box-shadow: 0 0 0 6px rgba(101, 87, 200, 0.12);
+}
+
+.windStrategyPillar p {
+  margin: 0;
+  color: var(--color-accent-teal);
+  font-family: var(--font-numeric);
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+.windStrategyPillarblue p {
+  color: #187dc9;
+}
+
+.windStrategyPillarviolet p {
+  color: #5a4cba;
+}
+
+.windStrategyPillar h3 {
+  margin: 9px 0 0;
+  color: var(--color-brand-900);
+  font-size: 1.19rem;
+  font-weight: 800;
+  line-height: 1.45;
+}
+
+.windStrategyPillar span {
+  display: block;
+  max-width: 510px;
+  margin-top: 9px;
+  color: var(--color-muted);
+  font-size: 0.82rem;
+  font-weight: 600;
+  line-height: 1.75;
+}
+
+.windStrategyVisualReveal {
+  min-width: 0;
+}
+
+.windStrategyVisual {
+  position: relative;
+  height: 100%;
+  min-height: 496px;
+  margin: 0;
+  overflow: hidden;
+  background: #d6e8f2;
+  box-shadow: 0 24px 58px rgba(5, 39, 102, 0.14);
+}
+
+.windStrategyImage {
+  object-fit: cover;
+  object-position: center;
+}
+
+.windStrategyVisual::after {
+  position: absolute;
+  inset: auto 0 0;
+  height: 35%;
+  content: "";
+  pointer-events: none;
+  background: linear-gradient(0deg, rgba(3, 16, 38, 0.62), transparent);
+}
+
+.windStrategyVisual figcaption {
+  position: absolute;
+  z-index: 1;
+  right: 18px;
+  bottom: 16px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.9);
+  font-family: var(--font-numeric);
+  font-size: 0.64rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+.windStrategyOutcomes {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin: 18px 0 0;
+  padding: 0;
+  overflow: hidden;
+  list-style: none;
+  background: var(--color-surface);
+  border: 1px solid rgba(5, 39, 102, 0.16);
+}
+
+.windStrategyOutcomes li {
+  min-height: 112px;
+  padding: 24px 23px;
+}
+
+.windStrategyOutcomes li + li {
+  border-left: 1px solid rgba(5, 39, 102, 0.16);
+}
+
+.windStrategyOutcomes strong,
+.windStrategyOutcomes span {
+  display: block;
+}
+
+.windStrategyOutcomes strong {
+  color: var(--color-brand-900);
+  font-size: 0.94rem;
+  font-weight: 800;
+  line-height: 1.45;
+}
+
+.windStrategyOutcomes span {
+  margin-top: 8px;
+  color: var(--color-muted);
+  font-size: 0.74rem;
+  font-weight: 600;
+  line-height: 1.62;
+}
+
+@media (max-width: 960px) {
+  .windStrategy {
+    padding-block: var(--space-section-mobile);
+  }
+
+  .windStrategyHeader,
+  .windStrategyStage {
+    grid-template-columns: 1fr;
+  }
+
+  .windStrategyHeader {
+    gap: 26px;
+  }
+
+  .windStrategyStage {
+    gap: 30px;
+    margin-top: 38px;
+  }
+
+  .windStrategyVisual {
+    min-height: 0;
+    aspect-ratio: 16 / 10;
+  }
+}
+
+@media (max-width: 760px) {
+  .windStrategyTitle {
+    font-size: min(7.2vw, 2.25rem);
+  }
+
+  .windStrategyHeader > p {
+    font-size: 0.88rem;
+  }
+
+  .windStrategyPillar {
+    padding: 22px 0 21px 22px;
+  }
+
+  .windStrategyPillar::before {
+    top: 28px;
+    width: 6px;
+    height: 6px;
+    box-shadow: 0 0 0 5px rgba(83, 193, 229, 0.14);
+  }
+
+  .windStrategyPillar h3 {
+    font-size: 1.03rem;
+  }
+
+  .windStrategyPillar span {
+    font-size: 0.78rem;
+  }
+
+  .windStrategyVisual {
+    aspect-ratio: 4 / 5;
+  }
+
+  .windStrategyOutcomes {
+    grid-template-columns: 1fr;
+  }
+
+  .windStrategyOutcomes li {
+    min-height: 0;
+    padding: 17px 20px;
+  }
+
+  .windStrategyOutcomes li + li {
+    border-top: 1px solid rgba(5, 39, 102, 0.16);
+    border-left: 0;
+  }
+
+  .windStrategyOutcomes strong,
+  .windStrategyOutcomes span {
+    display: inline;
+  }
+
+  .windStrategyOutcomes span {
+    margin-left: 9px;
+  }
+}
+
 .metricBoard {
   position: relative;
   z-index: 3;
@@ -1038,7 +1555,7 @@
 /* SPでheroタイトルの固定改行(<br>)が行内で再折返しされないよう、最長行が収まるサイズに調整 */
 @media (max-width: 760px) {
   .heroTitle {
-    font-size: min(7.9vw, 3.1rem);
+    font-size: min(11vw, 3.4rem);
   }
 }
 
@@ -1060,5 +1577,20 @@
 @media (min-width: 1441px) {
   .heading {
     font-size: 2.45rem;
+  }
+}
+
+/* SPは横グラデーションをやめ、均一の薄い暗幕で背景画像を見せる */
+@media (max-width: 760px) {
+  .heroOverlay {
+    background: rgba(5, 39, 102, 0.52);
+  }
+}
+
+/* SPで見出しの固定改行が行内で再折返しされないよう、最長行が収まるサイズに調整 */
+@media (max-width: 760px) {
+  .onshoreTitle,
+  .windStrategyTitle {
+    font-size: min(6.2vw, 2.8rem);
   }
 }

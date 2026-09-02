@@ -69,6 +69,24 @@
       .system-note { margin: 25px 0 0; color: #64748d; font-size: 13px; }
       .diagram-image { overflow: hidden; border: 1px solid var(--line); background: #fff; }
       .diagram-image img { width: 100%; height: auto; }
+      .ems-diagram { position: relative; overflow: hidden; border: 1px solid var(--line); background: #fff; }
+      .ems-diagram > img { width: 100%; height: auto; }
+      .ems-diagram__layer { position: absolute; left: 18px; z-index: 2; padding: 4px 9px; color: var(--blue); background: rgba(255,255,255,.92); border-left: 3px solid var(--cyan); font-size: 10px; font-weight: 800; letter-spacing: .13em; }
+      .ems-diagram__layer--control { top: 30%; }
+      .ems-diagram__layer--power { top: 71%; }
+      .ems-diagram__tag { position: absolute; z-index: 2; min-width: 88px; padding: 7px 10px 8px; color: var(--navy); background: rgba(255,255,255,.94); border-top: 2px solid var(--cyan); box-shadow: 0 5px 16px rgba(5,39,102,.1); font-size: 12px; font-weight: 800; line-height: 1.35; text-align: center; }
+      .ems-diagram__tag small { display: block; margin-top: 2px; color: #60708a; font-size: 9px; font-weight: 700; letter-spacing: .02em; }
+      .ems-diagram__tag--ems { top: 5.4%; left: 49.8%; min-width: 170px; transform: translateX(-50%); }
+      .ems-diagram__tag--transformer { top: 61%; left: 17%; }
+      .ems-diagram__tag--pcs { top: 61%; left: 46.5%; }
+      .ems-diagram__tag--battery { top: 61%; left: 70.5%; }
+      .ems-diagram__tag--grid { top: 86%; left: 18%; }
+      .ems-diagram__tag--user { top: 86%; right: 17%; }
+      .ems-points { display: grid; grid-template-columns: repeat(5, 1fr); margin: 0; padding: 0; list-style: none; border: 1px solid var(--line); border-top: 0; background: #fff; }
+      .ems-points li { padding: 17px 15px; border-right: 1px solid var(--line); }
+      .ems-points li:last-child { border-right: 0; }
+      .ems-points b { display: block; margin-bottom: 3px; color: var(--navy); font-size: 13px; }
+      .ems-points span { display: block; color: #64738c; font-size: 11px; font-weight: 700; line-height: 1.45; }
       .journey { overflow: hidden; background: var(--soft); }
       .journey-visual { border: 1px solid #dfe9f0; background: #fff; overflow: hidden; }
       .journey-visual img { width: 100%; aspect-ratio: 3 / 1.9; object-fit: cover; object-position: center; }
@@ -140,6 +158,13 @@
         .arrow { width: 1px; height: 26px; margin: 0 auto; }
         .arrow::after { top: auto; bottom: 0; right: -4px; transform: rotate(135deg); }
         .system-node, .system-end { min-height: 105px; }
+        .ems-diagram__layer { left: 9px; padding: 3px 5px; font-size: 7px; }
+        .ems-diagram__tag { min-width: auto; padding: 3px 4px 4px; border-top-width: 1px; font-size: 7px; box-shadow: 0 2px 8px rgba(5,39,102,.1); }
+        .ems-diagram__tag small { margin-top: 1px; font-size: 5px; }
+        .ems-diagram__tag--ems { min-width: 88px; }
+        .ems-points { grid-template-columns: 1fr; border-top: 0; }
+        .ems-points li { padding: 14px 16px; border-right: 0; border-bottom: 1px solid var(--line); }
+        .ems-points li:last-child { border-bottom: 0; }
         .journey-visual img { aspect-ratio: 1.25 / 1; object-fit: cover; object-position: 54% center; }
         .journey-rail { grid-template-columns: 1fr 1fr; }
         .journey-rail li { border-bottom: 1px solid var(--line); }
@@ -186,11 +211,27 @@
       <section class="overview">
         <div class="container">
           <div class="section-head">
-            <div><span class="section-head__number">01</span><h2>系統と現場をつなぐ、<br />蓄電池システム。</h2></div>
-            <p class="section-head__copy">ESS・PCS・昇圧変圧器・EMSを統合。電力の出し入れから監視・制御までを、ひとつのシステムとして設計します。</p>
+            <div><span class="section-head__number">01</span><h2>世界トップレベルの、<br />統合制御性能。</h2></div>
+            <p class="section-head__copy">EMSが全体を統括し、昇圧トランス・PCS・蓄電池モジュールを連携。系統安定化制御から遠隔監視までを、一つの仕組みで支えます。</p>
           </div>
-          <figure class="diagram-image"><img src="../../assets/battery/battery-system-architecture-2026.png" alt="GRID、STEP-UP TRANSFORMER、PCS、ESS、EMSで構成される系統用蓄電池システムの構成図" /></figure>
-          <p class="system-note">機器構成は、設置環境・容量要件・系統条件に応じて最適化します。</p>
+          <figure class="ems-diagram" aria-label="EMSが昇圧トランス、PCS、蓄電池モジュールを統合制御するシステム図">
+            <img src="../../assets/battery/ems-system-hierarchy-2026.png" alt="EMSが昇圧トランス、PCS、蓄電池モジュールを統合制御し、グリッド側からユーザー側へつながるシステム階層図" />
+            <span class="ems-diagram__layer ems-diagram__layer--control">EMS CONTROL</span>
+            <span class="ems-diagram__layer ems-diagram__layer--power">APPLICATION FLOW</span>
+            <span class="ems-diagram__tag ems-diagram__tag--ems">EMS 管理システム<small>全体を統括する頭脳</small></span>
+            <span class="ems-diagram__tag ems-diagram__tag--transformer">昇圧トランス<small>電圧を変換</small></span>
+            <span class="ems-diagram__tag ems-diagram__tag--pcs">PCS<small>電力を変換・制御</small></span>
+            <span class="ems-diagram__tag ems-diagram__tag--battery">蓄電池モジュール<small>電力を蓄える</small></span>
+            <span class="ems-diagram__tag ems-diagram__tag--grid">グリッド側<small>送配電ネットワーク</small></span>
+            <span class="ems-diagram__tag ems-diagram__tag--user">ユーザー側<small>電力利用を支える</small></span>
+          </figure>
+          <ul class="ems-points" aria-label="蓄電池システムの主な特徴">
+            <li><b>安全性</b><span>6S+EDRによる予防安全</span></li>
+            <li><b>高効率</b><span>充放電の効率を追求</span></li>
+            <li><b>拡張性</b><span>容量要件に柔軟に対応</span></li>
+            <li><b>長寿命</b><span>ライフサイクルを管理</span></li>
+            <li><b>智能管理</b><span>遠隔監視・運用・保守</span></li>
+          </ul>
         </div>
       </section>
 

@@ -15,13 +15,6 @@ export const metadata: Metadata = {
     "風況調査、事業性評価、系統連系、許認可、設計・調達・施工、O&Mまで、既設風車のリプレースを含む諾亜建設の風力発電事業を紹介します。",
 };
 
-const heroMetrics = [
-  { value: "2.5MW級", label: "想定風車モデル" },
-  { value: "45MW", label: "岩屋計画の設備容量案" },
-  { value: "7.2m/s", label: "平均風速参考値" },
-  { value: "2027年以降", label: "運転開始検討" },
-];
-
 const projectSpecs = [
   { label: "所在地", value: "青森県下北郡東通村大字岩屋" },
   { label: "計画種別", value: "既設小型風車のリプレース計画" },
@@ -29,6 +22,57 @@ const projectSpecs = [
   { label: "計画基数", value: "18基（計画想定）" },
   { label: "計画容量", value: "45MW（計画想定）" },
   { label: "状況", value: "検討中・一次調査完了" },
+];
+
+const onshoreWindStrengths = [
+  {
+    title: "長年の経験と最新技術の融合",
+    text: "大型風車の設計・製造で培われた知見と、先進のデジタルソリューションを組み合わせます。",
+  },
+  {
+    title: "世界トップクラスの実績",
+    text: "導入実績に基づく総合的な提案により、発電コストとLCOEの最適化を支援します。",
+  },
+  {
+    title: "地域と自然環境への調和",
+    text: "地域社会や自然環境と共存しながら、持続可能なクリーンエネルギーの供給を追求します。",
+  },
+  {
+    title: "高い信頼性と耐久性",
+    text: "過酷な気象条件を想定した設備計画と長寿命設計で、安定した稼働を目指します。",
+  },
+  {
+    title: "スマートオペレーションと予知保全",
+    text: "AIを活用した遠隔監視・診断・予防保守により、稼働率と安全性の向上を図ります。",
+  },
+];
+
+const windStrategyPillars = [
+  {
+    tone: "teal",
+    label: "MARKET FIT",
+    title: "供給力と現地化の融合",
+    text: "日本市場向けの設計・認証・O&M体制を組み合わせ、市場に適した製品・運用基盤を構築します。",
+  },
+  {
+    tone: "blue",
+    label: "LONG-TERM DEVELOPMENT",
+    title: "長期的な市場展開",
+    text: "老朽化した既設風車の更新需要を中長期の成長機会と捉え、日本市場に適したブランド・運用体制を整えます。",
+  },
+  {
+    tone: "violet",
+    label: "PARTNERSHIP",
+    title: "パートナー連携による推進",
+    text: "リプレース、中小型風力、分散型電源を視野に、自治体・電力会社などとの協業を推進します。",
+  },
+];
+
+const windStrategyOutcomes = [
+  { title: "高い安全性", text: "安全設計で事故リスクを最小化" },
+  { title: "高い信頼性", text: "品質管理で長期安定運用を実現" },
+  { title: "作業効率の向上", text: "荷役効率の最適化でコスト削減に寄与" },
+  { title: "豊富な実績", text: "多様な現場で培った信頼" },
 ];
 
 const technologyGroups = [
@@ -183,18 +227,13 @@ export default function WindPowerPage() {
         <div className={styles.heroOverlay} />
         <div className={`container ${styles.heroInner}`}>
           <Reveal direction="left" className={styles.heroCopy}>
-            <p className={styles.eyebrow}>
-              WIND POWER
-              <span>風力発電事業</span>
-            </p>
+            <p className={styles.eyebrow}>WIND POWER</p>
             <h1 id="wind-title" className={styles.heroTitle}>
-              一つひとつの風を、
-              <br />
-              クリーンエネルギーに。
+              風力発電事業
             </h1>
             <p className={styles.heroLead}>
-              風況調査、事業性評価、系統連系、許認可、設計・調達・施工、O&Mまで。
-              NOAHは地域の風を読み、発電所として長く運用できる計画へ落とし込みます。
+              一つひとつの風を、クリーンエネルギーに。
+              風況調査、事業性評価、系統連系、許認可、設計・調達・施工、O&Mまで一貫して支援します。
             </p>
             <div className={styles.heroActions}>
               <Button href="/contact" variant="white">
@@ -206,13 +245,117 @@ export default function WindPowerPage() {
             </div>
           </Reveal>
         </div>
-        <div className={`container ${styles.metricBoard}`} aria-label="風力発電事業の参考指標">
-          {heroMetrics.map((metric) => (
-            <div key={metric.value} className={styles.metricItem}>
-              <b>{metric.value}</b>
-              <span>{metric.label}</span>
+      </section>
+
+      <section className={styles.onshoreIntro} aria-labelledby="onshore-intro-title">
+        <div className="container">
+          <Reveal direction="up">
+            <div className={styles.onshoreHeader}>
+              <SectionLabel eyebrow="ONSHORE WIND" subtitle="陸上風力" />
+              <h2 id="onshore-intro-title" className={styles.onshoreTitle}>
+                世界が認める風力発電技術で、
+                <br />
+                日本の未来にエネルギーを。
+              </h2>
             </div>
-          ))}
+          </Reveal>
+
+          <div className={styles.onshoreStage}>
+            <Reveal direction="left" className={styles.onshoreVisualReveal}>
+              <figure className={styles.onshoreVisual}>
+                <Image
+                  src={asset("/assets/windpower/onshore-wind-mountain-coast-2026.png")}
+                  alt="山岳沿岸部に設置された陸上風力発電所のイメージ"
+                  fill
+                  sizes="(max-width: 900px) calc(100vw - 40px), 58vw"
+                  className={styles.onshoreImage}
+                />
+                <figcaption>ONSHORE WIND POWER</figcaption>
+              </figure>
+            </Reveal>
+
+            <div className={styles.onshoreStrengthArea}>
+              <p className={styles.onshoreStrengthEyebrow}>FEATURES</p>
+              <h3 className={styles.onshoreStrengthTitle}>特徴</h3>
+              <div className={styles.onshoreStrengths} role="list" aria-label="陸上風力発電の特徴">
+                {onshoreWindStrengths.map((strength, index) => (
+                  <Reveal key={strength.title} direction="up" delay={index * 55} className={styles.onshoreStrengthReveal}>
+                    <article role="listitem">
+                      <h4>{strength.title}</h4>
+                      <p>{strength.text}</p>
+                    </article>
+                  </Reveal>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <Reveal direction="up">
+            <p className={styles.onshoreStatement}>
+              <span>目指す姿</span>
+              <strong>「世界最高峰の技術」で、風を未来を駆る電力に。</strong>
+            </p>
+          </Reveal>
+        </div>
+      </section>
+
+      <section className={styles.windStrategy} aria-labelledby="wind-strategy-title">
+        <div className="container">
+          <Reveal direction="up">
+            <div className={styles.windStrategyHeader}>
+              <div>
+                <SectionLabel eyebrow="WIND POWER STRATEGY" subtitle="風力発電事業戦略" />
+                <h2 id="wind-strategy-title" className={styles.windStrategyTitle}>
+                  日本市場に最適化した
+                  <br />
+                  風力発電ソリューションで、
+                  <br />
+                  持続可能なエネルギー社会へ。
+                </h2>
+              </div>
+              <p>
+                設計・認証・導入・運用の各段階に向き合い、地域やパートナーとの協業を通じて、長期的に価値を生む陸上風力事業を推進します。
+              </p>
+            </div>
+          </Reveal>
+
+          <div className={styles.windStrategyStage}>
+            <div className={styles.windStrategyPillars} role="list" aria-label="風力発電事業の推進方針">
+              {windStrategyPillars.map((pillar, index) => (
+                <Reveal key={pillar.title} direction="up" delay={index * 70} className={styles.windStrategyPillarReveal}>
+                  <article className={`${styles.windStrategyPillar} ${styles[`windStrategyPillar${pillar.tone}`]}`} role="listitem">
+                    <p>{pillar.label}</p>
+                    <h3>{pillar.title}</h3>
+                    <span>{pillar.text}</span>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+
+            <Reveal direction="right" className={styles.windStrategyVisualReveal}>
+              <figure className={styles.windStrategyVisual}>
+                <Image
+                  src={asset("/assets/windpower/wind-turbine-nacelle-cutaway-2026.png")}
+                  alt="風力発電機のナセル内部と発電設備を示すイメージ"
+                  fill
+                  sizes="(max-width: 900px) calc(100vw - 40px), 44vw"
+                  className={styles.windStrategyImage}
+                />
+                <figcaption>RELIABLE WIND TURBINE TECHNOLOGY</figcaption>
+              </figure>
+            </Reveal>
+          </div>
+
+          <Reveal direction="up">
+            <ul className={styles.windStrategyOutcomes} aria-label="風力発電事業で提供する価値">
+              {windStrategyOutcomes.map((outcome) => (
+                <li key={outcome.title}>
+                  <strong>{outcome.title}</strong>
+                  <span>{outcome.text}</span>
+                </li>
+              ))}
+            </ul>
+          </Reveal>
         </div>
       </section>
 
@@ -356,7 +499,7 @@ export default function WindPowerPage() {
       </section>
       )}
 
-      <section className={styles.replacement} aria-labelledby="replacement-title">
+      {/* <section className={styles.replacement} aria-labelledby="replacement-title">
         <div className="container">
           <Reveal direction="up">
             <div className={styles.sectionHeader}>
@@ -402,7 +545,7 @@ export default function WindPowerPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section className={styles.flow} aria-labelledby="flow-title">
         <div className="container">

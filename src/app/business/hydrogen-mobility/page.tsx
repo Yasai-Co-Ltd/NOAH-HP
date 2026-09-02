@@ -14,13 +14,6 @@ export const metadata: Metadata = {
     "FCVトラックの導入、水素製造、水素ステーション、補助金・TCO検討、運用開始までを一体で支援する諾亜建設の水素モビリティ事業を紹介します。",
 };
 
-const heroMetrics = [
-  { value: "500km", label: "FCEVトレーラーヘッド想定輸送半径" },
-  { value: "20分", label: "資料記載の充填時間" },
-  { value: "140kW", label: "実車搭載済み燃料電池製品" },
-  { value: "20km/kg", label: "資料記載のFCトラック燃費" },
-];
-
 const supportSteps = [
   {
     number: "01",
@@ -149,17 +142,13 @@ export default function HydrogenMobilityPage() {
           <Reveal direction="left" className={styles.heroCopy}>
             <p className={styles.eyebrow}>
               HYDROGEN MOBILITY
-              <span>水素モビリティ事業</span>
             </p>
             <h1 id="hydrogen-title" className={styles.heroTitle}>
-              水素商用車の導入を、
-              <br />
-              運用から設計する。
+              水素モビリティ事業
             </h1>
             <p className={styles.heroLead}>
-              FCVトラックは、車両だけでは導入できません。走行ルート、水素製造、水素ステーション、
-              補助金、燃料費、保守体制をひとつの事業計画として整理し、
-              商用フリートの脱炭素化を現実的に進めます。
+              水素商用車の導入を、運用から設計する。
+              車両、走行ルート、水素ステーション、補助金、保守体制までひとつの事業計画として整理します。
             </p>
             <div className={styles.heroActions}>
               <Button href="/contact" variant="white">
@@ -170,15 +159,6 @@ export default function HydrogenMobilityPage() {
               </Button>
             </div>
           </Reveal>
-        </div>
-
-        <div className={`container ${styles.metricStrip}`} aria-label="FCVトラックの参考仕様">
-          {heroMetrics.map((metric) => (
-            <div key={metric.value} className={styles.metricItem}>
-              <b>{metric.value}</b>
-              <span>{metric.label}</span>
-            </div>
-          ))}
         </div>
       </section>
 
