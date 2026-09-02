@@ -441,7 +441,7 @@ export default function BatteryEnergyStoragePage() {
                 src={asset("/assets/battery/dev-flow-panorama.webp")}
                 alt="用地の確保から系統連系、許認可、EPC建設、運用、売却までの開発フローを描いたイラスト"
                 width={1536}
-                height={1024}
+                height={637}
                 sizes="(max-width: 1180px) calc(100vw - 40px), 1104px"
                 className={styles.devFlowImage}
               />

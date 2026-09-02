@@ -1966,6 +1966,8 @@
   display: block;
   width: 100%;
   height: auto;
+  /* 生成画像の下端に残るトリミング縁のノイズを隠す */
+  clip-path: inset(0 0 2.5% 0);
 }
 
 .devFlowTrack {
