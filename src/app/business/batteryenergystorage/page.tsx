@@ -431,8 +431,8 @@ const processSteps = [
 ];
 
 /**
- * 製品カタログ（製品ラインアップ / 6S+EDR / 主力製品 / EMS）の表示フラグ。
- * 経営レビューを受けて一旦非表示。復活または完全削除は今後判断する。
+ * 製品ラインアップ（約20製品のカタログ）の表示フラグ。
+ * 会社概要資料（2026年版）に存在しないため非表示。6S+EDR・主力製品・EMSは資料に基づき表示する。
  */
 const SHOW_PRODUCT_CATALOG = false;
 
@@ -701,7 +701,7 @@ export default function BatteryEnergyStoragePage() {
         </div>
       </section>
 
-      {/* 製品カタログここから（SHOW_PRODUCT_CATALOG=false で一旦非表示中） */}
+      {/* 製品ラインアップここから（SHOW_PRODUCT_CATALOG=false で非表示中） */}
       {SHOW_PRODUCT_CATALOG && (
         <>
       <section className={styles.lineup} id="lineup" aria-labelledby="lineup-title">
@@ -786,13 +786,18 @@ export default function BatteryEnergyStoragePage() {
           </p>
         </div>
       </section>
+        </>
+      )}
+      {/* 製品ラインアップここまで */}
 
       <section className={styles.technology} id="solution" aria-labelledby="technology-title">
         <div className="container">
           <Reveal direction="up">
             <SectionLabel eyebrow="CORE TECHNOLOGY" subtitle="6S+EDR" />
             <h2 id="technology-title" className={styles.heading}>
-              安全性・制御性・可視化を、
+              安全性・制御性・
+              <br className="sp-br" />
+              可視化を、
               <br />
               ひとつの基盤に統合。
             </h2>
@@ -897,6 +902,10 @@ export default function BatteryEnergyStoragePage() {
               </ul>
             </div>
           </Reveal>
+
+          <p className={styles.sourceNote}>
+            国際認証：IEC 62619、IEC 62477-1、UL 1973、UL 9540A を取得しています。
+          </p>
         </div>
       </section>
 
@@ -907,7 +916,9 @@ export default function BatteryEnergyStoragePage() {
               <div>
                 <SectionLabel eyebrow="OPERATION PLATFORM" subtitle="EMS・NOAH Cloud" />
                 <h2 id="platform-title" className={styles.heading}>
-                  クラウドから現場設備まで、
+                  クラウドから
+                  <br className="sp-br" />
+                  現場設備まで、
                   <br />
                   一元管理する。
                 </h2>
@@ -946,9 +957,6 @@ export default function BatteryEnergyStoragePage() {
           </div>
         </div>
       </section>
-        </>
-      )}
-      {/* 製品カタログここまで */}
 
       <section className={styles.proof} aria-labelledby="proof-title">
         <Image
