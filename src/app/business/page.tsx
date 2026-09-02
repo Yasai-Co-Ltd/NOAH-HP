@@ -30,6 +30,12 @@ const FEATURE = {
 
 const SUPPORT_STEPS = ["調査・企画", "設計・調達", "施工・導入", "運用・改善"];
 
+/**
+ * 空中発電所（注目技術）セクションの表示フラグ。
+ * 会社概要2026年版に存在しないコンセプトのため一旦非表示。再表示の可能性あり。
+ */
+const SHOW_AIRBORNE_POWER = false;
+
 export default async function BusinessPage() {
   if (!isPageEnabled("/business")) notFound();
 
@@ -69,6 +75,7 @@ export default async function BusinessPage() {
         </div>
       </section>
 
+      {SHOW_AIRBORNE_POWER && (
       <section className={styles.featured} aria-labelledby="featured-title">
         <div className={`container ${styles.featuredInner}`}>
           <Reveal direction="left" className={styles.featureCopy}>
@@ -104,6 +111,7 @@ export default async function BusinessPage() {
           </Reveal>
         </div>
       </section>
+      )}
 
       <section className={styles.domains} id="business-domains" aria-labelledby="domains-title">
         <div className="container">

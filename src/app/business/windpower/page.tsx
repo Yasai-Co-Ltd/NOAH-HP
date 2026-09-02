@@ -12,7 +12,7 @@ import { asset } from "@/lib/asset";
 export const metadata: Metadata = {
   title: "風力発電事業 | 諾亜建設株式会社",
   description:
-    "地上風力と飛行船型の空中風力発電を含め、風況調査、事業性評価、系統連系、許認可、設計・調達・施工、O&Mまで、諾亜建設の風力発電事業を紹介します。",
+    "風況調査、事業性評価、系統連系、許認可、設計・調達・施工、O&Mまで、既設風車のリプレースを含む諾亜建設の風力発電事業を紹介します。",
 };
 
 const heroMetrics = [
@@ -160,6 +160,12 @@ const flowPhases = [
   },
 ];
 
+/**
+ * 空中発電所セクションの表示フラグ。
+ * 会社概要2026年版に存在しないコンセプトのため一旦非表示。再表示の可能性あり。
+ */
+const SHOW_AIRBORNE_POWER = false;
+
 export default function WindPowerPage() {
   if (!isPageEnabled("/business/windpower")) notFound();
 
@@ -304,6 +310,7 @@ export default function WindPowerPage() {
         </div>
       </section>
 
+      {SHOW_AIRBORNE_POWER && (
       <section className={styles.airborne} id="airborne-power" aria-labelledby="airborne-title">
         <div className={`container ${styles.airborneInner}`}>
           <Reveal direction="left" className={styles.airborneVisualReveal}>
@@ -347,6 +354,7 @@ export default function WindPowerPage() {
           </Reveal>
         </div>
       </section>
+      )}
 
       <section className={styles.replacement} aria-labelledby="replacement-title">
         <div className="container">
