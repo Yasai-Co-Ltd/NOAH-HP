@@ -1949,3 +1949,116 @@
     font-size: 2.8rem;
   }
 }
+
+/* ===== NOAHができること（一気通貫フロー図） ===== */
+
+.devFlow {
+  padding-block: 112px;
+  background: linear-gradient(180deg, #ffffff 0%, #f4f8fd 100%);
+}
+
+.devFlowTrack {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 54px;
+}
+
+.devFlowReveal {
+  min-width: 0;
+}
+
+.devFlowStep {
+  position: relative;
+  height: 100%;
+  padding: 26px 16px 24px;
+  text-align: center;
+  background: var(--color-surface);
+  border: 1px solid rgba(180, 201, 224, 0.7);
+}
+
+.devFlowStep::after {
+  position: absolute;
+  top: 50%;
+  right: -14px;
+  width: 14px;
+  height: 2px;
+  content: "";
+  background: var(--color-accent-cyan);
+}
+
+.devFlowReveal:last-child .devFlowStep::after {
+  display: none;
+}
+
+.devFlowIcon {
+  display: grid;
+  place-items: center;
+  width: 58px;
+  height: 58px;
+  margin: 0 auto;
+  color: var(--color-brand-700);
+  background: #eaf4fd;
+  border-radius: 50%;
+}
+
+.devFlowIcon svg {
+  width: 30px;
+  height: 30px;
+}
+
+.devFlowStep b {
+  display: block;
+  margin-top: 14px;
+  color: var(--color-accent-cyan);
+  font-family: var(--font-numeric);
+  font-size: 0.8rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.devFlowStep h3 {
+  margin: 8px 0 0;
+  color: var(--color-brand-900);
+  font-size: 1rem;
+  font-weight: 800;
+  line-height: 1.45;
+}
+
+.devFlowStep p {
+  margin: 8px 0 0;
+  color: var(--color-muted);
+  font-size: 0.76rem;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+@media (max-width: 1180px) {
+  .devFlowTrack {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .devFlowReveal:nth-child(3n) .devFlowStep::after {
+    display: none;
+  }
+}
+
+@media (max-width: 760px) {
+  .devFlow {
+    padding-block: var(--space-section-mobile);
+  }
+
+  .devFlowTrack {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    margin-top: 36px;
+  }
+
+  .devFlowReveal:nth-child(3n) .devFlowStep::after {
+    display: block;
+  }
+
+  .devFlowReveal:nth-child(2n) .devFlowStep::after {
+    display: none;
+  }
+}

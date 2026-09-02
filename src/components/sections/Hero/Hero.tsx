@@ -14,17 +14,18 @@ export function Hero() {
       <div className={styles.overlay} aria-hidden="true" />
       <div className={`container ${styles.inner}`}>
         <p className={`eyebrow ${styles.fadeIn} ${styles.delay1}`}>
-          Renewable Energy Infrastructure
+          Sustainable Future
         </p>
-        <h1 id="hero-title" className={`hero-heading ${styles.fadeIn} ${styles.delay2}`}>
-          風を、未来の
-          <br />
-          インフラに。
+        <h1
+          id="hero-title"
+          className={`hero-heading ${styles.heading} ${styles.fadeIn} ${styles.delay2}`}
+        >
+          <span>地球と自然に寄り添い、</span>
+          <span>再生可能エネルギーで</span>
+          <span>緑あふれる共生社会を創造する。</span>
         </h1>
         <p className={`${styles.copy} ${styles.fadeIn} ${styles.delay3}`}>
-          再生可能エネルギーで、地域と企業の
-          <br />
-          持続可能な未来をつくる。
+          持続可能な未来へ
         </p>
         <div className={`${styles.fadeIn} ${styles.delay4}`}>
           <Button href="/business" variant="primary">

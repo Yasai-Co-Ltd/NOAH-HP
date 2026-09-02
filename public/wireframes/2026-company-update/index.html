@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NOAH 2026 Corporate Update Wireframes</title>
+  <style>
+    :root {
+      --navy: #073c78;
+      --deep: #062c57;
+      --cyan: #28a9d6;
+      --teal: #1d9895;
+      --green: #4ca35d;
+      --orange: #e7903c;
+      --ink: #112844;
+      --muted: #60758c;
+      --line: #d8e3ed;
+      --mist: #f2f7fa;
+      --white: #fff;
+      --max: 1240px;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; background: #dfe8ef; color: var(--ink); font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif; }
+    body { padding: 40px 0; }
+    .page { width: 1440px; margin: 0 auto 64px; background: #fff; overflow: hidden; box-shadow: 0 24px 64px rgba(15,45,73,.14); }
+    .container { width: var(--max); margin: 0 auto; }
+    .site-header { height: 92px; display: flex; align-items: center; border-bottom: 1px solid rgba(15,57,102,.12); background: rgba(255,255,255,.96); }
+    .header-inner { display: flex; align-items: center; justify-content: space-between; gap: 36px; }
+    .brand { display: flex; align-items: center; gap: 14px; font-weight: 700; font-size: 17px; }
+    .brand img { width: 52px; height: 52px; object-fit: contain; }
+    .brand small { display:block; color: var(--muted); font-size: 10px; font-weight: 600; margin-top: 3px; }
+    .nav { display: flex; align-items: center; gap: 30px; font-size: 14px; font-weight: 700; }
+    .nav .contact { padding: 15px 22px; background: var(--navy); color: #fff; }
+    .hero { position: relative; min-height: 620px; display: flex; align-items: flex-end; overflow: hidden; }
+    .hero::after { content:""; position:absolute; inset:0; background: linear-gradient(90deg, rgba(2,31,65,.86) 0%, rgba(3,48,91,.55) 48%, rgba(3,30,57,.08) 82%); }
+    .hero img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+    .hero-copy { position:relative; z-index:1; width:760px; padding: 112px 0 86px; color:#fff; }
+    .eyebrow { display:flex; align-items:center; gap:14px; font-size:12px; font-weight:800; letter-spacing:.14em; text-transform:uppercase; }
+    .eyebrow::before { content:""; width:42px; height:2px; background: currentColor; opacity:.72; }
+    h1 { margin:22px 0 22px; font-size:70px; line-height:1.16; letter-spacing:0; font-weight:700; }
+    .hero-copy p { max-width:690px; margin:0; font-size:18px; line-height:2; }
+    .hero-plain { min-height: 390px; align-items:center; background:#edf5f9; }
+    .hero-plain::after { background:linear-gradient(90deg, rgba(255,255,255,.98), rgba(255,255,255,.68) 56%, rgba(255,255,255,.14)); }
+    .hero-plain .hero-copy { color:var(--ink); padding:72px 0; }
+    .hero-plain h1 { font-size:64px; }
+    .hero-product { min-height:660px; }
+    .hero-product::after { background:linear-gradient(90deg,rgba(4,30,57,.92),rgba(4,47,84,.64) 45%,rgba(4,31,58,.04) 82%); }
+    .metric-strip { display:grid; grid-template-columns:repeat(4,1fr); border-bottom:1px solid var(--line); background:#fff; }
+    .metric { min-height:142px; padding:30px 34px; border-right:1px solid var(--line); display:flex; flex-direction:column; justify-content:center; }
+    .metric:last-child { border-right:0; }
+    .metric b { color:var(--navy); font-size:36px; line-height:1.1; }
+    .metric span { margin-top:10px; color:var(--muted); font-size:13px; line-height:1.6; }
+    .band { padding:108px 0; }
+    .band.mist { background:var(--mist); }
+    .band.deep { background:var(--deep); color:#fff; }
+    .band.green { background:#eef7ef; }
+    .section-head { display:grid; grid-template-columns:minmax(0,.84fr) minmax(360px,.58fr); gap:100px; align-items:end; margin-bottom:52px; }
+    .section-head h2 { margin:18px 0 0; font-size:46px; line-height:1.35; letter-spacing:0; }
+    .section-head > p { color:var(--muted); font-size:16px; line-height:2; margin:0; }
+    .deep .section-head > p { color:#c8d7e5; }
+    .cards { display:grid; gap:20px; }
+    .cards.five { grid-template-columns:repeat(5,1fr); }
+    .cards.four { grid-template-columns:repeat(4,1fr); }
+    .cards.three { grid-template-columns:repeat(3,1fr); }
+    .card { background:#fff; border:1px solid var(--line); min-width:0; }
+    .card-img { position:relative; aspect-ratio:1.28/1; overflow:hidden; background:#dbe8ef; }
+    .card-img img { width:100%; height:100%; object-fit:cover; }
+    .card-body { padding:24px 24px 26px; }
+    .card-body small { color:var(--cyan); font-weight:800; font-size:11px; letter-spacing:.08em; }
+    .card-body h3 { margin:12px 0 10px; font-size:20px; line-height:1.45; }
+    .card-body p { margin:0; color:var(--muted); font-size:13px; line-height:1.8; }
+    .feature-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:0; border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+    .feature { padding:42px 38px; border-right:1px solid var(--line); }
+    .feature:last-child { border-right:0; }
+    .feature b { display:block; color:var(--cyan); font-size:13px; }
+    .feature h3 { margin:16px 0 12px; font-size:25px; }
+    .feature p { margin:0; color:var(--muted); line-height:1.85; font-size:14px; }
+    .split { display:grid; grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr); gap:70px; align-items:center; }
+    .split.reverse { grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr); }
+    .media { position:relative; min-height:480px; overflow:hidden; background:#dbe8ef; }
+    .media img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+    .copy h2 { margin:16px 0 22px; font-size:44px; line-height:1.4; }
+    .copy p { color:var(--muted); font-size:16px; line-height:2; }
+    .deep .copy p { color:#c8d7e5; }
+    .bullet-list { display:grid; gap:0; border-top:1px solid var(--line); margin-top:30px; }
+    .bullet-list div { display:grid; grid-template-columns:52px 1fr; gap:16px; padding:20px 0; border-bottom:1px solid var(--line); }
+    .bullet-list b { color:var(--cyan); font-size:14px; }
+    .bullet-list strong { display:block; font-size:18px; margin-bottom:5px; }
+    .bullet-list span { color:var(--muted); font-size:13px; line-height:1.7; }
+    .profile-table { border-top:2px solid var(--navy); }
+    .profile-row { display:grid; grid-template-columns:230px 1fr; border-bottom:1px solid var(--line); }
+    .profile-row dt, .profile-row dd { margin:0; padding:22px 26px; line-height:1.8; font-size:15px; }
+    .profile-row dt { background:#f2f6f9; font-weight:700; }
+    .domain-orbit { display:grid; grid-template-columns:repeat(5,1fr); gap:16px; }
+    .domain-orbit article { padding:28px 22px; min-height:160px; color:#fff; background:var(--navy); display:flex; flex-direction:column; justify-content:space-between; }
+    .domain-orbit article:nth-child(2){background:#1e6ead}.domain-orbit article:nth-child(3){background:var(--teal)}.domain-orbit article:nth-child(4){background:#4d8f63}.domain-orbit article:nth-child(5){background:#165478}
+    .domain-orbit small { opacity:.76; font-weight:700; }
+    .domain-orbit h3 { margin:34px 0 0; font-size:20px; line-height:1.5; }
+    .timeline { border-top:1px solid var(--line); }
+    .timeline-row { display:grid; grid-template-columns:150px 1fr; border-bottom:1px solid var(--line); }
+    .timeline-row time { padding:24px 0; color:var(--navy); font-size:28px; font-weight:800; }
+    .timeline-row div { padding:26px 0; }
+    .timeline-row h3 { margin:0 0 8px; font-size:19px; }
+    .timeline-row p { margin:0; color:var(--muted); font-size:14px; line-height:1.8; }
+    .timeline-row.latest { background:#eaf5f8; margin:0 -30px; padding:0 30px; }
+    .routes { display:grid; grid-template-columns:repeat(5,1fr); gap:14px; margin-top:36px; }
+    .route { min-height:118px; padding:24px 20px; border:1px solid rgba(255,255,255,.22); }
+    .route b { color:#79d5ec; font-size:13px; }
+    .route h3 { font-size:18px; line-height:1.5; margin:14px 0 0; }
+    .subdomain { margin-top:22px; display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+    .subdomain article { padding:25px; background:#fff; border-left:4px solid var(--orange); }
+    .subdomain h3 { margin:0 0 8px; font-size:18px; }
+    .subdomain p { margin:0; color:var(--muted); font-size:13px; line-height:1.7; }
+    .portfolio { display:grid; grid-template-columns:1.1fr .9fr; gap:26px; }
+    .portfolio-main { min-height:490px; position:relative; overflow:hidden; background:#dce8ee; }
+    .portfolio-main img { width:100%; height:100%; object-fit:cover; position:absolute; inset:0; }
+    .portfolio-main::after { content:""; position:absolute; inset:40% 0 0; background:linear-gradient(transparent,rgba(3,36,68,.9)); }
+    .portfolio-caption { position:absolute; z-index:1; left:34px; right:34px; bottom:30px; color:#fff; }
+    .portfolio-caption b { font-size:34px; }
+    .portfolio-caption p { margin:10px 0 0; font-size:14px; line-height:1.7; }
+    .portfolio-side { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+    .mini-photo { min-height:238px; position:relative; overflow:hidden; }
+    .mini-photo img { width:100%; height:100%; object-fit:cover; position:absolute; inset:0; }
+    .mini-photo span { position:absolute; z-index:1; left:14px; bottom:14px; padding:8px 10px; background:#fff; font-weight:700; font-size:12px; }
+    .system-grid { display:grid; grid-template-columns:repeat(4,1fr); border:1px solid var(--line); }
+    .system-grid article { padding:30px; border-right:1px solid var(--line); min-height:185px; }
+    .system-grid article:last-child { border-right:0; }
+    .system-grid b { color:var(--teal); font-size:30px; }
+    .system-grid h3 { margin:14px 0 10px; font-size:17px; }
+    .system-grid p { margin:0; color:var(--muted); font-size:12px; line-height:1.7; }
+    .certs { display:flex; align-items:center; gap:18px; flex-wrap:wrap; padding:28px 32px; background:#fff; border:1px solid var(--line); }
+    .certs strong { margin-right:auto; color:var(--navy); }
+    .cert { border:1px solid var(--line); padding:12px 18px; font-weight:800; color:var(--navy); font-size:13px; }
+    .cert.logo { padding:8px 14px; }
+    .cert.logo img { height:30px; width:auto; display:block; }
+    .flow { display:grid; grid-template-columns:repeat(5,1fr); gap:0; }
+    .flow article { padding:28px 24px; border-top:3px solid var(--cyan); border-right:1px solid var(--line); background:#fff; min-height:185px; }
+    .flow article:last-child { border-right:0; }
+    .flow b { color:var(--cyan); font-size:13px; }
+    .flow h3 { margin:14px 0 9px; font-size:18px; line-height:1.5; }
+    .flow p { margin:0; color:var(--muted); font-size:12px; line-height:1.7; }
+    .project-table { width:100%; border-collapse:collapse; background:#fff; }
+    .project-table th, .project-table td { padding:18px 20px; border-bottom:1px solid var(--line); text-align:left; font-size:13px; }
+    .project-table thead th { background:var(--navy); color:#fff; }
+    .project-table tbody th { color:var(--navy); }
+    .area-list { display:grid; grid-template-columns:repeat(2,1fr); gap:18px; }
+    .area { display:grid; grid-template-columns:220px 1fr; min-height:190px; border:1px solid var(--line); background:#fff; }
+    .area img { width:100%; height:100%; object-fit:cover; }
+    .area div { padding:24px; }
+    .area small { color:var(--cyan); font-weight:800; }
+    .area h3 { margin:10px 0; font-size:18px; }
+    .area p { margin:0; color:var(--muted); font-size:12px; line-height:1.7; }
+    .cta { background:#0d4b83; color:#fff; padding:74px 0; }
+    .cta-inner { display:flex; align-items:center; justify-content:space-between; gap:40px; }
+    .cta h2 { margin:0; font-size:36px; }
+    .cta p { margin:12px 0 0; color:#d5e5f1; }
+    .button { display:inline-block; padding:18px 26px; background:#fff; color:var(--navy); font-weight:800; }
+    .footer { background:#052b55; color:#fff; padding:48px 0; }
+    .footer-inner { display:flex; justify-content:space-between; align-items:flex-end; }
+    .footer small { color:#9db4ca; }
+    .label { color:var(--cyan); font-weight:800; font-size:12px; letter-spacing:.12em; }
+    .home .hero { min-height:700px; }
+    .home .hero img { object-position:center 45%; }
+    .about-hub .hero img { object-position:center 42%; }
+    .battery .hero img { object-position:center 58%; }
+    .biomass .hero img { object-position:center; }
+    .hopper .hero img { object-position:center 44%; }
+    .wind .hero img { object-position:center 48%; }
+    .ai .hero img { object-position:center 48%; }
+  </style>
+</head>
+<body>
+  <div id="pages"></div>
+  <script>
+    const A = (path) => `../../assets/${path}`;
+    const header = `
+      <header class="site-header"><div class="container header-inner">
+        <div class="brand"><img src="${A('noah_logo-mark.png')}" alt=""><div>諾亜建設株式会社<small>NOAH CONSTRUCTION CO., LTD.</small></div></div>
+        <nav class="nav"><span>企業情報</span><span>事業紹介</span><span>サステナビリティ</span><span>ニュース</span><span>採用情報</span><span class="contact">お問い合わせ</span></nav>
+      </div></header>`;
+    const footer = `
+      <section class="cta"><div class="container cta-inner"><div><h2>事業に関するご相談はこちら</h2><p>構想段階から、設備・開発・導入までご相談いただけます。</p></div><span class="button">お問い合わせ →</span></div></section>
+      <footer class="footer"><div class="container footer-inner"><div class="brand"><img src="${A('noah_logo-mark.png')}" alt=""><div>諾亜建設株式会社<small>NOAH CONSTRUCTION CO., LTD.</small></div></div><small>Copyright © NOAH CONSTRUCTION CO., LTD.</small></div></footer>`;
+    const hero = ({image, eyebrow, title, lead, plain=false, product=false}) => `
+      <section class="hero ${plain?'hero-plain':''} ${product?'hero-product':''}"><img src="${A(image)}" alt=""><div class="container"><div class="hero-copy"><div class="eyebrow">${eyebrow}</div><h1>${title}</h1><p>${lead}</p></div></div></section>`;
+    const sectionHead = (eyebrow,title,lead='') => `<div class="section-head"><div><div class="label">${eyebrow}</div><h2>${title}</h2></div>${lead?`<p>${lead}</p>`:''}</div>`;
+    const card = (img,small,title,text) => `<article class="card"><div class="card-img"><img src="${A(img)}" alt=""></div><div class="card-body"><small>${small}</small><h3>${title}</h3><p>${text}</p></div></article>`;
+    const wrap = (id, klass, content) => `<article id="${id}" class="page ${klass}">${header}${content}${footer}</article>`;
+
+    const home = wrap('01-home','home',`
+      ${hero({image:'hero-wind-hq.jpg',eyebrow:'NOAH INTEGRATED INFRASTRUCTURE',title:'未来を拓く、<br>社会を支える。',lead:'発電、蓄電、風力、水素、AIデータセンター。エネルギーと次世代インフラを一体で構想し、持続可能な社会の実装を進めます。'})}
+      <section class="band"><div class="container">${sectionHead('ABOUT NOAH','技術・統合・展開で、<br>新エネルギーを事業へ。','発電所設備の設計から調達・施工・試運転まで。燃料、電力制御、データ基盤を組み合わせ、構想を運用できるインフラへ変えていきます。')}<div class="feature-grid"><article class="feature"><b>ENGINEERING</b><h3>技術</h3><p>設計、機器選定、調達、製造、据付、試運転、O&Mまで一貫して対応。</p></article><article class="feature"><b>INTEGRATION</b><h3>統合</h3><p>発電設備、燃料、PKS、木質ペレット、蓄電・制御を横断して構成。</p></article><article class="feature"><b>DEVELOPMENT</b><h3>展開</h3><p>蓄電池、風力、AIデータセンターを中心に全国の開発を推進。</p></article></div></div></section>
+      <section class="band mist"><div class="container">${sectionHead('OUR BUSINESS','5つの中核領域を、<br>ひとつの構想でつなぐ。','事業の入口を5領域に整理し、専門設備・燃料・周辺技術は各領域の中で分かりやすく案内します。')}<div class="cards five">${card('power-hq.jpg','POWER','発電事業','発電設備、燃料転換、バイオマス燃料、港湾荷役設備。')}${card('battery-hq.jpg','BATTERY','蓄電池事業','系統用蓄電池の開発、設備、制御、O&M。')}${card('hero-wind-hq.jpg','WIND','風力発電事業','導入、リプレース、長期保守、空中風力。')}${card('hydrogen-mobility/hero-fcv-truck.jpg','HYDROGEN','水素・新エネルギー自動車','水素設備、FCV、コンプレッサー。')}${card('ai-data-center/hero-data-center.jpg','AI DATA CENTER','AIデータセンター事業','電力、冷却、通信、蓄電池を統合した開発。')}</div></div></section>
+      <section class="band"><div class="container"><div class="split"><div class="copy"><div class="label">NATIONWIDE DEVELOPMENT</div><h2>全国で進む、<br>蓄電池とAI基盤。</h2><p>開発規模を数字だけで並べず、蓄電池とAIデータセンターがどのように連携するかを一つのストーリーとして見せます。</p><div class="bullet-list"><div><b>01</b><span><strong>系統用蓄電池</strong>26案件・約1.2GW、九州を中心に全国展開。</span></div><div><b>02</b><span><strong>AIデータセンター</strong>全国10候補地・想定約1.2GW。</span></div><div><b>03</b><span><strong>統合開発</strong>用地、受電、再エネ、蓄電、運用を一体化。</span></div></div></div><div class="media"><img src="${A('strengths-bg-integrated-energy.png')}" alt=""></div></div></div></section>
+    `);
+
+    const about = wrap('02-about','about-hub',`
+      ${hero({image:'about/hero-noah-brand-ai.png',eyebrow:'ABOUT NOAH',title:'信頼を積み重ね、<br>未来の基盤をつくる。',lead:'2018年の設立から、発電所設備と脱炭素領域で積み上げてきた技術と実績。NOAHの現在地を、会社情報と事業の両面から紹介します。',plain:true})}
+      <section class="band"><div class="container"><div class="split reverse"><div class="media"><img src="${A('about-collage.png')}" alt=""></div><div class="copy"><div class="label">COMPANY AT A GLANCE</div><h2>新エネルギーを、<br>社会実装する会社。</h2><p>発電所設備の設計段階から機器選定、調達、施工、試運転までを一貫して提供。脱炭素を理念ではなく、運用できるインフラとして届けます。</p><div class="bullet-list"><div><b>2018</b><span><strong>設立</strong>東京都中野区を拠点に事業を展開。</span></div><div><b>99M</b><span><strong>資本金</strong>99,000,000円。</span></div><div><b>5</b><span><strong>中核事業</strong>発電・蓄電池・風力・水素・AI。</span></div></div></div></div></div></section>
+      <section class="band mist"><div class="container">${sectionHead('COMPANY MENU','NOAHを知る、<br>7つのコンテンツ。','情報メニューは現行の7ページを維持し、写真・余白・色調で内容の違いが伝わる構成にします。')}<div class="cards four">${card('about/menu/message-v2.png','MESSAGE','トップメッセージ','信頼と安心を大切にする代表メッセージ。')}${card('about/menu/vision-v2.png','VISION','企業理念・ビジョン','人と地球に優しい持続可能な未来へ。')}${card('about/menu/standard-v2.png','STANDARD','行動基準','品質、安全、誠実さを支える判断基準。')}${card('about/menu/outline-v2.png','PROFILE','会社概要','所在地、代表者、事業内容、取引先。')}${card('about/menu/organization-v2.png','ORGANIZATION','グループ・組織図','グループ会社と事業体制。')}${card('about/menu/history-v2.png','HISTORY','沿革','2018年から2026年までの歩み。')}${card('about/menu/safety-health-v2.png','HEALTH','健康経営','人材と安全を支える職場づくり。')}<article class="card"><div class="card-body"><small>QUICK FACTS</small><h3>事業の現在地</h3><p>蓄電池26案件、AIデータセンター10候補地。最新の開発状況へ案内します。</p></div></article></div></div></section>
+      <section class="band deep"><div class="container">${sectionHead('BUSINESS OVERVIEW','5つの中核事業。','会社案内の事業概要とコーポレートサイトの詳細ページを、同じ分類軸でつなぎます。')}<div class="routes"><article class="route"><b>01</b><h3>発電事業</h3></article><article class="route"><b>02</b><h3>蓄電池事業</h3></article><article class="route"><b>03</b><h3>風力発電事業</h3></article><article class="route"><b>04</b><h3>水素・新エネルギー自動車</h3></article><article class="route"><b>05</b><h3>AIデータセンター</h3></article></div></div></section>
+    `);
+
+    const outline = wrap('03-outline','outline',`
+      ${hero({image:'about/menu/outline-v2.png',eyebrow:'COMPANY PROFILE',title:'会社概要',lead:'会社の基本情報と、NOAHが取り組む事業の全体像をご案内します。',plain:true})}
+      <section class="band"><div class="container">${sectionHead('PROFILE','基本情報。')}<dl class="profile-table"><div class="profile-row"><dt>会社名</dt><dd>諾亜建設株式会社</dd></div><div class="profile-row"><dt>設立</dt><dd>2018年10月26日</dd></div><div class="profile-row"><dt>資本金</dt><dd>99,000,000円</dd></div><div class="profile-row"><dt>代表者</dt><dd>代表取締役社長　鈴木 仲娜</dd></div><div class="profile-row"><dt>所在地</dt><dd>〒164-0012 東京都中野区本町2丁目46-1 サンブライトツインビル北棟15F 1501-3</dd></div><div class="profile-row"><dt>事業内容</dt><dd>発電所の設備に関して設計の段階から機器選定、調達、施工、試運転まで一貫した業務を提供。気候変動対策の一環として脱炭素事業に取り組む。</dd></div><div class="profile-row"><dt>主要取引先</dt><dd>王子エンジニアリング株式会社、伊藤忠エネクス株式会社、イーレックス株式会社、JFEエンジニアリング株式会社</dd></div><div class="profile-row"><dt>取引電力会社</dt><dd>九州電力株式会社、中部電力株式会社、東北電力株式会社</dd></div></dl></div></section>
+      <section class="band mist"><div class="container">${sectionHead('BUSINESS OVERVIEW','NOAH統合開発。','会社概要の表だけで終わらず、現在の5つの事業領域を視覚的に案内します。')}<div class="domain-orbit"><article><small>POWER</small><h3>発電事業</h3></article><article><small>BATTERY</small><h3>蓄電池事業</h3></article><article><small>WIND</small><h3>風力発電事業</h3></article><article><small>HYDROGEN</small><h3>水素・新エネルギー自動車</h3></article><article><small>AI DATA CENTER</small><h3>AIデータセンター事業</h3></article></div></div></section>
+      <section class="band"><div class="container"><div class="feature-grid"><article class="feature"><b>ONE STOP</b><h3>一貫体制</h3><p>設計・調達・施工・試運転・O&Mまで。</p></article><article class="feature"><b>ENGINEERING</b><h3>特注対応力</h3><p>発電所現場のニーズに応える設備を提供。</p></article><article class="feature"><b>CUSTOMER BASE</b><h3>顧客基盤</h3><p>主要電力会社との協業・案件実績。</p></article></div></div></section>
+    `);
+
+    const history = wrap('04-history','history',`
+      ${hero({image:'about/menu/history-v2.png',eyebrow:'COMPANY HISTORY',title:'沿革',lead:'港湾設備から、蓄電池・AIデータセンターの統合開発へ。NOAHの事業が広がってきた歩みを紹介します。',plain:true})}
+      <section class="band"><div class="container">${sectionHead('TIMELINE','2018—2026','出来事をカード化せず、年と事業の変化が一続きで追えるタイムラインに整理します。')}<div class="timeline"><div class="timeline-row"><time>2018</time><div><h3>諾亜建設株式会社を設立</h3></div></div><div class="timeline-row"><time>2019</time><div><h3>日本最大級バイオマス発電所向け港湾荷卸し防塵ホッパーを納入</h3></div></div><div class="timeline-row"><time>2020</time><div><h3>脱炭素製品研究開発・小型バイオマスガス化炉を商品化</h3></div></div><div class="timeline-row"><time>2021</time><div><h3>水素事業を取り込み</h3><p>水素製造設備・水素ステーション、EV・FCV車両補助金取得。</p></div></div><div class="timeline-row"><time>2022</time><div><h3>水素リムジンバスを大阪万博へ提案</h3></div></div><div class="timeline-row"><time>2023</time><div><h3>112MW級バイオマス発電所向け防塵ホッパーを受注</h3></div></div><div class="timeline-row"><time>2024</time><div><h3>系統用蓄電池事業を開始</h3></div></div><div class="timeline-row"><time>2025</time><div><h3>蓄電池発電所デモ機・1.2GW特別高圧蓄電池発電所を開発</h3></div></div><div class="timeline-row latest"><time>2026</time><div><h3>蓄電池事業と1.2GW AIデータセンター事業を本格展開</h3><p>電力インフラとデジタルインフラを統合する次の成長領域へ。</p></div></div></div></div></section>
+      <section class="band deep"><div class="container">${sectionHead('NEXT STAGE','蓄電池とAI基盤を、<br>全国へ。','沿革の最後を曖昧な「現在」にせず、2026年の重点領域を次の事業ページへつなぎます。')}<div class="routes"><article class="route"><b>26 PROJECTS</b><h3>系統用蓄電池</h3></article><article class="route"><b>1.2GW</b><h3>蓄電池開発規模</h3></article><article class="route"><b>10 AREAS</b><h3>AI DC候補地</h3></article><article class="route"><b>1.2GW</b><h3>AI DC想定規模</h3></article><article class="route"><b>ONE TEAM</b><h3>統合開発</h3></article></div></div></section>
+    `);
+
+    const business = wrap('05-business','business',`
+      ${hero({image:'strengths-bg-integrated-energy.png',eyebrow:'BUSINESS',title:'エネルギーと<br>次世代インフラを、<br>ひとつの構想で。',lead:'会社案内の5つの中核領域に合わせ、7つの詳細事業ページを迷わず探せる構造へ再編します。'})}
+      <section class="band"><div class="container">${sectionHead('CORE BUSINESS','5つの中核事業。','バイオマス、ホッパー、水素コンプレッサーは削除せず、関連する中核事業の専門領域として位置づけます。')}<div class="cards five">${card('power-hq.jpg','01 POWER','発電事業','発電設備、燃料供給、燃料転換、港湾荷役。')}${card('battery/battery-product-lineup-hero-ai.png','02 BATTERY','蓄電池事業','系統用蓄電池、EMS、6S+EDR、O&M。')}${card('windpower/technology-turbine-front.png','03 WIND','風力発電事業','導入、リプレース、技術、空中風力。')}${card('hydrogen-mobility/fleet-lineup.jpg','04 HYDROGEN','水素・新エネルギー自動車','FCV、水素ステーション、圧縮設備。')}${card('ai-data-center/hero-data-center.jpg','05 AI DATA CENTER','AIデータセンター事業','用地、受電、冷却、通信、蓄電、運用。')}</div><div class="subdomain"><article><h3>バイオマス燃料供給</h3><p>発電事業の燃料・設備ソリューション。</p></article><article><h3>走行式集塵ホッパー</h3><p>発電所・港湾の荷役・粉塵対策設備。</p></article><article><h3>水素コンプレッサー</h3><p>水素インフラを支える高圧圧縮設備。</p></article></div></div></section>
+      <section class="band deep"><div class="container">${sectionHead('INTEGRATED SUPPORT','構想から運用まで、<br>ワンストップで支援。','既存の7事業を横断するNOAHの提供価値を、4つのフェーズで簡潔に示します。')}<div class="routes"><article class="route"><b>01</b><h3>調査・企画</h3></article><article class="route"><b>02</b><h3>設計・調達</h3></article><article class="route"><b>03</b><h3>施工・導入</h3></article><article class="route"><b>04</b><h3>試運転</h3></article><article class="route"><b>05</b><h3>運用・改善</h3></article></div></div></section>
+      <section class="band mist"><div class="container"><div class="split"><div class="copy"><div class="label">FEATURED TECHNOLOGY</div><h2>空を活用する、<br>次世代の風力発電。</h2><p>空中発電所は独立事業ではなく、風力発電事業の注目技術として位置づけ、詳細ページへ導きます。</p></div><div class="media"><img src="${A('airborne-power-noah.png')}" alt=""></div></div></div></section>
+    `);
+
+    const battery = wrap('06-battery','battery',`
+      ${hero({image:'battery/battery-product-lineup-hero-noah-ai.webp',eyebrow:'BATTERY ENERGY STORAGE',title:'電力を蓄え、<br>未来の需要へつなぐ。',lead:'系統用蓄電池26案件・開発規模約1.2GW。開発、設備、制御、運用を一体で構成します。',product:true})}
+      <div class="metric-strip"><div class="metric"><b>26案件</b><span>保有する系統用蓄電池案件</span></div><div class="metric"><b>約1.2GW</b><span>合計開発規模</span></div><div class="metric"><b>九州中心</b><span>全国で開発を推進</span></div><div class="metric"><b>2年以内</b><span>早期系統連系が可能な案件を保有</span></div></div>
+      <section class="band"><div class="container">${sectionHead('PROJECT PORTFOLIO','全国開発ポートフォリオ。','一覧表を冒頭に置かず、規模と代表案件の写真で事業の実在感を先に伝えます。')}<div class="portfolio"><div class="portfolio-main"><img src="${A('battery/projects/site-c42.jpg')}" alt=""><div class="portfolio-caption"><b>26 PROJECTS / 1.2GW</b><p>九州エリアを中心に、系統用蓄電池の用地・権利・系統連系を一体で開発。</p></div></div><div class="portfolio-side"><div class="mini-photo"><img src="${A('battery/projects/site-c53.jpg')}" alt=""><span>福岡県</span></div><div class="mini-photo"><img src="${A('battery/projects/site-1-72.jpg')}" alt=""><span>佐賀県</span></div><div class="mini-photo"><img src="${A('battery/projects/site-1-78.jpg')}" alt=""><span>九州エリア</span></div><div class="mini-photo"><img src="${A('battery/utility-installation.png')}" alt=""><span>設備構成</span></div></div></div></div></section>
+      <section class="band mist"><div class="container">${sectionHead('MAIN PRODUCT','高圧・特別高圧向け主力製品。','全製品を均等に並べず、系統用案件の中核となるESS・PCS・昇圧設備を先に見せます。')}<div class="cards three">${card('battery/ess-4178kwh-noah-ai.webp','ESS100 SERIES','コンテナ型液冷式蓄電池','2,089kWh×4基、または4,178kWh×2基の構成。')}${card('battery/product-pws1-1725-noah-ai.webp','PCS','蓄電池用パワーコンディショナー','系統連系、高速応答、用途に応じた構成。')}${card('battery/product-ses2h-5000-noah-ai.webp','BOOSTER','変圧器・PCS一体型コンテナ','5MWh・1,500V対応の高圧設備構成。')}</div></div></section>
+      <section class="band"><div class="container">${sectionHead('CORE TECHNOLOGY','6S+EDR。','図の中心を商品と運用に置き、7つの制御機能を読みやすく整理します。')}<div class="system-grid"><article><b>PCS</b><h3>モジュールシステム</h3><p>変換効率と系統連系を最適化。</p></article><article><b>BMS</b><h3>バッテリー管理</h3><p>温度、寿命、発火リスクを管理。</p></article><article><b>EMS</b><h3>エネルギー管理</h3><p>運用計画と利用効率を最適化。</p></article><article><b>EDR</b><h3>故障記録</h3><p>記録、分析、追跡で改善へ。</p></article></div><div class="system-grid" style="border-top:0;grid-template-columns:repeat(3,1fr)"><article><b>HCS</b><h3>高速制御</h3><p>0.05秒応答、一次調整力。</p></article><article><b>BWS</b><h3>バッテリー警告</h3><p>データ予測と28日前警報。</p></article><article><b>ASS</b><h3>予防安全</h3><p>認証と人的事故回避。</p></article></div><div class="certs" style="margin-top:26px"><strong>国際認証・セキュリティ適合</strong><span class="cert">IEC 62619</span><span class="cert">IEC 62477-1</span><span class="cert">UL 1973</span><span class="cert">UL 9540A</span><span class="cert logo"><img src="${A('security/jc-star.jpg')}" alt="JC-STAR"></span></div></div></section>
+    `);
+
+    const biomass = wrap('07-biomass','biomass',`
+      ${hero({image:'biomasspower/biomass-plant-hero-v2.jpg',eyebrow:'BIOMASS FUEL & ENGINEERING',title:'燃料から設備まで、<br>発電を止めない。',lead:'FSC・GGL認証の木質ペレット、PKS、炭化燃料。調達・製造・物流・港湾荷役・燃料改造を一体で支援します。',product:true})}
+      <div class="metric-strip"><div class="metric"><b>8工場</b><span>中国の木質ペレット製造拠点</span></div><div class="metric"><b>100,000t/月</b><span>木質ペレット調達可能量</span></div><div class="metric"><b>200,000t/月</b><span>PKS調達可能量</span></div><div class="metric"><b>FSC / GGL</b><span>認証取得工場と連携</span></div></div>
+      <section class="band"><div class="container">${sectionHead('FUEL SUPPLY','安定供給・高品質・環境配慮。','燃料の種類だけでなく、認証、製造拠点、品質管理、物流までを一つの供給体制として見せます。')}<div class="cards three">${card('biomasspower/pks-close.png','PKS','パーム椰子殻','東南アジアから安定調達する高発熱量のバイオマス燃料。')}${card('biomasspower/wood-pellet-sample.jpg','WOOD PELLET','木質ペレット','中国8工場、FSC・GGL認証取得工場と連携。')}${card('biomasspower/fuel-storage.jpg','LOGISTICS','燃料保管・物流','港湾荷役、粉塵対策、倉庫保管までを計画。')}</div></div></section>
+      <section class="band green"><div class="container"><div class="split reverse"><div class="media"><img src="${A('biomasspower/wood-chip-storage.jpg')}" alt=""></div><div class="copy"><div class="label">SUPPLY CHAIN</div><h2>製造から発電所まで、<br>品質をつなぐ。</h2><div class="bullet-list"><div><b>01</b><span><strong>認証取得工場</strong>持続可能性に配慮した燃料製造。</span></div><div><b>02</b><span><strong>粉塵を約15%削減</strong>製造工程・輸送工程で管理。</span></div><div><b>03</b><span><strong>港湾荷役</strong>荷卸しから保管まで安全に接続。</span></div></div></div></div></div></section>
+      <section class="band"><div class="container">${sectionHead('FUEL CONVERSION','火力発電所の燃料転換。','設備改造の5要素を、工程として一列に整理します。')}<div class="flow"><article><b>01</b><h3>燃料予粉砕機</h3><p>木質燃料を前処理。</p></article><article><b>02</b><h3>内熱式乾燥機</h3><p>含水率を調整。</p></article><article><b>03</b><h3>ペレット製造</h3><p>年産3万トン・7,500時間稼働。</p></article><article><b>04</b><h3>炭化技術</h3><p>ブラックペレットへ。</p></article><article><b>05</b><h3>設備統合</h3><p>設計から導入まで一体化。</p></article></div></div></section>
+    `);
+
+    const hopper = wrap('08-hopper','hopper',`
+      ${hero({image:'hopper/hopper-hero-port-v3.jpg',eyebrow:'PORT HANDLING EQUIPMENT',title:'粉塵を抑え、<br>荷役を前へ。',lead:'発電所・港湾・工業分野で培った走行式集塵ホッパーと周辺設備。安全、環境、効率を同時に高めます。',product:true})}
+      <section class="band"><div class="container">${sectionHead('RECENT ACHIEVEMENTS','納入実績。','実績一覧を仕様より先に配置し、設備の信頼性を具体的な案件で伝えます。')}<table class="project-table"><thead><tr><th>設備</th><th>台数</th><th>客先</th><th>使用場所</th></tr></thead><tbody><tr><th>自走式集塵ホッパー</th><td>3台</td><td>田原バイオマスパワー合同会社</td><td>愛知県田原市</td></tr><tr><th>牽引式集塵ホッパー</th><td>1台</td><td>愛知海運株式会社</td><td>田原港4区</td></tr><tr><th>牽引式集塵ホッパー</th><td>1台</td><td>愛知海運株式会社</td><td>衣浦港</td></tr><tr><th>自走式集塵ホッパー</th><td>2台</td><td>豊前エナジーバイオマス発電所</td><td>大分県中津港</td></tr></tbody></table></div></section>
+      <section class="band mist"><div class="container">${sectionHead('EQUIPMENT SOLUTIONS','港湾荷役を支える、<br>6つの設備。','ホッパー単体ページではなく、発電所・港湾の荷役設備を俯瞰できる構成に更新します。')}<div class="cards three">${card('hopper/hopper-site-front.jpg','01','自走式防塵ホッパー','国内最大級の設備納入実績。')}${card('hopper/hopper-cta-port.jpg','02','ドライフォグ式防塵ホッパー','高い粉じん抑制性能。')}${card('hopper/hopper-structure-cutaway-v2.png','03','搬送コンベヤ','大容量・長距離搬送。')}${card('hopper/hopper-site-side.jpg','04','ペレット燃料荷卸し','発電所の安定供給を支援。')}${card('hopper/hopper-sea-side.png','05','空気圧シップアンローダー','船種に合わせて柔軟に運用。')}${card('hopper/hopper-render-45.png','06','サイクロン式防塵ホッパー','集塵効率と連続運転を両立。')}</div></div></section>
+      <section class="band deep"><div class="container"><div class="split"><div class="copy"><div class="label">EQUIPMENT STRUCTURE</div><h2>粉塵対策と荷役動線を、<br>一台に統合。</h2><p>密閉グリル、集塵装置、開閉ゲート、テレスコピック、走行輪、操作室を現場条件に合わせて設計します。</p></div><div class="media"><img src="${A('hopper/hopper-structure-cutaway-v2.png')}" alt=""></div></div></div></section>
+    `);
+
+    const wind = wrap('09-wind','wind',`
+      ${hero({image:'windpower/01_main_wind_farm_panorama.jpg',eyebrow:'WIND POWER',title:'日本の風を、<br>長く使える電力へ。',lead:'導入、リプレース、設計、認証、O&M。日本市場に最適化した風力発電ソリューションを提供します。',product:true})}
+      <section class="band"><div class="container">${sectionHead('BUSINESS STRATEGY','風力発電事業戦略。','新しい会社概要の3つの戦略を、技術写真と一緒に冒頭で明確に伝えます。')}<div class="split"><div class="copy"><div class="bullet-list"><div><b>01</b><span><strong>供給力と現地化の融合</strong>日本市場向けの設計・認証・O&M体制を構築。</span></div><div><b>02</b><span><strong>長期的な市場展開</strong>既設風車の更新需要を中長期の成長機会へ。</span></div><div><b>03</b><span><strong>パートナー連携</strong>自治体、電力会社、技術企業との協業を推進。</span></div></div></div><div class="media"><img src="${A('windpower/technology-turbine-front.png')}" alt=""></div></div></div></section>
+      <section class="band mist"><div class="container">${sectionHead('IWAYA WIND FARM','既存資産を、<br>次世代の発電所へ。','岩屋計画は写真を切らずに見せ、案件概要と更新ポイントを同じ視線上に整理します。')}<div class="portfolio"><div class="portfolio-main"><img src="${A('windpower/01_main_wind_farm_panorama.jpg')}" alt=""><div class="portfolio-caption"><b>45MW / 18 TURBINES</b><p>青森県東通村・既設小型風車のリプレース計画。</p></div></div><div class="portfolio-side"><div class="mini-photo"><img src="${A('windpower/02_existing_small_wind_turbines.jpg')}" alt=""><span>既設風車</span></div><div class="mini-photo"><img src="${A('windpower/03_replacement_wind_farm_image.jpg')}" alt=""><span>更新計画</span></div><div class="mini-photo"><img src="${A('windpower/04_blade_transport_image.jpg')}" alt=""><span>搬入計画</span></div><div class="mini-photo"><img src="${A('windpower/05_substation_facility_image.jpg')}" alt=""><span>変電設備</span></div></div></div></div></section>
+      <section class="band deep"><div class="container">${sectionHead('TECHNOLOGY','発電性能・安全・運用。','大きな01—03を残し、写真と短い説明で技術の違いを一目で理解できる構成にします。')}<div class="routes"><article class="route"><b>01</b><h3>高効率発電</h3></article><article class="route"><b>02</b><h3>安全・信頼性</h3></article><article class="route"><b>03</b><h3>スマート運用</h3></article><article class="route"><b>O&M</b><h3>予防保全</h3></article><article class="route"><b>LOCAL</b><h3>日本市場対応</h3></article></div></div></section>
+      <section class="band"><div class="container"><div class="split reverse"><div class="media"><img src="${A('airborne-power-noah.png')}" alt=""></div><div class="copy"><div class="label">AIRBORNE WIND POWER</div><h2>上空の風を使う、<br>新しい発電方式。</h2><p>空中発電所は風力発電の次世代技術として掲載。地上風力との違い、導入想定、検討状況を簡潔に示します。</p></div></div></div></section>
+    `);
+
+    const ai = wrap('10-ai-data-center','ai',`
+      ${hero({image:'ai-data-center/hero-data-center.jpg',eyebrow:'AI DATA CENTER',title:'電力とデータを、<br>一体で設計する。',lead:'用地、受電、冷却、通信、蓄電池、再エネ。AI時代の計算需要を支える基盤を全国で開発します。',product:true})}
+      <div class="metric-strip"><div class="metric"><b>10案件</b><span>全国の開発候補地</span></div><div class="metric"><b>約1.2GW</b><span>想定開発規模</span></div><div class="metric"><b>500MW</b><span>石川県の重点案件</span></div><div class="metric"><b>5要素</b><span>受電・冷却・サーバー・通信・運用</span></div></div>
+      <section class="band"><div class="container">${sectionHead('DEVELOPMENT AREAS','全国の計画エリア。','全国10候補地の全体像と、詳細資料がある和歌山・群馬を分けて見せます。')}<div class="area-list"><article class="area"><img src="${A('ai-data-center/project-wakayama-kanaya-source.jpg')}" alt=""><div><small>和歌山県 和歌山市金谷</small><h3>蓄電池・データセンター一体計画</h3><p>約23,000㎡のデータセンター用地。工事期間は2026年から2029年を予定。</p></div></article><article class="area"><img src="${A('ai-data-center/project-gunma-akagi-source.jpg')}" alt=""><div><small>群馬県 前橋市</small><h3>赤城事業所活用計画</h3><p>既存建物、未利用地、山林を含む大規模敷地の活用を検討。</p></div></article><article class="area"><img src="${A('ai-data-center/project-kawagoe.png')}" alt=""><div><small>埼玉県 川越市</small><h3>首都圏西側の計画候補</h3><p>受電条件・敷地条件を整理中。確定情報のみ順次更新。</p></div></article><article class="area"><img src="${A('ai-data-center/project-chiba.png')}" alt=""><div><small>千葉県</small><h3>湾岸エリア計画候補</h3><p>再エネ、系統接続、蓄電池、運用監視の条件を確認。</p></div></article></div></div></section>
+      <section class="band mist"><div class="container">${sectionHead('INTEGRATED ARCHITECTURE','電力インフラと、<br>デジタルインフラを統合。','開発規模の訴求だけでなく、NOAHが担う5つの構成要素と導入価値を図解します。')}<div class="flow"><article><b>01</b><h3>受電・電力設備</h3><p>系統協議、変電、安定供給。</p></article><article><b>02</b><h3>冷却システム</h3><p>高密度AI計算に対応。</p></article><article><b>03</b><h3>サーバー基盤</h3><p>需要に応じた拡張設計。</p></article><article><b>04</b><h3>通信ネットワーク</h3><p>冗長化と信頼性。</p></article><article><b>05</b><h3>運用・監視</h3><p>EMS、蓄電池、遠隔監視。</p></article></div></div></section>
+      <section class="band deep"><div class="container"><div class="split"><div class="copy"><div class="label">NOAH'S ROLE</div><h2>事業主体として、<br>開発を総合管理。</h2><p>用地・受電計画、許認可、関係者調整、工程、コスト、リスクを統合。再エネと系統用蓄電池を組み合わせ、電力利用の最適化とレジリエンスを支えます。</p></div><div class="media"><img src="${A('ai-data-center/energy-model.jpg')}" alt=""></div></div></div></section>
+    `);
+
+    document.getElementById('pages').innerHTML = [home,about,outline,history,business,battery,biomass,hopper,wind,ai].join('');
+  </script>
+</body>
+</html>

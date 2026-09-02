@@ -12,14 +12,14 @@ export function About() {
           <div className={styles.copy}>
             <SectionLabel eyebrow="ABOUT US" subtitle="私たちについて" />
             <h2 id="about-title" className="section-heading">
-              エネルギーの未来を見据え、
+              再生可能エネルギーと
               <br />
-              社会に価値あるインフラを。
+              次世代インフラを融合する。
             </h2>
             <p className={styles.body}>
-              諾亜建設は、再生可能エネルギーの可能性を信じ、
-              蓄電池・風力発電・発電・水素モビリティ・AIデータセンター事業を通じて、
-              脱炭素社会の実現に貢献します。
+              諾亜建設は、発電所設備の設計段階から、機器選定、調達、施工、試運転まで一貫して対応します。
+              発電、蓄電池、風力、水素・新エネルギー自動車、AIデータセンターの5つの事業領域を通じ、
+              脱炭素社会の実現に取り組んでいます。
             </p>
             <Button href="/about" variant="outline">
               私たちについて

@@ -32,48 +32,48 @@ interface Stat {
 const STRENGTH_CARDS: StrengthCard[] = [
   {
     number: "01",
-    title: "横断的な提案力",
-    description: "複数領域を組み合わせ、事業目的に合うインフラ構成を設計。",
+    title: "技術",
+    description: "発電所のニーズに応じ、設計・調達・製造・据付・試運転まで一貫して対応。",
     image: {
       src: "/assets/strengths-card-cross-domain-v2.png",
-      alt: "複数のエネルギー設備を俯瞰して計画するイメージ",
+      alt: "発電設備の設計とエンジニアリング",
     },
   },
   {
     number: "02",
-    title: "構想から運用まで対応",
-    description: "調査・設計・施工・運用保守まで、各フェーズを一貫支援。",
+    title: "統合",
+    description: "発電所設備に加え、バイオマス燃料・木質ペレット・燃料改造まで幅広く対応。",
     image: {
       src: "/assets/strengths-card-one-stop.png",
-      alt: "風力発電設備を確認する技術者",
+      alt: "複数のエネルギー設備を統合するプロジェクト",
     },
   },
   {
     number: "03",
-    title: "地域課題に合わせる設計",
-    description: "立地、電力需要、災害対策、周辺環境を踏まえた計画。",
+    title: "展開",
+    description: "新エネルギー開発、風力案件の開発・導入、AIデータセンター建設を積極的に推進。",
     image: {
       src: "/assets/strengths-card-regional-design-v2.png",
-      alt: "地域に配置された蓄電池設備",
+      alt: "全国で展開する新エネルギーインフラ",
     },
   },
   {
     number: "04",
-    title: "脱炭素とBCPに貢献",
-    description: "再エネ活用、蓄電、水素、電力安定化を組み合わせる提案。",
+    title: "パートナーシップ",
+    description: "電力会社・大手企業との協業体制を構築し、案件開発から運用まで連携。",
     image: {
       src: "/assets/strengths-card-decarbon-bcp.png",
-      alt: "水素設備と再生可能エネルギー設備",
+      alt: "企業間の連携で進めるエネルギープロジェクト",
     },
   },
 ];
 
 const STATS: Stat[] = [
-  { label: "年間施工実績", value: 80, unit: "件" },
-  { label: "再エネ関連実績", value: 150, unit: "MW+" },
-  { label: "取引先企業数", value: 200, unit: "社" },
-  { label: "対応エリア", value: null, staticValue: "全国", unit: "対応可能" },
-  { label: "運用・保守実績", value: 10, unit: "年+" },
+  { label: "システム用蓄電池", value: 26, unit: "案件" },
+  { label: "蓄電池開発規模", value: null, staticValue: "約1.2", unit: "GW" },
+  { label: "AIデータセンター", value: 10, unit: "案件" },
+  { label: "AIデータセンター想定規模", value: null, staticValue: "1.2", unit: "GW" },
+  { label: "木質ペレット製造拠点", value: 8, unit: "工場（中国）" },
 ];
 
 const CARD_STAGGER_MS = 80;
@@ -92,12 +92,12 @@ export function Strengths() {
           <Reveal direction="left" className={styles.copy}>
             <SectionLabel eyebrow="OUR STRENGTHS" subtitle="NOAHの強み" inverse />
             <h2 id="strengths-title" className={styles.heading}>
-              <span className={styles.headingLine}>複数の事業領域をつなぎ、</span>
-              <span className={styles.headingLine}>エネルギーインフラを支える。</span>
+              <span className={styles.headingLine}>日本のエネルギーインフラ市場へ、</span>
+              <span className={styles.headingLine}>新エネルギーソリューションを。</span>
             </h2>
             <p className={styles.lead}>
-              蓄電池・風力・バイオマス・集塵ホッパー・水素モビリティ・AIデータセンターを横断し、
-              地域や企業の課題に合わせた導入計画と実行体制を提供します。
+              技術（Engineering）、統合（Integration）、展開（Development）を軸に、
+              設計からO&Mまで一貫した体制で新エネルギー事業を推進します。
             </p>
           </Reveal>
 

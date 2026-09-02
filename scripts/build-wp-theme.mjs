@@ -27,7 +27,7 @@ const ASSETS_PHP = `<?php echo NOAH_ASSETS; ?>`;
 const HOME_PHP = `<?php echo esc_url( home_url( '/' ) ); ?>`;
 
 /** ホームの Strengths セクションで CountUp する値 (src/components/sections/Strengths/Strengths.tsx と一致させる)。 */
-const COUNTUP_VALUES = [80, 150, 200, 10];
+const COUNTUP_VALUES = [26, 10, 8];
 
 /** ニュース系ルート。静的テンプレート化から除外し、WP の動的テンプレートに任せる。 */
 const NEWS_PREFIX = "news";

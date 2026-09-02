@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { isPageEnabled } from "@/lib/page-config";
@@ -374,61 +375,61 @@ const projectPhotos = [
   },
 ];
 
-const coreCapabilities = [
-  {
-    number: "01",
-    title: "プロジェクトリソース開発",
-    items: ["土地選定・用地取得", "案件ID取得", "権利調整"],
-  },
-  {
-    number: "02",
-    title: "系統連系推進",
-    items: ["接続検討申込", "保証金・工事負担金対応", "連系協議"],
-  },
-  {
-    number: "03",
-    title: "行政許認可",
-    items: ["開発許可", "農地転用・林地開発", "消防・環境調査"],
-  },
-  {
-    number: "04",
-    title: "EPC建設",
-    items: ["土木・電気工事", "設備設置・変電設備", "システム統合"],
-  },
-  {
-    number: "05",
-    title: "設備統合",
-    items: ["蓄電池・PCS・EMS", "変圧器", "防災・監視システム"],
-  },
-  {
-    number: "06",
-    title: "投資・EXIT",
-    items: ["SPC・GK-TKスキーム", "銀行融資対応", "案件売却・長期運営"],
-  },
+/** 開発から売却までの一気通貫フロー。旧コア能力・開発の流れを1つの図解に統合。 */
+const devFlowSteps = [
+  { number: "01", title: "用地・権利の確保", sub: "土地選定・案件ID取得", icon: "site" },
+  { number: "02", title: "系統連系", sub: "接続検討・連系協議", icon: "grid" },
+  { number: "03", title: "行政許認可", sub: "開発許可・農地転用", icon: "permit" },
+  { number: "04", title: "EPC建設", sub: "設計・施工・試運転", icon: "construction" },
+  { number: "05", title: "運用・O&M", sub: "遠隔監視・市場運用", icon: "operation" },
+  { number: "06", title: "売却・EXIT", sub: "SPC組成・長期運営", icon: "exit" },
 ];
 
-const processSteps = [
-  {
-    number: "01",
-    title: "用地・案件開発",
-    text: "土地選定、権利調整、案件ID取得まで、事業の起点となるリソースを確保します。",
-  },
-  {
-    number: "02",
-    title: "系統連系・許認可",
-    text: "接続検討、保証金・工事負担金、連系協議、開発許可・農地転用などを推進します。",
-  },
-  {
-    number: "03",
-    title: "EPC建設",
-    text: "設計、土木・電気工事、設備設置、変電設備、試運転まで一貫して施工します。",
-  },
-  {
-    number: "04",
-    title: "運用・EXIT",
-    text: "遠隔監視・O&M、市場運用に加え、SPC組成や案件売却まで対応します。",
-  },
-];
+const devFlowIcons: Record<string, ReactNode> = {
+  site: (
+    <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M16 28c6-6.2 9-11 9-14.6A9 9 0 0 0 7 13.4C7 17 10 21.8 16 28Z" />
+      <circle cx="16" cy="13" r="3.4" />
+    </svg>
+  ),
+  grid: (
+    <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M13 28 16 5l3 23" />
+      <path d="M9 12h14M11 18h10" />
+      <path d="m9 12 6 6m8-6-6 6m-6 0 4 5m8-5-4 5" />
+    </svg>
+  ),
+  permit: (
+    <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M9 4h10l5 5v19H9Z" />
+      <path d="M19 4v5h5" />
+      <path d="m13 19 2.4 2.4L20 16.8" />
+    </svg>
+  ),
+  construction: (
+    <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M7 28h18" />
+      <path d="M11 28V7l13 4" />
+      <path d="M11 11h13" />
+      <path d="M24 11v5" />
+      <path d="M21.5 16h5v4h-5z" />
+    </svg>
+  ),
+  operation: (
+    <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+      <rect x="5" y="6" width="22" height="15" rx="1.5" />
+      <path d="M13 26h6M16 21v5" />
+      <path d="M9 14h4l2-3.4 2.4 6L19 14h4" />
+    </svg>
+  ),
+  exit: (
+    <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M6 27h20" />
+      <path d="m8 22 6.4-6.4 4 4L26 11" />
+      <path d="M26 16v-5h-5" />
+    </svg>
+  ),
+};
 
 /**
  * 製品ラインアップ（約20製品のカタログ）の表示フラグ。
@@ -487,6 +488,37 @@ export default function BatteryEnergyStoragePage() {
               <span>{metric.label}</span>
             </div>
           ))}
+        </div>
+      </section>
+
+      <section className={styles.devFlow} aria-labelledby="devflow-title">
+        <div className="container">
+          <Reveal direction="up">
+            <SectionLabel eyebrow="ONE-STOP DEVELOPMENT" subtitle="NOAHができること" />
+            <h2 id="devflow-title" className={styles.heading}>
+              用地の確保から売却まで、
+              <br />
+              すべて自社で。
+            </h2>
+            <p className={styles.lead}>
+              特別高圧蓄電池発電所の開発に必要な6つの工程を、NOAHが一気通貫で担います。
+            </p>
+          </Reveal>
+
+          <div className={styles.devFlowTrack} role="list">
+            {devFlowSteps.map((step, index) => (
+              <Reveal key={step.number} direction="up" delay={index * 60} className={styles.devFlowReveal}>
+                <div className={styles.devFlowStep} role="listitem">
+                  <span className={styles.devFlowIcon} aria-hidden="true">
+                    {devFlowIcons[step.icon]}
+                  </span>
+                  <b>{step.number}</b>
+                  <h3>{step.title}</h3>
+                  <p>{step.sub}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -624,46 +656,6 @@ export default function BatteryEnergyStoragePage() {
           <p className={styles.sourceNote}>
             ※ 保有・開発中案件の一部を掲載しています。個別案件の詳細はお問い合わせください。
           </p>
-        </div>
-      </section>
-
-      <section className={styles.capabilities} aria-labelledby="capabilities-title">
-        <div className="container">
-          <Reveal direction="up">
-            <SectionLabel eyebrow="CORE CAPABILITIES" subtitle="NOAHのコア能力" />
-            <h2 id="capabilities-title" className={styles.heading}>
-              開発・連系・
-              <br className="sp-br" />
-              許認可・EPCを、
-              <br />
-              ひとつの体制で推進する。
-            </h2>
-          </Reveal>
-
-          <div className={styles.capabilityGrid}>
-            {coreCapabilities.map((capability, index) => (
-              <Reveal key={capability.number} direction="up" delay={index * 60}>
-                <article className={styles.capabilityCard}>
-                  <b>{capability.number}</b>
-                  <h3>{capability.title}</h3>
-                  <ul>
-                    {capability.items.map((item) => (
-                      <li key={item}>{item}</li>
-                    ))}
-                  </ul>
-                </article>
-              </Reveal>
-            ))}
-          </div>
-
-          <Reveal direction="up">
-            <JcStarNotice
-              className={styles.jcStarNotice}
-              title="蓄電池システムの機器選定にも、セキュリティ要件を。"
-              description="EMS、PCS、クラウド運用を含む蓄電池システムでは、JC-STAR適合製品の取扱いを通じて、導入時のセキュリティ要件にも配慮します。適合対象は製品・機器ごとに確認します。"
-              points={["EMS / PCS", "遠隔監視", "機器選定"]}
-            />
-          </Reveal>
         </div>
       </section>
 
@@ -817,6 +809,14 @@ export default function BatteryEnergyStoragePage() {
                 className={styles.techImage}
               />
             </figure>
+          </Reveal>
+          <Reveal direction="up">
+            <JcStarNotice
+              className={styles.jcStarNotice}
+              title="蓄電池システムの機器選定にも、セキュリティ要件を。"
+              description="EMS、PCS、クラウド運用を含む蓄電池システムでは、JC-STAR適合製品の取扱いを通じて、導入時のセキュリティ要件にも配慮します。適合対象は製品・機器ごとに確認します。"
+              points={["EMS / PCS", "遠隔監視", "機器選定"]}
+            />
           </Reveal>
         </div>
       </section>
@@ -986,33 +986,6 @@ export default function BatteryEnergyStoragePage() {
                   <p className={styles.proofOwner}>{item.owner}</p>
                   <b>{item.value}</b>
                   <span>{item.label}</span>
-                </article>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className={styles.process} aria-labelledby="process-title">
-        <div className="container">
-          <Reveal direction="up">
-            <SectionLabel eyebrow="PROJECT FLOW" subtitle="開発の流れ" />
-            <h2 id="process-title" className={styles.heading}>
-              用地開発から
-              <br className="sp-br" />
-              運用・EXITまで、
-              <br />
-              一貫して推進する。
-            </h2>
-          </Reveal>
-
-          <div className={styles.processList}>
-            {processSteps.map((step, index) => (
-              <Reveal key={step.number} direction="up" delay={index * 70}>
-                <article className={styles.processStep}>
-                  <b>{step.number}</b>
-                  <h3>{step.title}</h3>
-                  <p>{step.text}</p>
                 </article>
               </Reveal>
             ))}

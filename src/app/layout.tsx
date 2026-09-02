@@ -7,8 +7,9 @@ import { asset } from "@/lib/asset";
 import "@/styles/global.css";
 
 export const metadata: Metadata = {
-  title: "諾亜建設株式会社 | 再生可能エネルギーで未来のインフラをつくる",
-  description: "諾亜建設株式会社の再生可能エネルギー事業コーポレートサイト",
+  title: "諾亜建設株式会社 | 地球と自然に寄り添い、持続可能な未来へ",
+  description:
+    "発電・蓄電池・風力・水素・新エネルギー自動車・AIデータセンター事業を通じ、持続可能な未来を支える諾亜建設株式会社のコーポレートサイトです。",
   icons: {
     icon: asset("/assets/noah_logo-mark.png"),
   },

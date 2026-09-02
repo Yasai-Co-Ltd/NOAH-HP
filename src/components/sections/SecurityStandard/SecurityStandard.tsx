@@ -22,8 +22,8 @@ export function SecurityStandard() {
                 選定段階から安心を。
               </h2>
               <p className={styles.lead}>
-                ネットワーク接続や遠隔監視・制御を伴う設備提案では、JC-STAR適合製品の取扱いを通じ、
-                導入時のセキュリティ確認にも配慮します。
+                蓄電池・EMS・ネットワーク接続機器では、JC-STAR適合製品の採用を含め、
+                設備ごとのセキュリティ要件を確認します。
               </p>
 
               <ul className={styles.pointList}>
@@ -38,10 +38,10 @@ export function SecurityStandard() {
 
             <aside className={styles.badge} aria-label="JC-STAR適合製品の取扱い">
               <p className={styles.badgeLabel}>JC-STAR</p>
-              <p className={styles.status}>現在JC-STAR認証対応中</p>
-              <h3>適合製品の取扱い</h3>
+              <p className={styles.status}>対象製品で認証取得</p>
+              <h3>適合製品を選定</h3>
               <p className={styles.note}>
-                適合対象は製品・機器ごとに確認します。
+                認証・適合状況は、採用する製品・機器ごとに確認します。
               </p>
               <a
                 href="https://www.ipa.go.jp/security/jc-star/index.html"

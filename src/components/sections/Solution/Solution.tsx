@@ -13,33 +13,24 @@ interface SolutionStep {
 const STEPS: SolutionStep[] = [
   {
     number: "01",
-    title: "調査・企画",
-    description: "風況・需要・立地を読み、事業化の入口を整理。",
+    title: "設計・エンジニアリング",
+    description: "発電所のニーズと事業条件に応じ、設備構成を設計。",
   },
   {
     number: "02",
-    title: "設計・調達",
-    description: "設備構成、系統、調達を横断して計画。",
+    title: "機器選定・調達",
+    description: "国内外のネットワークを活かし、適切な機器を選定・調達。",
   },
   {
     number: "03",
-    title: "施工・導入",
-    description: "現場・電気・設備をつなぎ、導入を推進。",
+    title: "製造・据付・試運転",
+    description: "品質と工程を管理し、施工から試運転まで一貫して対応。",
   },
   {
     number: "04",
-    title: "運用・改善",
-    description: "保守、監視、更新まで継続して支える。",
+    title: "O&M（運用・保守）",
+    description: "稼働後の運用・保守まで、継続的な支援体制を構築。",
   },
-];
-
-const DOMAINS = [
-  "蓄電池",
-  "風力発電",
-  "バイオマス",
-  "集塵ホッパー",
-  "水素モビリティ",
-  "AIデータセンター",
 ];
 
 function SolutionStep({ step }: { step: SolutionStep }) {
@@ -72,8 +63,8 @@ export function Solution() {
               </h2>
             </div>
             <p className={styles.lead}>
-              複数の事業領域を並べるだけではなく、計画・導入・運用までをつなげて設計。
-              NOAHの横断支援で、プロジェクトを前に進めます。
+              発電所設備の設計、機器選定・調達、製造・据付、試運転、O&Mまでを一貫して支援。
+              技術・統合・展開の3つの力で、プロジェクトを前に進めます。
             </p>
           </div>
         </Reveal>
