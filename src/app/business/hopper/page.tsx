@@ -93,6 +93,34 @@ const specRows = [
   { label: "制御方式", value: "PLC制御（三菱PLC）" },
 ];
 
+/** 会社概要資料（2026年版）の近年事業実績リストに基づく納入実績。 */
+const deliveryRecords = [
+  {
+    name: "自走式集塵ホッパー",
+    units: "3台",
+    client: "田原バイオマスパワー合同会社",
+    site: "愛知県田原市 田原港1区",
+  },
+  {
+    name: "牽引式集塵ホッパー",
+    units: "1台",
+    client: "愛知海運株式会社",
+    site: "愛知県田原市 田原港4区",
+  },
+  {
+    name: "牽引式集塵ホッパー",
+    units: "1台",
+    client: "愛知海運株式会社",
+    site: "愛知県 衣浦港",
+  },
+  {
+    name: "自走式集塵ホッパー",
+    units: "2台",
+    client: "豊前エナジーバイオマス発電所",
+    site: "大分県 中津港",
+  },
+];
+
 const deliverySteps = [
   {
     number: "01",
@@ -333,6 +361,51 @@ export default function HopperPage() {
           </div>
           <p className={styles.specNote}>
             上記は走行式集塵ホッパーの代表仕様です。実案件では対象材料、処理量、港湾条件、電源条件に合わせて個別に確認します。
+          </p>
+        </div>
+      </section>
+
+      <section className={styles.record} aria-labelledby="record-title">
+        <div className="container">
+          <Reveal direction="up">
+            <div className={styles.sectionHeader}>
+              <SectionLabel eyebrow="TRACK RECORD" subtitle="納入実績" />
+              <h2 id="record-title" className={styles.heading}>
+                発電所・港湾で、
+                <br />
+                確かな納入実績。
+              </h2>
+            </div>
+          </Reveal>
+
+          <Reveal direction="up">
+            <div className={styles.recordTableWrap}>
+              <table className={styles.recordTable} aria-label="集塵ホッパーの納入実績一覧">
+                <thead>
+                  <tr>
+                    <th scope="col">No.</th>
+                    <th scope="col">ホッパー名</th>
+                    <th scope="col">台数</th>
+                    <th scope="col">客先</th>
+                    <th scope="col">使用場所</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {deliveryRecords.map((record, index) => (
+                    <tr key={`${record.client}-${record.site}`}>
+                      <td>{String(index + 1).padStart(2, "0")}</td>
+                      <th scope="row">{record.name}</th>
+                      <td>{record.units}</td>
+                      <td>{record.client}</td>
+                      <td>{record.site}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </Reveal>
+          <p className={styles.specNote}>
+            2019年10月には、当時日本最大級となる自走式防塵ホッパーを納入し、港湾荷役の効率化と粉じん対策に貢献しました。
           </p>
         </div>
       </section>

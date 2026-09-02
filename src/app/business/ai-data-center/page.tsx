@@ -14,13 +14,13 @@ import { asset } from "@/lib/asset";
 export const metadata: Metadata = {
   title: "AIデータセンター事業 | 諾亜建設株式会社",
   description:
-    "候補地・電力容量・変電受電・通信・EPC建設・投融資まで、日本でAIデータセンターを実現する諾亜建設の事業を紹介します。川越・和歌山・千葉・群馬で計画を推進中。",
+    "候補地・電力容量・変電受電・通信・EPC建設・投融資まで、日本でAIデータセンターを実現する諾亜建設の事業を紹介します。全国10案件・想定約1.2GWの開発候補を推進中。",
 };
 
 const heroMetrics = [
-  { value: "4エリア", label: "建設計画・候補地を整理中" },
-  { value: "約23,000㎡", label: "和歌山市金谷 データセンター用地計画" },
-  { value: "約20万坪", label: "群馬・赤城事業所 場内規模" },
+  { value: "10案件", label: "AIデータセンター開発候補地（全国）" },
+  { value: "約1.2GW", label: "想定開発規模" },
+  { value: "500MW", label: "重点案件（石川県）" },
   { value: "2026-2029", label: "和歌山県計画 工事期間予定" },
 ];
 
@@ -203,7 +203,7 @@ export default function AiDataCenterPage() {
             </h1>
             <p className={styles.heroLead}>
               NOAHは、候補地の確保、受電容量・変電条件の整理、電力会社との協議、蓄電池連携、EPC建設、投融資協業まで、
-              日本でAIデータセンターを実現するために必要な工程を一体で推進します。現在、川越市、和歌山県、千葉県、群馬県で計画を進めています。
+              日本でAIデータセンターを実現するために必要な工程を一体で推進します。現在、全国10案件・想定約1.2GWの開発候補を整理し、計画を進めています。
             </p>
             <div className={styles.heroActions}>
               <Button href="/contact" variant="white">
@@ -235,6 +235,9 @@ export default function AiDataCenterPage() {
               <br />
               エリアごとに整理する。
             </h2>
+            <p className={styles.lead}>
+              全国で10案件・想定約1.2GWの開発候補地を整理しています。ここでは条件整理が進む代表的なエリアを紹介します。
+            </p>
           </Reveal>
 
           <div className={styles.projectGrid}>
@@ -442,35 +445,6 @@ export default function AiDataCenterPage() {
               description="AIデータセンターのEMS、蓄電池、監視制御機器では、ネットワーク接続を前提にセキュリティ要件を確認します。JC-STAR適合製品の活用も視野に入れ、設備計画を進めます。"
               points={["EMS / NOAH Cloud", "蓄電池連携", "接続機器"]}
             />
-          </Reveal>
-        </div>
-      </section>
-
-      <section className={styles.control} aria-labelledby="control-title">
-        <div className={`container ${styles.controlGrid}`}>
-          <Reveal direction="left" className={styles.controlCopy}>
-            <SectionLabel eyebrow="AI CONTROL" subtitle="AI制御・安全運用" inverse />
-            <h2 id="control-title" className={styles.inverseHeading}>
-              多源データを集め、
-              <br />
-              事故と停止を先回りする。
-            </h2>
-            <p className={styles.inverseLead}>
-              発電・蓄電・負荷・設備状態のデータを集め、予測、異常検知、保守提案へつなげます。
-              AIデータセンターの価値は、建設後の運用品質で決まります。
-            </p>
-          </Reveal>
-
-          <Reveal direction="right">
-            <figure className={styles.controlVisual}>
-              <Image
-                src={asset("/assets/ai-data-center/ai-control-ai-ja.png")}
-                alt="AI制御・データ収集・安全予測の概念図"
-                fill
-                sizes="(max-width: 960px) calc(100vw - 40px), 44vw"
-                className={styles.controlImage}
-              />
-            </figure>
           </Reveal>
         </div>
       </section>

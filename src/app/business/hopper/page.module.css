@@ -1096,3 +1096,65 @@
     font-size: 2.4rem;
   }
 }
+
+/* ===== 納入実績（会社概要2026年版に基づく） ===== */
+
+.record {
+  padding-block: 112px;
+  background: #f4f8fd;
+}
+
+.recordTableWrap {
+  overflow-x: auto;
+  background: #ffffff;
+  border: 1px solid rgba(180, 201, 224, 0.7);
+}
+
+.recordTable {
+  width: 100%;
+  min-width: 720px;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+
+.recordTable thead th {
+  padding: 14px 18px;
+  color: var(--color-surface);
+  background: var(--color-brand-900);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.recordTable tbody th,
+.recordTable tbody td {
+  padding: 13px 18px;
+  border-bottom: 1px solid rgba(180, 201, 224, 0.55);
+  text-align: left;
+  vertical-align: top;
+}
+
+.recordTable tbody th {
+  color: var(--color-brand-900);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.recordTable tbody tr:nth-child(even) {
+  background: rgba(233, 242, 251, 0.55);
+}
+
+.recordTable td:first-child {
+  color: var(--color-muted);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+@media (max-width: 920px) {
+  .record {
+    padding-block: var(--space-section-mobile);
+  }
+}

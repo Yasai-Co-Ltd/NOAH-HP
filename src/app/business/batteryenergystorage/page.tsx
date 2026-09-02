@@ -14,7 +14,7 @@ import { asset } from "@/lib/asset";
 export const metadata: Metadata = {
   title: "蓄電池事業（系統用蓄電池発電所開発） | 諾亜建設株式会社",
   description:
-    "特別高圧・高圧系統用蓄電池発電所の開発事業。用地・権利の取得、系統連系、行政許認可、EPC建設、運用・EXITまで一貫して推進します。保有案件約25件・合計約790MW。",
+    "特別高圧・高圧系統用蓄電池発電所の開発事業。用地・権利の取得、系統連系、行政許認可、EPC建設、運用・EXITまで一貫して推進します。保有26案件・開発規模約1.2GW。",
 };
 
 const overviewSteps = [
@@ -43,9 +43,9 @@ const overviewSteps = [
 const marketBadges = ["卸電力市場", "容量市場", "需給調整市場", "一次調整力対応"];
 
 const heroMetrics = [
-  { value: "約25件", label: "保有する特別高圧蓄電池プラント案件" },
-  { value: "約790MW", label: "合計出力規模" },
-  { value: "約21件", label: "うち特別高圧級の案件" },
+  { value: "26案件", label: "保有する系統用蓄電池案件" },
+  { value: "約1.2GW", label: "合計開発規模" },
+  { value: "九州中心", label: "全国で案件を開発" },
   { value: "2年以内", label: "系統連系が可能な案件を多数保有" },
 ];
 
@@ -289,7 +289,7 @@ const platformItems = [
 
 /** 実績・体制の数値。owner で NOAH自身の実績とパートナーの実績を明示的に区別する。 */
 const proofItems = [
-  { owner: "NOAH", value: "約790MW", label: "保有する特別高圧蓄電池プラント案件の合計出力規模（約25件）" },
+  { owner: "NOAH", value: "約1.2GW", label: "保有する系統用蓄電池案件の合計開発規模（26案件）" },
   { owner: "NOAH", value: "2GWh", label: "蓄電池調達の戦略的パートナー体制" },
   { owner: "技術パートナー", value: "20年以上", label: "電力分野の研究開発・エンジニアリング経験" },
   { owner: "技術パートナー", value: "50MW / 200MWh", label: "大規模蓄電発電所の導入実績" },
@@ -316,11 +316,11 @@ const storageProjects = [
   { name: "C-42蓄電所", location: "福岡県飯塚市横田37-1", siteArea: "5,011", powerKw: "19,780", energyKwh: "79,120" },
   { name: "C-02蓄電所", location: "佐賀県佐賀市大和町尼寺3293-3他", siteArea: "3,139", powerKw: "29,950", energyKwh: "119,800" },
   { name: "C-53蓄電所", location: "福岡県筑紫野市原518", siteArea: "4,530", powerKw: "17,230", energyKwh: "68,920" },
-  { name: "1-70蓄電所", location: "佐賀県鳥栖市幸津町120-1他", siteArea: "5,419", powerKw: "19,950", energyKwh: "79,800" },
-  { name: "1-72蓄電所", location: "佐賀県鳥栖市幸津町211-1他", siteArea: "10,498", powerKw: "19,950", energyKwh: "79,800" },
+  { name: "I-70蓄電所", location: "佐賀県鳥栖市幸津町120-1他", siteArea: "5,419", powerKw: "19,950", energyKwh: "79,800" },
+  { name: "I-72蓄電所", location: "佐賀県鳥栖市幸津町211-1他", siteArea: "10,498", powerKw: "19,950", energyKwh: "79,800" },
   { name: "E-36-2蓄電所", location: "大分県大分市毛井1492-1", siteArea: "9,722", powerKw: "89,080", energyKwh: "356,320" },
-  { name: "1-71蓄電所", location: "佐賀県鳥栖市幸津町195-1他", siteArea: "1,013", powerKw: "9,950", energyKwh: "39,800" },
-  { name: "1-95蓄電所", location: "佐賀県三養基郡上峰町314-1他", siteArea: "6,012", powerKw: "29,950", energyKwh: "119,800" },
+  { name: "I-71蓄電所", location: "佐賀県鳥栖市幸津町195-1他", siteArea: "1,013", powerKw: "9,950", energyKwh: "39,800" },
+  { name: "I-95蓄電所", location: "佐賀県三養基郡上峰町314-1他", siteArea: "6,012", powerKw: "29,950", energyKwh: "119,800" },
   { name: "C-09蓄電所", location: "福岡県大川市中古賀515他", siteArea: "3,294", powerKw: "19,950", energyKwh: "79,800" },
   {
     name: "日向市富高・日向市塩見 メガバッテリーステーション",
@@ -329,7 +329,7 @@ const storageProjects = [
     powerKw: "29,270",
     energyKwh: "117,080",
   },
-  { name: "1-78蓄電所", location: "福岡県朝倉市一木122-1他", siteArea: "7,691", powerKw: "29,950", energyKwh: "119,800" },
+  { name: "I-78蓄電所", location: "福岡県朝倉市一木122-1他", siteArea: "7,691", powerKw: "29,950", energyKwh: "119,800" },
   { name: "C-10蓄電所", location: "福岡県大川市中古賀974-1他", siteArea: "2,825", powerKw: "29,950", energyKwh: "119,800" },
   { name: "高圧14蓄電所", location: "宮崎県えびの市向江480-4他", siteArea: "1,934", powerKw: "1,997", energyKwh: "7,988" },
   { name: "C-06蓄電所", location: "佐賀県佐賀市高木瀬西1296", siteArea: "2,241", powerKw: "1,996", energyKwh: "7,984" },
@@ -532,7 +532,7 @@ export default function BatteryEnergyStoragePage() {
 
           <Reveal direction="up">
             <div className={styles.pipelineFooter}>
-              <p>※ 案件数・出力規模は2026年7月時点。個別案件の詳細はお問い合わせください。</p>
+              <p>※ 案件数・開発規模は会社概要資料（2026年版）に基づきます。個別案件の詳細はお問い合わせください。</p>
               <Link href="/news/birdman-partnership" className={styles.pipelineLink}>
                 業務提携のプレスリリースを見る<span aria-hidden="true">→</span>
               </Link>
@@ -555,7 +555,7 @@ export default function BatteryEnergyStoragePage() {
               </div>
               <p className={styles.sectionLead}>
                 用地・権利を確保し、系統連系・許認可の手続きとあわせて開発を進める蓄電所案件です。
-                保有する約25件のうち代表的な16件を掲載しています。連系先はいずれも九州電力送配電株式会社です。
+                保有する26案件のうち代表的な16件を掲載しています。連系先はいずれも九州電力送配電株式会社です。
               </p>
             </div>
           </Reveal>
