@@ -2078,3 +2078,95 @@
 .marketRow .marketBadges {
   margin-top: 0;
 }
+
+/* ===== 蓄電池システム仕様（会社概要2026年版 P9） ===== */
+
+.systems {
+  padding-block: 112px;
+  background: linear-gradient(180deg, #ffffff 0%, var(--color-brand-050) 100%);
+}
+
+.systemGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 26px;
+}
+
+.systemCard {
+  height: 100%;
+  padding: 34px 32px 30px;
+  background: var(--color-surface);
+  border: 1px solid rgba(180, 201, 224, 0.7);
+  border-top: 3px solid var(--color-accent-cyan);
+}
+
+.systemTag {
+  display: inline-block;
+  margin: 0;
+  padding: 7px 12px;
+  color: var(--color-surface);
+  font-family: var(--font-numeric);
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1;
+  background: var(--color-brand-900);
+}
+
+.systemCard h3 {
+  margin: 16px 0 0;
+  color: var(--color-brand-900);
+  font-size: 1.22rem;
+  font-weight: 800;
+  line-height: 1.5;
+}
+
+.systemDescription {
+  margin: 10px 0 18px;
+  color: var(--color-text);
+  font-size: 0.88rem;
+  font-weight: 600;
+  line-height: 1.8;
+}
+
+.systemCard dl {
+  display: grid;
+  gap: 1px;
+  margin: 0;
+  background: var(--color-line);
+  border: 1px solid var(--color-line);
+}
+
+.systemCard dl div {
+  display: grid;
+  grid-template-columns: 108px minmax(0, 1fr);
+  background: var(--color-surface);
+}
+
+.systemCard dt,
+.systemCard dd {
+  margin: 0;
+  padding: 12px 14px;
+  font-size: 0.84rem;
+  line-height: 1.6;
+}
+
+.systemCard dt {
+  color: var(--color-brand-800);
+  font-weight: 700;
+  background: #f4f9ff;
+}
+
+.systemCard dd {
+  color: var(--color-ink);
+  font-weight: 700;
+}
+
+@media (max-width: 920px) {
+  .systems {
+    padding-block: var(--space-section-mobile);
+  }
+
+  .systemGrid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -351,6 +351,38 @@ const projectPhotos = [
   },
 ];
 
+/** 会社概要資料（2026年版）P9「蓄電池システム仕様詳細」に基づく主力モデル。 */
+const systemModels = [
+  {
+    name: "EnerD コンテナ型液冷式蓄電池システム",
+    tag: "5,015kWh仕様",
+    description: "高いエネルギー密度と安全性を兼ね備えた、コンテナ型の大容量蓄電システム。",
+    specs: [
+      { label: "標準容量", value: "5,015kWh" },
+      { label: "公称電圧", value: "1,331.2V" },
+      { label: "電池箱", value: "1P52S×96" },
+      { label: "冷却方式", value: "液冷方式" },
+      { label: "寸法", value: "3,250×2,550×3,000mm" },
+      { label: "重量", value: "約39t" },
+      { label: "適用分野", value: "電源側、系統側、大規模産業・商業用途" },
+    ],
+  },
+  {
+    name: "産業・商業向け一体型蓄電池システム",
+    tag: "233kWh仕様",
+    description: "コンパクト設計で導入が容易。産業・商業施設の安定運用をサポート。",
+    specs: [
+      { label: "定格容量", value: "233kWh" },
+      { label: "公称電圧", value: "832V" },
+      { label: "電池箱", value: "1P52S×96" },
+      { label: "冷却方式", value: "液冷方式" },
+      { label: "寸法", value: "1,400×1,350×2,100mm" },
+      { label: "重量", value: "約2.7t" },
+      { label: "適用分野", value: "工場・施設の自家消費、ピークカット・BCP対策" },
+    ],
+  },
+];
+
 /** 開発から売却までの一気通貫フロー。旧コア能力・開発の流れを1つの図解に統合。 */
 const devFlowSteps = [
   { number: "01", title: "用地・権利の確保", sub: "土地選定・案件ID取得" },
@@ -599,6 +631,50 @@ export default function BatteryEnergyStoragePage() {
         </div>
       </section>
 
+      <section className={styles.systems} aria-labelledby="systems-title">
+        <div className="container">
+          <Reveal direction="up">
+            <div className={styles.sectionHeading}>
+              <div>
+                <SectionLabel eyebrow="SYSTEM SPEC" subtitle="蓄電池システム仕様" />
+                <h2 id="systems-title" className={styles.heading}>
+                  用途に合わせて選べる、
+                  <br />
+                  2つの主力モデル。
+                </h2>
+              </div>
+              <p className={styles.sectionLead}>
+                高性能・高安全性の蓄電池システムで、持続可能なエネルギー社会に貢献します。
+              </p>
+            </div>
+          </Reveal>
+
+          <div className={styles.systemGrid}>
+            {systemModels.map((model, index) => (
+              <Reveal key={model.name} direction="up" delay={index * 80}>
+                <article className={styles.systemCard}>
+                  <p className={styles.systemTag}>{model.tag}</p>
+                  <h3>{model.name}</h3>
+                  <p className={styles.systemDescription}>{model.description}</p>
+                  <dl>
+                    {model.specs.map((spec) => (
+                      <div key={spec.label}>
+                        <dt>{spec.label}</dt>
+                        <dd>{spec.value}</dd>
+                      </div>
+                    ))}
+                  </dl>
+                </article>
+              </Reveal>
+            ))}
+          </div>
+
+          <p className={styles.sourceNote}>
+            国際認証：IEC 62619、IEC 62477-1、UL 1973、UL 9540A を取得しています。
+          </p>
+        </div>
+      </section>
+
       <section className={styles.technology} id="solution" aria-labelledby="technology-title">
         <div className="container">
           <Reveal direction="up">
@@ -719,10 +795,6 @@ export default function BatteryEnergyStoragePage() {
               </ul>
             </div>
           </Reveal>
-
-          <p className={styles.sourceNote}>
-            国際認証：IEC 62619、IEC 62477-1、UL 1973、UL 9540A を取得しています。
-          </p>
         </div>
       </section>
 
