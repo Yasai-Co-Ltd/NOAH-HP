@@ -9,6 +9,7 @@ interface MegaMenuItem {
   href: string;
   label: string;
   description?: string;
+  image?: string;
 }
 
 interface MegaMenuGroup {
@@ -18,6 +19,7 @@ interface MegaMenuGroup {
 
 interface MegaMenuFeature {
   image?: string;
+  imageFit?: "cover" | "contain";
   title: string;
   description?: string;
   href: string;
@@ -106,6 +108,47 @@ const NAV_LINKS: NavLink[] = [
         title: "7つの事業領域、ひとつの構想。",
         description: "事業紹介トップを見る",
         href: "/business",
+      },
+    },
+  },
+  {
+    href: "/products",
+    label: "製品情報",
+    mega: {
+      eyebrow: "PRODUCTS",
+      title: "製品情報",
+      lead: "蓄電池システムの監視・制御・電力変換を支えるNOAHの製品をご紹介します。",
+      href: "/products",
+      groups: [
+        {
+          heading: "製品カテゴリ",
+          items: [
+            {
+              href: "/products/bms",
+              label: "BMS",
+              image: "/assets/products/bms/n-bams-10ht.png",
+              description: "電池状態の監視・診断・保護",
+            },
+            {
+              href: "/products/ems",
+              label: "EMS",
+              image: "/assets/products/ems/n-bk-3000.png",
+              description: "設備データの収集・通信・制御",
+            },
+            {
+              href: "/products/pcs",
+              label: "PCS",
+              image: "/assets/products/pcs/n-pws1-1375ktl-h-jp-6m1-o.png",
+              description: "電力変換・系統連系制御",
+            },
+          ],
+        },
+      ],
+      feature: {
+        image: "/assets/products/hero-showroom-v1.png",
+        title: "用途と設備規模から選べる製品群。",
+        description: "製品情報トップを見る",
+        href: "/products",
       },
     },
   },
@@ -356,7 +399,12 @@ export function Header() {
                             {group.items.map((item) => (
                               <li key={item.href}>
                                 <Link href={item.href} onClick={closeAll}>
-                                  {item.label}
+                                  {item.image ? (
+                                    <div className={styles.mobileProductLabel}>
+                                      <strong>{item.label}</strong>
+                                      <small>{item.description}</small>
+                                    </div>
+                                  ) : item.label}
                                   <span aria-hidden="true">→</span>
                                 </Link>
                               </li>
@@ -392,7 +440,7 @@ export function Header() {
         aria-hidden={!activeMega}
       >
         {activeConfig && (
-          <div className={`container ${styles.megaInner}`}>
+          <div className={`container ${styles.megaInner} ${activeMega === "/products" ? styles.productsMega : ""}`}>
             <div className={styles.megaIntro}>
               <span className={styles.megaEyebrow}>{activeConfig.eyebrow}</span>
               <h2 className={styles.megaTitle}>{activeConfig.title}</h2>
@@ -410,6 +458,12 @@ export function Header() {
                     {group.items.map((item) => (
                       <li key={item.href}>
                         <Link href={item.href} onClick={closeAll}>
+                          {item.image && (
+                            <span className={styles.megaProductImage}>
+                              {/* eslint-disable-next-line @next/next/no-img-element */}
+                              <img src={asset(item.image)} alt="" />
+                            </span>
+                          )}
                           <span className={styles.megaItemLabel}>{item.label}</span>
                           {item.description && (
                             <span className={styles.megaItemDesc}>{item.description}</span>
@@ -431,7 +485,16 @@ export function Header() {
                 onClick={closeAll}
               >
                 {activeConfig.feature.image && (
-                  <span className={styles.megaFeatureImage}>
+                  <span
+                    className={[
+                      styles.megaFeatureImage,
+                      activeConfig.feature.imageFit === "contain"
+                        ? styles.megaFeatureImageContain
+                        : null,
+                    ]
+                      .filter(Boolean)
+                      .join(" ")}
+                  >
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img src={asset(activeConfig.feature.image)} alt="" />
                   </span>

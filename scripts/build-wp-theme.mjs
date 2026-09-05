@@ -99,6 +99,45 @@ const MEGA_MENUS = [
     },
   },
   {
+    key: "/products/",
+    panelClass: "Header_productsMega",
+    eyebrow: "PRODUCTS",
+    title: "製品情報",
+    lead: "蓄電池システムの監視・制御・電力変換を支えるNOAHの製品をご紹介します。",
+    href: "/products/",
+    groups: [
+      {
+        heading: "製品カテゴリ",
+        items: [
+          {
+            href: "/products/bms/",
+            label: "BMS",
+            image: "/products/bms/n-bams-10ht.png",
+            description: "電池状態の監視・診断・保護",
+          },
+          {
+            href: "/products/ems/",
+            label: "EMS",
+            image: "/products/ems/n-bk-3000.png",
+            description: "設備データの収集・通信・制御",
+          },
+          {
+            href: "/products/pcs/",
+            label: "PCS",
+            image: "/products/pcs/n-pws1-1375ktl-h-jp-6m1-o.png",
+            description: "電力変換・系統連系制御",
+          },
+        ],
+      },
+    ],
+    feature: {
+      image: "/products/hero-showroom-v1.png",
+      title: "用途と設備規模から選べる製品群。",
+      description: "製品情報トップを見る",
+      href: "/products/",
+    },
+  },
+  {
     key: "/sustainability/",
     eyebrow: "SUSTAINABILITY",
     title: "3つの視点でとらえる、<br/>サステナビリティ。",
@@ -278,10 +317,15 @@ function buildMegaPanels(cls) {
     const groups = menu.groups
       .map(
         (group) => `<div class="${c("Header_megaGroup")}"><h3>${group.heading}</h3><ul>${group.items
-          .map(
-            (item) =>
-              `<li><a href="${homeHref(item.href)}"><span class="${c("Header_megaItemLabel")}">${item.label}</span><span class="${c("Header_megaItemArrow")}" aria-hidden="true">→</span></a></li>`
-          )
+          .map((item) => {
+            const image = item.image
+              ? `<span class="${c("Header_megaProductImage")}"><img src="${ASSETS_PHP}${item.image}" alt=""/></span>`
+              : "";
+            const desc = item.description
+              ? `<span class="${c("Header_megaItemDesc")}">${item.description}</span>`
+              : "";
+            return `<li><a href="${homeHref(item.href)}">${image}<span class="${c("Header_megaItemLabel")}">${item.label}</span>${desc}<span class="${c("Header_megaItemArrow")}" aria-hidden="true">→</span></a></li>`;
+          })
           .join("")}</ul></div>`
       )
       .join("");
@@ -290,7 +334,7 @@ function buildMegaPanels(cls) {
 
     return (
       // hidden 属性は .megaInner の display:grid に負けるため、インライン display で隠す。
-      `<div class="container ${c("Header_megaInner")}" data-noah-mega="${menu.key}" hidden style="display:none">` +
+      `<div class="container ${c("Header_megaInner")}${menu.panelClass ? ` ${c(menu.panelClass)}` : ""}" data-noah-mega="${menu.key}" hidden style="display:none">` +
       `<div class="${c("Header_megaIntro")}"><span class="${c("Header_megaEyebrow")}">${menu.eyebrow}</span>` +
       `<h2 class="${c("Header_megaTitle")}">${menu.title}</h2>` +
       `<p class="${c("Header_megaLead")}">${menu.lead}</p>` +

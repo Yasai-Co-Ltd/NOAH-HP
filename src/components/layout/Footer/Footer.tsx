@@ -49,6 +49,15 @@ const GROUPS: FooterGroup[] = [
       { href: "/sustainability/carbon-neutrality", label: "カーボンニュートラル" },
     ],
   },
+  {
+    heading: "製品情報",
+    headingHref: "/products",
+    links: [
+      { href: "/products/bms", label: "BMS" },
+      { href: "/products/ems", label: "EMS" },
+      { href: "/products/pcs", label: "PCS" },
+    ],
+  },
 ];
 
 const OTHER_LINKS: FooterLink[] = [

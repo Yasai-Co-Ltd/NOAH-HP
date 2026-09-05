@@ -30,6 +30,11 @@ export const PAGES = {
   "/business/hydrogen-compressor": true,
   "/business/ai-data-center": true,
 
+  // 製品情報
+  "/products": true,
+  "/products/[category]": true,
+  "/products/[category]/[slug]": true,
+
   // サステナビリティ
   "/sustainability": true,
   "/sustainability/community-relations": true,

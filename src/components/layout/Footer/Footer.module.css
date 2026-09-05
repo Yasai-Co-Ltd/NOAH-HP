@@ -22,7 +22,7 @@
 
 .links {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 34px;
 }
 
@@ -73,6 +73,17 @@
   .copyright {
     width: min(calc(100% - var(--container-pad-mobile)), var(--container-max));
     text-align: left;
+  }
+}
+
+@media (min-width: 921px) and (max-width: 1180px) {
+  .grid {
+    grid-template-columns: minmax(200px, 240px) 1fr;
+    gap: 48px;
+  }
+
+  .links {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 

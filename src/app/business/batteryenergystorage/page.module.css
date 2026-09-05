@@ -756,132 +756,224 @@
   line-height: 1.7;
 }
 
-.solutionOperation {
+.operationSuite {
+  margin-top: 72px;
+  padding-top: 42px;
+  border-top: 1px solid rgba(5, 39, 102, 0.18);
+}
+
+.operationSuiteHeader {
   display: grid;
-  grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
-  margin-top: 18px;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.62fr);
+  gap: 70px;
+  align-items: end;
+}
+
+.operationSuiteHeader h3 {
+  max-width: 760px;
+  margin: 12px 0 0;
+  color: var(--color-brand-900);
+  font-family: var(--font-serif);
+  font-size: clamp(1.55rem, 2.2vw, 2.18rem);
+  font-weight: 800;
+  line-height: 1.5;
+  overflow-wrap: normal;
+  word-break: keep-all;
+}
+
+.operationSuiteHeader > p {
+  margin: 0 0 3px;
+  color: var(--color-muted);
+  font-size: 0.86rem;
+  font-weight: 600;
+  line-height: 1.85;
+}
+
+.monitoringPlatform,
+.maintenancePlatform,
+.predictionPlatform,
+.aggregatorPlatform {
   overflow: hidden;
-  border: 1px solid rgba(5, 39, 102, 0.16);
 }
 
-.solutionSoftwareReveal,
-.solutionEmsReveal {
-  min-width: 0;
-}
-
-.solutionSoftware {
+.monitoringPlatform {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(190px, 0.58fr);
-  gap: 26px;
-  height: 100%;
-  padding: 38px 0 38px 40px;
-  background: var(--color-surface);
+  grid-template-columns: minmax(320px, 0.68fr) minmax(0, 1.32fr);
+  min-height: 390px;
+  margin-top: 34px;
+  color: var(--color-surface);
+  background: #061c42;
+  box-shadow: 0 22px 54px rgba(5, 39, 102, 0.14);
 }
 
-.solutionSoftwareContent {
+.operationCopy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   min-width: 0;
+  padding: 38px 40px;
 }
 
-.solutionSoftware h3,
-.solutionEms h3 {
+.operationEyebrow {
+  margin: 0;
+  color: var(--color-accent-teal);
+  font-family: var(--font-numeric);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.11em;
+}
+
+.operationCopy h4 {
   margin: 11px 0 0;
-  font-size: 1.42rem;
+  color: var(--color-brand-900);
+  font-size: clamp(1.25rem, 1.8vw, 1.7rem);
   font-weight: 800;
   line-height: 1.45;
+  overflow-wrap: normal;
+  word-break: keep-all;
 }
 
-.solutionSoftware h3 {
-  color: var(--color-brand-900);
+.maintenancePlatform .operationCopy h4 {
+  font-size: clamp(1.12rem, 1.45vw, 1.38rem);
 }
 
-.solutionSoftware ol {
-  margin: 28px 0 0;
+.operationCopy > p:last-of-type {
+  margin: 17px 0 0;
+  color: var(--color-muted);
+  font-size: 0.82rem;
+  font-weight: 600;
+  line-height: 1.82;
+}
+
+.monitoringPlatform .operationEyebrow {
+  color: #82dcea;
+}
+
+.monitoringPlatform .operationCopy h4 {
+  color: var(--color-surface);
+}
+
+.monitoringPlatform .operationCopy > p:last-of-type {
+  color: rgba(255, 255, 255, 0.77);
+}
+
+.operationCopy ul {
+  display: grid;
+  gap: 10px;
+  margin: 26px 0 0;
   padding: 0;
   list-style: none;
 }
 
-.solutionSoftware li {
+.operationCopy li {
+  padding-left: 12px;
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 0.76rem;
+  font-weight: 800;
+  line-height: 1.45;
+  border-left: 2px solid var(--color-accent-cyan);
+}
+
+.monitoringVisual,
+.predictionVisual,
+.aggregatorVisual,
+.maintenanceScreens figure {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+}
+
+.monitoringVisual {
+  min-height: 390px;
+  background: #061c42;
+}
+
+.operationImageContain {
+  object-fit: contain;
+  object-position: center;
+}
+
+.monitoringVisual .operationImageContain {
+  padding: 24px 28px;
+}
+
+.operationMiddle {
   display: grid;
-  grid-template-columns: minmax(0, 1fr);
-  padding: 16px 0;
+  grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.maintenanceReveal,
+.predictionReveal {
+  min-width: 0;
+}
+
+.maintenancePlatform {
+  display: grid;
+  grid-template-columns: minmax(240px, 0.74fr) minmax(310px, 1.26fr);
+  height: 100%;
+  min-height: 445px;
+  background: #eef6f8;
+}
+
+.maintenancePlatform .operationCopy {
+  padding-right: 18px;
+}
+
+.maintenanceScreens {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  align-items: end;
+  min-width: 0;
+  padding: 34px 24px 0 0;
+}
+
+.maintenanceScreens figure {
+  aspect-ratio: 284 / 567;
+  filter: drop-shadow(0 15px 22px rgba(5, 39, 102, 0.13));
+}
+
+.predictionPlatform {
+  display: grid;
+  grid-template-rows: minmax(220px, 1fr) auto;
+  height: 100%;
+  min-height: 445px;
+  background: var(--color-surface);
+  border: 1px solid rgba(5, 39, 102, 0.13);
+}
+
+.predictionVisual {
+  min-height: 250px;
+  background: #f4f8fa;
+}
+
+.predictionVisual .operationImageContain {
+  padding: 18px;
+}
+
+.predictionPlatform .operationCopy {
+  justify-content: flex-start;
+  padding: 27px 30px 31px;
   border-top: 1px solid var(--color-line);
 }
 
-.solutionSoftware li:last-child {
-  padding-bottom: 0;
-}
-
-.solutionSoftware h4 {
-  margin: 0;
-  color: var(--color-brand-900);
-  font-size: 0.91rem;
-  font-weight: 800;
-  line-height: 1.45;
-}
-
-.solutionSoftware li p {
-  margin: 5px 0 0;
-  color: var(--color-muted);
-  font-size: 0.76rem;
-  font-weight: 600;
-  line-height: 1.65;
-}
-
-.solutionSoftwareVisual {
-  position: relative;
-  align-self: stretch;
-  min-height: 292px;
-  margin: 0;
-  overflow: hidden;
-  background: var(--color-brand-900);
-}
-
-.solutionSoftwareImage {
-  object-fit: cover;
-  object-position: 72% center;
-}
-
-.solutionEms {
-  position: relative;
+.aggregatorPlatform {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(180px, 0.76fr);
-  gap: 22px;
-  height: 100%;
-  min-height: 368px;
-  padding: 38px 36px 32px 39px;
-  color: var(--color-surface);
-  background: var(--color-brand-900);
+  grid-template-columns: minmax(300px, 0.64fr) minmax(0, 1.36fr);
+  min-height: 350px;
+  margin-top: 18px;
+  background: #e7f2f4;
 }
 
-.solutionEms .solutionPanelEyebrow {
-  color: #7ed4dd;
+.aggregatorVisual {
+  min-height: 350px;
+  background: var(--color-surface);
 }
 
-.solutionEms h3 {
-  color: var(--color-surface);
-}
-
-.solutionEms > div > p:last-child {
-  margin: 18px 0 0;
-  color: rgba(255, 255, 255, 0.78);
-  font-size: 0.8rem;
-  font-weight: 600;
-  line-height: 1.8;
-}
-
-.solutionEmsVisual {
-  position: relative;
-  align-self: end;
-  height: 206px;
-  margin: 0;
-  overflow: hidden;
-  background: rgba(255, 255, 255, 0.08);
-}
-
-.solutionEmsImage {
-  object-fit: contain;
-  object-position: center;
-  opacity: 0.92;
+.aggregatorVisual .operationImageContain {
+  padding: 24px 30px;
 }
 
 .solutionBenefitBand {
@@ -926,12 +1018,13 @@
     padding: 20px;
   }
 
-  .solutionOperation {
+  .operationSuiteHeader,
+  .operationMiddle {
     grid-template-columns: 1fr;
   }
 
-  .solutionEms {
-    min-height: 300px;
+  .operationSuiteHeader {
+    gap: 20px;
   }
 }
 
@@ -978,47 +1071,82 @@
     padding: 21px 20px 23px;
   }
 
-  .solutionOperation {
-    margin-top: 14px;
+  .operationSuite {
+    margin-top: 48px;
+    padding-top: 30px;
   }
 
-  .solutionSoftware {
+  .operationSuiteHeader h3 {
+    font-size: 1.45rem;
+  }
+
+  .operationSuiteHeader > p {
+    font-size: 0.82rem;
+  }
+
+  .monitoringPlatform,
+  .maintenancePlatform,
+  .aggregatorPlatform {
     grid-template-columns: 1fr;
-    gap: 23px;
-    padding: 29px 0 0 21px;
   }
 
-  .solutionSoftwareContent {
-    padding-right: 21px;
+  .monitoringPlatform {
+    min-height: 0;
+    margin-top: 26px;
   }
 
-  .solutionSoftware h3,
-  .solutionEms h3 {
+  .operationCopy,
+  .maintenancePlatform .operationCopy,
+  .predictionPlatform .operationCopy {
+    padding: 27px 21px 29px;
+  }
+
+  .operationCopy h4 {
     font-size: 1.23rem;
   }
 
-  .solutionSoftware ol {
-    margin-top: 20px;
+  .monitoringVisual {
+    min-height: 250px;
   }
 
-  .solutionSoftwareVisual {
-    min-height: 190px;
+  .monitoringVisual .operationImageContain {
+    padding: 12px 16px 22px;
   }
 
-  .solutionSoftwareImage {
-    object-position: 70% 53%;
+  .operationMiddle {
+    gap: 14px;
+    margin-top: 14px;
   }
 
-  .solutionEms {
-    grid-template-columns: 1fr;
-    gap: 22px;
+  .maintenancePlatform,
+  .predictionPlatform {
     min-height: 0;
-    padding: 29px 21px 0;
   }
 
-  .solutionEmsVisual {
-    height: 174px;
-    margin: 0 -1px;
+  .maintenanceScreens {
+    gap: 8px;
+    padding: 0 18px;
+  }
+
+  .predictionVisual {
+    min-height: 205px;
+  }
+
+  .predictionVisual .operationImageContain {
+    padding: 10px;
+  }
+
+  .aggregatorPlatform {
+    min-height: 0;
+    margin-top: 14px;
+  }
+
+  .aggregatorVisual {
+    min-height: 245px;
+  }
+
+  .aggregatorVisual .operationImageContain {
+    padding: 16px 18px 24px;
   }
 
   .solutionBenefitBand {

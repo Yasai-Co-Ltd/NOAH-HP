@@ -376,17 +376,26 @@ const highVoltageSolutionItems = [
     category: "STEP-UP TRANSFORMER",
     title: "昇圧トランス",
     models: ["プロジェクト要件に応じて構成"],
-    image: asset("/assets/battery/temp-step-up-transformer.jpg"),
+    image: asset("/assets/battery/temp-step-up-transformer.png"),
     alt: "昇圧トランスのイメージ",
     capacity: "定格容量：2,000kVA×1台",
     text: "蓄電池システムを電力網に接続するための機器です。",
   },
 ];
 
-const solutionSoftwareItems = [
-  { title: "監視プラットフォーム", text: "リアルタイム監視・故障診断・アラーム管理を実現。" },
-  { title: "運用保守プラットフォーム", text: "設備の運用状況を可視化し、効率的な保守を支援。" },
-  { title: "バッテリー予告負荷予測", text: "AIアルゴリズムで負荷を予測し、最適な運用計画を支援。" },
+const maintenanceScreens = [
+  {
+    src: asset("/assets/battery/maintenance-ticket-detail.png"),
+    alt: "設備の故障箇所と対応内容を確認する保守画面",
+  },
+  {
+    src: asset("/assets/battery/maintenance-dispatch-notice.png"),
+    alt: "保守担当者への作業指示を確認する通知画面",
+  },
+  {
+    src: asset("/assets/battery/maintenance-work-order-dashboard.png"),
+    alt: "保守作業の進捗を一覧管理する画面",
+  },
 ];
 
 const solutionBenefits = ["高い安全性", "高い信頼性", "高い経済性", "フルサポート体制"];
@@ -442,6 +451,9 @@ const devFlowSteps = [
  * 会社概要資料（2026年版）に存在しないため非表示。6S+EDR・主力製品・EMSは資料に基づき表示する。
  */
 const SHOW_PRODUCT_CATALOG = false;
+
+/** 主力2モデルの製品画像の表示フラグ。差し替え画像の準備中につき一時非表示。 */
+const SHOW_SYSTEM_MODEL_IMAGES = false;
 
 export default function BatteryEnergyStoragePage() {
   if (!isPageEnabled("/business/batteryenergystorage")) notFound();
@@ -585,15 +597,17 @@ export default function BatteryEnergyStoragePage() {
             {systemModels.map((model, index) => (
               <Reveal key={model.name} direction="up" delay={index * 80}>
                 <article className={styles.modelShowcaseCard}>
-                  <figure className={styles.modelShowcaseVisual}>
-                    <Image
-                      src={model.image}
-                      alt={model.imageAlt}
-                      fill
-                      sizes="(max-width: 760px) calc(100vw - 40px), (max-width: 1040px) calc(100vw - 64px), 50vw"
-                      className={styles.modelShowcaseImage}
-                    />
-                  </figure>
+                  {SHOW_SYSTEM_MODEL_IMAGES && (
+                    <figure className={styles.modelShowcaseVisual}>
+                      <Image
+                        src={model.image}
+                        alt={model.imageAlt}
+                        fill
+                        sizes="(max-width: 760px) calc(100vw - 40px), (max-width: 1040px) calc(100vw - 64px), 50vw"
+                        className={styles.modelShowcaseImage}
+                      />
+                    </figure>
+                  )}
                   <div className={styles.modelShowcaseBody}>
                     <p className={styles.modelShowcaseTag}>{model.tag}</p>
                     <h3>{model.name}</h3>
@@ -738,55 +752,105 @@ export default function BatteryEnergyStoragePage() {
             ))}
           </div>
 
-          <div className={styles.solutionOperation}>
-            <Reveal direction="up" className={styles.solutionSoftwareReveal}>
-              <section className={styles.solutionSoftware} aria-labelledby="solution-software-title">
-                <div className={styles.solutionSoftwareContent}>
-                  <p className={styles.solutionPanelEyebrow}>SOFTWARE PRODUCTS</p>
-                  <h3 id="solution-software-title">運用を支えるソフトウェア</h3>
-                  <ol>
-                  {solutionSoftwareItems.map((item) => (
-                    <li key={item.title}>
-                      <div>
-                          <h4>{item.title}</h4>
-                          <p>{item.text}</p>
-                        </div>
-                      </li>
-                    ))}
-                  </ol>
+          <section className={styles.operationSuite} aria-labelledby="smart-operations-title">
+            <Reveal direction="up">
+              <header className={styles.operationSuiteHeader}>
+                <div>
+                  <p className={styles.solutionPanelEyebrow}>SMART OPERATIONS</p>
+                  <h3 id="smart-operations-title">
+                    監視・保守・予測・<wbr />市場運営を、<wbr />ひとつにつなぐ。
+                  </h3>
                 </div>
-                <figure className={styles.solutionSoftwareVisual}>
-                  <Image
-                    src={asset("/assets/battery/solution-software-operations-2026.png")}
-                    alt="蓄電池の監視・診断・予測を行う運用ソフトウェアのイメージ"
-                    fill
-                    sizes="(max-width: 760px) calc(100vw - 40px), 28vw"
-                    className={styles.solutionSoftwareImage}
-                  />
-                </figure>
-              </section>
+              </header>
             </Reveal>
 
-            <Reveal direction="up" delay={100} className={styles.solutionEmsReveal}>
-              <section className={styles.solutionEms} aria-labelledby="solution-ems-title">
-                <div>
-                  <p className={styles.solutionPanelEyebrow}>EMS &amp; AGGREGATOR</p>
-                  <h3 id="solution-ems-title">エネルギーを統合し、
-                    <br />最適な運用へ。</h3>
-                  <p>EMSを中心にエネルギーリソースを統合。電力市場での最適運用と収益機会の最大化を支援します。</p>
+            <Reveal direction="up">
+              <article className={styles.monitoringPlatform}>
+                <div className={styles.operationCopy}>
+                  <p className={styles.operationEyebrow}>REAL-TIME MONITORING</p>
+                  <h4>監視プラットフォーム</h4>
+                  <p>稼働状況、充放電状態、SOC、故障情報を一画面で確認。PC・タブレット・スマートフォンからリアルタイム監視に対応します。</p>
+                  <ul aria-label="監視プラットフォームの機能">
+                    <li>リアルタイム監視</li>
+                    <li>故障診断</li>
+                    <li>アラーム管理</li>
+                  </ul>
                 </div>
-                <figure className={styles.solutionEmsVisual}>
+                <figure className={styles.monitoringVisual}>
                   <Image
-                    src={asset("/assets/battery/solution-ems-aggregator-network-2026.png")}
-                    alt="EMSが蓄電池、PCS、送電網、太陽光設備、施設を統合するイメージ"
+                    src={asset("/assets/battery/monitoring-platform-devices.png")}
+                    alt="PC、スマートフォン、タブレットに表示された蓄電池監視プラットフォーム"
                     fill
-                    sizes="(max-width: 760px) calc(100vw - 40px), 44vw"
-                    className={styles.solutionEmsImage}
+                    sizes="(max-width: 760px) calc(100vw - 40px), 58vw"
+                    className={styles.operationImageContain}
                   />
                 </figure>
-              </section>
+              </article>
             </Reveal>
-          </div>
+
+            <div className={styles.operationMiddle}>
+              <Reveal direction="left" className={styles.maintenanceReveal}>
+                <article className={styles.maintenancePlatform}>
+                  <div className={styles.operationCopy}>
+                    <p className={styles.operationEyebrow}>OPERATION &amp; MAINTENANCE</p>
+                    <h4>運用保守<wbr />プラットフォーム</h4>
+                    <p>異常箇所の確認から作業指示、対応状況の管理までをつなぎ、保守業務を効率化します。</p>
+                  </div>
+                  <div className={styles.maintenanceScreens} aria-label="運用保守プラットフォームの画面例">
+                    {maintenanceScreens.map((screen) => (
+                      <figure key={screen.src.toString()}>
+                        <Image
+                          src={screen.src}
+                          alt={screen.alt}
+                          fill
+                          sizes="(max-width: 760px) 27vw, 150px"
+                          className={styles.operationImageContain}
+                        />
+                      </figure>
+                    ))}
+                  </div>
+                </article>
+              </Reveal>
+
+              <Reveal direction="right" className={styles.predictionReveal}>
+                <article className={styles.predictionPlatform}>
+                  <figure className={styles.predictionVisual}>
+                    <Image
+                      src={asset("/assets/battery/battery-prediction-dashboard.png")}
+                      alt="蓄電所の稼働状況とリスクを地図とグラフで分析する画面"
+                      fill
+                      sizes="(max-width: 760px) calc(100vw - 40px), 43vw"
+                      className={styles.operationImageContain}
+                    />
+                  </figure>
+                  <div className={styles.operationCopy}>
+                    <p className={styles.operationEyebrow}>AI PREDICTION</p>
+                    <h4>バッテリー予告<wbr />負荷予測</h4>
+                    <p>蓄電池データと稼働傾向を分析し、AIアルゴリズムによる負荷予測と運用計画を支援します。</p>
+                  </div>
+                </article>
+              </Reveal>
+            </div>
+
+            <Reveal direction="up">
+              <article className={styles.aggregatorPlatform}>
+                <div className={styles.operationCopy}>
+                  <p className={styles.operationEyebrow}>EMS &amp; AGGREGATOR</p>
+                  <h4>アグリゲーター運営</h4>
+                  <p>EMSと複数のエネルギーリソースを統合し、需給調整や電力市場に向けた運用を支援します。</p>
+                </div>
+                <figure className={styles.aggregatorVisual}>
+                  <Image
+                    src={asset("/assets/battery/aggregator-platform-devices.png")}
+                    alt="複数端末でエネルギーリソースを統合管理するアグリゲーター運営画面"
+                    fill
+                    sizes="(max-width: 760px) calc(100vw - 40px), 52vw"
+                    className={styles.operationImageContain}
+                  />
+                </figure>
+              </article>
+            </Reveal>
+          </section>
 
           <Reveal direction="up">
             <ul className={styles.solutionBenefitBand} aria-label="蓄電池ソリューションの特長">
