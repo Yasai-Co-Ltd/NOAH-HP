@@ -15,6 +15,38 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 add_action( 'after_switch_theme', 'noah_setup_site_content' );
+add_action( 'init', 'noah_sync_site_content' );
+
+/**
+ * テーマ上書きデプロイ後にページ構成の差分を自動補充する。
+ *
+ * after_switch_theme は再有効化しないと走らないため、pages-map / seed-news の
+ * 内容ハッシュを option と比較し、変化があった時だけ冪等なセットアップを再実行する。
+ */
+function noah_sync_site_content() {
+	$map_file  = get_template_directory() . '/inc/pages-map.php';
+	$seed_file = get_template_directory() . '/inc/seed-news.php';
+	$version   = md5(
+		( file_exists( $map_file ) ? md5_file( $map_file ) : '' ) .
+		( file_exists( $seed_file ) ? md5_file( $seed_file ) : '' )
+	);
+
+	if ( get_option( 'noah_content_version' ) === $version ) {
+		return;
+	}
+
+	// 同時アクセスによる二重実行を防ぐ (noah_ensure_page は存在チェック→作成のため)。
+	if ( get_transient( 'noah_content_sync_lock' ) ) {
+		return;
+	}
+	set_transient( 'noah_content_sync_lock', 1, MINUTE_IN_SECONDS );
+
+	noah_setup_pages();
+	noah_setup_news();
+
+	update_option( 'noah_content_version', $version );
+	delete_transient( 'noah_content_sync_lock' );
+}
 
 /**
  * サイト初期コンテンツを作成する。
