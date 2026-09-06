@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Reveal } from "@/components/animation/Reveal/Reveal";
 import { Button } from "@/components/ui/Button/Button";
-import { asset } from "@/lib/asset";
 import { isPageEnabled } from "@/lib/page-config";
 import { ProductCard } from "../ProductCard";
+import { ProductCategoryVisual } from "../ProductCategoryVisual";
 import { ProductCategoryName } from "../ProductText";
 import {
   getProductCategory,
@@ -48,11 +47,15 @@ export default async function ProductCategoryPage({ params }: ProductCategoryPag
   if (!category) notFound();
 
   const categoryProducts = getProductsByCategory(category.slug);
+  const heroProducts = [
+    ...categoryProducts.filter((product) => product.image === category.image),
+    ...categoryProducts.filter((product) => product.image !== category.image),
+  ].slice(0, 3).map(({ model, image, displayName }) => ({ model, image, displayName }));
 
   return (
     <>
       <section
-        className={`${styles.categoryHero} ${styles[`categoryHero${category.name}`]}`}
+        className={styles.categoryHero}
         aria-labelledby="category-page-title"
       >
         <div className={`container ${styles.categoryHeroInner}`}>
@@ -68,16 +71,7 @@ export default async function ProductCategoryPage({ params }: ProductCategoryPag
           </Reveal>
 
           <Reveal direction="right" className={styles.categoryHeroVisualReveal}>
-            <div className={styles.categoryHeroVisual}>
-              <Image
-                src={asset(category.image)}
-                alt={`${category.name}製品の代表イメージ`}
-                fill
-                priority
-                sizes="(max-width: 920px) calc(100vw - 40px), 45vw"
-                className={styles.categoryHeroImage}
-              />
-            </div>
+            <ProductCategoryVisual key={category.slug} products={heroProducts} />
           </Reveal>
         </div>
       </section>

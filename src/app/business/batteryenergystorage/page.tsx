@@ -406,31 +406,32 @@ const systemModels = [
     name: "EnerD コンテナ型液冷式蓄電池システム",
     tag: "5,015kWh仕様",
     description: "高いエネルギー密度と安全性を兼ね備えた、コンテナ型の大容量蓄電システム。",
-    image: asset("/assets/battery/bess-container-5mwh.png"),
-    imageAlt: "コンテナ型液冷式蓄電池システムのイメージ",
+    image: asset("/assets/battery/enerd-container-5015kwh.png"),
+    imageAlt: "EnerD コンテナ型液冷式蓄電池システム",
     specs: [
       { label: "標準容量", value: "5,015kWh" },
       { label: "公称電圧", value: "1,331.2V" },
+      { label: "セル容量", value: "314Ah" },
       { label: "電池箱", value: "1P52S×96" },
       { label: "冷却方式", value: "液冷方式" },
+      { label: "保護等級", value: "IP54" },
       { label: "寸法", value: "3,250×2,550×3,000mm" },
       { label: "重量", value: "約39t" },
       { label: "適用分野", value: "電源側、系統側、大規模産業・商業用途" },
     ],
   },
   {
-    name: "産業・商業向け一体型蓄電池システム",
-    tag: "233kWh仕様",
-    description: "コンパクト設計で導入が容易。産業・商業施設の安定運用をサポート。",
-    image: asset("/assets/battery/bess-215kwh.png"),
-    imageAlt: "産業・商業向け一体型蓄電池システムのイメージ",
+    name: "EnerOne+ 屋外液冷式蓄電池システム",
+    tag: "372kWh仕様",
+    description: "屋外設置に対応したキャビネット一体型。コンパクト設計で導入が容易、産業・商業施設の安定運用をサポート。",
+    image: asset("/assets/battery/bess-integrated-372kwh.png"),
+    imageAlt: "EnerOne+ 屋外液冷式蓄電池システム",
     specs: [
-      { label: "定格容量", value: "233kWh" },
-      { label: "公称電圧", value: "832V" },
-      { label: "電池箱", value: "1P52S×96" },
+      { label: "定格容量", value: "372kWh" },
+      { label: "公称電圧", value: "1,331.2V" },
+      { label: "セル容量", value: "280Ah" },
       { label: "冷却方式", value: "液冷方式" },
-      { label: "寸法", value: "1,400×1,350×2,100mm" },
-      { label: "重量", value: "約2.7t" },
+      { label: "保護等級", value: "IP56" },
       { label: "適用分野", value: "工場・施設の自家消費、ピークカット・BCP対策" },
     ],
   },
@@ -452,8 +453,8 @@ const devFlowSteps = [
  */
 const SHOW_PRODUCT_CATALOG = false;
 
-/** 主力2モデルの製品画像の表示フラグ。差し替え画像の準備中につき一時非表示。 */
-const SHOW_SYSTEM_MODEL_IMAGES = false;
+/** 主力2モデルの製品画像の表示フラグ。 */
+const SHOW_SYSTEM_MODEL_IMAGES = true;
 
 export default function BatteryEnergyStoragePage() {
   if (!isPageEnabled("/business/batteryenergystorage")) notFound();
