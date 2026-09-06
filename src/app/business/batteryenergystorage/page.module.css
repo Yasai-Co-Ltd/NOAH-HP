@@ -3258,7 +3258,7 @@
 
 .modelShowcaseVisual {
   position: relative;
-  height: 286px;
+  height: 360px;
   margin: 0;
   overflow: hidden;
   background: linear-gradient(135deg, #edf4f7 0%, #ffffff 68%);
@@ -3276,7 +3276,7 @@
 
 .modelShowcaseImage {
   object-fit: contain;
-  padding: 22px 28px;
+  padding: 10px 14px;
 }
 
 .modelShowcaseBody {
