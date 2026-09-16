@@ -283,7 +283,7 @@
   position: relative;
   overflow: hidden;
   background: var(--color-brand-100);
-  aspect-ratio: 16 / 7;
+  aspect-ratio: 16 / 9;
 }
 
 .serviceImage {
