@@ -113,7 +113,7 @@
   margin: 22px 0 0;
   color: var(--color-brand-900);
   font-family: var(--font-serif);
-  font-size: clamp(2.25rem, 3.24vw, 3.22rem);
+  font-size: clamp(2.25rem, 3.24vw, 3rem);
   font-weight: 800;
   line-height: 1.48;
   letter-spacing: 0;
