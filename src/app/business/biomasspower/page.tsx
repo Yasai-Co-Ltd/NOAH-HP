@@ -184,7 +184,7 @@ export default function BiomassPowerPage() {
             </h1>
             <p className={styles.heroLead}>
               燃料供給から設備計画まで、バイオマス発電を支える。
-              PKS・炭化PKS・木質ペレットの安定供給と、乾燥設備、港湾荷役・粉塵対策までを一体で整理します。
+              木質ペレット・PKSの安定供給と、乾燥設備、港湾荷役・粉塵対策までを一体で整理します。
             </p>
             <div className={styles.heroActions}>
               <Button href="/contact" variant="white">
