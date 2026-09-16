@@ -11,29 +11,10 @@ import { asset } from "@/lib/asset";
 export const metadata: Metadata = {
   title: "バイオマス発電事業 | 諾亜建設株式会社",
   description:
-    "PKS、炭化PKS、木質ペレットの燃料供給から、バイオマス発電、乾燥設備、生産ライン、港湾荷役・粉塵管理まで、諾亜建設のバイオマス発電事業を紹介します。",
+    "木質ペレット、PKSの燃料供給から、バイオマス発電、乾燥設備、生産ライン、港湾荷役・粉塵管理まで、諾亜建設のバイオマス発電事業を紹介します。",
 };
 
 const fuelItems = [
-  {
-    name: "PKS",
-    subtitle: "Palm Kernel Shell",
-    image:asset("/assets/biomasspower/pks-yard.png"),
-    alt: "PKSの原料ヤード",
-    description:
-      "パーム油の生産過程で発生するパーム椰子殻。水分が少なく発熱量が高いため、石炭代替・混焼燃料として注目されています。",
-    // 認証表記（RSPO）は裏付け確認まで一旦非表示（元: RSPO認証取得工場との提携）
-    points: ["現地工場との直接提携", "東南アジア各地域から調達", "石炭代替・混焼燃料に対応"],
-  },
-  {
-    name: "炭化PKS",
-    subtitle: "Carbonized PKS",
-    image:asset("/assets/biomasspower/pks-close.png"),
-    alt: "炭化PKSの燃料サンプル",
-    description:
-      "低温炭化により、エネルギー密度、ハンドリング性、粉砕性を高めたPKS。既存燃料との混焼率向上を狙えます。",
-    points: ["木質チップ同等の貯蔵性", "粉砕性・ハンドリング性を向上", "販売予約受付中"],
-  },
   {
     name: "木質ペレット",
     subtitle: "Wood Pellet",
@@ -43,6 +24,16 @@ const fuelItems = [
       "木くずなどを直径6〜10mm程度に成形した燃料。化石燃料の代替として、欧州を中心に需要が拡大しています。",
     // 会社概要2026年版に基づく（木質ペレット＝FSC認証取得・GGL認証取得、中国8箇所製造工場）
     points: ["FSC・GGL認証取得工場で製造", "中国8箇所の製造工場から安定供給", "化石燃料の代替として需要拡大"],
+  },
+  {
+    name: "PKS",
+    subtitle: "Palm Kernel Shell",
+    image:asset("/assets/biomasspower/pks-yard.png"),
+    alt: "PKSの原料ヤード",
+    description:
+      "パーム油の生産過程で発生するパーム椰子殻。水分が少なく発熱量が高いため、石炭代替・混焼燃料として注目されています。",
+    // 認証表記（RSPO）は裏付け確認まで一旦非表示（元: RSPO認証取得工場との提携）
+    points: ["現地工場との直接提携", "東南アジア各地域から調達", "石炭代替・混焼燃料に対応"],
   },
 ];
 
