@@ -41,7 +41,7 @@ const vehicleSpecs = [
   { label: "対象車両", value: "FCVトラクターヘッドを中心とした商用車" },
   { label: "想定用途", value: "石炭、鋼材、港湾などの500km圏輸送" },
   { label: "燃料電池", value: "140kW級製品を実車搭載済み" },
-  { label: "参考燃費", value: "FCトラック 20km/kg" },
+  { label: "参考燃費", value: "FCVトラック 20km/kg" },
   { label: "充填時間", value: "20分（資料記載値）" },
   { label: "導入支援", value: "車両、補助金、ステーション、運用計画を一体で整理" },
   { label: "運用実績", value: "FCEVトレーラーヘッド900台超の納車・運営実績" },

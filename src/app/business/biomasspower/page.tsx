@@ -446,6 +446,56 @@ export default function BiomassPowerPage() {
               </Reveal>
             ))}
           </div>
+
+          <Reveal direction="up">
+            <aside className={styles.fscCert} aria-labelledby="fsc-cert-title">
+              <a
+                href={asset("/assets/biomasspower/fsc-certificate.webp")}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.fscCertThumb}
+              >
+                <Image
+                  src={asset("/assets/biomasspower/fsc-certificate-thumb.webp")}
+                  alt="FSC CoC認証 登録証（Bureau Veritas発行）"
+                  width={600}
+                  height={847}
+                  sizes="(max-width: 760px) 160px, 200px"
+                />
+                <span>拡大して見る</span>
+              </a>
+              <div className={styles.fscCertBody}>
+                <p className={styles.fscCertBadge}>CERTIFIED</p>
+                <h3 id="fsc-cert-title">FSC認証取得済</h3>
+                <p>
+                  取り扱う木質ペレットは、FSC®（森林管理協議会）のCoC認証を取得したサプライチェーンから供給しています。
+                  FSC 100%およびFSC Mix認証の木質ペレットに対応します。
+                </p>
+                <dl>
+                  <div>
+                    <dt>認証規格</dt>
+                    <dd>FSC CoC（FSC-STD-40-004 V3-1）</dd>
+                  </div>
+                  <div>
+                    <dt>認証取得者</dt>
+                    <dd>Chengya Trading (Suzhou) Co., Ltd.</dd>
+                  </div>
+                  <div>
+                    <dt>認証番号</dt>
+                    <dd>BV-COC-229734</dd>
+                  </div>
+                  <div>
+                    <dt>有効期限</dt>
+                    <dd>2031年6月9日</dd>
+                  </div>
+                  <div>
+                    <dt>認証機関</dt>
+                    <dd>Bureau Veritas Certification</dd>
+                  </div>
+                </dl>
+              </div>
+            </aside>
+          </Reveal>
         </div>
       </section>
 
