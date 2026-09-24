@@ -471,28 +471,6 @@ export default function BiomassPowerPage() {
                   取り扱う木質ペレットは、FSC®（森林管理協議会）のCoC認証を取得したサプライチェーンから供給しています。
                   FSC 100%およびFSC Mix認証の木質ペレットに対応します。
                 </p>
-                <dl>
-                  <div>
-                    <dt>認証規格</dt>
-                    <dd>FSC CoC（FSC-STD-40-004 V3-1）</dd>
-                  </div>
-                  <div>
-                    <dt>認証取得者</dt>
-                    <dd>Chengya Trading (Suzhou) Co., Ltd.</dd>
-                  </div>
-                  <div>
-                    <dt>認証番号</dt>
-                    <dd>BV-COC-229734</dd>
-                  </div>
-                  <div>
-                    <dt>有効期限</dt>
-                    <dd>2031年6月9日</dd>
-                  </div>
-                  <div>
-                    <dt>認証機関</dt>
-                    <dd>Bureau Veritas Certification</dd>
-                  </div>
-                </dl>
               </div>
             </aside>
           </Reveal>
