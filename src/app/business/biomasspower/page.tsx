@@ -119,7 +119,7 @@ const specRows = [
   {
     label: "低位発熱量",
     pks: "3,990kcal/kg",
-    pellet: "4,200kcal/kg",
+    pellet: "4,000kcal/kg",
   },
   {
     label: "含水率",
@@ -129,7 +129,7 @@ const specRows = [
   {
     label: "灰分",
     pks: "1.8%",
-    pellet: "0.6%以下",
+    pellet: "1.5%以下",
   },
   {
     label: "主な調達地",
